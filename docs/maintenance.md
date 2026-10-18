@@ -79,6 +79,8 @@ dotnet run --project tools/AntigravityChinese.Maintainer -c Release -- restore -
 
 只在译文或适配确有变化且相关验证完成后提交、发布。实际发布时更新 `Directory.Build.props` 中的工具版本；安装记录同时包含实现版本，纯适配更新也能重新应用。验证范围更新到 `docs/verification.md`；不要发布 `.local` 或原版安装文件。
 
+源码构建由 `global.json` 固定 .NET SDK 10.0.401。普通开发使用默认 `packages.lock.json`，单文件发布由脚本指定 `packages.publish.lock.json`，避免发布添加的运行时依赖覆盖开发锁文件。更新依赖时分别还原两种配置，再用 README 中的命令验证；发布脚本始终使用锁定模式，不在打包时自动更新依赖。NuGet 参数见[官方锁文件说明](https://learn.microsoft.com/nuget/consume-packages/package-references-in-project-files#lock-file-extensibility)。
+
 ## 文件与运行契约
 
 | 文件或目录 | 用途 |

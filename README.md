@@ -2,6 +2,8 @@
 
 Windows x64 的离线、一次性汉化工具，目标是独立的 **Antigravity App**。使用内置简体中文译文，支持自动检测安装、手动选择目录、备份和恢复。
 
+当前发布为 **v0.1.4 公开测试版**。从 [Releases](https://github.com/yexi-by/AntigravityChinese-OpenSource/releases) 下载 `AntigravityChinese-win-x64.zip`，解压后使用；旁边的 `SHA256SUMS.txt` 用于核对下载文件和包内程序的 SHA-256。
+
 当前以 Antigravity App **2.24.0** 为验证基线，内置 3,853 条译文。工具每次分析实际安装资源，**没有版本白名单**：已知且语境适用的文案显示中文，新增或无法确认的内容保留原文。官方更新覆盖汉化后，退出 App，再手动运行一次本工具。
 
 ## 使用
@@ -14,6 +16,8 @@ Windows x64 的离线、一次性汉化工具，目标是独立的 **Antigravity
 4. 需要撤销时，退出 App，再点击“恢复原版”。
 
 备份保存在 `%LOCALAPPDATA%\AntigravityChinese\backups`。恢复前核对当前文件，旧备份不会覆盖不匹配的新安装。工具没有常驻进程、计划任务或自动更新监控。
+
+本工具会修改 App 资源和 `Antigravity.exe` 内的 ASAR 校验值，因此汉化后的 EXE 与官方签名原件不同；恢复原版会还原保存的原件字节。本工具的分发程序目前未签名。
 
 ## 汉化范围与兼容方式
 
@@ -29,16 +33,18 @@ Windows x64 的离线、一次性汉化工具，目标是独立的 **Antigravity
 
 ## 构建与发布
 
-开发需要 Windows、.NET 10 SDK；行为检查另需 Node.js。普通使用者只需分发包。
+开发需要 Windows、.NET SDK **10.0.401**（由 `global.json` 固定）和 PowerShell 7；行为检查另需 Node.js。普通使用者只需分发包。
 
 ```powershell
 dotnet restore AntigravityChinese.slnx --locked-mode
 dotnet build AntigravityChinese.slnx -c Release --no-restore
-dotnet run --project tests/AntigravityChinese.Checks -c Release
+dotnet run --project tests/AntigravityChinese.Checks -c Release --no-restore
 pwsh -File scripts/publish.ps1
 ```
 
 `release/` 中生成包含运行时的程序、使用说明、许可证、ZIP 和 SHA-256 清单。分发包不含 ATT、密钥、原版程序或账户数据。
+
+普通开发使用 `packages.lock.json`；发布脚本使用 `packages.publish.lock.json`，单独锁定 Windows x64 单文件发布的依赖。两种操作互不覆盖锁文件，均可在锁定模式下还原。
 
 ## 跟随上游维护
 
@@ -49,5 +55,7 @@ pwsh -File scripts/maintain.ps1 -Mode Check
 ```
 
 若现有译文和加载方式仍适用，不更新翻译资产，不请求模型，不为版本号单独提交或发布。只有发现新文案、译文问题或资源结构变化时才维护；使用 ATT Generic 持续项目保留已确认译文，只处理增量。
+
+反馈漏译或异常时，请在 [Issues](https://github.com/yexi-by/AntigravityChinese-OpenSource/issues) 附上 App 版本、工具版本、触发步骤和截图，并遮住邮箱、对话内容和其他个人信息。
 
 源码参考 Docker Desktop 汉化工具，保留其 [MIT 许可](licenses/DockerDesktopChinese-MIT.txt)。ASAR、Electron 校验处理和桌面工具结构已按本项目适配。代码和译文采用 [MIT License](LICENSE)，第三方许可证保留在 [licenses](licenses/) 中。本项目为社区作品。

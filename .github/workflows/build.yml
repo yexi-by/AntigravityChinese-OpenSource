@@ -1,0 +1,38 @@
+name: Windows 构建与验证
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: 检出源码
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: 安装固定版本的 .NET SDK
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - name: 按开发锁文件还原
+        run: dotnet restore AntigravityChinese.slnx --locked-mode
+      - name: 构建
+        run: dotnet build AntigravityChinese.slnx -c Release --no-restore
+      - name: 行为检查
+        run: dotnet run --project tests/AntigravityChinese.Checks -c Release --no-restore
+      - name: 按发布锁文件打包
+        run: ./scripts/publish.ps1
+      - name: 确认构建未改动源码和锁文件
+        run: |
+          if (git status --porcelain) { throw '构建后工作区发生变化。' }

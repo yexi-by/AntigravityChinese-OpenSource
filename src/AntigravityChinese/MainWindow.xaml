@@ -101,7 +101,7 @@
                          Foreground="#64748B" FontSize="12" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" />
                 <Grid Grid.Row="3" Margin="0,16,0,0">
                     <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
-                    <TextBlock x:Name="ActionHint" Text="请先从托盘退出 App，再执行汉化。" Foreground="#64748B" FontSize="12" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,18,0" />
+                    <TextBlock x:Name="ActionHint" Text="请先完全退出 App，再执行汉化。" Foreground="#64748B" FontSize="12" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,18,0" />
                     <Button x:Name="RestoreButton" Grid.Column="1" Content="恢复原版" IsEnabled="False" Click="Restore_Click" Margin="0,0,10,0" />
                     <Button x:Name="ApplyButton" Grid.Column="2" Content="开始汉化" IsEnabled="False" Click="Apply_Click" Background="#1269F2" Foreground="White" BorderBrush="#1269F2" Padding="28,12" />
                 </Grid>

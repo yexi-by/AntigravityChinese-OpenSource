@@ -7,7 +7,7 @@ $stage = Join-Path $root ('.local/publish-' + [Guid]::NewGuid().ToString('N'))
 $release = Join-Path $root 'release'
 $package = Join-Path $stage 'AntigravityChinese-win-x64'
 New-Item -ItemType Directory -Path $package -Force | Out-Null
-dotnet publish (Join-Path $root 'src/AntigravityChinese/AntigravityChinese.csproj') -c Release -r win-x64 --self-contained true -o (Join-Path $stage 'build') -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true -p:DebugType=None -p:DebugSymbols=false
+dotnet publish (Join-Path $root 'src/AntigravityChinese/AntigravityChinese.csproj') -c Release -r win-x64 --self-contained true -o (Join-Path $stage 'build') -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true -p:NuGetLockFilePath=packages.publish.lock.json -p:RestoreLockedMode=true -p:DebugType=None -p:DebugSymbols=false
 Copy-Item -LiteralPath (Join-Path $stage 'build/AntigravityChinese.exe') -Destination $package
 Copy-Item -LiteralPath (Join-Path $root 'LICENSE'),(Join-Path $root '使用说明.txt') -Destination $package
 Copy-Item -LiteralPath (Join-Path $root 'licenses') -Destination $package -Recurse
