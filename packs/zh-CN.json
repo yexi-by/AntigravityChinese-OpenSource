@@ -43,7 +43,7 @@
     {
       "Key": "71aed5d6165bd7aa3f307ad6b203ce6fa1e691d274518ef9e09d71eb517c5cb7",
       "Source": "Antigravity opened on Windows instead.",
-      "Translation": "改为在 Antigravity 上打开了 Windows.",
+      "Translation": "已改为在 Windows 上打开 Antigravity。",
       "Kind": "dialog",
       "Role": "detail",
       "Shape": "string"
@@ -339,7 +339,7 @@
     {
       "Key": "97cfcb3082630bae6925874306cd496734b4cf8886ef2df679ab393ad2ad3444",
       "Source": "License:",
-      "Translation": "许可:",
+      "Translation": "许可证:",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -1875,7 +1875,7 @@
     {
       "Key": "8dd883c5aee048c815ccaeb8027acdfff8d79bab51d519c50ca9f97f15137bbd",
       "Source": "No description available.",
-      "Translation": "暂无描述.",
+      "Translation": "暂无描述。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -2155,7 +2155,7 @@
     {
       "Key": "12becf290f9d7a2dc532cc6a03e63bdc8b5f8b5d329d98612a6d1d37e6e764fd",
       "Source": "by Google",
-      "Translation": "由 Google",
+      "Translation": "由 Google 提供",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -2235,7 +2235,7 @@
     {
       "Key": "9c3d41516aba826122177dd0f8572255261798062b53610f58a212393c3606ad",
       "Source": "No MCP servers found for \"⟪AGC0⟫\"",
-      "Translation": "未找到与“MCP”匹配的 ⟪AGC0⟫ 服务器",
+      "Translation": "未找到与“⟪AGC0⟫”匹配的 MCP 服务器",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "template"
@@ -2491,7 +2491,7 @@
     {
       "Key": "4f7c510557407a9d31ef2fc41adc6dcb54cbde6f5f70e07de11924bc9a0b9ad0",
       "Source": "⟪AGC0⟫ ⟪AGC1⟫ tool for ⟪AGC2⟫",
-      "Translation": "⟪AGC0⟫ ⟪AGC1⟫工具，用于⟪AGC2⟫",
+      "Translation": "⟪AGC0⟫ ⟪AGC1⟫ 工具，用于 ⟪AGC2⟫",
       "Kind": "ui/button",
       "Role": "aria-label",
       "Shape": "template"
@@ -2619,7 +2619,7 @@
     {
       "Key": "7e3b3940423c9815fee6e76f62ff553b7102601cfcdd850bc27de813841aa502",
       "Source": "Filter skills and rules: ⟪AGC0⟫",
-      "Translation": "筛选技能和规则:⟪AGC0⟫",
+      "Translation": "筛选技能和规则：⟪AGC0⟫",
       "Kind": "ui/component",
       "Role": "aria-label",
       "Shape": "template"
@@ -4075,7 +4075,7 @@
     {
       "Key": "14c8658c209466c9af7a32d3de81d37c7caf70b53234c5acbd589192e7bd8fdc",
       "Source": "⟪AGC0⟫, setup required",
-      "Translation": "⟪AGC0⟫,需要设置",
+      "Translation": "⟪AGC0⟫，需要设置",
       "Kind": "ui/button",
       "Role": "aria-label",
       "Shape": "template"
@@ -5059,7 +5059,7 @@
     {
       "Key": "ebe3c071a7b7481ceffdfc18090b71ecea45a54bd0bfea68b74752ffed757dc2",
       "Source": "Captured DOM tree for ",
-      "Translation": "已捕获 DOM 树，适用于 ",
+      "Translation": "已捕获以下页面的 DOM 树： ",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -5371,7 +5371,7 @@
     {
       "Key": "3c7f09b249f4585fa9625e4cae0e3143996d403bb3077417c59cd3adb58fd51e",
       "Source": "Cancel questionnaire and stop the agent (⟪AGC0⟫)",
-      "Translation": "取消问卷并停止智能体(⟪AGC0⟫)",
+      "Translation": "取消问卷并停止智能体 (⟪AGC0⟫)",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "template"
@@ -5419,7 +5419,7 @@
     {
       "Key": "fff002d1466ebd2e3412d692612cf901a3174bfdaf3a7c4400308abdcc8e43a8",
       "Source": "Skip (esc), Skip All (⟪AGC0⟫)",
-      "Translation": "跳过 (esc),全部跳过 (⟪AGC0⟫)",
+      "Translation": "跳过 (Esc)，全部跳过 (⟪AGC0⟫)",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "template"
@@ -5483,7 +5483,7 @@
     {
       "Key": "57e28f9a6c3a4d2e68a8304d5b2cfe248474f1b0aa39b763a11acbc5a054bb88",
       "Source": "Agent needs permission to execute JavaScript on ⟪AGC0⟫",
-      "Translation": "智能体需要权限以在 JavaScript 上执行 ⟪AGC0⟫",
+      "Translation": "智能体需要权限以在 ⟪AGC0⟫ 上执行 JavaScript",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "template"
@@ -5635,7 +5635,7 @@
     {
       "Key": "60f8d872ef303da9c4ebde1c99987878b0ce7817c64276f136a19e7f5d3baa65",
       "Source": "Open URL",
-      "Translation": "在 URL 中打开",
+      "Translation": "打开 URL",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -6843,7 +6843,7 @@
     {
       "Key": "578c56a14410461b364859a0de22f48686e63ecb684eccea0cd252c08ed0e6cf",
       "Source": "Submit & Reroll",
-      "Translation": "提交并重掷",
+      "Translation": "提交并重新生成",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -7443,7 +7443,7 @@
     {
       "Key": "ed5b78e68b87c152750d31f679dad99514af04671d7dfe0465f1ef31082e829d",
       "Source": "Review plans and walkthroughs",
-      "Translation": "查看计划与演练",
+      "Translation": "查看计划与变更导览",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -7451,7 +7451,7 @@
     {
       "Key": "4bdcaf5d57f96994804acb0b58133f8d23aa8d8514dc14870230b2f61cce153d",
       "Source": "Set the rules, define the boundaries.",
-      "Translation": "设定规则,划定边界.",
+      "Translation": "设定规则，划定边界。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -7459,7 +7459,7 @@
     {
       "Key": "55cbf7062eb8998f358b678b79f05cec3cc390fce744a199c31d51f11729777e",
       "Source": "Describe what you want. Your agent plans and builds it, and brings in other agents when needed.",
-      "Translation": "描述你想要的内容.你的智能体负责规划并构建,并在需要时引入其他智能体.",
+      "Translation": "描述你想要的内容。你的智能体负责规划并构建，并在需要时引入其他智能体。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -7467,7 +7467,7 @@
     {
       "Key": "1420b631676ae6c5c491ea18ae2579c35cb9d4d19cc3ef548b5b5997efa6472a",
       "Source": "Comment on the plan before your agent starts, and get a walkthrough when it finishes.",
-      "Translation": "在你的智能体开始前对计划发表评论,完成后获得一次演练.",
+      "Translation": "在智能体开始前对计划发表评论，并在完成后获取变更导览。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -7643,7 +7643,7 @@
     {
       "Key": "9032e955accb66ea0dabdcc8b1a6af09e5d4034f0f4b5c447bdff5c09d2ef690",
       "Source": "Use this form if you cannot connect to Remote Control. If your instance is already connected and you are experiencing issues in the browser, report directly from the Remote Control web page so that relevant logs are included. Some helpful information includes:",
-      "Translation": "如果你无法连接到 Remote Control，请使用此表单.如果你的实例已连接，但在浏览器中遇到问题，请直接从 Remote Control 网页报告，以便包含相关日志.可提供的信息包括:",
+      "Translation": "如果你无法连接到远程控制，请使用此表单。如果你的实例已连接但在浏览器中遇到问题，请直接从远程控制网页报告，以便附带相关日志。建议提供的信息包括：",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -8027,7 +8027,7 @@
     {
       "Key": "ac9fcbaa9156500036a2bc9777138fb3ed93b42e82d4943646396569b5bfc647",
       "Source": "Last Prompt",
-      "Translation": "最后提示",
+      "Translation": "最近提问",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "lookup"
@@ -8051,7 +8051,7 @@
     {
       "Key": "333d339b334ebfbb5e2a3448b04542d5741a91749e0884ff3317109ec7352731",
       "Source": "Last Prompt",
-      "Translation": "最后提示",
+      "Translation": "最近提问",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -8139,7 +8139,7 @@
     {
       "Key": "55d554f77f963dd1763abbb51f79844fa85afa69c634a0563057feb94e6e12ed",
       "Source": "Subtitles",
-      "Translation": "字幕",
+      "Translation": "副标题",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -9843,7 +9843,7 @@
     {
       "Key": "58642cb66f48afcfe1029d689141a1e9e014f5428ea9bdaf9f5591211a901078",
       "Source": "⟪AGC0⟫ (disabled by admin)",
-      "Translation": "⟪AGC0⟫(已被管理员禁用)",
+      "Translation": "⟪AGC0⟫ (已被管理员禁用)",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "template"
@@ -9891,7 +9891,7 @@
     {
       "Key": "865054f729c973d275a1f4157f764659b973290ba4833529eded08e079a8cf3d",
       "Source": "Validating setup script…",
-      "Translation": "正在验证 setup 脚本…",
+      "Translation": "正在验证初始化脚本…",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -9899,7 +9899,7 @@
     {
       "Key": "27c7e062032100461289bba3805a58c22f1fe6bfa31b4710d2fa100aca9b121c",
       "Source": "Setup script ran successfully.",
-      "Translation": "setup 脚本运行成功.",
+      "Translation": "初始化脚本运行成功。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -9907,7 +9907,7 @@
     {
       "Key": "f3fc76b3ffe1098740d62272a4be3c1d719aa72d9c4b53f15cf3bd22596b3e5a",
       "Source": "Setup script failed.",
-      "Translation": "setup 脚本运行失败.",
+      "Translation": "初始化脚本运行失败。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -10395,7 +10395,7 @@
     {
       "Key": "abcf66cfc693b1bba54c51d1c48bf38bb9e4a1882286f42d473fe3d1e4b72553",
       "Source": "Marketplace Gallery URL",
-      "Translation": "应用市场图库 URL",
+      "Translation": "市场列表 URL",
       "Kind": "ui/component",
       "Role": "label",
       "Shape": "string"
@@ -10403,7 +10403,7 @@
     {
       "Key": "280ddb8e5c58036c06f7375d244f783984ff4bb0171208d6b51eddcdff7a2e5b",
       "Source": "Changes the base URL for marketplace search results. You must restart ⟪AGC0⟫ to use the new marketplace after changing this value.",
-      "Translation": "更改应用市场搜索结果的基础 URL.更改此值后，必须重启 ⟪AGC0⟫ 才能使用新的应用市场.",
+      "Translation": "更改市场搜索结果的基础 URL。更改此值后，必须重启 ⟪AGC0⟫ 才能使用新的市场。",
       "Kind": "ui/component",
       "Role": "description",
       "Shape": "template"
@@ -10707,7 +10707,7 @@
     {
       "Key": "50e72c009ab4d815795f3464896d5eda4a37481e9b67acd4a6a1d06a3901cf6a",
       "Source": "The breakdown below shows token usage from customizations like rules, skills, and MCP. If a budget is exceeded, large rules are demoted to path pointers and large customizations are excluded automatically.",
-      "Translation": "下方明细显示来自规则、技能和 token 等自定义项的 MCP 用量.如果超出预算，大型规则会降级为路径指引，大型自定义项则会被自动排除.",
+      "Translation": "下方明细显示来自规则、技能和 MCP 等自定义项的 token 用量。如果超出预算，大型规则会降级为路径指针，大型自定义项则会被自动排除。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -11155,7 +11155,7 @@
     {
       "Key": "cd1d6930846c50a29d0aa2f86cb0d24c8eefe3adba0387114fae9499d8c34fb2",
       "Source": "This project was created for",
-      "Translation": "此项目创建于",
+      "Translation": "此项目专为以下对象创建：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -11267,7 +11267,7 @@
     {
       "Key": "8f61e6323d231a6fc63c3e5f547a2a8313120aaf2cb6cbc5f582bf2f3ddc41e7",
       "Source": "Allow/deny agent command execution outside the sandbox.",
-      "Translation": "允许/拒绝智能体在沙盒外执行命令.",
+      "Translation": "允许/拒绝智能体在沙箱外执行命令。",
       "Kind": "ui/component",
       "Role": "description",
       "Shape": "string"
@@ -12347,7 +12347,7 @@
     {
       "Key": "7362cfcded895d2b2eb9a801d1ea0506f205b7adf911952d5419c6569bb10244",
       "Source": "No description available.",
-      "Translation": "暂无描述.",
+      "Translation": "暂无描述。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -13291,7 +13291,7 @@
     {
       "Key": "578113f7738ef3c0f22d9ea180e9dd80a714718aef8ce89082599ba2b5ae0e16",
       "Source": "Status: ",
-      "Translation": "状态: ",
+      "Translation": "状态： ",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -13643,7 +13643,7 @@
     {
       "Key": "b8546660c5308f43fc3e14c103c71c752c0945321726d45e07a3f6307caf4e08",
       "Source": "Edit ⟪AGC0⟫ name",
-      "Translation": "编辑⟪AGC0⟫名称",
+      "Translation": "编辑 ⟪AGC0⟫ 名称",
       "Kind": "ui/button",
       "Role": "aria-label",
       "Shape": "template"
@@ -13667,7 +13667,7 @@
     {
       "Key": "becbf8a6a4ff7e965f39999b87de7e59d054f308fb7daf488a69b304d4962abf",
       "Source": "Command Setup Script",
-      "Translation": "命令安装脚本",
+      "Translation": "命令初始化脚本",
       "Kind": "ui/component",
       "Role": "label",
       "Shape": "string"
@@ -13675,7 +13675,7 @@
     {
       "Key": "e0aa7712c56840b5a3dc5922c671fdcc4dfff115017cc8f29f19cc230f8e9c0d",
       "Source": "A shell setup script run before every command the agent executes in this project. Overrides the global script.",
-      "Translation": "智能体在此项目中执行每条命令前运行的 shell 安装脚本.将覆盖全局脚本.",
+      "Translation": "智能体在此项目中执行每条命令前运行的 Shell 初始化脚本。将覆盖全局脚本。",
       "Kind": "ui/component",
       "Role": "description",
       "Shape": "string"
@@ -13763,7 +13763,7 @@
     {
       "Key": "1a867c4a9893923d768aa67da9da668a5dc4c0f88e728d6c8d0a574a9b36ac4f",
       "Source": " automation and can only be deleted by deleting that automation.",
-      "Translation": " 自动化管理，只能通过删除该自动化来删除.",
+      "Translation": " 自动化管理，只能通过删除该自动化来删除。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -14363,7 +14363,7 @@
     {
       "Key": "72ebc494fa309f53c48e08f8bc53e5a6ad1d5724e6bdf730e312e42a48edfc48",
       "Source": "Fork",
-      "Translation": "分叉",
+      "Translation": "派生",
       "Kind": "ui/component",
       "Role": "title",
       "Shape": "string"
@@ -14371,7 +14371,7 @@
     {
       "Key": "39a28d0511add9654d29cb92b6f5c9f006d854e74f0fe54faa304032bc8a867c",
       "Source": "Fork",
-      "Translation": "分叉",
+      "Translation": "派生",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -14755,7 +14755,7 @@
     {
       "Key": "6114e89790c74a7ccc2195e0051ef0362f81adb21cc58dced1f48ee5db9bc19c",
       "Source": "Error: No artifact URI provided in URL parameters.",
-      "Translation": "错误:在 URI 参数中未提供产物 URL.",
+      "Translation": "错误：URL 参数中未提供产物 URI。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -14955,7 +14955,7 @@
     {
       "Key": "7b78289ca1c83eab89d4be75598ceb9bb0099059556d5c2c5feffa82730f0bf0",
       "Source": "Welcome to your Chief of Staff",
-      "Translation": "欢迎使用你的幕僚长",
+      "Translation": "欢迎使用 Chief of Staff",
       "Kind": "ui/h2",
       "Role": "children",
       "Shape": "string"
@@ -14963,7 +14963,7 @@
     {
       "Key": "e15f8d530b985e808e6a1fe74303fe38c9aabd2a49afca6056412593605c50ad",
       "Source": "Pick a suggestion below to get started, or ask me anything.",
-      "Translation": "从下方选择一个建议开始,或直接向我提问.",
+      "Translation": "从下方选择建议开始，或直接向我提问。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -15003,7 +15003,7 @@
     {
       "Key": "dd7415d03ee4cfefbc6ec5594b6efc7a7909ef1261facc1fe2ac43330b40a9b6",
       "Source": "Check pending conversations in the last 3 days that require action from me.",
-      "Translation": "检查过去 3 天内需要我处理的待处理对话.",
+      "Translation": "检查过去 3 天内需要我操作的待处理对话。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "lookup"
@@ -15011,7 +15011,7 @@
     {
       "Key": "2ddd38669aeb907e3afe32e529e3d0d81535bc7604a76949340da80df6a0688d",
       "Source": "Check CLs that require my attention and fix them in their respective conversations.",
-      "Translation": "检查需要我关注的 CL，并在相应的对话中修复它们.",
+      "Translation": "检查需要我关注的 CL，并在相应的对话中修复它们。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "lookup"
@@ -15019,7 +15019,7 @@
     {
       "Key": "56d1f843e48d6bf55fa89256568eb5b9f8a3c5789b08ec13dce691ddbed33338",
       "Source": "Learn from my conversation history to write a personalized set of rules for future agentic interactions.",
-      "Translation": "从我的对话历史中学习，为未来的智能体交互撰写一套个性化规则.",
+      "Translation": "从我的对话历史中学习，为未来的智能体交互撰写一套个性化规则。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "lookup"
@@ -15027,7 +15027,7 @@
     {
       "Key": "51e8c7142c9c77f797121b75e1190a317dfc52bcbdadf0a39fe7e1aec3621145",
       "Source": "Use my conversation history to tell me which skills and plugins would be helpful for me.",
-      "Translation": "利用我的对话历史，告诉我哪些技能和插件对我有帮助.",
+      "Translation": "利用我的对话历史，告诉我哪些技能和插件对我有帮助。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "lookup"
@@ -15035,7 +15035,7 @@
     {
       "Key": "ce5fb85bb1327205acc9c2e14f11d65d9e32edb24f554031f47217663fc5dbe4",
       "Source": "Confirm the command is safe to run outside of the sandbox with full network and disk access.",
-      "Translation": "确认该命令可在沙箱外安全运行，拥有完整的网络和磁盘访问权限.",
+      "Translation": "确认该命令可在沙箱外安全运行，拥有完整的网络和磁盘访问权限。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -15059,7 +15059,7 @@
     {
       "Key": "4c98f0018f96f0ecfb9d2b5b1392ce21660d45375322c3eaaf777f3d84dd607c",
       "Source": "Drag to resize, double-click to reset",
-      "Translation": "拖动以调整大小,双击以重置",
+      "Translation": "拖动以调整大小，双击以重置",
       "Kind": "ui/div",
       "Role": "title",
       "Shape": "string"
@@ -15067,7 +15067,7 @@
     {
       "Key": "8b08017ad2dca8846b24a944bc5ad3ad6ecb3f27eb4201506cad60032e1402d4",
       "Source": "Side Question:",
-      "Translation": "侧边问题:",
+      "Translation": "侧边问题：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -15083,7 +15083,7 @@
     {
       "Key": "c49a01b54c1b2889247a8a782b04ef12587d013e01728cdee764a227faea9ff7",
       "Source": "Previous question",
-      "Translation": "上一题",
+      "Translation": "上一个问题",
       "Kind": "ui/component",
       "Role": "tooltip",
       "Shape": "string"
@@ -15107,7 +15107,7 @@
     {
       "Key": "e83d3d777ada7394f546b4e3ffdd489ad92a91709436d162ede6eba50184bc6e",
       "Source": "Next question",
-      "Translation": "下一题",
+      "Translation": "下一个问题",
       "Kind": "ui/component",
       "Role": "tooltip",
       "Shape": "string"
@@ -15411,7 +15411,7 @@
     {
       "Key": "ff5d85247c69ac190b1bed26b625ef92d3a64e1dd42026620a5eb421bdde7e56",
       "Source": "This project is associated with a different workspace.",
-      "Translation": "此项目关联到其他工作区.",
+      "Translation": "此项目已关联到其他工作区。",
       "Kind": "ui/component",
       "Role": "message",
       "Shape": "string"
@@ -15419,7 +15419,7 @@
     {
       "Key": "c9ae4a20325425c86c1947b19061bfcfda32ae943eea83d6796225b03b3a67c7",
       "Source": "Switch IDE Workspace",
-      "Translation": "切换到IDE工作区",
+      "Translation": "切换 IDE 工作区",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -15491,7 +15491,7 @@
     {
       "Key": "1b2de44ee05e4d6e1fbb95a13b20cc58a8ee389d0875782907c08a003010d2ad",
       "Source": "Agent permissions preset selector, current: ⟪AGC0⟫",
-      "Translation": "智能体权限预设选择器,当前:⟪AGC0⟫",
+      "Translation": "智能体权限预设选择器，当前：⟪AGC0⟫",
       "Kind": "ui/button",
       "Role": "aria-label",
       "Shape": "template"
@@ -15547,7 +15547,7 @@
     {
       "Key": "8bf67b13ece76691d72794da0a0490c395451d6784a557625e3b368dbccf093f",
       "Source": "Every command requires approval.",
-      "Translation": "每条命令都需要批准.",
+      "Translation": "每条命令都需要批准。",
       "Kind": "ui/component",
       "Role": "description",
       "Shape": "lookup"
@@ -15555,7 +15555,7 @@
     {
       "Key": "471040f8d482774788a442f065d9e54d9391be4a3ef99e903567d0c217a64ba3",
       "Source": "Ask before sensitive operations.",
-      "Translation": "敏感操作前询问.",
+      "Translation": "敏感操作前询问。",
       "Kind": "ui/component",
       "Role": "description",
       "Shape": "lookup"
@@ -15563,7 +15563,7 @@
     {
       "Key": "4241f14417f52aa77a1fd6e0469513198d6504fa21d1cabfba18ceb9598ce257",
       "Source": "Security agent decides if commands run.",
-      "Translation": "由安全智能体决定命令是否运行.",
+      "Translation": "由安全智能体决定命令是否运行。",
       "Kind": "ui/component",
       "Role": "description",
       "Shape": "lookup"
@@ -15571,7 +15571,7 @@
     {
       "Key": "f1de9c99f1b37b887a15876b064aed0297489a3d0280b9dd981ed29561eb90b2",
       "Source": "Automatically decide if commands run.",
-      "Translation": "自动决定命令是否运行.",
+      "Translation": "自动决定命令是否运行。",
       "Kind": "ui/component",
       "Role": "description",
       "Shape": "lookup"
@@ -15579,7 +15579,7 @@
     {
       "Key": "df0bc60718dc6ce57b3d933bf181b7bedaeb2a229f608a8ad7203b63b8329fd8",
       "Source": "Run all commands without restrictions.",
-      "Translation": "不受限制地运行所有命令.",
+      "Translation": "不受限制地运行所有命令。",
       "Kind": "ui/component",
       "Role": "description",
       "Shape": "lookup"
@@ -16939,7 +16939,7 @@
     {
       "Key": "454ea93c954b4dc8712b5c6d586b62e07b699d109ad2ec938e0a8eb5f4ad6bb1",
       "Source": "Close split view and go to forked conversation",
-      "Translation": "关闭分屏视图并转到分叉对话",
+      "Translation": "关闭分屏视图并转到派生对话",
       "Kind": "ui/component",
       "Role": "title",
       "Shape": "string"
@@ -16995,7 +16995,7 @@
     {
       "Key": "28387ec15b38afbc4d8aa3705e84db6034f141c37c32df4a4e99b14009869623",
       "Source": "Error: ⟪AGC0⟫",
-      "Translation": "错误:⟪AGC0⟫",
+      "Translation": "错误：⟪AGC0⟫",
       "Kind": "ui/component",
       "Role": "label",
       "Shape": "template"
@@ -17107,7 +17107,7 @@
     {
       "Key": "658b7e4d795ccc9279e3fa756e2ed4f65b0495ca40ba89c49b3d8c2a529b7f06",
       "Source": "Select workspace, current: ⟪AGC0⟫",
-      "Translation": "选择工作区,当前:⟪AGC0⟫",
+      "Translation": "选择工作区，当前：⟪AGC0⟫",
       "Kind": "ui/component",
       "Role": "aria-label",
       "Shape": "template"
@@ -17499,7 +17499,7 @@
     {
       "Key": "20f23153f14ea8d438fe8f809634968a1d2056f72f83eba28dfd6fcfd975a1ef",
       "Source": " already exists for this ",
-      "Translation": " 已存在于此 ",
+      "Translation": " 已关联此 ",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -17515,7 +17515,7 @@
     {
       "Key": "668b978593200162f18fccc366a4703be6aeaf1d55c841535cbfff9f47955c48",
       "Source": ". Would you like to continue using it or make a new one?",
-      "Translation": ".要继续使用它还是新建一个?",
+      "Translation": "。要继续使用该项目还是新建一个？",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -17579,7 +17579,7 @@
     {
       "Key": "a6563c87d9dce6e41bb280ea59802cb77490321b55485ef841f7c38a31045f05",
       "Source": "A project with this name already exists.",
-      "Translation": "已存在同名项目.",
+      "Translation": "已存在同名项目。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -18219,7 +18219,7 @@
     {
       "Key": "0759c9160911650374a528082783e9a78a3d3950a24810c2957b83c3e68fb928",
       "Source": "Header",
-      "Translation": "页眉",
+      "Translation": "顶部栏",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "string"
@@ -18539,7 +18539,7 @@
     {
       "Key": "b3229b5f9d5d114f5ea65f981359174d5ed4605bbc3647a092098fd1707422dd",
       "Source": "Debug bundle uploaded!",
-      "Translation": "诊断包已上传！",
+      "Translation": "调试包已上传！",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -18563,7 +18563,7 @@
     {
       "Key": "00bbb869a537f04cfb24a304b00f67c8f0d8c9668812731a8cf2962723abe93c",
       "Source": "Open Drive bundle",
-      "Translation": "打开 Drive 诊断包",
+      "Translation": "打开 Drive 调试包",
       "Kind": "ui/a",
       "Role": "children",
       "Shape": "string"
@@ -19387,7 +19387,7 @@
     {
       "Key": "76c77213632180ee94d064d107b5a1cc3878ef16135288ffd5a7159099cedfa3",
       "Source": "Expanded to show search matches; clear the search to collapse",
-      "Translation": "已展开以显示搜索结果;清除搜索即可收起",
+      "Translation": "已展开以显示搜索结果；清除搜索即可收起",
       "Kind": "ui/button",
       "Role": "title",
       "Shape": "string"
@@ -19395,7 +19395,7 @@
     {
       "Key": "b22912732711c9cf2f12d4ee75fb987ce85336ff72b13e943f8bca1556b9f047",
       "Source": "Expand (shift+click to expand every level below)",
-      "Translation": "展开(shift+click 可展开下方全部层级)",
+      "Translation": "展开 (shift+click 可展开下方全部层级)",
       "Kind": "ui/button",
       "Role": "title",
       "Shape": "string"
@@ -19403,7 +19403,7 @@
     {
       "Key": "da47a5d5d25120893b0bc353958536054269a0a2f3fcb7c5034983b9adbcdb40",
       "Source": "Collapse (shift+click to collapse every level below)",
-      "Translation": "折叠(shift+click 可折叠下方全部层级)",
+      "Translation": "折叠 (shift+click 可折叠下方全部层级)",
       "Kind": "ui/button",
       "Role": "title",
       "Shape": "string"
@@ -19555,7 +19555,7 @@
     {
       "Key": "6e23a4384cbd247fc02a2e823c5e885e207ed759edab1f127f40fff167d7485d",
       "Source": "Copy prompt",
-      "Translation": "复制提示",
+      "Translation": "复制提示词",
       "Kind": "ui/button",
       "Role": "title",
       "Shape": "string"
@@ -19587,7 +19587,7 @@
     {
       "Key": "ad6e1e43d9c5ef5cb48a552800b8ef6ff137f4b71cc6f7d53e5e8413b1ada978",
       "Source": "Arguments Schema",
-      "Translation": "参数架构",
+      "Translation": "参数 Schema",
       "Kind": "ui/h6",
       "Role": "children",
       "Shape": "string"
@@ -19595,7 +19595,7 @@
     {
       "Key": "9f0fc9299fcf30eee3083c37bcc427355717cf3eb95ec768775387691f7ba904",
       "Source": "Copy schema JSON",
-      "Translation": "复制架构 JSON",
+      "Translation": "复制 Schema JSON",
       "Kind": "ui/button",
       "Role": "title",
       "Shape": "string"
@@ -20003,7 +20003,7 @@
     {
       "Key": "af3b8e0ce143c3f3ded8d0ed749a3cc6f54343eba653c283ce230026c3968824",
       "Source": "Previous",
-      "Translation": "上一页",
+      "Translation": "上一个",
       "Kind": "ui/button",
       "Role": "title",
       "Shape": "string"
@@ -20715,7 +20715,7 @@
     {
       "Key": "0fe38a7909ff4a19c6643d665173ba4df0938312238229be2827ffa1a9d43de6",
       "Source": "Execution Run: ⟪AGC0⟫",
-      "Translation": "执行运行:⟪AGC0⟫",
+      "Translation": "执行记录：⟪AGC0⟫",
       "Kind": "ui/span",
       "Role": "title",
       "Shape": "template"
@@ -20723,7 +20723,7 @@
     {
       "Key": "70ea8a8418f05233de08401e87ab98ecc931591a8584cfcf44df5c688eeab1ba",
       "Source": "Invocation: ⟪AGC0⟫",
-      "Translation": "调用:⟪AGC0⟫",
+      "Translation": "调用：⟪AGC0⟫",
       "Kind": "ui/span",
       "Role": "title",
       "Shape": "template"
@@ -20731,7 +20731,7 @@
     {
       "Key": "edb7356945d042fb69b07c5f4093f76782dec706bc46906a7d9e152bc625d6b3",
       "Source": "This tool output was truncated (cut off) because it exceeded the single-step limits. Details are visible in the Inspector.",
-      "Translation": "该工具输出因超出单步骤限制而被截断(切断).详情可在 Inspector 中查看.",
+      "Translation": "该工具输出因超出单步限制而被截断。详情可在 Inspector 中查看。",
       "Kind": "ui/span",
       "Role": "title",
       "Shape": "string"
@@ -20739,7 +20739,7 @@
     {
       "Key": "cf139cbf1470edb847addb10dac6d10d5b4aac9dc0d1c7f76eb32674c334050e",
       "Source": "Drag to resize the gutter; double-click to fit it automatically",
-      "Translation": "拖动以调整装订线大小;双击以自动适配",
+      "Translation": "拖动以调整边栏大小；双击以自动适配",
       "Kind": "ui/div",
       "Role": "title",
       "Shape": "string"
@@ -20755,7 +20755,7 @@
     {
       "Key": "fd4c13f922b376f580de1b9213055ded2ea669a51896e694711842f1e30bc3fc",
       "Source": "Click to go there, drag to select a range, drag an edge to resize",
-      "Translation": "点击可跳转到该处,拖动可选择范围,拖动边缘可调整大小",
+      "Translation": "点击可跳转到该处，拖动可选择范围，拖动边缘可调整大小",
       "Kind": "ui/div",
       "Role": "title",
       "Shape": "string"
@@ -20795,7 +20795,7 @@
     {
       "Key": "9882a9a2dbd39bcd3c926e26fecf637387b2f21f690103e721670ca69965ca18",
       "Source": "One row per step, in order — scroll to move through the run",
-      "Translation": "每个步骤一行,按顺序排列——滚动即可浏览整个运行过程",
+      "Translation": "每个步骤一行，按顺序排列——滚动即可浏览整个运行过程",
       "Kind": "ui/button",
       "Role": "title",
       "Shape": "lookup"
@@ -20803,7 +20803,7 @@
     {
       "Key": "56a5b89edfeb9527b004a7c64e541e051d1d5f8a66293165fd3b031c64fc421c",
       "Source": "Every step packed into a lane per kind — no rows, no scrolling",
-      "Translation": "每个步骤按类别打包进一条泳道——无行,无滚动",
+      "Translation": "所有步骤按类别归入各泳道——不分行，无需滚动",
       "Kind": "ui/button",
       "Role": "title",
       "Shape": "lookup"
@@ -20931,7 +20931,7 @@
     {
       "Key": "8634bce9a1a32e28c511ebd61cc777639f989d5aaa607d8dc0271881fa4b93bf",
       "Source": "One lane per kind of step, or one per step type",
-      "Translation": "每种步骤类型一条泳道,或每种步骤类型各一条",
+      "Translation": "按步骤类别划分泳道，或按步骤类型划分",
       "Kind": "ui/select",
       "Role": "title",
       "Shape": "string"
@@ -20971,7 +20971,7 @@
     {
       "Key": "27cd2f5b1ded69e7b33b57b784f430ad7ad12a8c2df8095ad83c934fadb8bdea",
       "Source": "Wheel = scroll through time · Ctrl+wheel = zoom · Click Overview = jump to time · Drag Overview = set time range",
-      "Translation": "滚轮 = 沿时间滚动 · Ctrl+wheel = 缩放 · 点击总览 = 跳到对应时间 · 拖动总览 = 设置时间范围",
+      "Translation": "滚轮 = 沿时间滚动 · Ctrl+wheel = 缩放 · 点击概览 = 跳到对应时间 · 拖动概览 = 设置时间范围",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -20979,7 +20979,7 @@
     {
       "Key": "ba6473405b2d8550310cb774172304e51bdc2da740e203e664d71d421296318a",
       "Source": "Ctrl+wheel = zoom · Shift+wheel = pan · Click Overview = jump to time · Drag Overview = set time range",
-      "Translation": "Ctrl+wheel = 缩放 · Shift+wheel = 平移 · 点击总览 = 跳到对应时间 · 拖动总览 = 设置时间范围",
+      "Translation": "Ctrl+wheel = 缩放 · Shift+wheel = 平移 · 点击概览 = 跳到对应时间 · 拖动概览 = 设置时间范围",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -20987,7 +20987,7 @@
     {
       "Key": "2b64a21dcc09f0d87ddd2d34098df74cb841378c6d17d352e3a6933e2a74f52c",
       "Source": "No steps with timestamps to place on a timeline.",
-      "Translation": "没有带时间戳的步骤可放置到时间线上.",
+      "Translation": "没有带时间戳的步骤可放置到时间线上。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -21619,7 +21619,7 @@
     {
       "Key": "50060ca9b96d7e52b5f4f144a375d9e42f6fb21beac51bf08eb51809cbce862c",
       "Source": "SSH into your device to gcert",
-      "Translation": "将SSH导入设备以用于 gcert",
+      "Translation": "通过 SSH 登录你的设备以运行 gcert",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -21627,7 +21627,7 @@
     {
       "Key": "c2f3083965f0e57a90adf0febbc8a898bfb6014b5826dfb3d5aafa8acea389a2",
       "Source": "Run the command in your workstation terminal, then reload this page:",
-      "Translation": "在工作站终端中运行该命令,然后重新加载此页面:",
+      "Translation": "在工作站终端中运行该命令，然后重新加载此页面：",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -21947,7 +21947,7 @@
     {
       "Key": "accb21269a2040a5a16cef74f7e577118e2baa68efcd841561019286110d2cbb",
       "Source": "Allow creating issues and grant access to specific issues.",
-      "Translation": "允许创建 issue 并授予对特定 issue 的访问权限.",
+      "Translation": "允许创建 issue 并授予对特定 issue 的访问权限。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -21963,7 +21963,7 @@
     {
       "Key": "46bc38ad587df5d34dfd5fd3e7acc6d90f89cf90382cf1ed694c3bf1773eed18",
       "Source": "Toggle this on to allow creating new issues.",
-      "Translation": "开启此项以允许创建新 issue.",
+      "Translation": "开启此项以允许创建新 issue。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -21979,7 +21979,7 @@
     {
       "Key": "9d0fb04b7a19cac3d1fc5bb4fa688d2f5a3124c5d48f375faa94b910250b8ef2",
       "Source": "Grant the selected actions on the listed issue numbers — a comma-separated list like 1, 2, 3, or * for all.",
-      "Translation": "对列出的 issue 编号授予所选操作—-以逗号分隔的列表，如 1, 2, 3，或 * 表示全部.",
+      "Translation": "对列出的 issue 编号授予所选操作——以逗号分隔的列表，如 1、2、3 或用 * 表示全部。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -22099,7 +22099,7 @@
     {
       "Key": "e3e42a82a19223bb617b16ffeb3d53624c981709ee80dc1dd5d546fd69e228bb",
       "Source": "Allow reading workflow runs (list, view, watch) across the whole repository.",
-      "Translation": "允许读取整个仓库中的工作流运行(列表,查看,关注).",
+      "Translation": "允许读取整个仓库中的工作流运行（列出、查看、监视）。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -22435,7 +22435,7 @@
     {
       "Key": "3046df43ff52a6f4a6d789821b2f183ad7b40840e75b6cf8a6b3b63558a7e0e2",
       "Source": "Type",
-      "Translation": "输入",
+      "Translation": "类型",
       "Kind": "ui/component",
       "Role": "label",
       "Shape": "string"
@@ -23099,7 +23099,7 @@
     {
       "Key": "8345f7581c10810697a45d3b00fc47929e135a5c183736c7db8c13ca3fefd301",
       "Source": " For Unix shells, an allow list entry matches a command if its space-separated tokens form a prefix of the command's tokens. For PowerShell, the entry tokens may match any contiguous subsequence of the command tokens.",
-      "Translation": " 对于 Unix shell,如果允许列表条目中以空格分隔的 tokens 构成命令中 tokens 的前缀，则该条目与命令匹配.对于 PowerShell,条目 tokens 可以匹配命令 tokens 中的任意连续子序列.",
+      "Translation": " 对于 Unix Shell，如果允许列表条目中以空格分隔的 tokens 构成命令中 tokens 的前缀，则该条目与命令匹配。对于 PowerShell，条目 tokens 可以匹配命令 tokens 中的任意连续子序列。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -23115,7 +23115,7 @@
     {
       "Key": "47fd058162aa211a03b10b171534906e1911320a593bdcb90cfd52bd99cfe7dc",
       "Source": " The deny list follows the same matching rules as the allow list and takes precedence over the allow list.",
-      "Translation": " 拒绝列表遵循与允许列表相同的匹配规则，且优先级高于允许列表.",
+      "Translation": " 拒绝列表遵循与允许列表相同的匹配规则，且优先级高于允许列表。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -23235,7 +23235,7 @@
     {
       "Key": "05d44277c182348238898ece7f23820a2fd3d73649b062797aac06921870138a",
       "Source": "Command Setup Script",
-      "Translation": "命令安装脚本",
+      "Translation": "命令初始化脚本",
       "Kind": "ui/setting",
       "Role": "label",
       "Shape": "string"
@@ -23243,7 +23243,7 @@
     {
       "Key": "c3947794c98dc1dba75cd39ee299d54cb1f755fb180b28c419777abe3c3609e5",
       "Source": "A shell setup script run before every command the agent executes.",
-      "Translation": "在智能体执行每条命令之前运行的 shell 设置脚本.",
+      "Translation": "在智能体执行每条命令之前运行的 Shell 初始化脚本。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -23251,7 +23251,7 @@
     {
       "Key": "12ad8704616c7d7adbd9e47cdcc1788b0e3dd02640580393b9471004d3e8abc1",
       "Source": "example:\nsource ~/.jetski_shell_setup",
-      "Translation": "示例:\nsource ~/.jetski_shell_setup",
+      "Translation": "示例：\nsource ~/.jetski_shell_setup",
       "Kind": "ui/setting",
       "Role": "placeholder",
       "Shape": "string"
@@ -23267,7 +23267,7 @@
     {
       "Key": "844bd00bb4c006e5815e49e32902e475ea55e51e4444d4e96fc4347466a1d878",
       "Source": "Run terminal commands with sandbox restrictions.",
-      "Translation": "在沙箱限制下运行终端命令.",
+      "Translation": "在沙箱限制下运行终端命令。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -23275,7 +23275,7 @@
     {
       "Key": "ef21d435a2a7b8b3949c83d5f1cddbbaf298ac88199a25a5a7465045063672e7",
       "Source": "Sandbox Allow Network",
-      "Translation": "沙盒允许网络",
+      "Translation": "沙箱允许网络",
       "Kind": "ui/setting",
       "Role": "label",
       "Shape": "string"
@@ -23283,7 +23283,7 @@
     {
       "Key": "3e3ba0521f5555c9a4a5cb61b283c7d91e94e4f1b14bcf283a8097212ff7957b",
       "Source": "Allow sandboxed commands to make network requests.",
-      "Translation": "允许沙盒命令发起网络请求.",
+      "Translation": "允许沙箱命令发起网络请求。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -23299,7 +23299,7 @@
     {
       "Key": "6bafce7839c4853cfd0cc2a38b45d69e25edd66d475e30b588071e0213a33e86",
       "Source": "Use the IDE's shell integration to detect and report terminal command execution. When disabled, the agent uses its own shell. Restart the application for this to take effect.",
-      "Translation": "使用IDE的 shell 集成来检测并上报终端命令的执行情况.禁用后,智能体将使用自带的 shell.重启应用后此设置才会生效.",
+      "Translation": "使用 IDE 的 Shell 集成检测并上报终端命令执行情况。禁用后，智能体将使用自带的 Shell。重启应用后生效。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -23315,7 +23315,7 @@
     {
       "Key": "8e304f43bf134829b15cdf71e9c86a6b763ed0b80176f7d18ee248821a136c11",
       "Source": "Google-wide Allowlist: If you are eligible, commands in the this list run without your approval, in addition to the below options. This policy applies to any host, regardless of internet connectivity. Check on eligibility on go/can-i-autorun-agents.\n\nNote: please reload for these changes to take effect.",
-      "Translation": "Google 全范围允许列表:如果你符合条件,此列表中的命令无需你的批准即可运行,此外还可使用下方的选项.此策略适用于任意主机,无论其是否联网.可在 go/can-i-autorun-agents 查看是否符合条件.\n\n注意:请重新加载以使这些更改生效.",
+      "Translation": "Google 全局允许列表：如果你符合条件，除下方选项外，此列表中的命令也无需你的批准即可直接运行。此策略适用于任何主机，无论其是否联网。可在 go/can-i-autorun-agents 查看是否符合条件。\n\n注意：请重新加载以使更改生效。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -23323,7 +23323,7 @@
     {
       "Key": "dd79e4df34cac736ada66483271b573a739248276d548ef917c36f5fc7417f84",
       "Source": "Controls whether terminal commands require your approval before running.\n\nNote: A change to this setting will only apply to new messages sent to the agent. In-progress responses will use the previous setting value.",
-      "Translation": "控制终端命令在运行前是否需要你的批准.\n\n注意:对此设置的更改仅对发送给智能体的新消息生效.正在进行的响应将沿用先前的设置值.",
+      "Translation": "控制终端命令在运行前是否需要你的批准。\n\n注意：对此设置的更改仅对发送给智能体的新消息生效。正在进行的响应将沿用先前的设置值。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -23475,7 +23475,7 @@
     {
       "Key": "c5319d1eec23a5bedf66e9fa3b841a54fcd8ef881ab454faa1700ee75c228422",
       "Source": "Verbose Agent Chat",
-      "Translation": "详细智能体聊天",
+      "Translation": "显示详细智能体对话",
       "Kind": "ui/setting",
       "Role": "label",
       "Shape": "string"
@@ -23971,7 +23971,7 @@
     {
       "Key": "3386a3f6a922da7c4fd364ad6a962f4a36cb3c94ad9f86ee0b111995a4b653bc",
       "Source": "Give each Best of N fork its own clone of your Git repository instead of a copy-on-write overlay. Each fork is then a real repository, so commits it makes are kept when you choose it as the winner. Forks take longer to create, and the wait grows with the size of your repository. See go/jetski-best-of-n.",
-      "Translation": "为每个 Best of N fork 提供你自己的 Git 仓库克隆，而不是写时复制覆盖层.这样每个 fork 都是真实的仓库，因此当你将其选为优胜者时，它所做的提交会保留.创建 fork 耗时更长,且等待时间会随仓库大小增加.请参阅 go/jetski-best-of-n.",
+      "Translation": "为每个 Best of N 派生提供独立的 Git 仓库克隆，而非写时复制覆盖层。这样每个派生都是真实的仓库，因此当你将其选为获胜方案时，其提交均会保留。创建派生需要更长时间，且等待时间会随仓库体积增加。详情请参阅 go/jetski-best-of-n。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -24019,7 +24019,7 @@
     {
       "Key": "d0cf35aa363d9fcf78665b0265fcea7064f741110b54214673aa2aa143aff339",
       "Source": "Work in a Cog workspace.",
-      "Translation": "在 Cog 工作区中工作.",
+      "Translation": "在 Cog 工作区中工作。",
       "Kind": "ui/menu",
       "Role": "tooltipText",
       "Shape": "string"
@@ -24035,7 +24035,7 @@
     {
       "Key": "699840980951814d1bff5f3734f203efaa99e8eae0075db778181ada82315de6",
       "Source": "Work in an ABFS workspace.",
-      "Translation": "在 ABFS 工作区中工作.",
+      "Translation": "在 ABFS 工作区中工作。",
       "Kind": "ui/menu",
       "Role": "tooltipText",
       "Shape": "string"
@@ -24051,7 +24051,7 @@
     {
       "Key": "f48a9339d8588591e778f6b00f8c49691a0ca0e6fbfef92209b0509f30fe65ca",
       "Source": "Create a new Piper (g4) workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 Piper (g4) 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 Piper (g4) 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/menu",
       "Role": "tooltipText",
       "Shape": "lookup"
@@ -24059,7 +24059,7 @@
     {
       "Key": "6d020fe5578bb37c93b826e7a052051272fb0aff613e3281a082fdd33799551b",
       "Source": "Create a new JJ workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 JJ 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 JJ 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/menu",
       "Role": "tooltipText",
       "Shape": "lookup"
@@ -24067,7 +24067,7 @@
     {
       "Key": "c992a73a4d1ced1cd535f2a2b3a0380534c583741a16efdd058a73d261379732",
       "Source": "Create a new Cog (GoB) workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 Cog (GoB) 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 Cog (GoB) 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/menu",
       "Role": "tooltipText",
       "Shape": "lookup"
@@ -24075,7 +24075,7 @@
     {
       "Key": "cc232566c217e2f0cb900a796a4afdeea822b53a861f1793fa10e4fb7fc96ea6",
       "Source": "Create a new Fig workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 Fig 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 Fig 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/menu",
       "Role": "tooltipText",
       "Shape": "lookup"
@@ -24083,7 +24083,7 @@
     {
       "Key": "6c291f47e5e0cfeb8f9117243038cc4f3529d028ba127e1792cca2e674867449",
       "Source": "No description available.",
-      "Translation": "暂无描述.",
+      "Translation": "暂无描述。",
       "Kind": "ui/component",
       "Role": "text",
       "Shape": "string"
@@ -24179,7 +24179,7 @@
     {
       "Key": "6c7deda4cbb059d9363c9375851f9efe0522f8105158020f64acafeaf24b97fa",
       "Source": "The conversation was compacted while generating this response.",
-      "Translation": "生成此回复时，对话已精简.",
+      "Translation": "生成此回复时，对话已精简。",
       "Kind": "ui/component",
       "Role": "text",
       "Shape": "string"
@@ -24467,7 +24467,7 @@
     {
       "Key": "c24727d40718c57ca12bd2c77eb38e8673eee429a27d73981540b78579130de6",
       "Source": "Shared with: ⟪AGC0⟫",
-      "Translation": "共享给:⟪AGC0⟫",
+      "Translation": "共享给：⟪AGC0⟫",
       "Kind": "ui/component",
       "Role": "subtitle",
       "Shape": "template"
@@ -24483,7 +24483,7 @@
     {
       "Key": "c89bc521be3bc491ac72d75ad00837f3f4636c161e79dab31e9df558c95f0542",
       "Source": "The browser subagent has been disabled by your administrator. Contact your administrator to enable browser use.",
-      "Translation": "浏览器子智能体已被管理员禁用.请联系管理员启用浏览器功能.",
+      "Translation": "浏览器子智能体已被管理员禁用。请联系管理员启用浏览器功能。",
       "Kind": "ui/component",
       "Role": "subtitle",
       "Shape": "string"
@@ -24499,7 +24499,7 @@
     {
       "Key": "25f7261e09bfb6a43bfc778bf8c7b6cbd5a84fda6596040b998ad8bd67ff14c1",
       "Source": "Try out early-stage features before they ship. These may be changed or removed at any time. These features are experimental, and we make no guarantees about performance or functionality.",
-      "Translation": "在正式发布前体验早期功能.这些功能可能随时更改或移除.这些功能属于实验性质,我们不对其性能或功能作任何保证.",
+      "Translation": "在正式发布前体验早期功能。这些功能可能随时更改或移除。这些功能属于实验性质，我们不对其性能或功能作任何保证。",
       "Kind": "ui/component",
       "Role": "subtitle",
       "Shape": "string"
@@ -24539,7 +24539,7 @@
     {
       "Key": "bf74eb03287fafd82e5852268e4957a15e9d29d0b453e004ce76bc4feaab8f5c",
       "Source": "Status: ",
-      "Translation": "状态: ",
+      "Translation": "状态： ",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -24747,7 +24747,7 @@
     {
       "Key": "e5f0a6eb6bc2d3bf1731b01013b864aa1ff8463e2eac89a6fc010d7b071e1292",
       "Source": "Error: ⟪AGC0⟫",
-      "Translation": "错误:⟪AGC0⟫",
+      "Translation": "错误：⟪AGC0⟫",
       "Kind": "ui/menu",
       "Role": "label",
       "Shape": "template"
@@ -24827,7 +24827,7 @@
     {
       "Key": "ca88e860b3a76865fb5d8601a55f015b63505b853f7833ccc6fc028531682678",
       "Source": "You've reached the maximum number of turns for this battle. End battle mode to continue.",
-      "Translation": "本场战斗已达到最大回合数.结束战斗模式以继续.",
+      "Translation": "本场战斗已达到最大回合数。结束战斗模式以继续。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -24843,7 +24843,7 @@
     {
       "Key": "5ef7f187f4ee55a8a31109efc12550386c3e3ce031de453465eb26c2ed6fa94d",
       "Source": "Create a new Piper (g4) workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 Piper (g4) 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 Piper (g4) 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/span",
       "Role": "title",
       "Shape": "lookup"
@@ -24851,7 +24851,7 @@
     {
       "Key": "739aa36e0e019fb99bb4e58ab43200ca56824d5b8516a92c5b55b2a7b024d51b",
       "Source": "Create a new JJ workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 JJ 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 JJ 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/span",
       "Role": "title",
       "Shape": "lookup"
@@ -24859,7 +24859,7 @@
     {
       "Key": "b0364088ec738d89f380bb51f7f025aed378d6acb99688dc0282d7912bf8c7fb",
       "Source": "Create a new Cog (GoB) workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 Cog (GoB) 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 Cog (GoB) 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/span",
       "Role": "title",
       "Shape": "lookup"
@@ -24867,7 +24867,7 @@
     {
       "Key": "74c62ddb4d87d50fbb5e0df01870d88535c4274a8eeff41a66ebef0e4fe368d1",
       "Source": "Create a new Fig workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 Fig 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 Fig 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/span",
       "Role": "title",
       "Shape": "lookup"
@@ -24883,7 +24883,7 @@
     {
       "Key": "0c56423f2c40b5216ff9d989688b949b51b1796233d1bfa117eeee1cd6acb1da",
       "Source": "Create a new Piper (g4) workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 Piper (g4) 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 Piper (g4) 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "lookup"
@@ -24891,7 +24891,7 @@
     {
       "Key": "873c4528948fb3b10ea493eabf3524173a0c776518160eedccede2f837ab99e7",
       "Source": "Create a new JJ workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 JJ 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 JJ 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "lookup"
@@ -24899,7 +24899,7 @@
     {
       "Key": "a70c372800baefe0d8997affd82770ad95846ae3de776c132398079ad9760486",
       "Source": "Create a new Cog (GoB) workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 Cog (GoB) 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 Cog (GoB) 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "lookup"
@@ -24907,7 +24907,7 @@
     {
       "Key": "9222fe272524dcb0bb65d338376c0f8debbe33b7d654f9c240d71559096dbc63",
       "Source": "Create a new Fig workspace from your initial prompt. Customize in General Settings, under Advanced.",
-      "Translation": "根据你的初始提示创建新的 Fig 工作区.可在“常规设置”的“高级”中自定义.",
+      "Translation": "根据你的初始提示创建新的 Fig 工作区。可在“常规设置”的“高级”中自定义。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "lookup"
@@ -25275,7 +25275,7 @@
     {
       "Key": "13681b2c5df0dd679415e07cafd862b6cdfaaca4ccb78d01bc5951281809b08b",
       "Source": "Enable fine-grained GitHub permissions and define the org, repository, and resource-level access the agent is allowed to use.",
-      "Translation": "启用细粒度的 GitHub 权限,并定义智能体可用的组织,仓库和资源级别访问权限.",
+      "Translation": "启用细粒度的 GitHub 权限，并定义智能体可用的组织、仓库和资源级别访问权限。",
       "Kind": "ui/component",
       "Role": "subtitle",
       "Shape": "string"
@@ -25475,7 +25475,7 @@
     {
       "Key": "46748edb1778678069667aaf8165d438266ce313d55b7fc7cca3b8d4bd69bd4e",
       "Source": "Runs even when your computer is off. Schedules and events.",
-      "Translation": "即使电脑关机也会运行.计划和事件.",
+      "Translation": "即使电脑关机也会运行。计划和事件。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -25483,7 +25483,7 @@
     {
       "Key": "86bc50df92e36f0a58ed311b721b926da3d7806f8a0211d7ef10c571a32280c8",
       "Source": "Runs even when your computer is off. Schedules only.",
-      "Translation": "即使电脑关机也会运行.仅计划.",
+      "Translation": "即使电脑关机也会运行。仅计划。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -25491,7 +25491,7 @@
     {
       "Key": "a1a10580ae8466a8cfd8e73a7705e4490135e304c4e968282c5c3ba79959fed7",
       "Source": "Uses your local files and tools. Schedules only.",
-      "Translation": "使用本地文件和工具.仅计划.",
+      "Translation": "使用本地文件和工具。仅计划。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -25499,7 +25499,7 @@
     {
       "Key": "7ffecca6ad1f303624589bdc7552a8de979ecc6a5c10c7b1d03031a26d8bda01",
       "Source": "⟪AGC0⟫, setup required",
-      "Translation": "⟪AGC0⟫,需要设置",
+      "Translation": "⟪AGC0⟫，需要设置",
       "Kind": "ui/button",
       "Role": "aria-label",
       "Shape": "template"
@@ -25699,7 +25699,7 @@
     {
       "Key": "1161e8aca27fd910b43a49af724d9dbc1ff6f2982e99b7bb841cc1be278596ee",
       "Source": "This workspace overrides your global permission settings.",
-      "Translation": "此工作区会覆盖你的全局权限设置.",
+      "Translation": "此工作区会覆盖你的全局权限设置。",
       "Kind": "ui/span",
       "Role": "aria-label",
       "Shape": "lookup"
@@ -25707,7 +25707,7 @@
     {
       "Key": "eb93e5d6027c63f354679b2e487ea682c092d7b6900e020c4b41c715c7c69696",
       "Source": "This project overrides your global permission settings.",
-      "Translation": "此项目会覆盖你的全局权限设置.",
+      "Translation": "此项目会覆盖你的全局权限设置。",
       "Kind": "ui/span",
       "Role": "aria-label",
       "Shape": "lookup"
@@ -25715,7 +25715,7 @@
     {
       "Key": "6090528e11226bb9bfff95995c100bddf2accb897605205cbbc87e14906353be",
       "Source": "This workspace overrides your global permission settings.",
-      "Translation": "此工作区会覆盖你的全局权限设置.",
+      "Translation": "此工作区会覆盖你的全局权限设置。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -25723,7 +25723,7 @@
     {
       "Key": "0e99bb7239e7a9afe7aee0a9bea800b113b5b7eab31d9b792989417b5668a059",
       "Source": "This project overrides your global permission settings.",
-      "Translation": "此项目会覆盖你的全局权限设置.",
+      "Translation": "此项目会覆盖你的全局权限设置。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -26011,7 +26011,7 @@
     {
       "Key": "3ce9d195668b4b640e242b21260d9b5aaee22e3a3239d69185840411034ab7ab",
       "Source": "Proceed in Sandbox",
-      "Translation": "在沙盒中继续",
+      "Translation": "在沙箱中继续",
       "Kind": "ui/setting-option",
       "Role": "label",
       "Shape": "string"
@@ -26083,7 +26083,7 @@
     {
       "Key": "98b6ab3581a43950538bfb1e9dc09ee92d01241ece0ef77c3602f451aa701658",
       "Source": "The agent auto-executes commands matched by an allow list entry.",
-      "Translation": "智能体会自动执行被允许列表条目匹配到的命令.",
+      "Translation": "智能体会自动执行被允许列表条目匹配到的命令。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -26091,7 +26091,7 @@
     {
       "Key": "7462a5956e0635e4886567a0d4883fb6e0e14cf1d5d28ed3de700d794bfb6553",
       "Source": " Only works when Auto-execution policy is set to \"Request Review\" on a go/limited-internet host.",
-      "Translation": " 仅在可联网/有限联网的主机上将自动执行策略设为\"请求审核\"时有效.",
+      "Translation": " 仅在可联网/有限联网的主机上将自动执行策略设为“请求审核”时有效。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -26099,7 +26099,7 @@
     {
       "Key": "41f18528cd0895953ededcdea0dbe645a1ee69b240ff99772ce61ffa057df893",
       "Source": " For Unix shells, an allow list entry matches a command if its space-separated tokens form a prefix of the command's tokens. For PowerShell, the entry tokens may match any contiguous subsequence of the command tokens.",
-      "Translation": " 对于 Unix shell,如果允许列表条目中以空格分隔的 tokens 构成命令中 tokens 的前缀，则该条目与命令匹配.对于 PowerShell,条目 tokens 可以匹配命令 tokens 中的任意连续子序列.",
+      "Translation": " 对于 Unix Shell，如果允许列表条目中以空格分隔的 tokens 构成命令中 tokens 的前缀，则该条目与命令匹配。对于 PowerShell，条目 tokens 可以匹配命令 tokens 中的任意连续子序列。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -26115,7 +26115,7 @@
     {
       "Key": "048878692a7b5be7b1b57591a792dc2a2e2bcdcf913e1645f9f66dd4062e638c",
       "Source": "The agent asks for permission before executing commands matched by a deny list entry.",
-      "Translation": "智能体在执行被拒绝列表条目匹配到的命令之前会请求权限.",
+      "Translation": "智能体在执行被拒绝列表条目匹配到的命令之前会请求权限。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -26123,7 +26123,7 @@
     {
       "Key": "b4069da0fd4ab6afd427ee5c2efe63c501f4b62b5c03ad9550e15d40fdba770b",
       "Source": " Only works when Auto-execution policy is set to \"Request Review\" on a go/limited-internet host.",
-      "Translation": " 仅在可联网/有限联网的主机上将自动执行策略设为\"请求审核\"时有效.",
+      "Translation": " 仅在可联网/有限联网的主机上将自动执行策略设为“请求审核”时有效。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -26131,7 +26131,7 @@
     {
       "Key": "44e4939160db3a79f3e62498b8ed951284898ee7e319b76b67d27c399b71debf",
       "Source": " The deny list follows the same matching rules as the allow list and takes precedence over the allow list.",
-      "Translation": " 拒绝列表遵循与允许列表相同的匹配规则，且优先级高于允许列表.",
+      "Translation": " 拒绝列表遵循与允许列表相同的匹配规则，且优先级高于允许列表。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -26139,7 +26139,7 @@
     {
       "Key": "ad483c42f209722aeb88e8e6dc307c6681777ec9a4c01210579dfdd44af10c52",
       "Source": "Message subagent, @ to mention",
-      "Translation": "给子智能体发消息,@ 可提及",
+      "Translation": "给子智能体发消息，@ 可提及",
       "Kind": "ui/input-placeholder",
       "Role": "placeholder",
       "Shape": "string"
@@ -26155,7 +26155,7 @@
     {
       "Key": "b3784db621f1af4d32b22cdedd45241c5b6678df4dbb94a841e03e2f04519406",
       "Source": "Ask anything, @ to mention",
-      "Translation": "问点什么,@ 可提及",
+      "Translation": "提出任何问题，@ 可提及",
       "Kind": "ui/input-placeholder",
       "Role": "placeholder",
       "Shape": "string"
@@ -26187,7 +26187,7 @@
     {
       "Key": "6341ab7f87426ffcee07127e1b66618c2e211e1c66c9348e463af5d631c6cd6c",
       "Source": "You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫.",
-      "Translation": "你已使用部分每周额度，将在 ⟪AGC0⟫后完全恢复。",
+      "Translation": "你已使用部分每周额度，将在 ⟪AGC0⟫ 后完全恢复。",
       "Kind": "ui/component",
       "Role": "service/quota-description",
       "Shape": "service"
@@ -26299,7 +26299,7 @@
     {
       "Key": "67e269e5aabc446e82cfb9ca1180ac231660b3e572ddbee27f6521071c71e40f",
       "Source": "You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫.",
-      "Translation": "你已使用部分每周额度，将在 ⟪AGC0⟫后完全恢复。",
+      "Translation": "你已使用部分每周额度，将在 ⟪AGC0⟫ 后完全恢复。",
       "Kind": "ui/span",
       "Role": "service/quota-description",
       "Shape": "service"
@@ -26467,7 +26467,7 @@
     {
       "Key": "decea482c82f23c3aca757eff3fc30c19404f5b5c3e5d42c870953bc325e8ff9",
       "Source": "No description available.",
-      "Translation": "暂无描述.",
+      "Translation": "暂无描述。",
       "Kind": "ui/display-local",
       "Role": "children",
       "Shape": "string"
@@ -26683,7 +26683,7 @@
     {
       "Key": "8a1fd531faa13c06dae1143e5fc4372f928029b8a3be4d2fb218b8b0b809ce7c",
       "Source": "Agent settings and permissions for conversations outside of ⟪AGC0⟫.",
-      "Translation": "用于⟪AGC0⟫之外对话的智能体设置和权限。",
+      "Translation": "用于 ⟪AGC0⟫ 之外对话的智能体设置和权限。",
       "Kind": "ui/display-local",
       "Role": "children",
       "Shape": "template"
@@ -26691,7 +26691,7 @@
     {
       "Key": "41bf69628401fd97fe8cfd463f77376c26666f00a2e72f34674b3841275b2d45",
       "Source": "Manage ⟪AGC0⟫ ⟪AGC1⟫, agent settings, and permissions.",
-      "Translation": "管理⟪AGC0⟫的⟪AGC1⟫、智能体设置和权限。",
+      "Translation": "管理 ⟪AGC0⟫ 的 ⟪AGC1⟫、智能体设置和权限。",
       "Kind": "ui/display-local",
       "Role": "children",
       "Shape": "template"
@@ -26843,7 +26843,7 @@
     {
       "Key": "f5a160d3cc718dd8c393a6d29b3d40441883414a22c4fd84365d2f8a59dd3308",
       "Source": "Maximize ⟪AGC0⟫",
-      "Translation": "最大化⟪AGC0⟫",
+      "Translation": "最大化 ⟪AGC0⟫",
       "Kind": "ui/display-local",
       "Role": "children",
       "Shape": "template"
@@ -26891,7 +26891,7 @@
     {
       "Key": "25b7d9ba8abf5f211b0c5e03f2873e3cdd586654991875097ece61f402735cad",
       "Source": "Create a new project using normal folders and/or citc workspaces.",
-      "Translation": "使用普通文件夹和/或 citc 工作区新建项目。",
+      "Translation": "使用普通文件夹和/或 CitC 工作区新建项目。",
       "Kind": "ui/menu",
       "Role": "tooltipText",
       "Shape": "string"
@@ -26923,7 +26923,7 @@
     {
       "Key": "d1be7aae7abadde438b8963e1b1b92bca136285c83ecf0872d234fef33ce1967",
       "Source": "Allow ⟪AGC0⟫",
-      "Translation": "允许⟪AGC0⟫",
+      "Translation": "允许 ⟪AGC0⟫",
       "Kind": "ui/menu",
       "Role": "label",
       "Shape": "template"
@@ -27043,7 +27043,7 @@
     {
       "Key": "3075f68bf0315ea7cb9a0fdb3a5697dc26c46f92839fb55717d909e2e77d6cb7",
       "Source": "You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫.",
-      "Translation": "你已使用部分每周额度，将在 ⟪AGC0⟫后完全恢复。",
+      "Translation": "你已使用部分每周额度，将在 ⟪AGC0⟫ 后完全恢复。",
       "Kind": "ui/component",
       "Role": "service/quota-description",
       "Shape": "service"
@@ -27123,7 +27123,7 @@
     {
       "Key": "462ad68d5e8da020c1e8b12501d778d44ae0bf74cd054f5aa74402ecc6c4ce99",
       "Source": "You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫.",
-      "Translation": "你已使用部分每周额度，将在 ⟪AGC0⟫后完全恢复。",
+      "Translation": "你已使用部分每周额度，将在 ⟪AGC0⟫ 后完全恢复。",
       "Kind": "ui/span",
       "Role": "service/quota-description",
       "Shape": "service"
@@ -27323,7 +27323,7 @@
     {
       "Key": "bafbb6c657772115006bafb7ab5c10d4ec7ba374f662751ad35a7cba511abdc6",
       "Source": "A project with this name already exists.",
-      "Translation": "已存在同名项目.",
+      "Translation": "已存在同名项目。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "children"
@@ -27651,7 +27651,7 @@
     {
       "Key": "3136c15ce3632939dca5d68feca678cf3893073fc9f7d4471bef880cdd7c8fe0",
       "Source": "Agent settings and permissions for conversations outside of ⟪AGC0⟫.",
-      "Translation": "用于⟪AGC0⟫之外对话的智能体设置和权限。",
+      "Translation": "用于 ⟪AGC0⟫ 之外对话的智能体设置和权限。",
       "Kind": "ui/display-local",
       "Role": "children",
       "Shape": "template"
@@ -27691,7 +27691,7 @@
     {
       "Key": "25ad4db84c0e1445fe808b4b38408fd882262ab06b8112e70b3abd490931e7dd",
       "Source": "Manage ⟪AGC0⟫ ⟪AGC1⟫, agent settings, and permissions.",
-      "Translation": "管理⟪AGC0⟫的⟪AGC1⟫、智能体设置和权限。",
+      "Translation": "管理 ⟪AGC0⟫ 的 ⟪AGC1⟫、智能体设置和权限。",
       "Kind": "ui/display-local",
       "Role": "children",
       "Shape": "template"
@@ -27715,7 +27715,7 @@
     {
       "Key": "58ae2302ab863d208273c5c042486fe5a13a0effda92b219a7cd5e4f1c84b2ee",
       "Source": "⟪AGC0⟫ ⟪AGC1⟫ tool for ⟪AGC2⟫",
-      "Translation": "⟪AGC0⟫ ⟪AGC1⟫工具，用于⟪AGC2⟫",
+      "Translation": "⟪AGC0⟫ ⟪AGC1⟫ 工具，用于 ⟪AGC2⟫",
       "Kind": "ui/button",
       "Role": "aria-label",
       "Shape": "template"
@@ -27763,7 +27763,7 @@
     {
       "Key": "3dedcd7a7a33d5515f29abcb46af69a7f26e9735fb35a86eae90f615224f6eb1",
       "Source": "Filter skills and rules: ⟪AGC0⟫",
-      "Translation": "筛选技能和规则:⟪AGC0⟫",
+      "Translation": "筛选技能和规则：⟪AGC0⟫",
       "Kind": "ui/component",
       "Role": "aria-label",
       "Shape": "template"
@@ -27811,7 +27811,7 @@
     {
       "Key": "7017e25cabb03860654e3aa834db91a1d63e559c006be00e526125962b3c18df",
       "Source": "Cancel questionnaire and stop the agent (⟪AGC0⟫)",
-      "Translation": "取消问卷并停止智能体(⟪AGC0⟫)",
+      "Translation": "取消问卷并停止智能体 (⟪AGC0⟫)",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "template"
@@ -27843,7 +27843,7 @@
     {
       "Key": "d744033893e5f9f0be7cc603dd9a64f726d272d3a35e460c5f7c32d1a5f899ac",
       "Source": "Skip (esc), Skip All (⟪AGC0⟫)",
-      "Translation": "跳过 (esc),全部跳过 (⟪AGC0⟫)",
+      "Translation": "跳过 (Esc)，全部跳过 (⟪AGC0⟫)",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "template"
@@ -28003,7 +28003,7 @@
     {
       "Key": "3316bc49a76f4b277935478b9b8dd662901068b3a1bb9af1312a643e9d0e023d",
       "Source": "Edit ⟪AGC0⟫ name",
-      "Translation": "编辑⟪AGC0⟫名称",
+      "Translation": "编辑 ⟪AGC0⟫ 名称",
       "Kind": "ui/button",
       "Role": "aria-label",
       "Shape": "template"
@@ -28067,7 +28067,7 @@
     {
       "Key": "14d0f47728695bdaca49050bb32cba795fb0fd39b3580be94084d0447a4c5e60",
       "Source": " automation and can only be deleted by deleting that automation.",
-      "Translation": " 自动化管理，只能通过删除该自动化来删除.",
+      "Translation": " 自动化管理，只能通过删除该自动化来删除。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -28139,7 +28139,7 @@
     {
       "Key": "0dea2917f13e73f113eece2de494e133edd4b94d0405710c73bd7c1c51dfcbc9",
       "Source": "Agent permissions preset selector, current: ⟪AGC0⟫",
-      "Translation": "智能体权限预设选择器,当前:⟪AGC0⟫",
+      "Translation": "智能体权限预设选择器，当前：⟪AGC0⟫",
       "Kind": "ui/button",
       "Role": "aria-label",
       "Shape": "template"
@@ -28203,7 +28203,7 @@
     {
       "Key": "8730b004f65b4966ffeecc7158fcbe6d53e5f495c1bf4625dad9ec4cfdffaf80",
       "Source": "Select workspace, current: ⟪AGC0⟫",
-      "Translation": "选择工作区,当前:⟪AGC0⟫",
+      "Translation": "选择工作区，当前：⟪AGC0⟫",
       "Kind": "ui/component",
       "Role": "aria-label",
       "Shape": "template"
@@ -28219,7 +28219,7 @@
     {
       "Key": "e9e4d5caf75c38297a74b7f9f8e962075fca20d1da2110ec74d30468cf8d70fe",
       "Source": " already exists for this ",
-      "Translation": " 已存在于此 ",
+      "Translation": " 已关联此 ",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -28243,7 +28243,7 @@
     {
       "Key": "ebd717792aee512eff49c41fe9e2837c6a9fbc073f85724cb1cfad8166717fe8",
       "Source": ". Would you like to continue using it or make a new one?",
-      "Translation": ".要继续使用它还是新建一个?",
+      "Translation": "。要继续使用该项目还是新建一个？",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -28363,7 +28363,7 @@
     {
       "Key": "c8d44d25c16bf0702af5297f2f6b6c63e7c5b89dab4efdc70676b4df70ed3f2c",
       "Source": "Header",
-      "Translation": "页眉",
+      "Translation": "顶部栏",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "string"
@@ -28483,7 +28483,7 @@
     {
       "Key": "10ffc98022279ae5787e4c8744fa8d76b5637a8733aa20ccf7e9fb87c2403f60",
       "Source": "Header",
-      "Translation": "页眉",
+      "Translation": "顶部栏",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "string"
@@ -28547,7 +28547,7 @@
     {
       "Key": "a327a9452c4eee4a40ff3938b4d5e83b179590ae7ed43f45ab8903c9c6998f1c",
       "Source": "Expanded to show search matches; clear the search to collapse",
-      "Translation": "已展开以显示搜索结果;清除搜索即可收起",
+      "Translation": "已展开以显示搜索结果；清除搜索即可收起",
       "Kind": "ui/button",
       "Role": "title",
       "Shape": "string"
@@ -28555,7 +28555,7 @@
     {
       "Key": "6b379217c66947509054fb8afedfd556f2398a271c40fcf100e627a366bb0124",
       "Source": "Expand (shift+click to expand every level below)",
-      "Translation": "展开(shift+click 可展开下方全部层级)",
+      "Translation": "展开 (shift+click 可展开下方全部层级)",
       "Kind": "ui/button",
       "Role": "title",
       "Shape": "string"
@@ -28563,7 +28563,7 @@
     {
       "Key": "8cb31400f47a242ab0b129a596fee5d629abc811f8d728372b7dbc257678d104",
       "Source": "Collapse (shift+click to collapse every level below)",
-      "Translation": "折叠(shift+click 可折叠下方全部层级)",
+      "Translation": "折叠 (shift+click 可折叠下方全部层级)",
       "Kind": "ui/button",
       "Role": "title",
       "Shape": "string"
@@ -28715,7 +28715,7 @@
     {
       "Key": "2138df8ed4fbad3fd7cc4e21ff293b2b5cb4eeeb38a62298b2cf70b5570aeb07",
       "Source": "Proceed in Sandbox",
-      "Translation": "在沙盒中继续",
+      "Translation": "在沙箱中继续",
       "Kind": "ui/span",
       "Role": "option-label",
       "Shape": "lookup"
@@ -28819,7 +28819,7 @@
     {
       "Key": "0a8508726ab6f8bfab2309d85bac279a50c41ad9c52902c99799b5c333c6fce4",
       "Source": "Ask before sensitive operations.",
-      "Translation": "敏感操作前询问.",
+      "Translation": "敏感操作前询问。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -28827,7 +28827,7 @@
     {
       "Key": "f3a6e307ea0fc75aa72366a1991ad22d7b6250c23bff9fc55f8be5b525ecfe51",
       "Source": "Automatically decide if commands run.",
-      "Translation": "自动决定命令是否运行.",
+      "Translation": "自动决定命令是否运行。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -28851,7 +28851,7 @@
     {
       "Key": "8f6495057c4141af0a79cdc4e0cee627d4aee6d306c8c21835858b6fd41f5d93",
       "Source": "Every command requires approval.",
-      "Translation": "每条命令都需要批准.",
+      "Translation": "每条命令都需要批准。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -28923,7 +28923,7 @@
     {
       "Key": "745b83b685410b55533455f9ea588bf65e0fa87dc857c61dd57289e93ce691d0",
       "Source": "Run all commands without restrictions.",
-      "Translation": "不受限制地运行所有命令.",
+      "Translation": "不受限制地运行所有命令。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -28931,7 +28931,7 @@
     {
       "Key": "02e96b3bcf85d83207f43122b7a0d609ad35e8b0f3272e49d8b570e39c1fa8e5",
       "Source": "Security agent decides if commands run.",
-      "Translation": "由安全智能体决定命令是否运行.",
+      "Translation": "由安全智能体决定命令是否运行。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -28939,7 +28939,7 @@
     {
       "Key": "25c2f36dae5b65a636b835e07f74219aa4959728a07e036e647110759560651a",
       "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
-      "Translation": "在沙盒内运行的终端命令会自动执行，否则会请求审核。",
+      "Translation": "在沙箱内运行的终端命令会自动执行，否则会请求审核。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -28947,7 +28947,7 @@
     {
       "Key": "e312b5171c1f862cb29e3afc1f9103792da4972f1edb2ba074e14924808124de",
       "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
-      "Translation": "终端命令在沙盒内会自动执行。需要离开沙盒的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
+      "Translation": "终端命令在沙箱内会自动执行。需要离开沙箱的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29139,7 +29139,7 @@
     {
       "Key": "fdabcc09b9ddce7be856cee7c99e38f24e4db1e0b4b58d5bd56880ceccf29196",
       "Source": "Proceed in Sandbox",
-      "Translation": "在沙盒中继续",
+      "Translation": "在沙箱中继续",
       "Kind": "ui/component",
       "Role": "option-label",
       "Shape": "lookup"
@@ -29259,7 +29259,7 @@
     {
       "Key": "462f94f0625610f189291e2ee0259948d2b80e0dfb475091c83e2b128be413d3",
       "Source": "Ask before sensitive operations.",
-      "Translation": "敏感操作前询问.",
+      "Translation": "敏感操作前询问。",
       "Kind": "ui/span",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29267,7 +29267,7 @@
     {
       "Key": "0a864968bcf2d4aa13674cf34598065859cdb198ed1142eb7db571855b2f01b9",
       "Source": "Automatically decide if commands run.",
-      "Translation": "自动决定命令是否运行.",
+      "Translation": "自动决定命令是否运行。",
       "Kind": "ui/span",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29291,7 +29291,7 @@
     {
       "Key": "c023ff4f85d21c5d8bf30893e7c72772addfaf3c78ca936fc2ad704e76e0059b",
       "Source": "Every command requires approval.",
-      "Translation": "每条命令都需要批准.",
+      "Translation": "每条命令都需要批准。",
       "Kind": "ui/span",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29363,7 +29363,7 @@
     {
       "Key": "4ebc17fd7c708692ed9080e96dcbd3d815f567fa10b869a19902ff8ccc5c70c1",
       "Source": "Run all commands without restrictions.",
-      "Translation": "不受限制地运行所有命令.",
+      "Translation": "不受限制地运行所有命令。",
       "Kind": "ui/span",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29371,7 +29371,7 @@
     {
       "Key": "d31329b8f51ab54267dfee3444db3ed5c69454ea81269681ceb6c9219bae2400",
       "Source": "Security agent decides if commands run.",
-      "Translation": "由安全智能体决定命令是否运行.",
+      "Translation": "由安全智能体决定命令是否运行。",
       "Kind": "ui/span",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29379,7 +29379,7 @@
     {
       "Key": "3cade87851de14aaa5a22dfe5c2a656d17a2a0e6eff5e3b9a005852ab032ad1a",
       "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
-      "Translation": "在沙盒内运行的终端命令会自动执行，否则会请求审核。",
+      "Translation": "在沙箱内运行的终端命令会自动执行，否则会请求审核。",
       "Kind": "ui/span",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29387,7 +29387,7 @@
     {
       "Key": "fd3d7faed3632830c168e71091d80cbc787126ea15d4c83c7b7f12631539d2f9",
       "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
-      "Translation": "终端命令在沙盒内会自动执行。需要离开沙盒的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
+      "Translation": "终端命令在沙箱内会自动执行。需要离开沙箱的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
       "Kind": "ui/span",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29579,7 +29579,7 @@
     {
       "Key": "e21fbf8d4eb08227a116d818fdd4aad7466b8c22088b2e249e1b504ad7acdfe2",
       "Source": "Proceed in Sandbox",
-      "Translation": "在沙盒中继续",
+      "Translation": "在沙箱中继续",
       "Kind": "ui/button",
       "Role": "option-label",
       "Shape": "lookup"
@@ -29659,7 +29659,7 @@
     {
       "Key": "9c2942e59f450e0a25c53c2005feb48bb9704a291f88324642ec04f49a0be95f",
       "Source": "Agent permissions preset selector, current: ⟪AGC0⟫",
-      "Translation": "智能体权限预设选择器,当前:⟪AGC0⟫",
+      "Translation": "智能体权限预设选择器，当前：⟪AGC0⟫",
       "Kind": "ui/button",
       "Role": "aria-label",
       "Shape": "template"
@@ -29691,7 +29691,7 @@
     {
       "Key": "b98b015408da8268b036c7fb6117964d7807ef9745a21dbe435b2547dbba7325",
       "Source": "Ask before sensitive operations.",
-      "Translation": "敏感操作前询问.",
+      "Translation": "敏感操作前询问。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29699,7 +29699,7 @@
     {
       "Key": "e41b7bd1e67c0f4de8b191f8c98783248b518ec18950eb025819c32fdd5e5c70",
       "Source": "Automatically decide if commands run.",
-      "Translation": "自动决定命令是否运行.",
+      "Translation": "自动决定命令是否运行。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29723,7 +29723,7 @@
     {
       "Key": "e3784762af51de730a8468a9c8c2e1d49325188d44f1e646644c41ebd0f54dc3",
       "Source": "Every command requires approval.",
-      "Translation": "每条命令都需要批准.",
+      "Translation": "每条命令都需要批准。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29795,7 +29795,7 @@
     {
       "Key": "0df5e918abd9af9156a495149ba9a522604dc64ae0496db3aa1e33d6ea57422a",
       "Source": "Run all commands without restrictions.",
-      "Translation": "不受限制地运行所有命令.",
+      "Translation": "不受限制地运行所有命令。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29803,7 +29803,7 @@
     {
       "Key": "53b4b94bcba592f1b75d13dd38efe506d3bc441afd0fe6188d9e3d6780a9b354",
       "Source": "Security agent decides if commands run.",
-      "Translation": "由安全智能体决定命令是否运行.",
+      "Translation": "由安全智能体决定命令是否运行。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29811,7 +29811,7 @@
     {
       "Key": "0a547f4d21228003f645100685ee6999a039328bd6120ad141b835ee034526d3",
       "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
-      "Translation": "在沙盒内运行的终端命令会自动执行，否则会请求审核。",
+      "Translation": "在沙箱内运行的终端命令会自动执行，否则会请求审核。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -29819,7 +29819,7 @@
     {
       "Key": "35da9341485067384465742e0fb1afc26dfcd3c05ccc0c45e813b728e7afa773",
       "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
-      "Translation": "终端命令在沙盒内会自动执行。需要离开沙盒的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
+      "Translation": "终端命令在沙箱内会自动执行。需要离开沙箱的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -30011,7 +30011,7 @@
     {
       "Key": "99540f7ad2810fd80cb9745aaed196c0fa165875300ac12805e54707053a3557",
       "Source": "Proceed in Sandbox",
-      "Translation": "在沙盒中继续",
+      "Translation": "在沙箱中继续",
       "Kind": "ui/component",
       "Role": "option-label",
       "Shape": "lookup"
@@ -30219,7 +30219,7 @@
     {
       "Key": "c7fcc0d11663f6c8b2f6aee9a794489531b3a58d802f7e0b96cd6dec14cca5c3",
       "Source": "Proceed in Sandbox",
-      "Translation": "在沙盒中继续",
+      "Translation": "在沙箱中继续",
       "Kind": "ui/component",
       "Role": "option-label",
       "Shape": "lookup"
@@ -30419,7 +30419,7 @@
     {
       "Key": "de5965e0602aa3c8f8c62af79417832f7489bd9b5d2a9f01d46b306c81107480",
       "Source": "Ask before sensitive operations.",
-      "Translation": "敏感操作前询问.",
+      "Translation": "敏感操作前询问。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -30427,7 +30427,7 @@
     {
       "Key": "c5199546a09836ae1dcafc65331d4ca45d464d72ed24126dd2e1c3905ab0fd28",
       "Source": "Automatically decide if commands run.",
-      "Translation": "自动决定命令是否运行.",
+      "Translation": "自动决定命令是否运行。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -30451,7 +30451,7 @@
     {
       "Key": "882047d50c58a6ad9abdcd641972afb456f1dc0b6618b70ddacfeabdda784a46",
       "Source": "Every command requires approval.",
-      "Translation": "每条命令都需要批准.",
+      "Translation": "每条命令都需要批准。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -30523,7 +30523,7 @@
     {
       "Key": "06e23610372633ce2d5dee8be1f13c7193a64620af4b96090b6a4eb6497bf153",
       "Source": "Run all commands without restrictions.",
-      "Translation": "不受限制地运行所有命令.",
+      "Translation": "不受限制地运行所有命令。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -30531,7 +30531,7 @@
     {
       "Key": "06b8462c1a70eedc88a13afd1000818e561580d4c486c3d3340caf27486e0547",
       "Source": "Security agent decides if commands run.",
-      "Translation": "由安全智能体决定命令是否运行.",
+      "Translation": "由安全智能体决定命令是否运行。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -30539,7 +30539,7 @@
     {
       "Key": "b41cf7a833aa15f72e3c6613a219ee695cc2aea5269bcbc81f70e1f2858c1cc9",
       "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
-      "Translation": "在沙盒内运行的终端命令会自动执行，否则会请求审核。",
+      "Translation": "在沙箱内运行的终端命令会自动执行，否则会请求审核。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -30547,7 +30547,7 @@
     {
       "Key": "33f59cb1df613e21bb467673a944e904e7405aa42f7b865541710c530eaf2552",
       "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
-      "Translation": "终端命令在沙盒内会自动执行。需要离开沙盒的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
+      "Translation": "终端命令在沙箱内会自动执行。需要离开沙箱的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
       "Kind": "ui/component",
       "Role": "option-description",
       "Shape": "lookup"
@@ -30739,7 +30739,7 @@
     {
       "Key": "84d8c92f334cdd2c566c54caccb8c2393b757888580e7f85befed7a5d2b96bb7",
       "Source": "Proceed in Sandbox",
-      "Translation": "在沙盒中继续",
+      "Translation": "在沙箱中继续",
       "Kind": "ui/component",
       "Role": "option-label",
       "Shape": "lookup"
@@ -30819,7 +30819,7 @@
     {
       "Key": "b8bcc0b179e06f7698d1e82072213d259b24dda293c73c4c66b7edcd1d2a7c8b",
       "Source": "⟪AGC0⟫ (disabled by admin)",
-      "Translation": "⟪AGC0⟫(已被管理员禁用)",
+      "Translation": "⟪AGC0⟫ (已被管理员禁用)",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "template"
