@@ -1,0 +1,12 @@
+{"id":"\u754C\u9762-00001","kind":"dialog/error","units":[{"id":"text-1","text":"Cannot open folder"}]}
+{"id":"\u754C\u9762-00002","kind":"dialog","units":[{"id":"text-1","text":"Folder is on the Windows filesystem"}]}
+{"id":"\u754C\u9762-00003","kind":"dialog/error","units":[{"id":"text-1","text":"Binary not found"}]}
+{"id":"\u754C\u9762-00004","kind":"dialog","units":[{"id":"text-1","text":"WSL distro not found"},{"id":"text-2","text":"The WSL distro \u0022\u27EAAGC0\u27EB\u0022 is no longer installed."},{"id":"text-3","text":"Antigravity opened on Windows instead."}]}
+{"id":"\u754C\u9762-00005","kind":"dialog/error","units":[{"id":"text-1","text":"WSL setup failed"}]}
+{"id":"\u754C\u9762-00006","kind":"dialog/error","units":[{"id":"text-1","text":"Startup failed"}]}
+{"id":"\u754C\u9762-00007","kind":"dialog","units":[{"id":"text-1","text":"Cancel"},{"id":"text-2","text":"Quit"},{"id":"text-3","text":"Confirm Quit"},{"id":"text-4","text":"Are you sure you want to quit?"},{"id":"text-5","text":"There may be agents or background tasks running."}]}
+{"id":"\u754C\u9762-00008","kind":"menu","units":[{"id":"text-1","text":"New Window"}]}
+{"id":"\u754C\u9762-00009","kind":"menu","units":[{"id":"text-1","text":"Docs"}]}
+{"id":"\u754C\u9762-00010","kind":"menu","units":[{"id":"text-1","text":"Connect to WSL"}]}
+{"id":"\u754C\u9762-00011","kind":"menu","units":[{"id":"text-1","text":"Reopen Locally"}]}
+{"id":"\u754C\u9762-00012","kind":"dialog","units":[{"id":"text-1","text":"Check for Updates"},{"id":"text-2","text":"No updates available"},{"id":"text-3","text":"OK"}]}

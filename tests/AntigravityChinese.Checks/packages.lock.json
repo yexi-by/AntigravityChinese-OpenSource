@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0-windows7.0": {
+      "Acornima": {
+        "type": "Transitive",
+        "resolved": "1.8.0",
+        "contentHash": "ZtcK7lu5LZZH5qDWfeUdBn/WXChWQjGdpB9sSFOJPyqnODGSMS1wqBoONP7GXzQRPHKoV8byWZT4EeBPI69ODQ=="
+      },
+      "antigravitychinese.core": {
+        "type": "Project",
+        "dependencies": {
+          "Acornima": "[1.8.0, 1.8.0]"
+        }
+      }
+    }
+  }
+}

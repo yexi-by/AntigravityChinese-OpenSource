@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework><UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest><AssemblyName>AntigravityChinese</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../AntigravityChinese.Core/AntigravityChinese.Core.csproj" />
+    <EmbeddedResource Include="../../packs/zh-CN.json" LogicalName="AntigravityChinese.Pack.json" />
+  </ItemGroup>
+</Project>

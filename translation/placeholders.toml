@@ -1,0 +1,8 @@
+# 由维护工具根据实际安装器的保护规则生成。
+[[rule]]
+order = 'reorder_within_slot'
+pattern = '''(?i)`[^`\r\n]+`|file:///[^\s)）]+|https?://[^\s<>]+|(?<![a-z0-9_])(?:Docker(?: Desktop)?|GitHub|GitLab|Bitbucket|Antigravity(?: IDE| App)?|Google(?: Drive| Docs| Cloud| Chrome)?|Gemini(?:\s+\d+(?:\.\d+)*(?:\s+(?:Pro|Flash(?:-Lite)?|Deep Think|Nano))?)?|Claude(?:\s+(?:Sonnet|Opus|Haiku))?(?:\s+\d+(?:\.\d+)*)?|Codex|OpenAI|Chrome|Chromium|Firefox|Safari|Microsoft Edge|Windows|Linux|macOS|Ubuntu|Debian|WSL(?:2)?|JavaScript|TypeScript|Python|Rust|React|Node(?:\.js)?|npm|pnpm|Git|Kubernetes|tokens?|API|SDK|CLI|IDE|MCPs?|HTTP(?:S)?|SSH|OAuth|JSONL?|YAML|TOML|HTML|CSS|SQL|gRPC|RPC|UUID|SHA-?256|UTF-?8|VS Code|Visual Studio Code|PDFs?|CSV|TSV|SVG|PNG|JPEG|JPG|WebP|GIF|MP3|MP4|WAV|CPU|GPU|RAM|PID|URLs?|URIs?|JWT|GraphQL|WebSocket|OpenAPI|Ctrl(?:\s*\+\s*[a-z0-9]+)*|Cmd(?:\s*\+\s*[a-z0-9]+)*|Alt(?:\s*\+\s*[a-z0-9]+)*|Shift(?:\s*\+\s*[a-z0-9]+)*)(?![a-z0-9_])'''
+
+[[rule]]
+order = 'preserve'
+pattern = '⟪AGC[0-9]+⟫'

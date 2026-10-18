@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AntigravityChinese.Core/AntigravityChinese.Core.csproj" />
+    <Project Path="src/AntigravityChinese/AntigravityChinese.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AntigravityChinese.Checks/AntigravityChinese.Checks.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/AntigravityChinese.Maintainer/AntigravityChinese.Maintainer.csproj" />
+  </Folder>
+</Solution>

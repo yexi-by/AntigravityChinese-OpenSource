@@ -1,0 +1,20 @@
+Antigravity App 汉化工具
+
+适用于 Windows x64 的独立 Antigravity App，不适用于 Antigravity IDE。
+
+1. 结束进行中的任务，从托盘菜单退出 Antigravity App。
+2. 双击 AntigravityChinese.exe，核对安装目录，点击“开始汉化”。
+3. 完成后自动打开 App。受保护目录可能出现 Windows 管理员权限提示。
+4. 撤销汉化：退出 App，再运行工具，点击“恢复原版”。
+
+本工具内置简体中文译文，离线运行，不需要 ATT 或 API 密钥，也不会常驻。
+Docker、GitHub、token 等名称和用户内容保持原样。
+
+官方更新后再手动运行一次。本工具不限制版本号；未匹配的新文案保留英文。
+结构尚未适配的部分会保留原版资源，并在操作日志中提示。
+WSL 后端目前保留原版主界面。
+
+原始备份：%LOCALAPPDATA%\AntigravityChinese\backups
+请保留备份。恢复时会核对文件，避免旧备份覆盖更新后的安装。
+
+这是社区汉化工具。请随程序保留 LICENSE 和 licenses 目录。

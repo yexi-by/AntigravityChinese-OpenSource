@@ -1,0 +1,43 @@
+[[term]]
+term = 'Agent'
+translation = '智能体'
+triggers = ['Agent', 'agent', 'Agents', 'agents']
+
+[[term]]
+term = 'Conversation'
+translation = '对话'
+triggers = ['Conversation', 'conversation', 'Conversations', 'conversations']
+
+[[term]]
+term = 'Workspace'
+translation = '工作区'
+triggers = ['Workspace', 'workspace', 'Workspaces', 'workspaces']
+
+[[term]]
+term = 'Repository'
+translation = '仓库'
+triggers = ['Repository', 'repository', 'Repositories', 'repositories']
+
+[[term]]
+term = 'Artifact'
+translation = '产物'
+triggers = ['Artifact', 'artifact', 'Artifacts', 'artifacts']
+
+[[term]]
+term = 'Skill'
+translation = '技能'
+triggers = ['Skill', 'skill', 'Skills', 'skills']
+
+[[term]]
+term = 'Plugin'
+translation = '插件'
+triggers = ['Plugin', 'plugin', 'Plugins', 'plugins']
+
+[[term]]
+term = 'Finder'
+translation = '访达'
+
+[[term]]
+term = 'Worktree'
+translation = '工作树'
+triggers = ['Worktree', 'worktree', 'Worktrees', 'worktrees']
