@@ -148,6 +148,46 @@ public static partial class JavaScriptUi
             }
         }
         var fixedBindings = bindings.Except(assigned).Except(ambiguous).ToHashSet();
+        // 配额接口返回的是显示文案。按组件参数和字段契约确认消费者，不转换接口原始数据。
+        var serviceParameters = new Dictionary<(int Function, string Name), string>();
+        var quotaGroups = new HashSet<(int Function, string Name)>();
+        foreach (var producer in nodes.Select(p => p.Node).Where(IsFunction))
+        foreach (var parameter in Parameters(producer).OfType<ObjectPattern>())
+        {
+            var parameters = parameter.Properties.OfType<AssignmentProperty>()
+                .Where(p => !p.Computed && p.Key is Identifier && p.Value is Identifier)
+                .GroupBy(p => ((Identifier)p.Key).Name).Where(g => g.Count() == 1)
+                .ToDictionary(g => g.Key, g => ((Identifier)g.Single().Value).Name);
+            if (parameters.Keys.ToHashSet().IsSupersetOf(["label", "remainingFraction", "refreshText", "disabled"]))
+            {
+                serviceParameters[(producer.Start, parameters["label"])] = ServiceDisplay.QuotaLabel;
+                serviceParameters[(producer.Start, parameters["refreshText"])] = ServiceDisplay.QuotaDescription;
+            }
+            if (parameters.TryGetValue("group", out var group) && parameters.ContainsKey("sharedModels") &&
+                Walk(producer).Select(p => p.Node).OfType<MemberExpression>().Any(m =>
+                    !m.Computed && m.Object is Identifier id && id.Name == group && m.Property is Identifier { Name: "buckets" }))
+                quotaGroups.Add((producer.Start, group));
+        }
+        string? ServiceRole(Expression expression, int function, HashSet<(int, string)> visited)
+        {
+            if (expression is ChainExpression chain) return ServiceRole(chain.Expression, function, visited);
+            if (expression is LogicalExpression logical)
+                return ServiceRole(logical.Right, function, new(visited)) ??
+                    (logical.Right is StringLiteral { Value: "" } ? ServiceRole(logical.Left, function, visited) : null);
+            if (expression is MemberExpression { Computed: false } member)
+            {
+                if (member.Property is Identifier { Name: "upgradeSubscriptionText" } &&
+                    member.Object is MemberExpression { Computed: false, Property: Identifier { Name: "userTier" } }) return ServiceDisplay.PlanDescription;
+                if (member.Object is Identifier group && Owner(function, group.Name) is { } groupOwner &&
+                    fixedBindings.Contains((groupOwner, group.Name)) && quotaGroups.Contains((groupOwner, group.Name)))
+                    return member.Property is Identifier { Name: "displayName" } ? ServiceDisplay.QuotaGroup :
+                        member.Property is Identifier { Name: "description" } ? ServiceDisplay.QuotaDescription : null;
+            }
+            if (expression is not Identifier variable || Owner(function, variable.Name) is not { } owner || !visited.Add((owner, variable.Name))) return null;
+            if (fixedBindings.Contains((owner, variable.Name)) && serviceParameters.TryGetValue((owner, variable.Name), out var role)) return role;
+            return fixedBindings.Contains((owner, variable.Name)) && declarations.TryGetValue((owner, variable.Name), out var initial)
+                ? ServiceRole(initial, owner, visited) : null;
+        }
         // 屏幕注册表的 screen 是路由身份，label 是显示值。只识别确实被映射为 screen → label 的表。
         var screenEntries = new HashSet<ObjectExpression>();
         foreach (var (node, function) in nodes)
@@ -287,6 +327,7 @@ public static partial class JavaScriptUi
         }
 
         var lookupSeen = new HashSet<(int, string)>();
+        var serviceSeen = new HashSet<(int, string)>();
         var activeFunction = -1;
 
         void FinishGroup(string kind, List<UiText> texts)
@@ -313,6 +354,12 @@ public static partial class JavaScriptUi
             }
             void Value(Node node, string role)
             {
+                if (node is Expression display && ServiceRole(display, activeFunction, []) is { } serviceRole)
+                {
+                    foreach (var source in ServiceDisplay.Sources(serviceRole))
+                        if (serviceSeen.Add((node.Start, source))) texts.Add(new("", "", file, node.Start, node.End, source, "service", serviceRole, []));
+                    return;
+                }
                 switch (node)
                 {
                     case StringLiteral literal: Add(literal, literal.Value, "string", role); break;
@@ -502,6 +549,10 @@ public static partial class JavaScriptUi
         }
         string Render(UiText text)
         {
+            if (text.Shape == "service")
+                return ServiceDisplay.Render(code[text.Start..text.End], texts.Where(t =>
+                    t.Start == text.Start && t.End == text.End && t.Shape == "service" && translations.ContainsKey(t.Key))
+                    .DistinctBy(t => t.Source).ToDictionary(t => t.Source, t => translations[t.Key]));
             if (text.Shape == "screen-label")
             {
                 ProtectedTerms.Validate(text.Source, translations[text.Key]);

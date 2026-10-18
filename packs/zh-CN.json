@@ -26159,6 +26159,222 @@
       "Kind": "ui/input-placeholder",
       "Role": "placeholder",
       "Shape": "string"
+    },
+    {
+      "Key": "7cec76a3724dde6947b3072532d0e28fd2549c03ec888c05d4196c9127c5a0a2",
+      "Source": "Authenticated via Enterprise Gateway",
+      "Translation": "已通过企业网关认证",
+      "Kind": "ui/component",
+      "Role": "description",
+      "Shape": "string"
+    },
+    {
+      "Key": "278c732b7b32db4d94d3a723d40e6b4030c1a3b6aead069f4cf1ff4ea7d13985",
+      "Source": "You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.",
+      "Translation": "升级至 ⟪AGC0⟫ 套餐可获得更高的使用额度。",
+      "Kind": "ui/component",
+      "Role": "service/plan-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "2605d82b4d606c4862db50a8361ed64416ed43908af812e8f90a10913007b7e1",
+      "Source": "You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.",
+      "Translation": "升级至 ⟪AGC0⟫ 套餐可获得更高的使用额度。",
+      "Kind": "ui/component",
+      "Role": "service/plan-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "6341ab7f87426ffcee07127e1b66618c2e211e1c66c9348e463af5d631c6cd6c",
+      "Source": "You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫.",
+      "Translation": "你已使用部分每周额度，将在 ⟪AGC0⟫后完全恢复。",
+      "Kind": "ui/component",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "5fe979b4306926de277e49444ae74e5b53f715ac9359ce928b887205428c33b3",
+      "Source": "⟪AGC0⟫ day",
+      "Translation": "⟪AGC0⟫ 天",
+      "Kind": "ui/component",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "38b7cb0c7f794afac4f80abd354ab0fe1be7832990f76f5cc72920631ee03308",
+      "Source": "⟪AGC0⟫ days",
+      "Translation": "⟪AGC0⟫ 天",
+      "Kind": "ui/component",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "0e19601e9cfd709b242668e83761352abeedfacee4ebde1b1e56c37894a544f5",
+      "Source": "⟪AGC0⟫ hour",
+      "Translation": "⟪AGC0⟫ 小时",
+      "Kind": "ui/component",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "579128d10b70d6d3c7c66f395eafe73a1e1668b24fd40534fa5c8125d0621e46",
+      "Source": "⟪AGC0⟫ hours",
+      "Translation": "⟪AGC0⟫ 小时",
+      "Kind": "ui/component",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "de695650d9b869a48d0b9e2ab0f1ed208cf420beffa257cb63af3259d892be89",
+      "Source": "⟪AGC0⟫ minute",
+      "Translation": "⟪AGC0⟫ 分钟",
+      "Kind": "ui/component",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "174e19f6df981f8291e2fe0c6df420277221f7dbc878099e6b2aa4991615b2ef",
+      "Source": "⟪AGC0⟫ minutes",
+      "Translation": "⟪AGC0⟫ 分钟",
+      "Kind": "ui/component",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "4d02c81b6353eacfcb7e76b4f9e009d7482cc0ee366c59d54d1252197edef6c5",
+      "Source": "⟪AGC0⟫ second",
+      "Translation": "⟪AGC0⟫ 秒",
+      "Kind": "ui/component",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "85ab5d79dae9141ad2f39918130310572608a7f09525bc10cec9d5e2ccf30b1b",
+      "Source": "⟪AGC0⟫ seconds",
+      "Translation": "⟪AGC0⟫ 秒",
+      "Kind": "ui/component",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "221f5068387b8f9fe9c0d75e277a0dc1b55e81a03937cf8e7622c557762b4c9b",
+      "Source": "Weekly Limit Remaining",
+      "Translation": "本周剩余额度",
+      "Kind": "ui/span",
+      "Role": "service/quota-label",
+      "Shape": "service"
+    },
+    {
+      "Key": "61f7161b29368b9319e62ab513f587a2a3ad3f4b5fb82eb9d44f2a068ec6c1c6",
+      "Source": "Five Hour Limit Remaining",
+      "Translation": "5 小时剩余额度",
+      "Kind": "ui/span",
+      "Role": "service/quota-label",
+      "Shape": "service"
+    },
+    {
+      "Key": "61ab35ec1c68e9fcb99e7613f78b69746c38ced6a7ea6ab9b68b8373b8b2fb11",
+      "Source": "⟪AGC0⟫ Weekly Limit",
+      "Translation": "⟪AGC0⟫ 每周额度",
+      "Kind": "ui/span",
+      "Role": "service/quota-label",
+      "Shape": "service"
+    },
+    {
+      "Key": "8ff6568cd6cecd91f401c2f9062d67d10f5e79a236399f25a2a0b2c2c49effb7",
+      "Source": "Gemini Models",
+      "Translation": "Gemini 模型",
+      "Kind": "ui/span",
+      "Role": "service/quota-group",
+      "Shape": "service"
+    },
+    {
+      "Key": "71392d66e4bc8e36646bb3e7cd3198fd41cb66087ee95f70e2583a45a9c15c69",
+      "Source": "Claude and GPT models",
+      "Translation": "Claude 和 GPT 模型",
+      "Kind": "ui/span",
+      "Role": "service/quota-group",
+      "Shape": "service"
+    },
+    {
+      "Key": "67e269e5aabc446e82cfb9ca1180ac231660b3e572ddbee27f6521071c71e40f",
+      "Source": "You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫.",
+      "Translation": "你已使用部分每周额度，将在 ⟪AGC0⟫后完全恢复。",
+      "Kind": "ui/span",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "011f48199052979c26ac135021200cf87e5db5db4120f0d1761ff7fe11efcd18",
+      "Source": "⟪AGC0⟫ day",
+      "Translation": "⟪AGC0⟫ 天",
+      "Kind": "ui/span",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "30ee9dbf23a4550e9ec008657d5dfb9fd05ab4c440c74a854d2196183a5044ba",
+      "Source": "⟪AGC0⟫ days",
+      "Translation": "⟪AGC0⟫ 天",
+      "Kind": "ui/span",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "56d44d3634bbdd46969a56254693a738e755b17fbc976098d041042b66f28f7b",
+      "Source": "⟪AGC0⟫ hour",
+      "Translation": "⟪AGC0⟫ 小时",
+      "Kind": "ui/span",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "df3646e66c4bee5cd7acc5878cd748ef7241acef0c3a5e17d693caf8d7159900",
+      "Source": "⟪AGC0⟫ hours",
+      "Translation": "⟪AGC0⟫ 小时",
+      "Kind": "ui/span",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "5345e250a6ff2b2f62b6eb1cd0dd2ea095fa2a4d1f1f34fbce18bad1b7356180",
+      "Source": "⟪AGC0⟫ minute",
+      "Translation": "⟪AGC0⟫ 分钟",
+      "Kind": "ui/span",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "bbf51f1cb5d6d3032de7a59fec53734f391e5883b87489423772ef276d4fc70a",
+      "Source": "⟪AGC0⟫ minutes",
+      "Translation": "⟪AGC0⟫ 分钟",
+      "Kind": "ui/span",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "5d8aa8dc545918d5496f6fe84ffddf3d7a90efc504259fe99494fc85af47a7b3",
+      "Source": "⟪AGC0⟫ second",
+      "Translation": "⟪AGC0⟫ 秒",
+      "Kind": "ui/span",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "3ba9eff9d781715bfd16a7678b7aecf5fa265d9c8bfc619f08e28604046720dc",
+      "Source": "⟪AGC0⟫ seconds",
+      "Translation": "⟪AGC0⟫ 秒",
+      "Kind": "ui/span",
+      "Role": "service/quota-description",
+      "Shape": "service"
+    },
+    {
+      "Key": "4d4153d19d6e48bba4e0f43686bb45a31b1ea04eeff0645229f59ffe934a103b",
+      "Source": "You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.",
+      "Translation": "升级至 ⟪AGC0⟫ 套餐可获得更高的使用额度。",
+      "Kind": "ui/span",
+      "Role": "service/plan-description",
+      "Shape": "service"
     }
   ],
   "RetainedSources": [

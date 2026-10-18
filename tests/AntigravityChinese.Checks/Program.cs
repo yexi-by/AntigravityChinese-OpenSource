@@ -11,6 +11,7 @@ var checks = new (string Name, Action Run)[]
     ("构建位置变化复用译文，未知文案保持原样", CheckStableIdentity),
     ("配置标签与状态函数只在显示处汉化，内部值和求值次数保持", CheckDisplayValues),
     ("组件参数、作用域和界面配置保留身份及可编辑内容", CheckUiConfiguration),
+    ("服务配额文案显示中文，保留数据、型号与未知句子", CheckServiceDisplay),
     ("未知版本安装、重复汉化和恢复保持资源完整", CheckInstall),
     ("写入失败回滚，更新后拒绝旧备份覆盖", CheckRecovery),
     ("原生加载适配绑定本机服务并保留 WSL 行为", CheckNativeHook)
@@ -124,6 +125,50 @@ static void CheckDisplayValues()
     Assert(value.GetProperty("options")[0].GetProperty("props").GetProperty("value").GetString() == "Always", "修改了选项内部值。");
     Assert(value.GetProperty("options")[0].GetProperty("children")[0].GetString() == "总是", "未汉化实际选项标签。");
     Assert(value.GetProperty("state").GetProperty("children")[0].GetString() == "就绪" && value.GetProperty("effects").GetInt32() == 1, "状态显示或求值次数发生变化。");
+}
+static void CheckServiceDisplay()
+{
+    const string code = """
+    const UI={createElement:(tag,props,...children)=>typeof tag==='function'?tag(props):({props,children})};
+    function Quota({label:caption,remainingFraction:ratio,refreshText:hint,disabled:off}){
+      return UI.createElement('row',{label:UI.createElement('span',null,caption),description:hint,ratio});
+    }
+    function Group({group:payload,sharedModels:names}){
+      const exists=payload.buckets&&payload.buckets.length;
+      return UI.createElement('section',{title:UI.createElement('span',null,payload.displayName)},
+        payload.buckets.map(item=>UI.createElement(Quota,{label:item.displayName,remainingFraction:item.fraction,refreshText:item.description,disabled:false})));
+    }
+    const data=JSON.parse('{"displayName":"Gemini Models","buckets":[{"displayName":"Weekly Limit Remaining","fraction":1},{"displayName":"Five Hour Limit Remaining","fraction":0.25},{"displayName":"Future Model $& Weekly Limit","fraction":0.92,"description":"You have used some of your weekly limit, it will fully refresh in 6 days, 19 hours."},{"displayName":"Experimental Rolling Limit","fraction":0.42,"description":"A new service phrase."}]}');
+    let calls=0;Object.defineProperty(data,'displayName',{enumerable:true,get(){calls++;return 'Gemini Models';}});
+    const view=Group({group:data});const evaluated=calls;
+    function Plan(state){const text=state?.userTier?.upgradeSubscriptionText||'';return UI.createElement('row',{description:text});}
+    const account=JSON.parse('{"userTier":{"upgradeSubscriptionText":"You can upgrade to a Google AI Ultra plan to receive higher rate limits."}}');
+    var editable='Weekly Limit Remaining';function edit(value){editable=value;}
+    function Reused({label:caption,remainingFraction:ratio,refreshText:hint,disabled:off}){caption=editable;return UI.createElement('span',null,caption);}
+    const outside=UI.createElement('span',null,editable),node={title:'A node'};
+    const unchanged=Quota({label:null,refreshText:node});
+    const singular=Quota({label:'Gemini 4 Argon Weekly Limit',refreshText:'You have used some of your weekly limit, it will fully refresh in 1 day, 2 hours and 3 minutes.'});
+    const unknown=Quota({label:'Gemini 4 Argon',refreshText:'You have used some of your weekly limit, it will fully refresh in tomorrow.'});
+    console.log(JSON.stringify({title:view.props.title.children[0],rows:view.children[0].map(row=>({label:row.props.label.children[0],description:row.props.description,fraction:row.props.ratio})),
+      evaluated,data,account,plan:Plan(account).props.description,outside:outside.children[0],reused:Reused({}).children[0],nodeUnchanged:unchanged.props.description===node,singular:singular.props.description,unknown:unknown.props}));
+    """;
+    var translations = new Dictionary<string, string>
+    {
+        ["Gemini Models"] = "Gemini 模型", ["Claude and GPT models"] = "Claude 和 GPT 模型",
+        ["Weekly Limit Remaining"] = "本周剩余额度", ["Five Hour Limit Remaining"] = "5 小时剩余额度", ["⟪AGC0⟫ Weekly Limit"] = "⟪AGC0⟫ 每周额度",
+        ["You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫."] = "你已使用部分每周额度，将在 ⟪AGC0⟫后完全恢复。",
+        ["You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits."] = "升级至 ⟪AGC0⟫ 套餐可获得更高的使用额度。",
+        ["⟪AGC0⟫ day"] = "⟪AGC0⟫ 天", ["⟪AGC0⟫ days"] = "⟪AGC0⟫ 天", ["⟪AGC0⟫ hour"] = "⟪AGC0⟫ 小时", ["⟪AGC0⟫ hours"] = "⟪AGC0⟫ 小时",
+        ["⟪AGC0⟫ minute"] = "⟪AGC0⟫ 分钟", ["⟪AGC0⟫ minutes"] = "⟪AGC0⟫ 分钟", ["⟪AGC0⟫ second"] = "⟪AGC0⟫ 秒", ["⟪AGC0⟫ seconds"] = "⟪AGC0⟫ 秒"
+    };
+    var texts = JavaScriptUi.Extract(code, "web/future-build.js").SelectMany(g => g.Texts).ToList();
+    var map = texts.DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => translations[t.Source]);
+    using var result = JsonDocument.Parse(Node(JavaScriptUi.Apply(code, texts, map))); var value = result.RootElement; var rows = value.GetProperty("rows");
+    Assert(value.GetProperty("title").GetString() == "Gemini 模型" && rows[0].GetProperty("label").GetString() == "本周剩余额度" && rows[1].GetProperty("label").GetString() == "5 小时剩余额度", "服务下发的配额显示名称没有汉化。");
+    Assert(rows[2].GetProperty("label").GetString() == "Future Model $& 每周额度" && rows[2].GetProperty("description").GetString() == "你已使用部分每周额度，将在 6 天 19 小时后完全恢复。", "型号内容或倒计时单位处理错误。");
+    Assert(value.GetProperty("singular").GetString() == "你已使用部分每周额度，将在 1 天 2 小时 3 分钟后完全恢复。" && value.GetProperty("plan").GetString() == "升级至 Google AI Ultra 套餐可获得更高的使用额度。", "单复数时长或套餐名称处理错误。");
+    Assert(value.GetProperty("evaluated").GetInt32() == 1 && value.GetProperty("data").GetProperty("displayName").GetString() == "Gemini Models" && rows[2].GetProperty("fraction").GetDouble() == 0.92 && value.GetProperty("account").GetProperty("userTier").GetProperty("upgradeSubscriptionText").GetString()!.StartsWith("You can upgrade"), "显示汉化改变了接口数据、求值次数或配额数值。");
+    Assert(value.GetProperty("outside").GetString() == "Weekly Limit Remaining" && value.GetProperty("reused").GetString() == "Weekly Limit Remaining" && value.GetProperty("nodeUnchanged").GetBoolean() && rows[3].GetProperty("description").GetString() == "A new service phrase." && value.GetProperty("unknown").GetProperty("label").GetProperty("children")[0].GetString() == "Gemini 4 Argon" && value.GetProperty("unknown").GetProperty("description").GetString()!.EndsWith("tomorrow."), "误改用户内容、重新赋值的参数、模型名、非字符串节点或未知文案。");
 }
 static void CheckRecovery()
 {
