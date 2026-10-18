@@ -79,7 +79,7 @@ public partial class MainWindow : Window
         var selected = installation;
         if (AppLocator.IsRunning(selected))
         {
-            Log("请先结束 App 中正在进行的任务，再从 Antigravity 托盘菜单退出，然后重试。");
+            Log("请先结束 App 中正在进行的任务，完全退出 Antigravity App，然后重试。");
             StageText.Text = "请先退出 Antigravity App"; return;
         }
         SetBusy(true); var work = PatchPaths.NewWork(); var succeeded = false;

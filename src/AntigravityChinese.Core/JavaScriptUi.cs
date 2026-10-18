@@ -107,7 +107,7 @@ public static partial class JavaScriptUi
         }
         var callbacks = new Dictionary<(int Function, string Name), (Expression Collection, int Outer)>();
         var assigned = new HashSet<(int Function, string Name)>();
-        var writes = new Dictionary<(int Function, string Name), List<(int Position, Expression? Value, bool Linear, bool Closure)>>();
+        var writes = new Dictionary<(int Function, string Name), List<(int Position, int End, Expression? Value, bool Linear, bool Closure)>>();
         var linear = new HashSet<int>();
         var linearReads = new HashSet<int>();
         void MarkReads(Node node)
@@ -144,7 +144,7 @@ public static partial class JavaScriptUi
                 var scope = Owner(function, name) ?? function; var key = (scope, name);
                 assigned.Add(key);
                 if (!writes.TryGetValue(key, out var values)) writes[key] = values = [];
-                values.Add((node.Start, node is AssignmentExpression assignment ? assignment.Right : null, direct && scope == function && linear.Contains(node.Start), scope != function));
+                values.Add((node.Start, node.End, node is AssignmentExpression assignment ? assignment.Right : null, direct && scope == function && linear.Contains(node.Start), scope != function));
             }
         }
         var fixedBindings = bindings.Except(assigned).Except(ambiguous).ToHashSet();
@@ -330,6 +330,54 @@ public static partial class JavaScriptUi
         var serviceSeen = new HashSet<(int, string)>();
         var activeFunction = -1;
 
+        // 局部变量可混合默认标题与用户名称。只有后续读取全部流向显示值时，才翻译其固定分支。
+        var displayReads = new HashSet<int>();
+        void MarkDisplayReads(Node node, HashSet<int> destination)
+        {
+            switch (node)
+            {
+                case Identifier id: destination.Add(id.Start); break;
+                case TemplateLiteral template: foreach (var value in template.Expressions) MarkDisplayReads(value, destination); break;
+                case ConditionalExpression conditional: MarkDisplayReads(conditional.Consequent, destination); MarkDisplayReads(conditional.Alternate, destination); break;
+                case LogicalExpression logical: MarkDisplayReads(logical.Left, destination); MarkDisplayReads(logical.Right, destination); break;
+                case BinaryExpression { Operator: Operator.Addition } addition: MarkDisplayReads(addition.Left, destination); MarkDisplayReads(addition.Right, destination); break;
+                case ArrayExpression array: foreach (var value in array.Elements) if (value is not null) MarkDisplayReads(value, destination); break;
+            }
+        }
+        foreach (var call in nodes.Select(p => p.Node).OfType<CallExpression>().Where(c => !IsProtected(c)))
+        {
+            var callee = call.Callee is SequenceExpression sequence ? sequence.Expressions[^1] : call.Callee;
+            if (callee is MemberExpression { Property: Identifier { Name: "createElement" or "jsx" or "jsxs" or "jsxDEV" } method } && call.Arguments.Count >= 2)
+                foreach (var (value, _) in DisplayValues(call, method.Name)) MarkDisplayReads(value, displayReads);
+        }
+        var candidates = nodes.Select(p => p.Node).OfType<Identifier>().Where(id => displayReads.Contains(id.Start))
+            .Select(id => (Function: Owner(scopes[id], id.Name), id.Name)).Where(p => p.Function is not null)
+            .Select(p => (Function: p.Function!.Value, p.Name)).Distinct().Where(key => key.Function >= 0 && writes.ContainsKey(key) && !ambiguous.Contains(key)).ToHashSet();
+        var references = candidates.ToDictionary(key => key, _ => new List<int>());
+        var plainAssignments = new HashSet<int>();
+        var pendingReferences = new Stack<Node>(); pendingReferences.Push(tree);
+        while (pendingReferences.TryPop(out var node))
+        {
+            if (node is Identifier id && Owner(scopes[id], id.Name) is { } scope && references.TryGetValue((scope, id.Name), out var uses)) uses.Add(id.Start);
+            if (node is AssignmentExpression { Operator: Operator.Assignment, Left: Identifier } assignment)
+            { plainAssignments.Add(node.Start); pendingReferences.Push(assignment.Right); }
+            else if (node is MemberExpression member) { pendingReferences.Push(member.Object); if (member.Computed) pendingReferences.Push(member.Property); }
+            else if (node is ObjectProperty property) { pendingReferences.Push(property.Value); if (property.Computed) pendingReferences.Push(property.Key); }
+            else if (node is AssignmentProperty binding) { pendingReferences.Push(binding.Value); if (binding.Computed) pendingReferences.Push(binding.Key); }
+            else foreach (var child in node.ChildNodes) pendingReferences.Push(child);
+        }
+        var displayAssignments = new List<(int Function, Expression Value)>();
+        foreach (var key in candidates)
+        {
+            var changes = writes[key].OrderBy(c => c.Position).ToArray();
+            var first = Array.FindIndex(changes, c => c.Linear && plainAssignments.Contains(c.Position) && c.Value is not null && Walk(c.Value).Any(p => p.Node is StringLiteral text && LooksLikeText(text.Value)));
+            if (first < 0 || changes.Any(c => c.Closure) || changes.Skip(first).Any(c => !c.Linear || !plainAssignments.Contains(c.Position) || c.Value is null)) continue;
+            var allowed = new HashSet<int>(displayReads);
+            foreach (var change in changes.Skip(first)) MarkDisplayReads(change.Value!, allowed);
+            if (references[key].Any(position => position >= changes[first].End && !allowed.Contains(position))) continue;
+            displayAssignments.AddRange(changes.Skip(first).Select(c => (key.Function, c.Value!)));
+        }
+
         void FinishGroup(string kind, List<UiText> texts)
         {
             if (texts.Count == 0) return;
@@ -372,7 +420,13 @@ public static partial class JavaScriptUi
                             if (i < template.Expressions.Count)
                             {
                                 text.Append($"⟪AGC{i}⟫");
-                                slots.Add(new(template.Expressions[i].Start, template.Expressions[i].End));
+                                var expression = template.Expressions[i];
+                                var plural = expression is ConditionalExpression pluralChoice &&
+                                    (pluralChoice.Consequent is StringLiteral { Value: "s" } && pluralChoice.Alternate is StringLiteral { Value: "" } ||
+                                     pluralChoice.Consequent is StringLiteral { Value: "" } && pluralChoice.Alternate is StringLiteral { Value: "s" }) &&
+                                    template.Quasis[i].Value.Cooked is { Length: > 0 } prefix && char.IsAsciiLetter(prefix[^1]);
+                                slots.Add(new(expression.Start, expression.End, plural));
+                                Value(expression, role);
                             }
                         }
                         Add(template, text.ToString(), "template", role, slots); break;
@@ -401,6 +455,33 @@ public static partial class JavaScriptUi
             FinishGroup(kind, texts);
         }
 
+        bool GroupTextChildren(CallExpression call, string kind)
+        {
+            if (call.Arguments.Count < 4 || call.Arguments[0] is not StringLiteral ||
+                call.Arguments[1] is ObjectExpression props && props.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) is "ref" or "contentEditable" or "dangerouslySetInnerHTML")) return false;
+            var children = call.Arguments.Skip(2).ToArray();
+            if (children.All(c => c is StringLiteral) || !children.OfType<StringLiteral>().Any(s => s.Value.Length > 0 &&
+                (char.IsWhiteSpace(s.Value[0]) || char.IsWhiteSpace(s.Value[^1])))) return false;
+            var combinations = new List<string> { "" };
+            foreach (var child in children)
+            {
+                if (child is not Expression value) return false;
+                var parts = Expand(value, activeFunction, []);
+                if (parts is null || parts.Count == 0 || parts.Any(p => p is not StringLiteral) || combinations.Count * parts.Count > 32) return false;
+                combinations = combinations.SelectMany(prefix => parts.Cast<StringLiteral>().Select(part => prefix + part.Value)).Distinct().ToList();
+            }
+            if (!combinations.Any(LooksLikeText)) return false;
+            var start = call.Arguments[2].Start; var end = call.Arguments[^1].End;
+            FinishGroup(kind, combinations.Where(LooksLikeText).Select(source => new UiText("", "", file, start, end, source, "children", "children", [])).ToList());
+            return true;
+        }
+
+        foreach (var assignment in displayAssignments)
+        {
+            activeFunction = assignment.Function;
+            Group(assignment.Value, "ui/display-local", [(assignment.Value, "children")]);
+        }
+
         foreach (var (node, function) in nodes)
         {
             activeFunction = function;
@@ -413,7 +494,8 @@ public static partial class JavaScriptUi
                 var setting = keys.IsSupersetOf(["isProviderSetting", "settingType", "label"]);
                 var navigation = keys.IsSupersetOf(["sidebarLabel", "searchPlaceholder"]);
                 var sectionHeader = keys.IsSupersetOf(["title", "headerActions"]);
-                var isMenuConfig = keys.Contains("label") && properties.Any(p => PropertyName(p) is "onClick" or "onSelect" && p.Value is ArrowFunctionExpression or FunctionExpression);
+                var isMenuConfig = keys.Contains("label") && properties.Any(p => PropertyName(p) is "onClick" or "onSelect" &&
+                    p.Value is ArrowFunctionExpression or FunctionExpression or Identifier or MemberExpression or ChainExpression);
                 if (command || setting || navigation || isMenuConfig || sectionHeader)
                     Group(configuration, command ? "ui/command" : setting ? "ui/setting" : navigation ? "ui/navigation" : sectionHeader ? "ui/section-header" : "ui/menu",
                         properties.Where(p => TextProperties.Contains(PropertyName(p)) || PropertyName(p) is "sidebarLabel" or "searchPlaceholder" or "emptyMessageSingular" or "emptyMessagePlural")
@@ -448,21 +530,14 @@ public static partial class JavaScriptUi
                 if (callee is MemberExpression { Property: Identifier renderMethod } &&
                     renderMethod.Name is "createElement" or "jsx" or "jsxs" or "jsxDEV" && call.Arguments.Count >= 2)
                 {
-                    var values = new List<(Node, string)>();
-                    if (call.Arguments[1] is ObjectExpression props)
-                        foreach (var p in props.Properties.OfType<ObjectProperty>())
-                        {
-                            var key = PropertyName(p);
-                            // 有独立 label 时，text 可能同时充当测试或路由身份，只处理 label。
-                            if (key == "text" && props.Properties.OfType<ObjectProperty>().Any(other => PropertyName(other) == "label")) continue;
-                            if (TextProperties.Contains(key) || key == "children") values.Add((p.Value, key));
-                        }
-                    if (renderMethod.Name == "createElement")
-                        for (var i = 2; i < call.Arguments.Count; i++) values.Add((call.Arguments[i], "children"));
+                    var values = DisplayValues(call, renderMethod.Name);
                     var tag = call.Arguments[0] is StringLiteral name ? name.Value : "component";
                     if (tag is not ("style" or "script" or "code" or "pre" or "kbd" or "textarea") &&
                         (tag != "option" || call.Arguments[1] is ObjectExpression option && option.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "value")))
+                    {
+                        if (renderMethod.Name == "createElement" && GroupTextChildren(call, "ui/" + tag)) values.RemoveAll(p => p.Role == "children");
                         Group(call, "ui/" + tag, values);
+                    }
                 }
                 if (desktop && callee is MemberExpression { Property: Identifier method })
                 {
@@ -509,6 +584,19 @@ public static partial class JavaScriptUi
     }
 
     private static bool IsFunction(Node node) => node is FunctionDeclaration or FunctionExpression or ArrowFunctionExpression;
+    private static List<(Node Node, string Role)> DisplayValues(CallExpression call, string method)
+    {
+        var values = new List<(Node, string)>();
+        if (call.Arguments[1] is ObjectExpression props)
+            foreach (var property in props.Properties.OfType<ObjectProperty>())
+            {
+                var key = PropertyName(property);
+                if (key == "text" && props.Properties.OfType<ObjectProperty>().Any(other => PropertyName(other) == "label")) continue;
+                if (TextProperties.Contains(key) || key == "children") values.Add((property.Value, key));
+            }
+        if (method == "createElement") for (var i = 2; i < call.Arguments.Count; i++) values.Add((call.Arguments[i], "children"));
+        return values;
+    }
     private static IEnumerable<Node> Parameters(Node node) => node switch
     {
         FunctionDeclaration f => f.Params.Cast<Node>(), FunctionExpression f => f.Params.Cast<Node>(),
@@ -531,7 +619,8 @@ public static partial class JavaScriptUi
         if (s.Contains(' ') || s.Any(char.IsUpper)) return true;
         return s is "settings" or "cancel" or "close" or "save" or "apply" or "remove" or "open" or "copy" or "view" or
             "edit" or "search" or "enabled" or "disabled" or "running" or "stopped" or "yes" or "no" or "name" or "status" or
-            "size" or "created" or "actions" or "permissions" or "delete" or "start" or "stop" or "run" or "and" or "or";
+            "size" or "created" or "actions" or "permissions" or "delete" or "start" or "stop" or "run" or "and" or "or" or
+            "project" or "projects" or "workspace" or "workspaces" or "resource" or "resources" or "folder" or "folders";
     }
 
     public static string Apply(string code, IReadOnlyList<UiText> texts, IReadOnlyDictionary<string, string> translations)
@@ -558,14 +647,15 @@ public static partial class JavaScriptUi
                 ProtectedTerms.Validate(text.Source, translations[text.Key]);
                 return ",label:" + Quote(translations[text.Key]);
             }
-            if (text.Shape == "lookup")
+            if (text.Shape is "lookup" or "children")
             {
-                var choices = texts.Where(t => t.Start == text.Start && t.End == text.End && t.Shape == "lookup" && translations.ContainsKey(t.Key))
+                var choices = texts.Where(t => t.Start == text.Start && t.End == text.End && t.Shape == text.Shape && translations.ContainsKey(t.Key))
                     .DistinctBy(t => t.Source).ToArray();
                 foreach (var choice in choices) ProtectedTerms.Validate(choice.Source, translations[choice.Key]);
                 // 在显示调用处转换值；生产它的配置、标识符和业务比较保持原样，表达式只求值一次。
                 var body = string.Join("", choices.Select(t => $"value==={Quote(t.Source)}?{Quote(translations[t.Key])}:")) + "value";
-                return $"((value)=>{body})({code[text.Start..text.End]})";
+                return text.Shape == "children" ? $"((values)=>{{const value=values.join('');return {body};}})([{code[text.Start..text.End]}])" :
+                    $"((value)=>{body})({code[text.Start..text.End]})";
             }
             var translation = translations[text.Key];
             var expected = Enumerable.Range(0, text.Slots.Count).Select(i => $"⟪AGC{i}⟫");
@@ -579,7 +669,10 @@ public static partial class JavaScriptUi
             {
                 output.Append(EscapeTemplate(translation[position..slot.Index]));
                 var expression = text.Slots[int.Parse(slot.Groups[1].Value, System.Globalization.CultureInfo.InvariantCulture)];
-                output.Append("${").Append(Range(expression.Start, expression.End)).Append('}');
+                var value = Range(expression.Start, expression.End);
+                // 英文名词的单复数词尾不进入中文；仍求值一次，保留条件及其副作用。
+                if (expression.IsPluralSuffix) value = $"((suffix)=>suffix==='s'?'':suffix)({value})";
+                output.Append("${").Append(value).Append('}');
                 position = slot.Index + slot.Length;
             }
             return output.Append(EscapeTemplate(translation[position..])).Append('`').ToString();

@@ -20,7 +20,8 @@ internal static class ServiceDisplay
     {
         [QuotaGroup] = [new("Gemini Models"), new("Claude and GPT models")],
         [QuotaLabel] = [new("Weekly Limit Remaining"), new("Five Hour Limit Remaining"), new("⟪AGC0⟫ Weekly Limit", Name)],
-        [QuotaDescription] = [new("You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫.", Duration, true), .. Units],
+        [QuotaDescription] = [new("Models within this group: ⟪AGC0⟫", @"[^\r\n]{1,2048}"),
+            new("You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫.", Duration, true), .. Units],
         [PlanDescription] = [new("You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.", Name)]
     };
     public static IEnumerable<string> Sources(string role) => Rules[role].Select(r => r.Source);

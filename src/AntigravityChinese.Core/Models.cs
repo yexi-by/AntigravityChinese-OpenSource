@@ -29,7 +29,7 @@ public static class JsonFiles
 }
 
 public sealed record Installation(string Root, string Executable, string Asar, string Server, string Version);
-public sealed record ExpressionSlot(int Start, int End);
+public sealed record ExpressionSlot(int Start, int End, bool IsPluralSuffix = false);
 public sealed record UiText(string Key, string GroupKey, string File, int Start, int End, string Source,
     string Shape, string Role, List<ExpressionSlot> Slots);
 public sealed record UiGroup(string Key, string Kind, List<UiText> Texts);

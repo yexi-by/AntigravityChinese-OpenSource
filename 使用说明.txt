@@ -2,7 +2,7 @@ Antigravity App 汉化工具
 
 适用于 Windows x64 的独立 Antigravity App，不适用于 Antigravity IDE。
 
-1. 结束进行中的任务，从托盘菜单退出 Antigravity App。
+1. 结束进行中的任务，完全退出 Antigravity App。
 2. 双击 AntigravityChinese.exe，核对安装目录，点击“开始汉化”。
 3. 完成后自动打开 App。受保护目录可能出现 Windows 管理员权限提示。
 4. 撤销汉化：退出 App，再运行工具，点击“恢复原版”。

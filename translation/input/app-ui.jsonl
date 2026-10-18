@@ -2455,3 +2455,108 @@
 {"id":"\u754C\u9762-02467","kind":"ui/span","units":[{"id":"text-1","text":"Gemini Models"},{"id":"text-2","text":"Claude and GPT models"}]}
 {"id":"\u754C\u9762-02468","kind":"ui/span","units":[{"id":"text-1","text":"You have used some of your weekly limit, it will fully refresh in \u27EAAGC0\u27EB."},{"id":"text-2","text":"\u27EAAGC0\u27EB day"},{"id":"text-3","text":"\u27EAAGC0\u27EB days"},{"id":"text-4","text":"\u27EAAGC0\u27EB hour"},{"id":"text-5","text":"\u27EAAGC0\u27EB hours"},{"id":"text-6","text":"\u27EAAGC0\u27EB minute"},{"id":"text-7","text":"\u27EAAGC0\u27EB minutes"},{"id":"text-8","text":"\u27EAAGC0\u27EB second"},{"id":"text-9","text":"\u27EAAGC0\u27EB seconds"}]}
 {"id":"\u754C\u9762-02469","kind":"ui/span","units":[{"id":"text-1","text":"You can upgrade to a \u27EAAGC0\u27EB plan to receive higher rate limits."}]}
+{"id":"\u754C\u9762-02470","kind":"ui/display-local","units":[{"id":"text-1","text":"FILE"}]}
+{"id":"\u754C\u9762-02471","kind":"ui/display-local","units":[{"id":"text-1","text":"Enlarged media: \u27EAAGC0\u27EB"},{"id":"text-2","text":"Enlarged media"}]}
+{"id":"\u754C\u9762-02472","kind":"ui/display-local","units":[{"id":"text-1","text":"Adding..."},{"id":"text-2","text":"Added"},{"id":"text-3","text":"Add"}]}
+{"id":"\u754C\u9762-02473","kind":"ui/display-local","units":[{"id":"text-1","text":"Configure \u27EAAGC0\u27EB"},{"id":"text-2","text":"Configure MCP Server"}]}
+{"id":"\u754C\u9762-02474","kind":"ui/display-local","units":[{"id":"text-1","text":"Enter the required configuration values to install this MCP server."}]}
+{"id":"\u754C\u9762-02475","kind":"ui/display-local","units":[{"id":"text-1","text":"Monday"}]}
+{"id":"\u754C\u9762-02476","kind":"ui/display-local","units":[{"id":"text-1","text":"Copied"}]}
+{"id":"\u754C\u9762-02477","kind":"ui/display-local","units":[{"id":"text-1","text":"No description available."}]}
+{"id":"\u754C\u9762-02478","kind":"ui/display-local","units":[{"id":"text-1","text":"No cloud plugins found for \u0022\u27EAAGC0\u27EB\u0022."},{"id":"text-2","text":"No cloud plugins available."},{"id":"text-3","text":"No cloud plugins connected."}]}
+{"id":"\u754C\u9762-02479","kind":"ui/display-local","units":[{"id":"text-1","text":"Maximize Width"},{"id":"text-2","text":"Minimize Width"}]}
+{"id":"\u754C\u9762-02480","kind":"ui/display-local","units":[{"id":"text-1","text":"Auto-proceeded with"},{"id":"text-2","text":"Proceeded with"}]}
+{"id":"\u754C\u9762-02481","kind":"ui/display-local","units":[{"id":"text-1","text":"your plan"}]}
+{"id":"\u754C\u9762-02482","kind":"ui/display-local","units":[{"id":"text-1","text":"Sort Workspaces"},{"id":"text-2","text":"Sort Projects"}]}
+{"id":"\u754C\u9762-02483","kind":"ui/display-local","units":[{"id":"text-1","text":"Worktree"},{"id":"text-2","text":"Workspace \u002B Worktree"},{"id":"text-3","text":"Workspace"},{"id":"text-4","text":"Project \u002B Worktree"},{"id":"text-5","text":"Project"}]}
+{"id":"\u754C\u9762-02484","kind":"ui/display-local","units":[{"id":"text-1","text":"Action Required"},{"id":"text-2","text":"Running"},{"id":"text-3","text":"Canceling"},{"id":"text-4","text":"Unread"},{"id":"text-5","text":"Active"},{"id":"text-6","text":"Idle"}]}
+{"id":"\u754C\u9762-02485","kind":"ui/display-local","units":[{"id":"text-1","text":"For \u27EAAGC0\u27EB, this setting is disabled."}]}
+{"id":"\u754C\u9762-02486","kind":"ui/display-local","units":[{"id":"text-1","text":"In addition to the custom skills folder, \u27EAAGC0\u27EB will search the following paths in order to find skills for the agent.\u27EAAGC1\u27EB"}]}
+{"id":"\u754C\u9762-02487","kind":"ui/display-local","units":[{"id":"text-1","text":"Add Resource"},{"id":"text-2","text":"Add Folder"}]}
+{"id":"\u754C\u9762-02488","kind":"ui/display-local","units":[{"id":"text-1","text":"Conversations"}]}
+{"id":"\u754C\u9762-02489","kind":"ui/display-local","units":[{"id":"text-1","text":"Agent settings and permissions for conversations outside of \u27EAAGC0\u27EB."},{"id":"text-2","text":"Manage \u27EAAGC0\u27EB \u27EAAGC1\u27EB, agent settings, and permissions."}]}
+{"id":"\u754C\u9762-02490","kind":"ui/display-local","units":[{"id":"text-1","text":"Create a Fig shared workspace"},{"id":"text-2","text":"Create a JJ worktree"}]}
+{"id":"\u754C\u9762-02491","kind":"ui/display-local","units":[{"id":"text-1","text":"Recording"}]}
+{"id":"\u754C\u9762-02492","kind":"ui/display-local","units":[{"id":"text-1","text":"Voice recording is unavailable while the Chief of Staff mic is on"},{"id":"text-2","text":"Record Audio"}]}
+{"id":"\u754C\u9762-02493","kind":"ui/display-local","units":[{"id":"text-1","text":"Default harness"}]}
+{"id":"\u754C\u9762-02494","kind":"ui/display-local","units":[{"id":"text-1","text":"Modes"},{"id":"text-2","text":"\u27EAAGC0\u27EB active mode\u27EAAGC1\u27EB"}]}
+{"id":"\u754C\u9762-02495","kind":"ui/display-local","units":[{"id":"text-1","text":"Select Workspace"},{"id":"text-2","text":"Select Project"}]}
+{"id":"\u754C\u9762-02496","kind":"ui/display-local","units":[{"id":"text-1","text":"New Workspace"},{"id":"text-2","text":"No Project"}]}
+{"id":"\u754C\u9762-02497","kind":"ui/display-local","units":[{"id":"text-1","text":"Workspaces"},{"id":"text-2","text":"Workspace"}]}
+{"id":"\u754C\u9762-02498","kind":"ui/display-local","units":[{"id":"text-1","text":"Accumulated Item"}]}
+{"id":"\u754C\u9762-02499","kind":"ui/display-local","units":[{"id":"text-1","text":"Standalone terminals"},{"id":"text-2","text":"Conversation"}]}
+{"id":"\u754C\u9762-02500","kind":"ui/display-local","units":[{"id":"text-1","text":"Restore split view"},{"id":"text-2","text":"Maximize \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02501","kind":"ui/display-local","units":[{"id":"text-1","text":"Valid until \u27EAAGC0\u27EB"},{"id":"text-2","text":"Expired or Invalid"}]}
+{"id":"\u754C\u9762-02502","kind":"ui/menu","units":[{"id":"text-1","text":"CitC Workspace"},{"id":"text-2","text":"Work in a CitC workspace."}]}
+{"id":"\u754C\u9762-02503","kind":"ui/menu","units":[{"id":"text-1","text":"Create Project"},{"id":"text-2","text":"Create a new project using normal folders and/or citc workspaces."}]}
+{"id":"\u754C\u9762-02504","kind":"ui/menu","units":[{"id":"text-1","text":"Create Cloud Project"},{"id":"text-2","text":"Create a project whose conversations run in the cloud."}]}
+{"id":"\u754C\u9762-02505","kind":"ui/menu","units":[{"id":"text-1","text":"Allow once"}]}
+{"id":"\u754C\u9762-02506","kind":"ui/menu","units":[{"id":"text-1","text":"Allow \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02507","kind":"ui/menu","units":[{"id":"text-1","text":"New Group"}]}
+{"id":"\u754C\u9762-02508","kind":"ui/menu","units":[{"id":"text-1","text":"Restore"}]}
+{"id":"\u754C\u9762-02509","kind":"ui/menu","units":[{"id":"text-1","text":"Delete Permanently"}]}
+{"id":"\u754C\u9762-02510","kind":"ui/menu","units":[{"id":"text-1","text":"Rename"}]}
+{"id":"\u754C\u9762-02511","kind":"ui/menu","units":[{"id":"text-1","text":"Unpin"},{"id":"text-2","text":"Pin"}]}
+{"id":"\u754C\u9762-02512","kind":"ui/menu","units":[{"id":"text-1","text":"Mark Read"},{"id":"text-2","text":"Mark Unread"}]}
+{"id":"\u754C\u9762-02513","kind":"ui/menu","units":[{"id":"text-1","text":"View Debug"}]}
+{"id":"\u754C\u9762-02514","kind":"ui/menu","units":[{"id":"text-1","text":"Share"}]}
+{"id":"\u754C\u9762-02515","kind":"ui/menu","units":[{"id":"text-1","text":"Stop"}]}
+{"id":"\u754C\u9762-02516","kind":"ui/menu","units":[{"id":"text-1","text":"Archive"}]}
+{"id":"\u754C\u9762-02517","kind":"ui/menu","units":[{"id":"text-1","text":"Delete"}]}
+{"id":"\u754C\u9762-02518","kind":"ui/component","units":[{"id":"text-1","text":"Models within this group: \u27EAAGC0\u27EB"},{"id":"text-2","text":"You have used some of your weekly limit, it will fully refresh in \u27EAAGC0\u27EB."},{"id":"text-3","text":"\u27EAAGC0\u27EB day"},{"id":"text-4","text":"\u27EAAGC0\u27EB days"},{"id":"text-5","text":"\u27EAAGC0\u27EB hour"},{"id":"text-6","text":"\u27EAAGC0\u27EB hours"},{"id":"text-7","text":"\u27EAAGC0\u27EB minute"},{"id":"text-8","text":"\u27EAAGC0\u27EB minutes"},{"id":"text-9","text":"\u27EAAGC0\u27EB second"},{"id":"text-10","text":"\u27EAAGC0\u27EB seconds"}]}
+{"id":"\u754C\u9762-02519","kind":"ui/span","units":[{"id":"text-1","text":"Models within this group: \u27EAAGC0\u27EB"},{"id":"text-2","text":"You have used some of your weekly limit, it will fully refresh in \u27EAAGC0\u27EB."},{"id":"text-3","text":"\u27EAAGC0\u27EB day"},{"id":"text-4","text":"\u27EAAGC0\u27EB days"},{"id":"text-5","text":"\u27EAAGC0\u27EB hour"},{"id":"text-6","text":"\u27EAAGC0\u27EB hours"},{"id":"text-7","text":"\u27EAAGC0\u27EB minute"},{"id":"text-8","text":"\u27EAAGC0\u27EB minutes"},{"id":"text-9","text":"\u27EAAGC0\u27EB second"},{"id":"text-10","text":"\u27EAAGC0\u27EB seconds"}]}
+{"id":"\u754C\u9762-02520","kind":"ui/span","units":[{"id":"text-1","text":"No handlers configured for Pre Tool Use."},{"id":"text-2","text":"No handlers configured for Post Tool Use."},{"id":"text-3","text":"No handlers configured for Pre Invocation."},{"id":"text-4","text":"No handlers configured for Post Invocation."},{"id":"text-5","text":"No handlers configured for Stop."}]}
+{"id":"\u754C\u9762-02521","kind":"ui/h4","units":[{"id":"text-1","text":"Add New Handler to Pre Tool Use"},{"id":"text-2","text":"Add New Handler to Post Tool Use"},{"id":"text-3","text":"Add New Handler to Pre Invocation"},{"id":"text-4","text":"Add New Handler to Post Invocation"},{"id":"text-5","text":"Add New Handler to Stop"}]}
+{"id":"\u754C\u9762-02522","kind":"ui/span","units":[{"id":"text-1","text":"Status: Running"},{"id":"text-2","text":"Status: Stopped"},{"id":"text-3","text":"Status: Errored"},{"id":"text-4","text":"Status: Backoff"},{"id":"text-5","text":"Status: Unknown"}]}
+{"id":"\u754C\u9762-02523","kind":"ui/span","units":[{"id":"text-1","text":"A workspace with this name already exists."},{"id":"text-2","text":"A project with this name already exists."}]}
+{"id":"\u754C\u9762-02524","kind":"ui/button","units":[{"id":"text-1","text":"Delete Workspace"},{"id":"text-2","text":"Delete Project"}]}
+{"id":"\u754C\u9762-02525","kind":"ui/menu","units":[{"id":"text-1","text":"Open Preview"},{"id":"text-2","text":"Opens in the in-app preview pane. Some sites don\u0027t support iframe embedding and may not load."},{"id":"text-3","text":"Open preview in embedded pane"}]}
+{"id":"\u754C\u9762-02526","kind":"ui/menu","units":[{"id":"text-1","text":"Log back in"}]}
+{"id":"\u754C\u9762-02527","kind":"ui/menu","units":[{"id":"text-1","text":"Select another model"}]}
+{"id":"\u754C\u9762-02528","kind":"ui/div","units":[{"id":"text-1","text":"Send Message \u23CE"},{"id":"text-2","text":"Send Message Enter"},{"id":"text-3","text":"Queue Message \u23CE"},{"id":"text-4","text":"Queue Message Enter"}]}
+{"id":"\u754C\u9762-02529","kind":"ui/div","units":[{"id":"text-1","text":"Queue Message (\u2325\u23CE)"},{"id":"text-2","text":"Queue Message (Alt\u002BEnter)"},{"id":"text-3","text":"Send Immediately (\u2325\u23CE)"},{"id":"text-4","text":"Send Immediately (Alt\u002BEnter)"}]}
+{"id":"\u754C\u9762-02530","kind":"ui/menu","units":[{"id":"text-1","text":"Media"}]}
+{"id":"\u754C\u9762-02531","kind":"ui/menu","units":[{"id":"text-1","text":"Mentions"}]}
+{"id":"\u754C\u9762-02532","kind":"ui/menu","units":[{"id":"text-1","text":"Actions"}]}
+{"id":"\u754C\u9762-02533","kind":"ui/menu","units":[{"id":"text-1","text":"Browser"}]}
+{"id":"\u754C\u9762-02534","kind":"ui/menu","units":[{"id":"text-1","text":"Screen Recording"}]}
+{"id":"\u754C\u9762-02535","kind":"ui/div","units":[{"id":"text-1","text":"No matching workspaces"},{"id":"text-2","text":"No matching projects"}]}
+{"id":"\u754C\u9762-02536","kind":"ui/div","units":[{"id":"text-1","text":"No workspaces found"},{"id":"text-2","text":"No projects found"}]}
+{"id":"\u754C\u9762-02537","kind":"ui/menu","units":[{"id":"text-1","text":"Close Other Tabs"}]}
+{"id":"\u754C\u9762-02538","kind":"ui/menu","units":[{"id":"text-1","text":"Close Tabs to the Right"}]}
+{"id":"\u754C\u9762-02539","kind":"ui/menu","units":[{"id":"text-1","text":"Create Project"}]}
+{"id":"\u754C\u9762-02540","kind":"ui/menu","units":[{"id":"text-1","text":"Create Cloud Project"}]}
+{"id":"\u754C\u9762-02541","kind":"ui/span","units":[{"id":"text-1","text":"Back to Scheduled Tasks"},{"id":"text-2","text":"Back to Automations"}]}
+{"id":"\u754C\u9762-02542","kind":"ui/menu","units":[{"id":"text-1","text":"New Project"},{"id":"text-2","text":"Select a folder."}]}
+{"id":"\u754C\u9762-02543","kind":"ui/menu","units":[{"id":"text-1","text":"Quick Start"},{"id":"text-2","text":"Instantly create a new project and folder to start building."}]}
+{"id":"\u754C\u9762-02544","kind":"ui/display-local","units":[{"id":"text-1","text":"your plan"},{"id":"text-2","text":"For \u27EAAGC0\u27EB, this setting is disabled."}]}
+{"id":"\u754C\u9762-02545","kind":"ui/display-local","units":[{"id":"text-1","text":"\n\nFor google3 workspaces, paths are relative to //depot and begins with google3/"},{"id":"text-2","text":"In addition to the custom skills folder, \u27EAAGC0\u27EB will search the following paths in order to find skills for the agent.\u27EAAGC1\u27EB"}]}
+{"id":"\u754C\u9762-02546","kind":"ui/display-local","units":[{"id":"text-1","text":"workspaces"},{"id":"text-2","text":"projects"},{"id":"text-3","text":"Agent settings and permissions for conversations outside of \u27EAAGC0\u27EB."},{"id":"text-4","text":"workspace"},{"id":"text-5","text":"project"},{"id":"text-6","text":"resources"},{"id":"text-7","text":"folders"},{"id":"text-8","text":"Manage \u27EAAGC0\u27EB \u27EAAGC1\u27EB, agent settings, and permissions."}]}
+{"id":"\u754C\u9762-02547","kind":"ui/button","units":[{"id":"text-1","text":"Disable"},{"id":"text-2","text":"Enable"},{"id":"text-3","text":"\u27EAAGC0\u27EB \u27EAAGC1\u27EB tool for \u27EAAGC2\u27EB"}]}
+{"id":"\u754C\u9762-02548","kind":"ui/component","units":[{"id":"text-1","text":"All"},{"id":"text-2","text":"Skills"},{"id":"text-3","text":"Rules"},{"id":"text-4","text":"Built In"},{"id":"text-5","text":"Global"},{"id":"text-6","text":"Google3"},{"id":"text-7","text":"Filter skills and rules: \u27EAAGC0\u27EB"},{"id":"text-8","text":"All"},{"id":"text-9","text":"Skills"},{"id":"text-10","text":"Rules"},{"id":"text-11","text":"Built In"},{"id":"text-12","text":"Global"},{"id":"text-13","text":"Google3"}]}
+{"id":"\u754C\u9762-02549","kind":"ui/component","units":[{"id":"text-1","text":"Ctrl\u002BD"},{"id":"text-2","text":"Cancel questionnaire and stop the agent (\u27EAAGC0\u27EB)"},{"id":"text-3","text":"Cancel questionnaire and stop the agent"}]}
+{"id":"\u754C\u9762-02550","kind":"ui/component","units":[{"id":"text-1","text":" (Enter)"},{"id":"text-2","text":"Submit\u27EAAGC0\u27EB"},{"id":"text-3","text":"Continue\u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02551","kind":"ui/component","units":[{"id":"text-1","text":"Ctrl\u002Besc"},{"id":"text-2","text":"Skip (esc), Skip All (\u27EAAGC0\u27EB)"},{"id":"text-3","text":"Skip"}]}
+{"id":"\u754C\u9762-02552","kind":"ui/span","units":[{"id":"text-1","text":"Reading"},{"id":"text-2","text":"Read"}]}
+{"id":"\u754C\u9762-02553","kind":"ui/menu","units":[{"id":"text-1","text":"Worktree"},{"id":"text-2","text":"Workspace"},{"id":"text-3","text":"\u27EAAGC0\u27EB Name"}]}
+{"id":"\u754C\u9762-02554","kind":"ui/span","units":[{"id":"text-1","text":"Available for "},{"id":"text-2","text":" project"}]}
+{"id":"\u754C\u9762-02555","kind":"ui/span","units":[{"id":"text-1","text":" projects"}]}
+{"id":"\u754C\u9762-02556","kind":"ui/span","units":[{"id":"text-1","text":"Add "},{"id":"text-2","text":" resources"}]}
+{"id":"\u754C\u9762-02557","kind":"ui/component","units":[{"id":"text-1","text":"Workspace"},{"id":"text-2","text":"Project"},{"id":"text-3","text":"Delete \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02558","kind":"ui/p","units":[{"id":"text-1","text":"Are you sure you want to delete the "},{"id":"text-2","text":"workspace"},{"id":"text-3","text":"project"}]}
+{"id":"\u754C\u9762-02559","kind":"ui/button","units":[{"id":"text-1","text":"workspace"},{"id":"text-2","text":"project"},{"id":"text-3","text":"Edit \u27EAAGC0\u27EB name"}]}
+{"id":"\u754C\u9762-02560","kind":"ui/component","units":[{"id":"text-1","text":"Workspace"},{"id":"text-2","text":"Project"},{"id":"text-3","text":"Delete \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02561","kind":"ui/span","units":[{"id":"text-1","text":"This "},{"id":"text-2","text":"workspace"},{"id":"text-3","text":"project"},{"id":"text-4","text":" is managed by the"},{"id":"text-5","text":" automation and can only be deleted by deleting that automation."}]}
+{"id":"\u754C\u9762-02562","kind":"ui/strong","units":[{"id":"text-1","text":"workspace"},{"id":"text-2","text":"project"}]}
+{"id":"\u754C\u9762-02563","kind":"ui/component","units":[{"id":"text-1","text":"running"}]}
+{"id":"\u754C\u9762-02564","kind":"ui/button","units":[{"id":"text-1","text":"Request Review"},{"id":"text-2","text":"Default"},{"id":"text-3","text":"Vetted (Preview)"},{"id":"text-4","text":"Auto (Preview)"},{"id":"text-5","text":"Turbo"},{"id":"text-6","text":"Agent permissions preset selector, current: \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02565","kind":"ui/component","units":[{"id":"text-1","text":"Low"},{"id":"text-2","text":"Medium"},{"id":"text-3","text":"High"},{"id":"text-4","text":"Extra"},{"id":"text-5","text":"Max"},{"id":"text-6","text":"\u27EAAGC0\u27EB \u00B7 Context window"}]}
+{"id":"\u754C\u9762-02566","kind":"ui/component","units":[{"id":"text-1","text":"Select workspace..."},{"id":"text-2","text":"Select workspace, current: \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02567","kind":"ui/div","units":[{"id":"text-1","text":"Project "},{"id":"text-2","text":" already exists for this "},{"id":"text-3","text":"combination of folders"},{"id":"text-4","text":"folder"},{"id":"text-5","text":". Would you like to continue using it or make a new one?"}]}
+{"id":"\u754C\u9762-02568","kind":"ui/button","units":[{"id":"text-1","text":"project"}]}
+{"id":"\u754C\u9762-02569","kind":"ui/div","units":[{"id":"text-1","text":"Auxiliary Pane"},{"id":"text-2","text":"Overview"},{"id":"text-3","text":"File Viewer"},{"id":"text-4","text":"Directory Viewer"},{"id":"text-5","text":"Virtual File Viewer"},{"id":"text-6","text":"Artifact Viewer"},{"id":"text-7","text":"Review"},{"id":"text-8","text":"Browser Subagent Viewer"},{"id":"text-9","text":"Background Task Output"},{"id":"text-10","text":"Custom View"},{"id":"text-11","text":"Sidecar View"},{"id":"text-12","text":"Workspace File Explorer"},{"id":"text-13","text":"Terminal"},{"id":"text-14","text":"Header"}]}
+{"id":"\u754C\u9762-02570","kind":"ui/div","units":[{"id":"text-1","text":"Auxiliary Pane"},{"id":"text-2","text":"Overview"},{"id":"text-3","text":"File Viewer"},{"id":"text-4","text":"Directory Viewer"},{"id":"text-5","text":"Virtual File Viewer"},{"id":"text-6","text":"Artifact Viewer"},{"id":"text-7","text":"Review"},{"id":"text-8","text":"Browser Subagent Viewer"},{"id":"text-9","text":"Subagent Conversation"},{"id":"text-10","text":"Background Task Output"},{"id":"text-11","text":"Custom View"},{"id":"text-12","text":"Sidecar View"},{"id":"text-13","text":"Workspace File Explorer"},{"id":"text-14","text":"Terminal"},{"id":"text-15","text":"Header"}]}
+{"id":"\u754C\u9762-02571","kind":"ui/component","units":[{"id":"text-1","text":"scheduled task"},{"id":"text-2","text":"Add \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02572","kind":"ui/component","units":[{"id":"text-1","text":"scheduled tasks"},{"id":"text-2","text":"No \u27EAAGC0\u27EB matching your search"},{"id":"text-3","text":"No \u27EAAGC0\u27EB configured."}]}
+{"id":"\u754C\u9762-02573","kind":"ui/button","units":[{"id":"text-1","text":"Expand"},{"id":"text-2","text":"Collapse"},{"id":"text-3","text":"Expanded to show search matches; clear the search to collapse"},{"id":"text-4","text":"Expand (shift\u002Bclick to expand every level below)"},{"id":"text-5","text":"Collapse (shift\u002Bclick to collapse every level below)"}]}
+{"id":"\u754C\u9762-02574","kind":"ui/span","units":[{"id":"text-1","text":"Needs attention"},{"id":"text-2","text":"Blocked \u00B7 \u27EAAGC0\u27EB"}]}

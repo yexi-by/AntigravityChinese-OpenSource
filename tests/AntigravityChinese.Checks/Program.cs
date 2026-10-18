@@ -12,6 +12,7 @@ var checks = new (string Name, Action Run)[]
     ("配置标签与状态函数只在显示处汉化，内部值和求值次数保持", CheckDisplayValues),
     ("组件参数、作用域和界面配置保留身份及可编辑内容", CheckUiConfiguration),
     ("服务配额文案显示中文，保留数据、型号与未知句子", CheckServiceDisplay),
+    ("项目默认文案、菜单引用与空状态完整汉化，保留项目名称和事件", CheckProjectDisplay),
     ("未知版本安装、重复汉化和恢复保持资源完整", CheckInstall),
     ("写入失败回滚，更新后拒绝旧备份覆盖", CheckRecovery),
     ("原生加载适配绑定本机服务并保留 WSL 行为", CheckNativeHook)
@@ -135,11 +136,12 @@ static void CheckServiceDisplay()
     }
     function Group({group:payload,sharedModels:names}){
       const exists=payload.buckets&&payload.buckets.length;
-      return UI.createElement('section',{title:UI.createElement('span',null,payload.displayName)},
+      return UI.createElement('section',{title:UI.createElement('span',null,payload.displayName),description:payload.description},
         payload.buckets.map(item=>UI.createElement(Quota,{label:item.displayName,remainingFraction:item.fraction,refreshText:item.description,disabled:false})));
     }
     const data=JSON.parse('{"displayName":"Gemini Models","buckets":[{"displayName":"Weekly Limit Remaining","fraction":1},{"displayName":"Five Hour Limit Remaining","fraction":0.25},{"displayName":"Future Model $& Weekly Limit","fraction":0.92,"description":"You have used some of your weekly limit, it will fully refresh in 6 days, 19 hours."},{"displayName":"Experimental Rolling Limit","fraction":0.42,"description":"A new service phrase."}]}');
     let calls=0;Object.defineProperty(data,'displayName',{enumerable:true,get(){calls++;return 'Gemini Models';}});
+    data.description='Models within this group: Claude Opus, Claude Sonnet, GPT-OSS, Future $&';
     const view=Group({group:data});const evaluated=calls;
     function Plan(state){const text=state?.userTier?.upgradeSubscriptionText||'';return UI.createElement('row',{description:text});}
     const account=JSON.parse('{"userTier":{"upgradeSubscriptionText":"You can upgrade to a Google AI Ultra plan to receive higher rate limits."}}');
@@ -149,12 +151,13 @@ static void CheckServiceDisplay()
     const unchanged=Quota({label:null,refreshText:node});
     const singular=Quota({label:'Gemini 4 Argon Weekly Limit',refreshText:'You have used some of your weekly limit, it will fully refresh in 1 day, 2 hours and 3 minutes.'});
     const unknown=Quota({label:'Gemini 4 Argon',refreshText:'You have used some of your weekly limit, it will fully refresh in tomorrow.'});
-    console.log(JSON.stringify({title:view.props.title.children[0],rows:view.children[0].map(row=>({label:row.props.label.children[0],description:row.props.description,fraction:row.props.ratio})),
+    console.log(JSON.stringify({title:view.props.title.children[0],tooltip:view.props.description,rows:view.children[0].map(row=>({label:row.props.label.children[0],description:row.props.description,fraction:row.props.ratio})),
       evaluated,data,account,plan:Plan(account).props.description,outside:outside.children[0],reused:Reused({}).children[0],nodeUnchanged:unchanged.props.description===node,singular:singular.props.description,unknown:unknown.props}));
     """;
     var translations = new Dictionary<string, string>
     {
         ["Gemini Models"] = "Gemini 模型", ["Claude and GPT models"] = "Claude 和 GPT 模型",
+        ["Models within this group: ⟪AGC0⟫"] = "本组包含的模型：⟪AGC0⟫",
         ["Weekly Limit Remaining"] = "本周剩余额度", ["Five Hour Limit Remaining"] = "5 小时剩余额度", ["⟪AGC0⟫ Weekly Limit"] = "⟪AGC0⟫ 每周额度",
         ["You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫."] = "你已使用部分每周额度，将在 ⟪AGC0⟫后完全恢复。",
         ["You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits."] = "升级至 ⟪AGC0⟫ 套餐可获得更高的使用额度。",
@@ -165,10 +168,46 @@ static void CheckServiceDisplay()
     var map = texts.DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => translations[t.Source]);
     using var result = JsonDocument.Parse(Node(JavaScriptUi.Apply(code, texts, map))); var value = result.RootElement; var rows = value.GetProperty("rows");
     Assert(value.GetProperty("title").GetString() == "Gemini 模型" && rows[0].GetProperty("label").GetString() == "本周剩余额度" && rows[1].GetProperty("label").GetString() == "5 小时剩余额度", "服务下发的配额显示名称没有汉化。");
+    Assert(value.GetProperty("tooltip").GetString() == "本组包含的模型：Claude Opus, Claude Sonnet, GPT-OSS, Future $&" && value.GetProperty("data").GetProperty("description").GetString()!.StartsWith("Models within this group:"), "悬浮说明未汉化，或改动了模型列表及原始说明。");
     Assert(rows[2].GetProperty("label").GetString() == "Future Model $& 每周额度" && rows[2].GetProperty("description").GetString() == "你已使用部分每周额度，将在 6 天 19 小时后完全恢复。", "型号内容或倒计时单位处理错误。");
     Assert(value.GetProperty("singular").GetString() == "你已使用部分每周额度，将在 1 天 2 小时 3 分钟后完全恢复。" && value.GetProperty("plan").GetString() == "升级至 Google AI Ultra 套餐可获得更高的使用额度。", "单复数时长或套餐名称处理错误。");
     Assert(value.GetProperty("evaluated").GetInt32() == 1 && value.GetProperty("data").GetProperty("displayName").GetString() == "Gemini Models" && rows[2].GetProperty("fraction").GetDouble() == 0.92 && value.GetProperty("account").GetProperty("userTier").GetProperty("upgradeSubscriptionText").GetString()!.StartsWith("You can upgrade"), "显示汉化改变了接口数据、求值次数或配额数值。");
     Assert(value.GetProperty("outside").GetString() == "Weekly Limit Remaining" && value.GetProperty("reused").GetString() == "Weekly Limit Remaining" && value.GetProperty("nodeUnchanged").GetBoolean() && rows[3].GetProperty("description").GetString() == "A new service phrase." && value.GetProperty("unknown").GetProperty("label").GetProperty("children")[0].GetString() == "Gemini 4 Argon" && value.GetProperty("unknown").GetProperty("description").GetString()!.EndsWith("tomorrow."), "误改用户内容、重新赋值的参数、模型名、非字符串节点或未知文案。");
+}
+static void CheckProjectDisplay()
+{
+    const string code = """
+    const UI={createElement:(tag,props,...children)=>({props,children})};let events=0,order=[];
+    const handlers={create:()=>++events};const create=handlers.create;
+    const menu=[{label:'Create Project',id:'createProject',onClick:create},{label:'New Project',id:'newProject',onClick:handlers.create},{label:'Quick Start',id:'quickStart',onSelect:handlers.create}];
+    function selector(outside,project){let caption=false;caption=caption?'Select Workspace':'Select Project';caption=outside?'No Project':project?.name??caption;const noun=outside?'projects':'workspaces';return UI.createElement('section',null,UI.createElement('button',{title:`Select project, current: ${caption}`},caption),UI.createElement('div',null,'No ',noun,' found'));}
+    function unsafe(outside,project){let caption;caption=outside?'No Project':project?.name??'';const route=caption;return {route,compare:caption==='No Project',view:UI.createElement('span',null,caption)};}
+    const userProject={name:'No Project',id:'user-project'};
+    const none=selector(true),named=selector(false,userProject),defaultView=selector(false),raw=unsafe(true);
+    function noun(){order.push(1);return 'projects';}function suffix(){order.push(2);return ' found';}
+    const empty=UI.createElement('div',null,'No ',noun(),suffix());
+    let effects=0;function count(){effects++;return 2;}const modes=UI.createElement('span',null,`${count()} active mode${++effects>1?'s':''}`);
+    const terms={lowercase:'project'},resources=true;const settings=UI.createElement('span',null,`Manage ${terms.lowercase} ${resources?'resources':'folders'}, agent settings, and permissions.`);
+    for(const item of menu)(item.onClick??item.onSelect)();
+    console.log(JSON.stringify({menu,events,order,none,named,defaultView,userProject,raw,empty,modes,effects,settings,terms}));
+    """;
+    var translations = new Dictionary<string, string>
+    {
+        ["Create Project"] = "新建项目", ["New Project"] = "新建项目", ["Quick Start"] = "快速开始", ["No Project"] = "无项目",
+        ["Select Project"] = "选择项目", ["Select Workspace"] = "选择工作区", ["Select project, current: ⟪AGC0⟫"] = "选择项目，当前：⟪AGC0⟫",
+        ["No projects found"] = "未找到项目", ["No workspaces found"] = "未找到工作区",
+        ["⟪AGC0⟫ active mode⟪AGC1⟫"] = "⟪AGC0⟫ 个启用模式⟪AGC1⟫",
+        ["project"] = "项目", ["resources"] = "资源", ["folders"] = "文件夹",
+        ["Manage ⟪AGC0⟫ ⟪AGC1⟫, agent settings, and permissions."] = "管理⟪AGC0⟫的⟪AGC1⟫、智能体设置和权限。"
+    };
+    var texts = JavaScriptUi.Extract(code, "web/project-selector.js").SelectMany(g => g.Texts).ToList();
+    var map = texts.DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => translations[t.Source]);
+    using var result = JsonDocument.Parse(Node(JavaScriptUi.Apply(code, texts, map))); var value = result.RootElement;
+    Assert(value.GetProperty("none").GetProperty("children")[0].GetProperty("children")[0].GetString() == "无项目" && value.GetProperty("defaultView").GetProperty("children")[0].GetProperty("children")[0].GetString() == "选择项目", "包含动态项目名的默认标题未汉化。");
+    Assert(value.GetProperty("named").GetProperty("children")[0].GetProperty("children")[0].GetString() == "No Project" && value.GetProperty("userProject").GetProperty("name").GetString() == "No Project" && value.GetProperty("raw").GetProperty("route").GetString() == "No Project" && value.GetProperty("raw").GetProperty("compare").GetBoolean(), "用户项目名或业务比较被默认文案汉化影响。");
+    Assert(value.GetProperty("none").GetProperty("children")[1].GetProperty("children")[0].GetString() == "未找到项目" && value.GetProperty("empty").GetProperty("children")[0].GetString() == "未找到项目" && value.GetProperty("order").EnumerateArray().Select(e => e.GetInt32()).SequenceEqual([1, 2]), "空状态出现片段残留，或改变了原有求值顺序和次数。");
+    Assert(value.GetProperty("menu")[0].GetProperty("label").GetString() == "新建项目" && value.GetProperty("menu")[2].GetProperty("label").GetString() == "快速开始" && value.GetProperty("menu")[2].GetProperty("id").GetString() == "quickStart" && value.GetProperty("events").GetInt32() == 3, "菜单函数引用没有汉化，或改变了内部 ID 和操作事件。");
+    Assert(value.GetProperty("modes").GetProperty("children")[0].GetString() == "2 个启用模式" && value.GetProperty("effects").GetInt32() == 2 && value.GetProperty("settings").GetProperty("children")[0].GetString() == "管理项目的资源、智能体设置和权限。" && value.GetProperty("terms").GetProperty("lowercase").GetString() == "project", "模板中残留英文单复数词尾或固定名词，或修改了求值及原始术语数据。");
 }
 static void CheckRecovery()
 {
