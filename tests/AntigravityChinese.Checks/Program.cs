@@ -13,6 +13,7 @@ var checks = new (string Name, Action Run)[]
     ("组件参数、作用域和界面配置保留身份及可编辑内容", CheckUiConfiguration),
     ("服务配额文案显示中文，保留数据、型号与未知句子", CheckServiceDisplay),
     ("项目默认文案、菜单引用与空状态完整汉化，保留项目名称和事件", CheckProjectDisplay),
+    ("设置选项与说明只转换最终显示，保留选中映射和权限回调", CheckSettingOptions),
     ("未知版本安装、重复汉化和恢复保持资源完整", CheckInstall),
     ("写入失败回滚，更新后拒绝旧备份覆盖", CheckRecovery),
     ("原生加载适配绑定本机服务并保留 WSL 行为", CheckNativeHook)
@@ -208,6 +209,40 @@ static void CheckProjectDisplay()
     Assert(value.GetProperty("none").GetProperty("children")[1].GetProperty("children")[0].GetString() == "未找到项目" && value.GetProperty("empty").GetProperty("children")[0].GetString() == "未找到项目" && value.GetProperty("order").EnumerateArray().Select(e => e.GetInt32()).SequenceEqual([1, 2]), "空状态出现片段残留，或改变了原有求值顺序和次数。");
     Assert(value.GetProperty("menu")[0].GetProperty("label").GetString() == "新建项目" && value.GetProperty("menu")[2].GetProperty("label").GetString() == "快速开始" && value.GetProperty("menu")[2].GetProperty("id").GetString() == "quickStart" && value.GetProperty("events").GetInt32() == 3, "菜单函数引用没有汉化，或改变了内部 ID 和操作事件。");
     Assert(value.GetProperty("modes").GetProperty("children")[0].GetString() == "2 个启用模式" && value.GetProperty("effects").GetInt32() == 2 && value.GetProperty("settings").GetProperty("children")[0].GetString() == "管理项目的资源、智能体设置和权限。" && value.GetProperty("terms").GetProperty("lowercase").GetString() == "project", "模板中残留英文单复数词尾或固定名词，或修改了求值及原始术语数据。");
+}
+static void CheckSettingOptions()
+{
+    const string code = """
+    const UI={createElement:(tag,props,...children)=>({props,children}),useMemo:f=>f()};
+    const presets={windows:{normal:{displayName:'Default',shortDescription:'Requires review.',longDescription:'All terminal commands require review.'},machine:{displayName:'Full machine',shortDescription:'Can access all files.',longDescription:'Read and write any file.'}}};
+    let resolverCalls=0,descriptionCalls=0,tooltipCalls=0,selected='normal';const externalName='Server added choice';
+    function Dropdown({value,options,displayResolver,onSelect,resolveOptionToDescription,getOptionTooltip}){
+      const mapping=new Map(options.map(key=>[displayResolver(key),key]));
+      return UI.createElement('section',{onValueChange:key=>onSelect(mapping.get(key))},UI.createElement('span',null,value),options.map(key=>{
+        const label=displayResolver(key);let item=key;item=resolveOptionToDescription?.(key);
+        return UI.createElement('option',{value:label,subtitle:item,tooltipText:getOptionTooltip?.(key)},key==='normal'?`${label} (disabled by admin)`:label);
+      }));
+    }
+    const options={value:'Full machine',options:['normal','machine','future'],displayResolver:key=>{resolverCalls++;return presets.windows[key]?.displayName??externalName;},
+      resolveOptionToDescription:key=>{descriptionCalls++;return presets.windows[key]?.shortDescription;},getOptionTooltip:key=>{tooltipCalls++;return key==='normal'?'Disabled by organization policy':undefined;},onSelect:key=>{selected=key;}};
+    const view=Dropdown(options);view.props.onValueChange('Full machine');
+    const detail=UI.useMemo(()=>presets.windows[selected]?.longDescription??'');const explanation=UI.createElement('span',null,detail);
+    console.log(JSON.stringify({view,explanation,selected,options,presets,resolverCalls,descriptionCalls,tooltipCalls}));
+    """;
+    var translations = new Dictionary<string, string>
+    {
+        ["Default"] = "默认", ["Full machine"] = "整机访问", ["Requires review."] = "需要审核。", ["Can access all files."] = "可访问所有文件。",
+        ["All terminal commands require review."] = "所有终端命令都需要审核。", ["Read and write any file."] = "可读写任何文件。", ["Disabled by organization policy"] = "组织策略已禁用",
+        ["⟪AGC0⟫ (disabled by admin)"] = "⟪AGC0⟫（管理员已禁用）"
+    };
+    var texts = JavaScriptUi.Extract(code, "web/settings.js").SelectMany(g => g.Texts).ToList();
+    var map = texts.Where(t => translations.ContainsKey(t.Source)).DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => translations[t.Source]);
+    using var result = JsonDocument.Parse(Node(JavaScriptUi.Apply(code, texts, map))); var value = result.RootElement;
+    var view = value.GetProperty("view"); var choices = view.GetProperty("children")[1];
+    Assert(view.GetProperty("children")[0].GetProperty("children")[0].GetString() == "整机访问" && choices[0].GetProperty("children")[0].GetString() == "默认（管理员已禁用）" && choices[1].GetProperty("props").GetProperty("subtitle").GetString() == "可访问所有文件。", "已选值、选项名称或说明未显示中文。");
+    Assert(choices[1].GetProperty("props").GetProperty("value").GetString() == "Full machine" && value.GetProperty("selected").GetString() == "machine" && value.GetProperty("options").GetProperty("value").GetString() == "Full machine" && value.GetProperty("presets").GetProperty("windows").GetProperty("normal").GetProperty("displayName").GetString() == "Default", "汉化改变了选项映射、权限回调或原始配置。");
+    Assert(value.GetProperty("explanation").GetProperty("children")[0].GetString() == "可读写任何文件。" && choices[0].GetProperty("props").GetProperty("tooltipText").GetString() == "组织策略已禁用" && choices[2].GetProperty("children")[0].GetString() == "Server added choice", "长说明或禁用原因未汉化，或错误改动未知新选项。");
+    Assert(value.GetProperty("resolverCalls").GetInt32() == 6 && value.GetProperty("descriptionCalls").GetInt32() == 3 && value.GetProperty("tooltipCalls").GetInt32() == 3, "显示转换改变了解析函数的调用次数。");
 }
 static void CheckRecovery()
 {

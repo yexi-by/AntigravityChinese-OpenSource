@@ -28583,6 +28583,2246 @@
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "template"
+    },
+    {
+      "Key": "ac41eec6f344baa0cde4261317098c5d2d64fce00cdd7098d8ec5936dc0ecd80",
+      "Source": "Allow",
+      "Translation": "允许",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ff7f4fc2ed3059738c9c83f2de5881540db54570516dee5fb7946c0f162873c4",
+      "Source": "Always Ask",
+      "Translation": "始终询问",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f7e81c45d6d35e350e7b87d42203a40bc54b28bc79191ea16b943c1090a85d0c",
+      "Source": "Always Proceed",
+      "Translation": "始终继续",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2378c25983d6ef3ec43c567e91fbafca5cdb6d54c3df349cfeda00d1507b5d4e",
+      "Source": "Auto",
+      "Translation": "自动",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "257f0382d88b8f97217a2201a5fcb7893febcf2f8a459e645eb8540732ab0a6c",
+      "Source": "Auto (Preview)",
+      "Translation": "自动(预览版)",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ce04137a74784b90d72f8c402639a46f3803bb15a4cdc905c39745508dd4f222",
+      "Source": "Custom",
+      "Translation": "自定义",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a38771fc6b158886f82442de95ea6be5a1aa56871333a4ac63f5df2957908c31",
+      "Source": "Default",
+      "Translation": "默认",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "afd3b31334e26316766fdec63012be1935029c7ca7b92bf7d13cc3baf12d27e1",
+      "Source": "Deny",
+      "Translation": "拒绝",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2f9f769754f4d4c6b7e8455023832d1623b392c210eb44005db6af64856bbafe",
+      "Source": "Disabled",
+      "Translation": "已禁用",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "11a7176b25c984e9fb5b508a384a8376657372a7490c4edf3080fd098ec843ec",
+      "Source": "Enabled",
+      "Translation": "已启用",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2e12b5a8f411735f11e6337188466ce65f86e7ba85bd5166b9ce552dbd8302fe",
+      "Source": "Fast",
+      "Translation": "快",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "fa4936e36840cdf673d434f99cf0c975ddb32de5abcde4b178f8d95034c53b6e",
+      "Source": "Fill",
+      "Translation": "填充",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2a02232a0c25c9a1644679069c4360678825b47c511a3ba59eb1218540391925",
+      "Source": "Full machine",
+      "Translation": "整机访问",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ea6dbca9c26ca3cfb9032f080b6b2b561e647a6b1a730e11d3e99369c7a51ed2",
+      "Source": "Inherit Global",
+      "Translation": "继承全局设置",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "dead89d926b60eae0ae431eb863adecd3da0ef93dd46d813df33bf7687054c64",
+      "Source": "Machine",
+      "Translation": "整机访问",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8e8717c7f96a7110bcf22af066833439873d391dbc35feb93652971cea549295",
+      "Source": "Narrow",
+      "Translation": "窄",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2138df8ed4fbad3fd7cc4e21ff293b2b5cb4eeeb38a62298b2cf70b5570aeb07",
+      "Source": "Proceed in Sandbox",
+      "Translation": "在沙盒中继续",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "bddbba39bb0741a03e7adab44f99c159535310be3d2e56108f3125c6d3bdc08d",
+      "Source": "Queue",
+      "Translation": "队列",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "95b76cd5eeb5295891063b86a20afc8f03516558e55e9908454e2a7bc3b1fe37",
+      "Source": "Request Review",
+      "Translation": "请求审核",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "efe95d29eec0583844697852fbeacb29e0a1996c73319bbe660dfd13b3252d93",
+      "Source": "Require Review",
+      "Translation": "需要审核",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8a9d06d4004bfa32ba9c544ce9375fc13c3b083e9067ba0307a1f5deaecddcf6",
+      "Source": "Send Immediately",
+      "Translation": "立即发送",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "cd58a78b6db1b599dd24e4a4431c129333655335fd2c19751dd406d338d6a129",
+      "Source": "Slow",
+      "Translation": "慢",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4b97c1e15b7402c503cb8909e61054aba93d87ba1967c131f49f982df24900f7",
+      "Source": "Turbo",
+      "Translation": "极速",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c6c1ebd999503ea1fc5175eb6a557cedd7904108a8b948284ee1f9c0809b200b",
+      "Source": "Turbo mode",
+      "Translation": "极速模式",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "6605b9b4f59fa0f3b5f30fdf3976cb7d0b5fc5ee31ab76f6bd1e09c4520ad6f4",
+      "Source": "Vetted (Preview)",
+      "Translation": "已审核(预览版)",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "82b1d12c45eb590306bdeab97b1fa9b8930bf9f304a74d768777fc0db73b1d32",
+      "Source": "Wide",
+      "Translation": "宽",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "336f8def6c3bfc4182f1b07b3ccfc7fb7d1908b3956a07ffdd93df39476daa24",
+      "Source": "A high-risk mode that disables all safety barriers. The agent operates with full system access, auto-executes all terminal commands, and reads or writes to all local files without review prompts.",
+      "Translation": "这是关闭所有安全限制的高风险模式。智能体拥有完整的系统访问权限，会自动执行所有终端命令，并读写本机所有文件，期间不会请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e52ffde3cd0f37f7fbf1941c71e2c38678f609b74fc72e2d56a07a5d25568c26",
+      "Source": "All terminal commands require review. The agent can read or write to any file in the machine.",
+      "Translation": "所有终端命令都需要审核。智能体可以读写计算机上的任何文件。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "3874aee4f3ed6175ef073991571d70ae538b5359a0881dd4b81b49bfd31536ba",
+      "Source": "Allow full browser script execution without prompting.",
+      "Translation": "允许运行任意浏览器脚本，无需询问。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0a8508726ab6f8bfab2309d85bac279a50c41ad9c52902c99799b5c333c6fce4",
+      "Source": "Ask before sensitive operations.",
+      "Translation": "敏感操作前询问.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f3a6e307ea0fc75aa72366a1991ad22d7b6250c23bff9fc55f8be5b525ecfe51",
+      "Source": "Automatically decide if commands run.",
+      "Translation": "自动决定命令是否运行.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "fa84b41e46b184b8c244be58fffa89de2e6b6d012e0d4742d89df8b0117217c5",
+      "Source": "Block all browser JavaScript execution.",
+      "Translation": "禁止执行所有浏览器 JavaScript。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "238bf5422e92b8cd3be61ed5ae382a0fa0e512cb04733c8dd209625c43059e48",
+      "Source": "Disables all safety barriers for maximal iteration velocity.",
+      "Translation": "关闭所有安全限制，以尽可能加快迭代。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8f6495057c4141af0a79cdc4e0cee627d4aee6d306c8c21835858b6fd41f5d93",
+      "Source": "Every command requires approval.",
+      "Translation": "每条命令都需要批准.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f7c8757a10f578bee3fe0bfae8feb5e61b99d60af2a4add9c1405b5fad339b74",
+      "Source": "Inherits your Global Permissions when working in these conversations.",
+      "Translation": "在这些对话中工作时，继承你的全局权限设置。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ab15bbbd4e33ca28c07cd66d2475239bdd654ce0ad61416f294db5e605abf258",
+      "Source": "Inherits your Global Permissions when working in this project.",
+      "Translation": "在此项目中工作时，继承你的全局权限设置。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ab499dbefc04fdec630f056502ad64eb1183f64278cd5ea6f566d2467280ae61",
+      "Source": "Interrupt the agent and send immediately.",
+      "Translation": "中断智能体并立即发送。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a399495972bf389cfe208a18a9925c34c3b7039d2d667d73b0499e404902b0a9",
+      "Source": "Manually customize individual settings.",
+      "Translation": "手动自定义各项设置。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "26c607a73fdae749d358408c836bb4a81a9bf7368e9e76edf431c0622637d2e7",
+      "Source": "Project 4K interface without developer tooling.",
+      "Translation": "不含开发工具的 Project 4K 界面。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4d098f6521d206b02114d6e72d1a5c664b38c601988a13309fcdbad1d872aa91",
+      "Source": "Prompt for approval before running browser scripts.",
+      "Translation": "运行浏览器脚本前请求批准。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0f33e78c3c93a8d5613bdd954aa7ec508e851855f04d52b8e8eb8629af26b73a",
+      "Source": "Queue until after the current turn.",
+      "Translation": "排入队列，等待当前轮次结束后发送。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e71b2f1edb1abf55aa8ea55287bb9220bbcad7b22a299af2cd2d4c09b19b8395",
+      "Source": "Requires manual review for all terminal commands and file accesses outside of the working folders.",
+      "Translation": "所有终端命令以及对工作文件夹之外文件的访问，都需要人工审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "745b83b685410b55533455f9ea588bf65e0fa87dc857c61dd57289e93ce691d0",
+      "Source": "Run all commands without restrictions.",
+      "Translation": "不受限制地运行所有命令.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "02e96b3bcf85d83207f43122b7a0d609ad35e8b0f3272e49d8b570e39c1fa8e5",
+      "Source": "Security agent decides if commands run.",
+      "Translation": "由安全智能体决定命令是否运行.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "25c2f36dae5b65a636b835e07f74219aa4959728a07e036e647110759560651a",
+      "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
+      "Translation": "在沙盒内运行的终端命令会自动执行，否则会请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e312b5171c1f862cb29e3afc1f9103792da4972f1edb2ba074e14924808124de",
+      "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
+      "Translation": "终端命令在沙盒内会自动执行。需要离开沙盒的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "06468f64b270e4c3dbeb2e032bb96b95d9aacb5380a18d60de3fdadf90e58de8",
+      "Source": "The agent always asks for confirmation before executing terminal commands (except those in the Allow list).",
+      "Translation": "智能体在执行终端命令前始终请求确认，允许列表中的命令除外。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "59d68e7e90018152b7cbb3f6cb9c1492eb6a6f8807c48abcc5ccb479a9145d4e",
+      "Source": "The agent always asks for review.",
+      "Translation": "智能体始终请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "956d9b02f6502c054d143a5fc0006bca9ec3c7ed7ac099ce057b6efdee6eecc1",
+      "Source": "The agent never asks for confirmation before executing terminal commands (except those in the Deny list). This provides the agent with the maximum ability to operate over long periods without intervention, but also has the highest risk of the agent executing an unsafe terminal command.",
+      "Translation": "智能体在执行终端命令前不会请求确认，拒绝列表中的命令除外。这能让智能体在无人干预的情况下长时间自主工作，但执行不安全终端命令的风险也最高。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2ada2cc6e294211d2809e9e83f8755dbc8405373b20b30dc2147382fb4fc1bf7",
+      "Source": "The agent never asks for review. This maximizes the autonomy of the agent, but also has the highest risk of the agent operating over unsafe or injected artifact content.",
+      "Translation": "智能体从不请求审核。这能最大程度提高智能体的自主性，但智能体处理不安全或含提示词注入的产物内容时，风险也最高。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b2ecebca5583031216a0399642726d9887118e487e722ee196057bb01af8d7e4",
+      "Source": "The full developer experience.",
+      "Translation": "完整的开发体验。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "017283773c797c2075d9b6435437f7a7013ede0f20e75e44eeace52a8c4b244d",
+      "Source": "Useful for tasks that require file access across your full machine. The agent has full read and write access to all local files, but all proposed terminal commands require manual review and approval before running.",
+      "Translation": "适用于需要访问整台计算机文件的任务。智能体拥有对所有本机文件的完整读写权限，但所有拟执行的终端命令都需要先经过人工审核和批准。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "633dc2e25b94ad4ac4dca31195d15a5587acaef367a1cceb337cf910d47ff332",
+      "Source": "Useful for typical development with an emphasis on security. It prioritizes safety over speed by requiring manual approval for all terminal commands and files outside the project directory.",
+      "Translation": "适用于注重安全的日常开发。所有终端命令和对项目目录之外文件的访问都需要人工批准，在速度与安全之间优先保障安全。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c8ff63820096543f9f7806fd21e1e4b4f19a27955e47c1d0c03cb95cc54e4288",
+      "Source": "Allow",
+      "Translation": "允许",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "27602a50697b7931a3f3934c93157f72bea4a7eeb392f712faa82bac673dd373",
+      "Source": "Always Ask",
+      "Translation": "始终询问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "168d3fc236efc30dc660b15b98fc4f4e3815cbac7cb3e61abf64c85331d6fce8",
+      "Source": "Always Proceed",
+      "Translation": "始终继续",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "cbf36434fdf64481174764ca3a636cb386f68db20c9a861ed4d7652eba61577e",
+      "Source": "Auto",
+      "Translation": "自动",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9109782aeadb164ba0f2cf0bf6cb48002418012f7e2b37306db83264fab6143f",
+      "Source": "Auto (Preview)",
+      "Translation": "自动(预览版)",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "cb965ce799b601287097856d0b08b23752b5eab5d5cca93a6b811eb9333be828",
+      "Source": "Custom",
+      "Translation": "自定义",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "bdefb3b6b25f26e54b9e53e40ea4301d89f485be45dc3204a982c9e7c81ea008",
+      "Source": "Default",
+      "Translation": "默认",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b2a96092c3d6e449534c962a26b370b69945bf847c9253261b34c4c14e60a485",
+      "Source": "Deny",
+      "Translation": "拒绝",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "92f94f25a7bf12249e8ab0a7d3b70afe7f49cfa1b0770f8b037520662f1676e1",
+      "Source": "Disabled",
+      "Translation": "已禁用",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "285335e90a46a01da0914157ee62eed573425136435e7ce6dd830644c2d6122f",
+      "Source": "Enabled",
+      "Translation": "已启用",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a3202631389494a2d3f50b3b6289d006d9c7ed9c31dbab432518d2287d7f743f",
+      "Source": "Fast",
+      "Translation": "快",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d00ab606ccd0c0cfec1d3da2c3b6f89e3068827860dde141137a3c4eb6c1650e",
+      "Source": "Fill",
+      "Translation": "填充",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "256792d7be307349a31d3befacd8fce7954c52e89a0f786bc9c8581e839469d2",
+      "Source": "Full machine",
+      "Translation": "整机访问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b6a697149ca718dd5b797dea160b02cf6c7cf4c26052e96100bf9cd1b421edfb",
+      "Source": "Inherit Global",
+      "Translation": "继承全局设置",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d59c99a5751da24bd224145ba08341d4b2b0446504f232ff4c2f3e421db6e434",
+      "Source": "Machine",
+      "Translation": "整机访问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "adaf4782a85f2b5b92452a6aadcf98a502b9d8abd036a4c7be39304c843d2240",
+      "Source": "Narrow",
+      "Translation": "窄",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "fdabcc09b9ddce7be856cee7c99e38f24e4db1e0b4b58d5bd56880ceccf29196",
+      "Source": "Proceed in Sandbox",
+      "Translation": "在沙盒中继续",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c4c6268731458a1e1513ce6c72cb25ad1b711fe7aa0d190bb5bf13f727ce8163",
+      "Source": "Queue",
+      "Translation": "队列",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "507f6cbf12e07962f5842a5cfc96ca0b971c87a77d43efbc7e69b83b262596ab",
+      "Source": "Request Review",
+      "Translation": "请求审核",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "808cc9cd7c3d12c19ab4835a76a5d0ee3af5211a622739fc6a8696c8d9899bb4",
+      "Source": "Require Review",
+      "Translation": "需要审核",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "137c81ba614de555143719553a618ba0a3a6a111fc208a08ffd946ef179ea247",
+      "Source": "Send Immediately",
+      "Translation": "立即发送",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "bcf01283b6bb2dbeaaf5d80bc0a849a701b80aa4f651c1fea67e6d759cac6b20",
+      "Source": "Slow",
+      "Translation": "慢",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "3af7f16cae31680a19e7a80b6423cfb88a694bc76847df9e58bf9d775cdaa494",
+      "Source": "Turbo",
+      "Translation": "极速",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "046cf26c827393930bc22cf67efbd75228ae7559f248d8e6b6abb696dc3c6cd7",
+      "Source": "Turbo mode",
+      "Translation": "极速模式",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "19da430a972ec2d653ed64a98e20328983884075cebc72e1ba624e8c4df26a35",
+      "Source": "Vetted (Preview)",
+      "Translation": "已审核(预览版)",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "16d87f0930a579abe49dd50b3d35fcfb0a24399c4d2c963f50e35d9eb8845fcc",
+      "Source": "Wide",
+      "Translation": "宽",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "882f44c38933966cbf074ac594530c95df337b438751ae090d558dc78b1492a1",
+      "Source": "Disabled by organization policy",
+      "Translation": "组织策略已禁用",
+      "Kind": "ui/component",
+      "Role": "option-tooltip",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a6582705a508d0bbf7b743b1ca49bd08ca202b584ab7bfc04a8e040c7e00e0e3",
+      "Source": "Disabled by organization policy",
+      "Translation": "组织策略已禁用",
+      "Kind": "ui/span",
+      "Role": "option-tooltip",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "76c015335f44e1c701198a291a3ac79edc066ec982cd60ab6bb78d21edcb6e27",
+      "Source": "A high-risk mode that disables all safety barriers. The agent operates with full system access, auto-executes all terminal commands, and reads or writes to all local files without review prompts.",
+      "Translation": "这是关闭所有安全限制的高风险模式。智能体拥有完整的系统访问权限，会自动执行所有终端命令，并读写本机所有文件，期间不会请求审核。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f6f21ee4294dc53384548dd82af150e8c8db2a1b189c861f316cc3b010adc8fa",
+      "Source": "All terminal commands require review. The agent can read or write to any file in the machine.",
+      "Translation": "所有终端命令都需要审核。智能体可以读写计算机上的任何文件。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4d28b428d613b4c34655a0697e7420e51aa9f9b938e7e7e836e320f5c4d1013b",
+      "Source": "Allow full browser script execution without prompting.",
+      "Translation": "允许运行任意浏览器脚本，无需询问。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "462f94f0625610f189291e2ee0259948d2b80e0dfb475091c83e2b128be413d3",
+      "Source": "Ask before sensitive operations.",
+      "Translation": "敏感操作前询问.",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0a864968bcf2d4aa13674cf34598065859cdb198ed1142eb7db571855b2f01b9",
+      "Source": "Automatically decide if commands run.",
+      "Translation": "自动决定命令是否运行.",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ee320a61582c1dfb7ac27b731753263af6b08bc6f81cc7c5c7e06fcd25a41910",
+      "Source": "Block all browser JavaScript execution.",
+      "Translation": "禁止执行所有浏览器 JavaScript。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "7912ccb75f77dda8e39eaed59648aa7f87025d54a64ec2fb429670052d5ae712",
+      "Source": "Disables all safety barriers for maximal iteration velocity.",
+      "Translation": "关闭所有安全限制，以尽可能加快迭代。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c023ff4f85d21c5d8bf30893e7c72772addfaf3c78ca936fc2ad704e76e0059b",
+      "Source": "Every command requires approval.",
+      "Translation": "每条命令都需要批准.",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1e2ee30d58ca24d3d6bdb5fd1dbdc13ec0d9e23e2a06ae053090a3474da2fa2f",
+      "Source": "Inherits your Global Permissions when working in these conversations.",
+      "Translation": "在这些对话中工作时，继承你的全局权限设置。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c96ebcb74f60bb56a740395bb000037b5246fb075d285b627bf06cbb69634de2",
+      "Source": "Inherits your Global Permissions when working in this project.",
+      "Translation": "在此项目中工作时，继承你的全局权限设置。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2ccfbdf5d4846db135601c3523bdaecf5449d75501f3accf3afe34b9934f4bb4",
+      "Source": "Interrupt the agent and send immediately.",
+      "Translation": "中断智能体并立即发送。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "706fe3a7bde3a5fe1293139d90b7a053788c37d2e03508d6e0a85eb071846f68",
+      "Source": "Manually customize individual settings.",
+      "Translation": "手动自定义各项设置。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b15449e00e1e15d5952bbdf13ecf178661591ab07590ab168736bd87d90a56d2",
+      "Source": "Project 4K interface without developer tooling.",
+      "Translation": "不含开发工具的 Project 4K 界面。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f84515d89c79dc28dd8c51d71e9a42d35ca5bea976814e81b3c75d69640b5371",
+      "Source": "Prompt for approval before running browser scripts.",
+      "Translation": "运行浏览器脚本前请求批准。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1ffe60134fd5f285ff1abd6d702e507b80e30041bcf8b83b28a22b1f5f198d6c",
+      "Source": "Queue until after the current turn.",
+      "Translation": "排入队列，等待当前轮次结束后发送。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a4143681baff13702a6d2480884cc739fb0f7ef663b9f2d98d981e0118f5d5bf",
+      "Source": "Requires manual review for all terminal commands and file accesses outside of the working folders.",
+      "Translation": "所有终端命令以及对工作文件夹之外文件的访问，都需要人工审核。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4ebc17fd7c708692ed9080e96dcbd3d815f567fa10b869a19902ff8ccc5c70c1",
+      "Source": "Run all commands without restrictions.",
+      "Translation": "不受限制地运行所有命令.",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d31329b8f51ab54267dfee3444db3ed5c69454ea81269681ceb6c9219bae2400",
+      "Source": "Security agent decides if commands run.",
+      "Translation": "由安全智能体决定命令是否运行.",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "3cade87851de14aaa5a22dfe5c2a656d17a2a0e6eff5e3b9a005852ab032ad1a",
+      "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
+      "Translation": "在沙盒内运行的终端命令会自动执行，否则会请求审核。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "fd3d7faed3632830c168e71091d80cbc787126ea15d4c83c7b7f12631539d2f9",
+      "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
+      "Translation": "终端命令在沙盒内会自动执行。需要离开沙盒的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1226f7f454ee18a53fcb8b23f110e22ad9ac268eed971acb23b80d6540a9d737",
+      "Source": "The agent always asks for confirmation before executing terminal commands (except those in the Allow list).",
+      "Translation": "智能体在执行终端命令前始终请求确认，允许列表中的命令除外。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d4979c372469de084a508a38d00b396573655e5251d5fe56bf8389379b929944",
+      "Source": "The agent always asks for review.",
+      "Translation": "智能体始终请求审核。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "dc4ff8efedba6f140742ea6fb092c2215737a60e7f1126b10248c7884981374a",
+      "Source": "The agent never asks for confirmation before executing terminal commands (except those in the Deny list). This provides the agent with the maximum ability to operate over long periods without intervention, but also has the highest risk of the agent executing an unsafe terminal command.",
+      "Translation": "智能体在执行终端命令前不会请求确认，拒绝列表中的命令除外。这能让智能体在无人干预的情况下长时间自主工作，但执行不安全终端命令的风险也最高。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "614da94aab956583d7d7c36e6b95200ea3a6cefd6f58b9ca73bc527bb78b6b47",
+      "Source": "The agent never asks for review. This maximizes the autonomy of the agent, but also has the highest risk of the agent operating over unsafe or injected artifact content.",
+      "Translation": "智能体从不请求审核。这能最大程度提高智能体的自主性，但智能体处理不安全或含提示词注入的产物内容时，风险也最高。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "83d9a6f6fc2900cccd0dcef28ad83de0b61b5e6ad40336ae397df77031b779ab",
+      "Source": "The full developer experience.",
+      "Translation": "完整的开发体验。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "20125a4a593701b4ac801ebabf03fceba8fe96ba2f598d7c3002c28988bb01bf",
+      "Source": "Useful for tasks that require file access across your full machine. The agent has full read and write access to all local files, but all proposed terminal commands require manual review and approval before running.",
+      "Translation": "适用于需要访问整台计算机文件的任务。智能体拥有对所有本机文件的完整读写权限，但所有拟执行的终端命令都需要先经过人工审核和批准。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "48abcd4aa57263e3110050e55aa6c5c594733aca0d6bfc114f95d1d4518d0479",
+      "Source": "Useful for typical development with an emphasis on security. It prioritizes safety over speed by requiring manual approval for all terminal commands and files outside the project directory.",
+      "Translation": "适用于注重安全的日常开发。所有终端命令和对项目目录之外文件的访问都需要人工批准，在速度与安全之间优先保障安全。",
+      "Kind": "ui/span",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a1e1bfcb4e814eacb423209707d52592d77b8fa5a4b58cd63826f3a00320e805",
+      "Source": "Allow",
+      "Translation": "允许",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "7ae7f9d82fb3906b8365897ba8909c830f2e1b26c50b287ed90e34fcb3540819",
+      "Source": "Always Ask",
+      "Translation": "始终询问",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "46c7105c7349bcef847882157ac193722e9f105c09244b3e4f77d1353b5ec796",
+      "Source": "Always Proceed",
+      "Translation": "始终继续",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c9c1c8fe63c1fda681905d6bb83db4ed747748928e7c686c206536306ce3111d",
+      "Source": "Auto",
+      "Translation": "自动",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "237b739c44d3656d515b9cb02f83fb50ac071ce7a7d1495538934f941fb4d79c",
+      "Source": "Auto (Preview)",
+      "Translation": "自动(预览版)",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "02d1c40351069f1424754abd01f9fd2a214802c4afec5338b50de0eaa3d8cbd0",
+      "Source": "Custom",
+      "Translation": "自定义",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "6bfb54760677523f7183ae8607287bf6ea3b8269bbcabaa17bb0c480e9eee7b9",
+      "Source": "Default",
+      "Translation": "默认",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "7d00c32d4390b07212e494fcd3838fb9ef36d360fde7f61b3c45125f2987ddbe",
+      "Source": "Deny",
+      "Translation": "拒绝",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "7cbd26e237882204079ed9f4e4f79379036a0da5a8228df1d4568cbd0797dfeb",
+      "Source": "Disabled",
+      "Translation": "已禁用",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "828d5130115c6000026cc34f5fcd5417895b4e3f9bfe782a7f7061c14f40344e",
+      "Source": "Enabled",
+      "Translation": "已启用",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2b09330d564f71ae8d17adbbc1492b6f69e6f35ed4f2368ebe75966d875ac9ed",
+      "Source": "Fast",
+      "Translation": "快",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "35667a96c6b3d8e6831dbaf7c48bad588f91a6d0c9268227667dd020241719cf",
+      "Source": "Fill",
+      "Translation": "填充",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ebdd26e97e8dfe5a81201e7025a27c4c7cab2925d0c4c72f316541f1f03c1de3",
+      "Source": "Full machine",
+      "Translation": "整机访问",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "714aba98d97f36afa109d38d4a5214d70cd7c14fdeaf8fa36266cb715646b28c",
+      "Source": "Inherit Global",
+      "Translation": "继承全局设置",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4797d415a37f631dc395143f45f7a7281d6018150733104fb774a0c3b33c0f43",
+      "Source": "Machine",
+      "Translation": "整机访问",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e19f8ddd938b0eea6d23c7d10f04c24410ed49d2004aace8087d23929bc06651",
+      "Source": "Narrow",
+      "Translation": "窄",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e21fbf8d4eb08227a116d818fdd4aad7466b8c22088b2e249e1b504ad7acdfe2",
+      "Source": "Proceed in Sandbox",
+      "Translation": "在沙盒中继续",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "57d8073160b1b79b20294ac1c5fc558f474e83d09dab74f910a8a66e75af7831",
+      "Source": "Queue",
+      "Translation": "队列",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c54607d58f061585a65331f6beb1243ba7cbaf1e71f18b19c022dbf568d3db6d",
+      "Source": "Request Review",
+      "Translation": "请求审核",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b03392171b6d1c1e0b9773df52003744e3dad5ef1ce2bea4d987eb2557dc1190",
+      "Source": "Require Review",
+      "Translation": "需要审核",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1085c16be0f69522c04abda7f48b86f45057e7ffc8b5f1408f9b7bbbbf7c1397",
+      "Source": "Send Immediately",
+      "Translation": "立即发送",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d50d0d2b9d894a28c32626ce70fa34ce203e5f10a1d54277640a76e43391ef7f",
+      "Source": "Slow",
+      "Translation": "慢",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "7b9ece18b65bcc79671bc287263852764862f93e0ff4898c454b109ee5836347",
+      "Source": "Turbo",
+      "Translation": "极速",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2fca0be4e18e9cac4784f34890637650830f758896379d2301dd22919c3ea5c0",
+      "Source": "Turbo mode",
+      "Translation": "极速模式",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "dd726e092cbff0f25929aa36ce97d198156c5dc1f7536f41fd1cc5d9d80de8ca",
+      "Source": "Vetted (Preview)",
+      "Translation": "已审核(预览版)",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9c2695024490da7285da11d042d5f64ac82292dfb2bda66e66fced283975fb69",
+      "Source": "Wide",
+      "Translation": "宽",
+      "Kind": "ui/button",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9c2942e59f450e0a25c53c2005feb48bb9704a291f88324642ec04f49a0be95f",
+      "Source": "Agent permissions preset selector, current: ⟪AGC0⟫",
+      "Translation": "智能体权限预设选择器,当前:⟪AGC0⟫",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "78d639a759e3b7edc32f968fc052c44c96b6daf162434f3d471c4162fb12d991",
+      "Source": "A high-risk mode that disables all safety barriers. The agent operates with full system access, auto-executes all terminal commands, and reads or writes to all local files without review prompts.",
+      "Translation": "这是关闭所有安全限制的高风险模式。智能体拥有完整的系统访问权限，会自动执行所有终端命令，并读写本机所有文件，期间不会请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "fc8e3459a114d2811cdcc21a5640b83fbb6fb6574286bbbc7b433886e20c0c50",
+      "Source": "All terminal commands require review. The agent can read or write to any file in the machine.",
+      "Translation": "所有终端命令都需要审核。智能体可以读写计算机上的任何文件。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "dd8ad52feb0c96b35b1f074a997b3df87e67b39098df60b3fe3f73e9613206fe",
+      "Source": "Allow full browser script execution without prompting.",
+      "Translation": "允许运行任意浏览器脚本，无需询问。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b98b015408da8268b036c7fb6117964d7807ef9745a21dbe435b2547dbba7325",
+      "Source": "Ask before sensitive operations.",
+      "Translation": "敏感操作前询问.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e41b7bd1e67c0f4de8b191f8c98783248b518ec18950eb025819c32fdd5e5c70",
+      "Source": "Automatically decide if commands run.",
+      "Translation": "自动决定命令是否运行.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "22727117f8127238991dbdd13cd2d3f4df74da30a0a6311be039bb8762e4aeb0",
+      "Source": "Block all browser JavaScript execution.",
+      "Translation": "禁止执行所有浏览器 JavaScript。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e4b2bd2f8a84cc218380cc509e74f1a21c99ee60650ed5c8dc37520166cae556",
+      "Source": "Disables all safety barriers for maximal iteration velocity.",
+      "Translation": "关闭所有安全限制，以尽可能加快迭代。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e3784762af51de730a8468a9c8c2e1d49325188d44f1e646644c41ebd0f54dc3",
+      "Source": "Every command requires approval.",
+      "Translation": "每条命令都需要批准.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "355b719350eb56ce5292a948889598caf9025b38a890e4a1cc494f5ffc064acb",
+      "Source": "Inherits your Global Permissions when working in these conversations.",
+      "Translation": "在这些对话中工作时，继承你的全局权限设置。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "24fa13efdc6949b6dc881c787aaf3b3d78909e1a94ffaa3c0fb6b1b2bf2904a7",
+      "Source": "Inherits your Global Permissions when working in this project.",
+      "Translation": "在此项目中工作时，继承你的全局权限设置。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f01fa3720a430eefc428f62d173ad101a6c93d891cd77f48d172344dec2b924b",
+      "Source": "Interrupt the agent and send immediately.",
+      "Translation": "中断智能体并立即发送。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "78d675b67a51b44a966ddc9aa6bacab56c3f6f3ead39fa7860ae44d8a3905b80",
+      "Source": "Manually customize individual settings.",
+      "Translation": "手动自定义各项设置。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d63de1129c8cfc68468c07523a66d6da00f02f28919129df638ba4a7238a2819",
+      "Source": "Project 4K interface without developer tooling.",
+      "Translation": "不含开发工具的 Project 4K 界面。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d3151d61bf1e2ddf1f2c911ddfabd57f041e3a3e640bd17f0390904f2377df67",
+      "Source": "Prompt for approval before running browser scripts.",
+      "Translation": "运行浏览器脚本前请求批准。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c53505c4a7a8be814519aad20dece5348cccac66684626460668011fdb12b475",
+      "Source": "Queue until after the current turn.",
+      "Translation": "排入队列，等待当前轮次结束后发送。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8f220c578e50745ac2d31eaa5822c2bea9883fe530890fd3f0a6d966bea8f9f1",
+      "Source": "Requires manual review for all terminal commands and file accesses outside of the working folders.",
+      "Translation": "所有终端命令以及对工作文件夹之外文件的访问，都需要人工审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0df5e918abd9af9156a495149ba9a522604dc64ae0496db3aa1e33d6ea57422a",
+      "Source": "Run all commands without restrictions.",
+      "Translation": "不受限制地运行所有命令.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "53b4b94bcba592f1b75d13dd38efe506d3bc441afd0fe6188d9e3d6780a9b354",
+      "Source": "Security agent decides if commands run.",
+      "Translation": "由安全智能体决定命令是否运行.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0a547f4d21228003f645100685ee6999a039328bd6120ad141b835ee034526d3",
+      "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
+      "Translation": "在沙盒内运行的终端命令会自动执行，否则会请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "35da9341485067384465742e0fb1afc26dfcd3c05ccc0c45e813b728e7afa773",
+      "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
+      "Translation": "终端命令在沙盒内会自动执行。需要离开沙盒的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "70078323623576a82f850f91dbe71208186869c53a6286e225546d6165e5bb71",
+      "Source": "The agent always asks for confirmation before executing terminal commands (except those in the Allow list).",
+      "Translation": "智能体在执行终端命令前始终请求确认，允许列表中的命令除外。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "7d06073417270cf90cca321a6501e7f9118ce697ce22280955323dc21c346790",
+      "Source": "The agent always asks for review.",
+      "Translation": "智能体始终请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "fee91394bedf6b5e368ebd320a54d2e876817ca4a248b3a1b5a3748f310c0d7e",
+      "Source": "The agent never asks for confirmation before executing terminal commands (except those in the Deny list). This provides the agent with the maximum ability to operate over long periods without intervention, but also has the highest risk of the agent executing an unsafe terminal command.",
+      "Translation": "智能体在执行终端命令前不会请求确认，拒绝列表中的命令除外。这能让智能体在无人干预的情况下长时间自主工作，但执行不安全终端命令的风险也最高。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4fd5a97496f444a5b40f84db876e0388c10c33016bcf9bfd24933d41d588fa1c",
+      "Source": "The agent never asks for review. This maximizes the autonomy of the agent, but also has the highest risk of the agent operating over unsafe or injected artifact content.",
+      "Translation": "智能体从不请求审核。这能最大程度提高智能体的自主性，但智能体处理不安全或含提示词注入的产物内容时，风险也最高。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f4ac281718730a98dc8f1135c794aa8d9a0db81181cb6ec796c29eabd73d766c",
+      "Source": "The full developer experience.",
+      "Translation": "完整的开发体验。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ec155e04261d70994ff52be40ca6bf7b20c652c1c73ff57cd50a2d7c391d5b5e",
+      "Source": "Useful for tasks that require file access across your full machine. The agent has full read and write access to all local files, but all proposed terminal commands require manual review and approval before running.",
+      "Translation": "适用于需要访问整台计算机文件的任务。智能体拥有对所有本机文件的完整读写权限，但所有拟执行的终端命令都需要先经过人工审核和批准。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "38acdc2d11538f469196d90af575d99763449aeb69e73ffc3380de70c3c1c9bd",
+      "Source": "Useful for typical development with an emphasis on security. It prioritizes safety over speed by requiring manual approval for all terminal commands and files outside the project directory.",
+      "Translation": "适用于注重安全的日常开发。所有终端命令和对项目目录之外文件的访问都需要人工批准，在速度与安全之间优先保障安全。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "584e13d693ba16d9bf6c5d8b375f03cad1f8003003842ee5fe1dabfdc18c1556",
+      "Source": "Allow",
+      "Translation": "允许",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d834d9478c008b52ceb69ee6c0907eacc61c1424daaca21bd40775da090a2bc3",
+      "Source": "Always Ask",
+      "Translation": "始终询问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "acc0166307e396e576a77ae1d9da4a143ed76b37d5730e5fc40bc1bf615500de",
+      "Source": "Always Proceed",
+      "Translation": "始终继续",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b842457963928ba1f69e9e8e2993f151bd446c9fb48ba93ca4a81fd0e2d944c6",
+      "Source": "Auto",
+      "Translation": "自动",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2628d55ac9bfb9ae7f367fb5d2b55083d06c07dd45ab8760bc965e8b84a32a13",
+      "Source": "Auto (Preview)",
+      "Translation": "自动(预览版)",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "cf42ab7381f11f4fc492427ac3f318e53a4911c29f9644b0690deac0bd4edf9c",
+      "Source": "Custom",
+      "Translation": "自定义",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a78d7309bbd217e9b635e980e9af121b6e654755817c65d9cb46fb0474e28406",
+      "Source": "Default",
+      "Translation": "默认",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2f1b6b2d48719b6de4123d5b157da80d5db88bb01b4e340103b07b727e3b04df",
+      "Source": "Deny",
+      "Translation": "拒绝",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b03f628c5786b67f5242a684c3e89a138b7176796cc298cd6c107909b9552fe1",
+      "Source": "Disabled",
+      "Translation": "已禁用",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "3da450822929ad1c1804f588bbf973e6f920510b53f323b2e9bdbc3564d39860",
+      "Source": "Enabled",
+      "Translation": "已启用",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "74a6d9a2457fc6424b407536b26c0bcc41df6b808db7c4a88e197e9a6a599fcb",
+      "Source": "Fast",
+      "Translation": "快",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "19007370bde7f9f4807bfd839cf9f01ba1ed780fdc36443498965a1ecd4c21be",
+      "Source": "Fill",
+      "Translation": "填充",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "577c45cf1f8c22056cdc87c1d64001b730b59a561cc22e55c8b35ccda6cd3b1d",
+      "Source": "Full machine",
+      "Translation": "整机访问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ee5a0b84916296d9b6d675f707d076e04e904b4b0fb2c4eac09db3c8199c3197",
+      "Source": "Inherit Global",
+      "Translation": "继承全局设置",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9308ee295ece8b5791e8ef227d2b7d3686b6fdd42328e6d08260fd68d9befd5b",
+      "Source": "Machine",
+      "Translation": "整机访问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8c77974619af799e48c17a9a403406870b56ad6e7b5a9c7132f47f9cb2525730",
+      "Source": "Narrow",
+      "Translation": "窄",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "99540f7ad2810fd80cb9745aaed196c0fa165875300ac12805e54707053a3557",
+      "Source": "Proceed in Sandbox",
+      "Translation": "在沙盒中继续",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2714dbac11725dcad0a77c51a5ffcbb81ffeefa594a13d34385d6fdc4da6d59b",
+      "Source": "Queue",
+      "Translation": "队列",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a6dfb09a8462e495bd1f60de2f8a2105c33838ed0d7c6f9d9f08fe92b97ae5cc",
+      "Source": "Request Review",
+      "Translation": "请求审核",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0ab108ba75c595d70a1600ee0c6627e430a1712c8dd2667063c835088204a260",
+      "Source": "Require Review",
+      "Translation": "需要审核",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "60d32b79f4c3dc0e4af447c52d32e3c2c0cd2ef96e61e693657b19b3bbd5a3e4",
+      "Source": "Send Immediately",
+      "Translation": "立即发送",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "da381d8040315a903815862d1c9bca3b9f18cb8fbe99d4dfe9f44078bc2cef27",
+      "Source": "Slow",
+      "Translation": "慢",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c0f9b67c77b5ad9898a7769e8a0467752a7f97968899d7a98db15cbf3f071a8b",
+      "Source": "Turbo",
+      "Translation": "极速",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1f6515b83a3a4b5b83ef2b8828264b9618a39ba76f854805856952834d2f654f",
+      "Source": "Turbo mode",
+      "Translation": "极速模式",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a5bb3f16d4d0b6c173f3c5e64c057c2b2895630385d20855844a4d8316635517",
+      "Source": "Vetted (Preview)",
+      "Translation": "已审核(预览版)",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "eef7562c33dcbbb413318dfa5db4f29d8e3d62ab20eab83735c91dd3fa6f51f5",
+      "Source": "Wide",
+      "Translation": "宽",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f3e3d6ee4608abbeac803da6e9a5a8f2b6bbf5c67ef5f18cea3af85f156e674a",
+      "Source": "Allow",
+      "Translation": "允许",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "413b2ba285de4edcee800f2ec2fa1f16cee124fd78f455e5f4823420ee11a320",
+      "Source": "Always Ask",
+      "Translation": "始终询问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "20b92c5ad95fc217e958bfb7aba4e2fe9a9f141d1e42cf08bdf81428b837de9b",
+      "Source": "Always Proceed",
+      "Translation": "始终继续",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "50f634302c5d5ccfa83cbcdb9011cef3b1243682e468cf6941f4f931e720f1a1",
+      "Source": "Auto",
+      "Translation": "自动",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e3e2942a65ee3d16f752bd556868c677d43cd4309405efc3718105e210df6316",
+      "Source": "Auto (Preview)",
+      "Translation": "自动(预览版)",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e2b2083f5abcd2c3386fb6265877cdf8cef2b26453dbcd6bf9ca5ce2dc4060a6",
+      "Source": "Custom",
+      "Translation": "自定义",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e0a05d8e174fb05f1ebe4cced5084e374a7b19d6a77b3c7a726fa80064cc5fdd",
+      "Source": "Default",
+      "Translation": "默认",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f2946ef2cd2df13aacf0b6e1cde59e12a6fcdb68446ca72ebe5cd759ca366e96",
+      "Source": "Deny",
+      "Translation": "拒绝",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "21c29fa7ed7a4d5c53ab24bf32696af69c038c2fbdac8219f9a0350e7bc2639d",
+      "Source": "Disabled",
+      "Translation": "已禁用",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b40699da7a1fc4760f17e7f7e30b2e328b2fe97459f9fa1fdda52d821978d036",
+      "Source": "Enabled",
+      "Translation": "已启用",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "631f02ecf12fcedda8d058c80d5d84268a755fba264fff70b799afbdb6ca8419",
+      "Source": "Fast",
+      "Translation": "快",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "81af7a1cd7dede915e4b4c10480250009b1ac3bf153dbe2cced17b460cd413bf",
+      "Source": "Fill",
+      "Translation": "填充",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "21d4b7efd45b5938049ad04f16e25c6db635098bd7bafac49ba2be40b52c18eb",
+      "Source": "Full machine",
+      "Translation": "整机访问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b827e32a9f4eda30a759f282ecf94e624338d2e80174621b24b06919f5e6df36",
+      "Source": "Inherit Global",
+      "Translation": "继承全局设置",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "5e98f937ab60cff8ea972dde48374c95e35f1a97eac4f8fb768956c3a7a4c517",
+      "Source": "Machine",
+      "Translation": "整机访问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "dddd5f44042bc71a970da55e671927c13244dd49161992f0e735525a5f07839f",
+      "Source": "Narrow",
+      "Translation": "窄",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c7fcc0d11663f6c8b2f6aee9a794489531b3a58d802f7e0b96cd6dec14cca5c3",
+      "Source": "Proceed in Sandbox",
+      "Translation": "在沙盒中继续",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f8d04f254195085b75d539a8b175ad6da35f7779822ffa5cee250b5e0cafc8fe",
+      "Source": "Queue",
+      "Translation": "队列",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b2a858113dcb7cf5f2f9859450a398b969cbd5fb04a77c765b58a46303c86b9c",
+      "Source": "Request Review",
+      "Translation": "请求审核",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "6226a4c08e8f2045c0fffddf313ee49d3dac852fbaa299f916a18d8595d3e65f",
+      "Source": "Require Review",
+      "Translation": "需要审核",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a0f813daf5fcc30748fc61c2807d2b21fc90b1af62cface1e5d6653dd336294e",
+      "Source": "Send Immediately",
+      "Translation": "立即发送",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a2d0546a8a1e8130e4c3a6068f0ad98991dc182c337460a2ff6aa4af5641593a",
+      "Source": "Slow",
+      "Translation": "慢",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "de33f2babdf18ce878e85d4fe231edf78942ab1c30691ac4f97ade8e20ac69b3",
+      "Source": "Turbo",
+      "Translation": "极速",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f612b814ba878b00c5a3c4ee7b0a08d743bf8094bdbdafb2d842e229a33fc376",
+      "Source": "Turbo mode",
+      "Translation": "极速模式",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a0e320cda90f52970b84dab714ce169a6f4ed0eda8762161c26ac91e703cb7e7",
+      "Source": "Vetted (Preview)",
+      "Translation": "已审核(预览版)",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "068258b8f6ce3f77e03ba64d519b3d1627434f6477573faf7cb666d45896a4e9",
+      "Source": "Wide",
+      "Translation": "宽",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2b1eeed8df153414ec121d8411123e5a90030e00293d2f045c9c9ef495f01850",
+      "Source": "Use Global Settings",
+      "Translation": "使用全局设置",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "ea9aaa1716e00f2ed8bec4d657eb17c6e205ee3fc50ed70520ff3f79c4839831",
+      "Source": "Create project from scratch",
+      "Translation": "从零创建项目",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a5f6a9491584fa42bf1b40a8ba87d7291a5f9a68c5a0db928200af198d966ea8",
+      "Source": "Select CitC Workspace",
+      "Translation": "选择 CitC 工作区",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "183ca3ed5242876f5c895dd27e89d0ce7fd99f96bb60132deeb2d61b2dc999e2",
+      "Source": "Create CitC Workspace",
+      "Translation": "创建 CitC 工作区",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "91aa5d8d81a7b46de93f0dcb843c6134538c31d72092d4f77eeb5faa3dffd9b6",
+      "Source": "Select Cog Workspace",
+      "Translation": "选择 Cog 工作区",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1d4125521e5cf395cfd144f7a43fc35b076125ba68e07c1af6262cafc81dbc9b",
+      "Source": "Create Cog Workspace",
+      "Translation": "创建 Cog 工作区",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4b1481b8de35b5713c73b711629ef03c964d5c8c5f9711246b5f0c5f84c95341",
+      "Source": "Select ABFS Workspace (Alpha)",
+      "Translation": "选择 ABFS 工作区（内测版）",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b3f92e67bafece60c610a6fe3222a1cd3973004929a33be98a03e1afbf3a7920",
+      "Source": "Create ABFS Workspace (Alpha)",
+      "Translation": "创建 ABFS 工作区（内测版）",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "88f25aa71feacfc62bbfb1009d6c56f5c1a06308893a5b52883bf76b2f62f307",
+      "Source": "Set Project Name",
+      "Translation": "设置项目名称",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "07af92da3b360b8bc65114dd0ce7d8b0088c43ab2f64fa699819f911fceb9f72",
+      "Source": "Project already exists",
+      "Translation": "项目已存在",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "3547112eb1988b86a1461435c1a14b62ec05b5ae53d3f59ac5bce08f72074d61",
+      "Source": "Agent Security Settings",
+      "Translation": "智能体安全设置",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4097494e1764ea11dd909ba8d28fcc2b86e2dd3aa7d1d7198ba59353d49cb7d9",
+      "Source": "Create Project",
+      "Translation": "新建项目",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "aea64d92e7d0c5537dfd1b8df725de37a6dc37dc9dc62e402b8aba1bb52b72de",
+      "Source": "A high-risk mode that disables all safety barriers. The agent operates with full system access, auto-executes all terminal commands, and reads or writes to all local files without review prompts.",
+      "Translation": "这是关闭所有安全限制的高风险模式。智能体拥有完整的系统访问权限，会自动执行所有终端命令，并读写本机所有文件，期间不会请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d33b8e0aefa1ad3d7c77cb1e09eeafc904f0630c81f95f8ab8f4c33454f2a881",
+      "Source": "All terminal commands require review. The agent can read or write to any file in the machine.",
+      "Translation": "所有终端命令都需要审核。智能体可以读写计算机上的任何文件。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b136413872f453002f24c4bf51f3a771928db0b3558a784268474534194fdfe9",
+      "Source": "Allow full browser script execution without prompting.",
+      "Translation": "允许运行任意浏览器脚本，无需询问。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "de5965e0602aa3c8f8c62af79417832f7489bd9b5d2a9f01d46b306c81107480",
+      "Source": "Ask before sensitive operations.",
+      "Translation": "敏感操作前询问.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c5199546a09836ae1dcafc65331d4ca45d464d72ed24126dd2e1c3905ab0fd28",
+      "Source": "Automatically decide if commands run.",
+      "Translation": "自动决定命令是否运行.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "5b43c72bde253147e5c09728c657480f719415149c8342c607c46bc7ade04446",
+      "Source": "Block all browser JavaScript execution.",
+      "Translation": "禁止执行所有浏览器 JavaScript。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ea1a2900d1d79c3df5574cadf795e23b8aa58238547eee3f1a5294488969c1db",
+      "Source": "Disables all safety barriers for maximal iteration velocity.",
+      "Translation": "关闭所有安全限制，以尽可能加快迭代。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "882047d50c58a6ad9abdcd641972afb456f1dc0b6618b70ddacfeabdda784a46",
+      "Source": "Every command requires approval.",
+      "Translation": "每条命令都需要批准.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "09966adea0a7596814e485893e1dd36c79127f9b686dfd813bad6dab67fe4119",
+      "Source": "Inherits your Global Permissions when working in these conversations.",
+      "Translation": "在这些对话中工作时，继承你的全局权限设置。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "446b5366d98bdbc8ac848243438f2c25673491bafe1a52a3a72ab9581bd7b558",
+      "Source": "Inherits your Global Permissions when working in this project.",
+      "Translation": "在此项目中工作时，继承你的全局权限设置。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "580a42246e3728b0be49532c5c9edf1ec4beb75168c8f8c7688fccd34527ce9d",
+      "Source": "Interrupt the agent and send immediately.",
+      "Translation": "中断智能体并立即发送。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "469541f54385c734eea9e04b2f2fd112201b9f2394c366b46e92942d360fa528",
+      "Source": "Manually customize individual settings.",
+      "Translation": "手动自定义各项设置。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "98bc8f51ffa7530dee176d3672f2758ab7bf278f67be5d07804baa328eaad6b3",
+      "Source": "Project 4K interface without developer tooling.",
+      "Translation": "不含开发工具的 Project 4K 界面。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "64bcbb4bf0d36e4a281f87b2de841635f7cbe9cfb27c480857b9199ce6a49a55",
+      "Source": "Prompt for approval before running browser scripts.",
+      "Translation": "运行浏览器脚本前请求批准。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ebae801b05566555f89756ebd4856444c27f7241ad1dad4f69c8e4005b321449",
+      "Source": "Queue until after the current turn.",
+      "Translation": "排入队列，等待当前轮次结束后发送。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "3e5ab2bd946866599380ba99da25eabdb8ae269f9732799b316ac3ebcc871524",
+      "Source": "Requires manual review for all terminal commands and file accesses outside of the working folders.",
+      "Translation": "所有终端命令以及对工作文件夹之外文件的访问，都需要人工审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "06e23610372633ce2d5dee8be1f13c7193a64620af4b96090b6a4eb6497bf153",
+      "Source": "Run all commands without restrictions.",
+      "Translation": "不受限制地运行所有命令.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "06b8462c1a70eedc88a13afd1000818e561580d4c486c3d3340caf27486e0547",
+      "Source": "Security agent decides if commands run.",
+      "Translation": "由安全智能体决定命令是否运行.",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b41cf7a833aa15f72e3c6613a219ee695cc2aea5269bcbc81f70e1f2858c1cc9",
+      "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
+      "Translation": "在沙盒内运行的终端命令会自动执行，否则会请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "33f59cb1df613e21bb467673a944e904e7405aa42f7b865541710c530eaf2552",
+      "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
+      "Translation": "终端命令在沙盒内会自动执行。需要离开沙盒的命令，只有在智能体判断其操作可撤销时才会执行，否则会请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c02456ee9953d58be4391be21ef8245c45cd5cb8601351197e141f01cdf3f70e",
+      "Source": "The agent always asks for confirmation before executing terminal commands (except those in the Allow list).",
+      "Translation": "智能体在执行终端命令前始终请求确认，允许列表中的命令除外。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "eddf96e6a5be86c46f9ea5149e41d95d53875c8e83d131d0920ff6c824e15e78",
+      "Source": "The agent always asks for review.",
+      "Translation": "智能体始终请求审核。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1f12ad6d60c5f573514e92006e74d56fa0b3262236e8347f976b939225ef505e",
+      "Source": "The agent never asks for confirmation before executing terminal commands (except those in the Deny list). This provides the agent with the maximum ability to operate over long periods without intervention, but also has the highest risk of the agent executing an unsafe terminal command.",
+      "Translation": "智能体在执行终端命令前不会请求确认，拒绝列表中的命令除外。这能让智能体在无人干预的情况下长时间自主工作，但执行不安全终端命令的风险也最高。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4650e94d55b3bfa40a6e5ef06343e27d842507e690a27ce178933656c0c56bad",
+      "Source": "The agent never asks for review. This maximizes the autonomy of the agent, but also has the highest risk of the agent operating over unsafe or injected artifact content.",
+      "Translation": "智能体从不请求审核。这能最大程度提高智能体的自主性，但智能体处理不安全或含提示词注入的产物内容时，风险也最高。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0f42a0c3e0aa839543ee9126de66a837207d5c6c57f06bda82a910fc05340ca2",
+      "Source": "The full developer experience.",
+      "Translation": "完整的开发体验。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1bb8c055a80f8f222759dce8e5fe5f6b76b6814f8efd99cf12aaeaf10c409f08",
+      "Source": "Useful for tasks that require file access across your full machine. The agent has full read and write access to all local files, but all proposed terminal commands require manual review and approval before running.",
+      "Translation": "适用于需要访问整台计算机文件的任务。智能体拥有对所有本机文件的完整读写权限，但所有拟执行的终端命令都需要先经过人工审核和批准。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a6a92d44b9ff613db9c6f0423c02f6a34b0796f3c23215ad9f984fd520da37d5",
+      "Source": "Useful for typical development with an emphasis on security. It prioritizes safety over speed by requiring manual approval for all terminal commands and files outside the project directory.",
+      "Translation": "适用于注重安全的日常开发。所有终端命令和对项目目录之外文件的访问都需要人工批准，在速度与安全之间优先保障安全。",
+      "Kind": "ui/component",
+      "Role": "option-description",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0bfcc32ce903570c83c4fcc6d09686ce37e327c249a5c816f51d796315af5c1b",
+      "Source": "Allow",
+      "Translation": "允许",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "14aa449c330aaf05365040c1d98d9f1e683093e062cf665f1e4471adaf650e50",
+      "Source": "Always Ask",
+      "Translation": "始终询问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b310f9aca3a9b12372b9897a52b7bb41ecf4cb10d073823e97c5ec57506f983f",
+      "Source": "Always Proceed",
+      "Translation": "始终继续",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "128a28e211822c1cfbc25808778f8ab2cbf07cad97b69c8c00f4f7bea2922339",
+      "Source": "Auto",
+      "Translation": "自动",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "447c9045a9820e3eba12f03d5c92ad42e4778c915fc5b7cd31f99f7173397747",
+      "Source": "Auto (Preview)",
+      "Translation": "自动(预览版)",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "26ceea7b53ed81665ab7ec578e990703f7f6ae93d53b288553c16f8c8984f77d",
+      "Source": "Custom",
+      "Translation": "自定义",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2378454fd8277d65004d455ed5b92a5478248c77f4b9f2b53111521f4876f610",
+      "Source": "Default",
+      "Translation": "默认",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "17721731fb9101d0dadc0a5636ce1f6e94d771f684b230bcb6dd0ceee93efd6f",
+      "Source": "Deny",
+      "Translation": "拒绝",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9b00e4d7853331bb1c32957ad81b70bfff5408a755bf3cb6fb3bc05396085c49",
+      "Source": "Disabled",
+      "Translation": "已禁用",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "93a31403c39ab7ce74db1c98eaa3e1292011734d1312a0ac78c6db9b6d3eed57",
+      "Source": "Enabled",
+      "Translation": "已启用",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "af7d2ceebad8aa5a71334135cd83b665a2db9a0a9ea85078b18a69ffaf9fa6e2",
+      "Source": "Fast",
+      "Translation": "快",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8fa7beb7e03692107cbec7125e4662d4a6b77f41598bd64bad79edeb5a6f0753",
+      "Source": "Fill",
+      "Translation": "填充",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1568616b0177014481808cc5b5c6055efbe94609e55f15b44d04bde6835333ce",
+      "Source": "Full machine",
+      "Translation": "整机访问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b77891f57467999541a34285635149d03d4fd06d91360572d008669d3856259e",
+      "Source": "Inherit Global",
+      "Translation": "继承全局设置",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "23031314c0c03b4616a49bdd0a67b20773fba91cadbabea239eeb08cc47a0a7d",
+      "Source": "Machine",
+      "Translation": "整机访问",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "af584df27134695938c24c4751af4eb9bcc4c47c45b3c2a53aa7ae7318192cad",
+      "Source": "Narrow",
+      "Translation": "窄",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "84d8c92f334cdd2c566c54caccb8c2393b757888580e7f85befed7a5d2b96bb7",
+      "Source": "Proceed in Sandbox",
+      "Translation": "在沙盒中继续",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "50fc75fdb5c5cdd3b9a8a642144e95fe19eee95a1ef3e5fe100a97f56586e4d1",
+      "Source": "Queue",
+      "Translation": "队列",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "04df1419803d5e2c22d082c73c904f411e61c2127fb5b5ab12395ca40369c05d",
+      "Source": "Request Review",
+      "Translation": "请求审核",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e3358ef6d2c00a1086a594ccba7aef03f6b9a8486d1d81a74492944f268c8779",
+      "Source": "Require Review",
+      "Translation": "需要审核",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0374b356030a371ca40d9dba670c2cd3deed3776876d3f34a9e238e38c39428c",
+      "Source": "Send Immediately",
+      "Translation": "立即发送",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0e879a516a6e5f9d49217b80028b5b5587a1987763b07d46cf206d6bec76444d",
+      "Source": "Slow",
+      "Translation": "慢",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "92fb6421cafd14459c41c601d9854af5f319d744ca59eacf054fea27d36219db",
+      "Source": "Turbo",
+      "Translation": "极速",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "6d8073fc32f99c48a5cb353646744438a40cf472392227a048b973f0769995ef",
+      "Source": "Turbo mode",
+      "Translation": "极速模式",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c525392fa03ff08b6190d2c690c223c4de85d0700f0c68521b39481ac5baabc9",
+      "Source": "Vetted (Preview)",
+      "Translation": "已审核(预览版)",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "238c0214f51976b722558da42646a63eda80f2d8f6e3778d17e67521115b4675",
+      "Source": "Wide",
+      "Translation": "宽",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b8bcc0b179e06f7698d1e82072213d259b24dda293c73c4c66b7edcd1d2a7c8b",
+      "Source": "⟪AGC0⟫ (disabled by admin)",
+      "Translation": "⟪AGC0⟫(已被管理员禁用)",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "template"
     }
   ],
   "RetainedSources": [
@@ -28613,6 +30853,7 @@
     "PID ",
     "PII",
     "Peter Pan",
+    "Piper",
     "Piper (g4)",
     "Pro",
     "Project 4K",

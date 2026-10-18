@@ -249,6 +249,8 @@ public static partial class JavaScriptUi
                         return Merge(properties.Select(p => (Expression)p!.Value), owner.Value);
                     }
                     return null;
+                case ChainExpression chain: return Expand(chain.Expression, function, visiting);
+                case LogicalExpression logical: return Merge([logical.Left, logical.Right], function);
                 case ConditionalExpression conditional:
                     return Merge([conditional.Consequent, conditional.Alternate], function);
                 case TemplateLiteral template:
@@ -324,6 +326,97 @@ public static partial class JavaScriptUi
                 case StringLiteral or ObjectExpression or ArrayExpression or ArrowFunctionExpression or FunctionExpression: return [expression];
                 default: return null;
             }
+        }
+
+        // 下拉框以英文显示名建立内部映射，汉化仅发生在最终标签、说明及提示处。
+        const string optionLabel = "option-label", optionDescription = "option-description", optionTooltip = "option-tooltip";
+        var optionSources = new Dictionary<string, HashSet<string>>(StringComparer.Ordinal)
+        { [optionLabel] = new(StringComparer.Ordinal), [optionDescription] = new(StringComparer.Ordinal), [optionTooltip] = new(StringComparer.Ordinal) };
+        var optionCallbacks = new Dictionary<(int Function, string Name), string>();
+        var optionValues = new HashSet<(int Function, string Name)>();
+        var optionMetadata = new HashSet<ObjectExpression>(ReferenceEqualityComparer.Instance);
+        string? ResolverRole(string name) => name switch
+        {
+            "displayResolver" or "resolveOptionToString" or "resolveOptionToLabel" => optionLabel,
+            "resolveOptionToDescription" => optionDescription, "getOptionTooltip" => optionTooltip, _ => null
+        };
+        void CollectOption(Expression value, int scope, string role)
+        {
+            switch (value)
+            {
+                case ConditionalExpression choice: CollectOption(choice.Consequent, scope, role); CollectOption(choice.Alternate, scope, role); break;
+                case LogicalExpression logical: CollectOption(logical.Left, scope, role); CollectOption(logical.Right, scope, role); break;
+                case ChainExpression chain: CollectOption(chain.Expression, scope, role); break;
+                default:
+                    var values = Expand(value, scope, []);
+                    if (values is not null) foreach (var text in values.OfType<StringLiteral>())
+                        if (LooksLikeText(text.Value)) optionSources[role].Add(text.Value);
+                    break;
+            }
+        }
+        IEnumerable<Expression> FunctionResults(Node producer) => producer is ArrowFunctionExpression { Body: Expression result }
+            ? [result] : Walk(producer).Where(p => p.Function == producer.Start).Select(p => p.Node).OfType<ReturnStatement>().Select(r => r.Argument).OfType<Expression>();
+        foreach (var (node, scope) in nodes)
+        {
+            if (desktop || IsProtected(node)) continue;
+            if (IsFunction(node)) foreach (var parameter in Parameters(node).OfType<ObjectPattern>())
+            {
+                var fields = parameter.Properties.OfType<AssignmentProperty>().Where(p => !p.Computed && p.Key is Identifier && p.Value is Identifier)
+                    .ToDictionary(p => ((Identifier)p.Key).Name, p => ((Identifier)p.Value).Name);
+                if (!fields.ContainsKey("options") || !fields.ContainsKey("onSelect") || !fields.ContainsKey("displayResolver") && !fields.ContainsKey("resolveOptionToLabel")) continue;
+                foreach (var (key, name) in fields) if (ResolverRole(key) is { } role) optionCallbacks[(node.Start, name)] = role;
+                if (fields.ContainsKey("displayResolver") && fields.TryGetValue("value", out var selected)) optionValues.Add((node.Start, selected));
+            }
+            if (node is not ObjectExpression configuration) continue;
+            var properties = configuration.Properties.OfType<ObjectProperty>().ToArray();
+            var keys = properties.Select(PropertyName).ToHashSet(StringComparer.Ordinal);
+            if (keys.IsSupersetOf(["displayName", "shortDescription", "longDescription"]) || keys.IsSupersetOf(["label", "description", "prefValues"]))
+            {
+                optionMetadata.Add(configuration);
+                foreach (var property in properties)
+                    if (PropertyName(property) is "displayName" or "shortDisplayName" or "label") CollectOption((Expression)property.Value, scope, optionLabel);
+                    else if (PropertyName(property) is "shortDescription" or "longDescription" or "description") CollectOption((Expression)property.Value, scope, optionDescription);
+            }
+            if (!keys.Contains("options") || !keys.Contains("onSelect") && !keys.Contains("isProviderSetting")) continue;
+            foreach (var property in properties)
+            {
+                if (ResolverRole(PropertyName(property)) is not { } role || property.Value is not Expression resolver) continue;
+                var producers = IsFunction(resolver) ? [resolver] : Expand(resolver, scope, []) ?? [];
+                if (resolver is Identifier name && Owner(scope, name.Name) is { } owner && fixedBindings.Contains((owner, name.Name)) && namedFunctions.TryGetValue((owner, name.Name), out var named))
+                    foreach (var value in FunctionResults(named)) CollectOption(value, named.Start, role);
+                foreach (var producer in producers.Where(IsFunction)) foreach (var value in FunctionResults(producer)) CollectOption(value, producer.Start, role);
+            }
+        }
+        string? OptionRole(Expression expression, int scope, HashSet<(int, string)> visited)
+        {
+            if (expression is ChainExpression chain) return OptionRole(chain.Expression, scope, visited);
+            if (expression is ConditionalExpression choice) return OptionRole(choice.Consequent, scope, new(visited)) ?? OptionRole(choice.Alternate, scope, visited);
+            if (expression is LogicalExpression logical) return OptionRole(logical.Left, scope, new(visited)) ?? OptionRole(logical.Right, scope, visited);
+            if (expression is MemberExpression { Computed: false, Property: Identifier field } member &&
+                field.Name is "displayName" or "shortDisplayName" or "label" or "shortDescription" or "longDescription" or "description")
+            {
+                var objects = Expand(member.Object, scope, []);
+                if (objects is { Count: > 0 } && objects.All(o => o is ObjectExpression metadata && optionMetadata.Contains(metadata)))
+                    return field.Name is "displayName" or "shortDisplayName" or "label" ? optionLabel : optionDescription;
+            }
+            if (expression is CallExpression call)
+            {
+                var callee = call.Callee is SequenceExpression sequence ? sequence.Expressions[^1] : call.Callee;
+                if (callee is Identifier callback && Owner(scope, callback.Name) is { } owner && fixedBindings.Contains((owner, callback.Name)) &&
+                    optionCallbacks.TryGetValue((owner, callback.Name), out var role)) return role;
+                if (callee is MemberExpression { Property: Identifier { Name: "useMemo" } } && call.Arguments.Count > 0 && IsFunction(call.Arguments[0]))
+                    foreach (var value in FunctionResults(call.Arguments[0])) if (OptionRole(value, call.Arguments[0].Start, new(visited)) is { } result) return result;
+                return null;
+            }
+            if (expression is not Identifier id || Owner(scope, id.Name) is not { } local || !visited.Add((local, id.Name))) return null;
+            if (fixedBindings.Contains((local, id.Name)))
+            {
+                if (optionValues.Contains((local, id.Name))) return optionLabel;
+                return declarations.TryGetValue((local, id.Name), out var initial) ? OptionRole(initial, local, visited) : null;
+            }
+            if (local != scope || ambiguous.Contains((local, id.Name)) || !writes.TryGetValue((local, id.Name), out var changes) || changes.Any(c => c.Closure)) return null;
+            var latest = changes.Where(c => c.Position < id.Start).OrderBy(c => c.Position).LastOrDefault();
+            return latest.Linear && latest.Value is not null ? OptionRole(latest.Value, local, visited) : null;
         }
 
         var lookupSeen = new HashSet<(int, string)>();
@@ -402,6 +495,13 @@ public static partial class JavaScriptUi
             }
             void Value(Node node, string role)
             {
+                if (node is Expression option && node is Identifier or MemberExpression or CallExpression or ChainExpression &&
+                    OptionRole(option, activeFunction, []) is { } optionRole && optionSources[optionRole].Count > 0)
+                {
+                    foreach (var source in optionSources[optionRole].Order(StringComparer.Ordinal))
+                        if (lookupSeen.Add((node.Start, source))) texts.Add(new("", "", file, node.Start, node.End, source, "lookup", optionRole, []));
+                    return;
+                }
                 if (node is Expression display && ServiceRole(display, activeFunction, []) is { } serviceRole)
                 {
                     foreach (var source in ServiceDisplay.Sources(serviceRole))
