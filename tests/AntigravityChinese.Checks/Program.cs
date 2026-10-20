@@ -93,11 +93,25 @@ static void CheckInstall()
     using var fixture = new Fixture();
     var originalAsar = AsarArchive.FileHash(fixture.App.Asar); var originalServer = AsarArchive.FileHash(fixture.App.Server);
     var prepared = fixture.Prepare(); Assert(prepared.Receipt.BundleHash is not null, "未生成主界面原生资源包。"); PatchInstaller.Apply(prepared);
+    var expanded = ExpandedWebBundle.DirectoryPath(fixture.App, prepared.Receipt.BundleHash!);
+    using (var bundle = EmbeddedWebBundle.Open(fixture.App.Server))
+        foreach (var name in bundle.Files.Where(name => name.Contains('/')))
+            Assert(File.ReadAllBytes(Path.Combine(expanded, name)).SequenceEqual(bundle.Read(name)), "安装后子目录资源与原件不同：" + name);
     using (var asar = new AsarArchive(fixture.App.Asar))
         Assert(asar.ReadText("dist/menu.js").Contains("复制", StringComparison.Ordinal), "桌面菜单未写入。");
     Assert(PatchInstaller.FindApplied(fixture.App, fixture.Data) is not null, "应用状态未确认。");
     var hash = AsarArchive.FileHash(fixture.App.Asar); PatchInstaller.Apply(fixture.Prepare());
     Assert(AsarArchive.FileHash(fixture.App.Asar) == hash, "重复汉化叠加了补丁。");
+    File.WriteAllText(Path.Combine(expanded, "symbols-icons/icons/files/code.svg"), "corrupt icon");
+    PatchInstaller.Apply(fixture.Prepare());
+    using (var bundle = EmbeddedWebBundle.Open(fixture.App.Server))
+        Assert(File.ReadAllBytes(Path.Combine(expanded, "symbols-icons/icons/files/code.svg"))
+            .SequenceEqual(bundle.Read("symbols-icons/icons/files/code.svg")), "重新应用没有修复损坏的展开资源。");
+    var updatedPackage = new TranslationPackage(fixture.Package.Entries.Select(entry => entry with { Translation = "拷贝" }).ToList());
+    var updated = PatchBuilder.Prepare(fixture.App, updatedPackage, Path.Combine(fixture.Root, "updated-pack"), fixture.Data);
+    PatchInstaller.Apply(updated);
+    Assert(updated.Receipt.BundleHash != prepared.Receipt.BundleHash && !Directory.Exists(expanded) &&
+        Directory.Exists(ExpandedWebBundle.DirectoryPath(fixture.App, updated.Receipt.BundleHash!)), "更新译文后未切换资源目录或清理旧资源。");
     Assert(AsarArchive.FileHash(fixture.App.Server) == originalServer, "修改了本机服务二进制。");
     File.AppendAllText(fixture.App.Server, "upstream server update");
     var updatedServer = AsarArchive.FileHash(fixture.App.Server);
@@ -107,6 +121,7 @@ static void CheckInstall()
     PatchInstaller.Restore(fixture.App, fixture.Data);
     Assert(AsarArchive.FileHash(fixture.App.Asar) == originalAsar, "恢复没有还原原始资源。");
     Assert(!File.Exists(Path.Combine(fixture.Root, NativeBundleAdapter.ResourceDirectory, "web.zip")), "恢复后残留活动资源包。");
+    Assert(!Directory.Exists(expanded), "恢复后残留展开的资源目录。");
     Assert(AsarArchive.FileHash(fixture.App.Server) == updatedServer, "恢复覆盖了更新后的本机服务。");
     using var changedLoader = new Fixture("function upstream(){return ['--new-launch-format'];}");
     var partial = changedLoader.Prepare(); PatchInstaller.Apply(partial);
@@ -115,6 +130,13 @@ static void CheckInstall()
         partialAsar.ReadText("dist/menu.js").Contains("复制", StringComparison.Ordinal) &&
         partialAsar.ReadText("dist/languageServer.js").Contains("--new-launch-format", StringComparison.Ordinal),
         "新版本启动结构变化时，没有保留原版前端并应用可用的桌面译文。");
+    using var unsafeBundle = new Fixture(resourcePath: "../outside.bin");
+    var safePartial = unsafeBundle.Prepare(); PatchInstaller.Apply(safePartial);
+    using var safeAsar = new AsarArchive(unsafeBundle.App.Asar);
+    Assert(safePartial.Receipt.BundleHash is null && safePartial.Receipt.Notices.Count > 0 &&
+        safeAsar.ReadText("dist/menu.js").Contains("复制", StringComparison.Ordinal) &&
+        !safeAsar.ReadText("dist/languageServer.js").Contains(NativeBundleAdapter.HookMarker, StringComparison.Ordinal),
+        "无法安全展开资源时，没有保留原生加载方式并继续应用安全的菜单译文。");
 }
 static void CheckDisplayValues()
 {
@@ -251,6 +273,7 @@ static void CheckRecovery()
     var prepared = fixture.Prepare();
     using (var locked = new FileStream(fixture.App.Executable, FileMode.Open, FileAccess.Read, FileShare.Read)) Reject(() => PatchInstaller.Apply(prepared));
     Assert(AsarArchive.FileHash(fixture.App.Asar) == original, "第二个文件失败后未恢复第一个文件。");
+    Assert(!Directory.Exists(ExpandedWebBundle.DirectoryPath(fixture.App, prepared.Receipt.BundleHash!)), "失败回滚后残留本次展开的资源。");
     PatchInstaller.Apply(fixture.Prepare());
     File.WriteAllBytes(fixture.App.Asar, originalBytes.Concat("upstream update"u8.ToArray()).ToArray());
     var changed = AsarArchive.FileHash(fixture.App.Asar);
@@ -295,14 +318,28 @@ static void CheckUiConfiguration()
 }
 static void CheckNativeHook()
 {
-    using var fixture = new Fixture(); var directory = Path.Combine(fixture.Root, NativeBundleAdapter.ResourceDirectory);
-    Directory.CreateDirectory(directory); File.WriteAllText(Path.Combine(directory, "web.zip"), "fixture");
-    var hook = Path.Combine(fixture.Root, "hook.cjs"); File.WriteAllBytes(hook, NativeBundleAdapter.CreateHook(fixture.App, AsarArchive.FileHash(Path.Combine(directory, "web.zip")), AsarArchive.FileHash(fixture.App.Server)));
+    using var fixture = new Fixture(); var prepared = fixture.Prepare(); PatchInstaller.Apply(prepared);
+    var expanded = ExpandedWebBundle.DirectoryPath(fixture.App, prepared.Receipt.BundleHash!);
+    var hook = Path.Combine(fixture.Root, "hook.cjs");
+    using (var asar = new AsarArchive(fixture.App.Asar)) File.WriteAllBytes(hook, asar.Read(NativeBundleAdapter.HookFile));
     var root = JavaScriptUi.Quote(Path.Combine(fixture.Root, "resources")); var module = JavaScriptUi.Quote(hook);
-    var output = Node($"Object.defineProperty(process,'resourcesPath',{{value:{root}}});const m=require({module}),fs=require('fs');let a=[],b=[];m.addBundle(a,false);m.addBundle(b,true);const binary=require('path').join({root},'bin','language_server.exe'),stat=fs.statSync(binary),bytes=fs.readFileSync(binary);bytes[0]^=1;fs.writeFileSync(binary,bytes);fs.utimesSync(binary,stat.atime,stat.mtime);let c=[];m.addBundle(c,false);console.log(JSON.stringify([a,b,c]));");
+    var output = Node($$"""
+    Object.defineProperty(process,'resourcesPath',{value:{{root}}});
+    const m=require({{module}}),fs=require('fs'),path=require('path');
+    const invoke=wsl=>{const args=[];m.addBundle(args,wsl);return args;};
+    const valid=invoke(false),wsl=invoke(true);
+    const icon=path.join(valid[1],'symbols-icons/icons/files/code.svg'),original=fs.readFileSync(icon);
+    fs.writeFileSync(icon,'corrupt icon');const corrupt=invoke(false);
+    fs.unlinkSync(icon);const missing=invoke(false);
+    fs.writeFileSync(icon,original);
+    const binary=path.join({{root}},'bin','language_server.exe'),stat=fs.statSync(binary),bytes=fs.readFileSync(binary);
+    bytes[0]^=1;fs.writeFileSync(binary,bytes);fs.utimesSync(binary,stat.atime,stat.mtime);
+    console.log(JSON.stringify([valid,wsl,corrupt,missing,invoke(false)]));
+    """);
     using var parsed = JsonDocument.Parse(output);
-    Assert(parsed.RootElement[0][0].GetString() == "--web_bundle_path" && parsed.RootElement[1].GetArrayLength() == 0 &&
-           parsed.RootElement[2].GetArrayLength() == 0, "本机服务内容变化后仍加载了旧中文包，或 WSL 回退失效。");
+    Assert(parsed.RootElement[0][0].GetString() == "--web_bundle_path" && parsed.RootElement[0][1].GetString() == expanded &&
+        parsed.RootElement.EnumerateArray().Skip(1).All(a => a.GetArrayLength() == 0),
+        "原生入口未使用完整资源目录，或资源损坏、缺失、服务变化及 WSL 的回退失效。");
 }
 
 sealed class Fixture : IDisposable
@@ -311,14 +348,17 @@ sealed class Fixture : IDisposable
     public string Data => Path.Combine(Root, "state");
     public Installation App { get; }
     public TranslationPackage Package { get; }
-    public Fixture(string loader = "function start(options){const {wsl}=options;const args=['--standalone','--subclient_type','hub','--csrf_token'];return args;}")
+    public Fixture(string loader = "function start(options){const {wsl}=options;const args=['--standalone','--subclient_type','hub','--csrf_token'];return args;}",
+        string resourcePath = "unchanged.bin")
     {
         Directory.CreateDirectory(Path.Combine(Root, "resources", "bin"));
         File.Copy(Environment.ProcessPath!, Path.Combine(Root, "Antigravity.exe"));
         var zipBytes = new MemoryStream();
         using (var zip = new ZipArchive(zipBytes, ZipArchiveMode.Create, true))
             foreach (var (name, text) in new Dictionary<string, string> { ["index.html"] = "<script src=\"/main.js\"></script>",
-                         ["main.js"] = "A.createElement('button',null,'Copy');", ["unchanged.bin"] = "untouched resource" })
+                         ["main.js"] = "A.createElement('button',null,'Copy');", [resourcePath] = "untouched resource",
+                         ["symbols-icons/icons/files/code.svg"] = "<svg xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0h16v16\"/></svg>",
+                         ["workers/example.mjs"] = "export const workerName='fixture';" })
             { using var writer = new StreamWriter(zip.CreateEntry(name).Open()); writer.Write(text); }
         using (var server = File.Create(Path.Combine(Root, "resources", "bin", "language_server.exe")))
         { server.Write("MZ fixture web_bundle_path"u8); server.Write(zipBytes.ToArray()); server.Write("suffix"u8); }

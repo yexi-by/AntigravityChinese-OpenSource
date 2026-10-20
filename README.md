@@ -2,7 +2,7 @@
 
 Windows x64 的离线、一次性汉化工具，目标是独立的 **Antigravity App**。使用内置简体中文译文，支持自动检测安装、手动选择目录、备份和恢复。
 
-当前发布为 **v0.1.4 公开测试版**。从 [Releases](https://github.com/yexi-by/AntigravityChinese-OpenSource/releases) 下载 `AntigravityChinese-win-x64.zip`，解压后使用；旁边的 `SHA256SUMS.txt` 用于核对下载文件和包内程序的 SHA-256。
+当前发布为 **v0.1.5 公开测试版**。从 [Releases](https://github.com/yexi-by/AntigravityChinese-OpenSource/releases) 下载 `AntigravityChinese-win-x64.zip`，解压后使用；旁边的 `SHA256SUMS.txt` 用于核对下载文件和包内程序的 SHA-256。已使用 v0.1.4 的用户请重新应用本版，修复文件图标及其他子目录资源加载失败的问题。
 
 当前以 Antigravity App **2.24.0** 为验证基线，内置 3,853 条译文。工具每次分析实际安装资源，**没有版本白名单**：已知且语境适用的文案显示中文，新增或无法确认的内容保留原文。官方更新覆盖汉化后，退出 App，再手动运行一次本工具。
 
@@ -25,7 +25,7 @@ Windows x64 的离线、一次性汉化工具，目标是独立的 **Antigravity
 - 用户输入、模型生成内容、代码、终端输出、第三方网页保持原样。
 - Docker、GitHub、token、品牌、模型、协议和没有通用中文译法的名称保留英文；设置、仓库、分支等通用用语正常翻译。
 - 通过 JavaScript 语法树定位显示位置，不对整个安装目录做字符串替换。动态表达式保持数量、顺序和求值次数，内部值和业务比较保持原样。
-- 主界面使用本机服务已有的 `--web_bundle_path` 入口；不修改 `language_server.exe`，不拦截请求，不使用 DOM 替换。
+- 主界面使用本机服务已有的 `--web_bundle_path` 目录入口，保留图标、图片和 worker 的原始路径。启动前校验服务、中文 ZIP 和展开的资源；不修改 `language_server.exe`，不拦截请求，不使用 DOM 替换。
 - 服务下发的配额标签、模型分组悬浮说明、套餐升级说明和刷新时长，在确认的显示字段中按已知模板汉化；型号、套餐名、额度数值及原始接口数据保持原样，未知句式不改动。
 - 新版本某部分结构暂时无法识别时，保留该部分原版资源并显示提示，其他安全匹配的部分仍可汉化。完全没有可用译文时不写入。
 

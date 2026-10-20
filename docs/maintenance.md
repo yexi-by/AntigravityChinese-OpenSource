@@ -12,7 +12,7 @@
 ./scripts/maintain.ps1 -Mode Check -AppPath 'D:\apps\Antigravity'
 ```
 
-Check 只分析资源并将结果写入忽略目录 `.local`。`NeedsUpdate=false` 时直接结束：不用 ATT、不改翻译资产、不为版本号创建提交。新增语境中的文字若能无歧义复用已有译文，也不要求重新发布。
+Check 只分析文案和已知结构，将结果写入忽略目录 `.local`。没有新的异常反馈且 `NeedsUpdate=false` 时，无需使用 ATT、修改翻译资产或为上游版本号创建提交。新增语境中的文字若能无歧义复用已有译文，也不要求重新发布。Check 不验证 HTTP 资源是否正常返回；已有破图、页面异常等反馈时，仍须检查实际资源加载并修复。
 
 出现结构提示时，先检查新的前端封包、显示调用和本机服务启动参数，修正适配器；不要修改版本号冒充适配。安装工具仍允许应用其他安全匹配部分。
 
@@ -68,7 +68,7 @@ $environment = @{USERPROFILE=$sandbox;HOME=$sandbox;APPDATA=$sandbox;LOCALAPPDAT
 Start-Process .local/verification-new/app/Antigravity.exe -Environment $environment -WindowStyle Normal
 ```
 
-原生验证检查真实服务返回的中文脚本、缓存地址、样式和配置 RPC。随后观察启动界面、菜单、主要页面、重启后的显示，以及安装和恢复。不要主动登录、发送消息、修改账户或安全设置；这些验证另行取得授权。不要将含账户信息的截图放入仓库。
+原生验证使用已安装的展开目录，逐个请求 ZIP 中所有静态文件并核对实际响应字节，同时检查图片和样式的 MIME、中文脚本、缓存地址和配置 RPC。首页会由服务注入启动配置，单独核对脚本地址。HTTP 200 不能单独判为成功，缺失资源可能被首页 HTML 替代。随后观察启动界面、菜单、主要页面、重启后的显示，以及安装和恢复。不要主动登录、发送消息、修改账户或安全设置；这些验证另行取得授权。不要将含账户信息的截图放入仓库。
 
 退出验证副本后恢复并核对原件：
 
@@ -93,7 +93,11 @@ dotnet run --project tools/AntigravityChinese.Maintainer -c Release -- restore -
 | `packs/zh-CN.json` | 安装器内置的有效译文与明确保留项 |
 | `.local/att/projects/generic/AntigravityChinese` | 本机 ATT 数据库、日志和 WriteBack |
 
-安装时从当前原件生成资源，核对准备期间文件未变，再按文件替换并校验。`language_server.exe` 保持原始字节；中文 ZIP 与该服务的大小、时间戳和 SHA-256 关联。启动时用固定缓冲区分块核对服务和 ZIP 摘要，资源或服务发生变化时回退到原版界面。
+安装时从当前原件生成资源，核对准备期间文件未变，再按文件替换并校验。`language_server.exe` 保持原始字节；中文 ZIP 与该服务的大小、时间戳和 SHA-256 关联。
+
+在 App 2.24.0 的 Windows 服务中，外部 ZIP 入口会把子目录资源请求回退为首页 HTML，未经修改的原版 ZIP 也会复现。因此工具把已校验 ZIP 展开到 `resources/antigravity-chinese/web-<ZIP摘要>/`，向同一个原生参数传入目录，保留资源名和目录结构。该目录是工具生成的资源副本；重新应用会重建，成功更新后清理旧摘要目录，恢复和失败回滚会移除对应目录。不要在其中保存自有文件。
+
+启动时用同一个固定大小缓冲区分块校验服务、ZIP 和所有展开文件的 SHA-256，并拒绝缺失文件及资源路径上的符号链接。任一检查失败时使用内嵌原版界面；重新运行本工具可以修复损坏的资源副本。ZIP 继续作为安装记录中的完整性依据，旧版备份仍可识别，无需用户清理或迁移。
 
 需要同步修改 `Antigravity.exe` 中的 ASAR 头校验值，因此补丁后的 EXE 内容与官方签名原件不同；校验开关、登录逻辑和更新器没有修改。恢复使用已保存的原件字节。安装记录优先选最近一次匹配的操作，避免不同原件恰好生成相同补丁时恢复到更早版本。
 

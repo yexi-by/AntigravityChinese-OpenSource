@@ -81,7 +81,10 @@ public static class PatchInstaller
             try
             {
                 if (prepared.Receipt.BundleHash is not null)
+                {
+                    ExpandedWebBundle.Install(app, Path.Combine(prepared.Directory, "web.zip"), prepared.Receipt.BundleHash);
                     Replace(Path.Combine(prepared.Directory, "web.zip"), Path.Combine(app.Root, NativeBundleAdapter.ResourceDirectory, "web.zip"));
+                }
                 else if (prior?.BundleHash is { } priorHash && Matches(Path.Combine(app.Root, NativeBundleAdapter.ResourceDirectory, "web.zip"), priorHash))
                     File.Delete(Path.Combine(app.Root, NativeBundleAdapter.ResourceDirectory, "web.zip"));
                 Replace(Path.Combine(prepared.Directory, "app.asar"), app.Asar);
@@ -93,6 +96,9 @@ public static class PatchInstaller
                 using var archive = new AsarArchive(app.Asar);
                 if (ElectronIntegrity.ReadHeaderHash(app.Executable) is { } integrity && integrity != archive.HeaderHash)
                     throw new IOException("安装后的 Electron 完整性校验不匹配。");
+                if (prepared.ExpectedBundleHash is { } oldBundle && oldBundle != prepared.Receipt.BundleHash &&
+                    (prepared.Receipt.BundleHash is not null || prior?.BundleHash == oldBundle))
+                    ExpandedWebBundle.Remove(app, oldBundle);
                 JsonFiles.Write(Path.Combine(prepared.BackupDirectory, "state.json"), prepared.Receipt with { Phase = "applied" });
             }
             catch (Exception error)
@@ -146,6 +152,7 @@ public static class PatchInstaller
             if (!Matches(target, file.OriginalHash)) throw new IOException("恢复后校验失败。");
         }
         var bundle = Path.Combine(app.Root, NativeBundleAdapter.ResourceDirectory, "web.zip");
+        if (state.BundleHash is { } expandedHash) ExpandedWebBundle.Remove(app, expandedHash);
         if (state.BundleHash is { } hash && Matches(bundle, hash)) File.Delete(bundle);
         var folder = Path.GetDirectoryName(bundle)!;
         if (Directory.Exists(folder) && !Directory.EnumerateFileSystemEntries(folder).Any()) Directory.Delete(folder);

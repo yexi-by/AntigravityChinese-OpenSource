@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.Json;
 using Acornima;
 using Acornima.Ast;
 
@@ -53,9 +54,13 @@ public static class NativeBundleAdapter
         return (patched, "native-web-bundle/" + string.Join(',', new[] { "--standalone", "--subclient_type", "hub", "--csrf_token" }));
     }
 
-    public static byte[] CreateHook(Installation installation, string bundleHash, string serverHash)
+    public static byte[] CreateHook(Installation installation, string bundlePath, string serverHash)
     {
         var server = new FileInfo(installation.Server);
+        var bundleHash = AsarArchive.FileHash(bundlePath);
+        var files = ExpandedWebBundle.ReadHashes(bundlePath);
+        var directories = files.Keys.SelectMany(name => name.Select((c, i) => c == '/' ? name[..i] : null))
+            .OfType<string>().Distinct(StringComparer.Ordinal).Order(StringComparer.Ordinal).ToArray();
         // 与生成资源的本机服务绑定。独立替换服务或改变时间戳后自动使用原版界面。
         var stamp = new DateTimeOffset(server.LastWriteTimeUtc).ToUnixTimeMilliseconds();
         var code = $$"""
@@ -63,10 +68,10 @@ public static class NativeBundleAdapter
         const fs = require('node:fs');
         const path = require('node:path');
         const crypto = require('node:crypto');
-        function fileHash(file) {
+        function fileHash(file, buffer) {
           const handle = fs.openSync(file, 'r');
           try {
-            const buffer = Buffer.allocUnsafe(256 * 1024), hash = crypto.createHash('sha256');
+            const hash = crypto.createHash('sha256');
             let count;
             while ((count = fs.readSync(handle, buffer, 0, buffer.length, null)) > 0) hash.update(buffer.subarray(0, count));
             return hash.digest('hex');
@@ -79,9 +84,19 @@ public static class NativeBundleAdapter
             const binaryPath = path.join(root, 'bin', 'language_server.exe');
             const binary = fs.statSync(binaryPath);
             const bundle = path.join(root, 'antigravity-chinese', 'web.zip');
+            const expanded = path.join(root, 'antigravity-chinese', 'web-{{bundleHash}}');
+            const buffer = Buffer.allocUnsafe(256 * 1024);
+            const files = {{JsonSerializer.Serialize(files)}};
+            const directories = {{JsonSerializer.Serialize(directories)}};
             if (binary.size === {{server.Length}} && Math.floor(binary.mtimeMs) === {{stamp}} && fs.statSync(bundle).isFile() &&
-                fileHash(binaryPath) === '{{serverHash}}' && fileHash(bundle) === '{{bundleHash}}') {
-              args.push('--web_bundle_path', bundle);
+                fileHash(binaryPath, buffer) === '{{serverHash}}' && fileHash(bundle, buffer) === '{{bundleHash}}' &&
+                fs.lstatSync(path.dirname(expanded)).isDirectory() && fs.lstatSync(expanded).isDirectory() &&
+                directories.every(name => fs.lstatSync(path.join(expanded, name)).isDirectory()) &&
+                Object.entries(files).every(([name, hash]) => {
+                  const file = path.join(expanded, name);
+                  return fs.lstatSync(file).isFile() && fileHash(file, buffer) === hash;
+                })) {
+              args.push('--web_bundle_path', expanded);
             }
           } catch { /* 原版资源始终是回退路径。 */ }
         };

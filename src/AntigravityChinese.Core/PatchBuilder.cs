@@ -73,9 +73,10 @@ public static class PatchBuilder
                 var adapted = NativeBundleAdapter.Attach(loader) ?? throw new InvalidDataException("启动结构发生变化，尚未匹配到原生资源包入口。");
                 bundle.AddCacheKeys(changes);
                 bundle.WritePatched(Path.Combine(directory, "web.zip"), changes);
+                var hook = NativeBundleAdapter.CreateHook(installed, Path.Combine(directory, "web.zip"), serverOriginalHash);
                 bundleHash = AsarArchive.FileHash(Path.Combine(directory, "web.zip"));
                 replacements["dist/languageServer.js"] = Encoding.UTF8.GetBytes(adapted.Code);
-                replacements[NativeBundleAdapter.HookFile] = NativeBundleAdapter.CreateHook(installed, bundleHash, serverOriginalHash);
+                replacements[NativeBundleAdapter.HookFile] = hook;
             }
         }
         catch (Exception e) when (e is InvalidDataException or NotSupportedException or ParseErrorException)

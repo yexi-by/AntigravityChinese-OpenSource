@@ -61,7 +61,7 @@ try
                 ProtectedTerms.NeedsTranslation(p.Text.Source) && !retained.Contains(p.Text.Source) && matcher.Find(p.Text, p.Kind) is null);
             var newContexts = scan.Groups.DistinctBy(g => g.Key).Count(g => !known.Contains(g.Key) && g.Texts.Any(t => ProtectedTerms.NeedsTranslation(t.Source) && !retained.Contains(t.Source)));
             var decision = new MaintenanceDecision(missing > 0 || scan.Notices.Count > 0, newContexts, missing, scan.Notices, scan.AdapterSignature);
-            Console.WriteLine(decision.NeedsUpdate ? $"需要维护：新增 {newContexts} 组，待补译 {missing} 条，结构提示 {scan.Notices.Count} 项。" : "无需更新项目：现有译文和加载方式仍适用。");
+            Console.WriteLine(decision.NeedsUpdate ? $"需要维护：新增 {newContexts} 组，待补译 {missing} 条，结构提示 {scan.Notices.Count} 项。" : "静态检查未发现待补译文案或已知结构变化；实际资源和界面效果请按验证流程检查。");
             if (Array.IndexOf(args, "--output") >= 0) JsonFiles.Write(Option("--output"), decision);
             return 0;
         }
