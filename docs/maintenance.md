@@ -57,8 +57,10 @@ dotnet run --project tools/AntigravityChinese.Maintainer -c Release -- import-at
 dotnet run --project tests/AntigravityChinese.Checks -c Release
 dotnet run --project tools/AntigravityChinese.Maintainer -c Release -- verify-copy --work .local/verification-new
 dotnet run --project tools/AntigravityChinese.Maintainer -c Release -- apply --app .local/verification-new/app --work .local/verification-patch --data .local/verification-new/state
-node scripts/verify-bundle.mjs .local/verification-new/app/resources/bin/language_server.exe .local/verification-patch/web.zip .local/native-check
+node scripts/verify-bundle.mjs .local/verification-new/app/resources/bin/language_server.exe .local/verification-patch/web.zip .local/native-check 2.25.0
 ```
+
+原生验证命令的最后一个参数填写待验证 App 的实际版本。
 
 `verify-copy` 要求空目录及未汉化的原版安装。它在副本所有模块加载之前隔离 home、userData 等文件目录，并关闭副本更新检查。正式补丁没有这些改动。App 仍可能复用系统级登录服务，不要将文件目录隔离视为账户隔离。启动副本时再传入隔离环境：
 

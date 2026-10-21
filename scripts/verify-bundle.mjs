@@ -7,8 +7,9 @@ import path from 'node:path';
 import { inflateRawSync } from 'node:zlib';
 
 // 在独立文件目录启动本机服务，只检查原生资源与配置 RPC，不发送对话或模型请求。
-const [server, bundle, stateDirectory] = process.argv.slice(2).map(p => path.resolve(p));
-assert(server && bundle && stateDirectory, '参数：language_server.exe 中文ZIP 独立状态目录');
+const [serverArg, bundleArg, stateDirectoryArg, appVersion] = process.argv.slice(2);
+assert(serverArg && bundleArg && stateDirectoryArg && appVersion, '参数：language_server.exe 中文ZIP 独立状态目录 App版本');
+const [server, bundle, stateDirectory] = [serverArg, bundleArg, stateDirectoryArg].map(p => path.resolve(p));
 fs.mkdirSync(stateDirectory, { recursive: true });
 const zip = fs.readFileSync(bundle);
 const bundleHash = createHash('sha256').update(zip).digest('hex');
@@ -45,7 +46,7 @@ function request(port, url, method = 'GET', body) {
   });
 }
 const child = spawn(server, ['--standalone', '--subclient_type', 'hub', '--override_ide_name', 'antigravity',
-  '--override_ide_version', '2.24.0', '--https_server_port', '0', '--csrf_token', 'native-bundle-check',
+  '--override_ide_version', appVersion, '--https_server_port', '0', '--csrf_token', 'native-bundle-check',
   '--app_data_dir', 'antigravity', '--web_bundle_path', expanded, '--exit_on_stdin_close'], {
   cwd: stateDirectory, windowsHide: true, stdio: ['pipe', 'pipe', 'pipe'],
   env: { ...process.env, USERPROFILE: stateDirectory, HOME: stateDirectory, APPDATA: stateDirectory,
@@ -86,7 +87,7 @@ try {
   }
   const settings = await request(port, '/exa.language_server_pb.LanguageServerService/GetServerConfiguration', 'POST', '{}');
   assert.equal(settings.status, 200, '本机配置 RPC 未正常工作：' + settings.bytes.toString().slice(0, 300));
-  console.log(JSON.stringify({ nativeBundle: 'passed', staticResources: entries.size - 1, resourceTypes, mainBytes: main.bytes.length,
+  console.log(JSON.stringify({ nativeBundle: 'passed', appVersion, staticResources: entries.size - 1, resourceTypes, mainBytes: main.bytes.length,
     sha256: createHash('sha256').update(main.bytes).digest('hex'), configurationRpc: settings.status }, null, 2));
 } finally {
   agent.destroy();

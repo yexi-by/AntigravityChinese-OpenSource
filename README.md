@@ -2,9 +2,9 @@
 
 Windows x64 的离线、一次性汉化工具，目标是独立的 **Antigravity App**。使用内置简体中文译文，支持自动检测安装、手动选择目录、备份和恢复。
 
-当前发布为 **v0.1.5 公开测试版**。从 [Releases](https://github.com/yexi-by/AntigravityChinese-OpenSource/releases) 下载 `AntigravityChinese-win-x64.zip`，解压后使用；旁边的 `SHA256SUMS.txt` 用于核对下载文件和包内程序的 SHA-256。已使用 v0.1.4 的用户请重新应用本版，修复文件图标及其他子目录资源加载失败的问题。
+当前发布为 **v0.1.6 公开测试版**。从 [Releases](https://github.com/yexi-by/AntigravityChinese-OpenSource/releases) 下载 `AntigravityChinese-win-x64.zip`，解压后使用；旁边的 `SHA256SUMS.txt` 用于核对下载文件和包内程序的 SHA-256。本版补充 2.25.0 的插件账户、语音入口和侧边面板等文案，沿用子目录资源加载修复。
 
-当前以 Antigravity App **2.24.0** 为验证基线，内置 3,853 条译文。工具每次分析实际安装资源，**没有版本白名单**：已知且语境适用的文案显示中文，新增或无法确认的内容保留原文。官方更新覆盖汉化后，退出 App，再手动运行一次本工具。
+当前以 Antigravity App **2.25.0** 为验证基线，内置 4,154 条译文。工具每次分析实际安装资源，**没有版本白名单**：已知且语境适用的文案显示中文，新增或无法确认的内容保留原文。官方更新覆盖汉化后，退出 App，再手动运行一次本工具。
 
 ## 使用
 
