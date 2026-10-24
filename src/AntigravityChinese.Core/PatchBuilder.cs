@@ -15,7 +15,10 @@ public static class PatchBuilder
         Directory.CreateDirectory(directory);
         if (Directory.EnumerateFileSystemEntries(directory).Any()) throw new IOException("请使用空的准备目录。");
         var entries = package.Entries.ToDictionary(e => e.Key, StringComparer.Ordinal);
-        foreach (var entry in entries.Values) ProtectedTerms.Validate(entry.Source, entry.Translation);
+        foreach (var entry in entries.Values)
+            if (!JavaScriptUi.Slots().Matches(entry.Source).Select(m => m.Value).SequenceEqual(
+                    JavaScriptUi.Slots().Matches(entry.Translation).Select(m => m.Value)))
+                throw new InvalidDataException("译文包的动态占位符发生变化。");
         var matcher = new TranslationMatcher(package);
         var expectedAsar = AsarArchive.FileHash(installed.Asar); var expectedExe = AsarArchive.FileHash(installed.Executable);
         var active = PatchInstaller.FindApplied(installed, dataRoot);

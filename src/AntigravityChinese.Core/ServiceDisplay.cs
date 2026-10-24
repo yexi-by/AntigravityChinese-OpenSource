@@ -32,7 +32,6 @@ internal static class ServiceDisplay
         var rules = translations.Select(pair =>
         {
             var definition = definitions[pair.Key];
-            ProtectedTerms.Validate(pair.Key, pair.Value);
             if (!JavaScriptUi.Slots().Matches(pair.Key).Select(m => m.Value).SequenceEqual(JavaScriptUi.Slots().Matches(pair.Value).Select(m => m.Value)))
                 throw new InvalidDataException("服务界面文案的动态占位符发生变化。");
             var pattern = new StringBuilder("^"); var position = 0;

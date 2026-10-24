@@ -47,8 +47,8 @@ if ([IO.Path]::GetFullPath($configSource) -ne [IO.Path]::GetFullPath($activeConf
     Copy-Item -LiteralPath $configSource -Destination $activeConfig -Force
 }
 $system = Join-Path $runtime 'prompts/translation/system.md'
-$style = Get-Content -LiteralPath (Join-Path $project 'translation/style-guide.md') -Raw
-$base = Get-Content -LiteralPath $system -Raw
-[IO.File]::WriteAllText($system, $base + "`n`n" + $style, [Text.UTF8Encoding]::new($false))
+Copy-Item -LiteralPath (Join-Path $project 'translation/style-guide.md') -Destination $system -Force
+Copy-Item -LiteralPath (Join-Path $project 'translation/response-rules.md') -Destination (Join-Path $runtime 'prompts/translation/rules/plain.md') -Force
+Copy-Item -LiteralPath (Join-Path $project 'translation/response-example.md') -Destination (Join-Path $runtime 'prompts/translation/examples/plain.md') -Force
 Write-Output 'ATT 已准备；配置只保存在 .local/att/config.toml，不进入仓库或发布包。'
 & (Join-Path $runtime 'att.exe') --version

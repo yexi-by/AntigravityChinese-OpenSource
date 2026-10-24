@@ -12,6 +12,8 @@
 ./scripts/maintain.ps1 -Mode Update
 ```
 
+`translation/style-guide.md` 是本项目的完整翻译提示词，准备 ATT 时会替换通用提示词及响应示例。模型、思考等级和并发只配置在 `.local/att/config.toml`。占位符规则及硬性校验仅保护动态变量；品牌与技术术语直接提供给模型，由审校确认保留，不以宽泛的词汇正则阻断正常译法。更换模型不会自动重译已有译文，全量重译需明确清除现有项目的译文状态，再调用 Translate；不要回填旧包。
+
 集中审校后，通过 ATT Manual 修订，再写回并导入：
 
 ```powershell

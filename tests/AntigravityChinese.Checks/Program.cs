@@ -59,7 +59,13 @@ static void CheckJavaScript()
     Assert(root.GetProperty("view").GetProperty("children")[0].GetString() == "已使用 1 tokens", "动态文案改变。");
     var template = texts.Single(t => t.Shape == "template"); map[template.Key] = "已使用 tokens";
     Reject(() => JavaScriptUi.Apply(code, texts, map));
-    Reject(() => ProtectedTerms.Validate("Refresh GitHub token", "刷新 GitHub 令牌"));
+    const string termsCode = "const A={createElement:(tag,props,...children)=>({children})};console.log(JSON.stringify(A.createElement('div',null,'Alt text','Read URLs','Close all windows')));";
+    var termTexts = JavaScriptUi.Extract(termsCode, "web/main.js").SelectMany(g => g.Texts).ToList();
+    var labels = new Dictionary<string, string> { ["Alt text"] = "替代文本", ["Read URLs"] = "读取 URL", ["Close all windows"] = "关闭所有窗口" };
+    var termMap = termTexts.ToDictionary(t => t.Key, t => labels[t.Source]);
+    using var termsResult = JsonDocument.Parse(Node(JavaScriptUi.Apply(termsCode, termTexts, termMap)));
+    Assert(termsResult.RootElement.GetProperty("children").EnumerateArray().Select(t => t.GetString()).SequenceEqual(labels.Values),
+        "普通词义或英文复数被误当成品牌、快捷键而阻断正常汉化。");
 }
 static void CheckStableIdentity()
 {

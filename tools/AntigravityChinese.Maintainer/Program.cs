@@ -24,8 +24,8 @@ try
     {
         var directory = Option("--translation", Path.GetFullPath("translation")); Directory.CreateDirectory(directory);
         File.WriteAllText(Path.Combine(directory, "placeholders.toml"),
-            "# 由维护工具根据实际安装器的保护规则生成。\n[[rule]]\norder = 'reorder_within_slot'\npattern = '''" + ProtectedTerms.Pattern + "'''\n\n[[rule]]\norder = 'preserve'\npattern = '⟪AGC[0-9]+⟫'\n");
-        Console.WriteLine("已生成品牌、专业名称和动态表达式保护规则。"); return 0;
+            "# 仅保护扫描器提取的动态变量；品牌与技术术语直接交给模型理解。\n[[rule]]\norder = 'preserve'\npattern = '⟪AGC[0-9]+⟫'\n");
+        Console.WriteLine("已生成动态变量保护规则。"); return 0;
     }
     if (command is "prepare" or "apply" or "restore")
     {

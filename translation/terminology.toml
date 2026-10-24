@@ -41,3 +41,25 @@ translation = '访达'
 term = 'Worktree'
 translation = '工作树'
 triggers = ['Worktree', 'worktree', 'Worktrees', 'worktrees']
+
+[[term]]
+term = 'Sandbox'
+translation = '沙盒'
+triggers = ['Sandbox', 'sandbox', 'Sandboxed', 'sandboxed']
+
+[[term]]
+term = 'MCP Server'
+translation = 'MCP 服务器'
+triggers = ['MCP Server', 'MCP server', 'MCP Servers', 'MCP servers']
+
+[[term]]
+term = 'Queue Message'
+translation = '排队发送'
+
+[[term]]
+term = 'Request Review'
+translation = '请求审核'
+
+[[term]]
+term = 'Require Review'
+translation = '需要审核'

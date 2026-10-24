@@ -96,7 +96,6 @@ public static class AttProject
                 var prefix = new string(unit.Source.TakeWhile(char.IsWhiteSpace).ToArray());
                 var suffix = new string(unit.Source.Reverse().TakeWhile(char.IsWhiteSpace).Reverse().ToArray());
                 text = prefix + text.Trim() + suffix;
-                ProtectedTerms.Validate(unit.Source, text);
                 if (!JavaScriptUi.Slots().Matches(unit.Source).Select(m => m.Value).SequenceEqual(
                         JavaScriptUi.Slots().Matches(text).Select(m => m.Value)))
                     throw new InvalidDataException($"动态占位符发生变化：{group.Id}/{unit.Id}");

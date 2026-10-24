@@ -744,14 +744,12 @@ public static partial class JavaScriptUi
                     .DistinctBy(t => t.Source).ToDictionary(t => t.Source, t => translations[t.Key]));
             if (text.Shape == "screen-label")
             {
-                ProtectedTerms.Validate(text.Source, translations[text.Key]);
                 return ",label:" + Quote(translations[text.Key]);
             }
             if (text.Shape is "lookup" or "children")
             {
                 var choices = texts.Where(t => t.Start == text.Start && t.End == text.End && t.Shape == text.Shape && translations.ContainsKey(t.Key))
                     .DistinctBy(t => t.Source).ToArray();
-                foreach (var choice in choices) ProtectedTerms.Validate(choice.Source, translations[choice.Key]);
                 // 在显示调用处转换值；生产它的配置、标识符和业务比较保持原样，表达式只求值一次。
                 var body = string.Join("", choices.Select(t => $"value==={Quote(t.Source)}?{Quote(translations[t.Key])}:")) + "value";
                 return text.Shape == "children" ? $"((values)=>{{const value=values.join('');return {body};}})([{code[text.Start..text.End]}])" :
@@ -762,7 +760,6 @@ public static partial class JavaScriptUi
             // 保持表达式原有求值顺序，避免翻译改变函数调用等副作用。
             if (!expected.SequenceEqual(Slots().Matches(translation).Select(m => m.Value)))
                 throw new InvalidDataException($"动态内容的数量或顺序发生变化：{text.File}");
-            ProtectedTerms.Validate(text.Source, translation);
             if (text.Shape == "string") return Quote(translation);
             var output = new StringBuilder("`"); var position = 0;
             foreach (Match slot in Slots().Matches(translation))
