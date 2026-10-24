@@ -14,6 +14,7 @@ var checks = new (string Name, Action Run)[]
     ("服务配额文案显示中文，保留数据、型号与未知句子", CheckServiceDisplay),
     ("项目默认文案、菜单引用与空状态完整汉化，保留项目名称和事件", CheckProjectDisplay),
     ("设置选项与说明只转换最终显示，保留选中映射和权限回调", CheckSettingOptions),
+    ("截图漏翻的侧栏、缓存文案、对比度和系统命令说明完整显示中文", CheckMissingUi),
     ("未知版本安装、重复汉化和恢复保持资源完整", CheckInstall),
     ("写入失败回滚，更新后拒绝旧备份覆盖", CheckRecovery),
     ("原生加载适配绑定本机服务并保留 WSL 行为", CheckNativeHook)
@@ -190,6 +191,7 @@ static void CheckServiceDisplay()
         ["Weekly Limit Remaining"] = "本周剩余额度", ["Five Hour Limit Remaining"] = "5 小时剩余额度", ["⟪AGC0⟫ Weekly Limit"] = "⟪AGC0⟫ 每周额度",
         ["You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫."] = "你已使用部分每周额度，将在 ⟪AGC0⟫后完全恢复。",
         ["You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits."] = "升级至 ⟪AGC0⟫ 套餐可获得更高的使用额度。",
+        ["You can upgrade to a higher ⟪AGC0⟫ plan to receive the highest rate limits."] = "升级至更高等级的 ⟪AGC0⟫ 套餐可获得最高的使用额度。",
         ["⟪AGC0⟫ day"] = "⟪AGC0⟫ 天", ["⟪AGC0⟫ days"] = "⟪AGC0⟫ 天", ["⟪AGC0⟫ hour"] = "⟪AGC0⟫ 小时", ["⟪AGC0⟫ hours"] = "⟪AGC0⟫ 小时",
         ["⟪AGC0⟫ minute"] = "⟪AGC0⟫ 分钟", ["⟪AGC0⟫ minutes"] = "⟪AGC0⟫ 分钟", ["⟪AGC0⟫ second"] = "⟪AGC0⟫ 秒", ["⟪AGC0⟫ seconds"] = "⟪AGC0⟫ 秒"
     };
@@ -321,6 +323,65 @@ static void CheckUiConfiguration()
     using var options = JsonDocument.Parse(Node(JavaScriptUi.Apply(optionCode, optionTexts, optionMap)));
     Assert(options.RootElement.GetProperty("choice").GetInt32() == 1 && options.RootElement.GetProperty("label").GetString() == "始终询问", "选项显示格式化改变了内部策略值。");
     Assert(options.RootElement.GetProperty("defaultInput").GetString() == "想问什么都可以，输入 / 执行操作" && options.RootElement.GetProperty("customInput").GetString() == "Ask anything", "默认占位提示与用户自定义内容未分离。");
+}
+static void CheckMissingUi()
+{
+    const string code = """
+    const UI={useMemo:f=>f(),createElement:(tag,props,...children)=>({props,children})};
+    const screens=[{screen:'General'},{screen:'App',label:'Application'}];
+    const names=new Map([...screens.filter(s=>s.label!==undefined).map(s=>[s.screen,s.label]),['Feedback','Give Feedback']]);
+    const sections=new Map([['General',{sections:[{title:'Execution',settings:['queueStrategy']}]}]]);
+    const headers=sections.get('General').sections.map(section=>UI.createElement('heading',{title:section.title},section.settings.length));
+    let calls=0;function Environment(selected){const label=UI.useMemo(()=>{calls++;switch(selected.type){case 'local':return 'Local';default:return selected.name;}},[selected]);
+      const description=selected.node?UI.createElement('span',null,''): 'Controls the actions the agent can take.';
+      return UI.createElement('div',{description},label);}
+    const resolver=n=>{switch(n){case 2:return 'Strong';default:return 'Default'}};
+    function Toggle({options,onSelect,resolveOptionToLabel}){const rows=UI.useMemo(()=>options.map(value=>{const label=resolveOptionToLabel?resolveOptionToLabel(value):String(value);return{value:String(value),label:label};}),[options,resolveOptionToLabel]);return UI.createElement('button',{onClick:()=>onSelect(options.find(value=>String(value)===rows[0].value))},rows[0].label);}
+    const config={settingKey:'contrast',label:'Contrast',options:[2,1],resolveOptionToString:resolver};let selected=0;
+    const contrast=Toggle({options:config.options,onSelect:value=>selected=value,resolveOptionToLabel:config.resolveOptionToString});contrast.props.onClick();
+    const schema={ContextScopeItemSchema:{}};const create=(type,value)=>value;
+    class Item{constructor(scope,extra,unused,description){this.scope=scope;this.description=description;}}
+    function Command(entry){return new Item(create(schema.ContextScopeItemSchema,{scopeItem:{case:'slashCommand',value:{info:entry.info}}}),[],undefined,entry.description);}
+    const system={info:{name:'goal',type:1},description:'Run until the specified goal is completely finished.'};
+    const custom={info:{name:'my-goal',type:2},description:system.description};
+    const builtin=Command(system),user=Command(custom);
+    const local=Environment({type:'local'}),named=Environment({type:'custom',name:'Local'});
+    const formatEnvironment=(environment,available=[])=>{switch(environment.type){case 'sot':return 'Local';case 'copy':return 'New Worktree';case 'environment':return environment.name;default:return 'Unknown Environment';}};
+    function EnvironmentSelector(environment){return UI.createElement('span',null,formatEnvironment(environment,[]));}
+    const builtinEnvironment=EnvironmentSelector({type:'sot'}),customEnvironment=EnvironmentSelector({type:'environment',name:'Local'});
+    const worktree=UI.createElement('selector',{disabledWorktreeSubtitle:'Worktrees are available for Git repositories'});
+    function Plan(state){return UI.createElement('span',null,state.userTier.upgradeSubscriptionText);}
+    const account={userTier:{upgradeSubscriptionText:'You can upgrade to a higher Google AI Ultra plan to receive the highest rate limits.'}};
+    console.log(JSON.stringify({screens,names:[...names],sections:[...sections],headers,sectionLookup:!!sections.get('General').sections.find(section=>section.title==='Execution'),local,named,calls,builtinEnvironment,customEnvironment,rawEnvironment:formatEnvironment({type:'sot'}),contrast,selected,rawResolver:resolver(2),builtin,user,system,worktree,account,plan:Plan(account)}));
+    """;
+    var translations = new Dictionary<string, string>
+    {
+        ["General"] = "常规", ["Application"] = "应用", ["Give Feedback"] = "反馈意见", ["Execution"] = "执行",
+        ["Local"] = "本地", ["Controls the actions the agent can take."] = "控制智能体可以执行的操作。",
+        ["Contrast"] = "对比度", ["Strong"] = "增强", ["Default"] = "默认",
+        ["Run until the specified goal is completely finished."] = "持续执行，直到指定目标全部完成。",
+        ["Worktrees are available for Git repositories"] = "Git 仓库支持使用工作树",
+        ["You can upgrade to a higher ⟪AGC0⟫ plan to receive the highest rate limits."] = "升级至更高等级的 ⟪AGC0⟫ 套餐可获得最高使用额度。"
+    };
+    var texts = JavaScriptUi.Extract(code, "web/main.js").SelectMany(g => g.Texts).ToList();
+    var map = texts.Where(t => translations.ContainsKey(t.Source)).DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => translations[t.Source]);
+    using var parsed = JsonDocument.Parse(Node(JavaScriptUi.Apply(code, texts, map))); var result = parsed.RootElement;
+    Assert(result.GetProperty("screens")[0].GetProperty("screen").GetString() == "General" &&
+        result.GetProperty("names")[0][1].GetString() == "常规" && result.GetProperty("names")[2][1].GetString() == "反馈意见", "展开映射后的侧栏漏翻，或路由身份被改动。");
+    Assert(result.GetProperty("sections")[0][0].GetString() == "General" && result.GetProperty("sections")[0][1].GetProperty("sections")[0].GetProperty("title").GetString() == "Execution" &&
+        result.GetProperty("headers")[0].GetProperty("props").GetProperty("title").GetString() == "执行" && result.GetProperty("sectionLookup").GetBoolean(), "设置分组标题未汉化，或分组查找身份被修改。");
+    Assert(result.GetProperty("local").GetProperty("children")[0].GetString() == "本地" &&
+        result.GetProperty("local").GetProperty("props").GetProperty("description").GetString() == "控制智能体可以执行的操作。" &&
+        result.GetProperty("named").GetProperty("children")[0].GetString() == "Local" && result.GetProperty("calls").GetInt32() == 2, "缓存分支文案漏翻，或用户环境名称、求值次数被改动。");
+    Assert(result.GetProperty("contrast").GetProperty("children")[0].GetString() == "增强" && result.GetProperty("selected").GetInt32() == 2 && result.GetProperty("rawResolver").GetString() == "Strong", "对比度选项漏翻，或内部选项映射被改动。");
+    Assert(result.GetProperty("builtinEnvironment").GetProperty("children")[0].GetString() == "本地" &&
+        result.GetProperty("customEnvironment").GetProperty("children")[0].GetString() == "Local" && result.GetProperty("rawEnvironment").GetString() == "Local", "环境格式化路径漏翻，或自定义名称、原始格式化函数被修改。");
+    Assert(result.GetProperty("builtin").GetProperty("description").GetString() == translations["Run until the specified goal is completely finished."] &&
+        result.GetProperty("user").GetProperty("description").GetString() == result.GetProperty("system").GetProperty("description").GetString() &&
+        result.GetProperty("builtin").GetProperty("scope").GetProperty("scopeItem").GetProperty("value").GetProperty("info").GetProperty("name").GetString() == "goal", "系统命令说明未汉化，或自定义技能内容、命令身份被改动。");
+    Assert(result.GetProperty("worktree").GetProperty("props").GetProperty("disabledWorktreeSubtitle").GetString() == "Git 仓库支持使用工作树" &&
+        result.GetProperty("plan").GetProperty("children")[0].GetString() == "升级至更高等级的 Google AI Ultra 套餐可获得最高使用额度。" &&
+        result.GetProperty("account").GetProperty("userTier").GetProperty("upgradeSubscriptionText").GetString()!.StartsWith("You can upgrade"), "工作树提示或新套餐说明未汉化，或接口原始数据被改动。");
 }
 static void CheckNativeHook()
 {

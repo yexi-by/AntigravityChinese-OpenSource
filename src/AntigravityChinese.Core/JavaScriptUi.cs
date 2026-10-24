@@ -15,7 +15,7 @@ public static partial class JavaScriptUi
         "checkboxLabel", "caption", "alt", "tooltip", "notificationTitle", "warningText", "aria-label",
         "buttonText", "submitText", "cancelText", "confirmText", "emptyMessage", "header", "primaryText",
         "secondaryText", "defaultMessage", "emptyText", "loadingText", "errorMessage", "text", "tooltipText",
-        "displayText", "subtitle", "subTitle", "primaryCtaText", "secondaryCtaText", "ariaLabel"
+        "displayText", "subtitle", "subTitle", "primaryCtaText", "secondaryCtaText", "ariaLabel", "disabledWorktreeSubtitle"
     };
     private static readonly JsonSerializerOptions Strings = new() { Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
     private static Node Parse(string code)
@@ -190,28 +190,68 @@ public static partial class JavaScriptUi
         }
         // 屏幕注册表的 screen 是路由身份，label 是显示值。只识别确实被映射为 screen → label 的表。
         var screenEntries = new HashSet<ObjectExpression>();
+        var screenLabels = new List<Node>();
+        var settingSectionSources = new HashSet<string>(StringComparer.Ordinal);
         foreach (var (node, function) in nodes)
         {
-            if (node is not NewExpression { Callee: Identifier { Name: "Map" } } map || map.Arguments.Count != 1 ||
-                map.Arguments[0] is not CallExpression { Callee: MemberExpression { Property: Identifier { Name: "map" }, Object: Expression source } } select ||
+            if (node is not NewExpression { Callee: Identifier { Name: "Map" } } map || map.Arguments.Count != 1) continue;
+            var items = map.Arguments[0] is ArrayExpression initializer ? initializer.Elements.OfType<Node>().ToArray() : [map.Arguments[0]];
+            var mappedScreens = false;
+            foreach (var itemExpression in items)
+            {
+                var expression = itemExpression is SpreadElement spread ? spread.Argument : itemExpression;
+                if (expression is not CallExpression { Callee: MemberExpression { Property: Identifier { Name: "map" }, Object: Expression source } } select ||
                 select.Arguments.Count != 1 || select.Arguments[0] is not ArrowFunctionExpression { Body: ArrayExpression pair } callback ||
                 callback.Params.Count != 1 || callback.Params[0] is not Identifier item || pair.Elements.Count != 2 ||
                 pair.Elements[0] is not MemberExpression { Object: Identifier keyObject, Property: Identifier { Name: "screen" } } ||
                 pair.Elements[1] is not MemberExpression { Object: Identifier labelObject, Property: Identifier { Name: "label" } } ||
                 keyObject.Name != item.Name || labelObject.Name != item.Name) continue;
-            while (source is CallExpression { Callee: MemberExpression { Object: Expression collection, Property: Identifier { Name: "filter" } } }) source = collection;
-            if (source is not Identifier registry || Owner(function, registry.Name) is not { } scope ||
+                while (source is CallExpression { Callee: MemberExpression { Object: Expression collection, Property: Identifier { Name: "filter" } } }) source = collection;
+                if (source is not Identifier registry || Owner(function, registry.Name) is not { } scope ||
                 !declarations.TryGetValue((scope, registry.Name), out var value) || value is not ArrayExpression array ||
                 array.Elements.Any(e => e is not ObjectExpression)) continue;
-            foreach (var entry in array.Elements.OfType<ObjectExpression>())
-                if (entry.Properties.All(p => p is ObjectProperty { Computed: false }) && entry.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "screen" && p.Value is StringLiteral))
-                    screenEntries.Add(entry);
+                mappedScreens = true;
+                foreach (var entry in array.Elements.OfType<ObjectExpression>())
+                    if (entry.Properties.All(p => p is ObjectProperty { Computed: false }) && entry.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "screen" && p.Value is StringLiteral))
+                        screenEntries.Add(entry);
+            }
+            foreach (var pair in items.OfType<ArrayExpression>().Where(p => p.Elements.Count == 2 && p.Elements[0] is StringLiteral))
+            {
+                if (mappedScreens && pair.Elements[1] is StringLiteral label) screenLabels.Add(label);
+                // 分组 title 也用于查找和筛选；这里只登记原文，翻译留到显示消费者。
+                if (pair.Elements[1] is not ObjectExpression page ||
+                    page.Properties.OfType<ObjectProperty>().FirstOrDefault(p => PropertyName(p) == "sections")?.Value is not ArrayExpression sections) continue;
+                foreach (var section in sections.Elements.OfType<ObjectExpression>())
+                    if (section.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "title" && p.Value is StringLiteral) &&
+                        section.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "settings" && p.Value is ArrayExpression))
+                        settingSectionSources.Add(((StringLiteral)section.Properties.OfType<ObjectProperty>().First(p => PropertyName(p) == "title").Value).Value);
+            }
         }
 
         foreach (var (node, function) in nodes)
             if (node is CallExpression { Callee: MemberExpression { Property: Identifier { Name: "map" }, Object: Expression collection } } call &&
                 call.Arguments.Count > 0 && call.Arguments[0] is ArrowFunctionExpression callback && callback.Params.Count > 0 && callback.Params[0] is Identifier item)
                 callbacks[(callback.Start, item.Name)] = (collection, function);
+
+        var settingSectionRows = new HashSet<(int Function, string Name)>();
+        foreach (var binding in callbacks)
+        {
+            Expression source = binding.Value.Collection;
+            while (source is CallExpression { Callee: MemberExpression { Object: Expression collection, Property: Identifier { Name: "filter" } } }) source = collection;
+            if (source is not MemberExpression { Computed: false, Property: Identifier { Name: "sections" } }) continue;
+            var callback = nodes.Select(p => p.Node).First(n => n.Start == binding.Key.Function && IsFunction(n));
+            if (Walk(callback).Select(p => p.Node).OfType<MemberExpression>().Any(m => !m.Computed &&
+                m.Object is Identifier item && item.Name == binding.Key.Name && m.Property is Identifier { Name: "settings" })) settingSectionRows.Add(binding.Key);
+        }
+        foreach (var producer in nodes.Select(p => p.Node).Where(IsFunction))
+        foreach (var parameter in Parameters(producer).OfType<ObjectPattern>())
+        {
+            var fields = parameter.Properties.OfType<AssignmentProperty>().Where(p => !p.Computed && p.Key is Identifier && p.Value is Identifier)
+                .ToDictionary(p => ((Identifier)p.Key).Name, p => ((Identifier)p.Value).Name);
+            if (fields.ContainsKey("sectionTitle") && fields.TryGetValue("screen", out var screen) &&
+                Walk(producer).Select(p => p.Node).OfType<MemberExpression>().Any(m => !m.Computed && m.Property is Identifier { Name: "sections" }))
+                settingSectionRows.Add((producer.Start, screen));
+        }
 
         List<Expression>? Expand(Expression expression, int function, HashSet<(int, string)> visiting)
         {
@@ -377,7 +417,7 @@ public static partial class JavaScriptUi
                     if (PropertyName(property) is "displayName" or "shortDisplayName" or "label") CollectOption((Expression)property.Value, scope, optionLabel);
                     else if (PropertyName(property) is "shortDescription" or "longDescription" or "description") CollectOption((Expression)property.Value, scope, optionDescription);
             }
-            if (!keys.Contains("options") || !keys.Contains("onSelect") && !keys.Contains("isProviderSetting")) continue;
+            if (!keys.Contains("options") || !keys.Contains("onSelect") && !keys.Contains("isProviderSetting") && !keys.Contains("settingKey")) continue;
             foreach (var property in properties)
             {
                 if (ResolverRole(PropertyName(property)) is not { } role || property.Value is not Expression resolver) continue;
@@ -445,7 +485,8 @@ public static partial class JavaScriptUi
         }
         var candidates = nodes.Select(p => p.Node).OfType<Identifier>().Where(id => displayReads.Contains(id.Start))
             .Select(id => (Function: Owner(scopes[id], id.Name), id.Name)).Where(p => p.Function is not null)
-            .Select(p => (Function: p.Function!.Value, p.Name)).Distinct().Where(key => key.Function >= 0 && writes.ContainsKey(key) && !ambiguous.Contains(key)).ToHashSet();
+            .Select(p => (Function: p.Function!.Value, p.Name)).Distinct().Where(key => key.Function >= 0 &&
+                (writes.ContainsKey(key) || fixedBindings.Contains(key) && declarations.ContainsKey(key)) && !ambiguous.Contains(key)).ToHashSet();
         var references = candidates.ToDictionary(key => key, _ => new List<int>());
         var plainAssignments = new HashSet<int>();
         var pendingReferences = new Stack<Node>(); pendingReferences.Push(tree);
@@ -462,6 +503,15 @@ public static partial class JavaScriptUi
         var displayAssignments = new List<(int Function, Expression Value)>();
         foreach (var key in candidates)
         {
+            if (fixedBindings.Contains(key) && declarations.TryGetValue(key, out var initial))
+            {
+                // 已能完整解析的文字仍在消费处合并翻译，避免提前翻译名词破坏整句匹配。
+                var resolved = Expand(initial, key.Function, []);
+                if ((resolved is null || resolved.Any(value => value is not StringLiteral)) &&
+                    references[key].All(position => position < initial.End || displayReads.Contains(position)))
+                    displayAssignments.Add((key.Function, initial));
+                continue;
+            }
             var changes = writes[key].OrderBy(c => c.Position).ToArray();
             var first = Array.FindIndex(changes, c => c.Linear && plainAssignments.Contains(c.Position) && c.Value is not null && Walk(c.Value).Any(p => p.Node is StringLiteral text && LooksLikeText(text.Value)));
             if (first < 0 || changes.Any(c => c.Closure) || changes.Skip(first).Any(c => !c.Linear || !plainAssignments.Contains(c.Position) || c.Value is null)) continue;
@@ -495,6 +545,13 @@ public static partial class JavaScriptUi
             }
             void Value(Node node, string role)
             {
+                if (node is MemberExpression { Computed: false, Object: Identifier section, Property: Identifier { Name: "title" } } &&
+                    Owner(activeFunction, section.Name) is { } sectionScope && settingSectionRows.Contains((sectionScope, section.Name)))
+                {
+                    foreach (var source in settingSectionSources.Order(StringComparer.Ordinal))
+                        if (lookupSeen.Add((node.Start, source))) texts.Add(new("", "", file, node.Start, node.End, source, "lookup", "section-title", []));
+                    return;
+                }
                 if (node is Expression option && node is Identifier or MemberExpression or CallExpression or ChainExpression &&
                     OptionRole(option, activeFunction, []) is { } optionRole && optionSources[optionRole].Count > 0)
                 {
@@ -508,8 +565,25 @@ public static partial class JavaScriptUi
                         if (serviceSeen.Add((node.Start, source))) texts.Add(new("", "", file, node.Start, node.End, source, "service", serviceRole, []));
                     return;
                 }
+                if (node is CallExpression { Callee: Identifier formatter } formatted && formatted.Arguments.Count >= 2 &&
+                    Owner(activeFunction, formatter.Name) is { } formatterScope && fixedBindings.Contains((formatterScope, formatter.Name)) &&
+                    namedFunctions.TryGetValue((formatterScope, formatter.Name), out var producer) && Parameters(producer).FirstOrDefault() is Identifier environment &&
+                    Walk(producer).Select(p => p.Node).OfType<SwitchStatement>().Any(choice =>
+                        choice.Discriminant is MemberExpression { Computed: false, Object: Identifier selected, Property: Identifier { Name: "type" } } && selected.Name == environment.Name &&
+                        choice.Cases.Any(c => c.Test is StringLiteral { Value: "sot" }) && choice.Cases.Any(c => c.Test is StringLiteral { Value: "environment" })))
+                {
+                    foreach (var source in new[] { "Local", "New Workspace", "New Worktree" })
+                        if (lookupSeen.Add((node.Start, source))) texts.Add(new("", "", file, node.Start, node.End, source, "environment-label", "children", []));
+                    return;
+                }
                 switch (node)
                 {
+                    case CallExpression memo when kind == "ui/display-local" &&
+                        memo.Callee is MemberExpression { Property: Identifier { Name: "useMemo" } } or SequenceExpression &&
+                        (memo.Callee is not SequenceExpression memoSequence || memoSequence.Expressions[^1] is MemberExpression { Property: Identifier { Name: "useMemo" } }) &&
+                        memo.Arguments.Count > 0 && IsFunction(memo.Arguments[0]):
+                        foreach (var result in FunctionResults(memo.Arguments[0])) Value(result, role);
+                        break;
                     case StringLiteral literal: Add(literal, literal.Value, "string", role); break;
                     case TemplateLiteral template:
                     {
@@ -581,15 +655,34 @@ public static partial class JavaScriptUi
             activeFunction = assignment.Function;
             Group(assignment.Value, "ui/display-local", [(assignment.Value, "children")]);
         }
+        foreach (var label in screenLabels) Group(label, "ui/setting-screen", [(label, "label")]);
 
         foreach (var (node, function) in nodes)
         {
             activeFunction = function;
             if (IsProtected(node)) continue;
+            // 只处理 ContextScopeItem 的系统斜杠命令说明，不改模型指令或自定义技能正文。
+            if (!desktop && node is NewExpression commandItem && commandItem.Arguments.Count >= 4 &&
+                commandItem.Arguments[0] is CallExpression scopeCall && scopeCall.Arguments.Count >= 2 &&
+                scopeCall.Arguments[0] is MemberExpression { Property: Identifier { Name: "ContextScopeItemSchema" } } &&
+                scopeCall.Arguments[1] is ObjectExpression scopeObject &&
+                scopeObject.Properties.OfType<ObjectProperty>().FirstOrDefault(p => PropertyName(p) == "scopeItem")?.Value is ObjectExpression scopeItem &&
+                scopeItem.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "case" && p.Value is StringLiteral { Value: "slashCommand" }) &&
+                scopeItem.Properties.OfType<ObjectProperty>().FirstOrDefault(p => PropertyName(p) == "value")?.Value is ObjectExpression scopeValue &&
+                scopeValue.Properties.OfType<ObjectProperty>().FirstOrDefault(p => PropertyName(p) == "info")?.Value is MemberExpression { Computed: false, Object: Identifier owner, Property: Identifier { Name: "info" } } &&
+                commandItem.Arguments[3] is MemberExpression { Computed: false, Object: Identifier descriptionOwner, Property: Identifier { Name: "description" } } description &&
+                owner.Name == descriptionOwner.Name)
+                FinishGroup("ui/system-command", ServiceDisplay.Sources(ServiceDisplay.CommandDescription).Select(source =>
+                    new UiText("", "", file, description.Start, description.End, source, "system-command", ServiceDisplay.CommandDescription, [])).ToList());
             if (!desktop && node is ObjectExpression configuration)
             {
                 var properties = configuration.Properties.OfType<ObjectProperty>().ToArray();
                 var keys = properties.Select(PropertyName).ToHashSet(StringComparer.Ordinal);
+                // 通用选项组件先生成 value/label 记录；只转换已确认显示解析器产生的标签和提示。
+                if (keys.Contains("value") && properties.FirstOrDefault(p => PropertyName(p) == "label")?.Value is Expression optionText &&
+                    OptionRole(optionText, function, []) is not null)
+                    Group(configuration, "ui/option-display", properties.Where(p => PropertyName(p) is "label" or "tooltip" && p.Key.Start != p.Value.Start)
+                        .Select(p => ((Node)p.Value, PropertyName(p))));
                 var command = keys.IsSupersetOf(["id", "label", "keybindings"]);
                 var setting = keys.IsSupersetOf(["isProviderSetting", "settingType", "label"]);
                 var navigation = keys.IsSupersetOf(["sidebarLabel", "searchPlaceholder"]);
@@ -738,6 +831,24 @@ public static partial class JavaScriptUi
         }
         string Render(UiText text)
         {
+            if (text.Shape == "environment-label")
+            {
+                var expression = code[text.Start..text.End];
+                var call = Walk(Parse(expression)).Select(p => p.Node).OfType<CallExpression>().First();
+                var labels = texts.Where(t => t.Start == text.Start && t.End == text.End && t.Shape == text.Shape && translations.ContainsKey(t.Key))
+                    .DistinctBy(t => t.Source).ToDictionary(t => t.Source, t => translations[t.Key]);
+                var choices = string.Join("", labels.Select(pair => $"value==={Quote(pair.Key)}?{Quote(pair.Value)}:")) + "value";
+                var arguments = string.Join(',', call.Arguments.Select(a => expression[a.Start..a.End]));
+                return $"((format,...args)=>{{const value=format(...args);return args[0]?.type==='sot'||args[0]?.type==='copy'?({choices}):value;}})({expression[call.Callee.Start..call.Callee.End]},{arguments})";
+            }
+            if (text.Shape == "system-command")
+            {
+                var expression = code[text.Start..text.End];
+                var owner = (Identifier)Walk(Parse(expression)).Select(p => p.Node).OfType<MemberExpression>().Single().Object;
+                var descriptions = texts.Where(t => t.Start == text.Start && t.End == text.End && t.Shape == text.Shape && translations.ContainsKey(t.Key))
+                    .DistinctBy(t => t.Source).ToDictionary(t => t.Source, t => translations[t.Key]);
+                return $"((command)=>command.info?.type===1?{ServiceDisplay.Render("command.description", descriptions)}:command.description)({owner.Name})";
+            }
             if (text.Shape == "service")
                 return ServiceDisplay.Render(code[text.Start..text.End], texts.Where(t =>
                     t.Start == text.Start && t.End == text.End && t.Shape == "service" && translations.ContainsKey(t.Key))

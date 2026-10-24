@@ -4,13 +4,14 @@ using System.Text.RegularExpressions;
 
 namespace AntigravityChinese.Core;
 
-// 服务下发的已知界面文案；仅用于经过语法树确认的套餐、配额显示消费者。
+// 服务下发的已知界面文案；仅用于经过语法树确认的套餐、配额和系统命令显示消费者。
 internal static class ServiceDisplay
 {
     public const string QuotaGroup = "service/quota-group";
     public const string QuotaLabel = "service/quota-label";
     public const string QuotaDescription = "service/quota-description";
     public const string PlanDescription = "service/plan-description";
+    public const string CommandDescription = "service/command-description";
     private const string Name = @"[^\r\n]{1,160}";
     private const string Duration = @"[0-9]+ (?:days?|hours?|minutes?|seconds?)(?:,? (?:and )?[0-9]+ (?:days?|hours?|minutes?|seconds?)){0,3}";
     private sealed record Rule(string Source, string? Slot = null, bool IsDuration = false);
@@ -22,7 +23,18 @@ internal static class ServiceDisplay
         [QuotaLabel] = [new("Weekly Limit Remaining"), new("Five Hour Limit Remaining"), new("⟪AGC0⟫ Weekly Limit", Name)],
         [QuotaDescription] = [new("Models within this group: ⟪AGC0⟫", @"[^\r\n]{1,2048}"),
             new("You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫.", Duration, true), .. Units],
-        [PlanDescription] = [new("You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.", Name)]
+        [PlanDescription] = [new("You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.", Name),
+            new("You can upgrade to a higher ⟪AGC0⟫ plan to receive the highest rate limits.", Name)],
+        [CommandDescription] = [.. new[] {
+            "Run until the specified goal is completely finished.",
+            "Compact the conversation now (summarize history to free up the context window).",
+            "Run an instruction on a recurring schedule or as a one-time timer.",
+            "Invoke a browser agent for web tasks.",
+            "Plan carefully before executing a task.",
+            "Interview me to align on a plan.",
+            "Invoke a team of agents to autonomously tackle large projects.",
+            "Reflect on recent successes or corrections to capture reusable skills or rules."
+        }.Select(source => new Rule(source))]
     };
     public static IEnumerable<string> Sources(string role) => Rules[role].Select(r => r.Source);
 
