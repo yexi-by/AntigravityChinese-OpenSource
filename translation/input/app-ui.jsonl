@@ -2613,3 +2613,113 @@
 {"id":"\u754C\u9762-02625","kind":"ui/component","units":[{"id":"text-1","text":"New Project"}]}
 {"id":"\u754C\u9762-02626","kind":"ui/span","units":[{"id":"text-1","text":"Language server release channel"}]}
 {"id":"\u754C\u9762-02627","kind":"ui/span","units":[{"id":"text-1","text":"Web App Version | Language Server Version"}]}
+{"id":"\u754C\u9762-02628","kind":"ui/display-local","units":[{"id":"text-1","text":"No apps found for \u0022\u27EAAGC0\u27EB\u0022."},{"id":"text-2","text":"No apps available."},{"id":"text-3","text":"No apps connected yet. Connect one from Marketplace."}]}
+{"id":"\u754C\u9762-02629","kind":"ui/component","units":[{"id":"text-1","text":"Copied"},{"id":"text-2","text":"Copy \u27EAAGC0\u27EB"},{"id":"text-3","text":"Copied"},{"id":"text-4","text":"Copy \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02630","kind":"ui/h3","units":[{"id":"text-1","text":"Built-in Browser Requires Isolated Web App (IWA)"}]}
+{"id":"\u754C\u9762-02631","kind":"ui/p","units":[{"id":"text-1","text":"Install and launch the Jetski Isolated Web App in three steps to embed pages with full browser capabilities."}]}
+{"id":"\u754C\u9762-02632","kind":"ui/button","units":[{"id":"text-1","text":"Collapse IWA installation steps"},{"id":"text-2","text":"Expand IWA installation steps"}]}
+{"id":"\u754C\u9762-02633","kind":"ui/button","units":[{"id":"text-1","text":"Dismiss IWA installation banner"}]}
+{"id":"\u754C\u9762-02634","kind":"ui/span","units":[{"id":"text-1","text":"Enable Chrome IWA flags and relaunch Chrome:"}]}
+{"id":"\u754C\u9762-02635","kind":"ui/span","units":[{"id":"text-1","text":"Download the signed bundle, open"},{"id":"text-2","text":", and click"}]}
+{"id":"\u754C\u9762-02636","kind":"ui/span","units":[{"id":"text-1","text":"Install \u2192 Signed Bundle \u2192 Install"}]}
+{"id":"\u754C\u9762-02637","kind":"ui/span","units":[{"id":"text-1","text":"Download Jetski IWA (jetski-shell.swbn)"}]}
+{"id":"\u754C\u9762-02638","kind":"ui/span","units":[{"id":"text-1","text":"Launch Jetski in its installed Isolated Web App window:"}]}
+{"id":"\u754C\u9762-02639","kind":"ui/span","units":[{"id":"text-1","text":"Open in Jetski IWA"}]}
+{"id":"\u754C\u9762-02640","kind":"ui/menu","units":[{"id":"text-1","text":"Open Link in New Tab"}]}
+{"id":"\u754C\u9762-02641","kind":"ui/menu","units":[{"id":"text-1","text":"Open Link in External Browser"}]}
+{"id":"\u754C\u9762-02642","kind":"ui/menu","units":[{"id":"text-1","text":"Copy Link Address"}]}
+{"id":"\u754C\u9762-02643","kind":"ui/menu","units":[{"id":"text-1","text":"Open Image in New Tab"}]}
+{"id":"\u754C\u9762-02644","kind":"ui/menu","units":[{"id":"text-1","text":"Copy Image Address"}]}
+{"id":"\u754C\u9762-02645","kind":"ui/menu","units":[{"id":"text-1","text":"Back"}]}
+{"id":"\u754C\u9762-02646","kind":"ui/menu","units":[{"id":"text-1","text":"Forward"}]}
+{"id":"\u754C\u9762-02647","kind":"ui/menu","units":[{"id":"text-1","text":"Reload"}]}
+{"id":"\u754C\u9762-02648","kind":"ui/menu","units":[{"id":"text-1","text":"Open in External Browser"}]}
+{"id":"\u754C\u9762-02649","kind":"ui/menu","units":[{"id":"text-1","text":"New Remote Project"},{"id":"text-2","text":"Create a project whose conversations run remotely."}]}
+{"id":"\u754C\u9762-02650","kind":"ui/div","units":[{"id":"text-1","text":"No \u27EAAGC0\u27EB found for"}]}
+{"id":"\u754C\u9762-02651","kind":"ui/div","units":[{"id":"text-1","text":"Replacing removes the currently installed plugin and installs the new one in its place."}]}
+{"id":"\u754C\u9762-02652","kind":"ui/component","units":[{"id":"text-1","text":"Currently installed"}]}
+{"id":"\u754C\u9762-02653","kind":"ui/component","units":[{"id":"text-1","text":"Replace with"}]}
+{"id":"\u754C\u9762-02654","kind":"ui/component","units":[{"id":"text-1","text":"Replacing..."},{"id":"text-2","text":"Replace"}]}
+{"id":"\u754C\u9762-02655","kind":"ui/component","units":[{"id":"text-1","text":"Configure \u27EAAGC0\u27EB, values missing"},{"id":"text-2","text":"Configure \u27EAAGC0\u27EB"},{"id":"text-3","text":"Configure"}]}
+{"id":"\u754C\u9762-02656","kind":"ui/component","units":[{"id":"text-1","text":"Secret for \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02657","kind":"ui/component","units":[{"id":"text-1","text":"New secret for \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02658","kind":"ui/component","units":[{"id":"text-1","text":"Secret for a new \u27EAAGC0\u27EB account"}]}
+{"id":"\u754C\u9762-02659","kind":"ui/component","units":[{"id":"text-1","text":"No plugins found for \u0022\u27EAAGC0\u27EB\u0022."},{"id":"text-2","text":"Find skills, agents, and more in the Marketplace."}]}
+{"id":"\u754C\u9762-02660","kind":"ui/component","units":[{"id":"text-1","text":"No plugins available."}]}
+{"id":"\u754C\u9762-02661","kind":"ui/component","units":[{"id":"text-1","text":"Reconnect \u27EAAGC0\u27EB"},{"id":"text-2","text":"Reconnect"}]}
+{"id":"\u754C\u9762-02662","kind":"ui/component","units":[{"id":"text-1","text":"Disconnect \u27EAAGC0\u27EB"},{"id":"text-2","text":"Disconnect"}]}
+{"id":"\u754C\u9762-02663","kind":"ui/component","units":[{"id":"text-1","text":"Themes"}]}
+{"id":"\u754C\u9762-02664","kind":"ui/component","units":[{"id":"text-1","text":"Account connected."}]}
+{"id":"\u754C\u9762-02665","kind":"ui/menu","units":[{"id":"text-1","text":"Disconnect"}]}
+{"id":"\u754C\u9762-02666","kind":"ui/component","units":[{"id":"text-1","text":"This plugin requires authentication before the agent can use its tools."}]}
+{"id":"\u754C\u9762-02667","kind":"ui/menu","units":[{"id":"text-1","text":"Authenticate"}]}
+{"id":"\u754C\u9762-02668","kind":"ui/menu","units":[{"id":"text-1","text":"Set up authentication"}]}
+{"id":"\u754C\u9762-02669","kind":"ui/component","units":[{"id":"text-1","text":"Sign in required."}]}
+{"id":"\u754C\u9762-02670","kind":"ui/menu","units":[{"id":"text-1","text":"Go to Accounts"}]}
+{"id":"\u754C\u9762-02671","kind":"ui/component","units":[{"id":"text-1","text":"Configure \u27EAAGC0\u27EB"},{"id":"text-2","text":"Enter the configuration values this MCP server needs. Saving restarts the server with them."}]}
+{"id":"\u754C\u9762-02672","kind":"ui/component","units":[{"id":"text-1","text":"No description available."}]}
+{"id":"\u754C\u9762-02673","kind":"ui/component","units":[{"id":"text-1","text":"Connected"}]}
+{"id":"\u754C\u9762-02674","kind":"ui/component","units":[{"id":"text-1","text":"Error:"}]}
+{"id":"\u754C\u9762-02675","kind":"ui/menu","units":[{"id":"text-1","text":"Disconnect"},{"id":"text-2","text":"Disconnect \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02676","kind":"ui/component","units":[{"id":"text-1","text":"Connect an account so the agent can use this app."}]}
+{"id":"\u754C\u9762-02677","kind":"ui/menu","units":[{"id":"text-1","text":"Connect"},{"id":"text-2","text":"Connect \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02678","kind":"ui/button","units":[{"id":"text-1","text":"On this computer"},{"id":"text-2","text":"Connected apps"}]}
+{"id":"\u754C\u9762-02679","kind":"ui/span","units":[{"id":"text-1","text":"On this computer"},{"id":"text-2","text":"Connected apps"}]}
+{"id":"\u754C\u9762-02680","kind":"ui/span","units":[{"id":"text-1","text":"Plugins, skills and MCP servers installed here. They run locally."},{"id":"text-2","text":"Sign in once and your agent can use these apps on any device. Nothing is installed on this computer."}]}
+{"id":"\u754C\u9762-02681","kind":"ui/component","units":[{"id":"text-1","text":"Apps"},{"id":"text-2","text":"Connected"}]}
+{"id":"\u754C\u9762-02682","kind":"ui/component","units":[{"id":"text-1","text":"Reconnect"},{"id":"text-2","text":"Connect"},{"id":"text-3","text":"Reconnect"},{"id":"text-4","text":"Connect"}]}
+{"id":"\u754C\u9762-02683","kind":"ui/component","units":[{"id":"text-1","text":"Loading apps..."}]}
+{"id":"\u754C\u9762-02684","kind":"ui/p","units":[{"id":"text-1","text":"Apps connected to your account"}]}
+{"id":"\u754C\u9762-02685","kind":"ui/p","units":[{"id":"text-1","text":"Sign in to an app once and your agent can use it on any device. Open an app to see the account it uses or to disconnect it."}]}
+{"id":"\u754C\u9762-02686","kind":"ui/span","units":[{"id":"text-1","text":"Canvas \u00B7 written by your Chief of Staff \u00B7 display only"},{"id":"text-2","text":"Canvas page \u00B7 display only"}]}
+{"id":"\u754C\u9762-02687","kind":"ui/component","units":[{"id":"text-1","text":"Chief of Staff canvas"}]}
+{"id":"\u754C\u9762-02688","kind":"ui/menu","units":[{"id":"text-1","text":"Copy Message"}]}
+{"id":"\u754C\u9762-02689","kind":"ui/component","units":[{"id":"text-1","text":"Skip (\u27EAAGC0\u27EB), Skip All (\u27EAAGC1\u27EB)"},{"id":"text-2","text":"Skip"}]}
+{"id":"\u754C\u9762-02690","kind":"ui/component","units":[{"id":"text-1","text":"Previous question"}]}
+{"id":"\u754C\u9762-02691","kind":"ui/component","units":[{"id":"text-1","text":"Next question"}]}
+{"id":"\u754C\u9762-02692","kind":"ui/component","units":[{"id":"text-1","text":"Cancel questionnaire"}]}
+{"id":"\u754C\u9762-02693","kind":"ui/component","units":[{"id":"text-1","text":"Cancel Questionnaire and Stop the Agent (\u27EAAGC0\u27EB)"},{"id":"text-2","text":"Cancel Questionnaire and Stop the Agent"}]}
+{"id":"\u754C\u9762-02694","kind":"ui/component","units":[{"id":"text-1","text":"Sort and filter conversations (\u27EAAGC0\u27EB active)"},{"id":"text-2","text":"Sort and filter conversations"}]}
+{"id":"\u754C\u9762-02695","kind":"ui/component","units":[{"id":"text-1","text":"Sort Conversations"}]}
+{"id":"\u754C\u9762-02696","kind":"ui/span","units":[{"id":"text-1","text":"Last Updated"}]}
+{"id":"\u754C\u9762-02697","kind":"ui/span","units":[{"id":"text-1","text":"Last Prompt"}]}
+{"id":"\u754C\u9762-02698","kind":"ui/component","units":[{"id":"text-1","text":"Filter"}]}
+{"id":"\u754C\u9762-02699","kind":"ui/span","units":[{"id":"text-1","text":"Only Archived"}]}
+{"id":"\u754C\u9762-02700","kind":"ui/span","units":[{"id":"text-1","text":"Only Automations"},{"id":"text-2","text":"Only Scheduled"}]}
+{"id":"\u754C\u9762-02701","kind":"ui/div","units":[{"id":"text-1","text":"Your Plan: "},{"id":"text-2","text":" (ADC)"}]}
+{"id":"\u754C\u9762-02702","kind":"ui/component","units":[{"id":"text-1","text":"Signing Out..."},{"id":"text-2","text":"Sign Out"}]}
+{"id":"\u754C\u9762-02703","kind":"ui/span","units":[{"id":"text-1","text":"Join the Google Chat space"}]}
+{"id":"\u754C\u9762-02704","kind":"ui/span","units":[{"id":"text-1","text":"Ask questions, report issues, and discuss features"}]}
+{"id":"\u754C\u9762-02705","kind":"ui/menu","units":[{"id":"text-1","text":"Provide Feedback"}]}
+{"id":"\u754C\u9762-02706","kind":"ui/button","units":[{"id":"text-1","text":"Upload Debug Bundle"}]}
+{"id":"\u754C\u9762-02707","kind":"ui/component","units":[{"id":"text-1","text":"Files and resources in cloud workspaces"}]}
+{"id":"\u754C\u9762-02708","kind":"ui/p","units":[{"id":"text-1","text":"Here\u0027s how uploaded files, attachments, and connected resources work in your cloud environment"}]}
+{"id":"\u754C\u9762-02709","kind":"ui/span","units":[{"id":"text-1","text":"Stored and mounted in your cloud environment"},{"id":"text-2","text":"Connected Google Drive and GitHub resources"},{"id":"text-3","text":"Manage and delete your data anytime"}]}
+{"id":"\u754C\u9762-02710","kind":"ui/span","units":[{"id":"text-1","text":"Uploaded project files and in-chat attachments are stored on Google servers and mounted into your cloud sandbox so your agent can read and work with them."},{"id":"text-2","text":"Files, folders, and repositories you connect are accessible to your agent in this project, including during background or scheduled runs."},{"id":"text-3","text":"Remove individual uploaded files or connected resources in Project Settings, or delete a project or conversation to remove its stored files."}]}
+{"id":"\u754C\u9762-02711","kind":"ui/p","units":[{"id":"text-1","text":"Avoid uploading highly sensitive data and verify actions taken by your agent. Make sure you have the"},{"id":"text-2","text":"to any content or files that you upload, including content of minors. Don\u0027t generate content that infringes on others\u0027 rights, including content that deceives, harasses, or harms. When using Antigravity, you must comply with Google\u0027s"},{"id":"text-3","text":". Your use is subject to the"},{"id":"text-4","text":"and"}]}
+{"id":"\u754C\u9762-02712","kind":"ui/a","units":[{"id":"text-1","text":"necessary rights"}]}
+{"id":"\u754C\u9762-02713","kind":"ui/a","units":[{"id":"text-1","text":"Prohibited Use Policy"}]}
+{"id":"\u754C\u9762-02714","kind":"ui/a","units":[{"id":"text-1","text":"Google Antigravity Terms of Service"}]}
+{"id":"\u754C\u9762-02715","kind":"ui/span","units":[{"id":"text-1","text":"Uploaded files and connected resources are mounted in your cloud environment."}]}
+{"id":"\u754C\u9762-02716","kind":"ui/button","units":[{"id":"text-1","text":"Learn more"}]}
+{"id":"\u754C\u9762-02717","kind":"ui/div","units":[{"id":"text-1","text":"No extensions available"}]}
+{"id":"\u754C\u9762-02718","kind":"ui/component","units":[{"id":"text-1","text":"Extensions"}]}
+{"id":"\u754C\u9762-02719","kind":"ui/span","units":[{"id":"text-1","text":"Turn \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-02720","kind":"ui/button","units":[{"id":"text-1","text":"Go to turn \u27EAAGC0\u27EB of \u27EAAGC1\u27EB"}]}
+{"id":"\u754C\u9762-02721","kind":"ui/button","units":[{"id":"text-1","text":"Scroll turns up"},{"id":"text-2","text":"Scroll turns down"}]}
+{"id":"\u754C\u9762-02722","kind":"ui/input","units":[{"id":"text-1","text":"Search tabs, files, extensions, subagents, artifacts, tasks..."},{"id":"text-2","text":"Search for content to open"}]}
+{"id":"\u754C\u9762-02723","kind":"ui/menu","units":[{"id":"text-1","text":"New Remote Project"}]}
+{"id":"\u754C\u9762-02724","kind":"ui/span","units":[{"id":"text-1","text":"\u26A0\uFE0F Failed to render LaTeX: "}]}
+{"id":"\u754C\u9762-02725","kind":"ui/span","units":[{"id":"text-1","text":"No instances yet."}]}
+{"id":"\u754C\u9762-02726","kind":"ui/button","units":[{"id":"text-1","text":"Get started with Remote Control"},{"id":"text-2","text":"Get started"}]}
+{"id":"\u754C\u9762-02727","kind":"ui/div","units":[{"id":"text-1","text":"Remote Control Instances"}]}
+{"id":"\u754C\u9762-02728","kind":"ui/button","units":[{"id":"text-1","text":"Hide Thumbnail Sidebar"},{"id":"text-2","text":"Show Thumbnail Sidebar"},{"id":"text-3","text":"Toggle Thumbnails"}]}
+{"id":"\u754C\u9762-02729","kind":"ui/button","units":[{"id":"text-1","text":"Previous Page"},{"id":"text-2","text":"Previous Page"}]}
+{"id":"\u754C\u9762-02730","kind":"ui/input","units":[{"id":"text-1","text":"Current Page"}]}
+{"id":"\u754C\u9762-02731","kind":"ui/button","units":[{"id":"text-1","text":"Next Page"},{"id":"text-2","text":"Next Page"}]}
+{"id":"\u754C\u9762-02732","kind":"ui/button","units":[{"id":"text-1","text":"Zoom Out"},{"id":"text-2","text":"Zoom Out"}]}
+{"id":"\u754C\u9762-02733","kind":"ui/input","units":[{"id":"text-1","text":"Zoom Level"}]}
+{"id":"\u754C\u9762-02734","kind":"ui/button","units":[{"id":"text-1","text":"Zoom In"},{"id":"text-2","text":"Zoom In"}]}
+{"id":"\u754C\u9762-02735","kind":"ui/button","units":[{"id":"text-1","text":"Fit to Width"},{"id":"text-2","text":"Fit to Page"},{"id":"text-3","text":"Fit to Width"},{"id":"text-4","text":"Fit to Page"}]}
+{"id":"\u754C\u9762-02736","kind":"ui/button","units":[{"id":"text-1","text":"More toolbar actions"},{"id":"text-2","text":"More"}]}
+{"id":"\u754C\u9762-02737","kind":"ui/div","units":[{"id":"text-1","text":"More toolbar actions"}]}

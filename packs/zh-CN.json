@@ -33231,9 +33231,1290 @@
       "Kind": "ui/span",
       "Role": "title",
       "Shape": "string"
+    },
+    {
+      "Key": "ee5b2d97c78649c979d8d3192a9b705471d2825efae6be048f25ad6bf7fe7f3d",
+      "Source": "No apps found for \"⟪AGC0⟫\".",
+      "Translation": "未找到与“⟪AGC0⟫”匹配的应用。",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "d484c802c10ac4fa9ded6188500be595dcc29fd35c9c088fa7ad2ccbd71c418d",
+      "Source": "No apps available.",
+      "Translation": "暂无可用应用。",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "769ec93e119ded20018d737a7a4ec05a3dba7278b7ed65fe4946f15536e86976",
+      "Source": "No apps connected yet. Connect one from Marketplace.",
+      "Translation": "尚未连接任何应用。请从市场连接应用。",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "72d75b107abd88533210ab359b650934e03ca62d6567b40192f0fc71cfcc5e18",
+      "Source": "Copied",
+      "Translation": "已复制",
+      "Kind": "ui/component",
+      "Role": "tooltip",
+      "Shape": "string"
+    },
+    {
+      "Key": "e19c0bad9357c78b48f6666c3818ce6386740f2766e9b50fe1b7b2125532850e",
+      "Source": "Copy ⟪AGC0⟫",
+      "Translation": "复制 ⟪AGC0⟫",
+      "Kind": "ui/component",
+      "Role": "tooltip",
+      "Shape": "template"
+    },
+    {
+      "Key": "fe59e45f68c60c319642b2141dd2941c9fc366e2104e9b53b0644af22b155bdf",
+      "Source": "Copied",
+      "Translation": "已复制",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "9ef9dc806e85cd601fd1a2e74bd114791809d070b8e2e1d2a4d260ec3afaf9cb",
+      "Source": "Copy ⟪AGC0⟫",
+      "Translation": "复制 ⟪AGC0⟫",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "655b3cbfb905ece5aae8648f71e52ab6953cbf2834a8fe09fe30a6b35c4fb841",
+      "Source": "Built-in Browser Requires Isolated Web App (IWA)",
+      "Translation": "内置浏览器需要 Isolated Web App（IWA）",
+      "Kind": "ui/h3",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "2fab88660691eaa44a55784e3a7b8ba6a46e353761a36d171e89c327fbc12b44",
+      "Source": "Install and launch the Jetski Isolated Web App in three steps to embed pages with full browser capabilities.",
+      "Translation": "分三步安装并启动 Jetski Isolated Web App，以嵌入具备完整浏览器功能的网页。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "12fe332407526a3abc6e0a4416363db1dc42c2ff00888651acccca99653e228b",
+      "Source": "Collapse IWA installation steps",
+      "Translation": "收起 IWA 安装步骤",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "08975f0d67d0571f45d66991c1be0dcdddf9c7706e22b3c306797315808f0d79",
+      "Source": "Expand IWA installation steps",
+      "Translation": "展开 IWA 安装步骤",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "37037a8f571ff3e460d03cfcf2deb4d270e2b544f6748c94ee45a5d32c0d1969",
+      "Source": "Dismiss IWA installation banner",
+      "Translation": "关闭 IWA 安装提示",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "a333e409bb23fb971d81d09213d431ab21994866c766be0c9e41b3f9e0ba2cb3",
+      "Source": "Enable Chrome IWA flags and relaunch Chrome:",
+      "Translation": "启用 Chrome 的 IWA 实验选项，然后重新启动 Chrome：",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "cffb663879333bef2d38ec113ae6f4e63e476bf9d06b66f6d7ae8e1680ecd145",
+      "Source": "Download the signed bundle, open",
+      "Translation": "下载已签名的应用包，打开",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "bd9f411944255502347e133fc7e19b842ce18653506ea2ad0c3c571da2ff9d2f",
+      "Source": ", and click",
+      "Translation": "，然后点击",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "9a46e51dee2b6e1300676b00e3a8b54e5c4c5fe50092bf140fee187ece795b64",
+      "Source": "Install → Signed Bundle → Install",
+      "Translation": "安装 → 已签名的应用包 → 安装",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "d3b34ba0da171f30bb2f8ce557eed74af92da45b22166beda8e514e7e39b22f8",
+      "Source": "Download Jetski IWA (jetski-shell.swbn)",
+      "Translation": "下载 Jetski IWA（jetski-shell.swbn）",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "f26e776cc883d5ae180b5ae321011b51ed2637b6d4413f29a0a83fc83c3e3021",
+      "Source": "Launch Jetski in its installed Isolated Web App window:",
+      "Translation": "在已安装的 Isolated Web App 窗口中启动 Jetski：",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "93f41e806689b86ac01b60b7f825e93e88b95ebc7495b89a823c1c39d5c78971",
+      "Source": "Open in Jetski IWA",
+      "Translation": "在 Jetski IWA 中打开",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "cb12354109b71bbde0120306bc0baf6143a74732ba7c7a5b51c28445f4602d21",
+      "Source": "Open Link in New Tab",
+      "Translation": "在新标签页中打开链接",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "f1b81ebe582815fc2bbcb9d9264b18bc39a8c4103ca8a731f8aa0efa804b3bff",
+      "Source": "Open Link in External Browser",
+      "Translation": "在外部浏览器中打开链接",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "d4a0d0fd3e91dcef7171da3e1f4142d3e4e2d83918b3c3276c82a81ef595bf89",
+      "Source": "Copy Link Address",
+      "Translation": "复制链接地址",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "29797d4bd9aaa8bb5f35917c23d4d0b9710d4c59047c8c1c3a03f896429e0638",
+      "Source": "Open Image in New Tab",
+      "Translation": "在新标签页中打开图片",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "987d41ea65ee301fd5591193930405162cf75ac814ffabd689f514f7d584264c",
+      "Source": "Copy Image Address",
+      "Translation": "复制图片地址",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "51006db3ec02500250ebf70e7b3009e9885b6d269781538c8c2ca770ebeba921",
+      "Source": "Back",
+      "Translation": "后退",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "2086a4389df65865d45c44251a55a37af8398be1cd646b1edf4d596881cd949f",
+      "Source": "Forward",
+      "Translation": "前进",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "0d721684acc488c8e7bb00bc331996d5038253966d4d8f2fd976e2c39121e910",
+      "Source": "Reload",
+      "Translation": "重新加载",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "faf181b659cb45d4e4429115f0775b1627b05a07286d20aafa31f979e46be557",
+      "Source": "Open in External Browser",
+      "Translation": "在外部浏览器中打开",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "d7422ace37dde2f19e7ec8b21976fd2683c0a50c20344594149738cdaf765e84",
+      "Source": "New Remote Project",
+      "Translation": "新建远程项目",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "1009d84e48e92df9299ed257dd1146f5405c2dfa54d81abb98fa4f57b6efa3d6",
+      "Source": "Create a project whose conversations run remotely.",
+      "Translation": "创建一个在远程运行对话的项目。",
+      "Kind": "ui/menu",
+      "Role": "tooltipText",
+      "Shape": "string"
+    },
+    {
+      "Key": "63bfd714827710727909a69ab9e34f66172cba170c61281fe82b7eb1c6f9b269",
+      "Source": "No ⟪AGC0⟫ found for",
+      "Translation": "未找到对应的⟪AGC0⟫：",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "4f81ad625a009af7fd5f9b77555c35bc3e6ee64525be399c910337ae6e7faa85",
+      "Source": "Replacing removes the currently installed plugin and installs the new one in its place.",
+      "Translation": "替换会移除当前安装的插件，并在其位置安装新插件。",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "eb7c623dc6163e06bd452f2d83a2c5637c70f70420ee1d4627483b34d72c1aa3",
+      "Source": "Currently installed",
+      "Translation": "当前已安装",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "6e045f452b78ab1c520da108c4ba1ad4c3cdc67a2bb1b323734422ee781f5a16",
+      "Source": "Replace with",
+      "Translation": "替换为",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "b07c640c2efed6decaddab75fe2873d34d6609a5ccf84f6e761a46b99d66ba62",
+      "Source": "Replacing...",
+      "Translation": "正在替换...",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "d17f36c2af585fa3699c02abff15e60c41c6c6ed31b7b64b3feef278ef151cd5",
+      "Source": "Replace",
+      "Translation": "替换",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "9641dee7c2802f399b97c8b715dea3f0a837c9ccd7d91de282235ed29a24459d",
+      "Source": "Configure ⟪AGC0⟫, values missing",
+      "Translation": "配置 ⟪AGC0⟫，尚有未填写的值",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "5291d22ae105e08f177579314cd42cb0fdb5daae1bcd2475407ca55a193760d9",
+      "Source": "Configure ⟪AGC0⟫",
+      "Translation": "配置 ⟪AGC0⟫",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "780a3b33d678c9880ee73f284ed4097a3deb263600581ac5fbdb62b7a0249091",
+      "Source": "Configure",
+      "Translation": "配置",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "831fcd9384e971d6534a1c6cb4883a80d24fc3c938eed18cb84f5196b16fbd9f",
+      "Source": "Secret for ⟪AGC0⟫",
+      "Translation": "⟪AGC0⟫ 的密钥",
+      "Kind": "ui/component",
+      "Role": "ariaLabel",
+      "Shape": "template"
+    },
+    {
+      "Key": "2113a5d555d601933c02faa4d7cdbe0c516a8a45602df653edf57a91db42d3fb",
+      "Source": "New secret for ⟪AGC0⟫",
+      "Translation": "⟪AGC0⟫ 的新密钥",
+      "Kind": "ui/component",
+      "Role": "ariaLabel",
+      "Shape": "template"
+    },
+    {
+      "Key": "5af7b8a2de3ecb64abb0757862d3249fdfa3448131f5e4d9efb31467dbdeed59",
+      "Source": "Secret for a new ⟪AGC0⟫ account",
+      "Translation": "新 ⟪AGC0⟫ 账户的密钥",
+      "Kind": "ui/component",
+      "Role": "ariaLabel",
+      "Shape": "template"
+    },
+    {
+      "Key": "77b6510e6a19ca6a7e8018a0a0642f3de868b0d8c0cf48b8d1374d7eff185cae",
+      "Source": "No plugins found for \"⟪AGC0⟫\".",
+      "Translation": "未找到 \"⟪AGC0⟫\" 的插件.",
+      "Kind": "ui/component",
+      "Role": "message",
+      "Shape": "template"
+    },
+    {
+      "Key": "a7672663750d2dbcd6bebe66f0ae7779a7fe2f04e431b9327380673760d0cf29",
+      "Source": "Find skills, agents, and more in the Marketplace.",
+      "Translation": "在市场中查找技能、智能体及更多内容.",
+      "Kind": "ui/component",
+      "Role": "message",
+      "Shape": "string"
+    },
+    {
+      "Key": "a903beb0599b0aa9be660e1dd9c3e468681081ff0481537202e250587d28a961",
+      "Source": "No plugins available.",
+      "Translation": "暂无可用插件.",
+      "Kind": "ui/component",
+      "Role": "message",
+      "Shape": "string"
+    },
+    {
+      "Key": "75b7e616138e367f5d1b6d8e90d72c5b9ce1db540dd7d610339a887f2f15e7f0",
+      "Source": "Reconnect ⟪AGC0⟫",
+      "Translation": "重新连接 ⟪AGC0⟫",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "0cc2b5422af708956dd7e8791acf380eb7f4b267f26e3e7a4cf0d286b200fba5",
+      "Source": "Reconnect",
+      "Translation": "重新连接",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "aa16f3c6567e2e9ce61cb49f6ec912c3f03a112be547e4a806207c2b7e9e639c",
+      "Source": "Disconnect ⟪AGC0⟫",
+      "Translation": "断开 ⟪AGC0⟫ 的连接",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "e6f0cfc79772756920dac0064d6be789ee8ef96f5ed08c91b74e0f78a3189c11",
+      "Source": "Disconnect",
+      "Translation": "断开连接",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "9c2990bdcd4e72043447f5f71012216c41ba5279eb0660be920b90fb96b461ca",
+      "Source": "Themes",
+      "Translation": "主题",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "731f766d3dab1acb7128c074f19ef339e62ab47a3b8b6988d315a665a5c95bb5",
+      "Source": "Account connected.",
+      "Translation": "账户已连接.",
+      "Kind": "ui/component",
+      "Role": "message",
+      "Shape": "string"
+    },
+    {
+      "Key": "29a2744a3dc4e7549303f8625382bf90b645e8811b1a7afbcf317ebb5d21cf00",
+      "Source": "Disconnect",
+      "Translation": "断开连接",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "8791f341c96ecadc0b882f39fab9f88044fadd4d16f2a14afb93640fc355f589",
+      "Source": "This plugin requires authentication before the agent can use its tools.",
+      "Translation": "此插件需要身份验证，智能体才能使用其工具.",
+      "Kind": "ui/component",
+      "Role": "message",
+      "Shape": "string"
+    },
+    {
+      "Key": "61128401456e9f8bde7f910bde6c87baa415ffeedc635e5009206150f5c0ebf3",
+      "Source": "Authenticate",
+      "Translation": "认证",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "3eb74722a926bdae7ac5742c438401f4b0cd0ea83c537cb60214b6cee7a458fa",
+      "Source": "Set up authentication",
+      "Translation": "设置身份验证",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "c4f1bd5ffe31f573ec3bc3e599cbf12148bc45dc3e7b1220dd2d4c72bf92af2f",
+      "Source": "Sign in required.",
+      "Translation": "需要登录.",
+      "Kind": "ui/component",
+      "Role": "message",
+      "Shape": "string"
+    },
+    {
+      "Key": "15011c03f573ee19b9117b4cbedbc6f01d267164e72612e600db323bdb44fa3a",
+      "Source": "Go to Accounts",
+      "Translation": "前往账户",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "5489e8d1cf5f57d005c65c4094273f8c324f669bf36ffe22b01e7fa8aa900260",
+      "Source": "Configure ⟪AGC0⟫",
+      "Translation": "配置 ⟪AGC0⟫",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "template"
+    },
+    {
+      "Key": "1106bc1114e5a913c23c9075875046a24a0a3454f36202115fd2a1c3ebc4ca62",
+      "Source": "Enter the configuration values this MCP server needs. Saving restarts the server with them.",
+      "Translation": "填写此 MCP 服务器所需的配置值。保存后，服务器将使用这些配置重新启动。",
+      "Kind": "ui/component",
+      "Role": "description",
+      "Shape": "string"
+    },
+    {
+      "Key": "3b9cf68a83ec9c4920ef7c02a94517ebaf93b6202422da072029f50631640ebf",
+      "Source": "No description available.",
+      "Translation": "暂无描述。",
+      "Kind": "ui/component",
+      "Role": "description",
+      "Shape": "string"
+    },
+    {
+      "Key": "59a81216ff4f2a6929b35e29012a30f2db9dabf5f568df58d5f7d8b52fcf5839",
+      "Source": "Connected",
+      "Translation": "已连接",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "0c04ad3d51c09efaf4e1a921851cd90fcab06f97825e5487155c769eefca72eb",
+      "Source": "Error:",
+      "Translation": "错误：",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "2a9e9b807b1642d8d94eb413da357f7f5b85d6a59cdbc8d53f272881d12e84df",
+      "Source": "Disconnect",
+      "Translation": "断开连接",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "642f562585431770db3e3c1566e3268b8bf29cfe0cb79d34934bf3fc370844f8",
+      "Source": "Disconnect ⟪AGC0⟫",
+      "Translation": "断开 ⟪AGC0⟫ 的连接",
+      "Kind": "ui/menu",
+      "Role": "ariaLabel",
+      "Shape": "template"
+    },
+    {
+      "Key": "1353e1fbe8c1dbc9ce3b32848979e90fc557b997cafa2be4a85c5e1f0fee448e",
+      "Source": "Connect an account so the agent can use this app.",
+      "Translation": "连接一个账户，以便智能体使用此应用。",
+      "Kind": "ui/component",
+      "Role": "message",
+      "Shape": "string"
+    },
+    {
+      "Key": "53e91b88f3690c472037a3551bee972175c0f166fa90c5d6a65c2459ec0c187a",
+      "Source": "Connect",
+      "Translation": "连接",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "441f6f4d03843ae2b59ca5db694ad6fa7090c0866b24475aa94cc68a210f0cb4",
+      "Source": "Connect ⟪AGC0⟫",
+      "Translation": "连接 ⟪AGC0⟫",
+      "Kind": "ui/menu",
+      "Role": "ariaLabel",
+      "Shape": "template"
+    },
+    {
+      "Key": "c5ca15e9fa05ec6f632704f608a3b3053b996bc775cc8fdb9902191bfb50e4e9",
+      "Source": "On this computer",
+      "Translation": "本机",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ade7c38d94da152e3b547989f0f3c452a839ccc4f71467e09b4b924bb17d66d0",
+      "Source": "Connected apps",
+      "Translation": "已连接的应用",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "72787a7e47e336ca7c16dd2b80c54cef8b8786a8cbc1953ada7596b5d1b9cdc9",
+      "Source": "On this computer",
+      "Translation": "本机",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "43f83ddb53cdf50b8820f7cf7abaaf10ed51993cd2cc357b46877d0fe13c8d7d",
+      "Source": "Connected apps",
+      "Translation": "已连接的应用",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a4c22fb478b014afc926fd0a95b90d1c646fe45476a7fbd5c59dce61dfb1440a",
+      "Source": "Plugins, skills and MCP servers installed here. They run locally.",
+      "Translation": "安装在此电脑上的插件、技能和 MCP 服务器，均在本地运行。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d106bb661efa72d42561923b1500953719ca4f7cf6177a2de0c06f17d585da33",
+      "Source": "Sign in once and your agent can use these apps on any device. Nothing is installed on this computer.",
+      "Translation": "只需登录一次，智能体就能在任意设备上使用这些应用。无需在此电脑上安装任何内容。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c3402742785b5452a4c766da0679aa59e3a1934a700c52e15f8cc84c3281bcd5",
+      "Source": "Apps",
+      "Translation": "应用",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "2a79988dcd9a1b7f66700da845b33f1ed10acd222f52dad189ae3258a77c87af",
+      "Source": "Connected",
+      "Translation": "已连接",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "02f2bdf7843afd012806b819863bb78531fb59198408a30d263e0f05d90174b6",
+      "Source": "Reconnect",
+      "Translation": "重新连接",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "74a1d878fe6de47f7d2376a9fd224bdfe826951c8943d15a8c8de5c12036f4c0",
+      "Source": "Connect",
+      "Translation": "连接",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "20ca929e19882c7deecfdaade134012434a2ff5f1daeac68f5b3bb33602ccabf",
+      "Source": "Reconnect",
+      "Translation": "重新连接",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "538b9c1bcc23a196421358f5ae0893c81aaaeaa635ef80649359b1bfd3d7e974",
+      "Source": "Connect",
+      "Translation": "连接",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "11a6ae3ede2487d72cbacc18e74bc7f8801dde98d311bd1a8255b914f6812105",
+      "Source": "Loading apps...",
+      "Translation": "正在加载应用...",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "09b5a8ad6ce3406b4e6cf92a1742be685d5112ad7b09dd770fe77267d8ebef16",
+      "Source": "Apps connected to your account",
+      "Translation": "已连接到你账户的应用",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "742328bf0a3c0d893152297f94c73077db55d4774e9e96212778645d8670fc45",
+      "Source": "Sign in to an app once and your agent can use it on any device. Open an app to see the account it uses or to disconnect it.",
+      "Translation": "只需登录应用一次，智能体就能在任意设备上使用它。打开应用可查看其使用的账户或断开连接。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "b2729f36aab9bc8d4822e4087b5bcf3176989b31f67ea4ee853e0c5e9dfe4e62",
+      "Source": "Canvas · written by your Chief of Staff · display only",
+      "Translation": "画布 · 由你的 Chief of Staff 撰写 · 仅供查看",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "dfa65ee20f9f63bab1bff45bf0167ae2588c5f7b8c77bbd4720aeabfb942c3b3",
+      "Source": "Canvas page · display only",
+      "Translation": "画布页面 · 仅供查看",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "c718d5dbf94d08c487c31a8fbb7080d9735fdd415e84288be6d1cec949eb4326",
+      "Source": "Chief of Staff canvas",
+      "Translation": "Chief of Staff 画布",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "863a1d6729fe5c171c033901d07257cf7f8079f512c22edeafb94c343135f0da",
+      "Source": "Copy Message",
+      "Translation": "复制消息",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "ccdea4cbe0dbe604aaa01664158ccec55a0dc2cfb7237150f3aa6b611d24914f",
+      "Source": "Skip (⟪AGC0⟫), Skip All (⟪AGC1⟫)",
+      "Translation": "跳过（⟪AGC0⟫），全部跳过（⟪AGC1⟫）",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "07927798a7be260a83ee64baa9a89312e2512bd5df3b4c8f9fff242becb95ffc",
+      "Source": "Skip",
+      "Translation": "跳过",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "a70892fbca8cbce1361362ebdd6468b52a8f703a75507f43a01332cf0160e9c7",
+      "Source": "Previous question",
+      "Translation": "上一题",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "9adc8dc511b844e19558c7bdd910d97a7fcd6b654ad0524c1ebf6fab05d04021",
+      "Source": "Next question",
+      "Translation": "下一题",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "aa10e76982b14af39a25a772956e34fa5fd1270107fca66105b16c1ac149a8d2",
+      "Source": "Cancel questionnaire",
+      "Translation": "取消问卷",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "3e431c60a0a55b5d0dab9053667d9f7a7737d49456126d597f2ac91fa6aea648",
+      "Source": "Cancel Questionnaire and Stop the Agent (⟪AGC0⟫)",
+      "Translation": "取消问卷并停止智能体（⟪AGC0⟫）",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "0844a8b6dd4971010769a9cbd100ce05b9b435116eea1496344c20dee299bdcb",
+      "Source": "Cancel Questionnaire and Stop the Agent",
+      "Translation": "取消问卷并停止智能体",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "7d34980b219eca97180a7fb3b64459f425f8a78ce666e8d3bd4fca34b052216d",
+      "Source": "Sort and filter conversations (⟪AGC0⟫ active)",
+      "Translation": "排序和筛选对话（⟪AGC0⟫ 项筛选已启用）",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "3dbba4b2e776b4a8de8d24bee42237539847e304d34d9a9f03d5dba1f3aaea37",
+      "Source": "Sort and filter conversations",
+      "Translation": "排序和筛选对话",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "2796e06e8142f03138db62eec95084f3e512e9ee0a8b609d5c969144a79b0487",
+      "Source": "Sort Conversations",
+      "Translation": "对话排序",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "e53a637f6cc2b0cd14adba402566f8449f2ea2cb5310a5a62a7fc22a72e5cf8a",
+      "Source": "Last Updated",
+      "Translation": "最后更新",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "c881877e8770a52aeafebfa940890cdfbd40bcb87cbe3f36e2135e225a11c730",
+      "Source": "Last Prompt",
+      "Translation": "最近提问",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "acc36227d7c9030eeb5f21dc2110b1c21adaddcea59e697216fad7d143b2fbaf",
+      "Source": "Filter",
+      "Translation": "筛选",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "444675e917b244bcdc9c325fee572e8c1836a648cfa6d21c877a709d1d954753",
+      "Source": "Only Archived",
+      "Translation": "仅已归档",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "c8378779a0d771dfddbe626ee8f35a8ec46c85da1689e6c4e5fcd8acb5160087",
+      "Source": "Only Automations",
+      "Translation": "仅自动化任务",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "44234109cded4ec3a233ca95a0356cdd1ed2f2bec86facafd1be394e65dbde48",
+      "Source": "Only Scheduled",
+      "Translation": "仅定时任务",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "7cf654b71ba433e101d8930fbb378b409b19516380bebd2a2f6b4e2453964c21",
+      "Source": "Your Plan: ",
+      "Translation": "你的套餐: ",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "2351b2328b17568316cb8801cc94622c81dfdbac65aac6552d38da620d64c735",
+      "Source": "Signing Out...",
+      "Translation": "正在退出...",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "aab802e4c5df842ca1ec1fe398758f1aad2d06158ece5745c36443c029a855f6",
+      "Source": "Sign Out",
+      "Translation": "退出登录",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "411cd9431fef3cb7a69dbaba6bf5ba9488858be56176ea15ae91f95423e7f151",
+      "Source": "Join the Google Chat space",
+      "Translation": "加入 Google Chat 空间",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "5bc9ffe6d52ede3a364fc8944f0c5ffc4735ef324e73a01e0a2415a087486517",
+      "Source": "Ask questions, report issues, and discuss features",
+      "Translation": "提问、报告问题和讨论功能",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "a95384253d2c3a70e5d4428c5510834840c2565310b8a2ec9e9ff7f42857c1fb",
+      "Source": "Provide Feedback",
+      "Translation": "提供反馈",
+      "Kind": "ui/menu",
+      "Role": "text",
+      "Shape": "string"
+    },
+    {
+      "Key": "ec92c6a50f14af3731ff6a2d26251cfbb6b319a7eb30cbd616f37f1ad7d18e92",
+      "Source": "Upload Debug Bundle",
+      "Translation": "上传调试包",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "4c472e8bfd91fa747cec13e2afba7c9cf6d4af4ce32b190ce69372e3b4c4d07a",
+      "Source": "Files and resources in cloud workspaces",
+      "Translation": "云端工作区中的文件和资源",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "0c703f18ea92ff97dda9ad2ed92b2df0168516e0d426a87ecd5c2c95abd86827",
+      "Source": "Here's how uploaded files, attachments, and connected resources work in your cloud environment",
+      "Translation": "了解上传的文件、附件和已连接的资源如何在云环境中使用",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "a25e476e89b04de8b42300ee5faabfdcd79f6ea9bdf73524dc767a7b869f9e66",
+      "Source": "Stored and mounted in your cloud environment",
+      "Translation": "存储并挂载到你的云环境",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "dcf267ea7458fee856a0f305b7322967dc558bf9ec8ca4a6ff9f5fc529443000",
+      "Source": "Connected Google Drive and GitHub resources",
+      "Translation": "已连接的 Google Drive 和 GitHub 资源",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "75b3889651199c799b0daa35f1c62666406a08f725170bef376d1ea95b36edc9",
+      "Source": "Manage and delete your data anytime",
+      "Translation": "随时管理和删除你的数据",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "558f3ed2d1ebf8d24bcfe73caadb60a88ee25e7b70ce74711f7705e8aad1d467",
+      "Source": "Uploaded project files and in-chat attachments are stored on Google servers and mounted into your cloud sandbox so your agent can read and work with them.",
+      "Translation": "上传的项目文件和对话附件存储在 Google 服务器上，并挂载到你的云端沙盒，供智能体读取和处理。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2238e82512e6425cecafacb246ac7cf5ea515a23fdba27890152037cebb01326",
+      "Source": "Files, folders, and repositories you connect are accessible to your agent in this project, including during background or scheduled runs.",
+      "Translation": "你连接的文件、文件夹和仓库可供此项目中的智能体访问，包括在后台或定时运行时。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8dd4dc13707304737b76d1dee7c5a107af6403d5d11717923dffb3be99eef387",
+      "Source": "Remove individual uploaded files or connected resources in Project Settings, or delete a project or conversation to remove its stored files.",
+      "Translation": "在项目设置中移除单个上传文件或已连接的资源，或删除项目或对话以移除其存储的文件。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "af37aae3c4b0acd31389337bda58d78c5f495f440e59d307f653a25040930446",
+      "Source": "Avoid uploading highly sensitive data and verify actions taken by your agent. Make sure you have the",
+      "Translation": "避免上传高度敏感的数据，并核实智能体执行的操作。请确保你具有",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "69157b8dfb93067ea306758b7c1d2520193693144009e9c504c06f80ce711552",
+      "Source": "to any content or files that you upload, including content of minors. Don't generate content that infringes on others' rights, including content that deceives, harasses, or harms. When using Antigravity, you must comply with Google's",
+      "Translation": "来上传任何内容或文件，包括涉及未成年人的内容。不要生成侵犯他人权利的内容，包括具有欺骗性、骚扰性或伤害性的内容。使用 Antigravity 时，你必须遵守 Google 的",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "f7fde21551635b3ec55fb89782639feb553e80f67b483175e021c1a42115827d",
+      "Source": ". Your use is subject to the",
+      "Translation": "。使用本产品须遵守",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "d08ec1c69fb757cb0f9ac8def9fd5fb661a1466ae355cf3be0c212db27b17d1b",
+      "Source": "and",
+      "Translation": "和",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "83e0c0289047e3d6ff1bc0eb0fedc6a78f5ebad1de0381121599e57f773513c5",
+      "Source": "necessary rights",
+      "Translation": "必要权利",
+      "Kind": "ui/a",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "b5bd04a47c2312e4533f3dc22d048713ce64f7ed823a61aea095811f66b6de19",
+      "Source": "Prohibited Use Policy",
+      "Translation": "禁止使用政策",
+      "Kind": "ui/a",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "c9439d444e535fb1fe79ae6508caffa7109fffbb112da434b707e5513ec65377",
+      "Source": "Google Antigravity Terms of Service",
+      "Translation": "Google Antigravity 服务条款",
+      "Kind": "ui/a",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "4b5e8e582eebaf3ec4ccb6da52cdccb18e1669016e93bb53b0fcef0adde99f97",
+      "Source": "Uploaded files and connected resources are mounted in your cloud environment.",
+      "Translation": "上传的文件和已连接的资源会挂载到你的云环境。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "44f14566feca6d74448f46264bdf36bbdeb1243bed3f19dc7e71cdf457f3a479",
+      "Source": "Learn more",
+      "Translation": "了解更多",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "041d963c110a0d436a91106353c8e33369101600b3d524f8b9420eb2ae7a1a7e",
+      "Source": "No extensions available",
+      "Translation": "暂无可用扩展",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "21e549b94cbcf40860af58707af2e89fd69c0980a946a5254b256e4d14a0df2a",
+      "Source": "Extensions",
+      "Translation": "扩展",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "83a20aa33d012de056f18147c204347754a12b3f046aff699fdc6a78ca6f6cf4",
+      "Source": "Turn ⟪AGC0⟫",
+      "Translation": "第 ⟪AGC0⟫ 轮",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "4c1f7df0aee59e80ca727e53714d64e257d3818c5bcb15818bef67afd4b1dffd",
+      "Source": "Go to turn ⟪AGC0⟫ of ⟪AGC1⟫",
+      "Translation": "跳至第 ⟪AGC0⟫ 轮，共 ⟪AGC1⟫ 轮",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "1d0400feabd4124d49afd03cf67344a2bbd2cfdd7a7e2d4235d3b1550a1f7a3a",
+      "Source": "Scroll turns up",
+      "Translation": "向上浏览对话轮次",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "9815345abb58641b460156ac6671d4d18894d61323207a12e2ad810cfcdc3755",
+      "Source": "Scroll turns down",
+      "Translation": "向下浏览对话轮次",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "2f818b02709e5dee5b1eb44af3d7e3c934883c3cfad67230ca0cb49bef341476",
+      "Source": "Search tabs, files, extensions, subagents, artifacts, tasks...",
+      "Translation": "搜索标签页、文件、扩展、子智能体、产物、任务...",
+      "Kind": "ui/input",
+      "Role": "placeholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "02850022e7dddc55280bc6860c8e22cf907172273405fc2b9039bb9d1a2b7c03",
+      "Source": "Search for content to open",
+      "Translation": "搜索要打开的内容",
+      "Kind": "ui/input",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "ec19ff1ed85479f7c5ed7b17c13fc90eed6fff6278b2ee1426dc02d931974121",
+      "Source": "New Remote Project",
+      "Translation": "新建远程项目",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "e0163f8d2d86fc6c623b7cd41e0f9287b245de6cd455e74cf5cf2951c626abe3",
+      "Source": "⚠️ Failed to render LaTeX: ",
+      "Translation": "⚠️ 渲染 LaTeX 失败: ",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "90023e445fa27b1842f32773885d1ef20aafe774ac21e8089d993d53a3a30511",
+      "Source": "No instances yet.",
+      "Translation": "暂无实例。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "7e6f365488c74d490a6b917eae1edc5e806d6bb83afbbe7a63999c57b5922d70",
+      "Source": "Get started with Remote Control",
+      "Translation": "开始使用远程控制",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "1e579c1a876b2ec2324c472a4eea4602622caee0217c61d37984dbcee891af30",
+      "Source": "Get started",
+      "Translation": "开始使用",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "d27cda3df4592c783c776e6ceb57d36503530b7a95255d8d8bd2d5da9f8f49fa",
+      "Source": "Remote Control Instances",
+      "Translation": "远程控制实例",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "d6ef0e62a9cdb67a12ea3538a0bb924b04a75356b821435a3113be281aeea28b",
+      "Source": "Hide Thumbnail Sidebar",
+      "Translation": "隐藏缩略图侧边栏",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "ee868757b4100e5851c907e84fd9c5c49fc629702f8eacfe75b99250d0e310cc",
+      "Source": "Show Thumbnail Sidebar",
+      "Translation": "显示缩略图侧边栏",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "ccf3c5401767c93d32c1f9e33e37fca4ed15e746b3bcaadab631da8f3f8d32cd",
+      "Source": "Toggle Thumbnails",
+      "Translation": "切换缩略图显示",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "22b155f06d67e059910111409741985ecc9f10f26c88d28e8c094f6ffecabe82",
+      "Source": "Previous Page",
+      "Translation": "上一页",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "53a1f99418bb8446a68b4852af63ccabb4e932d311d928192234eef9740938c9",
+      "Source": "Previous Page",
+      "Translation": "上一页",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "4da0bd0cf4d6ee1e7f39bdc478b65d7851e867ae1180bb0495d15423bbdcb5c1",
+      "Source": "Current Page",
+      "Translation": "当前页码",
+      "Kind": "ui/input",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "26c5eb2ba74ecdda2d79a62cd2a1f5066107d5011d82f3d4c778c02692f57062",
+      "Source": "Next Page",
+      "Translation": "下一页",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "28039d3e63d6f5d51a6d80bbdb21f5f121101bbd89378d8ca6ed1cdae9999e46",
+      "Source": "Next Page",
+      "Translation": "下一页",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "5d34825ae99c25bfb29c2b4a34cd22a33fd3ddc47f495c47dbe172084cca108d",
+      "Source": "Zoom Out",
+      "Translation": "缩小",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "d878b80ee6d21c8a02ee47a624737886eda4405e3597ac7c17cc498b12f46a0b",
+      "Source": "Zoom Out",
+      "Translation": "缩小",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "3ead89d08fcb179f295e22003407598bae638730fed5bed94a575dbf51e4d489",
+      "Source": "Zoom Level",
+      "Translation": "缩放比例",
+      "Kind": "ui/input",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "8b93d9fd6d34f2bc4ec0c5518714ef185256087c325540c893e3cbdd1f20d676",
+      "Source": "Zoom In",
+      "Translation": "放大",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "feaef697474a4be4228e15b583887f1cea78d0ac13001ae5e75ed283e567f22d",
+      "Source": "Zoom In",
+      "Translation": "放大",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "289572f2653467793ed8cbc029077dd5b0f3b944da2db57b592527c7f7652981",
+      "Source": "Fit to Width",
+      "Translation": "适应宽度",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "818e0ee18adb12706919fc3f685268116ba34afea7289d0f2623b3066b57e8ac",
+      "Source": "Fit to Page",
+      "Translation": "适应页面",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a5fed594e0591dd118e71e2ea65109c30021565eaa36e3eebdf5fd8b74de749b",
+      "Source": "Fit to Width",
+      "Translation": "适应宽度",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "83359cd0a3f80c4854a1e462db698187471dcd2f6ae668bc607563be2037ab8a",
+      "Source": "Fit to Page",
+      "Translation": "适应页面",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d91adf0f91fa601cbb233dd67182284139eb51063fce5ba4ea7916d195aaeee4",
+      "Source": "More toolbar actions",
+      "Translation": "更多工具栏操作",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "07d3c3923f00226831cae3b2e157b204e57dbaa2b14a948c3fe029d9190fbc5f",
+      "Source": "More",
+      "Translation": "更多",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "d80410e506682241b8929e40305a424c4116903a1a6e773f4c20a2036b00e9ca",
+      "Source": "More toolbar actions",
+      "Translation": "更多工具栏操作",
+      "Kind": "ui/div",
+      "Role": "aria-label",
+      "Shape": "string"
     }
   ],
   "RetainedSources": [
+    " (ADC)",
     " (Enter)",
     ", binary=",
     ", host=",
