@@ -382,6 +382,16 @@ static void CheckMissingUi()
     Assert(result.GetProperty("worktree").GetProperty("props").GetProperty("disabledWorktreeSubtitle").GetString() == "Git 仓库支持使用工作树" &&
         result.GetProperty("plan").GetProperty("children")[0].GetString() == "升级至更高等级的 Google AI Ultra 套餐可获得最高使用额度。" &&
         result.GetProperty("account").GetProperty("userTier").GetProperty("upgradeSubscriptionText").GetString()!.StartsWith("You can upgrade"), "工作树提示或新套餐说明未汉化，或接口原始数据被改动。");
+
+    const string voiceHint = "const UI={createElement:(tag,props,...children)=>({props,children})};let clicks=0;const raw='later.';const view=UI.createElement('div',null,'You can change this in',' ',UI.createElement('button',{onClick:()=>++clicks},'Settings'),' ','later.');view.children[2].props.onClick();console.log(JSON.stringify({view,raw,clicks}));";
+    var hintTranslations = new Dictionary<string, string> { ["You can change this in"] = "您可以稍后在", ["Settings"] = "设置", ["later."] = "中更改。" };
+    var hintTexts = JavaScriptUi.Extract(voiceHint, "web/main.js").SelectMany(g => g.Texts).ToList();
+    using var hint = JsonDocument.Parse(Node(JavaScriptUi.Apply(voiceHint, hintTexts,
+        hintTexts.ToDictionary(t => t.Key, t => hintTranslations[t.Source]))));
+    var hintChildren = hint.RootElement.GetProperty("view").GetProperty("children");
+    Assert(hintChildren[0].GetString() == "您可以稍后在" && hintChildren[2].GetProperty("children")[0].GetString() == "设置" &&
+        hintChildren[4].GetString() == "中更改。" && hint.RootElement.GetProperty("raw").GetString() == "later." &&
+        hint.RootElement.GetProperty("clicks").GetInt32() == 1, "音色提示的小写句尾漏翻，或非界面字符串、设置按钮回调被改动。");
 }
 static void CheckNativeHook()
 {

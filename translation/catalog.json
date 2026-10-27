@@ -54074,6 +54074,3744 @@
           "Shape": "lookup"
         }
       ]
+    },
+    {
+      "Id": "界面-02817",
+      "Key": "1981694b4076c28ca6250a4aa78bddcc8ed2de687bb0afa645f6926a276f848c",
+      "Kind": "ui/display-local",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "c0eb58434c0f50107582ef744fbb3c150941a95acf55be33ba175337bf4c490a",
+          "Source": "Loading…",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "c9a0285e4b5fc0d10a4e99be53505690837228e0436852cd660ed553c2f5f4fa",
+          "Source": "Change details unavailable",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "731444f61551e41aff35ba51f3af2145dc4f2b7ed0f0bef0d31ac110f21e60ff",
+          "Source": "(no subject)",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02818",
+      "Key": "059097b531f9fc177cc771b4b295cabe5f4efc2192a6a97cee2ab27ae1e3ca5f",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "5f43b9adc0e561da065f6875de9e5f9e6a7ba976506e382b132128752c6fa729",
+          "Source": "Project",
+          "Role": "label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02819",
+      "Key": "320811cbcc3dfed5a79746243be054787d668e81d175dc9dbd2c6b7ea69c810b",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "ad33249433c1a72ecf1993e079e5954adcfe6110c95aef1f8710c28d2a6b9663",
+          "Source": "Owner",
+          "Role": "label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02820",
+      "Key": "3e060c133f03a393b58f527b7235fc181b7b06d65ed9333ad9b2f8f38e25bfbf",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "0032f9bc823df2c07feafe7e7bedad4396bf52bd1df760853c801c4411926a7f",
+          "Source": "Stop",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02821",
+      "Key": "82c13e79188056cda25adde1edc34bd0061b0ae10f5fec0bb4c833b474adb8e7",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "d93ffdeac80d04d720c8b0d92f3a31a416bd0e81763d205ac74071521ab66e2b",
+          "Source": "Add screenshot to conversation",
+          "Role": "aria-label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "36db585f86b7ecf46bd86d5e5fdac59147d29ffc791345ba44168cb13085a2bd",
+          "Source": "Add screenshot to conversation",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02822",
+      "Key": "6c79bb054d9f93277460c11816f3fa90fe9bc4f23cdef038a5a70a013a58c7ea",
+      "Kind": "ui/setting",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "cbc8f0772678a1cca8321b5b5569d488cb164df70f5da97f6562166b164676c6",
+          "Source": "Default Workspace VCS",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "b6f5bf761101a3f0ac7480e1e2c1c6b7e21f48bdd4acff83b7f692350c5d07fc",
+          "Source": "VCS used when creating a new CitC workspace, including workspaces generated based off your initial prompt.",
+          "Role": "description",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02823",
+      "Key": "30410403098fec123706e788ab3064c23b4e428d09e83829ec589a4a1a4616ed",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "a3f15de4640573d768143e3cb33a4bafcff6cd6f4084ad513fa2f886b47cf8cc",
+          "Source": "Allow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "7af512d54ab11de8346498102e61169e30b018c2380d29e4316c69b770fe1de5",
+          "Source": "Always Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "f527db1168c8475cf745e67a6fd8142866d9bd718acd5337880acbf2456245bd",
+          "Source": "Always Proceed",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "8ca4aa82c63913c9ebf63e3c5202c0a61ffae8cf7d53db75c3f8c502463f68c0",
+          "Source": "Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "9902096d90755e5d4b242ee46449e5175aa718e1509c773a16f14cfd61ba82f9",
+          "Source": "Auto",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "8f28684a35e8fbfc90931ab288671245d20eca632eda6bafcfca32c530007667",
+          "Source": "Auto (Preview)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "f2786bb26d6015c47ac65d331e314eda47fbbc937048d3224560c94ff976ec97",
+          "Source": "Cog (GoB)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "02db0691e8c2d8f00892ea01ca884d21120f29cf76c0995189364d99f130199c",
+          "Source": "Custom",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-9",
+          "Key": "9baeeb126ecbe97f925ca807600d5767c8418e7c6143338b425dd825da02bf13",
+          "Source": "Default",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-10",
+          "Key": "a083816ae5aa9741541abcc63bef9222464d3100cc96f8f4397c9f93fad6a80e",
+          "Source": "Deny",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-11",
+          "Key": "d06c205cbc579f47587cde7249ea3b54f587dca81eeee40ee0856869c9e62c6f",
+          "Source": "Disabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-12",
+          "Key": "7aacedb11ef05d099878a029b7bcd16d877ab9f7ac4a68253fa0b8d0a2a73474",
+          "Source": "Enabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-13",
+          "Key": "fd9fe16984bb98402beb52cce43c43995027601180bfb8729be8b58f24c1bf14",
+          "Source": "Fig",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-14",
+          "Key": "257edc1a7c57d292fb754e094bbfd7e1baed46bc9c96bfc746b5a2b9bb3abf61",
+          "Source": "Fill",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-15",
+          "Key": "7b66b2ff6c7db4ad4ec9f653514ce3219235cd94e66a72412ea4ce2beed8942c",
+          "Source": "Full machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-16",
+          "Key": "2839f1fdf376d98b418f54ce797275806e98e97d81a6708abfd5ab07fa6bf579",
+          "Source": "Inherit Global",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-17",
+          "Key": "f2a2c71d48fade2a53bf7f866f50ce207f36fae8c402c70e1df4280c8e3134dc",
+          "Source": "JJ",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-18",
+          "Key": "7054e0adecbf7eaf130ba73a1c1c349f5784c2879e88396b159f850010a3c2c0",
+          "Source": "Machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-19",
+          "Key": "526308a5a389bc8c29aab6d70d97c2f4b3d9039af035d19dba085ee29037b2c1",
+          "Source": "Narrow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-20",
+          "Key": "8f5cfc0bc6e15e2aff79c5dd7e5380e25a515b0120e0f387dd75f53e40a00774",
+          "Source": "Piper",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-21",
+          "Key": "4c0d9740407b66c8b0a9dc744ed2c29ca7855e76f65fe445a12fd8b4f3be9177",
+          "Source": "Piper (g4)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-22",
+          "Key": "2d7c5290fa4b116d677eea5822bf4aaedb26834aea9b8b63ae4176a1e63fb2a1",
+          "Source": "Proceed in Sandbox",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-23",
+          "Key": "51b4dd8b45c3dfdfa194b11d1524aa3e30465d9b74e05be21188dd89eb546a78",
+          "Source": "Project 4K",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-24",
+          "Key": "d5de07a86e6106a6faf42555e665dc22da8d6b7b14b301a5aa0df5d685d238c8",
+          "Source": "Queue",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-25",
+          "Key": "f9a7d3859eb3e7d940b47b006c42ba2ac458533312fd15860311bb81259c1911",
+          "Source": "Request Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-26",
+          "Key": "9b8f83872fe610a3409edc4b068cf09419e52f9b1426e3d67b191e64e058a3ac",
+          "Source": "Require Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-27",
+          "Key": "5ef832816ce5800ea47b9b7eef54197ae66a068a59fff081297eaed1f4738883",
+          "Source": "Send Immediately",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-28",
+          "Key": "4daca6addb75aea111d5759f42bd145e36b7fe11ff290fa371a0283fa05551a0",
+          "Source": "Strong",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-29",
+          "Key": "0be3a682c4ebfd37cf9858d931811207a90e1f521592fe60a7caf61a9a8db75b",
+          "Source": "Turbo",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-30",
+          "Key": "bcdf1b0b87c4a78f1d4d0fbb0876439e62e26be0992d2c00e1168b000c699412",
+          "Source": "Turbo mode",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-31",
+          "Key": "925d2c3bba2fc044880cab912a214b1898d4d006a88a3bda6df53ca62d963536",
+          "Source": "Wide",
+          "Role": "option-label",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02824",
+      "Key": "09d0e626c8661d35dbe71c23eaf75b5374c9c931152563af0e2a5351ee0ea4fe",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "7e04a4df8627ef302fdcef8d163ca2a2609114e436817a9ad51707f4fe2bfcd0",
+          "Source": "A high-risk mode that disables all safety barriers. The agent operates with full system access, auto-executes all terminal commands, and reads or writes to all local files without review prompts.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "6b373d5b7bace138f3b142f3484fe2e37a2f41445e90c8763435fcd7fbb2c93e",
+          "Source": "All terminal commands require review. The agent can read or write to any file in the machine.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "0cd348d6e76a05f1ca7ad961edb3b9fa0b859abac227328eb66c8a900aaa4d84",
+          "Source": "Allow full browser script execution without prompting.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "78c6f5914ce6be80094963de5125bad79bb00fc1ae6b3aa3a505d2a85b3523ee",
+          "Source": "Ask before sensitive operations.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "e4db2d5b7fdbe74f70dd893405c778d5267e4f735c4c7dab7ca2bbefde15329e",
+          "Source": "Automatically decide if commands run.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "41ed700221e465022350632eeae0bb70732a35f7468762baba216da474068be9",
+          "Source": "Block all browser JavaScript execution.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "8c2314a02db34fcddfd1b1dad01df56f342bd50ec2e7089e206dea3027fade0a",
+          "Source": "Dark",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "450222048c538dc7a619e5a9abf567ae1f8e7a4734218db5eace2b54a4e3e620",
+          "Source": "Disables all safety barriers for maximal iteration velocity.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-9",
+          "Key": "543a22dcfe82f916a9475dbbc7dc6cedc8aa1838e1cf90d3736951a609dbfc8a",
+          "Source": "Every command requires approval.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-10",
+          "Key": "4ce4b3ae6c761ad23cd5ce0be6be7a92082486b971867759423fd18833683cf4",
+          "Source": "Inherits your Global Permissions when working in these conversations.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-11",
+          "Key": "677041b2ab08130ae66739f315a4098a6c58db9035c17fc7eff6350f1d81c8b9",
+          "Source": "Inherits your Global Permissions when working in this project.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-12",
+          "Key": "85fdad5e94138aae14ccc70afabc6ccf8fc8699a6a89f26baa8b08e79339991e",
+          "Source": "Interrupt the agent and send immediately.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-13",
+          "Key": "c1fb59134c6c2fee9961c9fcb5c16794b56d0a721a71a9ce02505e462e936879",
+          "Source": "Light",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-14",
+          "Key": "4417bc474612d3911da9b71c6be845046b47939a4227df4250e97a1a5da0daa1",
+          "Source": "Manually customize individual settings.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-15",
+          "Key": "1c6c18d9eb7cc1082f7c3595bc0e3772e1ff0de291cfe2a57033fe565a1db25e",
+          "Source": "Project 4K interface without developer tooling.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-16",
+          "Key": "d2a5853fd7b7f0e8b7e5d5a8c2016e73ccf08793f1aeefa4b5d45448aec014ba",
+          "Source": "Prompt for approval before running browser scripts.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-17",
+          "Key": "1cfe910a07d3a9def6915bcf73fd94286072deaeee3b859afdbbc4830407ab94",
+          "Source": "Queue until after the current turn.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-18",
+          "Key": "74032d214357e0fed9ededa3c89e9ea8135c7a0cdd51230d2ec151ef9d1c9713",
+          "Source": "Requires manual review for all terminal commands and file accesses outside of the working folders.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-19",
+          "Key": "02e2b8a5355caae2232f6e35daf606d911b5c863f9ceeaa79e671c028546cfa2",
+          "Source": "Run all commands without restrictions.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-20",
+          "Key": "ea9db428cf5628e25f48cb905d9adadcbd3a8b6e668f3c3ddb161e37f0fa87bc",
+          "Source": "System",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-21",
+          "Key": "d8a3091b58ef223d625bacfef1f96277a9427cf41ff9dc3744b3c0073c4db495",
+          "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-22",
+          "Key": "fdd4925b506259b17cb6d17419ad1ceebed8dad88eb8d1b8c686c56cdcba42f2",
+          "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-23",
+          "Key": "637ddcc491514164128a602095d3a1265293bb7a83af62b7cb8acad1fe8a67f5",
+          "Source": "The agent always asks for confirmation before executing terminal commands (except those in the Allow list).",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-24",
+          "Key": "700f0420aa55d05b2c6e00ca11a0a6e5865c96dbe756e8d58ac0e4edb4bdfffc",
+          "Source": "The agent always asks for review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-25",
+          "Key": "8eedcf4a9511c2af190f35ceaaaf0549acaf900ec2d0416a2d43201682fb8bf6",
+          "Source": "The agent never asks for confirmation before executing terminal commands (except those in the Deny list). This provides the agent with the maximum ability to operate over long periods without intervention, but also has the highest risk of the agent executing an unsafe terminal command.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-26",
+          "Key": "2d89a257c02c3c57bea743e58c22f2b6ce007ac56cedf0341dda847b6eea549e",
+          "Source": "The agent never asks for review. This maximizes the autonomy of the agent, but also has the highest risk of the agent operating over unsafe or injected artifact content.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-27",
+          "Key": "3b28041f6f0ec5348c1f07fd9af0110c5cbcc03a679288b4344c93f5797050b7",
+          "Source": "The full developer experience.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-28",
+          "Key": "f821944c8d79e97e0d749e1bacc24707118480253f10f3c7ac4dd778e319dd56",
+          "Source": "Useful for tasks that require file access across your full machine. The agent has full read and write access to all local files, but all proposed terminal commands require manual review and approval before running.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-29",
+          "Key": "bf60a876bf881b720c2503ab09f07221d590c6751dc3c1e81e5382b8ac932193",
+          "Source": "Useful for typical development with an emphasis on security. It prioritizes safety over speed by requiring manual approval for all terminal commands and files outside the project directory.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-30",
+          "Key": "512d26cb3d96f64fc78535a34594a34cc90b44245550ca2d3fd6586277a3ad3e",
+          "Source": "Allow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-31",
+          "Key": "9d757cbd1183062dc873ecb7d911a8ed755d95a71a130c5ca58ad685a02b0b13",
+          "Source": "Always Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-32",
+          "Key": "f5974b685352538f0b126a4a97dbed149e5381b82c6027611aa7a14a901be481",
+          "Source": "Always Proceed",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-33",
+          "Key": "b5d2c34318ff0ab86024784033b367d2c6dbaf60767deef531626a1729ada746",
+          "Source": "Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-34",
+          "Key": "3746b802554cb7960b71d21794dd5e2ef30af97887f9f1bb220131c8e8648175",
+          "Source": "Auto",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-35",
+          "Key": "ea1cb83db4877e53051a9b116468b35940368145247e4901e69c26901a6d2918",
+          "Source": "Auto (Preview)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-36",
+          "Key": "6a6a5696e8e71e78225f14aab7b89735615608d539de25f6673d881ec02703ad",
+          "Source": "Cog (GoB)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-37",
+          "Key": "80d02d6d90b2c066ffc8edc58608805c49cbf4fa78fe585aed8a4a45653330ba",
+          "Source": "Custom",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-38",
+          "Key": "e2a60e847f9ee5c06351e3cae82518349aa024f0529d701457ea6d06a0c5a026",
+          "Source": "Default",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-39",
+          "Key": "648b39330657d8b24219eb2aeed46d81dd8ce9aee5a7462467318e361db2fb51",
+          "Source": "Deny",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-40",
+          "Key": "164742ecefc30ba5c0a0cc2946daa69727ce4194e61142597ee1539ba9142f20",
+          "Source": "Disabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-41",
+          "Key": "f59f820ad87eabebe51d85a5a24aa7408476d6d9f38523e3ad43346f43a647bd",
+          "Source": "Enabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-42",
+          "Key": "038ca93d5ce768e74eff033aecc3d28c4802937cbc79874c7b9eb2227531be18",
+          "Source": "Fig",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-43",
+          "Key": "eedc9f4475c03934d7e796153c3ecaa5eb4d3537480eb37779e1cf71d28668c9",
+          "Source": "Fill",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-44",
+          "Key": "839cfbecc1964f95e718f378a72ca841226dd01e2cf131da03b5e78116f2f89f",
+          "Source": "Full machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-45",
+          "Key": "f9892e487ff286be85dc101faeea2a6deb18fa41c4d7212c59f5266cd14b2190",
+          "Source": "Inherit Global",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-46",
+          "Key": "941f587236659f2555ee83b1041dfdadf6ff1fb5aa9de40f4a68f786ab371934",
+          "Source": "JJ",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-47",
+          "Key": "83b63f2e13e05ad014883cf4cc3f7ba949ed4578c3db38262c347e53d1ac148f",
+          "Source": "Machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-48",
+          "Key": "c17d9f8fcba495b343644ef97a878e611c17ecdf51f098d9c2875800fd92db42",
+          "Source": "Narrow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-49",
+          "Key": "6d074d5b51a57cf35f9d476cfdeec5f75c8d57aa242e2d8afca77b9aed54b596",
+          "Source": "Piper",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-50",
+          "Key": "0e1ab5e507e110e83027cac1cca158e4cb1f04f681a605adc0f68deeca477514",
+          "Source": "Piper (g4)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-51",
+          "Key": "709ea4dfa73475832f55a2a49718c6a0ad7986ee7a18243df281fdf2e98966bf",
+          "Source": "Proceed in Sandbox",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-52",
+          "Key": "39227eaf478bcfb94749e5f6c4a8e8ec93f1eb5b00d4d1813bed39fbdafc7547",
+          "Source": "Project 4K",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-53",
+          "Key": "b1e9fe4efea32170148bb251b6a4190cb3e0038adc2892e57b65f09076c74937",
+          "Source": "Queue",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-54",
+          "Key": "454c16ae9b1918248972a75ffbd259d5ec1288f187fae383253c60e8c9bb0bde",
+          "Source": "Request Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-55",
+          "Key": "33cd008c96b8e064fe16e6f179c31711e7b533950c3d2c9521de47bfe81fde6c",
+          "Source": "Require Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-56",
+          "Key": "6c1737af673b31d941eb411ab6a8a49cfbef2be81811d716e4c718bac9a0a1ab",
+          "Source": "Send Immediately",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-57",
+          "Key": "e9d5b2e4dae4ae0dc1d3022121c7076b8cdc2fabd1538b422ae676f17134d9c3",
+          "Source": "Strong",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-58",
+          "Key": "17cfa945ab95fc51709547b6951202a2f77b933685576f03ba2fbb63e0bf1deb",
+          "Source": "Turbo",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-59",
+          "Key": "dc4c7fe7b83321f3d7bf065bbf8c7540b3e26a65ef3f0b839a1cc100ff662be2",
+          "Source": "Turbo mode",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-60",
+          "Key": "7ca0b6d08009530e4db979f9fff52ae20b3af7ca9e154cb688167a10fd9b4348",
+          "Source": "Wide",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-61",
+          "Key": "174b97d974d10c4574ea8a3a947e600b171dfead1ae4d995dc0e575b1a9d09af",
+          "Source": "⟪AGC0⟫ (disabled by admin)",
+          "Role": "children",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02825",
+      "Key": "515bd374d3eacc477be640c6d85c0afa7531c2005777de20971aec6146e827fb",
+      "Kind": "ui/option-display",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "82280e0150fd113230a31d8f27f5d4c9fdd4575d32b8d780085b4d6f808b9e28",
+          "Source": "Allow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "b5530af4a5ac4333de32d587eac1c17ee2226e1746fa053cd2ec19956a819c06",
+          "Source": "Always Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "af7bd2c7ffef2d147a9325d4ab47c0844ccf6bbe2e7677d58bd7af9ad40c8a18",
+          "Source": "Always Proceed",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "105742d9435c07cda0a1e8d4f39267d3d8fc69e5a48a24cf140843c3cd47c0dd",
+          "Source": "Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "13fb27a50ed2a8d49ed32e35af9007397a8aefc0946f0204a184d4a1812bfcca",
+          "Source": "Auto",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "eac383c52d915768f93a7395e116b456e8d18fc9cf27ab36391df0a4c072bd3d",
+          "Source": "Auto (Preview)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "405362a1b7228dc3ce495e483d48274f5cc6d48c8754afa11e2054182e64ad07",
+          "Source": "Cog (GoB)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "dc9c26e9717209f4a5e68f9b76405264c183ab1050b3283b83924da5e3016e4e",
+          "Source": "Custom",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-9",
+          "Key": "f4a87e78d7a40b2776b5cf67c032a274235a398e955db847d3c6e5855e22dd63",
+          "Source": "Default",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-10",
+          "Key": "0a7ed0201d8c5107808d5ea2cefd9b743d9918c63b248de9fcf9d6517a4210e1",
+          "Source": "Deny",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-11",
+          "Key": "277e1cb047d2d82bed0824cbc1048c9d6a8cf35fb05757a393c92f9dc223a7b9",
+          "Source": "Disabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-12",
+          "Key": "d589bd51cf345bca53c74bfb883b2f918af7359960078711eda4dd9a4d2b79e9",
+          "Source": "Enabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-13",
+          "Key": "d660c6099593bc70570721dd25b2e4da5ed0d5019bcaad6636683e6336e3224d",
+          "Source": "Fig",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-14",
+          "Key": "b06d306c312851951424b438432c10ace66252888da7460774d71252c2935517",
+          "Source": "Fill",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-15",
+          "Key": "95c96f8e30163e8ee00c14fa5cc0f02e5e32fc648fc6ac1d2b03627e566738e1",
+          "Source": "Full machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-16",
+          "Key": "a4929f604c0a825c142a49c891480fa8337f73297bbd834f355456b15740c966",
+          "Source": "Inherit Global",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-17",
+          "Key": "1e74d2366c516304233f7d38b6435e6be15f2df5d3f5057a387cd51a910bf86f",
+          "Source": "JJ",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-18",
+          "Key": "d1e0fa0fd3715e2ede74fe08922679c47dc266c7c3ec28c3f2b95f84a7fdcf88",
+          "Source": "Machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-19",
+          "Key": "0621f7bdd2120f29cbf561b59108e37f2999ca92fba48186ddadeacf4431b273",
+          "Source": "Narrow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-20",
+          "Key": "95f7fa69cad122e3305148c0156e323ff188ac54bda0297d12d937f31b5659b2",
+          "Source": "Piper",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-21",
+          "Key": "2e147a115761dcf9cdc612123b1dce78aa2c31506b93d873d03caa1f8aab6dab",
+          "Source": "Piper (g4)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-22",
+          "Key": "5425e0ddab75c5f7e68599e7e65c077da7ed08c25801401f991d8f2e37d7fd18",
+          "Source": "Proceed in Sandbox",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-23",
+          "Key": "c608ea51fd128ea1b530338eaa7f36548027b884eeeb964beba31bf35cf57e2c",
+          "Source": "Project 4K",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-24",
+          "Key": "1fa1e6bf4f5bb8ecccbc260b65125a4cfe256d04b0dd259bc4a902947fda3935",
+          "Source": "Queue",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-25",
+          "Key": "31647cc524b60b3c1845c1546e5c9e6f027cb75a789abad499220c485c52044b",
+          "Source": "Request Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-26",
+          "Key": "b4e8321c67ce95a6846a973fad9fafc3d5ec7f8251255cc0c12e44b9854fd823",
+          "Source": "Require Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-27",
+          "Key": "26e3827cc5b262f30c0a74ee3d97d77b433ed62127310f9d1ab640f56abbc618",
+          "Source": "Send Immediately",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-28",
+          "Key": "3f6f75c8760b556235d7c4fd857b740d89b6d065ede2d2ace371e9a7a3797f18",
+          "Source": "Strong",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-29",
+          "Key": "582bfad20e1d5a19888380581f5de01988115a0027ee47c4b0ecf01cf95e6af1",
+          "Source": "Turbo",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-30",
+          "Key": "2f62702ff2ec164d91086b9bb6abab21ba6d6768ffa17735400a3e39eb19c0df",
+          "Source": "Turbo mode",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-31",
+          "Key": "71b6badc16e3b02be523dc19542afd7724e42bf73880c96cb8e186f658b6ac49",
+          "Source": "Wide",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-32",
+          "Key": "6344bc86719f284b82339a88c25bde8e8f7b65a5c1fc4f348da97d2d42b40d76",
+          "Source": "A high-risk mode that disables all safety barriers. The agent operates with full system access, auto-executes all terminal commands, and reads or writes to all local files without review prompts.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-33",
+          "Key": "834286aea52a2ebd0050d49f8355b1b25a96b981ddf3d3b6d5ebd39899ba1277",
+          "Source": "All terminal commands require review. The agent can read or write to any file in the machine.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-34",
+          "Key": "2842be851871712a8e4e913b719ff8a75773630dd72d3b55a482ad9a38d4775b",
+          "Source": "Allow full browser script execution without prompting.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-35",
+          "Key": "c05f083e3fc1082dc2b8c49c1856361936b56f2432e0309373030b75a2f6485a",
+          "Source": "Ask before sensitive operations.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-36",
+          "Key": "c07ccdfc195b39215f0f0d96b5aa5397724015980eef7657617a7010c56a2a99",
+          "Source": "Automatically decide if commands run.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-37",
+          "Key": "6ab0a20960e431101068e751f93efa412599bcbd9d2f46e1bde092a98d76e1c0",
+          "Source": "Block all browser JavaScript execution.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-38",
+          "Key": "58ecd1d209d7f8e8dd2200fc415251e1d2c7dde2be82f7311ed0600fb6ef0e3e",
+          "Source": "Dark",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-39",
+          "Key": "3ba0e9640ea92c9f41cbadc3c48d54d0970f74e6a0503d2ab92c178a213ea31e",
+          "Source": "Disables all safety barriers for maximal iteration velocity.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-40",
+          "Key": "dd3deec43edff938b400239bd1fde4654553e8c8e21f70c9d990867a171a5fc8",
+          "Source": "Every command requires approval.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-41",
+          "Key": "2300a413e4544691b261b48d882f81bb1d0b845950fcc0c05113495a4f3d25b9",
+          "Source": "Inherits your Global Permissions when working in these conversations.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-42",
+          "Key": "59c8b607b9b31a8c2b85adf63b4f339e3c58f5812e4f53ff09c3fd74a4689592",
+          "Source": "Inherits your Global Permissions when working in this project.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-43",
+          "Key": "84cab5de1a4405641fd2df4a6099b6ab9eadf878209875bd5f5182f4607193a8",
+          "Source": "Interrupt the agent and send immediately.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-44",
+          "Key": "4ee16012dc5c3cfaec77b76d33ae5b1c2e26e7e8af613f147cef5500d93cc73e",
+          "Source": "Light",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-45",
+          "Key": "496da0cdb09c575a10c0bfe550baddc6f62a2513c4d760c024ed5a8b38cf26e3",
+          "Source": "Manually customize individual settings.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-46",
+          "Key": "9cdeb98af8d2fdaf3fdacc717e0f35afb5b437ff04580c575ab13f75afd8b700",
+          "Source": "Project 4K interface without developer tooling.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-47",
+          "Key": "1eeadd1a3451748fdcc6f9eea0b653480394a95626431f32ade2d869132daf5a",
+          "Source": "Prompt for approval before running browser scripts.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-48",
+          "Key": "4c95d36bad41d653826ecf7b5a6988477da02c9c360ee359128104f248e0707f",
+          "Source": "Queue until after the current turn.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-49",
+          "Key": "82ea77d135e937388c5cf1fe5e3dee8f880dd232f6b586fac68b10b822dfc763",
+          "Source": "Requires manual review for all terminal commands and file accesses outside of the working folders.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-50",
+          "Key": "74a521dd7cf852989c93553affe4ec71d0e1324f8c12248f3f0ce054ae93f724",
+          "Source": "Run all commands without restrictions.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-51",
+          "Key": "b92a3353f0c3628f1e0b42e53203b0a938ed7a399fb737818cc0f3d89d100939",
+          "Source": "System",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-52",
+          "Key": "f00537c5106dd8067a684e60549de7c7ffa8f3e99fc68f154848b0f24eec535c",
+          "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-53",
+          "Key": "6b0432f09719306278829e82451869b74433f8c56be83441474fce806c706d9b",
+          "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-54",
+          "Key": "9bb80c07ef94f9b4f1bb340042b65f846e19c7eec47d8454e1d30f06c05abd50",
+          "Source": "The agent always asks for confirmation before executing terminal commands (except those in the Allow list).",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-55",
+          "Key": "e1de2e09967a668eab06588d7ee5497e9dfaf1d7773dacb5306ad3ad20a99228",
+          "Source": "The agent always asks for review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-56",
+          "Key": "5f53cd293142cc6698b0e5d99c6aab80782e4488a9ddd89f269c7527f108e018",
+          "Source": "The agent never asks for confirmation before executing terminal commands (except those in the Deny list). This provides the agent with the maximum ability to operate over long periods without intervention, but also has the highest risk of the agent executing an unsafe terminal command.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-57",
+          "Key": "7b839486a71f3f90ecfda7fe9face9e8b65527a2ed3106ec83d4965b7dd8daea",
+          "Source": "The agent never asks for review. This maximizes the autonomy of the agent, but also has the highest risk of the agent operating over unsafe or injected artifact content.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-58",
+          "Key": "4fe67408c873f012c7298cdc877a5ed393e7715e8bb487aa0cb7d6e244087f31",
+          "Source": "The full developer experience.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-59",
+          "Key": "571ae51698d74b1595be38d1396c3e4ee585cdede710b0b2b9692c32e62f81c0",
+          "Source": "Useful for tasks that require file access across your full machine. The agent has full read and write access to all local files, but all proposed terminal commands require manual review and approval before running.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-60",
+          "Key": "6bca676c6d07bdd71a4acd8a156dac5fe7dac7791d351548914852e509e50bb1",
+          "Source": "Useful for typical development with an emphasis on security. It prioritizes safety over speed by requiring manual approval for all terminal commands and files outside the project directory.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02826",
+      "Key": "2ba9c87ce158db87c5909a761640902fb87592e24a0c1d80fa51e4404c7350a7",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "0e977b85900b8a832c9a7bdaf390c67cf82a4359ec28f031366c3e86b990aaf2",
+          "Source": "Advanced",
+          "Role": "section-title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "9a76e9dc899398e07b5860711606d216590c0748c614efcdb25cd9ba7aa76443",
+          "Source": "Chat Settings",
+          "Role": "section-title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "16c7f2ed1fbf57dc2b770925e8bb878ae70b9de3d8b1ce24ea43812ed51463ed",
+          "Source": "Context Menus",
+          "Role": "section-title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "c338eaefe800421ffb8218b4c3b93abc6a9d4abc02290577c01e394db5e0b43d",
+          "Source": "Custom Agents",
+          "Role": "section-title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "bd803f99ba253696db0040510f9570d3250aaea0989f6996d29c1a6439a95d7d",
+          "Source": "Customize Global Skills",
+          "Role": "section-title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "02a0ec6d66c916c2fadba49b90635a838b526fd3ca607e5ebadd562229a4a2d0",
+          "Source": "Default Customizations",
+          "Role": "section-title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "c1d14b26f22cbe73a90a89d3d723d23cf326872c8641a870291d947277ced36c",
+          "Source": "Execution",
+          "Role": "section-title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "aa2ae4ad2978dceac721ef39353517c8020ab52dd6e5ecc7b41463dec4344bd5",
+          "Source": "General",
+          "Role": "section-title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-9",
+          "Key": "433c1bd9970bce411502f08a73434dbdd10dadcc039ea7237eb175698581b591",
+          "Source": "MCP Servers",
+          "Role": "section-title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-10",
+          "Key": "eaeefcd7533038730a87c2995faab0124c8144c20cc0862add633b020618e275",
+          "Source": "Project 4K",
+          "Role": "section-title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-11",
+          "Key": "6e4f47d633bc3bb101ad1e5cacec441b4c7c2229e3652fa1056f61e0b7fd9706",
+          "Source": "Quota",
+          "Role": "section-title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-12",
+          "Key": "23f3f4f526fd200e28d8fa795dbeb30f4b4067f2f986b26e1287ad5bbf9124f1",
+          "Source": "Updater",
+          "Role": "section-title",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02827",
+      "Key": "b6295cfe080c4237ba018738fcd4d05c7129d5d9a86cea9a6ba32e77cc3e4285",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "00059138501a28defdc2bc4f623ea2062a7c039142b36772b068ddbf6c4cd256",
+          "Source": "Override feature environment",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "ca494390e35b499dd022c83a0fe70a7ef79373f0f604673dec9233745ffc40f9",
+          "Source": "When enabled, the values below replace the auto-detected OS, host, and user type used for feature gating.",
+          "Role": "description",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02828",
+      "Key": "d86a4b7b2129bc6cb727b305106abc81a9ddd57d7821a5f60a0f14267bb3134c",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "704ee61ef91f018035e7a68fed397ecca2c8c8ca4ed7193cd0105fa9512330a4",
+          "Source": "Global",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "73ac364254a5c2b90ee2016a0a754dd3baac10ac1b777f3960325306a183ba29",
+          "Source": "Workspace",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02829",
+      "Key": "19d7fe724c3dc6acb5267ba241b5b132a3e1f05bff0a286527c14aaeb07da17f",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "2b79ca0f299a7827892d268642e9c95c8a29bb1e0e95326a7a186196a9dc45a5",
+          "Source": "Previous voice",
+          "Role": "aria-label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "5dbd337aec979bf8a94c5b805765ab5e95ab8a4557a7045737216a08f8fcf63d",
+          "Source": "Next voice",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02830",
+      "Key": "7a6fc18e7b502de0bef986407d369219ec891ff3a3af5e4a78baf8d15d1c28d2",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "094ec728dc2fdbb12810c68de20c20f66cf8c10fcab9cd821b624be70b773f08",
+          "Source": "Choose Jetski's Voice",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02831",
+      "Key": "83297e2da58989248757c4ee2a1c177ad067e84bfa495072374cfa0bc9b1ef50",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "e454d50e38feec3c36ca01b92fb3563d759d93b8cd04b6524b4799093f29007b",
+          "Source": "You can change this in",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02832",
+      "Key": "b2ad85afa3e4363cd7f31dd4d49ec003c2bd999fe9e11561957cd6c260814256",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "df214a15f751a1a317e93e2bcad69fbdaf5dcb73ae4543aca5127c3470375307",
+          "Source": "Zephyr",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "946fcb7ac539159ecc901ec132489afcfe878ff37b10d21a8f249673551754f2",
+          "Source": "Puck",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "dbf2533c0acd2edd709cdcd91837f99a7377387b085835a181b66030b0b8d8d8",
+          "Source": "Charon",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "b6856182e89575fae49095bd0b8130824309fbcfeea0e6c762a66f4707fe3f69",
+          "Source": "Kore",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "1c0a8e312582c166e8014d7a080a6f5377ca415bcc3ade6f2647d039f883a02b",
+          "Source": "Fenrir",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "bffba6d7c1952ac4de551e089eb18dfb0e9457b04d611284e6969d2717393a01",
+          "Source": "Aoede",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "0bc24fff2610e85e67010f19dfbfde6a9a09808ae1d56ce70cc705e7a22901a9",
+          "Source": "Leda",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "eeb317671838dca4d581b603a393e6b68e39836475d61b59b1aae1112a4fa46a",
+          "Source": "Orus",
+          "Role": "children",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02833",
+      "Key": "1d3e1b1ac97f6369651ddb2cb3fe57c61b6be6d0defbdb82f81a24d06e4e24be",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "3b0cbff537659015628712b633833fbe31de7ef3cf4560d4eb2fdca50997450f",
+          "Source": "Bright",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "024906ad945fe5e2dde170b558d4d72cdaae1b09e07fbf401dd6d9dfa3515acd",
+          "Source": "Upbeat",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "18c4cc1fe985c0c8d172cb6aa7c30869d3e2ef3ccfccdab01350bb008dda7924",
+          "Source": "Informative",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "61612f3b06fe68f7e725ecd4c4ae00f72b760e5b4e1a704f6f8f64b244b88308",
+          "Source": "Firm",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "ddb2581852ff7fdebe77d17c126190e3fbdc0aff7394b7a947abc60a16f42a75",
+          "Source": "Excitable",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "421671a497df78de850be77a2052850d04e7875f2e27b5c43f72d3228eb3a4cf",
+          "Source": "Breezy",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "70d125e8ff98d82220e0ce5cdb0c71abadce07d12d0744871cd97a699a555e22",
+          "Source": "Youthful",
+          "Role": "children",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02834",
+      "Key": "0b3bcc1e5be65ec15f3a07b1790062b38d06bd47220748dc388f56bb9bbdad39",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "3b0fddfe9556ac8f9100875bcbcc805cc458af868d41f013e9081d9799e49f6c",
+          "Source": "Voices",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02835",
+      "Key": "cdd2426e8b4083c49fe9792f6a660a0fab954ac52ed277135218f8dc26c673af",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "eadfeffb45be6db121913114fb8162df2d3148820642a4b803956c89b0981087",
+          "Source": "Zephyr",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "0157ce2f64e07fe2cabbd14aaf41f149eaae051654f9f577329bfe095cf4a115",
+          "Source": "Puck",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "a85ee22b4a4730db4202d3b5ef03ef2e0362ce82d5f896368265f6203b93f329",
+          "Source": "Charon",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "7019698c7900976677c5f5bb7799a0bf356c9e2a76b9262feb2cad00298f70fe",
+          "Source": "Kore",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "6516c359932367089be4a2ea0d554eb6cd429c24271aa7a84ddf4073e17e4eb2",
+          "Source": "Fenrir",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "1654e20dcfbf9ec6f44e0189ae202cfc70089bfe64950d0bf72d79afe9c014fc",
+          "Source": "Aoede",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "fe1c800643d6fcd027b2364e294dc3af0f83b3a20b89e56a05972dbff74868d3",
+          "Source": "Leda",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "861033ceb4f758533286cf4822398c6b3960248e3c345e63ea9019e6e7882860",
+          "Source": "Orus",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-9",
+          "Key": "3a4ed6f7e523fe08f4eda8442b70381ae1327c22c2f02bc12358894c8db91c93",
+          "Source": "⟪AGC0⟫, voice ⟪AGC1⟫ of ⟪AGC2⟫",
+          "Role": "aria-label",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02836",
+      "Key": "b4e8048bac08099f03d0571f0d30762a98eceaabaee814300751fafc7b0e0a39",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "e1789e68c72d9241088b543ac2e784ee622d27d9f170d78b46479c68621b7d27",
+          "Source": "Use Zephyr",
+          "Role": "children",
+          "Shape": "children"
+        },
+        {
+          "Id": "text-2",
+          "Key": "95748c5b2e70f25ce9e0048f15194738a9c2075847f25d310c5516be14b5cfe8",
+          "Source": "Use Puck",
+          "Role": "children",
+          "Shape": "children"
+        },
+        {
+          "Id": "text-3",
+          "Key": "6534b3b7ef3a0fcf6ccf90bb788a0d96a8bae9d4a8c06f7ebe621cdd958d3777",
+          "Source": "Use Charon",
+          "Role": "children",
+          "Shape": "children"
+        },
+        {
+          "Id": "text-4",
+          "Key": "b2a1396d4e7cecf26224847ea36d79e845c2c5ffd2e702385373a886dbb19d05",
+          "Source": "Use Kore",
+          "Role": "children",
+          "Shape": "children"
+        },
+        {
+          "Id": "text-5",
+          "Key": "f8f181220e735e67bf97c2179379963242fa6fdda071ac53a053a22f88fd6bd4",
+          "Source": "Use Fenrir",
+          "Role": "children",
+          "Shape": "children"
+        },
+        {
+          "Id": "text-6",
+          "Key": "2e9317a79c958b25f45e9e25ef8b69711f8f206fee1fb24e1ac1982845e8a65c",
+          "Source": "Use Aoede",
+          "Role": "children",
+          "Shape": "children"
+        },
+        {
+          "Id": "text-7",
+          "Key": "8586f065061f69e7343e46489029579a10e2c8335de3c677ca48d33878d33d04",
+          "Source": "Use Leda",
+          "Role": "children",
+          "Shape": "children"
+        },
+        {
+          "Id": "text-8",
+          "Key": "817acb33fff501eccc10b67930de709ad114c6a5a20937ff8b91d35385a8cc53",
+          "Source": "Use Orus",
+          "Role": "children",
+          "Shape": "children"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02837",
+      "Key": "cdd8c94bb7ed124b6698ca1e21e7b2bbc65f7c60c4efb4d249587097b99507b1",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "8a13549841d4508a4b41a275d5b65038228659a02e256da1144e9b1ba78f0f30",
+          "Source": "Voice",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "761bb52297d057cca1383d8cf29bd1c442d7ee033eaae2009ef778e44820e17c",
+          "Source": "The voice Jetski speaks with.",
+          "Role": "description",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02838",
+      "Key": "0adc74ded828f3a219072eea441c744cd714fb229969ae6a806b3fcd9a1a3093",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "65eb8b3b0829ef0a66da082ee8f2f6e354da4320dca88e16fe583d3fe3d683d7",
+          "Source": "Not set",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02839",
+      "Key": "67cb1662e93ed2e6c455e1a7ba9ea9f18715a8df487c18065e574a5292ee2b90",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "0fe5340c622fdc9a29f98cad6bf7364e91d9df098aab18746ddfcff41b749daa",
+          "Source": "Change",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02840",
+      "Key": "2f0b7e03c851aa1af80a1e9d431f309122b4704bbfc91f63c74d6f42c59ccdb5",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "454b0769c865487ac18ee4439cc22191fdfbd411d083c1e55e30f4ad138526a4",
+          "Source": "Microphone",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "deecd86d998f3dd2521c4a45c8817f29462a7c31262af09d9f163d393e7afcee",
+          "Source": "Input device for voice mode.",
+          "Role": "description",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02841",
+      "Key": "2c4605bca79b56679839a935e74e66855668a112356cc0555978f78dbb753bc9",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "de554962bfb59edf89a379e1f8887ac2492bad52da7759bd3daff39ebf7306cb",
+          "Source": "Volume",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "63bfe7a558e11f60a5198968067a21a10d143d08c248e1e9acb365246510bf38",
+          "Source": "How loud Jetski's voice is.",
+          "Role": "description",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02842",
+      "Key": "4389ab931cb137cd20b427c68ab40a4d553beb85351b608a768848598f1726f8",
+      "Kind": "ui/input",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "a8afe04a975f487c65108ab8689a62c06d8afa4e1318fd64b8ce275c0c9c8c33",
+          "Source": "Voice volume",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02843",
+      "Key": "b1e910965406181b6744e6a8664031af48c3651146bcbe0bca6a930ad9d41c15",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "913f3096b34ba36fe3e11562eddd29dd2f5f6e5150169d2d06bb8fe137cc25a4",
+          "Source": "Voice",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02844",
+      "Key": "b956aae925e73db33b32058205aa16bc6dd7419e4ef538b0764d6cc97dd90309",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "580e94c7ed1ba658d49956dedce09f97b4c868f01876c405309ac2a087b377a1",
+          "Source": "A high-risk mode that disables all safety barriers. The agent operates with full system access, auto-executes all terminal commands, and reads or writes to all local files without review prompts.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "abc190bbe5246358443b3571643d941737fb5458443d52e54008acb9efc5ca26",
+          "Source": "All terminal commands require review. The agent can read or write to any file in the machine.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "8fdc0682d6d42fcffb9dec73d8e07a6a9fa6283ed957a34fc76c8063640e8cdf",
+          "Source": "Allow full browser script execution without prompting.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "27463fcd594a0b4d9553af4ecb3ec120ec38bae14316ee6f4a6de203f9e396ef",
+          "Source": "Ask before sensitive operations.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "3b5fef5aed2b57ac2495a821b97b2f9512ea2b777ddb984b7f62505243a3447d",
+          "Source": "Automatically decide if commands run.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "09af1e2d407f1404718ce60a1aa49f3f4f85dcf15cfa1529ad20f1991a4833db",
+          "Source": "Block all browser JavaScript execution.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "0364a3e4b6f5cafd853a88e7155f829d2682281d8baa778f8caafbb89b08a3cd",
+          "Source": "Dark",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "08334386c25ba469349d7e42654f8e5c0d75e9105ddbe1c0bbe57645cd529cec",
+          "Source": "Disables all safety barriers for maximal iteration velocity.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-9",
+          "Key": "1e0c4adcbc19e64fe30f2f5e90ff7b39fa94487bfcb28ad2baaf762fa5a0d98c",
+          "Source": "Every command requires approval.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-10",
+          "Key": "eb291eb340a4b7c653f7baaec732d3640088537055977b6711a2520a7ce09bb7",
+          "Source": "Inherits your Global Permissions when working in these conversations.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-11",
+          "Key": "1cf04097ebf4d3d9e3d7990cb231fcc8bd8093ac48dbe338f2cf4f0b12f22693",
+          "Source": "Inherits your Global Permissions when working in this project.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-12",
+          "Key": "72c27c2ff06074aa07cbce139d38a075dc6355dd679c7971a4c2706eb1dc0c67",
+          "Source": "Interrupt the agent and send immediately.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-13",
+          "Key": "b0e877a9e52e7c5b8812110aa5811f221d10871678df599c3482fef7af815348",
+          "Source": "Light",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-14",
+          "Key": "624b1194b6343dd698a549d201936fe8e31a76d6de47ccee25f9820a46fd4a38",
+          "Source": "Manually customize individual settings.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-15",
+          "Key": "e11ecb8490d03c5f4e89525c792216071f5ee1a674d535fbb2fabf6093752487",
+          "Source": "Project 4K interface without developer tooling.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-16",
+          "Key": "20daed87abc40fe9260b3aace415b7391dbbe21e06105cc189fa31b0640fcf37",
+          "Source": "Prompt for approval before running browser scripts.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-17",
+          "Key": "bce643a6ac298e50f8a2adfada76fe635b17ad18aa9f4262f6aa13b555e41daf",
+          "Source": "Queue until after the current turn.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-18",
+          "Key": "0853acabb1340774c1ec8027d5e0167a06876907f6cd0a0995ce45609fdf6d27",
+          "Source": "Requires manual review for all terminal commands and file accesses outside of the working folders.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-19",
+          "Key": "dc8fc67edf1283c3a01a617960c7665be645d17201d40945b15df75b2b989515",
+          "Source": "Run all commands without restrictions.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-20",
+          "Key": "027b58e67b1d560c6211caaf2ec03fb7c96a3c366d2ca86eddc17d72af7f7220",
+          "Source": "System",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-21",
+          "Key": "b823c1ab11b4d496476872dd58efc09dca7c3a1f2b69c6986d90c08be942f4b7",
+          "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-22",
+          "Key": "64f1fabd96bfed38d01ae6e844997311a69726c2ad6a91ab2fbf55a115699d47",
+          "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-23",
+          "Key": "c2d994f8496f52217514dcf21f9671c3aeb0856afba85b4618a43ba4abc9cbe0",
+          "Source": "The agent always asks for confirmation before executing terminal commands (except those in the Allow list).",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-24",
+          "Key": "31d54400adb97a0e76e50d14933544026362ec977b9070f7202fc67786b5c643",
+          "Source": "The agent always asks for review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-25",
+          "Key": "600c547300ec480961dbac7c95c050091fd491ac9fa8f00b3009e2b84928a8ef",
+          "Source": "The agent never asks for confirmation before executing terminal commands (except those in the Deny list). This provides the agent with the maximum ability to operate over long periods without intervention, but also has the highest risk of the agent executing an unsafe terminal command.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-26",
+          "Key": "95b72b12fcd13ea6a3099040fa027712b014d35729c9507f0da08b2a79160a70",
+          "Source": "The agent never asks for review. This maximizes the autonomy of the agent, but also has the highest risk of the agent operating over unsafe or injected artifact content.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-27",
+          "Key": "96096e8f9300c5edd39cabd81aa7000a50e64529694dc78d75ca01233effb7fc",
+          "Source": "The full developer experience.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-28",
+          "Key": "800686dd02921c20c9557e6dc87f73c441aa27e1b5ff4f7246d80447607a0f95",
+          "Source": "Useful for tasks that require file access across your full machine. The agent has full read and write access to all local files, but all proposed terminal commands require manual review and approval before running.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-29",
+          "Key": "f6de5be1cab400f254ff8e2384fa981c0b3dbe4600d4bd6dd12eb9c0f734cb16",
+          "Source": "Useful for typical development with an emphasis on security. It prioritizes safety over speed by requiring manual approval for all terminal commands and files outside the project directory.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02845",
+      "Key": "a58a5554e86625bdd7835dbb658240d7f490c909fd1f34a753fde92830ded6d3",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4f653b663e61b6e1d222cb5f2e0f2fb4a19d3269cc5934335cb7fe15c4814018",
+          "Source": "Configure the browser subagent. It requires",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "e3b40515d78bdbf5b2511696f68efcf196b77a0ec1f2738d82c802121884b6a4",
+          "Source": "to be installed. The browser subagent can be invoked by typing /browser in the conversation input box.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02846",
+      "Key": "48ced87dbc9c54eaa560fa1d2c861a0fe509a160ce22ad6fafd2ee30c5b261fd",
+      "Kind": "ui/p",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "0d7c5574cbd82fd9cf0cdfd5c37ba5fc6e6c8953720a3b79b81d6ac03c6275b7",
+          "Source": "Uploads logs, settings, conversation summaries, and voice call traces to your Drive.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02847",
+      "Key": "dde200db1d1deaa37a4a934cbd2cc06188237d19bdc7eafc1aa3121a329d3d34",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "7b124ac13a4e13a06dee2d11402dd48426348f3c520f512bb2a96d78b2b3cfd1",
+          "Source": "Markdown view mode",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02848",
+      "Key": "67b011370be58550e88f3ca5e3a8e3b7203796613bad0626031fe78f5f897b5d",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "6450360bdb2d19d77f6a284ddfe468ff4f37fca5c7ece60b7317cbbf0ea89747",
+          "Source": "Preview",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02849",
+      "Key": "81c2fc7c3ccdf744eadc08e66a9d9d68883e4b4fb206f4bb3211b45b57e1913a",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "0d5aca2587f517592f3c0e9af090f09aea8239325c6e84d9e781b5492c154e5a",
+          "Source": "Raw",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02850",
+      "Key": "a936a7852edfb616aa82c0d0378906b6209258cabc2b3c4c725958110c66dd88",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "31bec831bf066cd10072a6699bc6e9c6933ec93701b560f87d273c7e62faa981",
+          "Source": "Accounts tab",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02851",
+      "Key": "bd711053dd1a8db24230a96b8103e35471c83a77479c2ec54ac60ba97f33acf9",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "3bcd67b3876a6c3b0d4148298be815cfd4bc9831429158c2e6f1d87ebb8d6b6d",
+          "Source": "Couldn't switch accounts: ",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02852",
+      "Key": "577f3e188763adc2f25546444134d33ae724af29ef6f3a5cfc8ab3974b17cbfb",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "837b2c62eb9e1e4dfc869fd1104de862b28ea78c08f051a72bd996499c92b326",
+          "Source": "Signed in as ",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "263c0dafe8c17cfb5d503b6b9101215cc2f34453a103d0fa3e7cfee84631b9a4",
+          "Source": ". To use another account, add it in the",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "294dafe5ce06e25ccca87e827930ed6e24570a1cb97bc579d02ac36d5f1879f9",
+          "Source": " and make it the default.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02853",
+      "Key": "511ebf46d116e74304fc227cc012b354ade46bf33b4053f49d62fd1a4dd2afe8",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4f39dd11031db1f5dde127d4702abec5754a25072ac28dfbdc1d74061df3d3a3",
+          "Source": "Signed in as",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "6ad298658b21d8e3f84d9e711dd7dd3b3bbfdc583b441e10f7de064bfb7044a0",
+          "Source": ". To add another account, go to the ",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02854",
+      "Key": "a2bc97e2dc54fe05c8a0e56ae60c70ffd9f592f0e616072154ab176293e02e17",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "e1c3bcd1537a4ea47a0504f36fb78dc1ef4fb83ba006472b828455e8590a93e3",
+          "Source": "Account this MCP server uses: ⟪AGC0⟫",
+          "Role": "aria-label",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02855",
+      "Key": "4399e16114702e4fd2595c19530c2d49c3aa5c072fe3ed724853bb035b79706a",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "ced30beab1c853a28e3c1248503f86e7edac96c2ea800d35b41f2fb8ea65e48a",
+          "Source": "Rename",
+          "Role": "aria-label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "907c879ea7a8d76d10cf255b26f343b1d8c48fde0ae2e458cce281e234dea5ef",
+          "Source": "Add label for",
+          "Role": "aria-label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "5cb7bbdb9b33421c14754e9e547fa0d5d8bd5fd0df8ecb38721d9d2957da0814",
+          "Source": "Rename",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-4",
+          "Key": "506668f07a0988f55c0ba8b9e6c95315a60a85abd2839a35889a58b13c172a17",
+          "Source": "Add label",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02856",
+      "Key": "990d175f1ebeddd70dcdbbc54468af54bf5192eefcd7da44ab2007f4dcf944ea",
+      "Kind": "ui/p",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "c095c0e7028631ff1551b959062eef864ae2436b54d4fe04d65dd0bf8fe6ebed",
+          "Source": "Used for: ",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02857",
+      "Key": "ef45ad7855682eb00744a5a6bd890df3e8ab96e2900d057dab865415aa69aee9",
+      "Kind": "ui/input",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "bca8683a76e907cfd88820e19446fb7ed2197abe9f237e7105832b9e07c4fc94",
+          "Source": "e.g. work",
+          "Role": "placeholder",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "e2fe6a86234e3ed976cd99cae39a49c19c446079e2bec2413f2655f103269336",
+          "Source": "Label for ⟪AGC0⟫",
+          "Role": "aria-label",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02858",
+      "Key": "10ac418f229ea8c839f828ef632182fa16a47352f5d2cda15ee52bd8a1917687",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "3e8fc730d177b53f1a054d00363dfbe6b1753c349187a84fd575a4d241c8f1b1",
+          "Source": "To switch accounts, sign out in the ",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "76c4d6ac8f11e4ab225a2fcf763494a57d2f45535e7755b4cd0bbed150ba8c97",
+          "Source": " and sign in again.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02859",
+      "Key": "559044647068a3cbd3ad65d7f04aa9db56445a32c7d1045f7b65554b6ffd4c02",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "a8fb19bea3c8d9df265fcccdd1c7b8f703eed221aa4f957f9085a025657157a0",
+          "Source": "Loading...",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "a60bdb73b77109d5c9555a60d5765b4c03ae94b8cb2d849cf03879c1fca590b0",
+          "Source": "Enable",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "a5948a25ff3c6e31c43c7669cb2dd0433f3f2d514da7c917541b5b6b026ba226",
+          "Source": "Add",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02860",
+      "Key": "e4cb94e773bfa86a5a12bb718df0002c9a9a28825072cf65717ddb1cd1722db1",
+      "Kind": "ui/h3",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "9350bfb1b4ed2f4089b81807fc882e39b5f7154ea4ad838c48b4a94d419ecbfc",
+          "Source": "This chat's environment is paused",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02861",
+      "Key": "7b5d1ab78cb82e8d0d928ca8fe47f745166e0783f2eb8c9caa340490b0c66c20",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4d4800b7dd07ffd85c716ee7479288b0bdac9e48730739bf720b332d6f4d0e90",
+          "Source": "Resuming environment…",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "6af50c024153fa77c3e8fcf888e94384a56f3fa29e01f400dffa66e010cdae22",
+          "Source": "Resume environment",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02862",
+      "Key": "07328cb374ff370327c56ae0428ad9d5b8491c82dc1b64fe28a57e663e1eaa6f",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "83ac9caeda41b7cd5e2bb06c1962ee1f67e76ccdf6d6b0819e30660a38b8059c",
+          "Source": "Resume it to load this file.",
+          "Role": "description",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02863",
+      "Key": "9dab5624259207a54621d5a3fc40f05df95ffffda18591b32abc686582dcc605",
+      "Kind": "ui/menu",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "2c34a948d7274a413f1dbb3876ddc165b199dd664b10ffdda1bc68107c445d0d",
+          "Source": "CitC Workspace (Do not use for PII/NTK data)",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "d1aa876bc3d62620fa83fa073dd77a6591c40cbede3a7ba3d32a43121c86f046",
+          "Source": "Work in a CitC workspace.",
+          "Role": "tooltipText",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02864",
+      "Key": "ccc67713c21d1e6002959b8710d6f046c1f62d0eb117bc637e743f874c80fe78",
+      "Kind": "ui/menu",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "8c2ddd050082f7574e7fcc64bfe129052c251816e1ffc7889581044689480fb6",
+          "Source": "Cog Workspace (Do not use for PII/NTK data)",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "c44b4e931e466bf82082b9df330ee3d5142bf7b8fdb655854596d88735667129",
+          "Source": "Work in a Cog workspace.",
+          "Role": "tooltipText",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02865",
+      "Key": "b52f192334ca316a9df99cb118b9c2bcd0330b81f8cb140f09c7a8be1cb83119",
+      "Kind": "ui/menu",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4aa9da6754a13fe29c1a314541d9111a205a5401b399531f20b48d06d14452eb",
+          "Source": "New Workspace (Do not use for PII/NTK data)",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "6c70d6373d20162185773a2d14e6b95e5c30f11d1cdd1ee34ec7072c43ebbab4",
+          "Source": "Create a new Piper workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "tooltipText",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "5e1d39cf9b664f02188d4201cf77d05bfff0619123ffc5e7755d77b5a910af16",
+          "Source": "Create a new Fig workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "tooltipText",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "aed41e9fb7cc46c713d18b0b7d33fd511d3240a21a097d8d36f95c6ce0e9bbf0",
+          "Source": "Create a new Cog (GoB) workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "tooltipText",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "dcc12bf51e884af400e8954dc6871eeb7355704abfed7e4e64962dcf5d172da2",
+          "Source": "Create a new JJ workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "tooltipText",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02866",
+      "Key": "dfc8b53dfe10a2a0f52fa91e9b3b8a4dc4da85b98b2f03cfee276ba00910d3e0",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "c56a29152d1963ec0a6480f1f73b3a619ee41172eb92d53b9fa97e9a5c8d6390",
+          "Source": "Create a new Piper workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "1a69b4d9b60595b7324ea1146153f650635c890c7c368f928eb3ca50c1af6620",
+          "Source": "Create a new Fig workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "37d8c1175b63700f393e6c14d811a9d5296f2c58fabd2e90beb77b5cbc3e0ed0",
+          "Source": "Create a new Cog (GoB) workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "713fb60f8b637d1d10ac46a967e5a072180e86714ea3656ad71ff82851246e3f",
+          "Source": "Create a new JJ workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "027e14a38c788bb62e9e08533788eee5effbd502589b13d0c3d862a430fb418a",
+          "Source": "New Workspace (Do not use for PII/NTK data)",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02867",
+      "Key": "a422b07997cb7f8a72767805125b31e4560e77276f93843cffd0cdce4d1b67bb",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "210f7cbe76987b6468b692012367e5f07d61f006f05ea4f452f0734e471b1de3",
+          "Source": "Create a new Piper workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "779f0b7e8a565a841fba3e2795d2bada7f1b09951c942781f1fdab8e73d1e3a1",
+          "Source": "Create a new Fig workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "dc2a28c78795945f675216d213781c9d751198ff205d41e23e38fff0f1deb02a",
+          "Source": "Create a new Cog (GoB) workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "830b7ba7d867c74556a419cfbfd37b520b44aa111490cf72667c471761546062",
+          "Source": "Create a new JJ workspace from your initial prompt. Customize in General Settings, under Advanced.",
+          "Role": "children",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02868",
+      "Key": "4c718ef98f5065ddfe9f3b1e939b223daf362e241cd2c1123526c6628ec572c0",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4d993ac206d460d9acb701ba83899db9d666e5a026b8a0b8048a36e176ac383f",
+          "Source": "Remove context from ⟪AGC0⟫",
+          "Role": "aria-label",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02869",
+      "Key": "03c07b1fa0bd560ef8cf1b80bdf597c940b2e3fb6826e239b11c013d254f877d",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "953767463fd1132fb150b384d96dd710875d0dc7d52d19e572b7b7bade19be14",
+          "Source": "Allow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "aeb0a39bee9423e6c46d6b77455f03de0b1e3ab29e411fb2fb20de8e25d3512e",
+          "Source": "Always Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "61b1973bd51104e118da0235d71faa45474f628103992ffa0a4889b8d238064a",
+          "Source": "Always Proceed",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "17eb4570adbe959a0439031f1c5195c6221805e653604465af026f730bc9eeaf",
+          "Source": "Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "0867f93ee651ff98fd9ab80c27611d58074a07f966d98671bcfc3a72297cfe03",
+          "Source": "Auto",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "7ab08f159484fc53c0bd72e6913feed37af9b9036a75b005fd28702c56b05bd0",
+          "Source": "Auto (Preview)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "7ab159df60c096548b53cf83d4b9f43af00051cdd509ece379f39f64c138730a",
+          "Source": "Cog (GoB)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "51313bc9f77fa7603800dddc5e8f2b0102a6a5df76854fc86076a8da15fc23de",
+          "Source": "Custom",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-9",
+          "Key": "78ff56c31d3c5ec5822c31e4a25f24ded0d24804422e661c4340c60d911bf681",
+          "Source": "Default",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-10",
+          "Key": "fbab42de6b4d4d741c2a7d08d119f58fe5d9d42e0b642b3691560d0091d28f75",
+          "Source": "Deny",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-11",
+          "Key": "ebabab9aff3a23398c20f6ff0889f187fa845867d6d159c00a62a5977089e154",
+          "Source": "Disabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-12",
+          "Key": "cf516dd3f96b53792fceeb3eecefbcbe0bb95baed65a7fa6df1b692c67bec37b",
+          "Source": "Enabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-13",
+          "Key": "0a49e7d39c419d973314204917435213a8fff59357a8513a2bf7f6f062c80a80",
+          "Source": "Fig",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-14",
+          "Key": "31885adb5bb67efb1f30c645bb00d00a33c8a7b00c7cf44a608197b348324934",
+          "Source": "Fill",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-15",
+          "Key": "08edabb5e5eea2c56e36da12e97814efaad4e76848321e307b0d8afb55fd1c6c",
+          "Source": "Full machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-16",
+          "Key": "4665132213d6d0208fbd42e8fc85d30145e88f0cfe49e457c709e2659206235f",
+          "Source": "Inherit Global",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-17",
+          "Key": "e4999ec36aae7338329798337c6e3e9931ee779afeead37c175f89b56268b275",
+          "Source": "JJ",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-18",
+          "Key": "81d3f759a728f7146f945a7b0417481fd6aef28241b1ec5bd0871a08d12eef09",
+          "Source": "Machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-19",
+          "Key": "215f075d9ef0de103d21e36230ab394dcee95ac76b0c07914db4e7016b42ca77",
+          "Source": "Narrow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-20",
+          "Key": "d2f7dee1c24236dfa7b49b73ee510cf89a408202a87f2b6110bf244e95bc1ebb",
+          "Source": "Piper",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-21",
+          "Key": "212f53cfd5210dfad6b5eda2c87be7341d536bf7f78380b78c3bd8a65e94d38d",
+          "Source": "Piper (g4)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-22",
+          "Key": "25019e9436b6aa6253e01a8a2ad18b640e43c5fb28696b84eef1c8b66d831270",
+          "Source": "Proceed in Sandbox",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-23",
+          "Key": "a8e631808d2d2dacc05bea5ff6c53ecf16eb364345a4194e11847e2053fe40f2",
+          "Source": "Project 4K",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-24",
+          "Key": "19df24aaa796dd4ddfe8a98febaf05ae33e3e80d2448f6ffca767208385af419",
+          "Source": "Queue",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-25",
+          "Key": "6cd1845c540c62dbbca45df319b0f12c6e71d0d9458a2289a53d9513640f3995",
+          "Source": "Request Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-26",
+          "Key": "928dbfed1ba0656a86b943bc2ad91f551180f21f86d0c26368424a541548df7c",
+          "Source": "Require Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-27",
+          "Key": "ce8cfa2f12622b2dab02db415e41de8640f0c2e66578977058c8e2fdc4188fac",
+          "Source": "Send Immediately",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-28",
+          "Key": "7ba331fafb57131bc314d209b1928eff7f56ff3c87d7a028288e9e10fd7a1a7e",
+          "Source": "Strong",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-29",
+          "Key": "b3f765bdfda759fd1af7aaeb9940c6baf10fc8d97555dd6c4a13533606e44da2",
+          "Source": "Turbo",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-30",
+          "Key": "179e23871b272c6433775e160d58eb43eb7c8b3031ea07f4f130c72b87eb12c6",
+          "Source": "Turbo mode",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-31",
+          "Key": "7f9f8d14c1bb2b2fdc47b8c0f7dd6248a511d080e2c614ad5962fd64eb3ee7f8",
+          "Source": "Wide",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-32",
+          "Key": "88724653d27ced3e94e66308260f4e82fde56ab94169bba95df6dee2d4377cbe",
+          "Source": "Agent permissions preset selector, current: ⟪AGC0⟫",
+          "Role": "aria-label",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02870",
+      "Key": "dcbbc4bed6d9078db0195e216eae3d1b362c35c7f9d515fb78b5295c407bd8d9",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "7014d764baad204b7079e0aafd46abb7653ac6f05f5ae07a2cf813e7b8497f9e",
+          "Source": "A high-risk mode that disables all safety barriers. The agent operates with full system access, auto-executes all terminal commands, and reads or writes to all local files without review prompts.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "7a75215f7dd0485780e773ef92b3994dfaa8cbbc95bc97c15a7a63b838addffb",
+          "Source": "All terminal commands require review. The agent can read or write to any file in the machine.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "6d183b3a8cdcf0c3035ea8addb6e2d52318cd63d0d664a918cf756f8646b0685",
+          "Source": "Allow full browser script execution without prompting.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "1326e4e642232f3a92972ac5a5a1a2c85b47f600771cb9cd00ad858717827ca6",
+          "Source": "Ask before sensitive operations.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "9e889132d50cd63df1b4309765095e3ddc3e663b59e8eedf80f27695f9b31936",
+          "Source": "Automatically decide if commands run.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "c6e4c0d82dd0c5e837cbae1b46f3b8a92225530d4954356d73bfc8870d353ec6",
+          "Source": "Block all browser JavaScript execution.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "eb2651b7de12dce5fad8663bc171171503ddee7015cebc1460b3be45d35524f6",
+          "Source": "Dark",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "2a6faec485c8526f58a5ae14a58bd507b632a8f0028b66269048d69b880f9965",
+          "Source": "Disables all safety barriers for maximal iteration velocity.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-9",
+          "Key": "8451613b868fc302bde6791c289ffaaaf6d2d60b45931237f1fec97200a489a8",
+          "Source": "Every command requires approval.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-10",
+          "Key": "4a36564ae3f080e41b1fd7c1d8018fa084a459a1feccef0f42f4847aacf107e8",
+          "Source": "Inherits your Global Permissions when working in these conversations.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-11",
+          "Key": "286ea972ba97def1ec5b7c79b1ab3bceb14c5151ead405857c6e2cc9ce410f23",
+          "Source": "Inherits your Global Permissions when working in this project.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-12",
+          "Key": "480b03bd64ea900fe89c4b352f13312f856c0beb49c0d848c15618d1e4d4d2b8",
+          "Source": "Interrupt the agent and send immediately.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-13",
+          "Key": "324650dca5b08b521f42e43219b66b65ef4d4c83173ba8a33523ed9b4dae83bc",
+          "Source": "Light",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-14",
+          "Key": "6a7e046c5a5e1952ceca8d7b8fc4c070d2457d268994d55eef7b17c5c7ee3fd8",
+          "Source": "Manually customize individual settings.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-15",
+          "Key": "46617596c15d90dd1bf5683678fc66fdfe82cf348996199bed63b0b062c348d0",
+          "Source": "Project 4K interface without developer tooling.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-16",
+          "Key": "4bf7c9c8b6ec83036e9226f725b8bc3612edb8b02a0ae3de966c9a3a009cc385",
+          "Source": "Prompt for approval before running browser scripts.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-17",
+          "Key": "762a1f63e4fbb8b110269f83e04306ee499cb6d1514bd5cd955f4d188733f2e2",
+          "Source": "Queue until after the current turn.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-18",
+          "Key": "8bbe7566cd8a08e427976a7c3bcbd4593e0c018a008c57eea32faf1e8fd48d2d",
+          "Source": "Requires manual review for all terminal commands and file accesses outside of the working folders.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-19",
+          "Key": "785cb05ce3377415ccfe75d4eb75c69d91e5548076477d9b4e0352a9cb0100fa",
+          "Source": "Run all commands without restrictions.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-20",
+          "Key": "e3c5c0b9426d7c2e2c5fdcf2f9829fc7a81b079b536e66c5509f9fb8c5a7f138",
+          "Source": "System",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-21",
+          "Key": "c06a965eed52b9369f638ca35060698f6ed1799fd37d07dc1252dbe78d89845a",
+          "Source": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-22",
+          "Key": "3747a3a86cc985fca96ff3276aaec36b9204ddc699689e97cdc6cee99d0ec0f0",
+          "Source": "Terminal commands automatically proceed inside the sandbox. A command that needs to leave the sandbox proceeds only if an agent judges it reversible, and otherwise requests review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-23",
+          "Key": "a7c3e88b939e16d4df47f88c342b0654a0f9566ce420d19acee0e350f3afd6ec",
+          "Source": "The agent always asks for confirmation before executing terminal commands (except those in the Allow list).",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-24",
+          "Key": "521dece04a84a6c2d35510b54fe31374a04b32c5168513332ecbff838df4510c",
+          "Source": "The agent always asks for review.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-25",
+          "Key": "3071047f57152c943b36b4031b657dab042f2f40c2ee0e48bcae4c231ff14103",
+          "Source": "The agent never asks for confirmation before executing terminal commands (except those in the Deny list). This provides the agent with the maximum ability to operate over long periods without intervention, but also has the highest risk of the agent executing an unsafe terminal command.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-26",
+          "Key": "d30bd32fd69995fb46e93bcba92f4c66f4898f596338aaf051a117f2bec3eb9f",
+          "Source": "The agent never asks for review. This maximizes the autonomy of the agent, but also has the highest risk of the agent operating over unsafe or injected artifact content.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-27",
+          "Key": "51c497ef41b0484117888eb1879f29fd54993034a21a5bf19a905525a875d9d2",
+          "Source": "The full developer experience.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-28",
+          "Key": "73163df18cf6cfd2e2c4114bec95576a7c1c3f6c2dddd269b54563b950dbdf52",
+          "Source": "Useful for tasks that require file access across your full machine. The agent has full read and write access to all local files, but all proposed terminal commands require manual review and approval before running.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-29",
+          "Key": "37bb22229e5ac48dfb125d7cfde7e846a87737d236745691906674b0680e8911",
+          "Source": "Useful for typical development with an emphasis on security. It prioritizes safety over speed by requiring manual approval for all terminal commands and files outside the project directory.",
+          "Role": "option-description",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-30",
+          "Key": "878672744bdcc6bb9edd70c99137ed657e2e0f5cc14111c57d649fd2e6094b65",
+          "Source": "Allow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-31",
+          "Key": "8c14857b9b3c88cb7bba1e2cb985655429f2b509739acc99e4a88598d417cfc4",
+          "Source": "Always Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-32",
+          "Key": "92255e0d7d27b0977fe7c27a1af1cc65beb651de74ac9a6fdefe99b2db25f71e",
+          "Source": "Always Proceed",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-33",
+          "Key": "0bdecdb60b9d86621a5a9f92955ebab6440a545ff738b05b7ac36fe04e42b54b",
+          "Source": "Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-34",
+          "Key": "6ddc3b2e51ed14b93361570cf85c0ef540095fd19e0726c6096bc2ed23765687",
+          "Source": "Auto",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-35",
+          "Key": "c3f253a900b91b8b997694544619467e5f8c0aa2169bf09f90b1c316003a9f23",
+          "Source": "Auto (Preview)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-36",
+          "Key": "ff04d1c88bf733742d04230de472d43b23e856ef0845103c074f89e2595a2130",
+          "Source": "Cog (GoB)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-37",
+          "Key": "04399b4781eb3bcdbd1e341014b37cf6c1d5cdd0d07f5607d4a7b5db4c172dd3",
+          "Source": "Custom",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-38",
+          "Key": "6c5b4d29003dcbd9a4fd0dd07e3d0784a288fd0c3bb8d85d318aa4369c169097",
+          "Source": "Default",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-39",
+          "Key": "555dad0165a8586375a9adcf6903e02e434ba96ee4c74639d2c0e8a7e85051e8",
+          "Source": "Deny",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-40",
+          "Key": "06f0c5cbdcdfebf9197fd7458a815a198ae1c8c172eadf9c03a57ae48637cdea",
+          "Source": "Disabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-41",
+          "Key": "749f90176e35618323b52d3768c56dc1510679e552907c50ad36e73083a89cd4",
+          "Source": "Enabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-42",
+          "Key": "c96a095d5f63bf9bbc992074ee8379c51139ad54ba94cc427fb106ffd73705b1",
+          "Source": "Fig",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-43",
+          "Key": "52ccbb8945ca0f3b061e4d5684a554f1ece23b6f0340a95dfce8aa6c4f09665c",
+          "Source": "Fill",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-44",
+          "Key": "1025984411727fa4217a6b3c6f9c6652a37ab773067ce7e50427f84ccf7a442c",
+          "Source": "Full machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-45",
+          "Key": "102f2e5ff7b3b42313fa127f21cf1fdb833de5634dd84c20014651013b6dc712",
+          "Source": "Inherit Global",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-46",
+          "Key": "9a61d178d0d1241eb075d4605478ccbfab93d8d73956342727f891686477ba7a",
+          "Source": "JJ",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-47",
+          "Key": "906d9935ffc1bb3c4d64aba388dca4bb68cbb87986b1300b3058d4e4afa564fb",
+          "Source": "Machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-48",
+          "Key": "e41863b685995b3e0a628cb221c6ec751bb0b2b2052b07840dc3f21314b1dec7",
+          "Source": "Narrow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-49",
+          "Key": "32c75bc1d92a4c33fafbb52b04f276e0b558183156cea501205963d4b0f75ed6",
+          "Source": "Piper",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-50",
+          "Key": "3b131a97960e3f032629a854c285fabb64b12ba440344382b92e4bdc0c3677bd",
+          "Source": "Piper (g4)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-51",
+          "Key": "066c269f13291b6d2d97d5cc8f99c661f04a186b95b6515cd071c70657fe0394",
+          "Source": "Proceed in Sandbox",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-52",
+          "Key": "ebe2880b5d526a9aabee09e5421348a64b958885664939a0fb541610613445b2",
+          "Source": "Project 4K",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-53",
+          "Key": "ae9899f6964f5f168c51b98bd322284305acde6cb6a1d442707c331685c71479",
+          "Source": "Queue",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-54",
+          "Key": "b4d7170337afbaeb54e55f0a7b2c1169be040d2dae203786142ea8751fe2d8a2",
+          "Source": "Request Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-55",
+          "Key": "7a3cd1f3594209e6ea492fe9c2b0b1c265e0b18ada1f13b1786a1e098d1393ab",
+          "Source": "Require Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-56",
+          "Key": "1e6a55bd79e30b14d3571b7cadd4bc360832c3521a5589fe316ef97b36faf22a",
+          "Source": "Send Immediately",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-57",
+          "Key": "9b72d35eedeb7ee91dbb99c24b78c2c76aebebd00f13bf08997ab8e1077a93aa",
+          "Source": "Strong",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-58",
+          "Key": "e5b51295dccb9814ac1c1982d83a2adeb182b1a156f5de324fc94fb5425e1404",
+          "Source": "Turbo",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-59",
+          "Key": "de432af2b6c6c1dc7c3091b6868965a28c883a9c4271fc564257b3e12d3f7fb2",
+          "Source": "Turbo mode",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-60",
+          "Key": "a937131f06f49caa27c0bfbe83df97dfd3f636fbae61ea0502e9b5a2e3250253",
+          "Source": "Wide",
+          "Role": "option-label",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02871",
+      "Key": "d20fdf9b62db9b06399642398a70ad68bd592e9b8e76618ad9b87da558b89918",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "68c9e386a7aaaa4b65bb6168c511a25af43773d18cd604edef4ce3be5df4d53a",
+          "Source": "Allow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "6f55d4bedb1ac103d0a606b22d3129a122ca73ae1145c792d9d66f683f46d8a0",
+          "Source": "Always Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "eb099b0acf2b2498682d1ac99beba3f13b2ff4c91cd1e379bd102ca815afde55",
+          "Source": "Always Proceed",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "5b6af8a56189c50d83f1996f112a2672e8a8dade006ec7a1cab086c756c78522",
+          "Source": "Ask",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "90c8b4b36f4f386b439172b9ad7d4c4c8db8a5249974eb99c88c0afbfdb6a4b6",
+          "Source": "Auto",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "8910f0d2d3bbb923ddcfd4ee2bb208e9c636d18b10eb206b29b2cbf4b99be209",
+          "Source": "Auto (Preview)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "d6a68018fb7e3a97df7609fa35be190084312e2074c76829411715962bd1ec52",
+          "Source": "Cog (GoB)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "6fa39fe8b33e1df96f2846e131063a71e3b0e82b239b008848f325cf68ccc4bb",
+          "Source": "Custom",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-9",
+          "Key": "3bbbbb4643524e0c557aa8abb294795140e6b9407812e092528c985da45543f2",
+          "Source": "Default",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-10",
+          "Key": "4624f706aaebc529ca0f6c8eaf034394cb69864276add0ff3e0eb502b0f39843",
+          "Source": "Deny",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-11",
+          "Key": "2384611dbbca945db3da64acad38ffe6329c733cc21aff22e5d83cf8b36b628f",
+          "Source": "Disabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-12",
+          "Key": "768dedf091a5c392948ee0f09fdfe6d43f22b28a4c4bc86db5e26d669e18cf8f",
+          "Source": "Enabled",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-13",
+          "Key": "0c38e4fe0d42506c696359da8e8f896eef657f5d6e4d5935b0a8af2832365cab",
+          "Source": "Fig",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-14",
+          "Key": "d0a7388709659f8e99701e38f185d6e00c122772ce822391bd88cf9ba8dcfa93",
+          "Source": "Fill",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-15",
+          "Key": "f005ed72a26fcd2edaebe76fc349b2de03866ff7371a99f0048afb5b052e16e2",
+          "Source": "Full machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-16",
+          "Key": "c37aa11b0bd22664c8d41691799261a97e1828ef5337338516657d45f8d2ac43",
+          "Source": "Inherit Global",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-17",
+          "Key": "4e6717982ddf28567ec51aa9b62162ad533fd911b95f3c3486901cd63a2a5eb1",
+          "Source": "JJ",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-18",
+          "Key": "00dc4d927462da5460b845f8f3c835d15239ab31edce19c67dd395786cd42f8b",
+          "Source": "Machine",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-19",
+          "Key": "cdad5cda770049d994446133e0e92f1fe18b83dd74d774ec7fa125feab71d417",
+          "Source": "Narrow",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-20",
+          "Key": "9a09a495c45208533492a1add04d448f1b8264cdbcb771263ee401bc015e207c",
+          "Source": "Piper",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-21",
+          "Key": "4f9940b0d94c97b5b0dd99f469f4cd9562cb9f125b3935be56b4eb43691944b2",
+          "Source": "Piper (g4)",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-22",
+          "Key": "5aba454c6ea1d001757704bfe909522f3006c8dacdd36684660081207d45bf4c",
+          "Source": "Proceed in Sandbox",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-23",
+          "Key": "b289a310e3729252c1f0b96984b26e4fbeb2d284a986e3749a453918d2fd9094",
+          "Source": "Project 4K",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-24",
+          "Key": "d59896654c1d9008baa756c55d5106aa8233a7c8fcd867df13a09b972204fc26",
+          "Source": "Queue",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-25",
+          "Key": "561fe4c6fbeff0dad9dd1b00d8cfe58aa8e9e898a55f02d0668b405203d83559",
+          "Source": "Request Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-26",
+          "Key": "bb16dd5cbaa272823f7ede7ee5a8eee23a213b15d9fd342304aff0686f451c7b",
+          "Source": "Require Review",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-27",
+          "Key": "286d010451f906cbe9e24e71fa0128cd8372ac2d0d25839a84000f3e78762810",
+          "Source": "Send Immediately",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-28",
+          "Key": "dfbf369e207d7d019fe809107db20512ec28e9e18e5ed04b6a581ced619aad95",
+          "Source": "Strong",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-29",
+          "Key": "665873babd8971f8a8e3b1f005e173598ff7060e3e2b7c801ea70a18fce47f77",
+          "Source": "Turbo",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-30",
+          "Key": "6b7b7d3680bc9a4e039eda60bfd9159e64b8bab244e9e084b073fd633b4520ac",
+          "Source": "Turbo mode",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-31",
+          "Key": "48a2f0b4a42cea9435928d3d44cff11308881114281fea9e1ca76d082f923c0f",
+          "Source": "Wide",
+          "Role": "option-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-32",
+          "Key": "75019ebafd9a9fcb1e137f8036c8d129cf488bdad97b7a9827a183c420b95f8e",
+          "Source": "Use Global Settings",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02872",
+      "Key": "682398ad09acf91b2f89eac245b945e548aca3f685ea8ae372d8dc8fac394a58",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "d971d89c563bee55f0842ebf9542ae19cd2886fe2ba48d069c914167bbccf57c",
+          "Source": "Usage",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02873",
+      "Key": "9a63834817c263a8c219d82d38d30e9f84b3b9c6741f499282d90a9116e09fc9",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "7dbf7f4b951e58fe9ddfc80399f1a4e4aca97c0366f7183c829f0ee8f323c2e0",
+          "Source": "% left",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02874",
+      "Key": "57ad5818d01735ccf0cccddcc8e75108a5917a863bc8f403a4afefd21ecd9664",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4a0f8e8b6c8acaad3578ea477d9a9d77573f51e87015fbac2b2cb8a35ca8f378",
+          "Source": "Reconnecting…",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "02c418c35e8e926b4adbb3464e1ddacc318921e52084baadba8396f69e938539",
+          "Source": "Still connecting…",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "b89b42427c2e5f32953aada2dee390c39511b4c264706e0a110a3ccb63dbe600",
+          "Source": "Connecting…",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02875",
+      "Key": "3c437bde7221adfe86cc7d539e9bc2a15a8ca79eccdfe58116d02eb07d77e730",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "a02ea27511afbe05f4e73928b318677826ea1c40b6a6bbf72ea3e1318d7f790a",
+          "Source": "End Live chat",
+          "Role": "aria-label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "8cad198b92d61fe9d828f3a322f2a4f47ba175e3dc01346e1f251d94b86b705f",
+          "Source": "Start Live Chat",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02876",
+      "Key": "478f858ba1efcd9c60de37f909326556197da20f1f0c10917f0f4807957312e0",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "b0eeb544ee9c9ac9ef8bff4ffba508f0c9b7583686d81ffe98b4c1c24775ba0e",
+          "Source": "End",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02877",
+      "Key": "13fbd1dc6fe0244c30825006a6fcc4e9130ad000baf99ee2d20f043c000b8700",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "85fb2e8f70af76283b80778b2e3fd0cd7a11546f1682c5c03efba116ebf9618f",
+          "Source": "Try again",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02878",
+      "Key": "e0d35199de16ce0f46eab85fe15920dc3c3ecf346fceadbb9ce41794ed50f85a",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "6d8bd62ada14a7483f3248ecb22a7966712e7bbbe093aae42321e88426d140ec",
+          "Source": "Live chat, ⟪AGC0⟫",
+          "Role": "aria-label",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02879",
+      "Key": "40d85379b81394ee523e1b4fc53b03c2d14756ff25b32c69aefa81a602164aed",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "1636ad71725b697f75b7da1ae3be0bd04ef41151644f53c0e4a8cc16a9ad9244",
+          "Source": "Live chat",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02880",
+      "Key": "1fedc1889f4b2411e58d33d47b37176ad31be8f2e7c5ca9f85bc7f1553ee75bd",
+      "Kind": "ui/menu",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "61c1eaaada4f8cf28d23d8faf384d0bedd0a46b121552997f27c269b95ecef78",
+          "Source": "Drive",
+          "Role": "label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02881",
+      "Key": "54995bdf09a61de59f3d8f0675cc6845ac6d3204cfbd6b677ccaf9e4d09f50ac",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "e4d7b11c0b6d9afe7ddcded644cced1b42a12e09829f6107122619e6c656d60e",
+          "Source": "Log in",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "3319759e3eb584df1fe9dc1332181c4f560f7754e92ec1a179a5fcb861f9fde2",
+          "Source": "Set up",
+          "Role": "children",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02882",
+      "Key": "b5f91f7063b168762758aab1d4502f3adefc2a5d260dce2a987a447301c5aa1e",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "c2f11017c29f7a304aa04e8ce79f91a11e65b1da4317f51ba03444ea2a64d04a",
+          "Source": "Workspace",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02883",
+      "Key": "48c0359cc1954c0d55d3ae26c314c65fa4f2c439b70d980d418cb5bab4f9e439",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "110ade61a8b767df7c3908f9b929d959938af033f64a66ffd8aca5bf8f066206",
+          "Source": "Subagent: ",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02884",
+      "Key": "5e430ee1fd7292bd2296e4215de6175a24def3e4f877dc40bc44eb74fe09a854",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "a551cf6d4ad758d3aa412a75ad56710cba8b73d5013b6e5646476fd5e7cab77d",
+          "Source": "Loading conversations...",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02885",
+      "Key": "e9bd9918fcc5fce3abca3aee38613eb34af046fe050355f264c37b2767552e8a",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "98904eb179795353f01859af22516ffcbcbc9c634587f023c66f872af83d8aa4",
+          "Source": "Resume it to open a new terminal. Anything that was running in this one has stopped.",
+          "Role": "description",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02886",
+      "Key": "8e5cc62f365233d33585d3a59a5d282478c41ef0bf1ad3a881bc658104be95be",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "47b17b749a81ad2ea3766e4e917a3de005b0f629215af9c5345701ccaf071fe0",
+          "Source": "Starting terminal…",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02887",
+      "Key": "cb58a371bbbbdeb02b37c7f561f9cd2d3e1d42cce9ff380ba53291f1f4f443d8",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "7eaede7902a69dc27dc83328453c5517b1a49dddba40b8fdbbb1d750c4ad95f8",
+          "Source": "Live chat in progress",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02888",
+      "Key": "57e8c94fca7fde9f95787982de0923e5863ee87758e5e52febf70cf8feb3bc8d",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "83b805ce56ee24104fb3c84fcde8babedc3c2414b0328f133a52ef3818c9dd74",
+          "Source": "Drag to move",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02889",
+      "Key": "a4e84a9faa5d1ff62108d4113004877b5463f04ae998c847fb3b4c32be20ed97",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "20bb1524fecefb86d9d331a83c1fc73172259457865e355e2aee11dbae600862",
+          "Source": "File",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02890",
+      "Key": "b58d8ea9c2966f83db6387404f084b1bf7e00ac61ed0b10bb9a92260c638fc96",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "c7298d5a751fb73ed8bff1f07202848d0f3f0f734cde88a4534b50a92d16b186",
+          "Source": "Add files",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02891",
+      "Key": "f6c86dd92dc4532021b0744d661a7cdb723e113eec790ecad2c07d846f7625cc",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "67eed4465f296fb9b52ae86ee25eaa77410ebc03fc6053170e2e5bc8fc84ba3d",
+          "Source": "Send",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02892",
+      "Key": "accd69bb24d61f9f5a8f0fbe7571ec966c87c57bf1791faa6443bc21a1b4c8d0",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "828fb841602dd5eda075fbc9dbad89da6dfbf3721358c96ffb24f0c3a6a50917",
+          "Source": "Close message",
+          "Role": "aria-label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "afa54f66d55cf69b18dc05fc458f8aa69ad32f5e6fe51f60da628cd2830ec7b6",
+          "Source": "Write a message",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02893",
+      "Key": "24c44ed105665fe0e935e82b9b46fa5fe1502b77759afe0f7db637d6ad7cad80",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "61b4618b15092941bd933f5412fd1e539b00ab631449bd51e0ae70652cecb7c0",
+          "Source": "End Live chat",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-02894",
+      "Key": "33a7896758d66266a853d74ee98f357c5c00f6d3806dd329997318323d5a93f9",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "91d18d289b70ba95cbc4ed77c2b87472ce19a6a4d4619a4e7ed678b231dc9537",
+          "Source": "You can change this in",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "e7bd58ed9a49578e4ba43cce3b615b6d6e6eed1ff6d84fc238aec00de987727e",
+          "Source": "later.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
     }
   ]
 }

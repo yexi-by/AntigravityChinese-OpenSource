@@ -813,7 +813,7 @@ public static partial class JavaScriptUi
         return s is "settings" or "cancel" or "close" or "save" or "apply" or "remove" or "open" or "copy" or "view" or
             "edit" or "search" or "enabled" or "disabled" or "running" or "stopped" or "yes" or "no" or "name" or "status" or
             "size" or "created" or "actions" or "permissions" or "delete" or "start" or "stop" or "run" or "and" or "or" or
-            "project" or "projects" or "workspace" or "workspaces" or "resource" or "resources" or "folder" or "folders";
+            "project" or "projects" or "workspace" or "workspaces" or "resource" or "resources" or "folder" or "folders" or "later.";
     }
 
     public static string Apply(string code, IReadOnlyList<UiText> texts, IReadOnlyDictionary<string, string> translations)
