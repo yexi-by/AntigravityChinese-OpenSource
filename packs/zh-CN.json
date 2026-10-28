@@ -44911,6 +44911,710 @@
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "environment-label"
+    },
+    {
+      "Key": "41851e7eec369f6bfd2d4475f3fd41fbfda67d5c0e573cb03f24812b6a8e9a84",
+      "Source": "Enter command...",
+      "Translation": "输入命令…",
+      "Kind": "ui/input-placeholder",
+      "Role": "placeholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "9ec6f742cd9befbdeb5f6550950e31becfc9fd2b93bd01d0e6a38c62e1acfa55",
+      "Source": "Search shortcuts...",
+      "Translation": "搜索快捷键…",
+      "Kind": "ui/input-placeholder",
+      "Role": "placeholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "0bb1265aa9b7ef255c9155f88585d4d1dc96e1f8aedb06bdb6e299f27c77f24f",
+      "Source": "Accept Step",
+      "Translation": "接受步骤",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0ec1f15cf0a0f12b163bbf6d88840095ec688371d6fd89773c936641eba5792c",
+      "Source": "Add to Chat",
+      "Translation": "添加到聊天",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "85503ebd22fad2e307e6b5ec620e3feabb7a2da40f13423958f696cbd417d566",
+      "Source": "Add to Chat/Quote",
+      "Translation": "添加到聊天/引用",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8117645cf98773a6a9fa46e005586e4b5b17db2e0072fd558d0368fcb5101f04",
+      "Source": "Archive / Restore",
+      "Translation": "归档/恢复",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "bc53e0a9772f25e6e0715160f5bd8459cb53e611ac10249c167282746e4b2cd5",
+      "Source": "Archive This Conversation",
+      "Translation": "归档此对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "593d17a788fb826202ab5680507fa53132bde6fd80a2e6c3f3f6635bda24d1cc",
+      "Source": "Cancel Generation",
+      "Translation": "取消生成",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9e78fc28bf5ad890ee95c5aac5fd9975bf5286d23118f3e0c34506db486dabf5",
+      "Source": "Close Tab",
+      "Translation": "关闭标签页",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "7806d40fe2e8d3975f9b769b4029526ae2245e71798248f5279f9ae52e19e46d",
+      "Source": "Close Terminal Tab",
+      "Translation": "关闭终端标签页",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a43651b6afc9875afd30529ffe7d105a438a3706225c7175570ff0fd820bbd41",
+      "Source": "Code Search",
+      "Translation": "代码搜索",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c7fc718d6f4949cbb064b83c27459425e125974ed13758fd535a9e2bc14c9383",
+      "Source": "Collapse All Folders",
+      "Translation": "折叠所有文件夹",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8efa770e225c07cfe75f832f66c279d200ff34debd65950b81f71ce0deb8e970",
+      "Source": "Comment on Selection",
+      "Translation": "对所选内容添加批注",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "dd8ba27916308ad3a74e182af2345ac3d2026faed8d14e15a48873d6820b1050",
+      "Source": "Complete Onboarding Step",
+      "Translation": "完成新手引导步骤",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d4de8bf60ce4a1ae3336cdaadedba3f80044dcb1292a38eed73d99717c53b633",
+      "Source": "Continue Response",
+      "Translation": "继续响应",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d78dd5251408f06da78036258ee66909b752fcd81300774b72378fe0c30c2854",
+      "Source": "Conversation",
+      "Translation": "对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d7200fbf6727adcd0ba8aa958e2718fb2d0d240004c2222368ac2098eb22eaa4",
+      "Source": "Copy Conversation Markdown",
+      "Translation": "复制对话 Markdown",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8cea54ec0e8f16f8c2c746675ff78e6ac73b9b91d680d7cf3837c941151bf4c7",
+      "Source": "Delete Conversation",
+      "Translation": "删除对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "79aa2e92ba7cbf1c4142133f7cabc234488cee5433e0ab734f11d58e0465abaa",
+      "Source": "Download Diagnostics",
+      "Translation": "下载诊断信息",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "80fbc111156dc58471e3d4287500e9859d9677db8f8f3c17a7d8d21089b8216b",
+      "Source": "Equalize Split Panes",
+      "Translation": "均分窗格尺寸",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "18749bbc4f7d961645e704a80a32705653e5e84fb20b89d449876d474dd06a30",
+      "Source": "Expand All Folders",
+      "Translation": "展开所有文件夹",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "181a0f8e5836e0d9137e11d6e27c03f3ea89965933e6447f4c1959286bba4122",
+      "Source": "File Picker",
+      "Translation": "文件选择器",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "47c66fd2ed37052fb6c5319a62e4070884bd7c048eef2bee23fbb86fc61ff664",
+      "Source": "Find in Conversation",
+      "Translation": "在对话中查找",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2823e629d99fdfca098a6744f5e8eaecab6167f756c4c77a3624da0652493d02",
+      "Source": "Find in Pane",
+      "Translation": "在窗格中查找",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0623309734a79c2ae973446053e4edd9b99dc649de143bc953e696c439830a8c",
+      "Source": "Focus Input",
+      "Translation": "聚焦输入框",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "96bb5822a229bf9879cce8ab72bbed06fd319c921c20f2349862bb7b246fc706",
+      "Source": "Go Back",
+      "Translation": "后退",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "39092935b6526909c27ed8da532d6d794ad8dbab4bd66799e592efd89005771b",
+      "Source": "Go Back in Pane",
+      "Translation": "在窗格中后退",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e9ca770bfee19cc718f7a005560c8acddcbcbb0dd1579878cea520c2e4209e9e",
+      "Source": "Go Forward",
+      "Translation": "前进",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "43be354990997a4961e9db97b04faa7e7807ada4133809098c2d1d8c451215d5",
+      "Source": "Go Forward in Pane",
+      "Translation": "在窗格中前进",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "3a9d8a76c7dd252e3aa01746cecd2657912a52560f0ed025b0b89b96259fe478",
+      "Source": "Layout Controls",
+      "Translation": "布局控件",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "20f3c03e20f0474622376f1f615695c7d39a272eb6804b83534c7d03ee198aac",
+      "Source": "Mark as Read",
+      "Translation": "标记为已读",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "5f6cc58ab66972d2cfbd6dadcba96bf3bfd5af706d377c6724b4e5355f63a588",
+      "Source": "Mark as Unread",
+      "Translation": "标记为未读",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d53007dea924ab985125a74e4d94f6e3277cd5f858f321542693300afd535a0a",
+      "Source": "Move Conversation Down",
+      "Translation": "向下移动对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d89439698bee95b80fa0777f27929435719c11cc43048d41a0a8f3de2e4afad6",
+      "Source": "Move Conversation Up",
+      "Translation": "向上移动对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "caa59871fcc5a3f1f45cc234ed74a32d3cd2ae97cc6de5fbfa9180aabeb2ce2a",
+      "Source": "Mute Live Chat Mic",
+      "Translation": "将实时聊天麦克风静音",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "2882705fc1da9c969d4101bac01adbf97d6bb8e156837669124ab53d4dd78c22",
+      "Source": "Navigation",
+      "Translation": "导航",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1c908d2390ec85f60ef541f4e1d8219bba139848109a222899631ae3e9fa24db",
+      "Source": "New Conversation",
+      "Translation": "新建对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9ace195dc11aaf6b9fd61636c66f863d4ba5765a21559d5191daac2ec184a9f9",
+      "Source": "New Tab",
+      "Translation": "新建标签页",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0e41f881448601ea049f557eb49b54c5822c4248d598e389a1896671c6cb7b32",
+      "Source": "New Terminal Tab",
+      "Translation": "新建终端标签页",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e872363e34460efd47cd5b70e86feb88cc3ab1ac734ff9ac98ee0a4a02a7e69e",
+      "Source": "New Window",
+      "Translation": "新建窗口",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8f86252d5a3675db868e56dd012c4e8e1203c7965d0d8e1f69dbfbb7e827cbd0",
+      "Source": "Next Aux Pane Tab",
+      "Translation": "下一个辅助窗格标签页",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e8cf8c05b297020893d7a9b6c345ea18f2db6a801564808e97150a2a6a9a96a9",
+      "Source": "Open Command Palette",
+      "Translation": "打开命令面板",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "283b5c298e9ac1496ef677566bf0a0bec2cb2232502809318b406f0fadbf6801",
+      "Source": "Open Commit Graph",
+      "Translation": "打开提交图",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e5e997c4dc03c7b16bd30dcf88705ab81bc23234e9695435d96f4bc62c4a2d28",
+      "Source": "Open Conversation",
+      "Translation": "打开对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f585c499a72a88737a993ad3714d72e3ed8747c7e59cdd14ad58d525a25e3f54",
+      "Source": "Open Conversation History",
+      "Translation": "打开对话历史",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f5568455de2a7db3d7bc560f0dd715779582c7ef7f1709884b1a00ad72a999ac",
+      "Source": "Open Conversation Picker",
+      "Translation": "打开对话选择器",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "971cfc754428eeef4688eecd9471afc0aa514c1b040b1380ae2c0a403a174aec",
+      "Source": "Open Conversation in New Tab",
+      "Translation": "在新标签页中打开对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f2dc07c42046748740df88d48e852e80a10a78f3b508002b2c745da6deda59b7",
+      "Source": "Open File Search",
+      "Translation": "打开文件搜索",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a46e65c4de22e0d67c32223d15068691f160dbc38c73683672f467e430d212f4",
+      "Source": "Open Keyboard Shortcuts",
+      "Translation": "打开键盘快捷键",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a9a31293b3a0e10e6a2ac8e1a98b554ac5cb09652498f6a3368b1f1c035085ad",
+      "Source": "Open Settings",
+      "Translation": "打开设置",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b7a682b27f191a704c5df824924895641149a3b4762cc9afd3eda1a5084b81df",
+      "Source": "Open Workspace Selector",
+      "Translation": "打开工作区选择器",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a4ed4b16dbb59d2eda8e3a3026288eefe354d6bab505d541581d606983823aa6",
+      "Source": "Open in Code Search",
+      "Translation": "在代码搜索中打开",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "433477e124c0caa1f23e43fc0a5df293adc729d9ba1ab0eed10d112910782bc8",
+      "Source": "Pin This Conversation",
+      "Translation": "置顶此对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ba2e1fc7cd8cea8bfa781fc9fffdf2e332d196d7af48765273609dba57e1f568",
+      "Source": "Previous Aux Pane Tab",
+      "Translation": "上一个辅助窗格标签页",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0415f13fba7733db6982f8b6c84d189c73a02093ce2dafcacdfd3f88a7bc48f3",
+      "Source": "Provide Feedback",
+      "Translation": "提供反馈",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e9311066060b56ccf83b1cd2d292080503abfba1f94a60f04eab53bd7ff81bc2",
+      "Source": "Quote Selection",
+      "Translation": "引用所选内容",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "999450e193512444b89634a447796ce1a06adb869aa77620c9e1e1e631765cd4",
+      "Source": "Refresh gcert Credentials",
+      "Translation": "刷新 gcert 凭据",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "6b89be552d6bf9676734e305dfaa5aa05b375340bcce6972ac157f0463318c77",
+      "Source": "Reject Step",
+      "Translation": "拒绝步骤",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "6e0b62908d466e7ef4a64908d9b97cd72fa7fc4b0e6a9bc450096e4e70c13908",
+      "Source": "Reopen Closed Tab",
+      "Translation": "重新打开关闭的标签页",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e55c82836d7426d9057e69b65a5e4982fbed144d04d98222f934e2f10340941e",
+      "Source": "Reset Zoom",
+      "Translation": "重置缩放",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b3b392ca7601a632e6bd202c584c588fa33ea593f7e86345273fc440d04cdcae",
+      "Source": "Restart Main Language Server",
+      "Translation": "重启主语言服务器",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "eb73bf6754fdc5d14638a5dece3d14c3927859d60dde7f138258265d16975c29",
+      "Source": "Scheduled Tasks",
+      "Translation": "定时任务",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "402ff51f998d9bc644d069ed75c40c2399d38dd4b8b1aa3297bbf50ac5331950",
+      "Source": "Search Conversations",
+      "Translation": "搜索对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "281b06e2acca7db3635a42be538cd23e47f3433dcce0315ed3b30127f8aaf206",
+      "Source": "Select All",
+      "Translation": "全选",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "83246bd8e1b73fa0b9d32887b320d94690069ce8f1116f022d58ad38cd2139bd",
+      "Source": "Select Next Conversation",
+      "Translation": "选择下一条对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4eafd9f90da5c2624525cb0fa4ea732ec79480619bc09d061f7780a33bccf5a0",
+      "Source": "Select Previous Conversation",
+      "Translation": "选择上一条对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1c800a0248d650f1e93a784a4132ed9ec0e4e0e10c580b841f54d70726419b62",
+      "Source": "Split Conversation Horizontally",
+      "Translation": "水平拆分对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8247e41a1d8e2950fb33450311ca27613dea680863bf379b21a90c452901d6c5",
+      "Source": "Split Conversation Vertically",
+      "Translation": "垂直拆分对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ccdfeb16f0ab3a5fb8feb5d40b8a6d1351e7c097cb774b7114d5a2367c965897",
+      "Source": "Split Terminal",
+      "Translation": "拆分终端",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c1f19ed093d574ade556fc43812081d99e2971f5ba58d4ddd6070a86616cda43",
+      "Source": "Start Voice Recording",
+      "Translation": "开始录音",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "97b5a3d77ead46632b821d4ee4bd9f842faa0f212b0a232c580badc17aee2fce",
+      "Source": "Stop Voice Recording",
+      "Translation": "停止录音",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d7281ebcc383cf7e673f2b75dbcee7c2d5d69828dd5bfe3a87e6f64ec319e7fe",
+      "Source": "Terminal: Add to Chat",
+      "Translation": "终端：添加到聊天",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d0fa5c3324281cf5d1c185bed7e7481ba2599ca1b56e35ce795bb8aa5049e3af",
+      "Source": "Toggle Auxiliary Pane",
+      "Translation": "切换辅助窗格",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4a559f34b8b8f5995a41c09faea4127e4cefc6d3a2f763cc71aca63a88cdeb4d",
+      "Source": "Toggle Between Light/Dark Themes",
+      "Translation": "切换浅色/深色主题",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "875edcd53f73a290c17753dd3e211c52f8dadf72761b7c4f37bdacc9b40139c2",
+      "Source": "Toggle Environment Selector",
+      "Translation": "切换环境选择器",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "278d217e2dd3ed9804c27fdfa02a20294f027e563159dbe951f398aa727e6ed6",
+      "Source": "Toggle File Viewer",
+      "Translation": "切换文件查看器",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "6d32b6ec6feddd02db40f312abf564506082aa390337a9c275d2f357ba1f61b7",
+      "Source": "Toggle Maximize Auxiliary Pane",
+      "Translation": "最大化或还原辅助窗格",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c3181a0c49f32ebfda7ea4618d1cf87164fb57104fe3b634bbc57008f4c3e296",
+      "Source": "Toggle Model Selector",
+      "Translation": "切换模型选择器",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "39e8ac7c5b5741bf7b13828a48c67f6bdf94d2d540204b195fa6eb60a3001d60",
+      "Source": "Toggle Overview Panel",
+      "Translation": "切换概览面板",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "047ee4e4ae0e5ad6ca25023a7c327c6cc552d0f91540632ddf8b068107d940b1",
+      "Source": "Toggle Project Selector",
+      "Translation": "切换项目选择器",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4987ca6c5d5680a1081549cb20642a0b5e5d1f37a95486609ef6e0bc34ae0f0e",
+      "Source": "Toggle Sidebar",
+      "Translation": "切换侧边栏",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "271c4f65687fad4a9ff7015593488276b612c83942506cdd433b3c9ff4ecebae",
+      "Source": "Toggle Terminal",
+      "Translation": "切换终端",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e937f2a9c50c7825f147a1d1c6771c7564063edf6bae0ffdbb527dfc719bc459",
+      "Source": "Toggle Voice Recording",
+      "Translation": "切换录音状态",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "fb9e37988f775a0291b64256db774c7da74d319dca392a8edf025d8fb5800184",
+      "Source": "Unpin This Conversation",
+      "Translation": "取消置顶此对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e43648b6c4b6a5c56a03ce65985f0705d40c2d2c85947162ccc82a93b35515cd",
+      "Source": "Zoom In",
+      "Translation": "放大",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f29d41725d2fa4938c761e48a89f5fd2d2e4658416b4da0597e5e45bea3261a9",
+      "Source": "Zoom Out",
+      "Translation": "缩小",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "4da8148b690eea0e3d4ed75a2eb574ddc545cda8c559c164bfbed20770ecd1e5",
+      "Source": "Enter target...",
+      "Translation": "输入目标…",
+      "Kind": "ui/input-placeholder",
+      "Role": "placeholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "1c14c653d760455c51cde2e61acdd9239f014a2f8118d96cd237da47eca768f9",
+      "Source": "Search...",
+      "Translation": "搜索…",
+      "Kind": "ui/input-placeholder",
+      "Role": "placeholder",
+      "Shape": "string"
     }
   ],
   "RetainedSources": [

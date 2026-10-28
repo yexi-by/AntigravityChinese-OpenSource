@@ -253,6 +253,34 @@ public static partial class JavaScriptUi
                 settingSectionRows.Add((producer.Start, screen));
         }
 
+        var shortcutScopes = new HashSet<int>();
+        var shortcutSources = new HashSet<string>(StringComparer.Ordinal);
+        var shortcutRoots = new HashSet<int>();
+        foreach (var (node, function) in nodes)
+            if (node is CallExpression call && call.Arguments.Count >= 2 && call.Arguments[1] is ObjectExpression props &&
+                props.Properties.OfType<ObjectProperty>().Select(PropertyName).ToHashSet().IsSupersetOf(["commandId", "bindings", "onSaveBinding", "onResetToDefault"]))
+            {
+                var scope = function;
+                while (parents.GetValueOrDefault(scope, -1) != -1) scope = parents[scope];
+                shortcutRoots.Add(scope);
+            }
+        foreach (var root in shortcutRoots)
+        {
+            var body = Walk(nodes.First(p => p.Node.Start == root && IsFunction(p.Node)).Node).ToArray();
+            shortcutScopes.UnionWith(body.Select(p => p.Function));
+            foreach (var (node, function) in body)
+            {
+                if (node is Identifier reference && Owner(function, reference.Name) is { } owner &&
+                    declarations.TryGetValue((owner, reference.Name), out var table) && table is ObjectExpression or ArrayExpression)
+                    foreach (var property in Walk(table).Select(p => p.Node).OfType<ObjectProperty>())
+                        if (PropertyName(property) == "label" && property.Value is StringLiteral label) shortcutSources.Add(label.Value);
+                if (node is MemberExpression { Computed: true, Object: Identifier category } && Owner(function, category.Name) is { } categoryOwner &&
+                    declarations.TryGetValue((categoryOwner, category.Name), out var categories) && categories is ObjectExpression names &&
+                    names.Properties.All(p => p is ObjectProperty { Value: StringLiteral }))
+                    foreach (var name in names.Properties.OfType<ObjectProperty>()) shortcutSources.Add(((StringLiteral)name.Value).Value);
+            }
+        }
+
         List<Expression>? Expand(Expression expression, int function, HashSet<(int, string)> visiting)
         {
             List<Expression>? Merge(IEnumerable<Expression> values, int scope)
@@ -545,6 +573,13 @@ public static partial class JavaScriptUi
             }
             void Value(Node node, string role)
             {
+                if (shortcutScopes.Contains(activeFunction) && role is "label" or "title" &&
+                    node is MemberExpression { Computed: false, Property: Identifier { Name: "label" or "title" } })
+                {
+                    foreach (var source in shortcutSources.Order(StringComparer.Ordinal))
+                        if (lookupSeen.Add((node.Start, source))) texts.Add(new("", "", file, node.Start, node.End, source, "lookup", "shortcut-label", []));
+                    return;
+                }
                 if (node is MemberExpression { Computed: false, Object: Identifier section, Property: Identifier { Name: "title" } } &&
                     Owner(activeFunction, section.Name) is { } sectionScope && settingSectionRows.Contains((sectionScope, section.Name)))
                 {
@@ -721,6 +756,15 @@ public static partial class JavaScriptUi
                 }))
                 foreach (var returned in Walk(node).Where(p => p.Function == node.Start).Select(p => p.Node).OfType<ReturnStatement>().Where(r => r.Argument is not null))
                     Group(returned, "ui/input-placeholder", [(returned.Argument!, "placeholder")]);
+            if (!desktop && IsFunction(node))
+                foreach (var parameter in Parameters(node).OfType<ObjectPattern>())
+                foreach (var property in parameter.Properties.OfType<AssignmentProperty>())
+                    if (property.Key is Identifier { Name: "placeholder" } &&
+                        property.Value is AssignmentPattern { Left: Identifier local, Right: StringLiteral fallback } &&
+                        Walk(node).Where(p => p.Function == node.Start).Select(p => p.Node).OfType<CallExpression>().Any(call =>
+                            call.Arguments.Count >= 2 && call.Arguments[0] is StringLiteral { Value: "input" } && call.Arguments[1] is ObjectExpression input &&
+                            input.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "placeholder" && p.Value is Identifier value && value.Name == local.Name)))
+                        Group(fallback, "ui/input-placeholder", [(fallback, "placeholder")]);
             if (node is CallExpression call)
             {
                 Expression callee = call.Callee;

@@ -16,6 +16,7 @@ var checks = new (string Name, Action Run)[]
     ("设置选项与说明只转换最终显示，保留选中映射和权限回调", CheckSettingOptions),
     ("截图漏翻的侧栏、缓存文案、对比度和系统命令说明完整显示中文", CheckMissingUi),
     ("新版输入提示、侧栏分页和环境标签汉化，保留用户内容和内部身份", CheckUpdatedUi),
+    ("快捷键命令和分类仅在显示处汉化，默认搜索提示不覆盖自定义内容", CheckShortcutDisplay),
     ("未知版本安装、重复汉化和恢复保持资源完整", CheckInstall),
     ("写入失败回滚，更新后拒绝旧备份覆盖", CheckRecovery),
     ("原生加载适配绑定本机服务并保留 WSL 行为", CheckNativeHook)
@@ -425,6 +426,29 @@ static void CheckUpdatedUi()
     Assert(result.GetProperty("local").GetProperty("children")[0].GetString() == "本地检出" && result.GetProperty("cloud").GetProperty("children")[0].GetString() == "云端" &&
         result.GetProperty("custom").GetProperty("children")[0].GetString() == "Local Checkout" && result.GetProperty("raw").GetString() == "Local Checkout" &&
         result.GetProperty("formatted").GetInt32() == 4, "新版环境标签漏翻，或原始格式化结果、自定义名称和求值次数被改动。");
+}
+static void CheckShortcutDisplay()
+{
+    const string code = """
+    const UI={createElement:(tag,props,...children)=>({props,children})};
+    const commands={open:{id:'open',label:'Open Conversation Picker'}},categories={navigation:'Navigation'};
+    let saved='';function Shortcuts(){const groups=Object.keys(categories).map(category=>({title:categories[category],items:Object.values(commands)}));return groups.map(group=>UI.createElement('section',{title:group.title},group.items.map(entry=>UI.createElement('row',{commandId:entry.id,label:entry.label,bindings:[],onSaveBinding:()=>saved=entry.id,onResetToDefault:()=>{}}))));}
+    function Search({query:a,onQueryChange:b,placeholder:c='Search shortcuts...'}){return UI.createElement('input',{value:a,onChange:b,placeholder:c});}
+    function Other({placeholder:c='Search shortcuts...'}){return c;}
+    const view=Shortcuts();view[0].children[0][0].props.onSaveBinding();
+    console.log(JSON.stringify({view,commands,categories,saved,search:Search({query:'',onQueryChange:()=>{}}),custom:Search({placeholder:'Search shortcuts...'}),other:Other({})}));
+    """;
+    var labels = new Dictionary<string, string> { ["Open Conversation Picker"] = "打开对话选择器", ["Navigation"] = "导航", ["Search shortcuts..."] = "搜索快捷键…" };
+    var texts = JavaScriptUi.Extract(code, "web/main.js").SelectMany(g => g.Texts).ToList();
+    var map = texts.Where(t => labels.ContainsKey(t.Source)).DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => labels[t.Source]);
+    using var document = JsonDocument.Parse(Node(JavaScriptUi.Apply(code, texts, map))); var result = document.RootElement;
+    Assert(result.GetProperty("view")[0].GetProperty("props").GetProperty("title").GetString() == "导航" &&
+        result.GetProperty("view")[0].GetProperty("children")[0][0].GetProperty("props").GetProperty("label").GetString() == "打开对话选择器" &&
+        result.GetProperty("saved").GetString() == "open" && result.GetProperty("commands").GetProperty("open").GetProperty("label").GetString() == "Open Conversation Picker" &&
+        result.GetProperty("categories").GetProperty("navigation").GetString() == "Navigation", "快捷键显示漏翻，或命令元数据、分类身份及回调参数被改动。");
+    Assert(result.GetProperty("search").GetProperty("props").GetProperty("placeholder").GetString() == "搜索快捷键…" &&
+        result.GetProperty("custom").GetProperty("props").GetProperty("placeholder").GetString() == "Search shortcuts..." && result.GetProperty("other").GetString() == "Search shortcuts...",
+        "默认搜索提示漏翻，或自定义提示、非界面默认参数被改动。");
 }
 static void CheckNativeHook()
 {

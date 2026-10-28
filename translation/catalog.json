@@ -63167,6 +63167,657 @@
           "Shape": "environment-label"
         }
       ]
+    },
+    {
+      "Id": "界面-03039",
+      "Key": "88110583dc62c5e4c87bb8135fec5c6c32bf177f2a9aa0f4f1a1282016997014",
+      "Kind": "ui/input-placeholder",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "41851e7eec369f6bfd2d4475f3fd41fbfda67d5c0e573cb03f24812b6a8e9a84",
+          "Source": "Enter command...",
+          "Role": "placeholder",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03040",
+      "Key": "6b7312ee6daca1a7425c866a867c1143319deff3b0cc2e932a85a28290564f80",
+      "Kind": "ui/input-placeholder",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "9ec6f742cd9befbdeb5f6550950e31becfc9fd2b93bd01d0e6a38c62e1acfa55",
+          "Source": "Search shortcuts...",
+          "Role": "placeholder",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03041",
+      "Key": "f0d9e5dc9868d54979f806a05644011e25418926645fcaacd47980f1d3f1646a",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "0bb1265aa9b7ef255c9155f88585d4d1dc96e1f8aedb06bdb6e299f27c77f24f",
+          "Source": "Accept Step",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "0ec1f15cf0a0f12b163bbf6d88840095ec688371d6fd89773c936641eba5792c",
+          "Source": "Add to Chat",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "85503ebd22fad2e307e6b5ec620e3feabb7a2da40f13423958f696cbd417d566",
+          "Source": "Add to Chat/Quote",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "8117645cf98773a6a9fa46e005586e4b5b17db2e0072fd558d0368fcb5101f04",
+          "Source": "Archive / Restore",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "bc53e0a9772f25e6e0715160f5bd8459cb53e611ac10249c167282746e4b2cd5",
+          "Source": "Archive This Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "593d17a788fb826202ab5680507fa53132bde6fd80a2e6c3f3f6635bda24d1cc",
+          "Source": "Cancel Generation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "9e78fc28bf5ad890ee95c5aac5fd9975bf5286d23118f3e0c34506db486dabf5",
+          "Source": "Close Tab",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "7806d40fe2e8d3975f9b769b4029526ae2245e71798248f5279f9ae52e19e46d",
+          "Source": "Close Terminal Tab",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-9",
+          "Key": "a43651b6afc9875afd30529ffe7d105a438a3706225c7175570ff0fd820bbd41",
+          "Source": "Code Search",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-10",
+          "Key": "c7fc718d6f4949cbb064b83c27459425e125974ed13758fd535a9e2bc14c9383",
+          "Source": "Collapse All Folders",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-11",
+          "Key": "8efa770e225c07cfe75f832f66c279d200ff34debd65950b81f71ce0deb8e970",
+          "Source": "Comment on Selection",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-12",
+          "Key": "dd8ba27916308ad3a74e182af2345ac3d2026faed8d14e15a48873d6820b1050",
+          "Source": "Complete Onboarding Step",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-13",
+          "Key": "d4de8bf60ce4a1ae3336cdaadedba3f80044dcb1292a38eed73d99717c53b633",
+          "Source": "Continue Response",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-14",
+          "Key": "d78dd5251408f06da78036258ee66909b752fcd81300774b72378fe0c30c2854",
+          "Source": "Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-15",
+          "Key": "d7200fbf6727adcd0ba8aa958e2718fb2d0d240004c2222368ac2098eb22eaa4",
+          "Source": "Copy Conversation Markdown",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-16",
+          "Key": "8cea54ec0e8f16f8c2c746675ff78e6ac73b9b91d680d7cf3837c941151bf4c7",
+          "Source": "Delete Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-17",
+          "Key": "79aa2e92ba7cbf1c4142133f7cabc234488cee5433e0ab734f11d58e0465abaa",
+          "Source": "Download Diagnostics",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-18",
+          "Key": "80fbc111156dc58471e3d4287500e9859d9677db8f8f3c17a7d8d21089b8216b",
+          "Source": "Equalize Split Panes",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-19",
+          "Key": "18749bbc4f7d961645e704a80a32705653e5e84fb20b89d449876d474dd06a30",
+          "Source": "Expand All Folders",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-20",
+          "Key": "181a0f8e5836e0d9137e11d6e27c03f3ea89965933e6447f4c1959286bba4122",
+          "Source": "File Picker",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-21",
+          "Key": "47c66fd2ed37052fb6c5319a62e4070884bd7c048eef2bee23fbb86fc61ff664",
+          "Source": "Find in Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-22",
+          "Key": "2823e629d99fdfca098a6744f5e8eaecab6167f756c4c77a3624da0652493d02",
+          "Source": "Find in Pane",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-23",
+          "Key": "0623309734a79c2ae973446053e4edd9b99dc649de143bc953e696c439830a8c",
+          "Source": "Focus Input",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-24",
+          "Key": "96bb5822a229bf9879cce8ab72bbed06fd319c921c20f2349862bb7b246fc706",
+          "Source": "Go Back",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-25",
+          "Key": "39092935b6526909c27ed8da532d6d794ad8dbab4bd66799e592efd89005771b",
+          "Source": "Go Back in Pane",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-26",
+          "Key": "e9ca770bfee19cc718f7a005560c8acddcbcbb0dd1579878cea520c2e4209e9e",
+          "Source": "Go Forward",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-27",
+          "Key": "43be354990997a4961e9db97b04faa7e7807ada4133809098c2d1d8c451215d5",
+          "Source": "Go Forward in Pane",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-28",
+          "Key": "3a9d8a76c7dd252e3aa01746cecd2657912a52560f0ed025b0b89b96259fe478",
+          "Source": "Layout Controls",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-29",
+          "Key": "20f3c03e20f0474622376f1f615695c7d39a272eb6804b83534c7d03ee198aac",
+          "Source": "Mark as Read",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-30",
+          "Key": "5f6cc58ab66972d2cfbd6dadcba96bf3bfd5af706d377c6724b4e5355f63a588",
+          "Source": "Mark as Unread",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-31",
+          "Key": "d53007dea924ab985125a74e4d94f6e3277cd5f858f321542693300afd535a0a",
+          "Source": "Move Conversation Down",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-32",
+          "Key": "d89439698bee95b80fa0777f27929435719c11cc43048d41a0a8f3de2e4afad6",
+          "Source": "Move Conversation Up",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-33",
+          "Key": "caa59871fcc5a3f1f45cc234ed74a32d3cd2ae97cc6de5fbfa9180aabeb2ce2a",
+          "Source": "Mute Live Chat Mic",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-34",
+          "Key": "2882705fc1da9c969d4101bac01adbf97d6bb8e156837669124ab53d4dd78c22",
+          "Source": "Navigation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-35",
+          "Key": "1c908d2390ec85f60ef541f4e1d8219bba139848109a222899631ae3e9fa24db",
+          "Source": "New Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-36",
+          "Key": "9ace195dc11aaf6b9fd61636c66f863d4ba5765a21559d5191daac2ec184a9f9",
+          "Source": "New Tab",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-37",
+          "Key": "0e41f881448601ea049f557eb49b54c5822c4248d598e389a1896671c6cb7b32",
+          "Source": "New Terminal Tab",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-38",
+          "Key": "e872363e34460efd47cd5b70e86feb88cc3ab1ac734ff9ac98ee0a4a02a7e69e",
+          "Source": "New Window",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-39",
+          "Key": "8f86252d5a3675db868e56dd012c4e8e1203c7965d0d8e1f69dbfbb7e827cbd0",
+          "Source": "Next Aux Pane Tab",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-40",
+          "Key": "e8cf8c05b297020893d7a9b6c345ea18f2db6a801564808e97150a2a6a9a96a9",
+          "Source": "Open Command Palette",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-41",
+          "Key": "283b5c298e9ac1496ef677566bf0a0bec2cb2232502809318b406f0fadbf6801",
+          "Source": "Open Commit Graph",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-42",
+          "Key": "e5e997c4dc03c7b16bd30dcf88705ab81bc23234e9695435d96f4bc62c4a2d28",
+          "Source": "Open Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-43",
+          "Key": "f585c499a72a88737a993ad3714d72e3ed8747c7e59cdd14ad58d525a25e3f54",
+          "Source": "Open Conversation History",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-44",
+          "Key": "f5568455de2a7db3d7bc560f0dd715779582c7ef7f1709884b1a00ad72a999ac",
+          "Source": "Open Conversation Picker",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-45",
+          "Key": "971cfc754428eeef4688eecd9471afc0aa514c1b040b1380ae2c0a403a174aec",
+          "Source": "Open Conversation in New Tab",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-46",
+          "Key": "f2dc07c42046748740df88d48e852e80a10a78f3b508002b2c745da6deda59b7",
+          "Source": "Open File Search",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-47",
+          "Key": "a46e65c4de22e0d67c32223d15068691f160dbc38c73683672f467e430d212f4",
+          "Source": "Open Keyboard Shortcuts",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-48",
+          "Key": "a9a31293b3a0e10e6a2ac8e1a98b554ac5cb09652498f6a3368b1f1c035085ad",
+          "Source": "Open Settings",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-49",
+          "Key": "b7a682b27f191a704c5df824924895641149a3b4762cc9afd3eda1a5084b81df",
+          "Source": "Open Workspace Selector",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-50",
+          "Key": "a4ed4b16dbb59d2eda8e3a3026288eefe354d6bab505d541581d606983823aa6",
+          "Source": "Open in Code Search",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-51",
+          "Key": "433477e124c0caa1f23e43fc0a5df293adc729d9ba1ab0eed10d112910782bc8",
+          "Source": "Pin This Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-52",
+          "Key": "ba2e1fc7cd8cea8bfa781fc9fffdf2e332d196d7af48765273609dba57e1f568",
+          "Source": "Previous Aux Pane Tab",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-53",
+          "Key": "0415f13fba7733db6982f8b6c84d189c73a02093ce2dafcacdfd3f88a7bc48f3",
+          "Source": "Provide Feedback",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-54",
+          "Key": "e9311066060b56ccf83b1cd2d292080503abfba1f94a60f04eab53bd7ff81bc2",
+          "Source": "Quote Selection",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-55",
+          "Key": "999450e193512444b89634a447796ce1a06adb869aa77620c9e1e1e631765cd4",
+          "Source": "Refresh gcert Credentials",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-56",
+          "Key": "6b89be552d6bf9676734e305dfaa5aa05b375340bcce6972ac157f0463318c77",
+          "Source": "Reject Step",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-57",
+          "Key": "6e0b62908d466e7ef4a64908d9b97cd72fa7fc4b0e6a9bc450096e4e70c13908",
+          "Source": "Reopen Closed Tab",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-58",
+          "Key": "e55c82836d7426d9057e69b65a5e4982fbed144d04d98222f934e2f10340941e",
+          "Source": "Reset Zoom",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-59",
+          "Key": "b3b392ca7601a632e6bd202c584c588fa33ea593f7e86345273fc440d04cdcae",
+          "Source": "Restart Main Language Server",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-60",
+          "Key": "eb73bf6754fdc5d14638a5dece3d14c3927859d60dde7f138258265d16975c29",
+          "Source": "Scheduled Tasks",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-61",
+          "Key": "402ff51f998d9bc644d069ed75c40c2399d38dd4b8b1aa3297bbf50ac5331950",
+          "Source": "Search Conversations",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-62",
+          "Key": "281b06e2acca7db3635a42be538cd23e47f3433dcce0315ed3b30127f8aaf206",
+          "Source": "Select All",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-63",
+          "Key": "83246bd8e1b73fa0b9d32887b320d94690069ce8f1116f022d58ad38cd2139bd",
+          "Source": "Select Next Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-64",
+          "Key": "4eafd9f90da5c2624525cb0fa4ea732ec79480619bc09d061f7780a33bccf5a0",
+          "Source": "Select Previous Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-65",
+          "Key": "1c800a0248d650f1e93a784a4132ed9ec0e4e0e10c580b841f54d70726419b62",
+          "Source": "Split Conversation Horizontally",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-66",
+          "Key": "8247e41a1d8e2950fb33450311ca27613dea680863bf379b21a90c452901d6c5",
+          "Source": "Split Conversation Vertically",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-67",
+          "Key": "ccdfeb16f0ab3a5fb8feb5d40b8a6d1351e7c097cb774b7114d5a2367c965897",
+          "Source": "Split Terminal",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-68",
+          "Key": "c1f19ed093d574ade556fc43812081d99e2971f5ba58d4ddd6070a86616cda43",
+          "Source": "Start Voice Recording",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-69",
+          "Key": "97b5a3d77ead46632b821d4ee4bd9f842faa0f212b0a232c580badc17aee2fce",
+          "Source": "Stop Voice Recording",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-70",
+          "Key": "d7281ebcc383cf7e673f2b75dbcee7c2d5d69828dd5bfe3a87e6f64ec319e7fe",
+          "Source": "Terminal: Add to Chat",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-71",
+          "Key": "d0fa5c3324281cf5d1c185bed7e7481ba2599ca1b56e35ce795bb8aa5049e3af",
+          "Source": "Toggle Auxiliary Pane",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-72",
+          "Key": "4a559f34b8b8f5995a41c09faea4127e4cefc6d3a2f763cc71aca63a88cdeb4d",
+          "Source": "Toggle Between Light/Dark Themes",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-73",
+          "Key": "875edcd53f73a290c17753dd3e211c52f8dadf72761b7c4f37bdacc9b40139c2",
+          "Source": "Toggle Environment Selector",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-74",
+          "Key": "278d217e2dd3ed9804c27fdfa02a20294f027e563159dbe951f398aa727e6ed6",
+          "Source": "Toggle File Viewer",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-75",
+          "Key": "6d32b6ec6feddd02db40f312abf564506082aa390337a9c275d2f357ba1f61b7",
+          "Source": "Toggle Maximize Auxiliary Pane",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-76",
+          "Key": "c3181a0c49f32ebfda7ea4618d1cf87164fb57104fe3b634bbc57008f4c3e296",
+          "Source": "Toggle Model Selector",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-77",
+          "Key": "39e8ac7c5b5741bf7b13828a48c67f6bdf94d2d540204b195fa6eb60a3001d60",
+          "Source": "Toggle Overview Panel",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-78",
+          "Key": "047ee4e4ae0e5ad6ca25023a7c327c6cc552d0f91540632ddf8b068107d940b1",
+          "Source": "Toggle Project Selector",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-79",
+          "Key": "4987ca6c5d5680a1081549cb20642a0b5e5d1f37a95486609ef6e0bc34ae0f0e",
+          "Source": "Toggle Sidebar",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-80",
+          "Key": "271c4f65687fad4a9ff7015593488276b612c83942506cdd433b3c9ff4ecebae",
+          "Source": "Toggle Terminal",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-81",
+          "Key": "e937f2a9c50c7825f147a1d1c6771c7564063edf6bae0ffdbb527dfc719bc459",
+          "Source": "Toggle Voice Recording",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-82",
+          "Key": "fb9e37988f775a0291b64256db774c7da74d319dca392a8edf025d8fb5800184",
+          "Source": "Unpin This Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-83",
+          "Key": "e43648b6c4b6a5c56a03ce65985f0705d40c2d2c85947162ccc82a93b35515cd",
+          "Source": "Zoom In",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-84",
+          "Key": "f29d41725d2fa4938c761e48a89f5fd2d2e4658416b4da0597e5e45bea3261a9",
+          "Source": "Zoom Out",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03042",
+      "Key": "0ba0575a4ae6019440719b134443d997a69e4a11cb7b7f00ec43b2e76847c700",
+      "Kind": "ui/input-placeholder",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4da8148b690eea0e3d4ed75a2eb574ddc545cda8c559c164bfbed20770ecd1e5",
+          "Source": "Enter target...",
+          "Role": "placeholder",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03043",
+      "Key": "0e1bad70b0b57e90189b6538109d2079066b1ea5798d6ab900ecdba2f149523f",
+      "Kind": "ui/input-placeholder",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "1c14c653d760455c51cde2e61acdd9239f014a2f8118d96cd237da47eca768f9",
+          "Source": "Search...",
+          "Role": "placeholder",
+          "Shape": "string"
+        }
+      ]
     }
   ]
 }
