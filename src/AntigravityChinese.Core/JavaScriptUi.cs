@@ -572,7 +572,7 @@ public static partial class JavaScriptUi
                         choice.Discriminant is MemberExpression { Computed: false, Object: Identifier selected, Property: Identifier { Name: "type" } } && selected.Name == environment.Name &&
                         choice.Cases.Any(c => c.Test is StringLiteral { Value: "sot" }) && choice.Cases.Any(c => c.Test is StringLiteral { Value: "environment" })))
                 {
-                    foreach (var source in new[] { "Local", "New Workspace", "New Worktree" })
+                    foreach (var source in new[] { "Local", "Local Checkout", "New Workspace", "New Worktree", "Cloud" })
                         if (lookupSeen.Add((node.Start, source))) texts.Add(new("", "", file, node.Start, node.End, source, "environment-label", "children", []));
                     return;
                 }
@@ -687,10 +687,12 @@ public static partial class JavaScriptUi
                 var setting = keys.IsSupersetOf(["isProviderSetting", "settingType", "label"]);
                 var navigation = keys.IsSupersetOf(["sidebarLabel", "searchPlaceholder"]);
                 var sectionHeader = keys.IsSupersetOf(["title", "headerActions"]);
+                var sidebarPaging = keys.IsSupersetOf(["type", "id", "groupId", "label", "isIndented"]) &&
+                    properties.Any(p => PropertyName(p) == "type" && p.Value is StringLiteral { Value: "show-more" });
                 var isMenuConfig = keys.Contains("label") && properties.Any(p => PropertyName(p) is "onClick" or "onSelect" &&
                     p.Value is ArrowFunctionExpression or FunctionExpression or Identifier or MemberExpression or ChainExpression);
-                if (command || setting || navigation || isMenuConfig || sectionHeader)
-                    Group(configuration, command ? "ui/command" : setting ? "ui/setting" : navigation ? "ui/navigation" : sectionHeader ? "ui/section-header" : "ui/menu",
+                if (command || setting || navigation || isMenuConfig || sectionHeader || sidebarPaging)
+                    Group(configuration, command ? "ui/command" : setting ? "ui/setting" : navigation ? "ui/navigation" : sectionHeader ? "ui/section-header" : sidebarPaging ? "ui/sidebar-pagination" : "ui/menu",
                         properties.Where(p => TextProperties.Contains(PropertyName(p)) || PropertyName(p) is "sidebarLabel" or "searchPlaceholder" or "emptyMessageSingular" or "emptyMessagePlural")
                             .Select(p => ((Node)p.Value, PropertyName(p))));
                 if (setting && properties.FirstOrDefault(p => PropertyName(p) == "resolveOptionToString")?.Value is Node resolver && IsFunction(resolver))
@@ -713,7 +715,10 @@ public static partial class JavaScriptUi
                 }
             }
             if (!desktop && IsFunction(node) && Parameters(node).OfType<ObjectPattern>().Any(pattern =>
-                    pattern.Properties.OfType<AssignmentProperty>().Select(p => p.Key).OfType<Identifier>().Select(p => p.Name).ToHashSet().IsSupersetOf(["inputPlaceholder", "supportsWorkflows"])))
+                {
+                    var keys = pattern.Properties.OfType<AssignmentProperty>().Select(p => p.Key).OfType<Identifier>().Select(p => p.Name).ToHashSet();
+                    return keys.IsSupersetOf(["inputPlaceholder", "supportsWorkflows"]) || keys.IsSupersetOf(["isSubagent", "activeAgentScript", "supportsWorkflows"]);
+                }))
                 foreach (var returned in Walk(node).Where(p => p.Function == node.Start).Select(p => p.Node).OfType<ReturnStatement>().Where(r => r.Argument is not null))
                     Group(returned, "ui/input-placeholder", [(returned.Argument!, "placeholder")]);
             if (node is CallExpression call)
@@ -839,7 +844,7 @@ public static partial class JavaScriptUi
                     .DistinctBy(t => t.Source).ToDictionary(t => t.Source, t => translations[t.Key]);
                 var choices = string.Join("", labels.Select(pair => $"value==={Quote(pair.Key)}?{Quote(pair.Value)}:")) + "value";
                 var arguments = string.Join(',', call.Arguments.Select(a => expression[a.Start..a.End]));
-                return $"((format,...args)=>{{const value=format(...args);return args[0]?.type==='sot'||args[0]?.type==='copy'?({choices}):value;}})({expression[call.Callee.Start..call.Callee.End]},{arguments})";
+                return $"((format,...args)=>{{const value=format(...args);return args[0]?.type==='sot'||args[0]?.type==='copy'||args[0]?.type==='cloud'?({choices}):value;}})({expression[call.Callee.Start..call.Callee.End]},{arguments})";
             }
             if (text.Shape == "system-command")
             {

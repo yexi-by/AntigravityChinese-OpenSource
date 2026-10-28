@@ -15,7 +15,7 @@
 
 ## 说明
 
-- 当前适配 Antigravity App 2.26.0，未识别的新文案保留原文。
+- 当前适配 Antigravity App 2.28.0，未识别的新文案保留原文。
 - 仅修改界面显示，用户内容、代码和模型名称保持原样。
 - 备份保存在 `%LOCALAPPDATA%\AntigravityChinese\backups`，请保留以便恢复。
 - 工具按需运行，没有常驻进程。

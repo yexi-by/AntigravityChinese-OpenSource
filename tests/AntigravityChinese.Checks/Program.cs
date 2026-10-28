@@ -15,6 +15,7 @@ var checks = new (string Name, Action Run)[]
     ("项目默认文案、菜单引用与空状态完整汉化，保留项目名称和事件", CheckProjectDisplay),
     ("设置选项与说明只转换最终显示，保留选中映射和权限回调", CheckSettingOptions),
     ("截图漏翻的侧栏、缓存文案、对比度和系统命令说明完整显示中文", CheckMissingUi),
+    ("新版输入提示、侧栏分页和环境标签汉化，保留用户内容和内部身份", CheckUpdatedUi),
     ("未知版本安装、重复汉化和恢复保持资源完整", CheckInstall),
     ("写入失败回滚，更新后拒绝旧备份覆盖", CheckRecovery),
     ("原生加载适配绑定本机服务并保留 WSL 行为", CheckNativeHook)
@@ -392,6 +393,38 @@ static void CheckMissingUi()
     Assert(hintChildren[0].GetString() == "您可以稍后在" && hintChildren[2].GetProperty("children")[0].GetString() == "设置" &&
         hintChildren[4].GetString() == "中更改。" && hint.RootElement.GetProperty("raw").GetString() == "later." &&
         hint.RootElement.GetProperty("clicks").GetInt32() == 1, "音色提示的小写句尾漏翻，或非界面字符串、设置按钮回调被改动。");
+}
+static void CheckUpdatedUi()
+{
+    const string code = """
+    const UI={createElement:(tag,props,...children)=>({props,children})};
+    function placeholder({isSubagent:a,activeAgentScript:b,supportsWorkflows:c}){return a?'Message subagent, @ to mention'+(c?', / for actions':''):b?.inputPlaceholder||'Ask anything, @ to mention'+(c?', / for actions':'');}
+    let counted=0;const nextCount=()=>++counted;const rows=[];
+    rows.push({type:'show-more',id:'show-more-project',label:true?`See all (${nextCount()})`:'See less',groupId:'project',isIndented:true});
+    const userRow={type:'row',id:'user-row',label:'See less',groupId:'project',isIndented:true};
+    let formatted=0;const formatEnvironment=(a,b,c=[])=>{formatted++;switch(a.type){case 'sot':return 'Local Checkout';case 'copy':return 'New Worktree';case 'environment':return a.name;case 'cloud':return 'Cloud';default:return 'Unknown Environment';}};
+    function selector(environment){return UI.createElement('span',null,formatEnvironment(environment,[]));}
+    const local=selector({type:'sot'}),cloud=selector({type:'cloud'}),custom=selector({type:'environment',name:'Local Checkout'}),raw=formatEnvironment({type:'sot'},[]);
+    console.log(JSON.stringify({rows,userRow,counted,local,cloud,custom,raw,formatted,input:placeholder({supportsWorkflows:true}),subagent:placeholder({isSubagent:true}),customInput:placeholder({activeAgentScript:{inputPlaceholder:'Ask anything, @ to mention'}})}));
+    """;
+    var labels = new Dictionary<string, string>
+    {
+        ["Ask anything, @ to mention"] = "想问什么都可以，输入 @ 提及", ["Message subagent, @ to mention"] = "向子智能体发送消息，输入 @ 提及",
+        [", / for actions"] = "，输入 / 执行操作", ["See all (⟪AGC0⟫)"] = "查看全部（⟪AGC0⟫）", ["See less"] = "收起",
+        ["Local Checkout"] = "本地检出", ["Cloud"] = "云端"
+    };
+    var texts = JavaScriptUi.Extract(code, "web/main.js").SelectMany(g => g.Texts).ToList();
+    var map = texts.Where(t => labels.ContainsKey(t.Source)).DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => labels[t.Source]);
+    using var document = JsonDocument.Parse(Node(JavaScriptUi.Apply(code, texts, map))); var result = document.RootElement;
+    Assert(result.GetProperty("input").GetString() == "想问什么都可以，输入 @ 提及，输入 / 执行操作" &&
+        result.GetProperty("subagent").GetString() == "向子智能体发送消息，输入 @ 提及" &&
+        result.GetProperty("customInput").GetString() == "Ask anything, @ to mention", "新版输入框提示漏翻，或自定义提示被改动。");
+    Assert(result.GetProperty("rows")[0].GetProperty("label").GetString() == "查看全部（1）" && result.GetProperty("counted").GetInt32() == 1 &&
+        result.GetProperty("rows")[0].GetProperty("type").GetString() == "show-more" && result.GetProperty("rows")[0].GetProperty("groupId").GetString() == "project" &&
+        result.GetProperty("userRow").GetProperty("label").GetString() == "See less", "侧栏分页漏翻，或分组身份、动态求值、用户行被改动。");
+    Assert(result.GetProperty("local").GetProperty("children")[0].GetString() == "本地检出" && result.GetProperty("cloud").GetProperty("children")[0].GetString() == "云端" &&
+        result.GetProperty("custom").GetProperty("children")[0].GetString() == "Local Checkout" && result.GetProperty("raw").GetString() == "Local Checkout" &&
+        result.GetProperty("formatted").GetInt32() == 4, "新版环境标签漏翻，或原始格式化结果、自定义名称和求值次数被改动。");
 }
 static void CheckNativeHook()
 {

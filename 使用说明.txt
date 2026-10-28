@@ -1,6 +1,6 @@
 Antigravity App 汉化工具
 
-适用于 Windows x64，当前适配 Antigravity App 2.26.0。
+适用于 Windows x64，当前适配 Antigravity App 2.28.0。
 
 1. 完全退出 Antigravity App。
 2. 运行 AntigravityChinese.exe，核对安装目录，点击“开始汉化”。
