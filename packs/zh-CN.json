@@ -45615,6 +45615,54 @@
       "Kind": "ui/input-placeholder",
       "Role": "placeholder",
       "Shape": "string"
+    },
+    {
+      "Key": "56a668bf0976e7c76af57982acd057370e9ae9478c81b5f46e0b38166c5c7a9b",
+      "Source": "Developer",
+      "Translation": "开发者",
+      "Kind": "ui/dt",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "146a6239a2903199b55d7b85c0e9a2c1aa2c4cd548431658cae3114dcd1030cb",
+      "Source": "Version",
+      "Translation": "版本",
+      "Kind": "ui/dt",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "46b76bcde916f137189023e6bd8549f4ba62a8490c8c5e0743db40a45ad0c359",
+      "Source": "Links",
+      "Translation": "链接",
+      "Kind": "ui/dt",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "840a81d4e864390a9a213d65927e3662cb1ea48e7fc175555c8f771752793d55",
+      "Source": "Website",
+      "Translation": "网站",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "47a6ba80a686e93558deeee87177319fd616b275ba1544dad60d44b1663a1306",
+      "Source": "Repository",
+      "Translation": "仓库",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "9528436581a2ba9efaf56df1abfec0b1e45ebe67da451525a9561c8955b0bdd3",
+      "Source": "Marketplace notice",
+      "Translation": "扩展市场提示",
+      "Kind": "ui/footer",
+      "Role": "aria-label",
+      "Shape": "string"
     }
   ],
   "RetainedSources": [

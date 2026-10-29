@@ -63818,6 +63818,90 @@
           "Shape": "string"
         }
       ]
+    },
+    {
+      "Id": "界面-03044",
+      "Key": "9b92f0a0cb95f20d79b3e81e1021858482938ed38c156744d4f503c43254f5f7",
+      "Kind": "ui/dt",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "56a668bf0976e7c76af57982acd057370e9ae9478c81b5f46e0b38166c5c7a9b",
+          "Source": "Developer",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03045",
+      "Key": "0569f1eb2852e87cc7643d7d3085334f6a71fa437423398d59846deb4a751e4f",
+      "Kind": "ui/dt",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "146a6239a2903199b55d7b85c0e9a2c1aa2c4cd548431658cae3114dcd1030cb",
+          "Source": "Version",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03046",
+      "Key": "c3dd433a33f146bb56fcb5d1045d99dec557d833e540ca5fd9a551faf010c67e",
+      "Kind": "ui/dt",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "46b76bcde916f137189023e6bd8549f4ba62a8490c8c5e0743db40a45ad0c359",
+          "Source": "Links",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03047",
+      "Key": "30dd7ffeda962c35ca807e91feff217828d20d9ead77682bae646f8f59ab3cf1",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "840a81d4e864390a9a213d65927e3662cb1ea48e7fc175555c8f771752793d55",
+          "Source": "Website",
+          "Role": "label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03048",
+      "Key": "768b79d04e6ce77d975041b67de8b2f97801f639dca30bac463813d229c92e48",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "47a6ba80a686e93558deeee87177319fd616b275ba1544dad60d44b1663a1306",
+          "Source": "Repository",
+          "Role": "label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03049",
+      "Key": "66e50cf53c6ab032d11da963c17339bb1c9c3ea9a06d532b3fa462e3b43b5bab",
+      "Kind": "ui/footer",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "9528436581a2ba9efaf56df1abfec0b1e45ebe67da451525a9561c8955b0bdd3",
+          "Source": "Marketplace notice",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
     }
   ]
 }
