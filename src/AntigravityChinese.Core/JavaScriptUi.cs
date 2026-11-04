@@ -529,17 +529,8 @@ public static partial class JavaScriptUi
             else foreach (var child in node.ChildNodes) pendingReferences.Push(child);
         }
         var displayAssignments = new List<(int Function, Expression Value)>();
-        foreach (var key in candidates)
+        foreach (var key in candidates.Where(key => !fixedBindings.Contains(key)))
         {
-            if (fixedBindings.Contains(key) && declarations.TryGetValue(key, out var initial))
-            {
-                // 已能完整解析的文字仍在消费处合并翻译，避免提前翻译名词破坏整句匹配。
-                var resolved = Expand(initial, key.Function, []);
-                if ((resolved is null || resolved.Any(value => value is not StringLiteral)) &&
-                    references[key].All(position => position < initial.End || displayReads.Contains(position)))
-                    displayAssignments.Add((key.Function, initial));
-                continue;
-            }
             var changes = writes[key].OrderBy(c => c.Position).ToArray();
             var first = Array.FindIndex(changes, c => c.Linear && plainAssignments.Contains(c.Position) && c.Value is not null && Walk(c.Value).Any(p => p.Node is StringLiteral text && LooksLikeText(text.Value)));
             if (first < 0 || changes.Any(c => c.Closure) || changes.Skip(first).Any(c => !c.Linear || !plainAssignments.Contains(c.Position) || c.Value is null)) continue;
@@ -547,6 +538,17 @@ public static partial class JavaScriptUi
             foreach (var change in changes.Skip(first)) MarkDisplayReads(change.Value!, allowed);
             if (references[key].Any(position => position >= changes[first].End && !allowed.Contains(position))) continue;
             displayAssignments.AddRange(changes.Skip(first).Select(c => (key.Function, c.Value!)));
+        }
+        // 运行位置的默认名还会赋给最终显示变量；只沿已经证明仅用于显示的赋值追踪读取。
+        foreach (var assignment in displayAssignments) MarkDisplayReads(assignment.Value, displayReads);
+        foreach (var key in candidates.Where(fixedBindings.Contains))
+        {
+            var initial = declarations[key];
+            // 已能完整解析的文字仍在消费处合并翻译，避免提前翻译名词破坏整句匹配。
+            var resolved = Expand(initial, key.Function, []);
+            if ((resolved is null || resolved.Any(value => value is not StringLiteral)) &&
+                references[key].All(position => position < initial.End || displayReads.Contains(position)))
+                displayAssignments.Add((key.Function, initial));
         }
 
         void FinishGroup(string kind, List<UiText> texts)
@@ -613,6 +615,15 @@ public static partial class JavaScriptUi
                 }
                 switch (node)
                 {
+                    case CallExpression immediate when kind == "ui/display-local" && immediate.Arguments.Count == 0 &&
+                        immediate.Callee is ArrowFunctionExpression or FunctionExpression && !Parameters(immediate.Callee).Any():
+                    {
+                        var previous = activeFunction;
+                        activeFunction = immediate.Callee.Start;
+                        foreach (var result in FunctionResults(immediate.Callee)) Value(result, role);
+                        activeFunction = previous;
+                        break;
+                    }
                     case CallExpression memo when kind == "ui/display-local" &&
                         memo.Callee is MemberExpression { Property: Identifier { Name: "useMemo" } } or SequenceExpression &&
                         (memo.Callee is not SequenceExpression memoSequence || memoSequence.Expressions[^1] is MemberExpression { Property: Identifier { Name: "useMemo" } }) &&

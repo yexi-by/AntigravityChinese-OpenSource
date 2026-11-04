@@ -406,13 +406,20 @@ static void CheckUpdatedUi()
     let formatted=0;const formatEnvironment=(a,b,c=[])=>{formatted++;switch(a.type){case 'sot':return 'Local Checkout';case 'copy':return 'New Worktree';case 'environment':return a.name;case 'cloud':return 'Cloud';default:return 'Unknown Environment';}};
     function selector(environment){return UI.createElement('span',null,formatEnvironment(environment,[]));}
     const local=selector({type:'sot'}),cloud=selector({type:'cloud'}),custom=selector({type:'environment',name:'Local Checkout'}),raw=formatEnvironment({type:'sot'},[]);
-    console.log(JSON.stringify({rows,userRow,counted,local,cloud,custom,raw,formatted,input:placeholder({supportsWorkflows:true}),subagent:placeholder({isSubagent:true}),customInput:placeholder({activeAgentScript:{inputPlaceholder:'Ask anything, @ to mention'}})}));
+    let selected=0;
+    function projectChoice(kind,project){var title=(()=>{selected++;switch(kind){case 'magicWorkspace':return 'New Workspace';case 'standalone':return 'No Project';case 'project':return project.name;default:return 'Select Project';}})();return UI.createElement('button',{'aria-label':`Select project, current: ${title}`},title);}
+    function locationChoice(location,machine,environments){var name=machine.name??'This Computer',label=location.kind==='cloud'?environments.find(e=>e.id===location.id):undefined,current=label??environments[0];label=location.kind==='local'?name:label&&label.id!=='default'?label.name:'Remote';return UI.createElement('section',null,UI.createElement('button',{'aria-label':`Where the agent runs, current: ${label}`},label),UI.createElement('span',null,name));}
+    function businessChoice(){var title=(()=>{return 'No Project';})();return {title,isStandalone:title==='No Project',view:UI.createElement('span',null,title)};}
+    const projectChoices=[projectChoice('standalone'),projectChoice('magicWorkspace'),projectChoice('project',{name:'No Project'})];
+    const locationChoices=[locationChoice({kind:'local'},{},[]),locationChoice({kind:'local'},{name:'This Computer'},[]),locationChoice({kind:'cloud',id:'default'},{},[{id:'default',name:'Remote'}]),locationChoice({kind:'cloud',id:'custom'},{},[{id:'custom',name:'Remote'}])];
+    console.log(JSON.stringify({rows,userRow,counted,local,cloud,custom,raw,formatted,projectChoices,locationChoices,selected,business:businessChoice(),input:placeholder({supportsWorkflows:true}),subagent:placeholder({isSubagent:true}),customInput:placeholder({activeAgentScript:{inputPlaceholder:'Ask anything, @ to mention'}})}));
     """;
     var labels = new Dictionary<string, string>
     {
         ["Ask anything, @ to mention"] = "想问什么都可以，输入 @ 提及", ["Message subagent, @ to mention"] = "向子智能体发送消息，输入 @ 提及",
         [", / for actions"] = "，输入 / 执行操作", ["See all (⟪AGC0⟫)"] = "查看全部（⟪AGC0⟫）", ["See less"] = "收起",
-        ["Local Checkout"] = "本地检出", ["Cloud"] = "云端"
+        ["Local Checkout"] = "本地检出", ["Cloud"] = "云端", ["No Project"] = "无项目", ["New Workspace"] = "新建工作区",
+        ["This Computer"] = "此计算机", ["Remote"] = "远程"
     };
     var texts = JavaScriptUi.Extract(code, "web/main.js").SelectMany(g => g.Texts).ToList();
     var map = texts.Where(t => labels.ContainsKey(t.Source)).DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => labels[t.Source]);
@@ -426,6 +433,18 @@ static void CheckUpdatedUi()
     Assert(result.GetProperty("local").GetProperty("children")[0].GetString() == "本地检出" && result.GetProperty("cloud").GetProperty("children")[0].GetString() == "云端" &&
         result.GetProperty("custom").GetProperty("children")[0].GetString() == "Local Checkout" && result.GetProperty("raw").GetString() == "Local Checkout" &&
         result.GetProperty("formatted").GetInt32() == 4, "新版环境标签漏翻，或原始格式化结果、自定义名称和求值次数被改动。");
+    var projects = result.GetProperty("projectChoices"); var locations = result.GetProperty("locationChoices");
+    Assert(projects[0].GetProperty("children")[0].GetString() == "无项目" && projects[1].GetProperty("children")[0].GetString() == "新建工作区" &&
+        projects[2].GetProperty("children")[0].GetString() == "No Project" && result.GetProperty("selected").GetInt32() == 3,
+        "立即调用函数生成的默认项目名漏翻，或用户项目名、函数求值次数被改动。");
+    Assert(locations[0].GetProperty("children")[0].GetProperty("children")[0].GetString() == "此计算机" &&
+        locations[0].GetProperty("children")[1].GetProperty("children")[0].GetString() == "此计算机" &&
+        locations[1].GetProperty("children")[0].GetProperty("children")[0].GetString() == "This Computer" &&
+        locations[2].GetProperty("children")[0].GetProperty("children")[0].GetString() == "远程" &&
+        locations[3].GetProperty("children")[0].GetProperty("children")[0].GetString() == "Remote",
+        "运行位置的默认名漏翻，或用户机器、环境名称被改动。");
+    Assert(result.GetProperty("business").GetProperty("title").GetString() == "No Project" && result.GetProperty("business").GetProperty("isStandalone").GetBoolean(),
+        "参与业务判断的立即调用函数返回值被改动。");
 }
 static void CheckShortcutDisplay()
 {
