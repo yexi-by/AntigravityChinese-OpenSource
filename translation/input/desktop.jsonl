@@ -10,3 +10,7 @@
 {"id":"\u754C\u9762-00010","kind":"menu","units":[{"id":"text-1","text":"Connect to WSL"}]}
 {"id":"\u754C\u9762-00011","kind":"menu","units":[{"id":"text-1","text":"Reopen Locally"}]}
 {"id":"\u754C\u9762-00012","kind":"dialog","units":[{"id":"text-1","text":"Check for Updates"},{"id":"text-2","text":"No updates available"},{"id":"text-3","text":"OK"}]}
+{"id":"\u754C\u9762-03392","kind":"menu","units":[{"id":"text-1","text":"Actual Size"}]}
+{"id":"\u754C\u9762-03393","kind":"menu","units":[{"id":"text-1","text":"Zoom In"}]}
+{"id":"\u754C\u9762-03394","kind":"menu","units":[{"id":"text-1","text":"Zoom Out"}]}
+{"id":"\u754C\u9762-03395","kind":"dialog","units":[{"id":"text-1","text":"Connection info"},{"id":"text-2","text":"OK"}]}
