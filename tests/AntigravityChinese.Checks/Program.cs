@@ -445,6 +445,36 @@ static void CheckUpdatedUi()
         "运行位置的默认名漏翻，或用户机器、环境名称被改动。");
     Assert(result.GetProperty("business").GetProperty("title").GetString() == "No Project" && result.GetProperty("business").GetProperty("isStandalone").GetBoolean(),
         "参与业务判断的立即调用函数返回值被改动。");
+
+    const string coordinator = """
+    const UI={createElement:(tag,props,...children)=>({props,children}),jsx:(tag,props)=>({props})};
+    let edits=0;const view=UI.createElement('textarea',{'data-testid':'coordinator-goal-input',placeholder:'What should this coordinator accomplish?','aria-label':'Coordinator goal',value:'Keep this user text',defaultValue:'Keep this default text',onChange:()=>++edits},'Keep this body');
+    const jsxView=UI.jsx('textarea',{'data-testid':'coordinator-goal-input',placeholder:'What should this coordinator accomplish?','aria-label':'Coordinator goal',children:'Keep this JSX value'});
+    const other=UI.createElement('textarea',{placeholder:'What should this coordinator accomplish?','aria-label':'Coordinator goal'},'Keep this body');
+    const code=UI.createElement('pre',null,UI.createElement('textarea',{'data-testid':'coordinator-goal-input',placeholder:'What should this coordinator accomplish?','aria-label':'Coordinator goal'}));
+    view.props.onChange();console.log(JSON.stringify({view,jsxView,other,code,edits}));
+    """;
+    var coordinatorLabels = new Dictionary<string, string>
+    {
+        ["What should this coordinator accomplish?"] = "这个协调器需要完成什么目标？", ["Coordinator goal"] = "协调器目标"
+    };
+    var coordinatorTexts = JavaScriptUi.Extract(coordinator, "web/main.js").SelectMany(g => g.Texts).ToList();
+    Assert(coordinatorTexts.Count == 4, "协调器显示属性提取范围不正确。");
+    using var coordinatorResult = JsonDocument.Parse(Node(JavaScriptUi.Apply(coordinator, coordinatorTexts,
+        coordinatorTexts.DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => coordinatorLabels[t.Source]))));
+    var coordinatorView = coordinatorResult.RootElement.GetProperty("view");
+    Assert(coordinatorView.GetProperty("props").GetProperty("placeholder").GetString() == "这个协调器需要完成什么目标？" &&
+        coordinatorView.GetProperty("props").GetProperty("aria-label").GetString() == "协调器目标" &&
+        coordinatorResult.RootElement.GetProperty("jsxView").GetProperty("props").GetProperty("aria-label").GetString() == "协调器目标",
+        "协调器文本框的提示或无障碍标签未汉化。");
+    Assert(coordinatorView.GetProperty("props").GetProperty("value").GetString() == "Keep this user text" &&
+        coordinatorView.GetProperty("props").GetProperty("defaultValue").GetString() == "Keep this default text" &&
+        coordinatorView.GetProperty("children")[0].GetString() == "Keep this body" &&
+        coordinatorResult.RootElement.GetProperty("jsxView").GetProperty("props").GetProperty("children").GetString() == "Keep this JSX value" &&
+        coordinatorResult.RootElement.GetProperty("edits").GetInt32() == 1 &&
+        coordinatorResult.RootElement.GetProperty("other").GetProperty("props").GetProperty("placeholder").GetString() == "What should this coordinator accomplish?" &&
+        coordinatorResult.RootElement.GetProperty("code").GetProperty("children")[0].GetProperty("props").GetProperty("aria-label").GetString() == "Coordinator goal",
+        "协调器编辑内容、事件或未确认的文本框被改动。");
 }
 static void CheckShortcutDisplay()
 {

@@ -58111,6 +58111,454 @@
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "string"
+    },
+    {
+      "Key": "7528e4c283ef9ed75c1059dcbfc0fbd11b140dd116cee5e4e6a0897f726245d6",
+      "Source": "Projects",
+      "Translation": "项目",
+      "Kind": "ui/setting-screen",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "22f63d6c5a0156f51fc7c8da20e76f784d14c4a3a56bfc73bc80b17b9bc5c93d",
+      "Source": "Environments",
+      "Translation": "环境",
+      "Kind": "ui/setting-screen",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "eba29459c22674b0d8e9941688901cd8077680af7b118036b0cf1c5ccb2242df",
+      "Source": "Toggle Google Cloud projects",
+      "Translation": "展开或收起 Google Cloud 项目列表",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "435c528866eec514af8a861761aba0b07ea8ced376bc127f75029e1840461b91",
+      "Source": "Add to Chat/Quote",
+      "Translation": "添加到聊天/引用",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ea1ad14dec83f1a9d1708beca24ebac2d792b9133149204399cfb9fdae820dde",
+      "Source": "Conversation",
+      "Translation": "对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "05953a9d3beb188655b9c55c2e3abec2695318fe7905600b28cd33c1a44c6be1",
+      "Source": "Layout Controls",
+      "Translation": "布局控件",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f90107acd6452982d78f72e327140a8a60b83366dae9b093a59caa486ad37c8f",
+      "Source": "Navigation",
+      "Translation": "导航",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "fb2070098d148e4d3cb8deed6303d55c1cb83311e5e9279b8068ef6ee26c6ce7",
+      "Source": "Open Conversation in New Tab",
+      "Translation": "在新标签页中打开对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f0a003121460292ddbb2be58f16befb06c010a95370ea01530e8b92eeb465d08",
+      "Source": "Open File Search",
+      "Translation": "打开文件搜索",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "91a11f88d589c89eb1085c7d5c80f23095fc30fab8b208d40494466e665e856e",
+      "Source": "Live transcript",
+      "Translation": "实时转写",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "efffa2bdc3ff04c18ffd63ccb365b59f88dccdd26ec0b14f42d6749ca6673c60",
+      "Source": "Voice transcript",
+      "Translation": "语音转写",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9ddb74944a09da215946d94704774bc3f9eccba92eb6b172320964aedb40bb03",
+      "Source": "Open ⟪AGC0⟫, ⟪AGC1⟫. ⟪AGC2⟫",
+      "Translation": "打开 ⟪AGC0⟫，⟪AGC1⟫。⟪AGC2⟫",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "1b2971a56df9c6c4f141153e803e8ddbbd4345b18a6a07d37461ed02adb3dfcb",
+      "Source": "Open ⟪AGC0⟫, ⟪AGC1⟫. Summarizing call",
+      "Translation": "打开 ⟪AGC0⟫，⟪AGC1⟫。正在总结通话",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "0013dbae71a77e97ac10b21576c86ffcba102c49b56b39da76386ada009cc2e3",
+      "Source": "Open ⟪AGC0⟫, ⟪AGC1⟫",
+      "Translation": "打开 ⟪AGC0⟫，⟪AGC1⟫",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "65d5c6b34302d57e29bd6acb6a70acee08d8d858b4e00f333605153cc4ed239d",
+      "Source": "Summarizing call…",
+      "Translation": "正在总结通话…",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "4721129362e76aedc3d5e6a4c72f206161c0ae9c1d23d310a7fd160669447220",
+      "Source": "Commented on: ",
+      "Translation": "评论位置： ",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "0c9d85caaec6087381206ef726458df269a8fc60fab0df908c2ff2513992ae29",
+      "Source": "Stop Subagent",
+      "Translation": "停止子智能体",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "baa53e96873df03a63620d84c164f364b74d735129e3f22994db80b685e2ad3d",
+      "Source": "Stop ⟪AGC0⟫",
+      "Translation": "停止 ⟪AGC0⟫",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "53e4fa7b938963623672904d73d29371d6f5cce333abd9c5994365d79f154fa7",
+      "Source": "Open ⟪AGC0⟫",
+      "Translation": "打开 ⟪AGC0⟫",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "153ab57e259f6e003c76c5beb42e2082944218837e0452b514eba3c83c802285",
+      "Source": "Open",
+      "Translation": "打开",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "9fc21352f0b77d2459e9e7d32479d2c0c93c7c0f06f0d2b80286e399a707893c",
+      "Source": "Something went wrong.",
+      "Translation": "出了点问题。",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "cc5fada1e68831c0fbc1ccf2023763354ac9be8036466e85df144fb5542948e8",
+      "Source": "You said",
+      "Translation": "您说",
+      "Kind": "ui/h5",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "ae09fe37ed1f830a3b2d87786018aa7598d2fbf6bc0274de55747c732b4b0237",
+      "Source": "Good Response",
+      "Translation": "回答不错",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "ab9524286e4c488da589ee3021fc7f7f2481174a22a3bf3d827bf6842cdce821",
+      "Source": "Bad Response",
+      "Translation": "回答欠佳",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "21899aa2822ba743a39069aca9c0fe0e0215ccd23a4c146f5131779c60f2b7b1",
+      "Source": "Agent working",
+      "Translation": "智能体正在工作",
+      "Kind": "ui/h6",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "e8235052b2c00cc187100a67ff080abc7eb85b48632133352b5217774c92a673",
+      "Source": "Agent said",
+      "Translation": "智能体说",
+      "Kind": "ui/h6",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "ecfb58aabdcffbddeefc71aff34a9e8378b44e1efc8610c9e901cf2425c5bd18",
+      "Source": "Trouble signing in? Enter authorization code",
+      "Translation": "登录遇到问题？输入授权码",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "0cbc550e646cf9649d57bcc8ef3b71533e966b88b5fb19a434a07d66012a8255",
+      "Source": "Sign in in your browser, then paste the authorization code shown on the callback page.",
+      "Translation": "在浏览器中登录，然后粘贴回调页面上显示的授权码。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "fbe174918ff15da8b4aa2aa8910f32a75adc9e0cb2cf537d3dce1c6698ad6c17",
+      "Source": "Authorization code",
+      "Translation": "授权码",
+      "Kind": "ui/label",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "43a8fb830db2d11765ecc180ed7fd10828184a12acc49cbdadc4236b5a14c4d8",
+      "Source": "Paste authorization code",
+      "Translation": "粘贴授权码",
+      "Kind": "ui/input",
+      "Role": "placeholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "5d20018276c4c6a63d95392a0c67cc2a4fa8a35ac5e735b3e95757a1f1f38f84",
+      "Source": "Submit code",
+      "Translation": "提交授权码",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "796811c7d29927cd52c57ca12914f6ed824653ad99972ea4cf432df08d794e59",
+      "Source": "Choose icon and color",
+      "Translation": "选择图标和颜色",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "d8cdcca85a97697005344b116a8605da545dcc8b06d8dea849eaac1a430bd225",
+      "Source": "New Coordinator",
+      "Translation": "新建协调器",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "67e4ebb1f049b226ca48af9dc2ca1dd2a95d53df17e451ae99dbb9fc2e7d03e1",
+      "Source": "e.g. Release helper",
+      "Translation": "例如 发布助手",
+      "Kind": "ui/input",
+      "Role": "placeholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "d23eaf937092906ebbf1fbf80b94f42aee2787e5dac318d6287b8567c72a76b8",
+      "Source": "Coordinator name",
+      "Translation": "协调器名称",
+      "Kind": "ui/input",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "5419062566389e587244531140af1cba55c0d690b8327083a632d2106dd22640",
+      "Source": "Goal",
+      "Translation": "目标",
+      "Kind": "ui/label",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "159972fe8492edece228c519a18c2ab9f7216e6dbe9de5232543346c5402d02c",
+      "Source": "Create Coordinator",
+      "Translation": "创建协调器",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "221af34a2a02fdbba028b7377bbbb61b1b1e6c64101ca67f3aff6b6f53c86f3b",
+      "Source": "Coordinator settings",
+      "Translation": "协调器设置",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "992c854246a45e7efce043fbcd5342029c636047bffd2b043f4b0897036b7521",
+      "Source": "Coordinator name",
+      "Translation": "协调器名称",
+      "Kind": "ui/input",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "1f177b48cde329d2b55b0f35b581efbf48c1c581d35934aafdd7328bd1f006af",
+      "Source": "Ask /btw",
+      "Translation": "使用 /btw 提问",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "b43e0b773f8a6a12b0efc663ce79cf8e39f6ae5746f74d732cee955128c694d2",
+      "Source": "Couldn't start the coordinator:",
+      "Translation": "无法启动协调器：",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "650d043edef5ad01196af7964f36146fcc762bedb4240698c1cc2c65ff5459f1",
+      "Source": "Project location",
+      "Translation": "项目位置",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "48d0afceadf758e49aa9d55461b5686bec7ed332cce661a33b504589ffa7ae33",
+      "Source": "Select Resource(s)",
+      "Translation": "选择资源",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d50a4c60f4d14a9fbff7650a2e5591671520b73463a81bf5ef2c4d5f8940ae80",
+      "Source": "Select Folder(s)",
+      "Translation": "选择文件夹",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "32bd257d75da0056b0f7e7f87d161279c27cd34293a61710862cc873d57b9d46",
+      "Source": "New coordinator",
+      "Translation": "新建协调器",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "4025234d1f016693c509069a6efd1b22a7cb7c4926d1dc348058469c0572d1d5",
+      "Source": " Pick a model to change it.",
+      "Translation": " 选择模型进行更换。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "69d723dd1a551ec952acbfafcaabf0067862f4f3439538e33fe30c810ce37de9",
+      "Source": "Connect an account for ⟪AGC0⟫ so the agent can run automations.",
+      "Translation": "为 ⟪AGC0⟫ 连接账号，以便智能体运行自动化。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "c031de38cfcd26c3bff8da8c8305094f6a1885798b6fcc2f94781cb30d74352b",
+      "Source": "Connect an account so the agent can run automations.",
+      "Translation": "连接账号，以便智能体运行自动化。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "6a57bdb5962d4b9e7a3757c1988f4c7072d26b058087b7ce3bfde6ae5ee145e5",
+      "Source": "Refreshing credentials...",
+      "Translation": "正在刷新凭据...",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "ef78e49892139cfc850e73d1e4423e0e83b9491d736910eaea1d79222365425f",
+      "Source": "Connect",
+      "Translation": "连接",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "9786fb8bb399c15f6ad3f9ad7d30755c98555628c9799778d06b6b4d4bdcfe76",
+      "Source": "⟪AGC0⟫ color picker",
+      "Translation": "⟪AGC0⟫颜色选择器",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "616e7584958eb0fe923468e465a0fe8e09dc88c6a9c4eec43cc6fea58074433b",
+      "Source": "Reset to preset",
+      "Translation": "恢复预设",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "896d5e877ae25cf1d9c584f83872584528ef0846b44c2a8f983403a10d3c6e26",
+      "Source": "Code Preview",
+      "Translation": "代码预览",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "cff066f54a08c0885bb8fe3939e902ea10b45eb1a08238c5bf74d7b362d737fb",
+      "Source": "Font Size",
+      "Translation": "字号",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "3e5ec06aea176711dbe14d76776559099c0dd0b03097b1be63fc42bcc19a4106",
+      "Source": "What should this coordinator accomplish?",
+      "Translation": "这个协调器需要完成什么目标？",
+      "Kind": "ui/textarea",
+      "Role": "placeholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "ed9e0faf142a569fde86ed348c020b4d4fefa8cd0c1b1833c9c99eba62d0d415",
+      "Source": "Coordinator goal",
+      "Translation": "协调器目标",
+      "Kind": "ui/textarea",
+      "Role": "aria-label",
+      "Shape": "string"
     }
   ],
   "RetainedSources": [

@@ -3511,3 +3511,42 @@
 {"id":"\u754C\u9762-03527","kind":"ui/button","units":[{"id":"text-1","text":"Show less"},{"id":"text-2","text":"\u002B\u27EAAGC0\u27EB more"}]}
 {"id":"\u754C\u9762-03528","kind":"ui/span","units":[{"id":"text-1","text":"Fields"},{"id":"text-2","text":"Variables"}]}
 {"id":"\u754C\u9762-03529","kind":"ui/div","units":[{"id":"text-1","text":"Available CEL helper functions"}]}
+{"id":"\u754C\u9762-03530","kind":"ui/setting-screen","units":[{"id":"text-1","text":"Projects"}]}
+{"id":"\u754C\u9762-03531","kind":"ui/setting-screen","units":[{"id":"text-1","text":"Environments"}]}
+{"id":"\u754C\u9762-03532","kind":"ui/component","units":[{"id":"text-1","text":"Toggle Google Cloud projects"}]}
+{"id":"\u754C\u9762-03533","kind":"ui/component","units":[{"id":"text-1","text":"Add to Chat/Quote"},{"id":"text-2","text":"Conversation"},{"id":"text-3","text":"Layout Controls"},{"id":"text-4","text":"Navigation"},{"id":"text-5","text":"Open Conversation in New Tab"},{"id":"text-6","text":"Open File Search"}]}
+{"id":"\u754C\u9762-03534","kind":"ui/button","units":[{"id":"text-1","text":"Live transcript"},{"id":"text-2","text":"Voice transcript"},{"id":"text-3","text":"Open \u27EAAGC0\u27EB, \u27EAAGC1\u27EB. \u27EAAGC2\u27EB"},{"id":"text-4","text":"Open \u27EAAGC0\u27EB, \u27EAAGC1\u27EB. Summarizing call"},{"id":"text-5","text":"Open \u27EAAGC0\u27EB, \u27EAAGC1\u27EB"}]}
+{"id":"\u754C\u9762-03535","kind":"ui/component","units":[{"id":"text-1","text":"Summarizing call\u2026"}]}
+{"id":"\u754C\u9762-03536","kind":"ui/span","units":[{"id":"text-1","text":"Commented on: "}]}
+{"id":"\u754C\u9762-03537","kind":"ui/button","units":[{"id":"text-1","text":"Stop Subagent"},{"id":"text-2","text":"Stop \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-03538","kind":"ui/component","units":[{"id":"text-1","text":"Open \u27EAAGC0\u27EB"},{"id":"text-2","text":"Open"}]}
+{"id":"\u754C\u9762-03539","kind":"ui/div","units":[{"id":"text-1","text":"Something went wrong."}]}
+{"id":"\u754C\u9762-03540","kind":"ui/h5","units":[{"id":"text-1","text":"You said"}]}
+{"id":"\u754C\u9762-03541","kind":"ui/menu","units":[{"id":"text-1","text":"Good Response"}]}
+{"id":"\u754C\u9762-03542","kind":"ui/menu","units":[{"id":"text-1","text":"Bad Response"}]}
+{"id":"\u754C\u9762-03543","kind":"ui/h6","units":[{"id":"text-1","text":"Agent working"},{"id":"text-2","text":"Agent said"}]}
+{"id":"\u754C\u9762-03544","kind":"ui/button","units":[{"id":"text-1","text":"Trouble signing in? Enter authorization code"}]}
+{"id":"\u754C\u9762-03545","kind":"ui/p","units":[{"id":"text-1","text":"Sign in in your browser, then paste the authorization code shown on the callback page."}]}
+{"id":"\u754C\u9762-03546","kind":"ui/label","units":[{"id":"text-1","text":"Authorization code"}]}
+{"id":"\u754C\u9762-03547","kind":"ui/input","units":[{"id":"text-1","text":"Paste authorization code"}]}
+{"id":"\u754C\u9762-03548","kind":"ui/component","units":[{"id":"text-1","text":"Submit code"}]}
+{"id":"\u754C\u9762-03549","kind":"ui/button","units":[{"id":"text-1","text":"Choose icon and color"}]}
+{"id":"\u754C\u9762-03550","kind":"ui/component","units":[{"id":"text-1","text":"New Coordinator"}]}
+{"id":"\u754C\u9762-03551","kind":"ui/input","units":[{"id":"text-1","text":"e.g. Release helper"},{"id":"text-2","text":"Coordinator name"}]}
+{"id":"\u754C\u9762-03552","kind":"ui/label","units":[{"id":"text-1","text":"Goal"}]}
+{"id":"\u754C\u9762-03553","kind":"ui/component","units":[{"id":"text-1","text":"Create Coordinator"}]}
+{"id":"\u754C\u9762-03554","kind":"ui/component","units":[{"id":"text-1","text":"Coordinator settings"}]}
+{"id":"\u754C\u9762-03555","kind":"ui/input","units":[{"id":"text-1","text":"Coordinator name"}]}
+{"id":"\u754C\u9762-03556","kind":"ui/span","units":[{"id":"text-1","text":"Ask /btw"}]}
+{"id":"\u754C\u9762-03557","kind":"ui/span","units":[{"id":"text-1","text":"Couldn\u0027t start the coordinator:"}]}
+{"id":"\u754C\u9762-03558","kind":"ui/component","units":[{"id":"text-1","text":"Project location"}]}
+{"id":"\u754C\u9762-03559","kind":"ui/div","units":[{"id":"text-1","text":"Select Resource(s)"},{"id":"text-2","text":"Select Folder(s)"}]}
+{"id":"\u754C\u9762-03560","kind":"ui/component","units":[{"id":"text-1","text":"New coordinator"}]}
+{"id":"\u754C\u9762-03561","kind":"ui/span","units":[{"id":"text-1","text":" Pick a model to change it."}]}
+{"id":"\u754C\u9762-03562","kind":"ui/span","units":[{"id":"text-1","text":"Connect an account for \u27EAAGC0\u27EB so the agent can run automations."},{"id":"text-2","text":"Connect an account so the agent can run automations."}]}
+{"id":"\u754C\u9762-03563","kind":"ui/component","units":[{"id":"text-1","text":"Refreshing credentials..."},{"id":"text-2","text":"Connect"}]}
+{"id":"\u754C\u9762-03564","kind":"ui/component","units":[{"id":"text-1","text":"\u27EAAGC0\u27EB color picker"}]}
+{"id":"\u754C\u9762-03565","kind":"ui/button","units":[{"id":"text-1","text":"Reset to preset"}]}
+{"id":"\u754C\u9762-03566","kind":"ui/span","units":[{"id":"text-1","text":"Code Preview"}]}
+{"id":"\u754C\u9762-03567","kind":"ui/component","units":[{"id":"text-1","text":"Font Size"}]}
+{"id":"\u754C\u9762-03568","kind":"ui/textarea","units":[{"id":"text-1","text":"What should this coordinator accomplish?"},{"id":"text-2","text":"Coordinator goal"}]}

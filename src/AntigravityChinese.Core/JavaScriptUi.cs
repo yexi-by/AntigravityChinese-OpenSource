@@ -696,6 +696,22 @@ public static partial class JavaScriptUi
             return true;
         }
 
+        // 协调器目标表单的提示属于界面文案；文本框的值、正文及事件由保护区排除。
+        foreach (var (node, function) in nodes)
+        {
+            if (node is not CallExpression call || call.Arguments.Count < 2 ||
+                call.Arguments[0] is not StringLiteral { Value: "textarea" } || call.Arguments[1] is not ObjectExpression props) continue;
+            var callee = call.Callee is SequenceExpression sequence ? sequence.Expressions[^1] : call.Callee;
+            if (callee is not MemberExpression { Property: Identifier { Name: "createElement" or "jsx" or "jsxs" or "jsxDEV" } } ||
+                !props.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "data-testid" &&
+                    p.Value is StringLiteral { Value: "coordinator-goal-input" }) ||
+                protectedBlocks.Any(range => range.Start < call.Start && call.End <= range.End)) continue;
+            activeFunction = function;
+            Group(call, "ui/textarea", props.Properties.OfType<ObjectProperty>()
+                .Where(p => PropertyName(p) is "placeholder" or "aria-label" && p.Value is StringLiteral)
+                .Select(p => ((Node)p.Value, PropertyName(p))));
+        }
+
         foreach (var assignment in displayAssignments)
         {
             activeFunction = assignment.Function;
