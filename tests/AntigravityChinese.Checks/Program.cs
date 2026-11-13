@@ -506,6 +506,23 @@ static void CheckNativeHook()
     var hook = Path.Combine(fixture.Root, "hook.cjs");
     using (var asar = new AsarArchive(fixture.App.Asar)) File.WriteAllBytes(hook, asar.Read(NativeBundleAdapter.HookFile));
     var root = JavaScriptUi.Quote(Path.Combine(fixture.Root, "resources")); var module = JavaScriptUi.Quote(hook);
+    const string delegated = "const defaults=require('./lsDefaults');function start(options){const {wsl:guest}=options;const args=[...(0,defaults.baseLsArgs)({csrfToken:options.token}),'--enable_sidecars'];return args;}";
+    var adapted = NativeBundleAdapter.Attach(delegated) ?? throw new Exception("未识别共享参数模块的启动入口。");
+    Assert(NativeBundleAdapter.Attach(delegated.Replace("./lsDefaults", "./unknown", StringComparison.Ordinal)) is null,
+        "未知模块的同名函数被误认为原生启动入口。");
+    using var delegatedResult = JsonDocument.Parse(Node($$"""
+    Object.defineProperty(process,'resourcesPath',{value:{{root}}});
+    let calls=0;
+    const start=new Function('require',{{JavaScriptUi.Quote(adapted.Code)}}+';return start;')(name=>
+      name==='./lsDefaults'?{baseLsArgs:options=>{calls++;return ['--csrf_token',options.csrfToken];} }:require({{module}}));
+    console.log(JSON.stringify({native:start({wsl:false,token:'original-token'}),wsl:start({wsl:true,token:'wsl-token'}),calls}));
+    """));
+    var delegatedRoot = delegatedResult.RootElement;
+    Assert(delegatedRoot.GetProperty("native").EnumerateArray().Select(a => a.GetString()).SequenceEqual(
+            new[] { "--csrf_token", "original-token", "--enable_sidecars", "--web_bundle_path", expanded }) &&
+        delegatedRoot.GetProperty("wsl").EnumerateArray().Select(a => a.GetString()).SequenceEqual(
+            new[] { "--csrf_token", "wsl-token", "--enable_sidecars" }) && delegatedRoot.GetProperty("calls").GetInt32() == 2,
+        "共享参数入口未加载中文资源，或改变了参数求值、sidecar 和 WSL 行为。");
     var output = Node($$"""
     Object.defineProperty(process,'resourcesPath',{value:{{root}}});
     const m=require({{module}}),fs=require('fs'),path=require('path');

@@ -27,7 +27,7 @@ try {
     & $att generic extract --name AntigravityChinese
     & $maintainer seed-att --output .local/released-manual.toml
     & $att generic manual apply --name AntigravityChinese .local/released-manual.toml
-    $profileArgs = if ($Profile) { @($Profile) } else { @() }
+    $profileArgs = @(if ($Profile) { $Profile })
     & $att generic translate --name AntigravityChinese @profileArgs --terms translation/terminology.toml --placeholders translation/placeholders.toml
     & $att generic translation export --name AntigravityChinese .local/translations.jsonl
     & $att generic manual export --name AntigravityChinese --selection pending .local/pending.toml

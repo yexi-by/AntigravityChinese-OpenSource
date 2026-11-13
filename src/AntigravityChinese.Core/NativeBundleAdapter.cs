@@ -16,6 +16,8 @@ public static class NativeBundleAdapter
         if (code.Contains(HookMarker, StringComparison.Ordinal)) throw new InvalidDataException("资源中已经存在汉化加载适配，请先按当前备份恢复。");
         var root = new Parser().ParseScript(code);
         var matches = new List<(VariableDeclaration Declaration, string Variable)>();
+        var defaultsBindings = new HashSet<string>(StringComparer.Ordinal);
+        var delegated = new List<(VariableDeclaration Declaration, string Variable, string Module)>();
         var functions = new List<Node>();
         var pending = new Stack<Node>(); pending.Push(root);
         while (pending.TryPop(out var node))
@@ -23,14 +25,25 @@ public static class NativeBundleAdapter
             if (node is FunctionDeclaration or FunctionExpression or ArrowFunctionExpression) functions.Add(node);
             if (node is VariableDeclaration declaration)
                 foreach (var variable in declaration.Declarations)
-                    if (variable is { Id: Identifier id, Init: ArrayExpression array })
+                {
+                    if (variable is { Id: Identifier import, Init: CallExpression { Callee: Identifier { Name: "require" } } require } &&
+                        require.Arguments.Count == 1 && require.Arguments[0] is StringLiteral { Value: "./lsDefaults" })
+                        defaultsBindings.Add(import.Name);
+                    if (variable is not { Id: Identifier id, Init: ArrayExpression array }) continue;
+                    var literals = array.Elements.OfType<StringLiteral>().Select(s => s.Value).ToHashSet(StringComparer.Ordinal);
+                    if (literals.IsSupersetOf(["--standalone", "--subclient_type", "hub", "--csrf_token"]))
+                        matches.Add((declaration, id.Name));
+                    if (array.Elements.Count == 2 && array.Elements[0] is SpreadElement { Argument: CallExpression call } &&
+                        array.Elements[1] is StringLiteral { Value: "--enable_sidecars" })
                     {
-                        var literals = array.Elements.OfType<StringLiteral>().Select(s => s.Value).ToHashSet(StringComparer.Ordinal);
-                        if (literals.IsSupersetOf(["--standalone", "--subclient_type", "hub", "--csrf_token"]))
-                            matches.Add((declaration, id.Name));
+                        var callee = call.Callee is SequenceExpression sequence ? sequence.Expressions[^1] : call.Callee;
+                        if (callee is MemberExpression { Computed: false, Object: Identifier module, Property: Identifier { Name: "baseLsArgs" } })
+                            delegated.Add((declaration, id.Name, module.Name));
                     }
+                }
             foreach (var child in node.ChildNodes) pending.Push(child);
         }
+        matches.AddRange(delegated.Where(d => defaultsBindings.Contains(d.Module)).Select(d => (d.Declaration, d.Variable)));
         if (matches.Count != 1) return null;
         var match = matches[0];
         var bindings = new List<string>();
@@ -51,7 +64,9 @@ public static class NativeBundleAdapter
         var insert = $"\n{HookMarker}\ntry {{ require('./antigravity-chinese').addBundle({match.Variable}, !!{bindings[0]}); }} catch {{ /* 读取失败时使用内置原版界面。 */ }}\n";
         var patched = code.Insert(match.Declaration.End, insert);
         JavaScriptUi.Validate(patched);
-        return (patched, "native-web-bundle/" + string.Join(',', new[] { "--standalone", "--subclient_type", "hub", "--csrf_token" }));
+        return (patched, delegated.Any(d => d.Declaration == match.Declaration && defaultsBindings.Contains(d.Module))
+            ? "native-web-bundle/lsDefaults.baseLsArgs,--enable_sidecars"
+            : "native-web-bundle/--standalone,--subclient_type,hub,--csrf_token");
     }
 
     public static byte[] CreateHook(Installation installation, string bundlePath, string serverHash)
