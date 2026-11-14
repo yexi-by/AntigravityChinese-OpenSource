@@ -33,6 +33,11 @@ public static partial class JavaScriptUi
     private static bool IsPluralSuffixChoice(Node? node) => node is ConditionalExpression cond &&
         (cond.Consequent is StringLiteral { Value: "s" } && cond.Alternate is StringLiteral { Value: "" } ||
          cond.Consequent is StringLiteral { Value: "" } && cond.Alternate is StringLiteral { Value: "s" });
+    private static bool IsCountPluralSuffix(Node node, string name) => node is ConditionalExpression
+    {
+        Test: BinaryExpression { Operator: Operator.StrictEquality, Left: Identifier count, Right: NumericLiteral { Value: 1d } },
+        Consequent: StringLiteral { Value: "" }, Alternate: StringLiteral { Value: "s" }
+    } && count.Name == name;
     private static bool IsPortalPlace(string? place) => place is "top" or "bottom" or "left" or "right" ||
         place is not null && (place.StartsWith("top-", StringComparison.Ordinal) || place.StartsWith("bottom-", StringComparison.Ordinal) ||
         place.StartsWith("left-", StringComparison.Ordinal) || place.StartsWith("right-", StringComparison.Ordinal));
@@ -42,8 +47,10 @@ public static partial class JavaScriptUi
         if (b3 is not { Operator: Operator.Addition, Left: BinaryExpression b2, Right: var plural } || !IsPluralSuffixChoice(plural)) return null;
         if (b2 is not { Operator: Operator.Addition, Left: ConditionalExpression cond, Right: StringLiteral { Value: " agent" } }) return null;
         if (cond.Alternate is not StringLiteral { Value: "No" }) return null;
-        if (cond.Test is BinaryExpression { Operator: Operator.GreaterThan, Left: var countExpr, Right: NumericLiteral { Value: 0d } }) return countExpr;
-        return null;
+        if (cond.Test is not BinaryExpression { Operator: Operator.GreaterThan, Left: Identifier count, Right: NumericLiteral { Value: 0d } } ||
+            cond.Consequent is not TemplateLiteral { Expressions: [Identifier shown], Quasis: var quasis } ||
+            shown.Name != count.Name || quasis.Any(q => q.Value.Cooked != "") || !IsCountPluralSuffix(plural, count.Name)) return null;
+        return count;
     }
 
     public static List<UiGroup> Extract(string code, string file, bool desktop = false)
@@ -169,6 +176,8 @@ public static partial class JavaScriptUi
         foreach (var ((scope, fnName), fnNode) in namedFunctions)
         {
             if (!fixedBindings.Contains((scope, fnName))) continue;
+            if (fnNode is FunctionDeclaration { Async: true } or FunctionDeclaration { Generator: true } or
+                FunctionExpression { Async: true } or FunctionExpression { Generator: true } or ArrowFunctionExpression { Async: true }) continue;
             var parameters = Parameters(fnNode).ToArray();
             if (parameters.Length != 2 || parameters[0] is not Identifier countParam) continue;
             string? defaultNoun = null;
@@ -190,7 +199,7 @@ public static partial class JavaScriptUi
                 tpl.Quasis[2].Value.Cooked == "" && tpl.Quasis[3].Value.Cooked == "" &&
                 tpl.Expressions[0] is Identifier e0 && e0.Name == countParam.Name &&
                 tpl.Expressions[1] is Identifier e1 && e1.Name == nounParam.Name &&
-                IsPluralSuffixChoice(tpl.Expressions[2]))
+                IsCountPluralSuffix(tpl.Expressions[2], countParam.Name))
                 pluralFunctions[(scope, fnName)] = defaultNoun;
         }
         // 配额接口返回的是显示文案。按组件参数和字段契约确认消费者，不转换接口原始数据。

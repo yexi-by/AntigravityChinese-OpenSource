@@ -656,9 +656,25 @@ static void Check2321Regressions()
     using var trayDoc = JsonDocument.Parse(Node(JavaScriptUi.Apply(trayAssignJs, trayTexts, trayDict)));
     var tr = trayDoc.RootElement;
     Assert(tr.GetProperty("z").GetString() == "暂无运行中的智能体" && tr.GetProperty("m").GetString() == "2 个智能体正在运行" &&
-        tr.GetProperty("e0").GetString() == "暂无运行中的智能体" && tr.GetProperty("e2").GetString() == "2 个智能体正在运行" &&
-        tr.GetProperty("calls").GetInt32() == 4,
-        "tray.js updateTrayAgentCount 的单次求值计数汉化失败。");
+        tr.GetProperty("e0").GetString() == "No agents running" && tr.GetProperty("e2").GetString() == "2 agents running" &&
+        tr.GetProperty("calls").GetInt32() == 7,
+        "tray.js 应只改写已确认的计数变量，保留其他表达式及其求值次数。");
+
+    const string countEffectsCode = """
+    const A={createElement:(tag,props,...children)=>({children})};
+    let effects=0;const item={label:''};
+    function plural(n,word='item'){return `${n} ${word}${(++effects,n===1)?'':'s'}`;}
+    async function asyncPlural(n,word='item'){return `${n} ${word}${n===1?'':'s'}`;}
+    function* generatorPlural(n,word='item'){return `${n} ${word}${n===1?'':'s'}`;}
+    function label(n){item.label=(n>0?`${n+1}`:'No')+' agent'+(n===1?'':'s')+' running';return item.label;}
+    const view=A.createElement('span',null,plural(2,'file'),asyncPlural(2,'file'),generatorPlural(2,'file'));
+    console.log(JSON.stringify({view,label:label(2),effects}));
+    """;
+    var effectsTexts = JavaScriptUi.Extract(countEffectsCode, "asar/dist/tray.js", desktop: true).SelectMany(g => g.Texts).ToList();
+    var effectsMap = effectsTexts.DistinctBy(t => t.Key).ToDictionary(t => t.Key,
+        t => t.Source.Contains('⟪') ? "⟪AGC0⟫ 个文件" : "暂无运行中的智能体");
+    Assert(Node(JavaScriptUi.Apply(countEffectsCode, effectsTexts, effectsMap)) == Node(countEffectsCode),
+        "非标准计数、带副作用的复数条件及异步或生成器调用应保持原实现。");
 
     const string desktopCode = """
     const results=[];
