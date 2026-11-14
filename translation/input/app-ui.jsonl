@@ -3632,3 +3632,94 @@
 {"id":"\u754C\u9762-03651","kind":"ui/component","units":[{"id":"text-1","text":"WSL: \u27EAAGC0\u27EB"},{"id":"text-2","text":"This Computer"}]}
 {"id":"\u754C\u9762-03652","kind":"ui/component","units":[{"id":"text-1","text":"SSH: \u27EAAGC0\u27EB"}]}
 {"id":"\u754C\u9762-03653","kind":"ui/component","units":[{"id":"text-1","text":"Connected to \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-03672","kind":"ui/tooltip","units":[{"id":"text-1","text":"Working Directory: "}]}
+{"id":"\u754C\u9762-03673","kind":"ui/display-local","units":[{"id":"text-1","text":"For \u27EAAGC0\u27EB, telemetry is force disabled."}]}
+{"id":"\u754C\u9762-03674","kind":"ui/display-local","units":[{"id":"text-1","text":"\u27EAAGC0\u27EB Sends immediately"},{"id":"text-2","text":"\u27EAAGC0\u27EB Queues after the turn"}]}
+{"id":"\u754C\u9762-03675","kind":"ui/display-local","units":[{"id":"text-1","text":"\u27EAAGC0\u27EB Queues after the turn"},{"id":"text-2","text":"\u27EAAGC0\u27EB Sends immediately"}]}
+{"id":"\u754C\u9762-03676","kind":"ui/display-local","units":[{"id":"text-1","text":"\u27EAAGC0\u27EB \u27EAAGC1\u27EB exceeded the rules budget and \u27EAAGC2\u27EB demoted from full inline content to a file-path pointer."},{"id":"text-2","text":"item"},{"id":"text-3","text":"items"},{"id":"text-4","text":"\u27EAAGC0\u27EB \u27EAAGC1\u27EB in \u27EAAGC2\u27EB exceeded the customization budget and \u27EAAGC3\u27EB excluded from context."}]}
+{"id":"\u754C\u9762-03677","kind":"ui/display-local","units":[{"id":"text-1","text":"Open \u27EAAGC0\u27EB settings"},{"id":"text-2","text":"\u27EAAGC0\u27EB settings"}]}
+{"id":"\u754C\u9762-03678","kind":"ui/display-local","units":[{"id":"text-1","text":" items"},{"id":"text-2","text":"View \u27EAAGC0\u27EB help\u27EAAGC1\u27EB and \u27EAAGC2\u27EB side question\u27EAAGC3\u27EB"},{"id":"text-3","text":"View \u27EAAGC0\u27EB help\u27EAAGC1\u27EB"},{"id":"text-4","text":"View \u27EAAGC0\u27EB side question\u27EAAGC1\u27EB"}]}
+{"id":"\u754C\u9762-03679","kind":"ui/display-local","units":[{"id":"text-1","text":"Work locally on \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-03680","kind":"ui/display-local","units":[{"id":"text-1","text":"\u27EAAGC0\u27EB, and reuse \u27EAAGC1\u27EB"}]}
+{"id":"\u754C\u9762-03681","kind":"ui/display-local","units":[{"id":"text-1","text":"Audio clip"}]}
+{"id":"\u754C\u9762-03682","kind":"ui/display-local","units":[{"id":"text-1","text":"\u27EAAGC0\u27EB (SSH: \u27EAAGC1\u27EB)"},{"id":"text-2","text":"\u27EAAGC0\u27EB (WSL: \u27EAAGC1\u27EB)"}]}
+{"id":"\u754C\u9762-03683","kind":"ui/display-local","units":[{"id":"text-1","text":"Hey \u27EAAGC0\u27EB!"}]}
+{"id":"\u754C\u9762-03684","kind":"ui/display-local","units":[{"id":"text-1","text":"\u27EAAGC0\u27EB File\u27EAAGC1\u27EB With Changes"}]}
+{"id":"\u754C\u9762-03685","kind":"ui/display-local","units":[{"id":"text-1","text":"Proceed with implementation plan"},{"id":"text-2","text":"Proceed with implementation plan and \u27EAAGC0\u27EB comment\u27EAAGC1\u27EB"}]}
+{"id":"\u754C\u9762-03686","kind":"ui/display-local","units":[{"id":"text-1","text":"Video attachment"},{"id":"text-2","text":"PDF attachment"},{"id":"text-3","text":"Text attachment"},{"id":"text-4","text":"CSV spreadsheet attachment"},{"id":"text-5","text":"JSON attachment"},{"id":"text-6","text":"Markdown attachment"},{"id":"text-7","text":"Image attachment"},{"id":"text-8","text":"Audio attachment"},{"id":"text-9","text":"Document attachment"},{"id":"text-10","text":"Zip attachment"},{"id":"text-11","text":"File attachment"}]}
+{"id":"\u754C\u9762-03687","kind":"ui/display-local","units":[{"id":"text-1","text":"No Model Selected"}]}
+{"id":"\u754C\u9762-03688","kind":"ui/display-local","units":[{"id":"text-1","text":"\u27EAAGC0\u27EB models selected"}]}
+{"id":"\u754C\u9762-03689","kind":"ui/span","units":[{"id":"text-1","text":"comment"},{"id":"text-2","text":"comments"}]}
+{"id":"\u754C\u9762-03690","kind":"ui/system-command","units":[{"id":"text-1","text":"Run until the specified goal is completely finished."},{"id":"text-2","text":"Compact the conversation now (summarize history to free up the context window)."},{"id":"text-3","text":"Run an instruction on a recurring schedule or as a one-time timer."},{"id":"text-4","text":"Invoke a browser agent for web tasks."},{"id":"text-5","text":"Plan carefully before executing a task."},{"id":"text-6","text":"Interview me to align on a plan."},{"id":"text-7","text":"Invoke a team of agents to autonomously tackle large projects."},{"id":"text-8","text":"Reflect on recent successes or corrections to capture reusable skills or rules."},{"id":"text-9","text":"Invoke the Boost multi-agent orchestrator for complex tasks."},{"id":"text-10","text":"[Teamfood] Invoke a browser with computer-use tools only with experimental model."}]}
+{"id":"\u754C\u9762-03691","kind":"ui/div","units":[{"id":"text-1","text":"Subscription"},{"id":"text-2","text":"Pay As You Go"}]}
+{"id":"\u754C\u9762-03692","kind":"ui/div","units":[{"id":"text-1","text":"Use Antigravity through your Gemini subscription."},{"id":"text-2","text":"Pay only for the tokens you use, billed through Gemini platform."}]}
+{"id":"\u754C\u9762-03693","kind":"ui/component","units":[{"id":"text-1","text":"Open "},{"id":"text-2","text":" panel"}]}
+{"id":"\u754C\u9762-03694","kind":"ui/b","units":[{"id":"text-1","text":"unknown"}]}
+{"id":"\u754C\u9762-03695","kind":"ui/b","units":[{"id":"text-1","text":"(none)"}]}
+{"id":"\u754C\u9762-03696","kind":"ui/a","units":[{"id":"text-1","text":"documentation"}]}
+{"id":"\u754C\u9762-03697","kind":"ui/component","units":[{"id":"text-1","text":"\u27EAAGC0\u27EB item"},{"id":"text-2","text":"Stop \u27EAAGC0\u27EB?"}]}
+{"id":"\u754C\u9762-03698","kind":"ui/li","units":[{"id":"text-1","text":"and "},{"id":"text-2","text":" more"}]}
+{"id":"\u754C\u9762-03699","kind":"ui/navigation","units":[{"id":"text-1","text":"Automations"},{"id":"text-2","text":"Automations"},{"id":"text-3","text":"Search automations..."},{"id":"text-4","text":"automation"},{"id":"text-5","text":"automations"}]}
+{"id":"\u754C\u9762-03700","kind":"ui/p","units":[{"id":"text-1","text":"\u27EAAGC0\u27EB call recording"},{"id":"text-2","text":"\u27EAAGC0\u27EB MB"},{"id":"text-3","text":"This deletes \u27EAAGC0\u27EB (\u27EAAGC1\u27EB) from your machine. You can\u0027t undo this."}]}
+{"id":"\u754C\u9762-03701","kind":"ui/helper-call","units":[{"id":"text-1","text":"Recent"}]}
+{"id":"\u754C\u9762-03702","kind":"ui/helper-call","units":[{"id":"text-1","text":"SSH Config (\u27EAAGC0\u27EB)"},{"id":"text-2","text":"SSH Config"}]}
+{"id":"\u754C\u9762-03703","kind":"ui/component","units":[{"id":"text-1","text":"Show "},{"id":"text-2","text":" more..."}]}
+{"id":"\u754C\u9762-03704","kind":"ui/button","units":[{"id":"text-1","text":" more"},{"id":"text-2","text":"line"},{"id":"text-3","text":"lines"}]}
+{"id":"\u754C\u9762-03705","kind":"ui/div","units":[{"id":"text-1","text":" insertion"}]}
+{"id":"\u754C\u9762-03706","kind":"ui/div","units":[{"id":"text-1","text":" deletion"}]}
+{"id":"\u754C\u9762-03707","kind":"ui/component","units":[{"id":"text-1","text":"\u27EAAGC0\u27EB comments"}]}
+{"id":"\u754C\u9762-03708","kind":"ui/component","units":[{"id":"text-1","text":"Environment paused. Click to resume it and load the \u27EAAGC0\u27EB."}]}
+{"id":"\u754C\u9762-03709","kind":"ui/component","units":[{"id":"text-1","text":"Retry"}]}
+{"id":"\u754C\u9762-03710","kind":"ui/span","units":[{"id":"text-1","text":"result"},{"id":"text-2","text":"results"}]}
+{"id":"\u754C\u9762-03711","kind":"ui/button","units":[{"id":"text-1","text":"Show "},{"id":"text-2","text":" more"}]}
+{"id":"\u754C\u9762-03712","kind":"ui/span","units":[{"id":"text-1","text":"terminal"}]}
+{"id":"\u754C\u9762-03713","kind":"ui/div","units":[{"id":"text-1","text":" result"}]}
+{"id":"\u754C\u9762-03714","kind":"ui/span","units":[{"id":"text-1","text":"Reading"},{"id":"text-2","text":"Read"},{"id":"text-3","text":"\u27EAAGC0\u27EB terminal:"}]}
+{"id":"\u754C\u9762-03715","kind":"ui/span","units":[{"id":"text-1","text":" result"}]}
+{"id":"\u754C\u9762-03716","kind":"ui/a","units":[{"id":"text-1","text":"docs"}]}
+{"id":"\u754C\u9762-03717","kind":"ui/span","units":[{"id":"text-1","text":"(\u27EAAGC0\u27EB step\u27EAAGC1\u27EB)"},{"id":"text-2","text":"(skipped)"}]}
+{"id":"\u754C\u9762-03718","kind":"ui/span","units":[{"id":"text-1","text":" subagents"}]}
+{"id":"\u754C\u9762-03719","kind":"ui/span","units":[{"id":"text-1","text":" question"}]}
+{"id":"\u754C\u9762-03720","kind":"ui/span","units":[{"id":"text-1","text":" around"}]}
+{"id":"\u754C\u9762-03721","kind":"ui/span","units":[{"id":"text-1","text":" on"},{"id":"text-2","text":" around"}]}
+{"id":"\u754C\u9762-03722","kind":"ui/component","units":[{"id":"text-1","text":"Delete"}]}
+{"id":"\u754C\u9762-03723","kind":"ui/component","units":[{"id":"text-1","text":"Unarchive"},{"id":"text-2","text":"Archive"}]}
+{"id":"\u754C\u9762-03724","kind":"ui/button","units":[{"id":"text-1","text":"Unfold lines \u27EAAGC0\u27EB-\u27EAAGC1\u27EB"},{"id":"text-2","text":" lines"}]}
+{"id":"\u754C\u9762-03725","kind":"ui/span","units":[{"id":"text-1","text":"Review "},{"id":"text-2","text":" comment"}]}
+{"id":"\u754C\u9762-03726","kind":"ui/component","units":[{"id":"text-1","text":"Cancel Task"}]}
+{"id":"\u754C\u9762-03727","kind":"ui/span","units":[{"id":"text-1","text":" subagent"}]}
+{"id":"\u754C\u9762-03728","kind":"ui/component","units":[{"id":"text-1","text":"Stop Subagent"}]}
+{"id":"\u754C\u9762-03729","kind":"ui/component","units":[{"id":"text-1","text":"Open Terminal"}]}
+{"id":"\u754C\u9762-03730","kind":"ui/span","units":[{"id":"text-1","text":"file"},{"id":"text-2","text":"files"}]}
+{"id":"\u754C\u9762-03731","kind":"ui/helper-call","units":[{"id":"text-1","text":"Annotate"}]}
+{"id":"\u754C\u9762-03732","kind":"ui/helper-call","units":[{"id":"text-1","text":"Pan"}]}
+{"id":"\u754C\u9762-03733","kind":"ui/helper-call","units":[{"id":"text-1","text":"Grid"},{"id":"text-2","text":"Toggle checkerboard background"}]}
+{"id":"\u754C\u9762-03734","kind":"ui/helper-call","units":[{"id":"text-1","text":"Zoom out"}]}
+{"id":"\u754C\u9762-03735","kind":"ui/helper-call","units":[{"id":"text-1","text":"Zoom in"}]}
+{"id":"\u754C\u9762-03736","kind":"ui/helper-call","units":[{"id":"text-1","text":"Fit"}]}
+{"id":"\u754C\u9762-03737","kind":"ui/component","units":[{"id":"text-1","text":"Edit Conversation Title"}]}
+{"id":"\u754C\u9762-03738","kind":"ui/component","units":[{"id":"text-1","text":"Restore Conversation"}]}
+{"id":"\u754C\u9762-03739","kind":"ui/component","units":[{"id":"text-1","text":"Delete Permanently"}]}
+{"id":"\u754C\u9762-03740","kind":"ui/component","units":[{"id":"text-1","text":"Stop Execution"}]}
+{"id":"\u754C\u9762-03741","kind":"ui/button","units":[{"id":"text-1","text":"The current trigger rate is too high."},{"id":"text-2","text":"This prompt is straightforward and does not need alternative comparisons."},{"id":"text-3","text":"This request is not well-suited for parallel Best-of-N generation."},{"id":"text-4","text":"I prefer an immediate single response to prioritize productivity right now."},{"id":"text-5","text":"Too many surveys"},{"id":"text-6","text":"Prompt too simple"},{"id":"text-7","text":"Not suitable for Best-of-N"},{"id":"text-8","text":"In a rush"}]}
+{"id":"\u754C\u9762-03742","kind":"ui/component","units":[{"id":"text-1","text":"Gemini Models"},{"id":"text-2","text":"Claude and GPT models"}]}
+{"id":"\u754C\u9762-03743","kind":"ui/span","units":[{"id":"text-1","text":"Gemini Models"},{"id":"text-2","text":"Claude and GPT models"},{"id":"text-3","text":"Daily limit"},{"id":"text-4","text":"Weekly limit"},{"id":"text-5","text":"\u27EAAGC0\u27EB limit"},{"id":"text-6","text":"Resets in \u003C1m"},{"id":"text-7","text":"Resets in \u27EAAGC0\u27EB"},{"id":"text-8","text":"Daily limit, resets in \u003C1m"},{"id":"text-9","text":"Weekly limit, resets in \u003C1m"},{"id":"text-10","text":"\u27EAAGC0\u27EB limit, resets in \u003C1m"},{"id":"text-11","text":"Daily limit, resets in \u27EAAGC0\u27EB"},{"id":"text-12","text":"Weekly limit, resets in \u27EAAGC0\u27EB"},{"id":"text-13","text":"\u27EAAGC0\u27EB limit, resets in \u27EAAGC1\u27EB"},{"id":"text-14","text":"\u27EAAGC0\u27EBd \u27EAAGC1\u27EBh"},{"id":"text-15","text":"\u27EAAGC0\u27EBh \u27EAAGC1\u27EBm"},{"id":"text-16","text":"\u27EAAGC0\u27EBd"},{"id":"text-17","text":"\u27EAAGC0\u27EBh"},{"id":"text-18","text":"\u27EAAGC0\u27EBm"},{"id":"text-19","text":"\u27EAAGC0\u27EBs"}]}
+{"id":"\u754C\u9762-03744","kind":"ui/span","units":[{"id":"text-1","text":"Daily limit"},{"id":"text-2","text":"Weekly limit"},{"id":"text-3","text":"\u27EAAGC0\u27EB limit"},{"id":"text-4","text":"Resets in \u003C1m"},{"id":"text-5","text":"Resets in \u27EAAGC0\u27EB"},{"id":"text-6","text":"Daily limit, resets in \u003C1m"},{"id":"text-7","text":"Weekly limit, resets in \u003C1m"},{"id":"text-8","text":"\u27EAAGC0\u27EB limit, resets in \u003C1m"},{"id":"text-9","text":"Daily limit, resets in \u27EAAGC0\u27EB"},{"id":"text-10","text":"Weekly limit, resets in \u27EAAGC0\u27EB"},{"id":"text-11","text":"\u27EAAGC0\u27EB limit, resets in \u27EAAGC1\u27EB"},{"id":"text-12","text":"\u27EAAGC0\u27EBd \u27EAAGC1\u27EBh"},{"id":"text-13","text":"\u27EAAGC0\u27EBh \u27EAAGC1\u27EBm"},{"id":"text-14","text":"\u27EAAGC0\u27EBd"},{"id":"text-15","text":"\u27EAAGC0\u27EBh"},{"id":"text-16","text":"\u27EAAGC0\u27EBm"},{"id":"text-17","text":"\u27EAAGC0\u27EBs"}]}
+{"id":"\u754C\u9762-03745","kind":"ui/component","units":[{"id":"text-1","text":"\u002B\u27EAAGC0\u27EB attachments"}]}
+{"id":"\u754C\u9762-03746","kind":"ui/span","units":[{"id":"text-1","text":"1 comment"},{"id":"text-2","text":"\u27EAAGC0\u27EB comments"},{"id":"text-3","text":"Empty message"}]}
+{"id":"\u754C\u9762-03747","kind":"ui/component","units":[{"id":"text-1","text":"Marketplace"},{"id":"text-2","text":"Installed"}]}
+{"id":"\u754C\u9762-03748","kind":"ui/span","units":[{"id":"text-1","text":"menu)"}]}
+{"id":"\u754C\u9762-03749","kind":"ui/component","units":[{"id":"text-1","text":" subagent"}]}
+{"id":"\u754C\u9762-03750","kind":"ui/component","units":[{"id":"text-1","text":"Stop"}]}
+{"id":"\u754C\u9762-03751","kind":"ui/button","units":[{"id":"text-1","text":"file"},{"id":"text-2","text":"Remove \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-03752","kind":"ui/p","units":[{"id":"text-1","text":"Runs"},{"id":"text-2","text":"with"},{"id":"text-3","text":"on this computer."}]}
+{"id":"\u754C\u9762-03753","kind":"ui/component","units":[{"id":"text-1","text":"in"}]}
+{"id":"\u754C\u9762-03754","kind":"ui/span","units":[{"id":"text-1","text":"A "},{"id":"text-2","text":" with ID "},{"id":"text-3","text":" already exists."}]}
+{"id":"\u754C\u9762-03755","kind":"ui/span","units":[{"id":"text-1","text":"This computer"},{"id":"text-2","text":"Remote"}]}
+{"id":"\u754C\u9762-03756","kind":"ui/p","units":[{"id":"text-1","text":"No "},{"id":"text-2","text":"scheduled tasks"},{"id":"text-3","text":"automations"},{"id":"text-4","text":" match \u201C"}]}
+{"id":"\u754C\u9762-03757","kind":"ui/component","units":[{"id":"text-1","text":"scheduled task"},{"id":"text-2","text":"automation"},{"id":"text-3","text":"Add \u27EAAGC0\u27EB"},{"id":"text-4","text":"New"}]}
+{"id":"\u754C\u9762-03758","kind":"ui/component","units":[{"id":"text-1","text":"scheduled tasks"},{"id":"text-2","text":"automations"},{"id":"text-3","text":"No \u27EAAGC0\u27EB matching your search"},{"id":"text-4","text":"No \u27EAAGC0\u27EB configured."}]}
+{"id":"\u754C\u9762-03759","kind":"ui/component","units":[{"id":"text-1","text":"Reset to preset"}]}
+{"id":"\u754C\u9762-03760","kind":"ui/span","units":[{"id":"text-1","text":"Commit "},{"id":"text-2","text":" file"},{"id":"text-3","text":"change"},{"id":"text-4","text":"changes"}]}
+{"id":"\u754C\u9762-03761","kind":"ui/display-local","units":[{"id":"text-1","text":"rule"},{"id":"text-2","text":"rules"},{"id":"text-3","text":"\u27EAAGC0\u27EB \u27EAAGC1\u27EB exceeded the rules budget and \u27EAAGC2\u27EB demoted from full inline content to a file-path pointer."},{"id":"text-4","text":"item"},{"id":"text-5","text":"items"},{"id":"text-6","text":"\u27EAAGC0\u27EB \u27EAAGC1\u27EB in \u27EAAGC2\u27EB exceeded the customization budget and \u27EAAGC3\u27EB excluded from context."}]}
+{"id":"\u754C\u9762-03762","kind":"ui/span","units":[{"id":"text-1","text":"Commit "},{"id":"text-2","text":" file"},{"id":"text-3","text":"change"},{"id":"text-4","text":"changes"},{"id":"text-5","text":" to"}]}

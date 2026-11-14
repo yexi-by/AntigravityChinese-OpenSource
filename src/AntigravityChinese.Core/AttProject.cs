@@ -92,10 +92,7 @@ public static class AttProject
                 if (!translated.TryGetValue((group.Id, unit.Id), out var text))
                     throw new InvalidDataException($"ATT 写回缺少条目：{group.Id}/{unit.Id}");
                 if (text == unit.Source) continue;
-                // React 片段前后的空白属于显示拼接契约，保持来源边界。
-                var prefix = new string(unit.Source.TakeWhile(char.IsWhiteSpace).ToArray());
-                var suffix = new string(unit.Source.Reverse().TakeWhile(char.IsWhiteSpace).Reverse().ToArray());
-                text = prefix + text.Trim() + suffix;
+                text = NormalizeImportedText(unit.Source, text);
                 if (!JavaScriptUi.Slots().Matches(unit.Source).Select(m => m.Value).SequenceEqual(
                         JavaScriptUi.Slots().Matches(text).Select(m => m.Value)))
                     throw new InvalidDataException($"动态占位符发生变化：{group.Id}/{unit.Id}");
@@ -104,5 +101,21 @@ public static class AttProject
         if (translated.Count != catalog.Groups.Sum(g => g.Units.Count)) throw new InvalidDataException("ATT 写回含有未登记条目。");
         var keep = Path.Combine(translationRoot, "keep-original.json");
         return new(entries, File.Exists(keep) ? JsonFiles.Read<List<string>>(keep) : []);
+    }
+
+    private const string LeadingTrimPunctuation = "，。！？；：、（《〈「『【〔“‘";
+    private const string TrailingTrimPunctuation = "，。！？；：、）》〉」』】〕”’";
+
+    // 人工审校已精确控制首尾空格；导入时仅按原文补齐换行符，并消除紧贴中文全角标点的多余 ASCII 空格。
+    public static string NormalizeImportedText(string source, string raw)
+    {
+        var leadingNewlines = new string(source.TakeWhile(c => c is '\r' or '\n').ToArray());
+        var trailingNewlines = new string(source.Reverse().TakeWhile(c => c is '\r' or '\n').Reverse().ToArray());
+        var body = raw.Trim('\r', '\n');
+        var trimmed = body.Trim(' ', '\t');
+        if (trimmed.Length == 0) return raw;
+        if (LeadingTrimPunctuation.Contains(trimmed[0])) body = body.TrimStart(' ', '\t');
+        if (TrailingTrimPunctuation.Contains(trimmed[^1])) body = body.TrimEnd(' ', '\t');
+        return leadingNewlines + body + trailingNewlines;
     }
 }

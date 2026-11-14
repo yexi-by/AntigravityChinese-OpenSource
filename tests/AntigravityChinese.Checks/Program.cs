@@ -17,6 +17,7 @@ var checks = new (string Name, Action Run)[]
     ("截图漏翻的侧栏、缓存文案、对比度和系统命令说明完整显示中文", CheckMissingUi),
     ("新版输入提示、侧栏分页和环境标签汉化，保留用户内容和内部身份", CheckUpdatedUi),
     ("快捷键命令和分类仅在显示处汉化，默认搜索提示不覆盖自定义内容", CheckShortcutDisplay),
+    ("新版命令描述、局部配额与复数后缀等 2.32.1 回归修复", Check2321Regressions),
     ("未知版本安装、重复汉化和恢复保持资源完整", CheckInstall),
     ("写入失败回滚，更新后拒绝旧备份覆盖", CheckRecovery),
     ("原生加载适配绑定本机服务并保留 WSL 行为", CheckNativeHook)
@@ -498,6 +499,205 @@ static void CheckShortcutDisplay()
     Assert(result.GetProperty("search").GetProperty("props").GetProperty("placeholder").GetString() == "搜索快捷键…" &&
         result.GetProperty("custom").GetProperty("props").GetProperty("placeholder").GetString() == "Search shortcuts..." && result.GetProperty("other").GetString() == "Search shortcuts...",
         "默认搜索提示漏翻，或自定义提示、非界面默认参数被改动。");
+}
+static void Check2321Regressions()
+{
+    const string webCode = """
+    const UI={useMemo:f=>f(),createElement:(tag,props,...children)=>typeof tag==='function'?tag({...(props||{}),children}):({tag,props,children})};
+    const schema={ContextScopeItemSchema:{}};
+    class DP{constructor(scope,extra,description,title,icon,subtitle,trailing){this.scope=scope;this.description=description;this.title=title;this.trailing=trailing;}}
+    const Vb=(s,v)=>v;
+    function CmdItem(b,c){return new DP(Vb(schema.ContextScopeItemSchema,{scopeItem:{case:'slashCommand',value:{info:b.info}}}),[],b.description,b.title,null,c,c?{subtitle:c,description:b.description||b.info?.modelFacingText}:void 0);}
+    const sysBoost=CmdItem({info:{name:'boost',type:1,modelFacingText:'model instructions'},title:'boost',description:'Invoke the Boost multi-agent orchestrator for complex tasks.'},'Plugin');
+    const customCmd=CmdItem({info:{name:'my-cmd',type:2,modelFacingText:'fallback prompt'},title:'my-cmd',description:''},'Custom');
+
+    const QuotaRow=({bucket:a,title:b,detail:c})=>{c=c&&a.subtext?`${c}, ${a.subtext[0].toLowerCase()}${a.subtext.slice(1)}`:c||a.subtext;return UI.createElement('div',null,UI.createElement('span',null,b),c&&UI.createElement('span',null,c));};
+    const QuotaGroup=({group:a})=>UI.createElement('section',null,UI.createElement('h4',null,a.displayName),a.buckets.map((b,i)=>UI.createElement(QuotaRow,{key:i,bucket:b,title:b.label,detail:b.detail})));
+    const RenderQuotas=groups=>groups.map(n=>UI.createElement('div',null,UI.createElement('h3',null,n.displayName),n.buckets.map(b=>QuotaRow({bucket:b,title:'Daily limit',detail:b.label}))));
+    const quotaGroupView=QuotaGroup({group:{displayName:'Gemini 3 Pro (High)',buckets:[{label:'Weekly limit',detail:'Weekly limit',subtext:'Resets in 4d 3h'},{label:'5h limit',subtext:'Resets in <1m'}]}});
+    const quotaDaily=QuotaRow({bucket:{},title:'Daily limit',detail:'Resets in 2h 15m'});
+    const quotaListView=RenderQuotas([{displayName:'Gemini 3 Flash',buckets:[{label:'Weekly limit, resets in 4d 3h'}]}]);
+
+    let suffixEffects=0;const nextCount=()=>++suffixEffects;
+    const fileListView=UI.createElement('div',null,[2,' file',nextCount()===1?'':'s']).children[0];
+    const changeSpanView=UI.createElement('span',null,2,' change',nextCount()===1?'':'s');
+    const unmappedSpanView=UI.createElement('span',null,2,' unknownword',nextCount()===1?'':'s');
+    const commitSpanView=UI.createElement('span',null,'Commit ',2,' file',' ',2===1?'change':'changes',' to');
+    const budgetWarnOne=UI.createElement('div',null,`${1} ${1===1?'rule':'rules'} exceeded the rules budget and ${1===1?'was':'were'} demoted.`);
+    const budgetWarnTwo=UI.createElement('div',null,`${2} ${2===1?'rule':'rules'} exceeded the rules budget and ${2===1?'was':'were'} demoted.`);
+
+    const ENb=(a,b)=>`${a} ${b}${a===1?'':'s'}`;
+    const pT=(a,b='item')=>`${a} ${b}${a===1?'':'s'}`;
+    const nestedDelete=UI.createElement('p',null,`This deletes ${ENb(3,'call recording')} (${'12 KB'}).`);
+    const nestedStop=UI.createElement('h3',null,`Stop ${pT(2)}?`);
+
+    const optionData=[{label:'Fast',description:'Quick responses'},{label:'Deep',description:'Thorough analysis'}];
+    const mappedOptions=optionData.map(({label,description})=>UI.createElement('div',null,label,description));
+
+    const logicHelper=text=>({raw:text});
+    const {toolbarView,hostView}=function ToolbarAndHosts(){
+      const toolBtn=(text,onClick)=>UI.createElement('button',{tooltipText:text,onClick});
+      const hostHdr=(title,items)=>UI.createElement('div',null,UI.createElement('span',null,title),items.length);
+      return{toolbarView:toolBtn('Zoom out',()=>{}),hostView:hostHdr('Remote Hosts',[])};
+    }();
+    const untouchedHelper=logicHelper('Zoom out');
+
+    const track=(e,p)=>p;
+    function ModelSelector(K,d){
+      const {selectedLabel}=UI.useMemo(()=>{
+        let l=K.length===1?d:'No Model Selected';
+        if(K.length>1)l=`${K.length} models selected`;
+        return{selectedLabel:l};
+      },[K,d]);
+      const telemetry=track('select',{model:d||'No Model Selected'});
+      return{view:UI.createElement('span',null,selectedLabel),telemetry};
+    }
+    const selectorEmpty=ModelSelector([],''),selectorMulti=ModelSelector(['a','b'],''),selectorSingle=ModelSelector(['a'],'Gemini 3 Pro');
+
+    const Tooltip=({children,...props})=>({props,children});
+    const preBlock=UI.createElement('pre',null,UI.createElement('code',null,'const NoModelSelected = "No Model Selected";'),UI.createElement(Tooltip,{id:'copy-tip',place:'top',content:'Copy code'}));
+    console.log(JSON.stringify({sysBoost,customCmd,quotaGroupView,quotaDaily,quotaListView,suffixEffects,fileListView,changeSpanView,unmappedSpanView,commitSpanView,budgetWarnOne,budgetWarnTwo,nestedDelete,nestedStop,mappedOptions,toolbarView,hostView,untouchedHelper,selectorEmpty,selectorMulti,selectorSingle,preBlock}));
+    """;
+
+    var mapSources = new Dictionary<string, string>
+    {
+        ["Invoke the Boost multi-agent orchestrator for complex tasks."] = "调用 Boost 多智能体编排器处理复杂任务。",
+        ["Weekly limit"] = "每周额度",
+        ["Daily limit"] = "每日额度",
+        ["⟪AGC0⟫ limit"] = "⟪AGC0⟫额度",
+        ["Resets in <1m"] = "将在 <1 分钟后重置",
+        ["Resets in ⟪AGC0⟫"] = "将在 ⟪AGC0⟫后重置",
+        ["⟪AGC0⟫d ⟪AGC1⟫h"] = "⟪AGC0⟫ 天 ⟪AGC1⟫ 小时",
+        ["⟪AGC0⟫h ⟪AGC1⟫m"] = "⟪AGC0⟫ 小时 ⟪AGC1⟫ 分钟",
+        ["⟪AGC0⟫d"] = "⟪AGC0⟫ 天",
+        ["⟪AGC0⟫h"] = "⟪AGC0⟫ 小时",
+        ["⟪AGC0⟫m"] = "⟪AGC0⟫ 分钟",
+        ["⟪AGC0⟫s"] = "⟪AGC0⟫ 秒",
+        ["Weekly limit, resets in ⟪AGC0⟫"] = "每周额度，将在 ⟪AGC0⟫后重置",
+        [" file"] = " 个文件",
+        [" change"] = " 处变更",
+        ["Commit "] = "提交 ",
+        ["change"] = "的更改",
+        ["changes"] = "的更改",
+        [" to"] = "至",
+        ["rule"] = "条规则",
+        ["rules"] = "条规则",
+        ["⟪AGC0⟫ ⟪AGC1⟫ exceeded the rules budget and ⟪AGC2⟫ demoted."] = "⟪AGC0⟫ ⟪AGC1⟫超出规则预算，⟪AGC2⟫已降级。",
+        ["⟪AGC0⟫ call recording"] = "⟪AGC0⟫ 段通话录音",
+        ["This deletes ⟪AGC0⟫ (⟪AGC1⟫)."] = "此操作将删除 ⟪AGC0⟫（⟪AGC1⟫）。",
+        ["⟪AGC0⟫ item"] = "⟪AGC0⟫ 个项目",
+        ["Stop ⟪AGC0⟫?"] = "要停止 ⟪AGC0⟫ 吗？",
+        ["Fast"] = "快速",
+        ["Quick responses"] = "快速响应",
+        ["Deep"] = "深度",
+        ["Thorough analysis"] = "深度分析",
+        ["Zoom out"] = "缩小",
+        ["Remote Hosts"] = "远程主机",
+        ["No Model Selected"] = "未选择模型",
+        ["⟪AGC0⟫ models selected"] = "已选择 ⟪AGC0⟫ 个模型",
+        ["Copy code"] = "复制代码"
+    };
+    var webTexts = JavaScriptUi.Extract(webCode, "web/main.js").SelectMany(g => g.Texts).ToList();
+    Assert(!webTexts.Any(t => t.Source == "const NoModelSelected = \"No Model Selected\";"), "<pre> 内代码文本不应进入提取。");
+    var webMap = webTexts.Where(t => mapSources.ContainsKey(t.Source)).DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => mapSources[t.Source]);
+    using var webResult = JsonDocument.Parse(Node(JavaScriptUi.Apply(webCode, webTexts, webMap)));
+    var w = webResult.RootElement;
+
+    Assert(w.GetProperty("sysBoost").GetProperty("description").GetString() == mapSources["Invoke the Boost multi-agent orchestrator for complex tasks."] &&
+        w.GetProperty("sysBoost").GetProperty("trailing").GetProperty("description").GetString() == mapSources["Invoke the Boost multi-agent orchestrator for complex tasks."] &&
+        w.GetProperty("customCmd").GetProperty("trailing").GetProperty("description").GetString() == "fallback prompt",
+        "2.32.1 斜杠命令第 3 参数及末尾选项说明未汉化，或错误改动自定义命令回退文本。");
+    Assert(w.GetProperty("quotaGroupView").GetProperty("children")[0].GetProperty("children")[0].GetString() == "Gemini 3 Pro (High)" &&
+        w.GetProperty("quotaGroupView").GetProperty("children")[1][0].GetProperty("children")[0].GetProperty("children")[0].GetString() == "每周额度" &&
+        w.GetProperty("quotaGroupView").GetProperty("children")[1][0].GetProperty("children")[1].GetProperty("children")[0].GetString() == "每周额度，将在 4 天 3 小时后重置" &&
+        w.GetProperty("quotaGroupView").GetProperty("children")[1][1].GetProperty("children")[0].GetProperty("children")[0].GetString() == "5 小时额度" &&
+        w.GetProperty("quotaGroupView").GetProperty("children")[1][1].GetProperty("children")[1].GetProperty("children")[0].GetString() == "将在 <1 分钟后重置" &&
+        w.GetProperty("quotaDaily").GetProperty("children")[0].GetProperty("children")[0].GetString() == "每日额度" &&
+        w.GetProperty("quotaDaily").GetProperty("children")[1].GetProperty("children")[0].GetString() == "将在 2 小时 15 分钟后重置" &&
+        w.GetProperty("quotaListView")[0].GetProperty("children")[0].GetProperty("children")[0].GetString() == "Gemini 3 Flash" &&
+        w.GetProperty("quotaListView")[0].GetProperty("children")[1][0].GetProperty("children")[1].GetProperty("children")[0].GetString() == "每周额度，将在 4 天 3 小时后重置",
+        "2.32.1 局部配额标题、动态时长/周期倒计时或不含 sharedModels 的分组显示未正确汉化。");
+    Assert(w.GetProperty("suffixEffects").GetInt32() == 3 &&
+        string.Concat(w.GetProperty("fileListView").EnumerateArray().Skip(1).Select(x => x.GetString())) == " 个文件" &&
+        string.Concat(w.GetProperty("changeSpanView").GetProperty("children").EnumerateArray().Skip(1).Select(x => x.GetString())) == " 处变更" &&
+        string.Concat(w.GetProperty("unmappedSpanView").GetProperty("children").EnumerateArray().Skip(1).Select(x => x.GetString())) == " unknownwords" &&
+        string.Concat(w.GetProperty("commitSpanView").GetProperty("children").EnumerateArray().Select(x => x.ToString())) == "提交 2 个文件 的更改至" &&
+        w.GetProperty("budgetWarnOne").GetProperty("children")[0].GetString() == "1 条规则超出规则预算，已降级。" &&
+        w.GetProperty("budgetWarnTwo").GetProperty("children")[0].GetString() == "2 条规则超出规则预算，已降级。",
+        "JSX 兄弟复数后缀吞并、句内连接词/助动词消隐、求值次数或未译原文保留失败。");
+    Assert(w.GetProperty("nestedDelete").GetProperty("children")[0].GetString() == "此操作将删除 3 段通话录音（12 KB）。" &&
+        w.GetProperty("nestedStop").GetProperty("children")[0].GetString() == "要停止 2 个项目 吗？",
+        "复数辅助函数与外层模板组合翻译失败。");
+    Assert(w.GetProperty("mappedOptions")[0].GetProperty("children")[0].GetString() == "快速" &&
+        w.GetProperty("mappedOptions")[1].GetProperty("children")[1].GetString() == "深度分析",
+        ".map 对象解构参数展开汉化失败。");
+    Assert(w.GetProperty("toolbarView").GetProperty("props").GetProperty("tooltipText").GetString() == "缩小" &&
+        w.GetProperty("hostView").GetProperty("children")[0].GetProperty("children")[0].GetString() == "远程主机" &&
+        w.GetProperty("untouchedHelper").GetProperty("raw").GetString() == "Zoom out",
+        "局部纯显示辅助函数未汉化，或普通非显示辅助函数被误改。");
+    Assert(w.GetProperty("selectorEmpty").GetProperty("view").GetProperty("children")[0].GetString() == "未选择模型" &&
+        w.GetProperty("selectorEmpty").GetProperty("telemetry").GetProperty("model").GetString() == "No Model Selected" &&
+        w.GetProperty("selectorMulti").GetProperty("view").GetProperty("children")[0].GetString() == "已选择 2 个模型" &&
+        w.GetProperty("selectorSingle").GetProperty("view").GetProperty("children")[0].GetString() == "Gemini 3 Pro",
+        "useMemo 解构返回值汉化失败，或遥测事件 / 单模型显示名被误改。");
+    Assert(w.GetProperty("preBlock").GetProperty("children")[0].GetProperty("children")[0].GetString() == "const NoModelSelected = \"No Model Selected\";" &&
+        w.GetProperty("preBlock").GetProperty("children")[1].GetProperty("props").GetProperty("content").GetString() == "复制代码",
+        "<pre> 保护区内代码块被改动，或 Portal Tooltip 未被豁免提取。");
+
+    // Desktop app.asar 新覆盖槽位：createTray / tray.js / showOpenDialog / showSheet / reportError / MenuUpdateStep
+    const string trayAssignJs = """
+    let calls=0;const nextCount=c=>()=>{calls++;return c;};const item={label:''};
+    function run(c){const f=nextCount(c);const n=f();item.label=(n>0?`${n}`:'No')+' agent'+(n===1?'':'s')+' running';return item.label;}
+    function runExpr(c){const f=nextCount(c);item.label=(f()>0?`${f()}`:'No')+' agent'+(f()===1?'':'s')+' running';return item.label;}
+    console.log(JSON.stringify({z:run(0),m:run(2),e0:runExpr(0),e2:runExpr(2),calls}));
+    """;
+    var trayTexts = JavaScriptUi.Extract(trayAssignJs, "asar/dist/tray.js", desktop: true).SelectMany(g => g.Texts).ToList();
+    var trayDict = trayTexts.DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => t.Source == "No agents running" ? "暂无运行中的智能体" : "⟪AGC0⟫ 个智能体正在运行");
+    using var trayDoc = JsonDocument.Parse(Node(JavaScriptUi.Apply(trayAssignJs, trayTexts, trayDict)));
+    var tr = trayDoc.RootElement;
+    Assert(tr.GetProperty("z").GetString() == "暂无运行中的智能体" && tr.GetProperty("m").GetString() == "2 个智能体正在运行" &&
+        tr.GetProperty("e0").GetString() == "暂无运行中的智能体" && tr.GetProperty("e2").GetString() == "2 个智能体正在运行" &&
+        tr.GetProperty("calls").GetInt32() == 4,
+        "tray.js updateTrayAgentCount 的单次求值计数汉化失败。");
+
+    const string desktopCode = """
+    const results=[];
+    const createTray=items=>results.push({tray:items});
+    const electron={dialog:{showOpenDialog:(w,o)=>{if(!o){o=w;}results.push({open:o});}}};
+    const host={showSheet:(w,o)=>results.push({sheet:o}),reportError:(e,l,t,w)=>results.push({err:t})};
+    createTray([{id:'running-agents',label:'No agents running',sublabel:'Idle'}]);
+    electron.dialog.showOpenDialog({title:'Open workspace'});
+    host.showSheet(null,{type:'info',title:'Stop SSH server',message:'Not connected',detail:'Reconnect first.'});
+    host.reportError(null,'srv','Sign-in failed',null);
+    console.log(JSON.stringify(results));
+    """;
+    var desktopMap = new Dictionary<string, string>
+    {
+        ["No agents running"] = "暂无运行中的智能体", ["Idle"] = "空闲",
+        ["Open workspace"] = "打开工作区", ["Stop SSH server"] = "停止 SSH 服务器",
+        ["Not connected"] = "未连接", ["Reconnect first."] = "请先重新连接。", ["Sign-in failed"] = "登录失败"
+    };
+    var dTexts = JavaScriptUi.Extract(desktopCode, "asar/dist/main.js", desktop: true).SelectMany(g => g.Texts).ToList();
+    using var dDoc = JsonDocument.Parse(Node(JavaScriptUi.Apply(desktopCode, dTexts, dTexts.ToDictionary(t => t.Key, t => desktopMap[t.Source]))));
+    var arr = dDoc.RootElement;
+    Assert(arr[0].GetProperty("tray")[0].GetProperty("label").GetString() == "暂无运行中的智能体" &&
+        arr[0].GetProperty("tray")[0].GetProperty("sublabel").GetString() == "空闲" &&
+        arr[1].GetProperty("open").GetProperty("title").GetString() == "打开工作区" &&
+        arr[2].GetProperty("sheet").GetProperty("title").GetString() == "停止 SSH 服务器" &&
+        arr[2].GetProperty("sheet").GetProperty("detail").GetString() == "请先重新连接。" &&
+        arr[3].GetProperty("err").GetString() == "登录失败",
+        "桌面端 createTray / showOpenDialog / showSheet / reportError 提取汉化失败。");
+
+    const string updaterCode = "var MenuUpdateStep;(function(MenuUpdateStep){MenuUpdateStep['CheckForUpdates']='Check for Updates...';})(MenuUpdateStep||(MenuUpdateStep={}));console.log(JSON.stringify({step:MenuUpdateStep.CheckForUpdates}));";
+    var upTexts = JavaScriptUi.Extract(updaterCode, "asar/dist/updater.js", desktop: true).SelectMany(g => g.Texts).ToList();
+    using var upDoc = JsonDocument.Parse(Node(JavaScriptUi.Apply(updaterCode, upTexts, upTexts.ToDictionary(t => t.Key, _ => "检查更新…"))));
+    Assert(upDoc.RootElement.GetProperty("step").GetString() == "检查更新…", "updater.js MenuUpdateStep 映射未汉化。");
+
+    Assert(AttProject.NormalizeImportedText(" file", " 个文件") == " 个文件", "应保留人工指定的前导连接空格。");
+    Assert(AttProject.NormalizeImportedText("\nHello\n", " 你好 \n") == "\n 你好 \n", "应恢复原文换行并保留人为水平空格。");
+    Assert(AttProject.NormalizeImportedText(" (Enter)", " （Enter） ") == "（Enter）", "紧贴全角中文括号的多余 ASCII 空格应自动消除。");
+    Assert(AttProject.NormalizeImportedText(" failed.", "失败。 ") == "失败。", "紧贴全角句号的多余 ASCII 空格应自动消除。");
+    Assert(ProtectedTerms.NeedsTranslation("A "), "单字母冠词前缀 'A ' 应判定为需要翻译。");
 }
 static void CheckNativeHook()
 {

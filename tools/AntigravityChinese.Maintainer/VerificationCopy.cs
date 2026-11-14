@@ -11,11 +11,24 @@ internal static class VerificationCopy
         if (target.StartsWith(original, StringComparison.OrdinalIgnoreCase) || original.StartsWith(target, StringComparison.OrdinalIgnoreCase))
             throw new IOException("验证目录必须与原版安装目录分离。");
         if (Directory.Exists(destination) && Directory.EnumerateFileSystemEntries(destination).Any()) throw new IOException("请使用空的验证目录。");
-        if (PatchInstaller.FindApplied(source) is not null) throw new IOException("请使用未汉化的原版安装创建验证副本。");
+        var applied = PatchInstaller.FindApplied(source);
         var app = Path.Combine(destination, "app"); var profile = Path.Combine(destination, "profile");
         Directory.CreateDirectory(app); Directory.CreateDirectory(profile);
         CopyTree(source.Root, app);
         var asarPath = Path.Combine(app, "resources", "app.asar");
+        if (applied is { } state)
+        {
+            var bundleDir = Path.Combine(app, NativeBundleAdapter.ResourceDirectory);
+            if (Directory.Exists(bundleDir)) Directory.Delete(bundleDir, true);
+            foreach (var file in state.Receipt.Files)
+            {
+                var backupFile = Path.Combine(state.Directory, Path.GetFileName(file.RelativePath) + ".original");
+                var targetFile = Path.Combine(app, file.RelativePath);
+                if (!File.Exists(backupFile) || AsarArchive.FileHash(backupFile) != file.OriginalHash)
+                    throw new IOException("当前已汉化安装的原始备份缺失或校验不匹配，无法创建纯净验证副本。");
+                File.Copy(backupFile, targetFile, true);
+            }
+        }
         var stagedAsar = Path.Combine(destination, "verification.asar");
         string oldHash, newHash;
         using (var asar = new AsarArchive(asarPath))

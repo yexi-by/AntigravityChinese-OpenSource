@@ -30,8 +30,9 @@ public static class JsonFiles
 
 public sealed record Installation(string Root, string Executable, string Asar, string Server, string Version);
 public sealed record ExpressionSlot(int Start, int End, bool IsPluralSuffix = false);
+public sealed record PluralSuffixRange(int TextEnd, int SuffixStart, int SuffixEnd);
 public sealed record UiText(string Key, string GroupKey, string File, int Start, int End, string Source,
-    string Shape, string Role, List<ExpressionSlot> Slots);
+    string Shape, string Role, List<ExpressionSlot> Slots, PluralSuffixRange? PluralSuffix = null);
 public sealed record UiGroup(string Key, string Kind, List<UiText> Texts);
 public sealed record TranslationEntry(string Key, string Source, string Translation, string Kind = "", string Role = "", string Shape = "");
 public sealed record TranslationPackage(List<TranslationEntry> Entries, List<string>? RetainedSources = null);

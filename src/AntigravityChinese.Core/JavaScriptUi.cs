@@ -28,6 +28,23 @@ public static partial class JavaScriptUi
     public static string Quote(string text) => JsonSerializer.Serialize(text, Strings);
     private static string PropertyName(ObjectProperty p) => p.Computed ? "" : p.Key switch
     { Identifier i => i.Name, StringLiteral s => s.Value, _ => "" };
+    private static string PropertyName(AssignmentProperty p) => p.Computed ? "" : p.Key switch
+    { Identifier i => i.Name, StringLiteral s => s.Value, _ => "" };
+    private static bool IsPluralSuffixChoice(Node? node) => node is ConditionalExpression cond &&
+        (cond.Consequent is StringLiteral { Value: "s" } && cond.Alternate is StringLiteral { Value: "" } ||
+         cond.Consequent is StringLiteral { Value: "" } && cond.Alternate is StringLiteral { Value: "s" });
+    private static bool IsPortalPlace(string? place) => place is "top" or "bottom" or "left" or "right" ||
+        place is not null && (place.StartsWith("top-", StringComparison.Ordinal) || place.StartsWith("bottom-", StringComparison.Ordinal) ||
+        place.StartsWith("left-", StringComparison.Ordinal) || place.StartsWith("right-", StringComparison.Ordinal));
+    private static Expression? MatchTrayAgentCount(Expression rhs)
+    {
+        if (rhs is not BinaryExpression { Operator: Operator.Addition, Left: BinaryExpression b3, Right: StringLiteral { Value: " running" } }) return null;
+        if (b3 is not { Operator: Operator.Addition, Left: BinaryExpression b2, Right: var plural } || !IsPluralSuffixChoice(plural)) return null;
+        if (b2 is not { Operator: Operator.Addition, Left: ConditionalExpression cond, Right: StringLiteral { Value: " agent" } }) return null;
+        if (cond.Alternate is not StringLiteral { Value: "No" }) return null;
+        if (cond.Test is BinaryExpression { Operator: Operator.GreaterThan, Left: var countExpr, Right: NumericLiteral { Value: 0d } }) return countExpr;
+        return null;
+    }
 
     public static List<UiGroup> Extract(string code, string file, bool desktop = false)
     {
@@ -148,25 +165,71 @@ public static partial class JavaScriptUi
             }
         }
         var fixedBindings = bindings.Except(assigned).Except(ambiguous).ToHashSet();
+        var pluralFunctions = new Dictionary<(int Function, string Name), string?>();
+        foreach (var ((scope, fnName), fnNode) in namedFunctions)
+        {
+            if (!fixedBindings.Contains((scope, fnName))) continue;
+            var parameters = Parameters(fnNode).ToArray();
+            if (parameters.Length != 2 || parameters[0] is not Identifier countParam) continue;
+            string? defaultNoun = null;
+            Identifier? nounParam = parameters[1] as Identifier;
+            if (nounParam is null && parameters[1] is AssignmentPattern { Left: Identifier p1, Right: StringLiteral fallback })
+            { nounParam = p1; defaultNoun = fallback.Value; }
+            if (nounParam is null) continue;
+            var block = fnNode switch
+            {
+                FunctionDeclaration f => f.Body,
+                FunctionExpression f => f.Body,
+                ArrowFunctionExpression { Body: BlockStatement b } => b,
+                _ => null
+            };
+            Expression? bodyExpr = fnNode is ArrowFunctionExpression { Body: Expression arrowExpr } ? arrowExpr :
+                block is { Body: [ReturnStatement { Argument: { } ret }] } ? ret : null;
+            if (bodyExpr is TemplateLiteral tpl && tpl.Quasis.Count == 4 && tpl.Expressions.Count == 3 &&
+                tpl.Quasis[0].Value.Cooked == "" && tpl.Quasis[1].Value.Cooked == " " &&
+                tpl.Quasis[2].Value.Cooked == "" && tpl.Quasis[3].Value.Cooked == "" &&
+                tpl.Expressions[0] is Identifier e0 && e0.Name == countParam.Name &&
+                tpl.Expressions[1] is Identifier e1 && e1.Name == nounParam.Name &&
+                IsPluralSuffixChoice(tpl.Expressions[2]))
+                pluralFunctions[(scope, fnName)] = defaultNoun;
+        }
         // 配额接口返回的是显示文案。按组件参数和字段契约确认消费者，不转换接口原始数据。
         var serviceParameters = new Dictionary<(int Function, string Name), string>();
+        var serviceWritableParameters = new Dictionary<(int Function, string Name), string>();
         var quotaGroups = new HashSet<(int Function, string Name)>();
         foreach (var producer in nodes.Select(p => p.Node).Where(IsFunction))
-        foreach (var parameter in Parameters(producer).OfType<ObjectPattern>())
         {
-            var parameters = parameter.Properties.OfType<AssignmentProperty>()
-                .Where(p => !p.Computed && p.Key is Identifier && p.Value is Identifier)
-                .GroupBy(p => ((Identifier)p.Key).Name).Where(g => g.Count() == 1)
-                .ToDictionary(g => g.Key, g => ((Identifier)g.Single().Value).Name);
-            if (parameters.Keys.ToHashSet().IsSupersetOf(["label", "remainingFraction", "refreshText", "disabled"]))
+            var memberReads = Walk(producer).Select(p => p.Node).OfType<MemberExpression>().Where(m => !m.Computed).ToArray();
+            foreach (var parameter in Parameters(producer).OfType<ObjectPattern>())
             {
-                serviceParameters[(producer.Start, parameters["label"])] = ServiceDisplay.QuotaLabel;
-                serviceParameters[(producer.Start, parameters["refreshText"])] = ServiceDisplay.QuotaDescription;
+                var parameters = parameter.Properties.OfType<AssignmentProperty>()
+                    .Where(p => !p.Computed && p.Key is Identifier && p.Value is Identifier)
+                    .GroupBy(p => ((Identifier)p.Key).Name).Where(g => g.Count() == 1)
+                    .ToDictionary(g => g.Key, g => ((Identifier)g.Single().Value).Name);
+                if (parameters.Keys.ToHashSet().IsSupersetOf(["label", "remainingFraction", "refreshText", "disabled"]))
+                {
+                    serviceParameters[(producer.Start, parameters["label"])] = ServiceDisplay.QuotaLabel;
+                    serviceParameters[(producer.Start, parameters["refreshText"])] = ServiceDisplay.QuotaDescription;
+                }
+                if (parameters.Keys.ToHashSet().IsSupersetOf(["bucket", "title", "detail"]))
+                {
+                    serviceParameters[(producer.Start, parameters["title"])] = ServiceDisplay.QuotaTitle;
+                    var detailVar = parameters["detail"];
+                    var bucketVar = parameters["bucket"];
+                    if (memberReads.Any(m => m.Object is Identifier o && o.Name == bucketVar && m.Property is Identifier { Name: "subtext" }) &&
+                        (!writes.TryGetValue((producer.Start, detailVar), out var detailWrites) ||
+                         detailWrites.All(w => !w.Closure && w.Value is not null && !Walk(w.Value).Select(p => p.Node).OfType<Identifier>()
+                             .Any(id => Owner(producer.Start, id.Name) is { } externalOwner && externalOwner != producer.Start && !fixedBindings.Contains((externalOwner, id.Name))))))
+                        serviceWritableParameters[(producer.Start, detailVar)] = ServiceDisplay.QuotaDetail;
+                }
+                if (parameters.TryGetValue("group", out var group) &&
+                    memberReads.Any(m => m.Object is Identifier id && id.Name == group && m.Property is Identifier { Name: "buckets" }))
+                    quotaGroups.Add((producer.Start, group));
             }
-            if (parameters.TryGetValue("group", out var group) && parameters.ContainsKey("sharedModels") &&
-                Walk(producer).Select(p => p.Node).OfType<MemberExpression>().Any(m =>
-                    !m.Computed && m.Object is Identifier id && id.Name == group && m.Property is Identifier { Name: "buckets" }))
-                quotaGroups.Add((producer.Start, group));
+            if (Parameters(producer).FirstOrDefault() is Identifier itemParam &&
+                memberReads.Any(m => m.Object is Identifier o1 && o1.Name == itemParam.Name && m.Property is Identifier { Name: "buckets" }) &&
+                memberReads.Any(m => m.Object is Identifier o2 && o2.Name == itemParam.Name && m.Property is Identifier { Name: "displayName" }))
+                quotaGroups.Add((producer.Start, itemParam.Name));
         }
         string? ServiceRole(Expression expression, int function, HashSet<(int, string)> visited)
         {
@@ -185,6 +248,7 @@ public static partial class JavaScriptUi
             }
             if (expression is not Identifier variable || Owner(function, variable.Name) is not { } owner || !visited.Add((owner, variable.Name))) return null;
             if (fixedBindings.Contains((owner, variable.Name)) && serviceParameters.TryGetValue((owner, variable.Name), out var role)) return role;
+            if (owner == function && serviceWritableParameters.TryGetValue((owner, variable.Name), out var writableRole)) return writableRole;
             return fixedBindings.Contains((owner, variable.Name)) && declarations.TryGetValue((owner, variable.Name), out var initial)
                 ? ServiceRole(initial, owner, visited) : null;
         }
@@ -230,8 +294,31 @@ public static partial class JavaScriptUi
 
         foreach (var (node, function) in nodes)
             if (node is CallExpression { Callee: MemberExpression { Property: Identifier { Name: "map" }, Object: Expression collection } } call &&
-                call.Arguments.Count > 0 && call.Arguments[0] is ArrowFunctionExpression callback && callback.Params.Count > 0 && callback.Params[0] is Identifier item)
-                callbacks[(callback.Start, item.Name)] = (collection, function);
+                call.Arguments.Count > 0 && IsFunction(call.Arguments[0]) && Parameters(call.Arguments[0]).FirstOrDefault() is { } firstParam)
+            {
+                var callback = call.Arguments[0];
+                if (firstParam is Identifier item)
+                    callbacks[(callback.Start, item.Name)] = (collection, function);
+                else if (firstParam is ObjectPattern pattern)
+                {
+                    var synthetic = $"$mapItem_{callback.Start}";
+                    bindings.Add((callback.Start, synthetic));
+                    fixedBindings.Add((callback.Start, synthetic));
+                    callbacks[(callback.Start, synthetic)] = (collection, function);
+                    var syntheticRef = new Identifier(synthetic);
+                    foreach (var prop in pattern.Properties.OfType<AssignmentProperty>())
+                    {
+                        var localId = prop.Value switch
+                        {
+                            Identifier id => id,
+                            AssignmentPattern { Left: Identifier id } => id,
+                            _ => null
+                        };
+                        if (!prop.Computed && PropertyName(prop) is { Length: > 0 } propName && localId is not null)
+                            destructured[(callback.Start, localId.Name)] = (syntheticRef, propName);
+                    }
+                }
+            }
 
         var settingSectionRows = new HashSet<(int Function, string Name)>();
         foreach (var binding in callbacks)
@@ -491,36 +578,93 @@ public static partial class JavaScriptUi
         var serviceSeen = new HashSet<(int, string)>();
         var activeFunction = -1;
 
+        var declIdStarts = new Dictionary<(int Function, string Name), int>();
+        foreach (var (node, function) in nodes)
+            if (node is VariableDeclarator { Id: Identifier declId })
+                declIdStarts.TryAdd((function, declId.Name), declId.Start);
+
+        static string TemplateSource(TemplateLiteral template)
+        {
+            var sb = new StringBuilder();
+            for (var i = 0; i < template.Quasis.Count; i++)
+            {
+                sb.Append(template.Quasis[i].Value.Cooked);
+                if (i < template.Expressions.Count) sb.Append($"⟪AGC{i}⟫");
+            }
+            return sb.ToString();
+        }
+        static bool HasTranslatableText(Node expression) => Walk(expression).Any(p =>
+            p.Node is StringLiteral s && LooksLikeText(s.Value) ||
+            p.Node is TemplateLiteral t && LooksLikeText(TemplateSource(t)));
+        bool IsPluralInvocation(CallExpression c, int scope) => c.Callee is Identifier cid &&
+            Owner(scope, cid.Name) is { } fnScope && pluralFunctions.TryGetValue((fnScope, cid.Name), out var defNoun) &&
+            (c.Arguments.Count == 1 && defNoun is not null || c.Arguments.Count == 2 && c.Arguments[1] is StringLiteral);
+
         // 局部变量可混合默认标题与用户名称。只有后续读取全部流向显示值时，才翻译其固定分支。
         var displayReads = new HashSet<int>();
-        void MarkDisplayReads(Node node, HashSet<int> destination)
+        var displayReadRoles = new Dictionary<int, string>();
+        void MarkDisplayReads(Node node, HashSet<int> destination, string? role = null, Dictionary<int, string>? roleMap = null)
         {
             switch (node)
             {
-                case Identifier id: destination.Add(id.Start); break;
-                case TemplateLiteral template: foreach (var value in template.Expressions) MarkDisplayReads(value, destination); break;
-                case ConditionalExpression conditional: MarkDisplayReads(conditional.Consequent, destination); MarkDisplayReads(conditional.Alternate, destination); break;
-                case LogicalExpression logical: MarkDisplayReads(logical.Left, destination); MarkDisplayReads(logical.Right, destination); break;
-                case BinaryExpression { Operator: Operator.Addition } addition: MarkDisplayReads(addition.Left, destination); MarkDisplayReads(addition.Right, destination); break;
-                case ArrayExpression array: foreach (var value in array.Elements) if (value is not null) MarkDisplayReads(value, destination); break;
+                case Identifier id:
+                    destination.Add(id.Start);
+                    if (role is not null && roleMap is not null) roleMap.TryAdd(id.Start, role);
+                    break;
+                case TemplateLiteral template: foreach (var value in template.Expressions) MarkDisplayReads(value, destination, role, roleMap); break;
+                case ConditionalExpression conditional: MarkDisplayReads(conditional.Consequent, destination, role, roleMap); MarkDisplayReads(conditional.Alternate, destination, role, roleMap); break;
+                case LogicalExpression logical: MarkDisplayReads(logical.Left, destination, role, roleMap); MarkDisplayReads(logical.Right, destination, role, roleMap); break;
+                case BinaryExpression { Operator: Operator.Addition } addition: MarkDisplayReads(addition.Left, destination, role, roleMap); MarkDisplayReads(addition.Right, destination, role, roleMap); break;
+                case ArrayExpression array: foreach (var value in array.Elements) if (value is not null) MarkDisplayReads(value, destination, role, roleMap); break;
             }
         }
         foreach (var call in nodes.Select(p => p.Node).OfType<CallExpression>().Where(c => !IsProtected(c)))
         {
             var callee = call.Callee is SequenceExpression sequence ? sequence.Expressions[^1] : call.Callee;
             if (callee is MemberExpression { Property: Identifier { Name: "createElement" or "jsx" or "jsxs" or "jsxDEV" } method } && call.Arguments.Count >= 2)
-                foreach (var (value, _) in DisplayValues(call, method.Name)) MarkDisplayReads(value, displayReads);
+                foreach (var (value, valRole) in DisplayValues(call, method.Name)) MarkDisplayReads(value, displayReads, valRole, displayReadRoles);
         }
+
+        // 收集 useMemo 解构返回值与局部显示渲染辅助函数，一并在统一扫描中收集其全部引用位置。
+        var memoDestructuredBindings = new List<((int Scope, string Name) OuterKey, int DeclEnd, Node MemoFn, string PropName)>();
+        foreach (var (node, function) in nodes)
+        {
+            if (node is not VariableDeclarator { Id: ObjectPattern outerPat, Init: CallExpression memoCall }) continue;
+            var callee = memoCall.Callee is SequenceExpression seq ? seq.Expressions[^1] : memoCall.Callee;
+            if (callee is not MemberExpression { Property: Identifier { Name: "useMemo" } } ||
+                memoCall.Arguments.Count == 0 || !IsFunction(memoCall.Arguments[0])) continue;
+            var memoFn = memoCall.Arguments[0];
+            foreach (var prop in outerPat.Properties.OfType<AssignmentProperty>())
+                if (!prop.Computed && PropertyName(prop) is { Length: > 0 } propName && prop.Value is Identifier outerId &&
+                    Owner(function, outerId.Name) is { } oScope)
+                    memoDestructuredBindings.Add(((oScope, outerId.Name), outerId.End, memoFn, propName));
+        }
+
+        var localHelperCandidates = new HashSet<(int Function, string Name)>();
+        foreach (var key in fixedBindings)
+            if (key.Function >= 0 && declarations.TryGetValue(key, out var fnInit) &&
+                fnInit is ArrowFunctionExpression or FunctionExpression &&
+                Parameters(fnInit).Any() &&
+                Walk(fnInit).Any(p => p.Node is CallExpression c &&
+                    (c.Callee is SequenceExpression s ? s.Expressions[^1] : c.Callee) is MemberExpression { Property: Identifier { Name: "createElement" or "jsx" or "jsxs" or "jsxDEV" } }))
+                localHelperCandidates.Add(key);
+
         var candidates = nodes.Select(p => p.Node).OfType<Identifier>().Where(id => displayReads.Contains(id.Start))
             .Select(id => (Function: Owner(scopes[id], id.Name), id.Name)).Where(p => p.Function is not null)
             .Select(p => (Function: p.Function!.Value, p.Name)).Distinct().Where(key => key.Function >= 0 &&
                 (writes.ContainsKey(key) || fixedBindings.Contains(key) && declarations.ContainsKey(key)) && !ambiguous.Contains(key)).ToHashSet();
-        var references = candidates.ToDictionary(key => key, _ => new List<int>());
+        var referenceKeys = new HashSet<(int Function, string Name)>(candidates);
+        foreach (var m in memoDestructuredBindings) referenceKeys.Add(m.OuterKey);
+        referenceKeys.UnionWith(localHelperCandidates);
+
+        var references = referenceKeys.ToDictionary(key => key, _ => new List<int>());
+        var callCalleeStarts = new HashSet<int>();
         var plainAssignments = new HashSet<int>();
         var pendingReferences = new Stack<Node>(); pendingReferences.Push(tree);
         while (pendingReferences.TryPop(out var node))
         {
             if (node is Identifier id && Owner(scopes[id], id.Name) is { } scope && references.TryGetValue((scope, id.Name), out var uses)) uses.Add(id.Start);
+            if (node is CallExpression c && c.Callee is Identifier cid) callCalleeStarts.Add(cid.Start);
             if (node is AssignmentExpression { Operator: Operator.Assignment, Left: Identifier } assignment)
             { plainAssignments.Add(node.Start); pendingReferences.Push(assignment.Right); }
             else if (node is MemberExpression member) { pendingReferences.Push(member.Object); if (member.Computed) pendingReferences.Push(member.Property); }
@@ -532,7 +676,8 @@ public static partial class JavaScriptUi
         foreach (var key in candidates.Where(key => !fixedBindings.Contains(key)))
         {
             var changes = writes[key].OrderBy(c => c.Position).ToArray();
-            var first = Array.FindIndex(changes, c => c.Linear && plainAssignments.Contains(c.Position) && c.Value is not null && Walk(c.Value).Any(p => p.Node is StringLiteral text && LooksLikeText(text.Value)));
+            var first = Array.FindIndex(changes, c => c.Linear && plainAssignments.Contains(c.Position) && c.Value is not null &&
+                (HasTranslatableText(c.Value) || Walk(c.Value).Any(p => p.Node is CallExpression call && IsPluralInvocation(call, key.Function))));
             if (first < 0 || changes.Any(c => c.Closure) || changes.Skip(first).Any(c => !c.Linear || !plainAssignments.Contains(c.Position) || c.Value is null)) continue;
             var allowed = new HashSet<int>(displayReads);
             foreach (var change in changes.Skip(first)) MarkDisplayReads(change.Value!, allowed);
@@ -551,6 +696,64 @@ public static partial class JavaScriptUi
                 displayAssignments.Add((key.Function, initial));
         }
 
+        // useMemo 返回对象的属性若全部流向外部显示，则提取其内部含文 fallback 与静态模板分支。
+        var seenMemoAssignments = new HashSet<int>();
+        foreach (var (outerKey, declEnd, memoFn, propName) in memoDestructuredBindings)
+        {
+            if (!fixedBindings.Contains(outerKey) || references[outerKey].Any(pos => pos > declEnd && !displayReads.Contains(pos))) continue;
+            var returns = FunctionResults(memoFn).ToArray();
+            if (returns.Length == 0 || returns.Any(r => r is not ObjectExpression)) continue;
+            var innerIds = returns.Cast<ObjectExpression>().Select(obj =>
+                obj.Properties.OfType<ObjectProperty>().FirstOrDefault(p => PropertyName(p) == propName)?.Value as Identifier).ToArray();
+            if (innerIds.Any(id => id is null) || innerIds.Select(id => id!.Name).Distinct(StringComparer.Ordinal).Count() != 1) continue;
+            var innerName = innerIds[0]!.Name;
+            if (Owner(memoFn.Start, innerName) != memoFn.Start || ambiguous.Contains((memoFn.Start, innerName))) continue;
+            var allowedPositions = innerIds.Select(id => id!.Start).ToHashSet();
+            if (declIdStarts.TryGetValue((memoFn.Start, innerName), out var innerDeclStart)) allowedPositions.Add(innerDeclStart);
+            var unsafeRead = Walk(memoFn).Any(p =>
+            {
+                if (p.Node is not Identifier id || id.Name != innerName || Owner(p.Function, id.Name) != memoFn.Start) return false;
+                if (allowedPositions.Contains(id.Start)) return false;
+                // 允许作为赋值左值出现
+                var isWriteLhs = Walk(memoFn).Select(x => x.Node).OfType<AssignmentExpression>().Any(a => a.Left is Identifier l && l.Start == id.Start);
+                return !isWriteLhs;
+            });
+            if (unsafeRead) continue;
+            if (declarations.TryGetValue((memoFn.Start, innerName), out var declVal) && HasTranslatableText(declVal) && seenMemoAssignments.Add(declVal.Start))
+                displayAssignments.Add((memoFn.Start, declVal));
+            if (writes.TryGetValue((memoFn.Start, innerName), out var innerWrites))
+                foreach (var w in innerWrites)
+                    if (!w.Closure && w.Value is not null && w.Value is not AssignmentExpression && HasTranslatableText(w.Value) && seenMemoAssignments.Add(w.Value.Start))
+                        displayAssignments.Add((memoFn.Start, w.Value));
+        }
+
+        // 识别局部纯显示渲染辅助函数（如工具栏图标按钮工厂、分组列表包装器）
+        var localRenderHelpers = new Dictionary<(int Function, string Name), Dictionary<int, string>>();
+        foreach (var helperKey in localHelperCandidates)
+        {
+            if (!declIdStarts.TryGetValue(helperKey, out var hDeclStart)) continue;
+            var helperUses = references[helperKey];
+            if (helperUses.Count <= 1 || helperUses.Any(pos => pos != hDeclStart && !callCalleeStarts.Contains(pos))) continue;
+            var helperFn = declarations[helperKey];
+            var helperParams = Parameters(helperFn).ToArray();
+            var paramRoles = new Dictionary<int, string>();
+            for (var pIdx = 0; pIdx < helperParams.Length; pIdx++)
+            {
+                if (helperParams[pIdx] is not Identifier paramId) continue;
+                var paramUses = Walk(helperFn)
+                    .Where(p => p.Node is Identifier id && id.Name == paramId.Name && id.Start != paramId.Start && Owner(p.Function, id.Name) == helperFn.Start)
+                    .Select(p => p.Node.Start).ToArray();
+                if (paramUses.Length == 0 || paramUses.Any(pos => !displayReads.Contains(pos))) continue;
+                var role = displayReadRoles.TryGetValue(paramUses[0], out var r) ? r : "children";
+                paramRoles[pIdx] = role;
+            }
+            if (paramRoles.Count == 0) continue;
+            var hasLiteralCall = nodes.Where(p => p.Node is CallExpression).Select(p => (Call: (CallExpression)p.Node, p.Function)).Any(pair =>
+                pair.Call.Callee is Identifier calleeId && Owner(pair.Function, calleeId.Name) == helperKey.Function && calleeId.Name == helperKey.Name &&
+                paramRoles.Keys.Any(idx => idx < pair.Call.Arguments.Count && HasTranslatableText(pair.Call.Arguments[idx])));
+            if (hasLiteralCall) localRenderHelpers[helperKey] = paramRoles;
+        }
+
         void FinishGroup(string kind, List<UiText> texts)
         {
             if (texts.Count == 0) return;
@@ -567,13 +770,33 @@ public static partial class JavaScriptUi
         void Group(Node owner, string kind, IEnumerable<(Node Node, string Role)> values)
         {
             var texts = new List<UiText>();
-            void Add(Node node, string source, string shape, string role, List<ExpressionSlot>? slots = null)
+            void Add(Node node, string source, string shape, string role, List<ExpressionSlot>? slots = null,
+                bool allowConnector = false, PluralSuffixRange? pluralSuffix = null)
             {
                 source = source.Replace("\r\n", "\n").Replace('\r', '\n');
-                if (!LooksLikeText(source) || !seen.Add(node.Start)) return;
-                texts.Add(new("", "", file, node.Start, node.End, source, shape, role, slots ?? []));
+                if (!LooksLikeText(source, allowConnector) || !seen.Add(node.Start)) return;
+                var end = pluralSuffix?.SuffixEnd ?? node.End;
+                texts.Add(new("", "", file, node.Start, end, source, shape, role, slots ?? [], PluralSuffix: pluralSuffix));
             }
-            void Value(Node node, string role)
+            void ProcessSequence(IReadOnlyList<Node?> items, string role, bool allowConnector)
+            {
+                for (var i = 0; i < items.Count; i++)
+                {
+                    var item = items[i];
+                    if (item is null) continue;
+                    if (item is StringLiteral str && str.Value.Length > 0 && char.IsAsciiLetter(str.Value[^1]) &&
+                        i + 1 < items.Count && IsPluralSuffixChoice(items[i + 1]))
+                    {
+                        var suffixNode = items[i + 1]!;
+                        Add(str, str.Value, "string", role, allowConnector: allowConnector,
+                            pluralSuffix: new(str.End, suffixNode.Start, suffixNode.End));
+                        i++;
+                        continue;
+                    }
+                    Value(item, role, allowConnector);
+                }
+            }
+            void Value(Node node, string role, bool allowConnector = false)
             {
                 if (shortcutScopes.Contains(activeFunction) && role is "label" or "title" &&
                     node is MemberExpression { Computed: false, Property: Identifier { Name: "label" or "title" } })
@@ -588,6 +811,22 @@ public static partial class JavaScriptUi
                     foreach (var source in settingSectionSources.Order(StringComparer.Ordinal))
                         if (lookupSeen.Add((node.Start, source))) texts.Add(new("", "", file, node.Start, node.End, source, "lookup", "section-title", []));
                     return;
+                }
+                if (node is CallExpression pluralCall && !IsProtected(pluralCall) && pluralCall.Callee is Identifier pluralId &&
+                    Owner(activeFunction, pluralId.Name) is { } pluralScope && pluralFunctions.TryGetValue((pluralScope, pluralId.Name), out var defaultNoun))
+                {
+                    string? noun = pluralCall.Arguments.Count switch
+                    {
+                        1 when defaultNoun is not null => defaultNoun,
+                        2 when pluralCall.Arguments[1] is StringLiteral explicitNoun => explicitNoun.Value,
+                        _ => null
+                    };
+                    if (noun is not null && pluralCall.Arguments[0] is not SpreadElement)
+                    {
+                        Value(pluralCall.Arguments[0], role);
+                        Add(pluralCall, $"⟪AGC0⟫ {noun}", "template", role, [new(pluralCall.Arguments[0].Start, pluralCall.Arguments[0].End)]);
+                        return;
+                    }
                 }
                 if (node is Expression option && node is Identifier or MemberExpression or CallExpression or ChainExpression &&
                     OptionRole(option, activeFunction, []) is { } optionRole && optionSources[optionRole].Count > 0)
@@ -630,7 +869,7 @@ public static partial class JavaScriptUi
                         memo.Arguments.Count > 0 && IsFunction(memo.Arguments[0]):
                         foreach (var result in FunctionResults(memo.Arguments[0])) Value(result, role);
                         break;
-                    case StringLiteral literal: Add(literal, literal.Value, "string", role); break;
+                    case StringLiteral literal: Add(literal, literal.Value, "string", role, allowConnector: allowConnector); break;
                     case TemplateLiteral template:
                     {
                         var text = new StringBuilder(); var slots = new List<ExpressionSlot>();
@@ -641,10 +880,12 @@ public static partial class JavaScriptUi
                             {
                                 text.Append($"⟪AGC{i}⟫");
                                 var expression = template.Expressions[i];
+                                static bool IsChoicePair(ConditionalExpression c, string a, string b) =>
+                                    c.Consequent is StringLiteral x && c.Alternate is StringLiteral y &&
+                                    (x.Value == a && y.Value == b || x.Value == b && y.Value == a);
                                 var plural = expression is ConditionalExpression pluralChoice &&
-                                    (pluralChoice.Consequent is StringLiteral { Value: "s" } && pluralChoice.Alternate is StringLiteral { Value: "" } ||
-                                     pluralChoice.Consequent is StringLiteral { Value: "" } && pluralChoice.Alternate is StringLiteral { Value: "s" }) &&
-                                    template.Quasis[i].Value.Cooked is { Length: > 0 } prefix && char.IsAsciiLetter(prefix[^1]);
+                                    (IsChoicePair(pluralChoice, "s", "") && template.Quasis[i].Value.Cooked is { Length: > 0 } prefix && char.IsAsciiLetter(prefix[^1]) ||
+                                     IsChoicePair(pluralChoice, "was", "were"));
                                 slots.Add(new(expression.Start, expression.End, plural));
                                 Value(expression, role);
                             }
@@ -658,7 +899,7 @@ public static partial class JavaScriptUi
                         // 只改拼接中的固定文字，保留 + 运算、分组和原来的隐式类型转换。
                         Value(binary.Left, role); Value(binary.Right, role); break;
                     case ArrayExpression array:
-                        foreach (var element in array.Elements) if (element is not null) Value(element, role);
+                        ProcessSequence(array.Elements, role, !desktop && role == "children" && array.Elements.Count >= 3);
                         break;
                     case Expression expression when node is Identifier or MemberExpression or CallExpression:
                     {
@@ -671,7 +912,23 @@ public static partial class JavaScriptUi
                     }
                 }
             }
-            foreach (var (node, role) in values) Value(node, role);
+            var list = values.ToList();
+            for (var i = 0; i < list.Count; i++)
+            {
+                if (list[i].Role == "children")
+                {
+                    var end = i + 1;
+                    while (end < list.Count && list[end].Role == "children") end++;
+                    if (end - i >= 2)
+                    {
+                        var slice = list.GetRange(i, end - i).Select(p => (Node?)p.Node).ToArray();
+                        ProcessSequence(slice, "children", !desktop && slice.Length >= 3);
+                        i = end - 1;
+                        continue;
+                    }
+                }
+                Value(list[i].Node, list[i].Role);
+            }
             FinishGroup(kind, texts);
         }
 
@@ -712,6 +969,19 @@ public static partial class JavaScriptUi
                 .Select(p => ((Node)p.Value, PropertyName(p))));
         }
 
+        // 代码块等保护区内的 Portal Tooltip（{ id, place }）单独挂在 body 上，提取其提示内容并排除更内层代码节点。
+        foreach (var (node, function) in nodes)
+        {
+            if (desktop || node is not CallExpression call || call.Arguments.Count < 2 ||
+                call.Arguments[1] is not ObjectExpression tProps || !IsProtected(call) ||
+                !IsPortalTooltip(call, tProps)) continue;
+            var callee = call.Callee is SequenceExpression sequence ? sequence.Expressions[^1] : call.Callee;
+            if (callee is not MemberExpression { Property: Identifier { Name: "createElement" or "jsx" or "jsxs" or "jsxDEV" } tMethod }) continue;
+            activeFunction = function;
+            Group(call, "ui/tooltip", DisplayValues(call, tMethod.Name).Where(v =>
+                !protectedRanges.Any(r => r.Start > call.Start && r.Start <= v.Node.Start && v.Node.End <= r.End)));
+        }
+
         foreach (var assignment in displayAssignments)
         {
             activeFunction = assignment.Function;
@@ -724,18 +994,55 @@ public static partial class JavaScriptUi
             activeFunction = function;
             if (IsProtected(node)) continue;
             // 只处理 ContextScopeItem 的系统斜杠命令说明，不改模型指令或自定义技能正文。
-            if (!desktop && node is NewExpression commandItem && commandItem.Arguments.Count >= 4 &&
+            if (!desktop && node is NewExpression commandItem && commandItem.Arguments.Count >= 3 &&
                 commandItem.Arguments[0] is CallExpression scopeCall && scopeCall.Arguments.Count >= 2 &&
                 scopeCall.Arguments[0] is MemberExpression { Property: Identifier { Name: "ContextScopeItemSchema" } } &&
                 scopeCall.Arguments[1] is ObjectExpression scopeObject &&
                 scopeObject.Properties.OfType<ObjectProperty>().FirstOrDefault(p => PropertyName(p) == "scopeItem")?.Value is ObjectExpression scopeItem &&
                 scopeItem.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "case" && p.Value is StringLiteral { Value: "slashCommand" }) &&
                 scopeItem.Properties.OfType<ObjectProperty>().FirstOrDefault(p => PropertyName(p) == "value")?.Value is ObjectExpression scopeValue &&
-                scopeValue.Properties.OfType<ObjectProperty>().FirstOrDefault(p => PropertyName(p) == "info")?.Value is MemberExpression { Computed: false, Object: Identifier owner, Property: Identifier { Name: "info" } } &&
-                commandItem.Arguments[3] is MemberExpression { Computed: false, Object: Identifier descriptionOwner, Property: Identifier { Name: "description" } } description &&
-                owner.Name == descriptionOwner.Name)
-                FinishGroup("ui/system-command", ServiceDisplay.Sources(ServiceDisplay.CommandDescription).Select(source =>
-                    new UiText("", "", file, description.Start, description.End, source, "system-command", ServiceDisplay.CommandDescription, [])).ToList());
+                scopeValue.Properties.OfType<ObjectProperty>().FirstOrDefault(p => PropertyName(p) == "info")?.Value is MemberExpression { Computed: false, Object: Identifier owner, Property: Identifier { Name: "info" } })
+            {
+                bool IsCommandDescription(Node? candidate, out MemberExpression member)
+                {
+                    if (candidate is MemberExpression { Computed: false, Object: Identifier dOwner, Property: Identifier { Name: "description" } } m &&
+                        dOwner.Name == owner.Name)
+                    {
+                        member = m;
+                        return true;
+                    }
+                    member = null!;
+                    return false;
+                }
+                void EmitSystemCommand(MemberExpression member)
+                {
+                    if (!seen.Add(member.Start)) return;
+                    FinishGroup("ui/system-command", ServiceDisplay.Sources(ServiceDisplay.CommandDescription).Select(source =>
+                        new UiText("", "", file, member.Start, member.End, source, "system-command", ServiceDisplay.CommandDescription, [])).ToList());
+                }
+                foreach (var arg in commandItem.Arguments.Skip(2).Take(2))
+                    if (IsCommandDescription(arg, out var d)) EmitSystemCommand(d);
+                if (commandItem.Arguments.Count >= 5)
+                {
+                    IEnumerable<ObjectExpression> UnwrapObjects(Node? expr)
+                    {
+                        switch (expr)
+                        {
+                            case ObjectExpression obj: yield return obj; break;
+                            case ConditionalExpression cond:
+                                foreach (var o in UnwrapObjects(cond.Consequent)) yield return o;
+                                foreach (var o in UnwrapObjects(cond.Alternate)) yield return o;
+                                break;
+                        }
+                    }
+                    foreach (var trailingObj in UnwrapObjects(commandItem.Arguments[^1]))
+                        if (trailingObj.Properties.OfType<ObjectProperty>().FirstOrDefault(p => PropertyName(p) == "description")?.Value is { } propVal)
+                        {
+                            if (IsCommandDescription(propVal, out var direct)) EmitSystemCommand(direct);
+                            else if (propVal is LogicalExpression logical && IsCommandDescription(logical.Left, out var left)) EmitSystemCommand(left);
+                        }
+                }
+            }
             if (!desktop && node is ObjectExpression configuration)
             {
                 var properties = configuration.Properties.OfType<ObjectProperty>().ToArray();
@@ -796,6 +1103,11 @@ public static partial class JavaScriptUi
             {
                 Expression callee = call.Callee;
                 if (callee is SequenceExpression sequence) callee = sequence.Expressions[^1];
+                if (!desktop && callee is Identifier hId && Owner(function, hId.Name) is { } hScope &&
+                    localRenderHelpers.TryGetValue((hScope, hId.Name), out var paramRoles))
+                    Group(call, "ui/helper-call", paramRoles.OrderBy(kv => kv.Key)
+                        .Where(kv => kv.Key < call.Arguments.Count && call.Arguments[kv.Key] is not SpreadElement)
+                        .Select(kv => ((Node)call.Arguments[kv.Key], kv.Value)));
                 if (callee is MemberExpression { Property: Identifier renderMethod } &&
                     renderMethod.Name is "createElement" or "jsx" or "jsxs" or "jsxDEV" && call.Arguments.Count >= 2)
                 {
@@ -808,33 +1120,80 @@ public static partial class JavaScriptUi
                         Group(call, "ui/" + tag, values);
                     }
                 }
-                if (desktop && callee is MemberExpression { Property: Identifier method })
+                if (desktop)
                 {
-                    if (method.Name is "showMessageBox" or "showMessageBoxSync")
+                    ObjectExpression? ResolveObject(Node? arg) => arg switch
                     {
-                        foreach (var argument in call.Arguments)
+                        ObjectExpression obj => obj,
+                        Identifier variable when declarations.TryGetValue((function, variable.Name), out var resolved) && resolved is ObjectExpression resolvedObj => resolvedObj,
+                        _ => null
+                    };
+                    void CollectMenuTemplate(Node? target)
+                    {
+                        ArrayExpression? array = target switch
                         {
-                            Node? options = argument;
-                            Expression? resolved = null;
-                            if (argument is Identifier variable) declarations.TryGetValue((function, variable.Name), out resolved);
-                            options = resolved ?? options;
-                            if (options is ObjectExpression obj)
-                                Group(obj, "dialog", obj.Properties.OfType<ObjectProperty>()
-                                    .Where(p => TextProperties.Contains(PropertyName(p)) || PropertyName(p) == "buttons")
-                                    .Select(p => ((Node)p.Value, PropertyName(p))));
+                            ArrayExpression a => a,
+                            Identifier variable when declarations.TryGetValue((function, variable.Name), out var resolved) && resolved is ArrayExpression resolvedArray => resolvedArray,
+                            _ => null
+                        };
+                        if (array is null) return;
+                        foreach (var item in array.Elements.OfType<ObjectExpression>())
+                        {
+                            var menuProps = item.Properties.OfType<ObjectProperty>().ToArray();
+                            Group(item, "menu", menuProps.Where(p => PropertyName(p) is "label" or "sublabel").Select(p => ((Node)p.Value, PropertyName(p))));
+                            if (menuProps.FirstOrDefault(p => PropertyName(p) == "submenu")?.Value is { } submenu) CollectMenuTemplate(submenu);
                         }
                     }
-                    else if (method.Name == "showErrorBox")
-                        Group(call, "dialog/error", call.Arguments.Select(a => ((Node)a, "message")));
-                    else if (method.Name == "setToolTip" && file.EndsWith("tray.js", StringComparison.Ordinal))
-                        Group(call, "tray", call.Arguments.Select(a => ((Node)a, "tooltip")));
+                    var callName = callee switch
+                    {
+                        Identifier fnId => fnId.Name,
+                        MemberExpression { Property: Identifier mId } => mId.Name,
+                        _ => null
+                    };
+                    if (callName == "createTray" && call.Arguments.Count >= 1)
+                        CollectMenuTemplate(call.Arguments[0]);
+                    else if (callee is MemberExpression { Property: Identifier method })
+                    {
+                        if (method.Name == "buildFromTemplate" && call.Arguments.Count >= 1 &&
+                            !file.EndsWith("menu.js", StringComparison.Ordinal) && !file.EndsWith("tray.js", StringComparison.Ordinal))
+                            CollectMenuTemplate(call.Arguments[0]);
+                        else if (method.Name is "showMessageBox" or "showMessageBoxSync" or "showOpenDialog" or "showOpenDialogSync")
+                        {
+                            foreach (var argument in call.Arguments)
+                                if (ResolveObject(argument) is { } obj)
+                                    Group(obj, "dialog", obj.Properties.OfType<ObjectProperty>()
+                                        .Where(p => TextProperties.Contains(PropertyName(p)) || PropertyName(p) == "buttons")
+                                        .Select(p => ((Node)p.Value, PropertyName(p))));
+                        }
+                        else if (method.Name == "showSheet" && call.Arguments.Count >= 2 && ResolveObject(call.Arguments[1]) is { } sheetObj)
+                            Group(sheetObj, "dialog", sheetObj.Properties.OfType<ObjectProperty>()
+                                .Where(p => PropertyName(p) is "title" or "message" or "detail")
+                                .Select(p => ((Node)p.Value, PropertyName(p))));
+                        else if (method.Name == "reportError" && call.Arguments.Count >= 3 && call.Arguments[2] is StringLiteral errTitle)
+                            Group(call, "dialog", [(errTitle, "title")]);
+                        else if (method.Name == "showErrorBox")
+                            Group(call, "dialog/error", call.Arguments.Select(a => ((Node)a, "message")));
+                        else if (method.Name == "setToolTip" && file.EndsWith("tray.js", StringComparison.Ordinal))
+                            Group(call, "tray", call.Arguments.Select(a => ((Node)a, "tooltip")));
+                    }
                 }
             }
-            // 菜单和托盘模板的 label 是 Electron 显示槽，role、id、accelerator 等身份字段不进入提取。
+            if (desktop && file.EndsWith("updater.js", StringComparison.Ordinal) &&
+                node is AssignmentExpression { Operator: Operator.Assignment, Left: MemberExpression { Object: Identifier { Name: "MenuUpdateStep" } }, Right: StringLiteral stepLabel })
+                Group(node, "menu", [(stepLabel, "label")]);
+            if (desktop && file.EndsWith("tray.js", StringComparison.Ordinal) &&
+                node is AssignmentExpression { Operator: Operator.Assignment, Left: MemberExpression { Computed: false, Property: Identifier { Name: "label" } } } trayAssign &&
+                MatchTrayAgentCount(trayAssign.Right) is { } countExpr && seen.Add(trayAssign.Right.Start))
+                FinishGroup("tray",
+                [
+                    new("", "", file, trayAssign.Right.Start, trayAssign.Right.End, "No agents running", "tray-agent-count", "label", []),
+                    new("", "", file, trayAssign.Right.Start, trayAssign.Right.End, "⟪AGC0⟫ agents running", "tray-agent-count", "label", [new(countExpr.Start, countExpr.End)])
+                ]);
+            // 菜单和托盘模板的 label/sublabel 是 Electron 显示槽，role、id、accelerator 等身份字段不进入提取。
             if (desktop && (file.EndsWith("menu.js", StringComparison.Ordinal) || file.EndsWith("tray.js", StringComparison.Ordinal)) &&
                 node is ObjectExpression menu)
-                Group(menu, "menu", menu.Properties.OfType<ObjectProperty>().Where(p => PropertyName(p) == "label")
-                    .Select(p => ((Node)p.Value, "label")));
+                Group(menu, "menu", menu.Properties.OfType<ObjectProperty>().Where(p => PropertyName(p) is "label" or "sublabel")
+                    .Select(p => ((Node)p.Value, PropertyName(p))));
         }
         return groups;
     }
@@ -852,17 +1211,25 @@ public static partial class JavaScriptUi
         }
     }
 
+    private static bool IsPortalTooltip(CallExpression call, ObjectExpression props) =>
+        call.Arguments.Count >= 2 && call.Arguments[0] is Identifier &&
+        props.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "id") &&
+        props.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "place" && p.Value is StringLiteral pl && IsPortalPlace(pl.Value));
+
     private static bool IsFunction(Node node) => node is FunctionDeclaration or FunctionExpression or ArrowFunctionExpression;
     private static List<(Node Node, string Role)> DisplayValues(CallExpression call, string method)
     {
         var values = new List<(Node, string)>();
         if (call.Arguments[1] is ObjectExpression props)
+        {
+            var isPortalTooltip = IsPortalTooltip(call, props);
             foreach (var property in props.Properties.OfType<ObjectProperty>())
             {
                 var key = PropertyName(property);
                 if (key == "text" && props.Properties.OfType<ObjectProperty>().Any(other => PropertyName(other) == "label")) continue;
-                if (TextProperties.Contains(key) || key == "children") values.Add((property.Value, key));
+                if (TextProperties.Contains(key) || key == "children" || isPortalTooltip && key == "content") values.Add((property.Value, key));
             }
+        }
         if (method == "createElement") for (var i = 2; i < call.Arguments.Count; i++) values.Add((call.Arguments[i], "children"));
         return values;
     }
@@ -878,18 +1245,32 @@ public static partial class JavaScriptUi
         foreach (var child in children) foreach (var name in BindingNames(child)) yield return name;
     }
 
-    private static bool LooksLikeText(string text)
+    private static bool IsSafeSingleWord(string word) => word is
+        "settings" or "cancel" or "close" or "save" or "apply" or "remove" or "open" or "copy" or "view" or
+        "edit" or "search" or "enabled" or "disabled" or "running" or "stopped" or "yes" or "no" or "name" or "status" or
+        "size" or "created" or "actions" or "permissions" or "delete" or "start" or "stop" or "run" or "and" or "or" or
+        "project" or "projects" or "workspace" or "workspaces" or "resource" or "resources" or "folder" or "folders" or "later." or
+        "file" or "files" or "change" or "changes" or "line" or "lines" or "comment" or "comments" or
+        "insertion" or "insertions" or "deletion" or "deletions" or "result" or "results" or "question" or "questions" or
+        "subagent" or "subagents" or "more" or "more..." or "documentation" or "docs" or "panel" or
+        "automation" or "automations" or "unknown" or "(none)" or "(skipped)" or "menu)" or "yet" or
+        "item" or "items" or "call" or "calls" or "recording" or "recordings" or "task" or "tasks" or
+        "terminal" or "terminals" or "asks" or "rule" or "rules";
+
+    private static bool LooksLikeText(string text) => LooksLikeText(text, false);
+
+    private static bool LooksLikeText(string text, bool allowConnector)
     {
+        if (text == "A ") return true;
+        if (allowConnector && text.Trim() == "the" && text != "the") return true;
         if (string.IsNullOrWhiteSpace(text) || !English().IsMatch(text) || text.Contains('\0')) return false;
         var s = Slots().Replace(text, "").Trim();
         if (s.StartsWith("http", StringComparison.OrdinalIgnoreCase) || s.StartsWith('/') || s.Contains(":\\", StringComparison.Ordinal) ||
             s.StartsWith("$ ", StringComparison.Ordinal) || s.StartsWith("#!/", StringComparison.Ordinal)) return false;
         if (Command().IsMatch(s)) return false;
         if (s.Contains(' ') || s.Any(char.IsUpper)) return true;
-        return s is "settings" or "cancel" or "close" or "save" or "apply" or "remove" or "open" or "copy" or "view" or
-            "edit" or "search" or "enabled" or "disabled" or "running" or "stopped" or "yes" or "no" or "name" or "status" or
-            "size" or "created" or "actions" or "permissions" or "delete" or "start" or "stop" or "run" or "and" or "or" or
-            "project" or "projects" or "workspace" or "workspaces" or "resource" or "resources" or "folder" or "folders" or "later.";
+        if (IsSafeSingleWord(s) || s.EndsWith(':') && s.Length > 1 && IsSafeSingleWord(s[..^1])) return true;
+        return allowConnector && s is "in" or "with" or "for" or "at" or "on" or "an" or "around" or "to";
     }
 
     public static string Apply(string code, IReadOnlyList<UiText> texts, IReadOnlyDictionary<string, string> translations)
@@ -933,6 +1314,21 @@ public static partial class JavaScriptUi
             {
                 return ",label:" + Quote(translations[text.Key]);
             }
+            if (text.Shape == "tray-agent-count")
+            {
+                var group = texts.Where(t => t.Start == text.Start && t.End == text.End && t.Shape == "tray-agent-count" && translations.ContainsKey(t.Key))
+                    .DistinctBy(t => t.Source).ToArray();
+                var zero = group.FirstOrDefault(t => t.Slots.Count == 0);
+                var many = group.FirstOrDefault(t => t.Slots.Count == 1);
+                if (zero is null || many is null) return code[text.Start..text.End];
+                var manyTranslation = translations[many.Key];
+                var match = Slots().Match(manyTranslation);
+                if (!match.Success || match.Groups[1].Value != "0" || Slots().Matches(manyTranslation).Count != 1)
+                    throw new InvalidDataException($"动态内容的数量或顺序发生变化：{many.File}");
+                var manyTemplate = $"`{EscapeTemplate(manyTranslation[..match.Index])}${{count}}{EscapeTemplate(manyTranslation[(match.Index + match.Length)..])}`";
+                var slot = many.Slots[0];
+                return $"((count)=>count>0?{manyTemplate}:{Quote(translations[zero.Key])})({Range(slot.Start, slot.End)})";
+            }
             if (text.Shape is "lookup" or "children")
             {
                 var choices = texts.Where(t => t.Start == text.Start && t.End == text.End && t.Shape == text.Shape && translations.ContainsKey(t.Key))
@@ -947,7 +1343,13 @@ public static partial class JavaScriptUi
             // 保持表达式原有求值顺序，避免翻译改变函数调用等副作用。
             if (!expected.SequenceEqual(Slots().Matches(translation).Select(m => m.Value)))
                 throw new InvalidDataException($"动态内容的数量或顺序发生变化：{text.File}");
-            if (text.Shape == "string") return Quote(translation);
+            if (text.Shape == "string")
+            {
+                if (text.PluralSuffix is { } plural)
+                    return Quote(translation) + code[plural.TextEnd..plural.SuffixStart] +
+                           $"((suffix)=>suffix==='s'?'':suffix)({Range(plural.SuffixStart, plural.SuffixEnd)})";
+                return Quote(translation);
+            }
             var output = new StringBuilder("`"); var position = 0;
             foreach (Match slot in Slots().Matches(translation))
             {
@@ -955,7 +1357,7 @@ public static partial class JavaScriptUi
                 var expression = text.Slots[int.Parse(slot.Groups[1].Value, System.Globalization.CultureInfo.InvariantCulture)];
                 var value = Range(expression.Start, expression.End);
                 // 英文名词的单复数词尾不进入中文；仍求值一次，保留条件及其副作用。
-                if (expression.IsPluralSuffix) value = $"((suffix)=>suffix==='s'?'':suffix)({value})";
+                if (expression.IsPluralSuffix) value = $"((suffix)=>suffix==='s'||suffix==='was'||suffix==='were'?'':suffix)({value})";
                 output.Append("${").Append(value).Append('}');
                 position = slot.Index + slot.Length;
             }

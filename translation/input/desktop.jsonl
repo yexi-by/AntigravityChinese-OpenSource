@@ -17,3 +17,21 @@
 {"id":"\u754C\u9762-03569","kind":"dialog","units":[{"id":"text-1","text":"Stop Server"},{"id":"text-2","text":"Cancel"},{"id":"text-3","text":"Stop SSH server"},{"id":"text-4","text":"Stop the Antigravity server on \u27EAAGC0\u27EB?"},{"id":"text-5","text":"Agents running on this host will stop and its window will close. "},{"id":"text-6","text":"The server starts again the next time you connect."}]}
 {"id":"\u754C\u9762-03570","kind":"dialog","units":[{"id":"text-1","text":"Sign In"},{"id":"text-2","text":"Cancel"},{"id":"text-3","text":"Sign in"},{"id":"text-4","text":"Sign in to your organization for \u27EAAGC0\u27EB?"},{"id":"text-5","text":"Continue only if you just chose to sign in with your organization "},{"id":"text-6","text":"in this window. \u27EAAGC0\u27EB will get access to your "},{"id":"text-7","text":"organization\u0027s Google Cloud account.\n"},{"id":"text-8","text":"Workforce pool: \u27EAAGC0\u27EB  Provider: \u27EAAGC1\u27EB"},{"id":"text-9","text":"Identity provider: \u27EAAGC0\u27EB"}]}
 {"id":"\u754C\u9762-03571","kind":"dialog","units":[{"id":"text-1","text":"SSH: \u27EAAGC0\u27EB"},{"id":"text-2","text":"Touch your security key"},{"id":"text-3","text":"Yes"},{"id":"text-4","text":"No"},{"id":"text-5","text":"Cancel"}]}
+{"id":"\u754C\u9762-03654","kind":"dialog","units":[{"id":"text-1","text":"Open workspace"}]}
+{"id":"\u754C\u9762-03655","kind":"dialog","units":[{"id":"text-1","text":"Open workspaces"}]}
+{"id":"\u754C\u9762-03656","kind":"dialog","units":[{"id":"text-1","text":"Select Download Folder"}]}
+{"id":"\u754C\u9762-03657","kind":"menu","units":[{"id":"text-1","text":"No agents running"}]}
+{"id":"\u754C\u9762-03658","kind":"menu","units":[{"id":"text-1","text":"Open \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-03659","kind":"menu","units":[{"id":"text-1","text":"Quit"}]}
+{"id":"\u754C\u9762-03660","kind":"dialog","units":[{"id":"text-1","text":"Choose an SSH config file"}]}
+{"id":"\u754C\u9762-03661","kind":"dialog","units":[{"id":"text-1","text":"SSH connection failed"}]}
+{"id":"\u754C\u9762-03662","kind":"dialog","units":[{"id":"text-1","text":"Sign-in failed"}]}
+{"id":"\u754C\u9762-03663","kind":"dialog","units":[{"id":"text-1","text":"Could not stop the SSH server"}]}
+{"id":"\u754C\u9762-03664","kind":"dialog","units":[{"id":"text-1","text":"Stop SSH server"},{"id":"text-2","text":"Not connected to \u27EAAGC0\u27EB"},{"id":"text-3","text":"Reconnect first, then stop its server."}]}
+{"id":"\u754C\u9762-03665","kind":"dialog","units":[{"id":"text-1","text":"SSH: \u27EAAGC0\u27EB"},{"id":"text-2","text":"\u27EAAGC0\u27EB asks:"},{"id":"text-3","text":"Touch your security key"},{"id":"text-4","text":"Yes"},{"id":"text-5","text":"No"},{"id":"text-6","text":"Cancel"}]}
+{"id":"\u754C\u9762-03666","kind":"tray","units":[{"id":"text-1","text":"No agents running"},{"id":"text-2","text":"\u27EAAGC0\u27EB agents running"}]}
+{"id":"\u754C\u9762-03667","kind":"menu","units":[{"id":"text-1","text":"Check for Updates"}]}
+{"id":"\u754C\u9762-03668","kind":"menu","units":[{"id":"text-1","text":"Checking for Updates..."}]}
+{"id":"\u754C\u9762-03669","kind":"menu","units":[{"id":"text-1","text":"Downloading Update..."}]}
+{"id":"\u754C\u9762-03670","kind":"menu","units":[{"id":"text-1","text":"Restart to Update"}]}
+{"id":"\u754C\u9762-03671","kind":"menu","units":[{"id":"text-1","text":"Connection info\u2026"}]}

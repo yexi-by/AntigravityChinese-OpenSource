@@ -219,7 +219,7 @@
     {
       "Key": "c4336cb563d286beea6d2422024078d8b1ada3180dbc0ede7218364ec86b1e60",
       "Source": "Draft · not yet sent for review",
-      "Translation": "草稿 · 尚未提交审查",
+      "Translation": "草稿 · 尚未提交审核",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "lookup"
@@ -435,7 +435,7 @@
     {
       "Key": "0203b13ef72a155ab0c645a59817c49a61d4687d599565fef3c72fc728bd8160",
       "Source": "See plans",
-      "Translation": "查看方案",
+      "Translation": "查看套餐",
       "Kind": "ui/a",
       "Role": "children",
       "Shape": "string"
@@ -875,7 +875,7 @@
     {
       "Key": "28bb69d3b8647fef48423efa97715d44221aa3ff8c2f0d319d7ee2c7a2748215",
       "Source": "No changes to review",
-      "Translation": "没有可审查的更改",
+      "Translation": "没有可审核的更改",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -939,7 +939,7 @@
     {
       "Key": "77d91147e880a1b31856901b3841278c078ad7fb882fca111274444f18be82c0",
       "Source": "Intended primarily for previewing local development servers (e.g.,",
-      "Translation": "主要用于预览本地开发服务器（例如",
+      "Translation": "主要用于预览本地开发服务器 (例如",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -1315,7 +1315,7 @@
     {
       "Key": "dccb02ad9f6c61d48549cb22f40d098c575752b6891731fb782e742a71d15846",
       "Source": "You can opt-out temporarily using ",
-      "Translation": "您可以暂时退出，操作路径： ",
+      "Translation": "您可以暂时退出，操作路径：",
       "Kind": "ui/li",
       "Role": "children",
       "Shape": "string"
@@ -1787,7 +1787,7 @@
     {
       "Key": "15d52cc1aa1dbc01deb83684c60c02418ac9833aab768968489315e44445d4f9",
       "Source": "The ⟪AGC0⟫ MCP server requires configuration parameters before it can be started.",
-      "Translation": "⟪AGC0⟫ MCP server 需要先配置参数才能启动。",
+      "Translation": "⟪AGC0⟫ MCP 服务器需要先配置参数才能启动。",
       "Kind": "ui/component",
       "Role": "description",
       "Shape": "template"
@@ -2267,7 +2267,7 @@
     {
       "Key": "7104a9bbd1fabb5e36a6700613558bd0ed8dee09d1915f11bf0a842b5ba472f0",
       "Source": "? This will remove it from your MCP configuration.",
-      "Translation": "？这会将其从你的 MCP 配置中移除。",
+      "Translation": "？这会将其从您的 MCP 配置中移除。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -2307,7 +2307,7 @@
     {
       "Key": "9c7b958e4f42875e2acc1ddab121d6f2c2c479f1cd83d84dcacec9152ba81770",
       "Source": "? This removes it from your config directory.",
-      "Translation": "？这会将其从你的配置目录中移除。",
+      "Translation": "？这会将其从您的配置目录中移除。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -2315,7 +2315,7 @@
     {
       "Key": "bb07ed72c0aaa982c7d1e1804c2db7b98611a5ff7d48e50637550a4fa883d59f",
       "Source": "This skill came from the marketplace, so you can add it again whenever you need it.",
-      "Translation": "此技能来自市场，因此你随时可以在需要时重新添加。",
+      "Translation": "此技能来自市场，因此您随时可以在需要时重新添加。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -2323,7 +2323,7 @@
     {
       "Key": "5926ff956b7c8bd6dec180dcad0245f6b34af10a48d49b3e14976466f1914c21",
       "Source": " Copy the folder elsewhere first if you might want it back.",
-      "Translation": " 如果你以后可能还需要它，请先将该文件夹复制到别处。",
+      "Translation": " 如果您以后可能还需要它，请先将该文件夹复制到别处。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -2403,7 +2403,7 @@
     {
       "Key": "611b9bfdf1f58d10750884e8b4db2ee65ea3ea23a5de4cda5b238382fc650d4f",
       "Source": "Plugin: ",
-      "Translation": "插件： ",
+      "Translation": "插件：",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -2459,7 +2459,7 @@
     {
       "Key": "b58285a4384a87f6d24b589587970a4894a3ff12b6a484a75e0549cb7f71b0af",
       "Source": "Error: ",
-      "Translation": "错误： ",
+      "Translation": "错误：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -2867,7 +2867,7 @@
     {
       "Key": "d1fdb042d130261d752cd93a9eba92efcef294828e12f080f2f24df795256c14",
       "Source": "Services this plugin connects to on your behalf. Credentials stay on this machine and are only sent to the domains listed.",
-      "Translation": "此插件代表你连接的服务。凭据保留在此设备上，且仅会发送至列出的域名。",
+      "Translation": "此插件代表您连接的服务。凭据保留在此设备上，且仅会发送至列出的域名。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -2883,7 +2883,7 @@
     {
       "Key": "80fb75a56f13e678ab75e14c8765c7cefd1eb0b50fde562939a7c3e9d2ad11c0",
       "Source": "Domains: ",
-      "Translation": "域名： ",
+      "Translation": "域名：",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -2899,7 +2899,7 @@
     {
       "Key": "db87270e424b62f0b35f4a51e5c8efaa7d4c33558199ff32e75a4169bbeb8a6d",
       "Source": "Waiting for you to finish signing in…",
-      "Translation": "等待你完成登录…",
+      "Translation": "等待您完成登录…",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -3203,7 +3203,7 @@
     {
       "Key": "d53046b60f76aca8098a574a44ed6a7092fe74c47d388db5a606c4e836b4899c",
       "Source": "No plugins match your search.",
-      "Translation": "未找到与你的搜索匹配的插件。",
+      "Translation": "未找到与您的搜索匹配的插件。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -3443,7 +3443,7 @@
     {
       "Key": "f09d618842b1cb2edb26a1fedc08f8e10f0bddf5ac9a4c4bdce4dfb6d9720810",
       "Source": "Show ⟪AGC0⟫ breakdown⟪AGC1⟫",
-      "Translation": "显示 ⟪AGC0⟫ 明细⟪AGC1⟫",
+      "Translation": "显示 ⟪AGC0⟫ 项明细⟪AGC1⟫",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "template"
@@ -3539,7 +3539,7 @@
     {
       "Key": "2a1c6ac5eddbd2776f2d85530b780c25390091a64820574fcf2ea0f683103b6e",
       "Source": "Payload: ",
-      "Translation": "载荷： ",
+      "Translation": "载荷：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -3635,7 +3635,7 @@
     {
       "Key": "8991ca57d88399cdf5950cbae24184b155456d926f532035f21f59d7ab14252b",
       "Source": " directly in the side pane.",
-      "Translation": " ，可直接在侧边窗格中操作。",
+      "Translation": "，可直接在侧边窗格中操作。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -3971,7 +3971,7 @@
     {
       "Key": "10d49d082a83e29fbd83cc5434e991cd675fbd2c3f7ef3e4d7f5272a0cc4c09a",
       "Source": "This server needs you to sign in before the agent can use its tools.",
-      "Translation": "此服务器需要你先登录，智能体才能使用其工具。",
+      "Translation": "此服务器需要您先登录，智能体才能使用其工具。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -3979,7 +3979,7 @@
     {
       "Key": "4ffc66bd18c8841d0343efb821ee6afcdbdb34a221b51e0eb8367d149118fefa",
       "Source": "These servers need you to sign in before the agent can use their tools.",
-      "Translation": "这些服务器需要你先登录，智能体才能使用它们的工具。",
+      "Translation": "这些服务器需要您先登录，智能体才能使用它们的工具。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -4195,7 +4195,7 @@
     {
       "Key": "989e262213c25e882097d330d099748a8fef3d5cf90ab1f0392d3f7e0172f4a4",
       "Source": "Creating projects for your conversations",
-      "Translation": "正在为你的对话创建项目",
+      "Translation": "正在为您的对话创建项目",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -4227,7 +4227,7 @@
     {
       "Key": "d26fad34bb3bfc9630e1897ba1d905a1c3b8b1f1fa892e46402caa245b5fcbf5",
       "Source": " from AI Studio",
-      "Translation": " 来自 AI Studio",
+      "Translation": "（来自 AI Studio）",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -4299,7 +4299,7 @@
     {
       "Key": "4cf9906b74c602743df64fd0fdf65387ffc80f28379afac4d11f0c530f8cf71f",
       "Source": "Saves to your global ~/.gemini/antigravity/agents/ directory. This script will be available across all your workspaces.",
-      "Translation": "保存到全局 ~/.gemini/antigravity/agents/ 目录。该脚本将在你的所有工作区中可用。",
+      "Translation": "保存到全局 ~/.gemini/antigravity/agents/ 目录。该脚本将在您的所有工作区中可用。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -4323,7 +4323,7 @@
     {
       "Key": "2edbb08840ea78efeb2393566dde229f9a225a5add1e9675fc7abab3236e0eae",
       "Source": "Select a workspace to save agent scripts to your workspace.",
-      "Translation": "选择一个工作区以将智能体脚本保存至你的工作区。",
+      "Translation": "选择一个工作区以将智能体脚本保存至您的工作区。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -4387,7 +4387,7 @@
     {
       "Key": "b5d4bf12fe3a5493b626c7c0faae91ad44cc681c3053acf02239fc9da2d6a100",
       "Source": "Create a new agent script command or update an existing one. Upon creation, you may select this agent script using the \"+\" button. When selected, agent messages are routed to the SDK executable.",
-      "Translation": "创建新的智能体脚本命令或更新现有命令。创建后，你可以使用“+”按钮选择此智能体脚本。选中后，智能体消息将被路由到该 SDK 可执行文件。",
+      "Translation": "创建新的智能体脚本命令或更新现有命令。创建后，您可以使用“+”按钮选择此智能体脚本。选中后，智能体消息将被路由到该 SDK 可执行文件。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -4419,7 +4419,7 @@
     {
       "Key": "51e7c470b43d3e29b0c920fe50d6644136e3c59672b75330201a3f38e9d62bc8",
       "Source": "Non-google3 python agent scripts are a work in progress. Eventually you can expect to use the SDK pip package in a main.py to run your agent. Please reach out if you have a specific need to run your agent script outside of Cloudtop & Google3.",
-      "Translation": "非 google3 的 Python 智能体脚本正在开发中。未来你可以在 main.py 中使用 SDK pip 包来运行你的智能体。如果你有在 Cloudtop 和 Google3 之外运行智能体脚本的特定需求，请与我们联系。",
+      "Translation": "非 google3 的 Python 智能体脚本正在开发中。未来您可以在 main.py 中使用 SDK pip 包来运行您的智能体。如果您有在 Cloudtop 和 Google3 之外运行智能体脚本的特定需求，请与我们联系。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -4715,7 +4715,7 @@
     {
       "Key": "75495b0389bceb27cd4d9e6441a9b0e20e08bc9d71a56e26d851b9f613c5728c",
       "Source": "Invalid embed: ",
-      "Translation": "无效的嵌入内容： ",
+      "Translation": "无效的嵌入内容：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -4795,7 +4795,7 @@
     {
       "Key": "c914a83d08ae7deed50493fa485348f168374d5ccc066427ab6de8afb7bd855d",
       "Source": "Details: ",
-      "Translation": "详细信息： ",
+      "Translation": "详细信息：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -4803,7 +4803,7 @@
     {
       "Key": "f21296f649a452462e3766e17bc1476a98aca241f055a9ed6b66913b5e988316",
       "Source": "Error ID: ",
-      "Translation": "错误 ID： ",
+      "Translation": "错误 ID：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -5067,7 +5067,7 @@
     {
       "Key": "ebe3c071a7b7481ceffdfc18090b71ecea45a54bd0bfea68b74752ffed757dc2",
       "Source": "Captured DOM tree for ",
-      "Translation": "已捕获 DOM 树： ",
+      "Translation": "已捕获 DOM 树：",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -5451,7 +5451,7 @@
     {
       "Key": "2adff7398c0126d2de57305ca39c1ddbf60fdc137a1d05f1ecd8d622d840d630",
       "Source": "Failed target: ",
-      "Translation": "失败的目标： ",
+      "Translation": "失败的目标：",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -5563,7 +5563,7 @@
     {
       "Key": "2cb3ecc82c534d5a880de2d459c34f2b33c67d5103624e2490e216b64af98e67",
       "Source": " in the top menu.",
-      "Translation": " 。",
+      "Translation": "。",
       "Kind": "ui/li",
       "Role": "children",
       "Shape": "string"
@@ -5579,7 +5579,7 @@
     {
       "Key": "5b2b13973204d87c9bb597c6745437030376dd0d143cf0f5c94ff54ab0bb1985",
       "Source": "Select the latest snapshot from the ",
-      "Translation": "从以下位置选择最新的快照： ",
+      "Translation": "从以下位置选择最新的快照：",
       "Kind": "ui/li",
       "Role": "children",
       "Shape": "string"
@@ -5691,7 +5691,7 @@
     {
       "Key": "be0155d4077fe721a2d188f4e6f4a32dc5f5498f53a992a67fe0eb94e78e4110",
       "Source": "Working directory: ",
-      "Translation": "工作目录： ",
+      "Translation": "工作目录：",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -5699,7 +5699,7 @@
     {
       "Key": "236f851ba999b27897ae762360937aafa4fc848a7b9225e945143ec6b53c49f6",
       "Source": " above hidden)",
-      "Translation": " 项已隐藏)",
+      "Translation": "已隐藏)",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -5755,7 +5755,7 @@
     {
       "Key": "c50bae31c6c6bf4159cb79f843e5667ff92a1589f3b3d2bf2f297d7f2154736f",
       "Source": "Could not load the app view: ",
-      "Translation": "无法加载应用视图： ",
+      "Translation": "无法加载应用视图：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -5939,7 +5939,7 @@
     {
       "Key": "defeb9059e8c35495521d4194fc612fa41c3b5a300568ea6ac33a07ee20c173f",
       "Source": "Page title: ",
-      "Translation": "页面标题： ",
+      "Translation": "页面标题：",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -5955,7 +5955,7 @@
     {
       "Key": "93b4fa6fe5cbc622d39821074265e8774c3a382da7511f64518bfb6b475871d8",
       "Source": "In this case, ",
-      "Translation": "在此情况下， ",
+      "Translation": "在此情况下，",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -5971,7 +5971,7 @@
     {
       "Key": "a35b7a51024e272fd11ce8bc1f666fb97e346665babb608c5a60ea4425ee8df8",
       "Source": "Section header: ",
-      "Translation": "小节标题： ",
+      "Translation": "小节标题：",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -5987,7 +5987,7 @@
     {
       "Key": "4e98236eaeb410c280a77bf1b7e877e2301b9b943dc21ccd344592cf5e467533",
       "Source": "Read resource: ",
-      "Translation": "读取资源： ",
+      "Translation": "读取资源：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -6027,7 +6027,7 @@
     {
       "Key": "d325c4c8492091ce5ca6116c8591961352210047ffe77207191ab810f664c590",
       "Source": "List resources: ",
-      "Translation": "列出资源： ",
+      "Translation": "列出资源：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -6067,7 +6067,7 @@
     {
       "Key": "c76f6002e3d4f55b77ddef5398b03714ea8ec18d9eb659e0c42fda80409e763d",
       "Source": " in Browser",
-      "Translation": " （在浏览器中）",
+      "Translation": "（在浏览器中）",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -6091,7 +6091,7 @@
     {
       "Key": "273fe564e0af9e029507630eaf813c79572c8cb5fb182f74766fa0230f522e5c",
       "Source": "Web search prioritized results from ",
-      "Translation": "网页搜索优先展示来自以下来源的结果： ",
+      "Translation": "网页搜索优先展示来自以下来源的结果：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -6347,7 +6347,7 @@
     {
       "Key": "cce19a7affa4952dc175107ce2793d9ff03aa2370b9e1f94f346d536dd664e40",
       "Source": "Working Directory: ",
-      "Translation": "工作目录： ",
+      "Translation": "工作目录：",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -6491,7 +6491,7 @@
     {
       "Key": "bc200d626430f8d4b59811204bd3509290296bb62854946b410bb085a63d8a01",
       "Source": "What did you like? Select any that apply (optional).",
-      "Translation": "你喜欢哪些方面？可多选（可选）。",
+      "Translation": "您喜欢哪些方面？可多选（可选）。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -6835,7 +6835,7 @@
     {
       "Key": "27d41a0f56785c5c24f5e03d77261879f926847f778d4e2b058525ac7d63b584",
       "Source": "Revert and redo turn, best of N:",
-      "Translation": "回滚并重做此轮（N 次选优）：",
+      "Translation": "回退并重做此轮（Best of N）：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -7155,7 +7155,7 @@
     {
       "Key": "98caa49ef9d55aecd5b6822301504ba70d640ae2fee7c964c51b63759b5dd1a8",
       "Source": "Agent ID: ",
-      "Translation": "智能体 ID： ",
+      "Translation": "智能体 ID：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -7371,7 +7371,7 @@
     {
       "Key": "e0fc01318d8f1f197f510eb903ada757ee8f6b6a16c2b8303a0298d6b7dbfd7c",
       "Source": " by allowing Google to collect and use my Interactions data, subject to the",
-      "Translation": " ，允许 Google 根据",
+      "Translation": "，允许 Google 根据",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -7451,7 +7451,7 @@
     {
       "Key": "ed5b78e68b87c152750d31f679dad99514af04671d7dfe0465f1ef31082e829d",
       "Source": "Review plans and walkthroughs",
-      "Translation": "审查计划与演练讲解",
+      "Translation": "审核计划与演练讲解",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -7651,7 +7651,7 @@
     {
       "Key": "9032e955accb66ea0dabdcc8b1a6af09e5d4034f0f4b5c447bdff5c09d2ef690",
       "Source": "Use this form if you cannot connect to Remote Control. If your instance is already connected and you are experiencing issues in the browser, report directly from the Remote Control web page so that relevant logs are included. Some helpful information includes:",
-      "Translation": "如果您无法连接到 Remote Control，请使用此表单。如果您的实例已连接但在浏览器中遇到问题，请直接在 Remote Control 网页中进行反馈，以便附带相关日志。建议提供以下信息：",
+      "Translation": "如果您无法连接到远程控制，请使用此表单。如果您的实例已连接但在浏览器中遇到问题，请直接在远程控制网页中进行反馈，以便附带相关日志。建议提供以下信息：",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -7715,7 +7715,7 @@
     {
       "Key": "af9aae9f9681784156fe37a8e5f5d3ad9c18c686a61373c312faa06c9379b363",
       "Source": "Remote Control Issue",
-      "Translation": "Remote Control 问题",
+      "Translation": "远程控制问题",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -8387,7 +8387,7 @@
     {
       "Key": "850f21d77a68b49ecab6ebe327308046b222323336f8b8550848dd3ed849b35e",
       "Source": "Sharing is a preview feature. It exports this conversation's history to your",
-      "Translation": "分享功能目前为预览版。它会将此对话历史记录导出到你的",
+      "Translation": "分享功能目前为预览版。它会将此对话历史记录导出到您的",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -8427,7 +8427,7 @@
     {
       "Key": "adf2bb621bae21b6e316851e0db03512f4e5094c77fe6b3c64c9c70ef755894d",
       "Source": "Shared conversations live in your x20 user directory, so readers need ",
-      "Translation": "分享的对话存放在你的 x20 用户目录中，因此读者需要该目录的 ",
+      "Translation": "分享的对话存放在您的 x20 用户目录中，因此读者需要该目录的 ",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -8731,7 +8731,7 @@
     {
       "Key": "2d6fa70456c175393957098b647482431e4465c43efeb000cb069a1154bb21cc",
       "Source": "Use this if your admin gave you a WIF config. Paste it below to sign in.",
-      "Translation": "如果管理员向你提供了 WIF 配置，请使用此选项。在下方粘贴即可登录。",
+      "Translation": "如果管理员向您提供了 WIF 配置，请使用此选项。在下方粘贴即可登录。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -8819,7 +8819,7 @@
     {
       "Key": "4c68472b98b670a678039e2a500d51d9803b155720be86dca6ce87fab48263f6",
       "Source": "There was an unexpected issue setting up your account.",
-      "Translation": "设置你的账号时出现意外问题。",
+      "Translation": "设置您的账号时出现意外问题。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -8843,7 +8843,7 @@
     {
       "Key": "3548f09f615eccd01e9989fa2ca14f66e0c4084f27aa8868238a31d8a0ee3729",
       "Source": "Please verify your account, then sign in again to continue. Learn more by visiting our",
-      "Translation": "请验证你的账号，然后重新登录以继续。了解更多信息，请访问我们的",
+      "Translation": "请验证您的账号，然后重新登录以继续。了解更多信息，请访问我们的",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -8891,7 +8891,7 @@
     {
       "Key": "ae374d1d0108df17baa4bd9a13bf537b9e11220ab4675918f8d3ffbcd69837ec",
       "Source": "Your Antigravity use will be associated with provided project.",
-      "Translation": "你对 Antigravity 的使用将关联至所提供的项目。",
+      "Translation": "您对 Antigravity 的使用将关联至所提供的项目。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -8939,7 +8939,7 @@
     {
       "Key": "4b5c41c9d31a4ec375146442d28391f84e7a7568ab8fd2fb94e03c6e66fb5e5d",
       "Source": "Verify that these licenses were provided by your administrator and that you trust the project ID before proceeding. Account activity and data may be logged by your organization.",
-      "Translation": "在继续之前，请确认这些许可证由你的管理员提供，且你信任该项目 ID。你的账号活动和数据可能会被你的组织记录。",
+      "Translation": "在继续之前，请确认这些许可证由您的管理员提供，且您信任该项目 ID。您的账号活动和数据可能会被您的组织记录。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -8963,7 +8963,7 @@
     {
       "Key": "aeeff738ed9971f010b81466553eb9a8c3983787f7395d4c07dea84bf3292520",
       "Source": "Your Antigravity use will be associated with provided project. Make sure you trust the project ID before proceeding. Account activity and data may be logged by your organization.",
-      "Translation": "你对 Antigravity 的使用将关联至所提供的项目。在继续之前，请确保你信任该项目 ID。你的账号活动和数据可能会被组织记录。",
+      "Translation": "您对 Antigravity 的使用将关联至所提供的项目。在继续之前，请确保您信任该项目 ID。您的账号活动和数据可能会被组织记录。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -8995,7 +8995,7 @@
     {
       "Key": "d58188903ee7678aab6edec69b644fca2cf81563cdafc628366027e1c3142043",
       "Source": "Verify that these licenses were provided by your administrator and that you trust the project ID before proceeding. Account activity and data may be logged by your organization.",
-      "Translation": "在继续之前，请确认这些许可证由你的管理员提供，且你信任该项目 ID。你的账号活动和数据可能会被你的组织记录。",
+      "Translation": "在继续之前，请确认这些许可证由您的管理员提供，且您信任该项目 ID。您的账号活动和数据可能会被您的组织记录。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -9011,7 +9011,7 @@
     {
       "Key": "a63c697c34b3787e21cb8ba32038ad44dcd1f672cef272bc720714318f4dcca6",
       "Source": "Location: ",
-      "Translation": "位置： ",
+      "Translation": "位置：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -9147,7 +9147,7 @@
     {
       "Key": "df8ef1e3245f3ccfac24285c21e8a14cc01d623c303160bc8466ec8d7b6e2738",
       "Source": "work with Google developer products. You can always change your choices in Settings.",
-      "Translation": "与 Google 开发者产品协同工作。你可以随时在“设置”中更改选择。",
+      "Translation": "与 Google 开发者产品协同工作。您可以随时在“设置”中更改选择。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -9227,7 +9227,7 @@
     {
       "Key": "60af653720b2d7f2b51ef1d203817caf0dbfe0d547176868492aa7a95190d63e",
       "Source": "Draft documents, emails, and notes that sound like you.",
-      "Translation": "起草符合你行文风格的文档、邮件与备忘录。",
+      "Translation": "起草符合您行文风格的文档、邮件与备忘录。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -9235,7 +9235,7 @@
     {
       "Key": "212c9e4678d2b6d143395c4f0d66ab9fee3dfe3c58827d08dd2526290af1468e",
       "Source": "What best describes you?",
-      "Translation": "哪项最符合你的情况？",
+      "Translation": "哪项最符合您的情况？",
       "Kind": "ui/h2",
       "Role": "children",
       "Shape": "string"
@@ -9243,7 +9243,7 @@
     {
       "Key": "663cca3a30918e48a3133274ad4215e2906ec2d7720ce60adbb1578572fce158",
       "Source": "We'll tailor the experience to you.",
-      "Translation": "我们将为你量身定制体验。",
+      "Translation": "我们将为您量身定制体验。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -9331,7 +9331,7 @@
     {
       "Key": "a161ea5199ce7f2c091afc4f0c4a4704b99b082cce0c8e8cbf06752611543aee",
       "Source": "Select your license",
-      "Translation": "选择你的许可证",
+      "Translation": "选择您的许可证",
       "Kind": "ui/component",
       "Role": "title",
       "Shape": "string"
@@ -9379,7 +9379,7 @@
     {
       "Key": "84ecaddeeff54752d7a55dd7d53df165340289f173ab0cb24f1c2093d26f8eae",
       "Source": "Manage your plan, credentials, and general preferences.",
-      "Translation": "管理你的方案、凭据和常规偏好设置。",
+      "Translation": "管理您的套餐、凭据和常规偏好设置。",
       "Kind": "ui/component",
       "Role": "description",
       "Shape": "string"
@@ -9443,7 +9443,7 @@
     {
       "Key": "a7b3a55787bc99d2a2149c621a86edcdc73ab77e69ada33d3ccff18d3571467f",
       "Source": "Your Plan: ",
-      "Translation": "当前方案： ",
+      "Translation": "当前套餐：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -9451,7 +9451,7 @@
     {
       "Key": "3e514a9bd56976821c342ae7adc2e1bd03027162a0578c07cee1ba9d59a9f50e",
       "Source": "Project ID: ",
-      "Translation": "项目 ID： ",
+      "Translation": "项目 ID：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -9595,7 +9595,7 @@
     {
       "Key": "b5a49fed3f3df73423b6e9515c0814dd56aac293c290c907f106f49e72ce75a4",
       "Source": "By using this app, you agree to its",
-      "Translation": "使用本应用即表示你同意其",
+      "Translation": "使用本应用即表示您同意其",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -10115,7 +10115,7 @@
     {
       "Key": "6cc8429a188811fc82f398c18c32afccb55f8fc09ef4634a4a97473f4a47b6cc",
       "Source": "Not referenced by any feature (",
-      "Translation": "未被任何功能引用（",
+      "Translation": "未被任何功能引用 (",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -10307,7 +10307,7 @@
     {
       "Key": "17882b76790bddd9acc25d394fb215b9ac174a7fbcce67a187c59beaf44b8119",
       "Source": "Current parameter: ",
-      "Translation": "当前参数： ",
+      "Translation": "当前参数：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -10315,7 +10315,7 @@
     {
       "Key": "bf130aec2ec1eeb3e7782bb0c8935875325b032890303cd7b2c13049b27640d8",
       "Source": ". Active workspace URI: ",
-      "Translation": "。当前工作区 URI： ",
+      "Translation": "。当前工作区 URI：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -10331,7 +10331,7 @@
     {
       "Key": "572c91029a910700a9208d8c28a752da48a4a9304c65a98877876deb7759be94",
       "Source": " (still loading…)",
-      "Translation": " （仍在加载…）",
+      "Translation": "（仍在加载…）",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -10547,7 +10547,7 @@
     {
       "Key": "6a5b4b8b498a91f322571791948ed80295966893d59929911cf483a7e3ba206c",
       "Source": "Plan",
-      "Translation": "方案",
+      "Translation": "套餐",
       "Kind": "ui/component",
       "Role": "title",
       "Shape": "string"
@@ -10771,7 +10771,7 @@
     {
       "Key": "00a610fea6f3da3e025589ae250c220a111468ac96629793b70aac184e8bc727",
       "Source": "Plugin: ",
-      "Translation": "插件： ",
+      "Translation": "插件：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -11131,7 +11131,7 @@
     {
       "Key": "67bd3c5bb825f47ac93e1367abb21c6c56e618175c2fe89d7af80937290e0599",
       "Source": "when working ",
-      "Translation": "，在 ",
+      "Translation": "，在",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -11595,7 +11595,7 @@
     {
       "Key": "f703e74173819c843d309d91bced925de48bc2d742c3c2a0ad16ffa35e1b83d0",
       "Source": "Plan Review Policy",
-      "Translation": "计划审查策略",
+      "Translation": "计划审核策略",
       "Kind": "ui/component",
       "Role": "label",
       "Shape": "string"
@@ -11755,7 +11755,7 @@
     {
       "Key": "ddb91e35fbad908341b9d12b28ea4152d5ae54b4d3dc11967778f2dcf5869e27",
       "Source": "Terminal commands always require review and the agent cannot access files outside of its given workspaces.",
-      "Translation": "终端命令始终需要审查，且智能体无法访问其指定工作区之外的文件。",
+      "Translation": "终端命令始终需要审核，且智能体无法访问其指定工作区之外的文件。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -11787,7 +11787,7 @@
     {
       "Key": "4af6dc186d328a6ac40162b898ef377bf7cfa367fdc1358a133c98e4d736d5a0",
       "Source": "Agent will always ask to review in strict mode.",
-      "Translation": "在严格模式下，智能体始终会请求审查。",
+      "Translation": "在严格模式下，智能体始终会请求审核。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -12795,7 +12795,7 @@
     {
       "Key": "e39f52e33052a2f05eff6eb41d24e841fc6db25d1213deaeb221b531a9123bb1",
       "Source": "No handlers configured for ",
-      "Translation": "未配置处理程序： ",
+      "Translation": "未配置处理程序：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -13299,7 +13299,7 @@
     {
       "Key": "578113f7738ef3c0f22d9ea180e9dd80a714718aef8ce89082599ba2b5ae0e16",
       "Source": "Status: ",
-      "Translation": "状态： ",
+      "Translation": "状态：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -13531,7 +13531,7 @@
     {
       "Key": "ded0ececc86124a10520d7b41acf6a0be4b4376a76aaced52e5beb2edc752e98",
       "Source": "Connect your account to browse ",
-      "Translation": "关联你的账号以浏览 ",
+      "Translation": "关联您的账号以浏览 ",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -13619,7 +13619,7 @@
     {
       "Key": "135323366a802f01b33a3b1fac1be83547dc7eeb74f0e655b601bbdd4d7096a1",
       "Source": "Are you sure you want to delete the ",
-      "Translation": "确定要删除此 ",
+      "Translation": "确定要删除",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -13971,7 +13971,7 @@
     {
       "Key": "6aba3626b71220be720db86bbf323ce204c483e70d302d1eb5c075de750de714",
       "Source": "Chief of Staff Dashboard",
-      "Translation": "幕僚长信息中心",
+      "Translation": "Chief of Staff 信息中心",
       "Kind": "ui/component",
       "Role": "label",
       "Shape": "string"
@@ -14139,7 +14139,7 @@
     {
       "Key": "bc8a5b6a5e98ff8c8d596d560d758981f0b50ed80ed838d89b291f3f4c433597",
       "Source": "Review",
-      "Translation": "审查",
+      "Translation": "审核",
       "Kind": "ui/component",
       "Role": "label",
       "Shape": "string"
@@ -14643,7 +14643,7 @@
     {
       "Key": "003f4639d977338a940e59c71192f174715e8bff0dd51acc9b8f0a44a70debb3",
       "Source": "Unable to load PDF: ",
-      "Translation": "无法加载 PDF： ",
+      "Translation": "无法加载 PDF：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -14707,7 +14707,7 @@
     {
       "Key": "8ef718046bab0b864a069dff5eee6fd2a5d1fdbde1893393e9fb9422846f6467",
       "Source": "Review ",
-      "Translation": "审查 ",
+      "Translation": "查看 ",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -14731,7 +14731,7 @@
     {
       "Key": "a0cdb79262e02fe0e1408c88f6bf6fb5d41d53eb5073e27e299eb905d82046cb",
       "Source": "Review",
-      "Translation": "审查",
+      "Translation": "审核",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -14939,7 +14939,7 @@
     {
       "Key": "7b78289ca1c83eab89d4be75598ceb9bb0099059556d5c2c5feffa82730f0bf0",
       "Source": "Welcome to your Chief of Staff",
-      "Translation": "欢迎使用您的幕僚长",
+      "Translation": "欢迎使用您的 Chief of Staff",
       "Kind": "ui/h2",
       "Role": "children",
       "Shape": "string"
@@ -14955,7 +14955,7 @@
     {
       "Key": "2c6b7ea46d455f8e4cf61e5465b7905011fee350200e13c5c3b34a34f7718566",
       "Source": "Review pending conversations",
-      "Translation": "审查待处理对话",
+      "Translation": "审核待处理对话",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "lookup"
@@ -15035,7 +15035,7 @@
     {
       "Key": "d24cb08990dfa7f4124a70b01bc9a3b76ffa6356b6f28e8893112bfdcdd330ff",
       "Source": "Resize side question panel",
-      "Translation": "调整侧边问题面板大小",
+      "Translation": "调整支线提问面板大小",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "string"
@@ -15051,7 +15051,7 @@
     {
       "Key": "8b08017ad2dca8846b24a944bc5ad3ad6ecb3f27eb4201506cad60032e1402d4",
       "Source": "Side Question:",
-      "Translation": "侧边问题：",
+      "Translation": "支线提问：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -15059,7 +15059,7 @@
     {
       "Key": "b811a34459e03c9d7335021a783605ac3aafba870ad674b191901444d8e2abb4",
       "Source": "Previous side question",
-      "Translation": "上一个侧边问题",
+      "Translation": "上一个支线提问",
       "Kind": "ui/component",
       "Role": "aria-label",
       "Shape": "string"
@@ -15083,7 +15083,7 @@
     {
       "Key": "5830324d05162b8187815f297e70e74b2429a59e2590fe88754d4db919b85653",
       "Source": "Next side question",
-      "Translation": "下一个侧边问题",
+      "Translation": "下一个支线提问",
       "Kind": "ui/component",
       "Role": "aria-label",
       "Shape": "string"
@@ -15131,7 +15131,7 @@
     {
       "Key": "fe106ffa5f42fd3e396c37d6d14e962511284ee3591c249b26aa6e686970b5e6",
       "Source": "Delete side question",
-      "Translation": "删除侧边问题",
+      "Translation": "删除支线提问",
       "Kind": "ui/component",
       "Role": "aria-label",
       "Shape": "string"
@@ -15147,7 +15147,7 @@
     {
       "Key": "b8fc8516ad49318019195530da90f98aa2503be635dc8e132fcda467e5e2ea03",
       "Source": "Minimize side question",
-      "Translation": "最小化侧边问题",
+      "Translation": "最小化支线提问",
       "Kind": "ui/component",
       "Role": "aria-label",
       "Shape": "string"
@@ -15355,7 +15355,7 @@
     {
       "Key": "27c2381c3d203398cb65beb74b89ef3e2afd2042e6e0deed3f40ff647c6f1ac2",
       "Source": "Workflows are changing on October 19th—stay tuned for updates. You can use the agent to migrate your workflows.",
-      "Translation": "工作流将于 10 月 19 日发生变化，敬请关注后续更新。你可以使用智能体迁移你的工作流。",
+      "Translation": "工作流将于 10 月 19 日发生变化，敬请关注后续更新。您可以使用智能体迁移您的工作流。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -15643,7 +15643,7 @@
     {
       "Key": "e9f145df0f16b0b97194c53c7e8355c25d148150af1eb0c3540619520dda94f2",
       "Source": "Chrome on the machine you are controlling is not accepting remote debugging. Complete these steps on that machine, not in this tab:",
-      "Translation": "你所控制的机器上的 Chrome 未接受远程调试。请在该机器上完成以下步骤，而非在此标签页中：",
+      "Translation": "您所控制的机器上的 Chrome 未接受远程调试。请在该机器上完成以下步骤，而非在此标签页中：",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -15651,7 +15651,7 @@
     {
       "Key": "aa260fdeadea6367bc954021b60eb6014a899ac2720b2c96bb8498118187c932",
       "Source": "To use browser tools, you need to enable remote debugging:",
-      "Translation": "要使用浏览器工具，你需要启用远程调试：",
+      "Translation": "要使用浏览器工具，您需要启用远程调试：",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -15699,7 +15699,7 @@
     {
       "Key": "f32715c1c1f7b6fd9aefa93f819e0e325fbbc6e8749cbe446f054ff88383f518",
       "Source": "on your cloudtop server",
-      "Translation": "你的 cloudtop 服务器上",
+      "Translation": "您的 cloudtop 服务器上",
       "Kind": "ui/em",
       "Role": "children",
       "Shape": "string"
@@ -16139,7 +16139,7 @@
     {
       "Key": "68cde5ebf6b7d7cee3a1b8d73ea6b0632b12b9db9134e8ff38d3716aa3528204",
       "Source": "View plans",
-      "Translation": "查看方案",
+      "Translation": "查看套餐",
       "Kind": "ui/a",
       "Role": "children",
       "Shape": "string"
@@ -17083,7 +17083,7 @@
     {
       "Key": "053703b23e444aa26636b075e65d215f1844201f22770d65d3b749ff01d0726a",
       "Source": "Chief of Staff is listening — open the Chief of Staff conversation",
-      "Translation": "幕僚长正在倾听 — 打开幕僚长对话",
+      "Translation": "Chief of Staff 正在倾听 — 打开 Chief of Staff 对话",
       "Kind": "ui/button",
       "Role": "aria-label",
       "Shape": "string"
@@ -17099,7 +17099,7 @@
     {
       "Key": "46018b078d08ccc625a2de5325e7a720e2702d4bade95975d8369fbc2916593c",
       "Source": "Chief of Staff is listening — each spoken turn is sent to the Chief of Staff agent. Turn off: Ctrl+Shift+M",
-      "Translation": "幕僚长正在倾听 — 每一轮发言都会发送给幕僚长智能体。关闭：Ctrl+Shift+M",
+      "Translation": "Chief of Staff 正在倾听 — 每一轮发言都会发送给 Chief of Staff 智能体。关闭：Ctrl+Shift+M",
       "Kind": "ui/component",
       "Role": "tooltip",
       "Shape": "string"
@@ -17107,7 +17107,7 @@
     {
       "Key": "c1f549ec9405973f6ef59e6497560b2e2e2aa8e5078e8798acae595c5f8f1454",
       "Source": "Turn on the Chief of Staff mic (always-on listener). Ctrl+Shift+M — hold for push-to-talk",
-      "Translation": "开启幕僚长麦克风（始终倾听）。Ctrl+Shift+M — 按住以说话",
+      "Translation": "开启 Chief of Staff 麦克风（始终倾听）。Ctrl+Shift+M — 按住以说话",
       "Kind": "ui/component",
       "Role": "tooltip",
       "Shape": "string"
@@ -19099,7 +19099,7 @@
     {
       "Key": "0d66239b929df1eed06548bcdc53ce6cf4f96114e76036ee6c84140b3d0041f4",
       "Source": " with ID ",
-      "Translation": " （ID 为 ",
+      "Translation": "（ID 为 ",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -19107,7 +19107,7 @@
     {
       "Key": "8d9dfa0f9902cedc92d56519883b444b44d0baa1c94ed2e1c062730059811605",
       "Source": " already exists.",
-      "Translation": " ）已存在。",
+      "Translation": "）已存在。",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -19283,7 +19283,7 @@
     {
       "Key": "e5ed5d69af6c83485aa0dd522f57f7c92f46c5a3a4eeced51100792d6474edf7",
       "Source": "Error: ",
-      "Translation": "错误： ",
+      "Translation": "错误：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -19603,7 +19603,7 @@
     {
       "Key": "d6c5ea537438bb3e03357be1724bbb2d65401a2b20252ea13824468dc09312b6",
       "Source": "Error: ",
-      "Translation": "错误： ",
+      "Translation": "错误：",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -19619,7 +19619,7 @@
     {
       "Key": "aa0314a1685518feae0df182bf3a395a5b19036575db9854da065fc4903ba9d4",
       "Source": "Pages currently open in Antigravity's Browser instance are shown below.",
-      "Translation": "下方显示当前在 Antigravity 的 Browser 实例中打开的页面。",
+      "Translation": "下方显示当前在 Antigravity 浏览器实例中打开的页面。",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -19643,7 +19643,7 @@
     {
       "Key": "659e41024b2f134bacaaa66896b69504d8407848d463ecbe28af16787ce1f96f",
       "Source": "Active Browser page",
-      "Translation": "当前 Browser 页面",
+      "Translation": "当前浏览器页面",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -20219,7 +20219,7 @@
     {
       "Key": "5ad264b84db7323693cc053d4690e85e6026d121ed64274290ed365506206b91",
       "Source": "Sherlog (Retry #⟪AGC0⟫)",
-      "Translation": "Sherlog (重试 #⟪AGC0⟫)",
+      "Translation": "Sherlog（重试 #⟪AGC0⟫）",
       "Kind": "ui/component",
       "Role": "title",
       "Shape": "template"
@@ -20291,7 +20291,7 @@
     {
       "Key": "2e0d23dc637a233114ecf6f95ff2a903f11e0be92c7bcf1d7f7354f893fe53b4",
       "Source": "• Summarization retries: ",
-      "Translation": "• 摘要重试次数: ",
+      "Translation": "• 摘要重试次数：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -20323,7 +20323,7 @@
     {
       "Key": "596cb899f1f3c369923a6db934c76c3c5de8e25266c9931084cb5834a287fc03",
       "Source": "• Thinking duration:",
-      "Translation": "• 思考时长:",
+      "Translation": "• 思考时长：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -20363,7 +20363,7 @@
     {
       "Key": "89980ba5f3e4c06c12012eb3bfc5bd4654029df3c20a79e56c44df279fc050d1",
       "Source": "Total: ",
-      "Translation": "总计: ",
+      "Translation": "总计：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -20371,7 +20371,7 @@
     {
       "Key": "51b67718875088bc12e21589e8616130e37782955faf961050f5bdecc5bb60a2",
       "Source": "Duration: ",
-      "Translation": "时长: ",
+      "Translation": "时长：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -22251,7 +22251,7 @@
     {
       "Key": "37bbd466ebc63b3fae2bff0405b7e8d80d6cb44d1a82fb98c4dead85f94950e6",
       "Source": "⚠️ Failed to render LaTeX: ",
-      "Translation": "⚠️ LaTeX 渲染失败: ",
+      "Translation": "⚠️ LaTeX 渲染失败：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -22275,7 +22275,7 @@
     {
       "Key": "2b8395ecfc9e39f35198184f028a68ff81eb3697581f695a4a42ad1ca3aeb21f",
       "Source": "⚠️ Failed to render Mermaid diagram: ",
-      "Translation": "⚠️ Mermaid 图表渲染失败: ",
+      "Translation": "⚠️ Mermaid 图表渲染失败：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -22387,7 +22387,7 @@
     {
       "Key": "04175ecdf68d8e3460a502ffa408e568c3018d0e1457f3f097d37500cc85f43e",
       "Source": "when working ",
-      "Translation": "，在 ",
+      "Translation": "，在",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -22443,7 +22443,7 @@
     {
       "Key": "d15da1c568d55d1534617b7ac0372c8e643debf22fb494ea0f30721a8558565e",
       "Source": " by allowing Google to collect and use my Interactions data, subject to the",
-      "Translation": " ，允许 Google 根据",
+      "Translation": "，允许 Google 根据",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -23307,7 +23307,7 @@
     {
       "Key": "634bdcb5818023bccfb455d2c2c0ac1ea8c9d2bcb55f2b92de561a0ed922468f",
       "Source": "Review Policy",
-      "Translation": "审查策略",
+      "Translation": "审核策略",
       "Kind": "ui/setting",
       "Role": "label",
       "Shape": "string"
@@ -23315,7 +23315,7 @@
     {
       "Key": "3f5f637ed09b69c68ee0ece96730d9a54136108c26531af3d53dadefbaec5428",
       "Source": "Specifies the agent's behavior when asking for review on artifacts, which are documents it creates to enable a richer conversation experience.",
-      "Translation": "指定智能体在请求审查产物时的行为。产物是智能体为了提供更丰富的对话体验而创建的文档。",
+      "Translation": "指定智能体在请求审核产物时的行为。产物是智能体为了提供更丰富的对话体验而创建的文档。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -23915,7 +23915,7 @@
     {
       "Key": "16e69fb9ba5fd32accb4733626d00aad909d66df646b9796ffcf0f844a27d7c3",
       "Source": "Give each Best of N fork a full clone of your workspace, including its local commit history. Choosing a winner then gives your workspace that fork's state, so the commits it made are kept. Forks take longer to create than the default CitC clone. See go/jetski-best-of-n.",
-      "Translation": "为每个 Best of N 分叉提供工作区的完整克隆（包含其本地提交历史）。选出胜出方案后，您的工作区将应用该分叉的状态，从而保留其所做的提交。分叉创建耗时比默认的 CitC 克隆更长。详见 go/jetski-best-of-n。",
+      "Translation": "为每个 Best of N Fork 提供工作区的完整克隆（包含其本地提交历史）。选出胜出项后，您的工作区将应用该 Fork 的状态，从而保留其所做的提交。创建 Fork 的耗时比默认的 CitC 克隆更长。详见 go/jetski-best-of-n。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -23931,7 +23931,7 @@
     {
       "Key": "3386a3f6a922da7c4fd364ad6a962f4a36cb3c94ad9f86ee0b111995a4b653bc",
       "Source": "Give each Best of N fork its own clone of your Git repository instead of a copy-on-write overlay. Each fork is then a real repository, so commits it makes are kept when you choose it as the winner. Forks take longer to create, and the wait grows with the size of your repository. See go/jetski-best-of-n.",
-      "Translation": "为每个 Best of N 分叉提供 Git 仓库的独立克隆，而非写时复制（copy-on-write）覆盖层。每个分叉都是真实的仓库，因此在您将其选为胜出方案时，其所做的提交都会被保留。分叉创建耗时更长，且等待时间随仓库大小增加。详见 go/jetski-best-of-n。",
+      "Translation": "为每个 Best of N Fork 提供 Git 仓库的独立克隆，而非写时复制（copy-on-write）覆盖层。每个 Fork 都是真实的仓库，因此在您将其选为胜出项时，其所做的提交都会被保留。创建 Fork 耗时更长，且等待时间随仓库大小增加。详见 go/jetski-best-of-n。",
       "Kind": "ui/setting",
       "Role": "description",
       "Shape": "string"
@@ -24259,7 +24259,7 @@
     {
       "Key": "a12bf0c32734afe81f0f8631b3bc5e518b9c68c5e35cf697546af55b65844d5c",
       "Source": "Send feedback as ",
-      "Translation": "发送反馈身份： ",
+      "Translation": "发送反馈身份：",
       "Kind": "ui/component",
       "Role": "label",
       "Shape": "string"
@@ -24499,7 +24499,7 @@
     {
       "Key": "bf74eb03287fafd82e5852268e4957a15e9d29d0b453e004ce76bc4feaab8f5c",
       "Source": "Status: ",
-      "Translation": "状态： ",
+      "Translation": "状态：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -24659,7 +24659,7 @@
     {
       "Key": "9b880bc7c978498bc0d055729adede8078d2c6b49086a11094dccffb9edcc714",
       "Source": "See Plans",
-      "Translation": "查看方案",
+      "Translation": "查看套餐",
       "Kind": "ui/menu",
       "Role": "label",
       "Shape": "string"
@@ -25835,7 +25835,7 @@
     {
       "Key": "4eb5257559474472a56e9b666c714b61bc9a6e0214462811a714f93f74405afe",
       "Source": "Remote Control link",
-      "Translation": "Remote Control 链接",
+      "Translation": "远程控制链接",
       "Kind": "ui/component",
       "Role": "ariaLabel",
       "Shape": "string"
@@ -26131,7 +26131,7 @@
     {
       "Key": "278c732b7b32db4d94d3a723d40e6b4030c1a3b6aead069f4cf1ff4ea7d13985",
       "Source": "You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.",
-      "Translation": "您可以升级至 ⟪AGC0⟫ 方案以获得更高的速率限制。",
+      "Translation": "您可以升级至 ⟪AGC0⟫ 套餐以获得更高的使用额度。",
       "Kind": "ui/component",
       "Role": "service/plan-description",
       "Shape": "service"
@@ -26139,7 +26139,7 @@
     {
       "Key": "2605d82b4d606c4862db50a8361ed64416ed43908af812e8f90a10913007b7e1",
       "Source": "You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.",
-      "Translation": "您可以升级至 ⟪AGC0⟫ 方案以获得更高的速率限制。",
+      "Translation": "您可以升级至 ⟪AGC0⟫ 套餐以获得更高的使用额度。",
       "Kind": "ui/component",
       "Role": "service/plan-description",
       "Shape": "service"
@@ -26331,7 +26331,7 @@
     {
       "Key": "4d4153d19d6e48bba4e0f43686bb45a31b1ea04eeff0645229f59ffe934a103b",
       "Source": "You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.",
-      "Translation": "您可以升级至 ⟪AGC0⟫ 方案以获得更高的速率限制。",
+      "Translation": "您可以升级至 ⟪AGC0⟫ 套餐以获得更高的使用额度。",
       "Kind": "ui/span",
       "Role": "service/plan-description",
       "Shape": "service"
@@ -26491,7 +26491,7 @@
     {
       "Key": "53a0c385a1ee98bc8ef5fdfc948c460ce0591f2a710561a48384e5681dd27f85",
       "Source": "your plan",
-      "Translation": "您的方案",
+      "Translation": "您的套餐",
       "Kind": "ui/display-local",
       "Role": "children",
       "Shape": "string"
@@ -26683,7 +26683,7 @@
     {
       "Key": "b6134c309b14e7f03cc8fbe06a4e2b2771359b8db9766dc1d0be8b1ece2b0d6b",
       "Source": "Voice recording is unavailable while the Chief of Staff mic is on",
-      "Translation": "幕僚长麦克风开启时无法进行录音",
+      "Translation": "Chief of Staff 麦克风开启时无法进行录音",
       "Kind": "ui/display-local",
       "Role": "children",
       "Shape": "string"
@@ -27363,7 +27363,7 @@
     {
       "Key": "6c42c4d9af59e3635c574e89ae33d9a2a80831f521904544b02427d445651312",
       "Source": "Queue Message ⏎",
-      "Translation": "排队消息 ⏎",
+      "Translation": "排队发送 ⏎",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "children"
@@ -27371,7 +27371,7 @@
     {
       "Key": "7d544b0c5cf015c7f2b2f2aba52597509f8824ef2d8fe2624b02ab8ab123ade0",
       "Source": "Queue Message Enter",
-      "Translation": "排队消息 Enter",
+      "Translation": "排队发送 Enter",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "children"
@@ -27379,7 +27379,7 @@
     {
       "Key": "700da2a6035126a843bb4bd47f36e9d9e09b6e9f57e1e70161ce55db6ae65162",
       "Source": "Queue Message (⌥⏎)",
-      "Translation": "排队消息 (⌥⏎)",
+      "Translation": "排队发送 (⌥⏎)",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "children"
@@ -27387,7 +27387,7 @@
     {
       "Key": "483b171bf2a92d4c0c6ebe3e208dcf146aacdda8ad384761d960a3a343f36832",
       "Source": "Queue Message (Alt+Enter)",
-      "Translation": "排队消息 (Alt+Enter)",
+      "Translation": "排队发送 (Alt+Enter)",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "children"
@@ -27563,7 +27563,7 @@
     {
       "Key": "ec30d7b111a59886e8c88a9d344bfb1d002401a7bab1df67e1135f5adf8c95e8",
       "Source": "your plan",
-      "Translation": "您的方案",
+      "Translation": "您的套餐",
       "Kind": "ui/display-local",
       "Role": "children",
       "Shape": "string"
@@ -27923,7 +27923,7 @@
     {
       "Key": "3c4c9cd0f59cc6ed7fe9ed52e6e61d9befc72b281c1606110c7218182af92569",
       "Source": "Are you sure you want to delete the ",
-      "Translation": "确定要删除此 ",
+      "Translation": "确定要删除",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -28259,7 +28259,7 @@
     {
       "Key": "ed1597b66503e1ceac652f887b6221e535179f4ebf5e3ba69883136d72b678ac",
       "Source": "Review",
-      "Translation": "审查",
+      "Translation": "审核",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "lookup"
@@ -28371,7 +28371,7 @@
     {
       "Key": "9b12ef8627184263f2bbf6afe967b1f7482802f79cae75e5b69c7d1ed0c6e8a6",
       "Source": "Review",
-      "Translation": "审查",
+      "Translation": "审核",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "lookup"
@@ -30755,7 +30755,7 @@
     {
       "Key": "bdaf663933c27ccc7dd7eddc486a8b66621170dcb19672a87fa17f9f8d60fb4b",
       "Source": "Services this plugin connects to on your behalf. Credentials stay on this machine and are only sent to the domains listed.",
-      "Translation": "此插件代表你连接的服务。凭据保留在此设备上，且仅会发送至列出的域名。",
+      "Translation": "此插件代表您连接的服务。凭据保留在此设备上，且仅会发送至列出的域名。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -32811,7 +32811,7 @@
     {
       "Key": "8f9558c4b19423833247078cbb0624334375ae8d68e111bad6d9d37ca45420ba",
       "Source": "Review",
-      "Translation": "审查",
+      "Translation": "审核",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "lookup"
@@ -32931,7 +32931,7 @@
     {
       "Key": "27b22d1465a697d6be2e117bdb8fcffc2645f7b650060bba8a27582769987681",
       "Source": "Review",
-      "Translation": "审查",
+      "Translation": "审核",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "lookup"
@@ -33115,7 +33115,7 @@
     {
       "Key": "769ec93e119ded20018d737a7a4ec05a3dba7278b7ed65fe4946f15536e86976",
       "Source": "No apps connected yet. Connect one from Marketplace.",
-      "Translation": "尚未连接任何应用。可从 Marketplace 连接应用。",
+      "Translation": "尚未连接任何应用。可从市场连接应用。",
       "Kind": "ui/display-local",
       "Role": "children",
       "Shape": "string"
@@ -33907,7 +33907,7 @@
     {
       "Key": "7cf654b71ba433e101d8930fbb378b409b19516380bebd2a2f6b4e2453964c21",
       "Source": "Your Plan: ",
-      "Translation": "当前方案： ",
+      "Translation": "当前套餐：",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -34171,7 +34171,7 @@
     {
       "Key": "e0163f8d2d86fc6c623b7cd41e0f9287b245de6cd455e74cf5cf2951c626abe3",
       "Source": "⚠️ Failed to render LaTeX: ",
-      "Translation": "⚠️ LaTeX 渲染失败: ",
+      "Translation": "⚠️ LaTeX 渲染失败：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -34387,7 +34387,7 @@
     {
       "Key": "3b43780fa1346c28eb435dc65c5dd63acb4b2bb2d7b14d63288767ed511e413b",
       "Source": "(no title)",
-      "Translation": "(无标题)",
+      "Translation": "（无标题）",
       "Kind": "ui/display-local",
       "Role": "children",
       "Shape": "string"
@@ -34731,7 +34731,7 @@
     {
       "Key": "74e8c409089eb56c8fe97bf42534ff4e1572b65e39067a837f1e20ab0a1d2cd8",
       "Source": "You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.",
-      "Translation": "您可以升级到 ⟪AGC0⟫ 方案以获得更高的速率限制。",
+      "Translation": "您可以升级至 ⟪AGC0⟫ 套餐以获得更高的使用额度。",
       "Kind": "ui/display-local",
       "Role": "service/plan-description",
       "Shape": "service"
@@ -35499,7 +35499,7 @@
     {
       "Key": "ff1247395d847a002175d4e09b3809a2f0f109f7d2c39954c20be2412b2a745f",
       "Source": "You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.",
-      "Translation": "您可以升级至 ⟪AGC0⟫ 方案以获得更高的速率限制。",
+      "Translation": "您可以升级至 ⟪AGC0⟫ 套餐以获得更高的使用额度。",
       "Kind": "ui/component",
       "Role": "service/plan-description",
       "Shape": "service"
@@ -35515,7 +35515,7 @@
     {
       "Key": "fa594b2da333ade6aab98f8e8d802babb943406f4586baa4a704d3c472df6b71",
       "Source": "You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.",
-      "Translation": "您可以升级至 ⟪AGC0⟫ 方案以获得更高的速率限制。",
+      "Translation": "您可以升级至 ⟪AGC0⟫ 套餐以获得更高的使用额度。",
       "Kind": "ui/component",
       "Role": "service/plan-description",
       "Shape": "service"
@@ -36971,7 +36971,7 @@
     {
       "Key": "904e82dfbd2e9b6a93c33792752d8d183e987ddbe8ea6516a2c3255096f09413",
       "Source": "You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.",
-      "Translation": "您可以升级至 ⟪AGC0⟫ 方案以获得更高的速率限制。",
+      "Translation": "您可以升级至 ⟪AGC0⟫ 套餐以获得更高的使用额度。",
       "Kind": "ui/span",
       "Role": "service/plan-description",
       "Shape": "service"
@@ -39339,7 +39339,7 @@
     {
       "Key": "3bcd67b3876a6c3b0d4148298be815cfd4bc9831429158c2e6f1d87ebb8d6b6d",
       "Source": "Couldn't switch accounts: ",
-      "Translation": "无法切换账号： ",
+      "Translation": "无法切换账号：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -39427,7 +39427,7 @@
     {
       "Key": "c095c0e7028631ff1551b959062eef864ae2436b54d4fe04d65dd0bf8fe6ebed",
       "Source": "Used for: ",
-      "Translation": "用途： ",
+      "Translation": "用途：",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -40611,7 +40611,7 @@
     {
       "Key": "110ade61a8b767df7c3908f9b929d959938af033f64a66ffd8aca5bf8f066206",
       "Source": "Subagent: ",
-      "Translation": "子智能体： ",
+      "Translation": "子智能体：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -46635,7 +46635,7 @@
     {
       "Key": "47e6f847f3601b026c4236cfb78e6e4001b90701a28a44578ecfd3b6ea1a81c8",
       "Source": "Side Panel",
-      "Translation": "侧面板",
+      "Translation": "侧边面板",
       "Kind": "ui/span",
       "Role": "option-label",
       "Shape": "lookup"
@@ -47155,7 +47155,7 @@
     {
       "Key": "c37588e6630ff74ebae66f35f4e9b9067ff2a2b6873397471f4c68e892b391d1",
       "Source": "Side Panel",
-      "Translation": "侧面板",
+      "Translation": "侧边面板",
       "Kind": "ui/component",
       "Role": "option-label",
       "Shape": "lookup"
@@ -47427,7 +47427,7 @@
     {
       "Key": "daaec543d5090fd724eba29e1fcc5d22055c223dfa0b8927c4df9286f56ab82a",
       "Source": "Side Panel",
-      "Translation": "侧面板",
+      "Translation": "侧边面板",
       "Kind": "ui/option-display",
       "Role": "option-label",
       "Shape": "lookup"
@@ -47811,7 +47811,7 @@
     {
       "Key": "30b0c69c444a562b946c13b1ff8f82dd72acec9ab6ae2b29972a801fbee2514f",
       "Source": "Side Panel",
-      "Translation": "侧面板",
+      "Translation": "侧边面板",
       "Kind": "ui/setting-option",
       "Role": "label",
       "Shape": "string"
@@ -48427,7 +48427,7 @@
     {
       "Key": "5f9700ddb231947e145645386f496ece800449396171b450dcb258aa44745f7c",
       "Source": "Next Side Panel Tab",
-      "Translation": "下一个侧面板标签页",
+      "Translation": "下一个侧边面板标签页",
       "Kind": "ui/component",
       "Role": "shortcut-label",
       "Shape": "lookup"
@@ -48531,7 +48531,7 @@
     {
       "Key": "bc5d35e68ba4b1c8f5228a4ee5dcd9027e7b67e0868354a4f95f2d3a2469167b",
       "Source": "Previous Side Panel Tab",
-      "Translation": "上一个侧面板标签页",
+      "Translation": "上一个侧边面板标签页",
       "Kind": "ui/component",
       "Role": "shortcut-label",
       "Shape": "lookup"
@@ -48707,7 +48707,7 @@
     {
       "Key": "5d0411093da968913be65a1ff5d24f17376bd2823afaba0340a916ec4be1118b",
       "Source": "Toggle Maximize Side Panel",
-      "Translation": "最大化或还原侧面板",
+      "Translation": "最大化或还原侧边面板",
       "Kind": "ui/component",
       "Role": "shortcut-label",
       "Shape": "lookup"
@@ -48739,7 +48739,7 @@
     {
       "Key": "e60c5b3e41284e851230f7d0aaf545dba39a2fa0cfc1c0d4e3902f8acaa953e1",
       "Source": "Toggle Side Panel",
-      "Translation": "切换侧面板",
+      "Translation": "切换侧边面板",
       "Kind": "ui/component",
       "Role": "shortcut-label",
       "Shape": "lookup"
@@ -49515,7 +49515,7 @@
     {
       "Key": "975f3abc1f0452a43e23120e1fd53c38ed815e9503136bea02ba9bcbadd6b925",
       "Source": "Clear visited URLs and autocomplete suggestions from side panel preview.",
-      "Translation": "清除侧面板预览中访问过的 URL 和自动补全建议。",
+      "Translation": "清除侧边面板预览中访问过的 URL 和自动补全建议。",
       "Kind": "ui/component",
       "Role": "description",
       "Shape": "string"
@@ -49603,7 +49603,7 @@
     {
       "Key": "06778f9a32f947a9aea27775fa8b49aebbf3ab82c16b939d072c5cc7e8bdf674",
       "Source": "⟪AGC0⟫ (Remote)",
-      "Translation": "⟪AGC0⟫ (远程)",
+      "Translation": "⟪AGC0⟫（远程）",
       "Kind": "ui/component",
       "Role": "label",
       "Shape": "template"
@@ -50187,7 +50187,7 @@
     {
       "Key": "d9abc0196b47774ff173e9ed2a9189b4416089c3711ae4cdf963ab1bd6fe56de",
       "Source": "Side Panel",
-      "Translation": "侧面板",
+      "Translation": "侧边面板",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "lookup"
@@ -50235,7 +50235,7 @@
     {
       "Key": "739833d1787d8f014ebd569854817cb1124c853d1231d429fb359a400c400b66",
       "Source": "Review",
-      "Translation": "审查",
+      "Translation": "审核",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "lookup"
@@ -50307,7 +50307,7 @@
     {
       "Key": "40fca345eaba1bd9e0b0bce5561aeacf4e35ffd1e2fe2f53f3c19a1359ca7ce4",
       "Source": "Side Panel",
-      "Translation": "侧面板",
+      "Translation": "侧边面板",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "string"
@@ -50531,7 +50531,7 @@
     {
       "Key": "a29ad0ad30a2b5eb28e0bbc6b9af03b4a4831774972969891fdfb887ae39e503",
       "Source": "Side Question:",
-      "Translation": "侧边问题：",
+      "Translation": "支线提问：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -51195,7 +51195,7 @@
     {
       "Key": "523543b51b0e36a525056f5a6b8cfc5c1c44f062bc1e216c471bc8b19474c860",
       "Source": "Side Panel",
-      "Translation": "侧面板",
+      "Translation": "侧边面板",
       "Kind": "ui/component",
       "Role": "option-label",
       "Shape": "lookup"
@@ -51459,7 +51459,7 @@
     {
       "Key": "7461f12b69ed1bdb6a236baac1cd2649c52138a3fd6d887bac9a6d38d0b80cb5",
       "Source": "Side Panel",
-      "Translation": "侧面板",
+      "Translation": "侧边面板",
       "Kind": "ui/component",
       "Role": "option-label",
       "Shape": "lookup"
@@ -51771,7 +51771,7 @@
     {
       "Key": "52adaad2edf0d79187b418d33c7309e09b83553213c13d6ce9ee27f658db730e",
       "Source": "Agent: ",
-      "Translation": "智能体: ",
+      "Translation": "智能体：",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -51779,7 +51779,7 @@
     {
       "Key": "432ad0f004f3110aea7d69b87dfc6c20f763808880a2c05be80a3c0727baeb62",
       "Source": "Agent: ",
-      "Translation": "智能体: ",
+      "Translation": "智能体：",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -51803,7 +51803,7 @@
     {
       "Key": "9da057bd1ed785a452502c7cd3abb96dd1e460dfd6390463ecb054d122172630",
       "Source": "You",
-      "Translation": "你",
+      "Translation": "您",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -51963,7 +51963,7 @@
     {
       "Key": "0b445e82048a0682577a748d41bd3e25b6a4f8f98e56b1186d8c0e1adaa7964b",
       "Source": "Toggle Side Panel",
-      "Translation": "切换侧面板",
+      "Translation": "切换侧边面板",
       "Kind": "ui/component",
       "Role": "aria-label",
       "Shape": "string"
@@ -52155,7 +52155,7 @@
     {
       "Key": "4a266b6cd01518854a5460b269ad99058e0fc89485441d2e6b6b4359ff4eb435",
       "Source": "Side Question: ",
-      "Translation": "支线提问： ",
+      "Translation": "支线提问：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -52219,7 +52219,7 @@
     {
       "Key": "0964829d53550e158d2f0f98d3d050ab99b1a252b72ede8049f8f978de1a250e",
       "Source": "Side Panel",
-      "Translation": "侧面板",
+      "Translation": "侧边面板",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "lookup"
@@ -52267,7 +52267,7 @@
     {
       "Key": "9b3dce1d39cc6bc5236678e6edcb578e82da8c3066591aa74067efe62f33e9ee",
       "Source": "Review",
-      "Translation": "审查",
+      "Translation": "审核",
       "Kind": "ui/div",
       "Role": "aria-label",
       "Shape": "lookup"
@@ -52451,7 +52451,7 @@
     {
       "Key": "f0c86b02885bf2b3ef9e989ee2a2cd2b0e9af28910dbff4cb2fa5a390e612785",
       "Source": "Toggle Side Panel",
-      "Translation": "切换侧面板",
+      "Translation": "切换侧边面板",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -52971,7 +52971,7 @@
     {
       "Key": "49757644c3c1e8f53250bc5cde9fe1351a83406a1af8b79b04245a9f33a477e0",
       "Source": " with the ID “",
-      "Translation": " （ID 为“",
+      "Translation": "（ID 为“",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -53283,7 +53283,7 @@
     {
       "Key": "15496c1a3c1ca7e8259160f0a15203d7f5582a51add28475879e47d178bb7a79",
       "Source": "Next",
-      "Translation": "下一个",
+      "Translation": "下一步",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -53291,7 +53291,7 @@
     {
       "Key": "d6055c33269e96b1329372f3cd421f392db33cb0961dd293b9a98dec69344f6a",
       "Source": "No ",
-      "Translation": "无 ",
+      "Translation": "没有",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -53307,7 +53307,7 @@
     {
       "Key": "c6346d51c06d8bde634becf3b487104e1f6a466e5b449c4ace6e054ce4b0dc9a",
       "Source": " match “",
-      "Translation": " 匹配 “",
+      "Translation": "匹配“",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -53787,7 +53787,7 @@
     {
       "Key": "3371164e2c7d1eaa41757ff42ebed3e4e2b7831381734490844032c86577663c",
       "Source": " this time, the website sent back unusual and incorrect credentials. ",
-      "Translation": " 时，该网站返回了异常且不正确的凭据。 ",
+      "Translation": " 时，该网站返回了异常且不正确的凭据。",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -53859,7 +53859,7 @@
     {
       "Key": "008c4e8bc4448580026ec4b30cd1c653208738f960b1398ce9513b84bcf1dc01",
       "Source": "Site data cleared for ",
-      "Translation": "已清除网站数据： ",
+      "Translation": "已清除网站数据：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -53867,7 +53867,7 @@
     {
       "Key": "30913e99f21c4ccd3904eaad35a741146b2ffe4c393095c66ffbb178eb25dab8",
       "Source": "Could not clear site data for ",
-      "Translation": "无法清除网站数据： ",
+      "Translation": "无法清除网站数据：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -53939,7 +53939,7 @@
     {
       "Key": "793f71e21cf514e19d012bb2bac88874b9f2ac0f78f9a51bcb6cdce20fc3f9d7",
       "Source": "Your Plan: ⟪AGC0⟫",
-      "Translation": "您的方案：⟪AGC0⟫",
+      "Translation": "您的套餐：⟪AGC0⟫",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "template"
@@ -53947,7 +53947,7 @@
     {
       "Key": "ca47609d0f47ddaa3e793e11ebfaf3b3cd474ce4cd2c69b0b56d1b78c409fcc8",
       "Source": "Your Plan",
-      "Translation": "您的方案",
+      "Translation": "您的套餐",
       "Kind": "ui/div",
       "Role": "children",
       "Shape": "string"
@@ -55747,7 +55747,7 @@
     {
       "Key": "1674b5cd66f4508d43777f63554cb1b51c76578dbe00b59b79d64ea266969114",
       "Source": "Next Side Panel Tab",
-      "Translation": "下一个侧面板标签页",
+      "Translation": "下一个侧边面板标签页",
       "Kind": "ui/component",
       "Role": "shortcut-label",
       "Shape": "lookup"
@@ -55859,7 +55859,7 @@
     {
       "Key": "0052e55768d95546b5f73b7e7d6cf7ac82101f9c88255e8bece83d3c7842425e",
       "Source": "Previous Side Panel Tab",
-      "Translation": "上一个侧面板标签页",
+      "Translation": "上一个侧边面板标签页",
       "Kind": "ui/component",
       "Role": "shortcut-label",
       "Shape": "lookup"
@@ -56035,7 +56035,7 @@
     {
       "Key": "56983eb70b59f71d6af09d2dff6312427cbcf6c0d7b61c86a57d5a1a47498f05",
       "Source": "Toggle Maximize Side Panel",
-      "Translation": "最大化或还原侧面板",
+      "Translation": "最大化或还原侧边面板",
       "Kind": "ui/component",
       "Role": "shortcut-label",
       "Shape": "lookup"
@@ -56067,7 +56067,7 @@
     {
       "Key": "070ab234f2881e62445adfb22a53b65875075cb0af6f889d45b75ffd0847ba20",
       "Source": "Toggle Side Panel",
-      "Translation": "切换侧面板",
+      "Translation": "切换侧边面板",
       "Kind": "ui/component",
       "Role": "shortcut-label",
       "Shape": "lookup"
@@ -56379,7 +56379,7 @@
     {
       "Key": "1b9abc37422fc9f9812414c5e3546a6ac7ec32ea823be572d6b80d69743433d1",
       "Source": "Sign-in failed: ",
-      "Translation": "登录失败： ",
+      "Translation": "登录失败：",
       "Kind": "ui/p",
       "Role": "children",
       "Shape": "string"
@@ -56507,7 +56507,7 @@
     {
       "Key": "f8e9625a8b4d7d517b81a420e3f9ffb81c4e483d4e7618513060656ecb31a2b3",
       "Source": "Allow Google to collect and use your Interactions data, subject to the",
-      "Translation": "允许 Google 收集并使用您的互动数据，并遵守",
+      "Translation": "允许 Google 收集并使用您的交互数据，并遵守",
       "Kind": "ui/component",
       "Role": "children",
       "Shape": "string"
@@ -56851,7 +56851,7 @@
     {
       "Key": "13f5c0d5a19750b7b2902b3747def4ac4b6e1f418d067f4adb65d506094c680e",
       "Source": "Side Question:",
-      "Translation": "侧边问题：",
+      "Translation": "支线提问：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -57811,7 +57811,7 @@
     {
       "Key": "44980944cf4661427097d750f4a8b18d3db89949024337a7bd89cfb8f7c6e5c9",
       "Source": "Delete side question",
-      "Translation": "删除侧边问题",
+      "Translation": "删除支线提问",
       "Kind": "ui/component",
       "Role": "aria-label",
       "Shape": "string"
@@ -57947,7 +57947,7 @@
     {
       "Key": "88651d593ecf1b35c8e7bcdbd3ecc82eeb7f211ca72c7f6da023202de5f45345",
       "Source": "Equality and list membership (e.g.",
-      "Translation": "相等比较与列表成员判断（例如",
+      "Translation": "相等比较与列表成员判断 (例如",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -57963,7 +57963,7 @@
     {
       "Key": "f7f385418c39511b1040086346481811adff5c32b7ab5ef2ff9f0187ca433731",
       "Source": "Substring or list check (e.g.",
-      "Translation": "子串或列表检查（例如",
+      "Translation": "子串或列表检查 (例如",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -58011,7 +58011,7 @@
     {
       "Key": "bd1add75fbd9251eed2d58867ba2825df566bf35f8a76a1c6da77c8e05ab1ed6",
       "Source": "— specify at least one user, team, component, or resource (joined with",
-      "Translation": "— 至少指定一个用户、团队、组件或资源（使用以下运算符连接",
+      "Translation": "— 请至少指定一个用户、团队、组件或资源 (连接符为",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -58235,7 +58235,7 @@
     {
       "Key": "4721129362e76aedc3d5e6a4c72f206161c0ae9c1d23d310a7fd160669447220",
       "Source": "Commented on: ",
-      "Translation": "评论位置： ",
+      "Translation": "评论位置：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -58379,7 +58379,7 @@
     {
       "Key": "67e4ebb1f049b226ca48af9dc2ca1dd2a95d53df17e451ae99dbb9fc2e7d03e1",
       "Source": "e.g. Release helper",
-      "Translation": "例如 发布助手",
+      "Translation": "例如：发布助手",
       "Kind": "ui/input",
       "Role": "placeholder",
       "Shape": "string"
@@ -58595,7 +58595,7 @@
     {
       "Key": "70bccacc185b49c487801191a5835955ef6fde4df28bcb935b64fa62daed8b73",
       "Source": "Agents running on this host will stop and its window will close. ",
-      "Translation": "此主机上运行的智能体将停止，其窗口也将关闭。 ",
+      "Translation": "此主机上运行的智能体将停止，其窗口也将关闭。",
       "Kind": "dialog",
       "Role": "detail",
       "Shape": "string"
@@ -58643,7 +58643,7 @@
     {
       "Key": "077367685965d9f8046239f56279670de56a29eee7091b15c261031ea29b56b8",
       "Source": "Continue only if you just chose to sign in with your organization ",
-      "Translation": "仅当您刚刚在此窗口中选择通过组织登录时才继续。 ",
+      "Translation": "仅当您刚刚在此窗口中选择通过组织登录时才继续。",
       "Kind": "dialog",
       "Role": "detail",
       "Shape": "string"
@@ -60331,7 +60331,7 @@
     {
       "Key": "a0d7d7f50514c9f66563696460f1ee191eeef1a182ce0a9563eab1caaa2498b4",
       "Source": "SSH config: ",
-      "Translation": "SSH 配置： ",
+      "Translation": "SSH 配置：",
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
@@ -61471,6 +61471,1942 @@
       "Kind": "ui/component",
       "Role": "text",
       "Shape": "template"
+    },
+    {
+      "Key": "ee907ad038f5e5affc386ffdfa23fd101d11b6d2f121f018a7e17aa004ebcb06",
+      "Source": "Open workspace",
+      "Translation": "打开工作区",
+      "Kind": "dialog",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "e82312f3e0bcac9d6f8a1c0d6eeaf5efb81132ec8c61e97d734ce8b8aa2bb605",
+      "Source": "Open workspaces",
+      "Translation": "打开多个工作区",
+      "Kind": "dialog",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "dea52fe7cefb1abe98b19b4485b21dfb2d079aa6860d9508753f5d8aa8aeeade",
+      "Source": "Select Download Folder",
+      "Translation": "选择下载文件夹",
+      "Kind": "dialog",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "63a53fc4b8dff8d0f3e90084c039a27ff26df859897eec363426902e3bd46ad8",
+      "Source": "No agents running",
+      "Translation": "暂无运行中的智能体",
+      "Kind": "menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "08bf6c5b7a8845e041241f94fc1bbbeb2e6b8dfeb6ddf73ddf0a3f4a5bbe34d5",
+      "Source": "Open ⟪AGC0⟫",
+      "Translation": "打开 ⟪AGC0⟫",
+      "Kind": "menu",
+      "Role": "label",
+      "Shape": "template"
+    },
+    {
+      "Key": "2bb804352dfe71d4e9f1dee1090723cc28f56cb261cfbd55315608b715e378f9",
+      "Source": "Quit",
+      "Translation": "退出",
+      "Kind": "menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "f098ce0608ceb6d17cd7dd4f9c4b140db9bddb3a6124110e6f4a6f590540b782",
+      "Source": "Choose an SSH config file",
+      "Translation": "选择 SSH 配置文件",
+      "Kind": "dialog",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "90be14ef9b88c905633968d758eecc9da77511b76071022740235fd8c5b9f6d1",
+      "Source": "SSH connection failed",
+      "Translation": "SSH 连接失败",
+      "Kind": "dialog",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "a5d144365a51bbf3e248d3c49ff911279d5ed551a125a2beb9beef8d67ae3b97",
+      "Source": "Sign-in failed",
+      "Translation": "登录失败",
+      "Kind": "dialog",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "a97b5a671e3b4519442ffebb9f6a44cb7b12c57dfb218aa0f713d919dba1a641",
+      "Source": "Could not stop the SSH server",
+      "Translation": "无法停止 SSH 服务器",
+      "Kind": "dialog",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "1c2673cd0ccb663e27428ee5a9794282c0e14e470ba86151825fcea01f17ba1e",
+      "Source": "Stop SSH server",
+      "Translation": "停止 SSH 服务器",
+      "Kind": "dialog",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "f175260678c88ffef472d8459b82d14052a507b6c838d02bca44fdbd3b297b9a",
+      "Source": "Not connected to ⟪AGC0⟫",
+      "Translation": "未连接到 ⟪AGC0⟫",
+      "Kind": "dialog",
+      "Role": "message",
+      "Shape": "template"
+    },
+    {
+      "Key": "6480786cab19cb2c91e972cba6da90b4899666cbffa0540d3752fe6f7dcf4c64",
+      "Source": "Reconnect first, then stop its server.",
+      "Translation": "请先重新连接，然后再停止其服务器。",
+      "Kind": "dialog",
+      "Role": "detail",
+      "Shape": "string"
+    },
+    {
+      "Key": "7c7481ee1c9ed238d3f66796dd807182da9629120c2ee459e84f330b159cfcaa",
+      "Source": "⟪AGC0⟫ asks:",
+      "Translation": "⟪AGC0⟫ 请求确认：",
+      "Kind": "dialog",
+      "Role": "message",
+      "Shape": "template"
+    },
+    {
+      "Key": "71abfa5f58a17673555c9033ad2b3d452a0d6869fef9993917d54b7e01c02fef",
+      "Source": "Touch your security key",
+      "Translation": "轻触您的安全密钥",
+      "Kind": "dialog",
+      "Role": "message",
+      "Shape": "string"
+    },
+    {
+      "Key": "3bc219e0b0e8d4bfcace02d77d14027d8d0015034ea0d8e27e2efbd861723340",
+      "Source": "Yes",
+      "Translation": "是",
+      "Kind": "dialog",
+      "Role": "buttons",
+      "Shape": "string"
+    },
+    {
+      "Key": "a4a9ec1b6bae740f343370c3e4859e5cc2ec82172e3597ebf7c22628771b1914",
+      "Source": "No",
+      "Translation": "否",
+      "Kind": "dialog",
+      "Role": "buttons",
+      "Shape": "string"
+    },
+    {
+      "Key": "512764f619c4f1e27262e2e7409881a87c450c34d012c4fadf8e20d900d8e9cd",
+      "Source": "Cancel",
+      "Translation": "取消",
+      "Kind": "dialog",
+      "Role": "buttons",
+      "Shape": "string"
+    },
+    {
+      "Key": "25383ff5086528ffaac2c86a8f8404525178a74444e8cacef4fafa27075d68a0",
+      "Source": "No agents running",
+      "Translation": "暂无运行中的智能体",
+      "Kind": "tray",
+      "Role": "label",
+      "Shape": "tray-agent-count"
+    },
+    {
+      "Key": "96e06a6a1d8ec415b5d08328a99a1c2587a987a444010b08287fdce3ed8c7890",
+      "Source": "⟪AGC0⟫ agents running",
+      "Translation": "正在运行 ⟪AGC0⟫ 个智能体",
+      "Kind": "tray",
+      "Role": "label",
+      "Shape": "tray-agent-count"
+    },
+    {
+      "Key": "6aa349fac48455b1564b645983edcf519e0c095b8908e111594592dfae04f079",
+      "Source": "Check for Updates",
+      "Translation": "检查更新",
+      "Kind": "menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "6a479280a4324be9ecc766e9cf0b810759a74890600c8a97ace92bf8c355cb4f",
+      "Source": "Checking for Updates...",
+      "Translation": "正在检查更新…",
+      "Kind": "menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "d47e41267dddb3f553fac3e6db53b079c598861ca18c46afd525853cb4763957",
+      "Source": "Downloading Update...",
+      "Translation": "正在下载更新…",
+      "Kind": "menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "b4e52ee69bdbea9c5aea0223bd744e4599d154ec85a667da400d81c783cc6d20",
+      "Source": "Restart to Update",
+      "Translation": "重启以更新",
+      "Kind": "menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "479d3ee80b566273f6738109fc602dd28d5af6adc1ed64545614f080edc36fd5",
+      "Source": "Connection info…",
+      "Translation": "连接信息…",
+      "Kind": "menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "09183b99de283dea9cba75d35f04adb787bfeadec5c178707dae3e40d20430ea",
+      "Source": "Working Directory: ",
+      "Translation": "工作目录：",
+      "Kind": "ui/tooltip",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "03f8cb45bc6703d72d51d7fd279dcb3a90fcb4459b38ede91ad8a366a473aa6e",
+      "Source": "For ⟪AGC0⟫, telemetry is force disabled.",
+      "Translation": "对于 ⟪AGC0⟫，遥测已被强制禁用。",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "1f10d258a0add66081db06313784f94e93fd9000001fb64185165cd7d3cd6e8d",
+      "Source": "⟪AGC0⟫ Sends immediately",
+      "Translation": "⟪AGC0⟫ 立即发送",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "fa0b4e997787619edc025bf7cf4d04991ba84d9e016fa3459161b6d7b340f049",
+      "Source": "⟪AGC0⟫ Queues after the turn",
+      "Translation": "⟪AGC0⟫ 在当前轮次后排队",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "aa566637a7064a6a23c183eb24e34dc09a3142578b4e4cc089cf1c68d94a6963",
+      "Source": "⟪AGC0⟫ Queues after the turn",
+      "Translation": "⟪AGC0⟫ 在当前轮次后排队",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "1c4dceaedf483ba55c45f8da40f8ab84bef5ae62e812edb7231381c1abb1ed4b",
+      "Source": "⟪AGC0⟫ Sends immediately",
+      "Translation": "⟪AGC0⟫ 立即发送",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "5b399f2b436e1da0223b510e218c9030c2e776a74158412d20afa4ff9f279817",
+      "Source": "⟪AGC0⟫ ⟪AGC1⟫ exceeded the rules budget and ⟪AGC2⟫ demoted from full inline content to a file-path pointer.",
+      "Translation": "⟪AGC0⟫ ⟪AGC1⟫超出了规则预算，⟪AGC2⟫已从完整内联内容降级为文件路径指针。",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "aef176d615ee76b90f7598ee07aea51d8fbbb7ee015b66ff70910b9f336def81",
+      "Source": "item",
+      "Translation": "项",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "2b76c797d6a9bc53084ed036a3b486756f385f39f7872e66adbfec6165a41d5d",
+      "Source": "items",
+      "Translation": "项",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "edff273b60ea3bac2eed7079a8dd399d8a7e08fc9932d16cf95ec5fb1481943f",
+      "Source": "⟪AGC0⟫ ⟪AGC1⟫ in ⟪AGC2⟫ exceeded the customization budget and ⟪AGC3⟫ excluded from context.",
+      "Translation": "⟪AGC0⟫ ⟪AGC1⟫（位于 ⟪AGC2⟫）超出了自定义预算，⟪AGC3⟫已从上下文中排除。",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "549b66e6947244d74c8b819b11b0b1f92644c114b5633ea667da53154086c5b6",
+      "Source": "Open ⟪AGC0⟫ settings",
+      "Translation": "打开 ⟪AGC0⟫ 设置",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "3e9c71b3eedebeafc02d04d9dc00e93d9d3f7c20f3e260fe15b312f1b48784d0",
+      "Source": "⟪AGC0⟫ settings",
+      "Translation": "⟪AGC0⟫ 设置",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "b1998f6776c4dec34c2f4a22120395a54aefcb25c8714662b48bdf6486f6a274",
+      "Source": " items",
+      "Translation": "内容",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "26ab6510184daff9d83c64315b4fd13015bb3d6717e597d88767e1683146ee05",
+      "Source": "View ⟪AGC0⟫ help⟪AGC1⟫ and ⟪AGC2⟫ side question⟪AGC3⟫",
+      "Translation": "查看 ⟪AGC0⟫ 条求助⟪AGC1⟫和 ⟪AGC2⟫ 条支线提问⟪AGC3⟫",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "4f89442160acd7b77142d81ef056573804b37d635e1dc9f730de72088495fcce",
+      "Source": "View ⟪AGC0⟫ help⟪AGC1⟫",
+      "Translation": "查看 ⟪AGC0⟫ 条求助⟪AGC1⟫",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "d6b9f7b289a781eef44e83f704375efce82d591fdfac5d201f37e3ba1ee7de95",
+      "Source": "View ⟪AGC0⟫ side question⟪AGC1⟫",
+      "Translation": "查看 ⟪AGC0⟫ 条支线提问⟪AGC1⟫",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "3fffb1fbb8e2fe243b9485567aef29e28e236491a1a83e74a79ec1923ae4058b",
+      "Source": "Work locally on ⟪AGC0⟫",
+      "Translation": "在本地处理 ⟪AGC0⟫",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "49700d5e8eb75f83dbc676e8b48fdb406f257c70147d6cb07a3a65869fc08872",
+      "Source": "⟪AGC0⟫, and reuse ⟪AGC1⟫",
+      "Translation": "⟪AGC0⟫，并复用 ⟪AGC1⟫",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "22177c51429ff93f8084044765f82909313313df69794b29db6fac0571b19967",
+      "Source": "Audio clip",
+      "Translation": "音频片段",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "72fc00278ec135655daede3429026e82cc4fad996662bb99722d7159f6b38114",
+      "Source": "Hey ⟪AGC0⟫!",
+      "Translation": "您好，⟪AGC0⟫！",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "3b6a8f9a669937c31b25f6d4de8ff6c4d6242f18ef72423fe0fd3c98d7670c35",
+      "Source": "⟪AGC0⟫ File⟪AGC1⟫ With Changes",
+      "Translation": "⟪AGC0⟫ 个已更改文件⟪AGC1⟫",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "fcc09eebf8544fea44e9c01eeb3a241deef47a638064322d4973e4444beeac98",
+      "Source": "Proceed with implementation plan",
+      "Translation": "按实施计划继续",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "bfc67ddaf2c03082021031a8b6f81cb20bd81aab48ddc2a427974bdcd5422741",
+      "Source": "Proceed with implementation plan and ⟪AGC0⟫ comment⟪AGC1⟫",
+      "Translation": "按实施计划继续并附带 ⟪AGC0⟫ 条评论⟪AGC1⟫",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "10bdcfda76ac2d703b01b51320cefa70482e728380ce908e45384c020e39df75",
+      "Source": "Video attachment",
+      "Translation": "视频附件",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1cdb1a7c37262f6414491c36727e84bdba027b0ab3b546438d4d7a9a1a7b52ac",
+      "Source": "PDF attachment",
+      "Translation": "PDF 附件",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8cd7c0a433804a1c376e628ece0806d3ee840b614f063fb9dc8a31330f81abc9",
+      "Source": "Text attachment",
+      "Translation": "文本附件",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9ca4cbe31fdd319075b2d543256e7877b672ce27f4460a6079c1fc10aba3ab83",
+      "Source": "CSV spreadsheet attachment",
+      "Translation": "CSV 电子表格附件",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "3901e684a152e64647507a6b527f54174ba9564e7468dd4d2a1cd138b821fac6",
+      "Source": "JSON attachment",
+      "Translation": "JSON 附件",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "cbc41ef6094dfd96d1c728fe07aa248f8b8009e0e984f880a3a429cc88905b4f",
+      "Source": "Markdown attachment",
+      "Translation": "Markdown 附件",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "acb6518f4817d4e98b56b14c37ac1555d82df9a2c8033a4c4d371eaf11e0e2be",
+      "Source": "Image attachment",
+      "Translation": "图片附件",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b9f460e60b67acc55263a7362f9eed7800687f3731b9e260109d97f4dc852833",
+      "Source": "Audio attachment",
+      "Translation": "音频附件",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "08488ae63f69704b2380809af861fb779c462c90f46a5e49d83ef95a1d789f04",
+      "Source": "Document attachment",
+      "Translation": "文档附件",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8462d36ece80c4c72cf10f0aa587b5d7084fccbe297907c4b1d38bb297d313f1",
+      "Source": "Zip attachment",
+      "Translation": "Zip 压缩包附件",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "528dcf4829f50bf18f19add27ee863f92fc6380e9113d30e7678a1d21b0547cc",
+      "Source": "File attachment",
+      "Translation": "文件附件",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "7c87e716b6028e7d87bb9b432c3b9c4b1648a27b21a1f1057c94aac8d1f3007e",
+      "Source": "No Model Selected",
+      "Translation": "未选择模型",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "ce13ac97dfba9f367b37a713b489e8dd91766a27622b868118d6a438c4aa573e",
+      "Source": "⟪AGC0⟫ models selected",
+      "Translation": "已选择 ⟪AGC0⟫ 个模型",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "cf87d3b32d2bc22f5eea8361e06bae8e76b311a6723b1e8987f6a71bc446a627",
+      "Source": "comment",
+      "Translation": "条评论",
+      "Kind": "ui/span",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "7a5efdacf8ee70c5244fa095021a5370177eed3fa4bf9b98353e8739355c5f58",
+      "Source": "comments",
+      "Translation": "条评论",
+      "Kind": "ui/span",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "137be399f0503583fb77c923ba6358d2923051bb7d7e134f3762444aea1a3cf8",
+      "Source": "Run until the specified goal is completely finished.",
+      "Translation": "持续执行，直到指定目标全部完成。",
+      "Kind": "ui/system-command",
+      "Role": "service/command-description",
+      "Shape": "system-command"
+    },
+    {
+      "Key": "070d8f65fd4a7c29add30f513a2a967f2fd44c0a01d036904383380a4856a031",
+      "Source": "Compact the conversation now (summarize history to free up the context window).",
+      "Translation": "立即压缩对话（汇总历史记录以释放上下文窗口）。",
+      "Kind": "ui/system-command",
+      "Role": "service/command-description",
+      "Shape": "system-command"
+    },
+    {
+      "Key": "65c89883cc29e2d5c69fc3853234b656279b16c9fb475870705637821ab720a7",
+      "Source": "Run an instruction on a recurring schedule or as a one-time timer.",
+      "Translation": "按周期或一次性定时执行指令。",
+      "Kind": "ui/system-command",
+      "Role": "service/command-description",
+      "Shape": "system-command"
+    },
+    {
+      "Key": "50dbc8a53ba48d43636e5e43bf52d23f08d41a82e50ab118fcc17b3fa4eabbfb",
+      "Source": "Invoke a browser agent for web tasks.",
+      "Translation": "调用浏览器智能体处理网页任务。",
+      "Kind": "ui/system-command",
+      "Role": "service/command-description",
+      "Shape": "system-command"
+    },
+    {
+      "Key": "74e92a9a8ba645ed33fcbebf8c49eeed1f7d191327e8f669c6f367ecaefd9aaa",
+      "Source": "Plan carefully before executing a task.",
+      "Translation": "在执行任务前仔细规划。",
+      "Kind": "ui/system-command",
+      "Role": "service/command-description",
+      "Shape": "system-command"
+    },
+    {
+      "Key": "a2eccbe623f655e612de40f8fb3c2afb671de7326e242aa7baf4f981a49b6255",
+      "Source": "Interview me to align on a plan.",
+      "Translation": "向我提问，共同明确计划。",
+      "Kind": "ui/system-command",
+      "Role": "service/command-description",
+      "Shape": "system-command"
+    },
+    {
+      "Key": "4c9167981c211039cafd0aba0b45e281385b4874154d93bc0f7d92f012c2fde8",
+      "Source": "Invoke a team of agents to autonomously tackle large projects.",
+      "Translation": "调用智能体团队自主处理大型项目。",
+      "Kind": "ui/system-command",
+      "Role": "service/command-description",
+      "Shape": "system-command"
+    },
+    {
+      "Key": "e6e1a199aa7e21ef5c659d408ce4bc6ce721b746fc5c83fbd51557b9effbdcc4",
+      "Source": "Reflect on recent successes or corrections to capture reusable skills or rules.",
+      "Translation": "反思最近的成功或修正，提炼可复用的技能或规则。",
+      "Kind": "ui/system-command",
+      "Role": "service/command-description",
+      "Shape": "system-command"
+    },
+    {
+      "Key": "3d829e7bcc5ba304945839a78cd4b8ed7d61bb3b782203a1b74aa49c2c09d73d",
+      "Source": "Invoke the Boost multi-agent orchestrator for complex tasks.",
+      "Translation": "调用 Boost 多智能体编排器处理复杂任务。",
+      "Kind": "ui/system-command",
+      "Role": "service/command-description",
+      "Shape": "system-command"
+    },
+    {
+      "Key": "480eca068965d190767a8453553e3962df792aa8307a3fb6676c65fb2a8f393a",
+      "Source": "[Teamfood] Invoke a browser with computer-use tools only with experimental model.",
+      "Translation": "[Teamfood] 仅使用实验性模型并配合计算机操控工具调用浏览器。",
+      "Kind": "ui/system-command",
+      "Role": "service/command-description",
+      "Shape": "system-command"
+    },
+    {
+      "Key": "08973537c93052202df107725260f21695be762cbf6f8eabf792bd87c4718fca",
+      "Source": "Subscription",
+      "Translation": "订阅",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "465334de988ec4a1bc04448e1b01a02b7ac8bd1eb4a98a7840b09c9b99b8acec",
+      "Source": "Pay As You Go",
+      "Translation": "按量付费",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8b76701dc5de082d2a3b7f1c2052fd580d4286aa918690e118f672b922d4b34d",
+      "Source": "Use Antigravity through your Gemini subscription.",
+      "Translation": "通过您的 Gemini 订阅使用 Antigravity。",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "47b2425e795be92d0dea1df31099fb09a9a061128f6c081899deee73188e84bd",
+      "Source": "Pay only for the tokens you use, billed through Gemini platform.",
+      "Translation": "仅为您使用的 tokens 付费，账单将通过 Gemini 平台结算。",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "cb418cee391dc555a2d348bba2d60f709f202cfc497c3e50567957c856da068d",
+      "Source": "Open ",
+      "Translation": "打开 ",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "75dc2ccc67d4fa9a0b81713d4f1f77348f86cc5eacb2ff7441dc20ddba727b82",
+      "Source": " panel",
+      "Translation": " 面板",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "4f1eaead717a08f793721229c5d4e43effcc6dc4e8add79ce59f47f612aaebab",
+      "Source": "unknown",
+      "Translation": "未知",
+      "Kind": "ui/b",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "c7657010558fbe352a56acc45ab8164ea0f5835cd698774e7960b1fa4cafe359",
+      "Source": "(none)",
+      "Translation": "（无）",
+      "Kind": "ui/b",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "2e1edefc5e10cd37586a2a08da799fc6b9787f22ce6e8ba40495e7255e4c0249",
+      "Source": "documentation",
+      "Translation": "文档",
+      "Kind": "ui/a",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "86dad8068142af2928969337729ad7a3d89e3bcfe9f539f89d36875851165558",
+      "Source": "⟪AGC0⟫ item",
+      "Translation": "⟪AGC0⟫ 项",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "template"
+    },
+    {
+      "Key": "1b8f69c4379c41bf516d53615548bcc507023e705344e743abd5c8e2261faca1",
+      "Source": "Stop ⟪AGC0⟫?",
+      "Translation": "停止 ⟪AGC0⟫？",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "template"
+    },
+    {
+      "Key": "ff32e301f5ea22a6eaa9c0eaf04467dcccd075ecb89d57b92d05e32d751ff709",
+      "Source": "and ",
+      "Translation": "以及 ",
+      "Kind": "ui/li",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "1275784bc278e7cf6e5b34bd86e1babb6b623f240eefb8ae8c1b0afd4c625ddc",
+      "Source": " more",
+      "Translation": " 项",
+      "Kind": "ui/li",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "a190b315e78c8179fe245bcd17ee7436f9039915fd82b21620606b6786aad139",
+      "Source": "Automations",
+      "Translation": "自动化",
+      "Kind": "ui/navigation",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "0eb44249a918713f572ea290927a46d36695237220207a7d1ce66a6474355c0f",
+      "Source": "Automations",
+      "Translation": "自动化",
+      "Kind": "ui/navigation",
+      "Role": "sidebarLabel",
+      "Shape": "string"
+    },
+    {
+      "Key": "afb9070ee9d7199bc8ef0d3cb3e455b59f881fccd6af9c7d9fc56bed4762f6fc",
+      "Source": "Search automations...",
+      "Translation": "搜索自动化…",
+      "Kind": "ui/navigation",
+      "Role": "searchPlaceholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "7e765b43de77f8e774796cd1996096f818fb551d467fe693a3b176b50afc8928",
+      "Source": "automation",
+      "Translation": "自动化",
+      "Kind": "ui/navigation",
+      "Role": "emptyMessageSingular",
+      "Shape": "string"
+    },
+    {
+      "Key": "4732a9ae69efb52f0d78b56c7a332e155048f6e2742076f1194b30900d54e6a0",
+      "Source": "automations",
+      "Translation": "自动化",
+      "Kind": "ui/navigation",
+      "Role": "emptyMessagePlural",
+      "Shape": "string"
+    },
+    {
+      "Key": "a226cf4355638b9994280815b7d99d858d7015ec1357f5ef8ec580d8ce42a12a",
+      "Source": "⟪AGC0⟫ call recording",
+      "Translation": "⟪AGC0⟫ 条通话录音",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "db773d16eae6e545dc8d524cea71be79b0de0c4b0790c2a923c7e2ca6ee90312",
+      "Source": "This deletes ⟪AGC0⟫ (⟪AGC1⟫) from your machine. You can't undo this.",
+      "Translation": "此操作将从本机删除 ⟪AGC0⟫（⟪AGC1⟫），且无法撤销。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "d7d09bf9759db4406100024d31403eb9e1591f71360526540b6e83153b50e5ce",
+      "Source": "Recent",
+      "Translation": "最近",
+      "Kind": "ui/helper-call",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "b71d777a2e70cdeec309a6102e784b9e3ba4bb774ef71cb7ca5080e7e616f2be",
+      "Source": "SSH Config (⟪AGC0⟫)",
+      "Translation": "SSH 配置（⟪AGC0⟫）",
+      "Kind": "ui/helper-call",
+      "Role": "label",
+      "Shape": "template"
+    },
+    {
+      "Key": "0c610c8a19248056cf79e8953d156739444ee6b0fca6646af0a36522c2478ad1",
+      "Source": "SSH Config",
+      "Translation": "SSH 配置",
+      "Kind": "ui/helper-call",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "9c916dde0e38052670f0f4cbaff0d3c02c337c6047caaa0549198ed8c0be530b",
+      "Source": "Show ",
+      "Translation": "显示其余 ",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "b1011b36e6c7f3776f79a4d5429ce1696b64440156797f491815a34d50db777b",
+      "Source": " more...",
+      "Translation": " 项…",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "faeead86063c25b644eda859870d35f1cc87843f70e9d4d262eef05d7c5a1279",
+      "Source": " more",
+      "Translation": " 更多",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "a56bf8ac590cd59a75983ca6faa7b5cfa273d50b1e31fc675da3003392b76099",
+      "Source": "line",
+      "Translation": "行",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "780c39ff4071c880724ff9ee665dd307c4e82b88d3de3b931750f2c11bf52045",
+      "Source": "lines",
+      "Translation": "行",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "9ab4376af5fd2da62d63ed8e5d35d4bc27c82ce8b6ba0b931d714bd502073f08",
+      "Source": " insertion",
+      "Translation": " 行新增",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "4f06c6bfca0c7f01df45df6156b6ff6b2a49119e6ff4fd34331234f16bc48d38",
+      "Source": " deletion",
+      "Translation": " 行删除",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "930a5dedd9625d9cb1e83353678d1a7aa28809506eaf7d5d087c541d334a29eb",
+      "Source": "⟪AGC0⟫ comments",
+      "Translation": "⟪AGC0⟫ 条评论",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "template"
+    },
+    {
+      "Key": "c00247ed2e4f4892cbfc59280c1c214f8c3381a6bd8cf69f29cc3a2811f001c0",
+      "Source": "Environment paused. Click to resume it and load the ⟪AGC0⟫.",
+      "Translation": "环境已暂停。点击恢复并加载 ⟪AGC0⟫。",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "template"
+    },
+    {
+      "Key": "aa9a3ff62002df1e17b529dc267165ba320e08618bef8b71bcf32438b707b275",
+      "Source": "Retry",
+      "Translation": "重试",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "string"
+    },
+    {
+      "Key": "1889612452141e94b0c1b188c3b3332c7f777ab2e6e197daca42bf54065e57ba",
+      "Source": "result",
+      "Translation": "条结果",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "51b8b42de4586af47cba1e65b7beafa19bdfd7cb6210e2c8923d8d0ac433c5bc",
+      "Source": "results",
+      "Translation": "条结果",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "8ed0c68d5c432b4a625fd8685f1a7c05a2fa42c2e39b29284db88c765aaf7b72",
+      "Source": "Show ",
+      "Translation": "显示其余 ",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "62e60ac0acaf82946ec95aef7f5376ddc6ae7b538c049da9d94cd92943eb2dbe",
+      "Source": " more",
+      "Translation": " 项",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "cbc1117b6d0cc466fd776ac32a9b1c22058c93f2e601949d0dfa52abddcc1be5",
+      "Source": "terminal",
+      "Translation": "终端",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "36335270f6f663844864be2e3a05f965b6ceec2c837f8d111dbbfb7327709543",
+      "Source": " result",
+      "Translation": " 条结果",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "8413fe278ea6e28313034505588ebe41242c7bda675ffc2f5a73eb3ede4d7361",
+      "Source": "Reading",
+      "Translation": "正在读取",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "7f35a68579f8971d2af6734cbff25fb00d5ab2780bd33b13e7b90618c7722312",
+      "Source": "Read",
+      "Translation": "已读取",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "103f914b611c83bf99443c458137d1b8c1146b41024915ad6d518786b017e475",
+      "Source": "⟪AGC0⟫ terminal:",
+      "Translation": "⟪AGC0⟫终端：",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "e87e69971264f067a1d684eee880c0c08be5d9a713651acba905fc4f125905c6",
+      "Source": " result",
+      "Translation": " 条结果",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "99c7415f5086dffd83596426f63ccff0c3c2ee95c4e0da699c48eacaed763142",
+      "Source": "docs",
+      "Translation": "文档",
+      "Kind": "ui/a",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "310a2f1663760f6bc1506707ab28865651dc32f239f6b89c300acdc2d4d88928",
+      "Source": "(⟪AGC0⟫ step⟪AGC1⟫)",
+      "Translation": "（⟪AGC0⟫ 个步骤⟪AGC1⟫）",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "4fb9b449b8ce6cd0cb3d5a0f89fdeafc3b07753f5007d8f4c5215220c91679fa",
+      "Source": "(skipped)",
+      "Translation": "（已跳过）",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "76d7f836e8496efc233fba87d8c161f1e056ad6765f2311d8523ffd46b8d6b32",
+      "Source": " subagents",
+      "Translation": " 个子智能体",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "488a5dcd78a9b730c77c0ac5945c98c6b62664e1985ea5e8389f78ec4903572a",
+      "Source": " question",
+      "Translation": " 个问题",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "3c5e8a5c3defcad180a1dbc5dce6e853fe94687964d279f0a555352f5994fc38",
+      "Source": " around",
+      "Translation": "约",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "db6a6ea1ea7d7d6bda45333f9f52e39e30ba38f40b9f80d97b51e9a319a65559",
+      "Source": " on",
+      "Translation": "，于",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "5f1fb6d8044c97c41849e14f8ec6787d3ef88da9d233b5d8a4ef9de88fc431e5",
+      "Source": " around",
+      "Translation": "约",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "829be560e7a87f432e17364120dde1c4cafa372310ce36157a9f6e593a414cd2",
+      "Source": "Delete",
+      "Translation": "删除",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "string"
+    },
+    {
+      "Key": "7f17ba187470fe6e73edf12fd3c2309e63c5a35ca82c83a44730d867d460436a",
+      "Source": "Unarchive",
+      "Translation": "取消归档",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "054130abd7110674ff7b045cb701a4ef58a9f578757a1de6e0f52410833efa51",
+      "Source": "Archive",
+      "Translation": "归档",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "532550df744f9bf8cf38ff4288c585aa812a5794390e482bbd10b530aff98b29",
+      "Source": "Unfold lines ⟪AGC0⟫-⟪AGC1⟫",
+      "Translation": "展开第 ⟪AGC0⟫-⟪AGC1⟫ 行",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "template"
+    },
+    {
+      "Key": "32c0c3a4e565cd6f9e0bc4e03c26e4989149296cb37e2006b087901c47ed11e2",
+      "Source": " lines",
+      "Translation": " 行",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "04e395ffccfb3a3431554887cd1b657f6b3b66aed1646dbe2cc2519653155696",
+      "Source": "Review ",
+      "Translation": "查看 ",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "9597aa545e53dabd6a7bed0fc4143fb6b9ea049c023decdc86d249c492655b10",
+      "Source": " comment",
+      "Translation": " 条评论",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "514781e199f13e69076bdd41dde4ea8aed44c4b6e02bdc9926a3ef1853d021b3",
+      "Source": "Cancel Task",
+      "Translation": "取消任务",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "string"
+    },
+    {
+      "Key": "f7d7185ac780c138ccec9dccb95a1c4615a0635daa2213413dad795280f16ae7",
+      "Source": " subagent",
+      "Translation": " 个子智能体",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "0f3dd36ea8965997136e100dc7692851b786f1593aa42ee3c1d80b68a4136633",
+      "Source": "Stop Subagent",
+      "Translation": "停止子智能体",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "string"
+    },
+    {
+      "Key": "b135b264646be1b2f736a8782f141b3c813dd4d361a01aada3cce2404c31a223",
+      "Source": "Open Terminal",
+      "Translation": "打开终端",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "string"
+    },
+    {
+      "Key": "c2a86170b21de9397400f6caa4afa7fd523f642348301c6d88cc759d435209fd",
+      "Source": "file",
+      "Translation": "个文件",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "84e79ae0f31846628753eebb4f361d68651b4fa262cd074f3e48dd03641e43ee",
+      "Source": "files",
+      "Translation": "个文件",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "afacb9a6d2b77b8b2d883112c56e74d418e94504cc069648122a442b8bfd5aa6",
+      "Source": "Annotate",
+      "Translation": "标注",
+      "Kind": "ui/helper-call",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "1e2f0e4ea2d73c8f64ae5b468b3b6a814e82aa74ef1343608d21d5702aec44c6",
+      "Source": "Pan",
+      "Translation": "平移",
+      "Kind": "ui/helper-call",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "d48455db9d6ac7dc4ec912c85dcb9fdd086a1d3ac4b07389c5332ed49ea0264d",
+      "Source": "Grid",
+      "Translation": "网格",
+      "Kind": "ui/helper-call",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "f442460949744c09169b0fe6a73296beba4ee8bf9d413450cc187d701911baa5",
+      "Source": "Toggle checkerboard background",
+      "Translation": "切换棋盘格背景",
+      "Kind": "ui/helper-call",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "72e55318644a9526edcdaad88f81047cb6bb3b7214b29b684163eea12bc13253",
+      "Source": "Zoom out",
+      "Translation": "缩小",
+      "Kind": "ui/helper-call",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "cd90e6e76dfefff0a03ed309cff8f3d550386cf9027ed4866a213c8ca399f8b7",
+      "Source": "Zoom in",
+      "Translation": "放大",
+      "Kind": "ui/helper-call",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "fb2f2acdcdd1e74c8360405cf4d46df98bea32beaf22b2e972b3780665509f50",
+      "Source": "Fit",
+      "Translation": "适应窗口",
+      "Kind": "ui/helper-call",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "70149b552111bd141a5101a487a99ab193062b39c95f701c501da5f5386e8a96",
+      "Source": "Edit Conversation Title",
+      "Translation": "编辑对话标题",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "string"
+    },
+    {
+      "Key": "a1835d7de8ab8b59299a3f1f0e089f33a87dde2ac4678281b2c24e57ccac9946",
+      "Source": "Restore Conversation",
+      "Translation": "恢复对话",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "string"
+    },
+    {
+      "Key": "c47a754aacc81c8453247a9fb39a2c9298563f2a8bb027c6e5d06af2322f9e75",
+      "Source": "Delete Permanently",
+      "Translation": "永久删除",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "string"
+    },
+    {
+      "Key": "9ef5b7e9da185f35108e4b788c2c274e11f0eaa11c0c6647781557f66032e752",
+      "Source": "Stop Execution",
+      "Translation": "停止执行",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "string"
+    },
+    {
+      "Key": "6c571b260481167db0280c21c9fcaa83035de467a7e2facca55f6d3d1d8a299e",
+      "Source": "The current trigger rate is too high.",
+      "Translation": "当前触发频率过高。",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c83c357b39372360fdbbb4c82b3498b526cc4b02ae76a7d808df26a816ed8e50",
+      "Source": "This prompt is straightforward and does not need alternative comparisons.",
+      "Translation": "此提示词较简单，无需备选方案对比。",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f8e371d109b099e3bc19bc1faa3874c782f6c175b79307828c70584ea9a6e930",
+      "Source": "This request is not well-suited for parallel Best-of-N generation.",
+      "Translation": "此请求不太适合并行 Best-of-N 生成。",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "18a0ae316e1877bb72c6067afb6f21f9d853907fb5e1012f48b38804b4387877",
+      "Source": "I prefer an immediate single response to prioritize productivity right now.",
+      "Translation": "我现在更希望立即获得单个回复，以优先保证效率。",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "13f8c171a693cc0e68161b50cb931bc981e73807086133a9907b38f722b62ea3",
+      "Source": "Too many surveys",
+      "Translation": "问卷过于频繁",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c9016fd55e70387e97d5eb78e9c8eaa1e6fceb7da2c82d83a48d4af4b0f718d8",
+      "Source": "Prompt too simple",
+      "Translation": "提示词过简单",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "7f4191449eb95f11ca6bbd5add9ea0b7e3a47618ef04370aef5c056b424e82f7",
+      "Source": "Not suitable for Best-of-N",
+      "Translation": "不适合 Best-of-N",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "fe956315b521b91842074fc394954568bbcb02ac72f587430f47b3d5b27d2ad2",
+      "Source": "In a rush",
+      "Translation": "赶时间",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "dcadabb7e09c307062ab6a6353f92b187d7eaca34996b7eec5a87c8f7c334d1e",
+      "Source": "Gemini Models",
+      "Translation": "Gemini 模型",
+      "Kind": "ui/component",
+      "Role": "service/quota-group",
+      "Shape": "service"
+    },
+    {
+      "Key": "76ccd4680391acc62e27207c27de7e32e961ef6a3929632c2cb4232a6b41e7b9",
+      "Source": "Claude and GPT models",
+      "Translation": "Claude 和 GPT 模型",
+      "Kind": "ui/component",
+      "Role": "service/quota-group",
+      "Shape": "service"
+    },
+    {
+      "Key": "11f1c5eabeca1820141bdeabf95c47cbb2fa554886b3b9d0fe50b89f7f1aa963",
+      "Source": "Gemini Models",
+      "Translation": "Gemini 模型",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "14c2b6498b611f8fc8099db6d14ec0d7445a788cc451ec7a6a40a7f95aea0f10",
+      "Source": "Claude and GPT models",
+      "Translation": "Claude 和 GPT 模型",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "e453f641fad79af5aa91660ee9517a40601e05dbf887c07611e3773f43fd1aff",
+      "Source": "Daily limit",
+      "Translation": "每日额度",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "9ed7e0fbd365403b1d1d671e09bcf1f3a3a4499a6a6cff18bf66b1ebf7487525",
+      "Source": "Weekly limit",
+      "Translation": "每周额度",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "3a5ae2bc2ceb63475614a278ece79373d32f9eb7a02566614c4fb61ac5cae1a2",
+      "Source": "⟪AGC0⟫ limit",
+      "Translation": "⟪AGC0⟫ 额度",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "a160fa1e43c37f6d0162fab263416a5c270c9829e77ab296bec75483decbfba8",
+      "Source": "Resets in <1m",
+      "Translation": "将在 1 分钟内重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "54f9b9da1b5f8c021ddb30e2d891fbc67c339ca2206088fe9ce083cb28d80962",
+      "Source": "Resets in ⟪AGC0⟫",
+      "Translation": "将在 ⟪AGC0⟫ 后重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "79816499a14e8fa6e08631d58e136f25945fc4d53205d32691c1e230fb1eb764",
+      "Source": "Daily limit, resets in <1m",
+      "Translation": "每日额度，将在 1 分钟内重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "a9a762534172f565f36024b176d618432ae1579854052b9fc8b1df2194102649",
+      "Source": "Weekly limit, resets in <1m",
+      "Translation": "每周额度，将在 1 分钟内重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "89f676a648d71a337414f5c76c70316a06d0c7cc0f89bde3ae9c1270560aea88",
+      "Source": "⟪AGC0⟫ limit, resets in <1m",
+      "Translation": "⟪AGC0⟫ 额度，将在 1 分钟内重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "e2fab5275b381a04a64ada664330cabec5cca73a29464bef54f8ec9082a6fdf4",
+      "Source": "Daily limit, resets in ⟪AGC0⟫",
+      "Translation": "每日额度，将在 ⟪AGC0⟫ 后重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "f6bef3dc162bb3c0c217bf2c3e42ab58ec14264ab23381388f36a47a23bc06ef",
+      "Source": "Weekly limit, resets in ⟪AGC0⟫",
+      "Translation": "每周额度，将在 ⟪AGC0⟫ 后重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "34ca104d8c3da7aad55ac5ca00d664d49c1c92a806c3a47f086804ca58ae310f",
+      "Source": "⟪AGC0⟫ limit, resets in ⟪AGC1⟫",
+      "Translation": "⟪AGC0⟫ 额度，将在 ⟪AGC1⟫ 后重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "58bb3ddf67a65f9794d171391d87a479e26661e42b5155759873378673a1f05c",
+      "Source": "⟪AGC0⟫d ⟪AGC1⟫h",
+      "Translation": "⟪AGC0⟫ 天 ⟪AGC1⟫ 小时",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "b27a1bad97772f16ad30abd9d41adb0898e04368bff593ee343d0c95cd3c998a",
+      "Source": "⟪AGC0⟫h ⟪AGC1⟫m",
+      "Translation": "⟪AGC0⟫ 小时 ⟪AGC1⟫ 分钟",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "785eeeac080011409ef0ba41b1a711e53593146c14bb9472b142e83b1bca4dc2",
+      "Source": "⟪AGC0⟫d",
+      "Translation": "⟪AGC0⟫ 天",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "997d7c68b9d4d73321cf2526356f6a0cf6a03a97ae172ec314a1d975f67e765d",
+      "Source": "⟪AGC0⟫h",
+      "Translation": "⟪AGC0⟫ 小时",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "1d55a8048c0322fc3877153df0278393aaef4b795fe4b59c71930246a6c5b0a4",
+      "Source": "⟪AGC0⟫m",
+      "Translation": "⟪AGC0⟫ 分钟",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "61ec4a3c0cea6291cbfcac4cbcade145c2eb43d68b8b1532d55544c3daa78275",
+      "Source": "⟪AGC0⟫s",
+      "Translation": "⟪AGC0⟫ 秒",
+      "Kind": "ui/span",
+      "Role": "service/quota-title",
+      "Shape": "service"
+    },
+    {
+      "Key": "53b213254b25d85f6cebc80b1cd6e4f4567bb3dd4abab4d1a40b7a870fc4104b",
+      "Source": "Daily limit",
+      "Translation": "每日额度",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "8fa2b1c32dc3474cb5fcdec925482f37d7eab448eb8d174a965352a08750aee6",
+      "Source": "Weekly limit",
+      "Translation": "每周额度",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "d7d1bf146f73144addc376fc0027e3b00cfff6494b53249d212f50c6679e0a88",
+      "Source": "⟪AGC0⟫ limit",
+      "Translation": "⟪AGC0⟫ 额度",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "11a5607a8f01dfc5ca1833f0edcfd6130eed43a13446bb28fa36cd95bd4240be",
+      "Source": "Resets in <1m",
+      "Translation": "将在 1 分钟内重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "c5fffd26f5393e3c73b301b44e28bea5d7c5bc9d5004da8502c4e4a8a2787b55",
+      "Source": "Resets in ⟪AGC0⟫",
+      "Translation": "将在 ⟪AGC0⟫ 后重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "c0b65ac439cc7cd137b643fa6cd2b8c57a34926f1d1cd3c60daab53713820bd8",
+      "Source": "Daily limit, resets in <1m",
+      "Translation": "每日额度，将在 1 分钟内重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "0c549d98e4c590dba3ebb9b93cd3f3d6a5cf6952c690ba1c83bf38c12ea28834",
+      "Source": "Weekly limit, resets in <1m",
+      "Translation": "每周额度，将在 1 分钟内重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "818afcb546d541212662401f4121b9748b3a1b78817c4680c73bdddbfaf2124a",
+      "Source": "⟪AGC0⟫ limit, resets in <1m",
+      "Translation": "⟪AGC0⟫ 额度，将在 1 分钟内重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "1a910e10438fd0c1346ef141bea11f0f277e744e4cf78ab6134b95e8c8fccd99",
+      "Source": "Daily limit, resets in ⟪AGC0⟫",
+      "Translation": "每日额度，将在 ⟪AGC0⟫ 后重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "15f5bf9ee07adbeffe0f6278511f76498fa766bb8da741c56af1bb3d12ffad0c",
+      "Source": "Weekly limit, resets in ⟪AGC0⟫",
+      "Translation": "每周额度，将在 ⟪AGC0⟫ 后重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "c938669145b8714c97c967e4c3bad8d0291e340d4b6d01a61b99e8adefa8167d",
+      "Source": "⟪AGC0⟫ limit, resets in ⟪AGC1⟫",
+      "Translation": "⟪AGC0⟫ 额度，将在 ⟪AGC1⟫ 后重置",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "0f78ef04a4be2316b92d502cbb3da5918aa28470e72de72b5a1e01378b9cd65c",
+      "Source": "⟪AGC0⟫d ⟪AGC1⟫h",
+      "Translation": "⟪AGC0⟫ 天 ⟪AGC1⟫ 小时",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "49a35aea3023be07f4ceabb2c6b0dd44acd1b989196f866c9fcb17837acc2d8a",
+      "Source": "⟪AGC0⟫h ⟪AGC1⟫m",
+      "Translation": "⟪AGC0⟫ 小时 ⟪AGC1⟫ 分钟",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "b725598d12bda7461c2d6674841f7367aec3c5205bbf16ae4dfb4cd5626e05c6",
+      "Source": "⟪AGC0⟫d",
+      "Translation": "⟪AGC0⟫ 天",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "df4ee8e5f41c1ef73b9a6e6f54bbc0a0c7d09696a940aace9ee9a590d45ca9f7",
+      "Source": "⟪AGC0⟫h",
+      "Translation": "⟪AGC0⟫ 小时",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "b61811c2d5c4eeb612f696bfdfb0084701b407fc1920b0da592dad1e4d561500",
+      "Source": "⟪AGC0⟫m",
+      "Translation": "⟪AGC0⟫ 分钟",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "2692a47ed0b5d9a494f62fb01eb909b8c95d3623dc7ee2a798bb70ea7a9f08d3",
+      "Source": "⟪AGC0⟫s",
+      "Translation": "⟪AGC0⟫ 秒",
+      "Kind": "ui/span",
+      "Role": "service/quota-detail",
+      "Shape": "service"
+    },
+    {
+      "Key": "94d150fbdc919001638fd5312f61430f20e9373a52ac12e51ae49a7e019777d0",
+      "Source": "+⟪AGC0⟫ attachments",
+      "Translation": "+⟪AGC0⟫ 个附件",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "template"
+    },
+    {
+      "Key": "16b86399da2aa91a6343a6e0c2a80ebb60ee8c72bd184564e523e2648e8d77b3",
+      "Source": "1 comment",
+      "Translation": "1 条评论",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "5f908d6525a9eb080e8176be0f657b887702701c565bd31e8f1b7a145827cc11",
+      "Source": "⟪AGC0⟫ comments",
+      "Translation": "⟪AGC0⟫ 条评论",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "a546fded49007a4319322f0ba61169054713381dbe8d89b1838a6168d57abbd5",
+      "Source": "Empty message",
+      "Translation": "空消息",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "5e6fc442838aa454e8e317c0be21f63c74731c3f6fe02e3ca5d9578fe3e221bf",
+      "Source": "Marketplace",
+      "Translation": "市场",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "5672464096f3a39a4e47a111a6e211d0e4304b9c7fd6930fb53adeda4f2df3cf",
+      "Source": "Installed",
+      "Translation": "已安装",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "7c276e739dd17deb9e4edeb7174e9ca552177a5443f031590e3f44873b8732aa",
+      "Source": "menu)",
+      "Translation": "菜单)",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "760ff768bd3c357ad3278692439259d99b69342e3cab923b2ff2c4881467f3f8",
+      "Source": " subagent",
+      "Translation": " 个子智能体",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "bc748fc3f04967b89b15ee8179ee9cebb0d1193d1c3c12573222a09b6090cb0a",
+      "Source": "Stop",
+      "Translation": "停止",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "string"
+    },
+    {
+      "Key": "c0b4580e74d7be80b27b4929f54b47ce0051852a74db182c6a15335b599fd01e",
+      "Source": "file",
+      "Translation": "文件",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "f6264b5e4e92f895f457e07d8631eafb30e9fc04472039b224c60abff4669284",
+      "Source": "Remove ⟪AGC0⟫",
+      "Translation": "移除 ⟪AGC0⟫",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "f3573319509ea38d69e01b0435af0331a03143f526ba2c981c9b0cbb7ff5aa7f",
+      "Source": "Runs",
+      "Translation": "按",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "df4091e9940617f66c351c7b63bd16b4ce27126a39a96505a6143145e1f11ff9",
+      "Source": "with",
+      "Translation": "使用",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "64198d7aa9b1bfb3444ca1512115b1530f219d30f2970797845293ff4d52bac6",
+      "Source": "on this computer.",
+      "Translation": "在本机运行。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "c0af314f2529b091a8ee6577390f5cd3a6b15e954211cec85c8ad3bbe52f0b56",
+      "Source": "in",
+      "Translation": "在",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "7575af881812fdb29e744ec16b7d8330b3e96beee3ae2d1d3c3e87d803809c57",
+      "Source": "A ",
+      "Translation": "一个 ",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "7f9dd1df4367a583406ff3f643d98549340de1aea4bdd5d23f0ce47028813728",
+      "Source": " with ID ",
+      "Translation": "（ID 为 ",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "3bdd3f7ab9b0bf944e4f23028d4756122b2af6e86bae5157b8c3a2e0e8cffbba",
+      "Source": " already exists.",
+      "Translation": "）已存在。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "2a7433842324b376ccb24996650ea44c591382cccec98a139acb02cf6b69c551",
+      "Source": "This computer",
+      "Translation": "本机",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1c5b1e97ad60f24e670d2e648aed22a43f4b527f68ddc48bf0f73ac9c89379f5",
+      "Source": "Remote",
+      "Translation": "远程",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9d9023448beaa50d4538dead59006b598496e3583042938d73e009fb33e49306",
+      "Source": "No ",
+      "Translation": "没有",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "a6453fcb50b5f9b5e938cedd22fd597d5d4d136e3c49ae7032bc4d638be3ef68",
+      "Source": "scheduled tasks",
+      "Translation": "定时任务",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "59ee1922b222b79d3e5d9d98c34dd306b512f4ef894f135a8b6b8fbc78441b72",
+      "Source": "automations",
+      "Translation": "自动化",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "34e4f6d38316d1060844782c42618ba6c7e8b8da45fcf6a07dbaf36f64c4d775",
+      "Source": " match “",
+      "Translation": "匹配“",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "039fb24d4a60d1dcff7a33e53c43a3da83966c888a2ea5a97189789b0d2f12bc",
+      "Source": "scheduled task",
+      "Translation": "定时任务",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "6616e5c1f94a8b0ed4a4be091cb184095cf7d61e0107cc415ab5e5dfcd53c871",
+      "Source": "automation",
+      "Translation": "自动化",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "baab907a5a86ca49cd7076958036cbc3f3dd3d040ba2cfd3a9d48f0793994195",
+      "Source": "Add ⟪AGC0⟫",
+      "Translation": "添加⟪AGC0⟫",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "66d8f517925d8bcc4c5411401323f788545c8c5444cae0fa6b58c5cbc46dd849",
+      "Source": "New",
+      "Translation": "新建",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "3720a190a455c0ee671fc4c56de8a7252fc3fb36d34ab38c170a0a2584f3b5bb",
+      "Source": "scheduled tasks",
+      "Translation": "定时任务",
+      "Kind": "ui/component",
+      "Role": "emptyMessage",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8a2b2174ac9e2375733bf523b8c4abcb20245d0abc4c833e722dafb7a42d0fe2",
+      "Source": "automations",
+      "Translation": "自动化",
+      "Kind": "ui/component",
+      "Role": "emptyMessage",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "24a432a6a637ec95f02accedf7f7fcd4926a563ccda212ee20304146441b2804",
+      "Source": "No ⟪AGC0⟫ matching your search",
+      "Translation": "未找到与搜索匹配的⟪AGC0⟫",
+      "Kind": "ui/component",
+      "Role": "emptyMessage",
+      "Shape": "template"
+    },
+    {
+      "Key": "90772d5e623001ca4ded0dc8293ea753b42f5744bdccf9d686c46eadd213258d",
+      "Source": "No ⟪AGC0⟫ configured.",
+      "Translation": "未配置⟪AGC0⟫。",
+      "Kind": "ui/component",
+      "Role": "emptyMessage",
+      "Shape": "template"
+    },
+    {
+      "Key": "4db362d96b8c18e99d01750b7595498d620da2efbc6a934a44246bac69540e7b",
+      "Source": "Reset to preset",
+      "Translation": "重置为预设",
+      "Kind": "ui/component",
+      "Role": "content",
+      "Shape": "string"
+    },
+    {
+      "Key": "88b5c2ea905f760afafecc09c1c7a017b5f43534b565690eb4fd78efda64c56c",
+      "Source": "Commit ",
+      "Translation": "提交 ",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "342a703520cca533097e6f1eff5654ce96cd9f2355e67a69a0433002f2120357",
+      "Source": " file",
+      "Translation": " 个文件",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "09b993d5c083a9c383c2f2e1c2b268a3c1a5f07da8431bc21367fd0a3ddac017",
+      "Source": "change",
+      "Translation": "的更改",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "c21f9f57a4c2cc43536312d7e1681f5becdaf238a571bfe53eb030fdaad3f439",
+      "Source": "changes",
+      "Translation": "的更改",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "6d73fac16cf5d99ec18052fee6979a6b000f2b153349acc1c5483d662f52b6fa",
+      "Source": "rule",
+      "Translation": "条规则",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "f08e51a6999d8c2f8f7a3237ea26f71895c839fa89f22e8ba347951181aea5c5",
+      "Source": "rules",
+      "Translation": "条规则",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "4d61bc76b71a472cc6cd7e338ffb133cbf127352c41595aeffead6de0db0345a",
+      "Source": "⟪AGC0⟫ ⟪AGC1⟫ exceeded the rules budget and ⟪AGC2⟫ demoted from full inline content to a file-path pointer.",
+      "Translation": "⟪AGC0⟫ ⟪AGC1⟫超出了规则预算，⟪AGC2⟫已从完整内联内容降级为文件路径指针。",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "f5df78d1b34c7bffa7d5726c2acac3818b83b0fc191e1fb64d411439ba44c607",
+      "Source": "item",
+      "Translation": "项",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "6073dddbd0080ae1046a18427a99c1cf7a443d3b13e8df13485b4b26dfdfd898",
+      "Source": "items",
+      "Translation": "项",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "86da747d155f9d2f7e3b553883569ab6a6d07ee0c54dfba26b21ddeaebf10b32",
+      "Source": "⟪AGC0⟫ ⟪AGC1⟫ in ⟪AGC2⟫ exceeded the customization budget and ⟪AGC3⟫ excluded from context.",
+      "Translation": "⟪AGC0⟫ ⟪AGC1⟫（位于 ⟪AGC2⟫）超出了自定义预算，⟪AGC3⟫已从上下文中排除。",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "49bc9ff2f5ffe34839c63aea338130b2002196ebb9de867ed767e8a4bae7bc43",
+      "Source": "Commit ",
+      "Translation": "提交 ",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "5856a7fe3be7eb764c33b94db1405022a397f49dd2817c765ef8213dbf213f14",
+      "Source": " file",
+      "Translation": " 个文件",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "df091b03a81ca33452d783a54ce70d541415d7984417a8a2ef5b1c78952a9485",
+      "Source": "change",
+      "Translation": "的更改",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "a42a4071ff610ecc4ad29a2f2f4abaf8d8b83e4cdbe6c3ea78d8444627bd76c3",
+      "Source": "changes",
+      "Translation": "的更改",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "37ae40014253bc58d4959a8247ae1dcba8b86cb869694b317d2d5f5778760f4e",
+      "Source": " to",
+      "Translation": "至",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
     }
   ],
   "RetainedSources": [
