@@ -223,11 +223,13 @@ static void CheckProjectDisplay()
     let effects=0;function count(){effects++;return 2;}const modes=UI.createElement('span',null,`${count()} active mode${++effects>1?'s':''}`);
     const terms={lowercase:'project'},resources=true;const settings=UI.createElement('span',null,`Manage ${terms.lowercase} ${resources?'resources':'folders'}, agent settings, and permissions.`);
     for(const item of menu)(item.onClick??item.onSelect)();
-    console.log(JSON.stringify({menu,events,order,none,named,defaultView,userProject,raw,empty,modes,effects,settings,terms}));
+    const command={id:'fork',type:'action',label:'Fork',items:['Fork']};
+    menu.push({id:command.id,type:'submenu',label:'Fork',items:command.items});
+    console.log(JSON.stringify({menu,command,events,order,none,named,defaultView,userProject,raw,empty,modes,effects,settings,terms}));
     """;
     var translations = new Dictionary<string, string>
     {
-        ["Create Project"] = "新建项目", ["New Project"] = "新建项目", ["Quick Start"] = "快速开始", ["No Project"] = "无项目",
+        ["Create Project"] = "新建项目", ["New Project"] = "新建项目", ["Quick Start"] = "快速开始", ["No Project"] = "无项目", ["Fork"] = "分叉",
         ["Select Project"] = "选择项目", ["Select Workspace"] = "选择工作区", ["Select project, current: ⟪AGC0⟫"] = "选择项目，当前：⟪AGC0⟫",
         ["No projects found"] = "未找到项目", ["No workspaces found"] = "未找到工作区",
         ["⟪AGC0⟫ active mode⟪AGC1⟫"] = "⟪AGC0⟫ 个启用模式⟪AGC1⟫",
@@ -241,6 +243,10 @@ static void CheckProjectDisplay()
     Assert(value.GetProperty("named").GetProperty("children")[0].GetProperty("children")[0].GetString() == "No Project" && value.GetProperty("userProject").GetProperty("name").GetString() == "No Project" && value.GetProperty("raw").GetProperty("route").GetString() == "No Project" && value.GetProperty("raw").GetProperty("compare").GetBoolean(), "用户项目名或业务比较被默认文案汉化影响。");
     Assert(value.GetProperty("none").GetProperty("children")[1].GetProperty("children")[0].GetString() == "未找到项目" && value.GetProperty("empty").GetProperty("children")[0].GetString() == "未找到项目" && value.GetProperty("order").EnumerateArray().Select(e => e.GetInt32()).SequenceEqual([1, 2]), "空状态出现片段残留，或改变了原有求值顺序和次数。");
     Assert(value.GetProperty("menu")[0].GetProperty("label").GetString() == "新建项目" && value.GetProperty("menu")[2].GetProperty("label").GetString() == "快速开始" && value.GetProperty("menu")[2].GetProperty("id").GetString() == "quickStart" && value.GetProperty("events").GetInt32() == 3, "菜单函数引用没有汉化，或改变了内部 ID 和操作事件。");
+    var submenu = value.GetProperty("menu")[3];
+    Assert(submenu.GetProperty("label").GetString() == "分叉" && submenu.GetProperty("id").GetString() == "fork" &&
+        submenu.GetProperty("items")[0].GetString() == "Fork" && value.GetProperty("command").GetProperty("label").GetString() == "Fork",
+        "对话子菜单没有汉化，或改动了内部命令和子菜单项。");
     Assert(value.GetProperty("modes").GetProperty("children")[0].GetString() == "2 个启用模式" && value.GetProperty("effects").GetInt32() == 2 && value.GetProperty("settings").GetProperty("children")[0].GetString() == "管理项目的资源、智能体设置和权限。" && value.GetProperty("terms").GetProperty("lowercase").GetString() == "project", "模板中残留英文单复数词尾或固定名词，或修改了求值及原始术语数据。");
 }
 static void CheckSettingOptions()

@@ -14369,6 +14369,22 @@
       "Shape": "string"
     },
     {
+      "Key": "72ebc494fa309f53c48e08f8bc53e5a6ad1d5724e6bdf730e312e42a48edfc48",
+      "Source": "Fork",
+      "Translation": "分叉",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "39a28d0511add9654d29cb92b6f5c9f006d854e74f0fe54faa304032bc8a867c",
+      "Source": "Fork",
+      "Translation": "分叉",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
       "Key": "e02f55f7703324b40c1ef25ebc612eb6adb3fd02a08497c1e97bd4cd535fcb5a",
       "Source": "Split",
       "Translation": "分屏",
@@ -46649,6 +46665,14 @@
       "Shape": "lookup"
     },
     {
+      "Key": "6325a1700e46662a5a5745af90b7c5b7514d10eb0e0388236695927fb2c0a430",
+      "Source": "System UI",
+      "Translation": "系统默认",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
       "Key": "7d8bbfecc6f78e49e19dbdd021250bbabc8e1fdd2d5717f152acbe9488cb04c5",
       "Source": "Turbo mode",
       "Translation": "Turbo 模式",
@@ -47169,6 +47193,14 @@
       "Shape": "lookup"
     },
     {
+      "Key": "6107636455d657de50bdf81ca89156ed62e9c445695a0f7a65cc3ae655660154",
+      "Source": "System UI",
+      "Translation": "系统默认",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
       "Key": "146ed025662ceea83f664730b853b54962a3115a2652d959be9dbf933c8333d7",
       "Source": "Turbo mode",
       "Translation": "Turbo 模式",
@@ -47436,6 +47468,14 @@
       "Key": "f491b9d905e28912257449c781f4da25b239995652eed74a591c665c7cc50633",
       "Source": "Strong",
       "Translation": "增强",
+      "Kind": "ui/option-display",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1c7e5e94c30ef6272a3658ac720c60b625d0a7e97f4243104cdf3a698ed81a8a",
+      "Source": "System UI",
+      "Translation": "系统默认",
       "Kind": "ui/option-display",
       "Role": "option-label",
       "Shape": "lookup"
@@ -51209,6 +51249,14 @@
       "Shape": "lookup"
     },
     {
+      "Key": "379299fb4bc5d2581b131c2a11b4eaeeca9673425e6db32f189589bcd8460862",
+      "Source": "System UI",
+      "Translation": "系统默认",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
       "Key": "e28484b6236a30a34136759bb55779b8dcf78434461b8be155fb7bdf8e037945",
       "Source": "Turbo mode",
       "Translation": "Turbo 模式",
@@ -51468,6 +51516,14 @@
       "Key": "ac6a79bb55a2a690e887e9471a357c38c52633cd4f832e9caa4b2206673618f2",
       "Source": "Strong",
       "Translation": "增强",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "32ac059c787da1250045fe6d33c477f095be1465cde63c2aece00eb91a7f2b28",
+      "Source": "System UI",
+      "Translation": "系统默认",
       "Kind": "ui/component",
       "Role": "option-label",
       "Shape": "lookup"
@@ -54209,6 +54265,14 @@
       "Shape": "lookup"
     },
     {
+      "Key": "9bf90ee1ac3f6adebe4414c402fb262941c11364b19ded3d29b0d6b12fe2fa5a",
+      "Source": "System UI",
+      "Translation": "系统默认",
+      "Kind": "ui/span",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
       "Key": "5967af295fb87d0b402e81ff7f8d915868cffd2328157bfcb1c849ee99281554",
       "Source": "Turbo mode",
       "Translation": "Turbo 模式",
@@ -54705,6 +54769,14 @@
       "Shape": "lookup"
     },
     {
+      "Key": "6f7b7b7bde8a5920a4a991abc8e66952f38626c7e308a738ac99f56418838b3f",
+      "Source": "System UI",
+      "Translation": "系统默认",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
       "Key": "4685a4adde0e173b9ccd24df05b532bbaac6f10224d789d27f1c00e6ce023886",
       "Source": "Turbo mode",
       "Translation": "Turbo 模式",
@@ -54964,6 +55036,14 @@
       "Key": "3ae4ea4b981393129ca555d6987b478889f3f0d183e3f8a970e3bd7f70846844",
       "Source": "Strong",
       "Translation": "增强",
+      "Kind": "ui/option-display",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "e47676767ea48bdb565bbf81952e9fe6d588a77ac67fd874b208411909d7c770",
+      "Source": "System UI",
+      "Translation": "系统默认",
       "Kind": "ui/option-display",
       "Role": "option-label",
       "Shape": "lookup"
@@ -57337,6 +57417,14 @@
       "Shape": "lookup"
     },
     {
+      "Key": "6132f466c40488246f13872d48de024266aa664b832a5d696bba9fd01ff3631b",
+      "Source": "System UI",
+      "Translation": "系统默认",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
       "Key": "fb534fcbab581f49c2cd537b062db54d4399ea550cff349bb7ca938d5513b990",
       "Source": "Turbo mode",
       "Translation": "Turbo 模式",
@@ -57588,6 +57676,14 @@
       "Key": "8902088dfe0c28b3d6129b1eee512c7c64331b6a6b131c9a027186ee2d8d3ba2",
       "Source": "Strong",
       "Translation": "增强",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a67edf6044c0999e8d9410361741a1b31c13929fb81b57b158641722308b29a7",
+      "Source": "System UI",
+      "Translation": "系统默认",
       "Kind": "ui/component",
       "Role": "option-label",
       "Shape": "lookup"
@@ -59273,6 +59369,14 @@
       "Shape": "lookup"
     },
     {
+      "Key": "90fbad755675f27b28fec3a42819dcf46124320c0144fb9aaf7585460c18455e",
+      "Source": "System UI",
+      "Translation": "系统默认",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
       "Key": "4500fd04b1875d22ff16d9ba57515b427427d567056efa6e6e5bcbd3f7c0dbf6",
       "Source": "Turbo mode",
       "Translation": "Turbo 模式",
@@ -59548,6 +59652,14 @@
       "Key": "619de9995992c436043329171173a528cbc0bf5c6f9f142b41445d093be9d0cf",
       "Source": "Strong",
       "Translation": "增强",
+      "Kind": "ui/option-display",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "de215b6c71b5afa0b5a7b48dc55803f237316dfe2fa4c8ea853f55e28e75fe94",
+      "Source": "System UI",
+      "Translation": "系统默认",
       "Kind": "ui/option-display",
       "Role": "option-label",
       "Shape": "lookup"
@@ -61204,6 +61316,14 @@
       "Key": "2c6524c3406ac996bee48072f672cea4a682462e5fb3e3ded48330e9ebe02dfd",
       "Source": "Strong",
       "Translation": "增强",
+      "Kind": "ui/component",
+      "Role": "option-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c974ab71f4a8b660766344dad7dce215752e489b9482bdd6edbc041c4786d146",
+      "Source": "System UI",
+      "Translation": "系统默认",
       "Kind": "ui/component",
       "Role": "option-label",
       "Shape": "lookup"
@@ -63407,6 +63527,38 @@
       "Kind": "ui/span",
       "Role": "children",
       "Shape": "string"
+    },
+    {
+      "Key": "89159f4dc5760998a04f4875b3496c55b6d123d123236cf87afbbeafae84c51b",
+      "Source": "Open In",
+      "Translation": "打开方式",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "fa3f435a55641669a0f6bb599db4f38e62b309a64655e29bf5d03ce866b63190",
+      "Source": "Move to Group",
+      "Translation": "移动到分组",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "ad6771b59accc2f53cd47093c754b48ca7bf543d3aa7ce2acc99d77174de1d5c",
+      "Source": "Fork",
+      "Translation": "分叉",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "e3a1724dc428e402f9c6094d9c5b3c58d05999fb4bf9a3de4551336fb0fe3926",
+      "Source": "Split",
+      "Translation": "分屏",
+      "Kind": "ui/menu",
+      "Role": "label",
+      "Shape": "string"
     }
   ],
   "RetainedSources": [
@@ -63440,7 +63592,6 @@
     "Flash",
     "Flash Lite",
     "Fola",
-    "Fork",
     "Gero",
     "Google Chat",
     "Google Chat ⟪AGC0⟫",
@@ -63473,7 +63624,6 @@
     "Sherlog",
     "Sidecar",
     "Studio",
-    "System UI",
     "Tab",
     "Tahoe",
     "Tari",

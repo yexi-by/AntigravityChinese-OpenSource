@@ -85560,6 +85560,62 @@
           "Shape": "string"
         }
       ]
+    },
+    {
+      "Id": "界面-03763",
+      "Key": "55c599be4e2bb54e3741e5909edf119e9d75a117ec0a335845bd43db14b85045",
+      "Kind": "ui/menu",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "89159f4dc5760998a04f4875b3496c55b6d123d123236cf87afbbeafae84c51b",
+          "Source": "Open In",
+          "Role": "label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03764",
+      "Key": "587eded8b273bcae9c58ef9fdb86ef9ed78b6f1d385f8f9a3d00defdd6b0a3f1",
+      "Kind": "ui/menu",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "fa3f435a55641669a0f6bb599db4f38e62b309a64655e29bf5d03ce866b63190",
+          "Source": "Move to Group",
+          "Role": "label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03765",
+      "Key": "1783f3821d81c2fa20eae42c74c743bec21101b9f377bf91f2fd112b8631ff04",
+      "Kind": "ui/menu",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "ad6771b59accc2f53cd47093c754b48ca7bf543d3aa7ce2acc99d77174de1d5c",
+          "Source": "Fork",
+          "Role": "label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03766",
+      "Key": "230f831c6dd220720a61b39e09717c48bb87002e44e5f349bb75aca4985b7a2c",
+      "Kind": "ui/menu",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "e3a1724dc428e402f9c6094d9c5b3c58d05999fb4bf9a3de4551336fb0fe3926",
+          "Source": "Split",
+          "Role": "label",
+          "Shape": "string"
+        }
+      ]
     }
   ]
 }

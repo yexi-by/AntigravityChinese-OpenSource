@@ -1067,6 +1067,10 @@ public static partial class JavaScriptUi
                 var sectionHeader = keys.IsSupersetOf(["title", "headerActions"]);
                 var sidebarPaging = keys.IsSupersetOf(["type", "id", "groupId", "label", "isIndented"]) &&
                     properties.Any(p => PropertyName(p) == "type" && p.Value is StringLiteral { Value: "show-more" });
+                var submenu = keys.IsSupersetOf(["id", "type", "label", "items"]) &&
+                    properties.Any(p => PropertyName(p) == "type" && p.Value is StringLiteral { Value: "submenu" });
+                if (submenu)
+                    Group(configuration, "ui/menu", [(properties.First(p => PropertyName(p) == "label").Value, "label")]);
                 var isMenuConfig = keys.Contains("label") && properties.Any(p => PropertyName(p) is "onClick" or "onSelect" &&
                     p.Value is ArrowFunctionExpression or FunctionExpression or Identifier or MemberExpression or ChainExpression);
                 if (command || setting || navigation || isMenuConfig || sectionHeader || sidebarPaging)

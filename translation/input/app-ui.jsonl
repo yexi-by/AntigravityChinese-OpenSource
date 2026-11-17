@@ -3723,3 +3723,7 @@
 {"id":"\u754C\u9762-03760","kind":"ui/span","units":[{"id":"text-1","text":"Commit "},{"id":"text-2","text":" file"},{"id":"text-3","text":"change"},{"id":"text-4","text":"changes"}]}
 {"id":"\u754C\u9762-03761","kind":"ui/display-local","units":[{"id":"text-1","text":"rule"},{"id":"text-2","text":"rules"},{"id":"text-3","text":"\u27EAAGC0\u27EB \u27EAAGC1\u27EB exceeded the rules budget and \u27EAAGC2\u27EB demoted from full inline content to a file-path pointer."},{"id":"text-4","text":"item"},{"id":"text-5","text":"items"},{"id":"text-6","text":"\u27EAAGC0\u27EB \u27EAAGC1\u27EB in \u27EAAGC2\u27EB exceeded the customization budget and \u27EAAGC3\u27EB excluded from context."}]}
 {"id":"\u754C\u9762-03762","kind":"ui/span","units":[{"id":"text-1","text":"Commit "},{"id":"text-2","text":" file"},{"id":"text-3","text":"change"},{"id":"text-4","text":"changes"},{"id":"text-5","text":" to"}]}
+{"id":"\u754C\u9762-03763","kind":"ui/menu","units":[{"id":"text-1","text":"Open In"}]}
+{"id":"\u754C\u9762-03764","kind":"ui/menu","units":[{"id":"text-1","text":"Move to Group"}]}
+{"id":"\u754C\u9762-03765","kind":"ui/menu","units":[{"id":"text-1","text":"Fork"}]}
+{"id":"\u754C\u9762-03766","kind":"ui/menu","units":[{"id":"text-1","text":"Split"}]}
