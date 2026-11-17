@@ -8,6 +8,7 @@ Antigravity App 的 Windows 一次性汉化工具。
 - 翻译沿用 `.local/att` 持续项目，审校后通过 Manual、WriteBack 导入 `packs/zh-CN.json`。
 - `.local` 不提交；发布包只包含工具、使用说明和许可证。
 - 安装测试使用隔离副本，在加载模块前隔离文件目录；未经授权不登录、发送消息或修改账户及安全设置。
+- 本机汉化需要退出 Antigravity App 时，直接从后台退出并继续，无需再次确认，避免抢占鼠标焦点。
 - README 只写用途、下载和使用，不介绍翻译工具或其他项目。
 
 维护命令见 `docs/maintenance.md`。
