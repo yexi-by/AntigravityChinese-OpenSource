@@ -63559,6 +63559,1486 @@
       "Kind": "ui/menu",
       "Role": "label",
       "Shape": "string"
+    },
+    {
+      "Key": "ca77d1a3bfd2b81d3b6e99d637d3410c8e108a6f781d3f04b46c1216b6ea871f",
+      "Source": "Choose another SSH config file",
+      "Translation": "选择其他 SSH 配置文件",
+      "Kind": "dialog",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "24b67ee6866e1e6312a25b992a525fb04c98b214bb6054f9b2dcfa4ee7b7459d",
+      "Source": "Choose Another File…",
+      "Translation": "选择其他文件…",
+      "Kind": "dialog",
+      "Role": "buttons",
+      "Shape": "string"
+    },
+    {
+      "Key": "36f2c622ca452da9c057458db5c9345e54bad9168cc17b08a6286dd5982f57d6",
+      "Source": "Cancel",
+      "Translation": "取消",
+      "Kind": "dialog",
+      "Role": "buttons",
+      "Shape": "string"
+    },
+    {
+      "Key": "561738c94f2387a7aac306bf131dbea9658e3835bec7e4aec67ab317f9391ba5",
+      "Source": "Could not restart the SSH server",
+      "Translation": "无法重启 SSH 服务器",
+      "Kind": "dialog",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "214f9639f667db729a22b483662c870b1f7767390824d607f49d09e1c5d97cc9",
+      "Source": "⟪AGC0⟫ still runs Antigravity server ⟪AGC1⟫.",
+      "Translation": "⟪AGC0⟫ 仍在运行 Antigravity 服务器 ⟪AGC1⟫。",
+      "Kind": "dialog",
+      "Role": "message",
+      "Shape": "template"
+    },
+    {
+      "Key": "3c564a41ccddc4221ece51818d67f233d2b7458ae22bf64b8c0cadc5ca704c80",
+      "Source": "Yes",
+      "Translation": "是",
+      "Kind": "dialog",
+      "Role": "buttons",
+      "Shape": "string"
+    },
+    {
+      "Key": "12e332268b13dd64b13829e57963bbdb7c64ccaa1f0cc3fe6e2ba201edb61594",
+      "Source": "No",
+      "Translation": "否",
+      "Kind": "dialog",
+      "Role": "buttons",
+      "Shape": "string"
+    },
+    {
+      "Key": "8ec344bb6237adb8c207194e31b7e90d779932c19e1b1a4b7dd898ff0f4638ed",
+      "Source": "Cancel",
+      "Translation": "取消",
+      "Kind": "dialog",
+      "Role": "buttons",
+      "Shape": "string"
+    },
+    {
+      "Key": "bda77771063f273b3cc8e038fe048f7428d52a66248cd45782144c4f20c019c5",
+      "Source": "Subagent",
+      "Translation": "子智能体",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "2bacb9368dd3758bb6912a6a8210713b3794069dee9e363dd060e96df4b9acb3",
+      "Source": "Enter ⟪AGC0⟫...",
+      "Translation": "输入 ⟪AGC0⟫…",
+      "Kind": "ui/display-local",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "a3296086d71459cb7900f184707dc0bd8595c36eff10c16715b945240b1ef177",
+      "Source": "The remote workspace is not running",
+      "Translation": "远程工作区未运行",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "a09eab9437bb8c0939d430dd7af80655f8540dc63f3a11ec59f96d44152a570a",
+      "Source": "The preview did not respond on port ⟪AGC0⟫.",
+      "Translation": "预览未在端口 ⟪AGC0⟫ 上响应。",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "7f7483073ca4b50cf821a6f436f0b5faab12f0b8a062a99c87f985d4577d95ce",
+      "Source": "Nothing is running on port ⟪AGC0⟫",
+      "Translation": "端口 ⟪AGC0⟫ 上没有正在运行的服务",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "b078ea6cf6c57568b06ba0ab6edb10884b7f97e8aa3c2e9d63a932e53b8af319",
+      "Source": "Loading preview…",
+      "Translation": "正在加载预览…",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "b28870325f4cd0a6137d2688b0c9f1143bccc63db551be785966e1753365ba93",
+      "Source": "Enable Browser Agent",
+      "Translation": "启用浏览器智能体",
+      "Kind": "ui/setting",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "64bc41baca8d879fe836596cb92499796d065032b83b6925c6152f7917a9f4f5",
+      "Source": "Let the agent open URLs, read web pages, and interact with browser content. This gives the agent access to important (and often critical) knowledge and methods of validation, but any browser integration does increase exposure to external malicious parties for security exploits.",
+      "Translation": "允许智能体打开 URL、读取网页并与网页内容交互。这样智能体就能获取重要信息和验证手段，有时甚至至关重要。但接入浏览器也会增加外部恶意方利用安全漏洞的风险。",
+      "Kind": "ui/setting",
+      "Role": "description",
+      "Shape": "string"
+    },
+    {
+      "Key": "1ce0e5fd8597c701ee35d42a12cef4b7abcb116f92849f4140d72bce5bab96e2",
+      "Source": "Browsing Data",
+      "Translation": "浏览数据",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "e8a0a3f25a9f15de753db7c9b5e646c3ce860d5dddc5b1f04db2d028d6e25a30",
+      "Source": "Clear history, cookies and site data from the built-in browser, or manage cookies for each site.",
+      "Translation": "清除内置浏览器的历史记录、Cookie 和网站数据，或按网站管理 Cookie。",
+      "Kind": "ui/component",
+      "Role": "description",
+      "Shape": "string"
+    },
+    {
+      "Key": "b55e7ec7be3e91ae2348393334c60e09c7d56e1b4bb50ad1ce326c8f77342c5d",
+      "Source": "Cookies by Site",
+      "Translation": "按网站管理 Cookie",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "30f1e6180352eeff6064371fc7def6a9f39757dd79b6891808d49a3f2c0d20dd",
+      "Source": "Clear Browsing Data?",
+      "Translation": "清除浏览数据？",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "2f9587bfbe424c9dabc822d2ed5c81e42067e71aa19bbab487f21978ed542122",
+      "Source": "Choose what to clear from the built-in browser. It can't be undone.",
+      "Translation": "选择要从内置浏览器中清除的数据。此操作无法撤销。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "f13877e1df74887ac65b2344e0b74586001fb6cd9131f12245f349c5e9ba165e",
+      "Source": "Browsing history",
+      "Translation": "浏览历史记录",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "60fe5c01c2deae992c1478d2c0fe5edddd05e2d74d7b150a7077056148d1efcf",
+      "Source": "Visited URLs and autocomplete suggestions.",
+      "Translation": "访问过的 URL 和自动补全建议。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "ad8c8fd820860578bb9f45589a4f47324a773d18a26580551e25177de7b53eeb",
+      "Source": "Cookies and other site data",
+      "Translation": "Cookie 和其他网站数据",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "133231d388cef50c4e7056421a04bb9586edb1286af57a01ce594b2ff4cadb07",
+      "Source": "Cookies, site storage and cache. Signs you out of all sites in the built-in browser and reloads its open tabs.",
+      "Translation": "包括 Cookie、网站存储和缓存。清除后会退出内置浏览器中的所有网站登录，并重新加载已打开的标签页。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "9886e96cba464835304fe1f5226905481fba4651a62e4d3b8872a83292f61a8f",
+      "Source": "An agent is using the built-in browser. Clearing its data signs the agent out of sites and may interrupt its task.",
+      "Translation": "有智能体正在使用内置浏览器。清除数据会让它退出网站登录，可能中断其任务。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "4af6098ffc2d47be10657bde98061f8bcc825ea5827b976fffcadc6b5f9ff3cd",
+      "Source": "Couldn't clear browsing data. Try again.",
+      "Translation": "无法清除浏览数据。请重试。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "7f0df6609b7b53fd6ebde3c1363a487e1b12e693994225ce4381f122934a8015",
+      "Source": "Loading cookies…",
+      "Translation": "正在加载 Cookie…",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "7ff9e273f0bed554e8216a8cd316e9f1d9eb7192cb7bbf77bf2116aafc58025e",
+      "Source": "Couldn't load cookies.",
+      "Translation": "无法加载 Cookie。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "4f8d67857e28e5bcd7133662ae82cdf4827f3e206510cd5717e0cc1204471cc6",
+      "Source": "No sites have cookies in the built-in browser.",
+      "Translation": "内置浏览器中没有网站存有 Cookie。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "ce7fe9d16eb6189901f09227048b289a2acdd5f0c76c030b5b983068b4505556",
+      "Source": "Couldn't delete cookies for ",
+      "Translation": "无法删除以下网站的 Cookie：",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "ae4523172abdba5c706f652b9c401ebad7cab5d8c4aa5474483ee4a7ee4e5b0c",
+      "Source": ". Try again.",
+      "Translation": "。请重试。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "ab4854f1fee67f2a4d44fd428ca58ba5b39e4cbca291506551876123993c1a52",
+      "Source": "No sites match “",
+      "Translation": "没有网站匹配“",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "3fc723f7499cdd444f388a36a6b0904535fbe51156d4631c55c68501b9e6a55a",
+      "Source": "Sites with cookies",
+      "Translation": "存有 Cookie 的网站",
+      "Kind": "ui/ul",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "d5670a7ce26cce7698443a88c284ca2a7fa5e474212d9f2460989b7df89b24f6",
+      "Source": "Delete cookies for ⟪AGC0⟫",
+      "Translation": "删除 ⟪AGC0⟫ 的 Cookie",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "c22e9729d90df41b81439ebabdf258e431814db43d38e980486b2f4093248542",
+      "Source": "Cookies the built-in browser stores for each site. Deleting a site's cookies usually signs you out of it. Other site data (local storage, IndexedDB, cache) is cleared only by Browsing Data → Clear.",
+      "Translation": "内置浏览器按网站保存的 Cookie。删除某个网站的 Cookie 通常会退出该网站的登录。其他网站数据（本地存储、IndexedDB、缓存）只能通过“浏览数据 → 清除”删除。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "e04f7cb8782d2394f48184068a7fa0dead865dbc195b8c9f29deccf15540940c",
+      "Source": "Search sites...",
+      "Translation": "搜索网站…",
+      "Kind": "ui/component",
+      "Role": "placeholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "5524f3672568612082f3eca8f109d303fbd92d809bdd007c71abd68a97c77360",
+      "Source": "Search sites",
+      "Translation": "搜索网站",
+      "Kind": "ui/component",
+      "Role": "ariaLabel",
+      "Shape": "string"
+    },
+    {
+      "Key": "6e2ef041e0104150ab0b6bd25d86b409f785ef08e97efab0ea96234160e29604",
+      "Source": "Shortcuts",
+      "Translation": "快捷键",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "5652017395a2763c972261cf2c3ae3e2b2d51673595e8c099244873c56057893",
+      "Source": "Manage your keybinding scheme and customize shortcuts in VS Code.",
+      "Translation": "管理快捷键方案，并在 VS Code 中自定义快捷键。",
+      "Kind": "ui/component",
+      "Role": "description",
+      "Shape": "string"
+    },
+    {
+      "Key": "4aba36d5e2cb892086023d57ffd8682ebd7bafab577fd7e435745fe5824aaea5",
+      "Source": "Keybinding Scheme",
+      "Translation": "快捷键方案",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "faf986d4374bd8de1c37fec0109fcea44971fb0f6b25d615e9f84997b0f0154f",
+      "Source": "Choose between non-colliding VS Code defaults or standalone Antigravity chords.",
+      "Translation": "可选择与 VS Code 默认快捷键不冲突的方案，或使用 Antigravity 独立版的组合键。",
+      "Kind": "ui/component",
+      "Role": "subtitle",
+      "Shape": "string"
+    },
+    {
+      "Key": "48f00ee4734e4719830ef55414cc1959148bf5757cf913306950a5e6ac710639",
+      "Source": "Keybinding Scheme",
+      "Translation": "快捷键方案",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "5ca648d32116e4216ed1dbd8742084c77ce8af70569e6e9a59dd39193d7712a2",
+      "Source": "VS Code Default",
+      "Translation": "VS Code 默认",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "b916f91c45ec68054c79254a202c74fef09e82b365e2a61a2beae05ba0fe0e97",
+      "Source": "Antigravity (AGY) Style",
+      "Translation": "Antigravity (AGY) 风格",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "06b08bab1741d3a52c7d997af47e773515497d20b53a387fbc4e6ccfab1958e7",
+      "Source": "VS Code Default",
+      "Translation": "VS Code 默认",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "69e41474a415a9845567b7623bae610cf49e64fab15f9de8ed1154ddc13d2015",
+      "Source": "Antigravity (AGY) Style",
+      "Translation": "Antigravity (AGY) 风格",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "22c33c6fb8bafc1f9b90a693e168b1cc0f7af7909885ad8360de0b67956ef8cb",
+      "Source": "Recommended",
+      "Translation": "推荐",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "c8350c8263ae3125400ee0d90523910b720753cff21da3b300ebb0e08646ab0d",
+      "Source": "Honors standard VS Code shortcuts without collisions (e.g. ⌘L Focus Input, ⌘⇧L New Conversation, ⌘⇧A Picker, ⌘⇧, Settings).",
+      "Translation": "兼容 VS Code 的标准快捷键，避免冲突（例如 ⌘L 聚焦输入框、⌘⇧L 新建对话、⌘⇧A 打开选择器、⌘⇧, 打开设置）。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "74cd616a3d6d6a2d0e5b327c6de52a2f6f85a3b78eb44a7c6757d5d92567d54c",
+      "Source": "Honors standard VS Code shortcuts without collisions (e.g. Ctrl+L Focus Input, Ctrl+Shift+L New Conversation, Ctrl+Shift+A Picker, Ctrl+Shift+, Settings).",
+      "Translation": "兼容 VS Code 的标准快捷键，避免冲突（例如 Ctrl+L 聚焦输入框、Ctrl+Shift+L 新建对话、Ctrl+Shift+A 打开选择器、Ctrl+Shift+, 打开设置）。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "f5d7186890bd432699bd122cb5b50be21886aef948da605999d37f07dc522f89",
+      "Source": "Uses standalone Antigravity chords (e.g. ⌘I Focus Input, ⌘⇧O New Conversation, ⌘K Picker in chat, ⌘, Settings, ⌘[/] History). Replaces Go to Symbol (⌘⇧O) and Trigger Suggest (⌘I), and rebinds VS Code Settings to ⌘⌥,.",
+      "Translation": "使用 Antigravity 独立版的组合键（例如 ⌘I 聚焦输入框、⌘⇧O 新建对话、⌘K 打开对话内的选择器、⌘, 打开设置、⌘[/] 查看历史记录）。此方案会替换“转到符号”（⌘⇧O）和“触发建议”（⌘I），并将 VS Code 设置的快捷键改为 ⌘⌥,。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "eb8e7e3532f352f1dcc4064aa0605b58edf2fcb2f5779638eacd97e44fb7b653",
+      "Source": "Uses standalone Antigravity chords (e.g. Ctrl+I Focus Input, Ctrl+Shift+O New Conversation, Ctrl+K Picker in chat, Ctrl+, Settings, Ctrl+[/] History). Replaces Go to Symbol (Ctrl+Shift+O) and Trigger Suggest (Ctrl+I), and rebinds VS Code Settings to Ctrl+Alt+,.",
+      "Translation": "使用 Antigravity 独立版的组合键（例如 Ctrl+I 聚焦输入框、Ctrl+Shift+O 新建对话、Ctrl+K 打开对话内的选择器、Ctrl+, 打开设置、Ctrl+[/] 查看历史记录）。此方案会替换“转到符号”（Ctrl+Shift+O）和“触发建议”（Ctrl+I），并将 VS Code 设置的快捷键改为 Ctrl+Alt+,。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "da57221301066e31338d72c675c68fa7849904a2f9587191f33c2201145641dc",
+      "Source": "Customize Shortcuts",
+      "Translation": "自定义快捷键",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "5b8ff3a4032c218754a543f1a39f3bba2a6893d9d323c295b4ec2f1d1d90b51a",
+      "Source": "All active Antigravity shortcuts and user keybinding overrides are managed directly by VS Code.",
+      "Translation": "所有已生效的 Antigravity 快捷键及用户自定义的绑定均由 VS Code 直接管理。",
+      "Kind": "ui/component",
+      "Role": "subtitle",
+      "Shape": "string"
+    },
+    {
+      "Key": "81c2d8f73c883911d721af3836706a570b58561676ff8cd488bf28e12a70dd89",
+      "Source": "VS Code Keyboard Shortcuts",
+      "Translation": "VS Code 键盘快捷键",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "96fb1fc11e78729c0c4d2b91e1e49d46fd057fb3bf90eb6e833bc9bb0ac47b01",
+      "Source": "Inspect live bindings or record custom key chords filtered to",
+      "Translation": "可查看当前绑定，或为以下前缀的命令录制自定义组合键",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "eb3f686e625e4a14e8ccb13fff01251148d61ea455bae8d77ef284c59b9c2f50",
+      "Source": "Open Keyboard Shortcuts",
+      "Translation": "打开键盘快捷键",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "258aa4ac20beae547c9208f0658b24c25d29fca886f30a2f58929ea67711e985",
+      "Source": "Shortcut ⟪AGC0⟫ for ⟪AGC1⟫",
+      "Translation": "快捷键 ⟪AGC0⟫，用于 ⟪AGC1⟫",
+      "Kind": "ui/component",
+      "Role": "ariaLabel",
+      "Shape": "template"
+    },
+    {
+      "Key": "aa73e46af293f05e9f1d85009cc6e03720c48f78c14306a6c1ab3ab36c3522c4",
+      "Source": "Managed by application menu",
+      "Translation": "由应用菜单管理",
+      "Kind": "ui/component",
+      "Role": "tooltip",
+      "Shape": "string"
+    },
+    {
+      "Key": "e4d37c455f35a25c36b069b03467449c2efa9c9662cd354507ba02d54393d139",
+      "Source": "Add to Chat/Quote",
+      "Translation": "添加到聊天/引用",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "22b88abc46937f0d5ee31e47d9cd67956f625c43b390438cac619f4de06a4824",
+      "Source": "Conversation",
+      "Translation": "对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "5f43b3d37b0ca4cb1266766a6bbfd5a398c5664d230aa08a3d008614aabf25b5",
+      "Source": "Layout Controls",
+      "Translation": "布局控件",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "6dc332da5d3f9d4ad65e572017d6e2536f491e65842f1f2aeffd3548c866be56",
+      "Source": "Navigation",
+      "Translation": "导航",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "91715996b8ccdf7030d40ca235cc0a8b435f08141f71d6b97477f61a72690c17",
+      "Source": "Open Conversation in New Tab",
+      "Translation": "在新标签页中打开对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a5ee8de22694b0b372c41f664737126a6e786b8cab648139186c2dae9bdeaddb",
+      "Source": "Open File Search",
+      "Translation": "打开文件搜索",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d1983c29decfc2be21af8847e75030e952ce51b925380707811c71ac4f5b17c3",
+      "Source": "Pin / Unpin Conversation",
+      "Translation": "置顶/取消置顶对话",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "1849f4220a1ae014482d4950d5e6d68b60eb7ea154a8a924ec90e5bc9dc5a5d2",
+      "Source": "Terminal: Select All",
+      "Translation": "终端：全选",
+      "Kind": "ui/component",
+      "Role": "shortcut-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c52d4514611eda2663a9912379a0b7e5a01410d0967dd2ac4f2bfd0c8d70a388",
+      "Source": "Environment",
+      "Translation": "环境",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "0a2e924dd6c2167aacbb1e6d5089eac66b0414ff289606d021875603a296837c",
+      "Source": "Terminal",
+      "Translation": "终端",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "4f1b730dd0d735c061269ba77ecf64345489d91d5533ccb03d8a94cd34b9bff8",
+      "Source": "Setup Script",
+      "Translation": "设置脚本",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "a2f47f4fd96874ae45bf15f3050b4373fcf728fef1cd546277485cafde5c0a6d",
+      "Source": "Command Setup Script",
+      "Translation": "命令初始化脚本",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "3b3e5148fa60c0b7aa57eba41ed8f0ad3805c14fa0244f79d04747f3ed27064e",
+      "Source": "A bash script run in your cloud environment after cloning repositories (or configure interactively in chat with /env-setup).",
+      "Translation": "在克隆仓库后于云端环境中运行的 bash 脚本（或在对话中使用 /env-setup 进行交互式配置）。",
+      "Kind": "ui/component",
+      "Role": "description",
+      "Shape": "string"
+    },
+    {
+      "Key": "2c8e5bbc5b2d1aef272b2854efb83340c1093fa7acbc3027b4c1f6aa27fd2988",
+      "Source": "A shell setup script run before every command the agent executes in this project. Overrides the global script.",
+      "Translation": "在智能体执行此项目中的每条命令前运行的 Shell 设置脚本。会覆盖全局脚本。",
+      "Kind": "ui/component",
+      "Role": "description",
+      "Shape": "string"
+    },
+    {
+      "Key": "1793b1a9f71cbd2a54d8a62c5bfbe7d1625f6aa74bedd9ef9057fd74e5bf376a",
+      "Source": "example:\nnpm ci && npm run build",
+      "Translation": "示例：\nnpm ci && npm run build",
+      "Kind": "ui/component",
+      "Role": "placeholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "d6cb4abfad811b731ec2f9ad23aba427df4bfcc7dbdb9356ad05a857b34c0e8d",
+      "Source": "example:\nsource ~/.jetski_shell_setup",
+      "Translation": "示例：\nsource ~/.jetski_shell_setup",
+      "Kind": "ui/component",
+      "Role": "placeholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "4c0d773db393b03eb3f47ad9a5ddb45a7553721c3506b1477eeeb5ae38fb45e5",
+      "Source": "You're signing in on ⟪AGC0⟫. Your sign-in stays on that machine.",
+      "Translation": "您正在 ⟪AGC0⟫ 上登录。登录状态仅保存在该设备上。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "3dcfc633b9345915a7233fca3d06205fea7f92d8606c7b92444ba1602beddd0d",
+      "Source": "Always open",
+      "Translation": "始终打开",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "25113685fb53be9428d689e24434969afe7a04d2f069c2a22bfc12acf1090e41",
+      "Source": " links without asking",
+      "Translation": " 链接，无需询问",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "61e46c0c2d82a4d8b491660589408f0243c149a8764181ad12fd2a8275057cb4",
+      "Source": "Open browser screenshot",
+      "Translation": "打开浏览器截图",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "a26e2662eafbe65a686a3b667897dc2bc65c5a5e09d6748590753142eaf00ae6",
+      "Source": "Browser screenshot",
+      "Translation": "浏览器截图",
+      "Kind": "ui/img",
+      "Role": "alt",
+      "Shape": "string"
+    },
+    {
+      "Key": "095274b92e6a0c9ec28e78dd14aed6fa7de1fd5f4ccb1277ebef8e8a82306f2f",
+      "Source": "Open in settings",
+      "Translation": "在设置中打开",
+      "Kind": "ui/button",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "8c2e539c84a0c71d6b5a4ae0c2308f2b89c085e2807d48b9654255a76aa7f0b4",
+      "Source": "Insert into main conversation",
+      "Translation": "插入到主对话",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "3ae422f04c91595d9074aab4d285b572f60fd7c771c6a1226e27bd04cf425843",
+      "Source": "Unarchive the main conversation to insert",
+      "Translation": "取消归档主对话后即可插入",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "16d9c52967e8d58f0073999a33974cfa02e0d357bdc202506325cd0e53c9300e",
+      "Source": "Insert into main conversation",
+      "Translation": "插入到主对话",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "cf1d9b0855832d08d322fdca9339ff6235615e8a2732196598ef404f76c2dd0a",
+      "Source": "Access restricted",
+      "Translation": "访问受限",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "897945f628d0f4b897143c1c3d3106c75aa7f080573a120de03be81045bf3b14",
+      "Source": "Checking access...",
+      "Translation": "正在检查访问权限…",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "e9b2dafafecb299f6604bba0403376ff141210d6071b03c48ec853d8a51fda64",
+      "Source": "Try again",
+      "Translation": "重试",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "2cb55911617ac997e529fabd69db603386a672698834ecf25c456f7db1b0b181",
+      "Source": "Not started",
+      "Translation": "未开始",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d078fb3ff3e74e63c80be8f467e1565850e4730b500452a14b296bebe98464cd",
+      "Source": "In progress",
+      "Translation": "进行中",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "fbbffa843ce7ad5f7b9a8b4c10f1e71b18f309531b86677cc5a4e54fb497f9e6",
+      "Source": "Done",
+      "Translation": "完成",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "afd874fcc11701e17107ea8ea038b05f190015b855ae84274cc0f7639181f2c4",
+      "Source": "Skipped",
+      "Translation": "已跳过",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "dc85b71612e7e16d6b6d1154de7974d5f0e0d92bab2bc1d7ba98d948e7fe7e49",
+      "Source": "Failed",
+      "Translation": "失败",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "fcaae59c087611dcd51356abde067e22a885db5c3ca6ff8c73a7ffd7a3d72aa4",
+      "Source": "Plan, ⟪AGC0⟫ of ⟪AGC1⟫ steps done",
+      "Translation": "计划：已完成 ⟪AGC0⟫ / ⟪AGC1⟫ 步",
+      "Kind": "ui/ol",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "3cb8edca324f71888cc89a7825e8849898731188490ec6ebff73621a9e2d211e",
+      "Source": "Hide",
+      "Translation": "隐藏",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "349d10c3da0f5f5bc60bdc8bdc4c6da12da308553f21a37a30ece46d0e6abbfa",
+      "Source": "Show",
+      "Translation": "显示",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "5bb79dc00c3741227442dcc2760b90456e73db37763f1f43965063b5d1240773",
+      "Source": "⟪AGC0⟫. ⟪AGC1⟫ plan",
+      "Translation": "⟪AGC0⟫，⟪AGC1⟫计划",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "f41a43433295c5f772a23973439df852af2aa572a91ba304cea83b86bde4571e",
+      "Source": "Response actions",
+      "Translation": "回复操作",
+      "Kind": "ui/fieldset",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "91d4cb6a48cf5d4762b0155f4ec056b47fb084828c6e39d9b7bd8654e33b26d2",
+      "Source": "Review ⟪AGC0⟫ before installing",
+      "Translation": "安装前查看 ⟪AGC0⟫ 的内容",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "template"
+    },
+    {
+      "Key": "0d3463d79b49a9c7e08a0ae02957bd31704cda2e556c8bd4615fdf17fb4ec224",
+      "Source": "Prototype",
+      "Translation": "原型",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "cc4466be248f566b4394d9a47b94d01a88dbd90117df7e51440b6fcb6786f37c",
+      "Source": "Experimental",
+      "Translation": "实验性",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9168e8bd762769a0e277ca4e8c3480295fc20e96360b3aed59dac2c5a70ee81d",
+      "Source": "Third-party",
+      "Translation": "第三方",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "393c94d51f1f52676557f7a554e9eb268be2c6eeaa7f795c4489058f1d786ac1",
+      "Source": "Review contents",
+      "Translation": "查看内容",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "c7dd1345c708feb390d3f1254638e727a6d1b95892fb317dcdd1ba9efe798c25",
+      "Source": "Add anyway",
+      "Translation": "仍要添加",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "5545aabca840766a876842b347b6d48dd826cd766608b98b8fa2c3b413a27178",
+      "Source": "Local",
+      "Translation": "本地",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "f27a82288d88d168eee3291f3a773a72c9b6dcbd4994a3264d690791e6123fd1",
+      "Source": "New Worktree",
+      "Translation": "新建工作树",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "e61135f8456327a651128337daf7f4eb49d53be605aae2bc3409860f2f8a3b0e",
+      "Source": "Previous Worktrees",
+      "Translation": "以前的工作树",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "1357c4a5fad7a2b35a82fe620e259488e8305df85a657ac06a239f5ba413ae96",
+      "Source": "Previous Worktrees",
+      "Translation": "以前的工作树",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "06e9befc071d8ca12a7dad042bd2b89f2314a142f5110229dcba973319b30dcb",
+      "Source": "Voice dictation unavailable",
+      "Translation": "语音听写不可用",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "5b211bf2cabb3924224a2a6122682661676d7be22a7197cbe9718e440bc92c7e",
+      "Source": "Retrying transcription (attempt ⟪AGC0⟫)…",
+      "Translation": "正在重试转录（第 ⟪AGC0⟫ 次）…",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "bd51b818cc49339cac7696df39afcf54d41b035fd3eaaf9bdc1a199a5fffbe66",
+      "Source": "Transcribing audio…",
+      "Translation": "正在转录音频…",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "fd9334923c693b205c245252314e6f2b67bd29c49646670baa0cb1843e5c5259",
+      "Source": "Stop transcription",
+      "Translation": "停止转录",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "88a70d5007c6a65ebb714839e7830ba9141cbb2cd63cf3a37444f2ec884e74a0",
+      "Source": "No longer available",
+      "Translation": "已下架",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "816d6e058d3e358bf028ca2f2245b62a7ca6067a10960448d8d15117b60cfd86",
+      "Source": "Removed from the marketplace. Stays installed until you uninstall it.",
+      "Translation": "已从市场下架。卸载前仍会保留在已安装列表中。",
+      "Kind": "ui/component",
+      "Role": "tooltip",
+      "Shape": "string"
+    },
+    {
+      "Key": "e36e9d3dc204719274a9d9d8f2c5fe118f3287627e1c98c6a61f4d41ff298d5d",
+      "Source": "Installed separately",
+      "Translation": "单独安装",
+      "Kind": "ui/component",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "cd2124dede8ae17f900975ed95e36def5a0fcd25f1f3b66216c3a42cb07864fe",
+      "Source": "Disabling or removing this bundle doesn't affect it.",
+      "Translation": "停用或移除此插件包不会影响该插件。",
+      "Kind": "ui/component",
+      "Role": "tooltip",
+      "Shape": "string"
+    },
+    {
+      "Key": "e1988aa6d88c035e71f7e1dbcb3a3259386d6b0109c48c52243ca811a8b69007",
+      "Source": "Enable",
+      "Translation": "启用",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "7f62f8d6fdc03618f8753d61532a9b10a795c3b947f5ad128647d14fec82bd36",
+      "Source": "Add bundle ⟪AGC0⟫",
+      "Translation": "添加插件包 ⟪AGC0⟫",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "a4c59af4adebfa4e85447a3dccfd0bd901314be238068e8c413845eedaf79eee",
+      "Source": "Loading...",
+      "Translation": "正在加载...",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "22d8269b0794394a4eb4e4f5b234bf5e6d2de6fa82e4be1feef7daebb3f7d47a",
+      "Source": "Adding...",
+      "Translation": "正在添加...",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "7d9f0a89c6de41eb6a711f20b3307c8fc3f2a1be02de10143862db78e1d59b71",
+      "Source": "Add bundle",
+      "Translation": "添加插件包",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "b7a68c2a5e4b95a1221328be8263f1a2f61502dc44bb880d51fd5f18564ccd40",
+      "Source": "Adding plugins from ⟪AGC0⟫",
+      "Translation": "正在添加来自 ⟪AGC0⟫ 的插件",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "0e95e3af1b02806983916a0e7af6c3d8a7b139ae0efaae8e4d44d31021518851",
+      "Source": "Add bundle ⟪AGC0⟫",
+      "Translation": "添加插件包 ⟪AGC0⟫",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "template"
+    },
+    {
+      "Key": "2ccedcd01c63c4f9d3d7eff12d716dfb4c67cdde1490ea228e446aab77ecceb8",
+      "Source": "Adding...",
+      "Translation": "正在添加...",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "a8a8b21024589be681cf299704ad719ea05abf201bcc06f122e2cd225ff118fc",
+      "Source": "Add bundle",
+      "Translation": "添加插件包",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "f22c6f5a296ffa70b395b8654525e55acd3b23b18439df800d3789fc69691d20",
+      "Source": "Review bundle before adding",
+      "Translation": "添加前查看插件包",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "5c0419ba3b468c85e34832f1a3a8fed9cac8b32731377c4a112964ba77a42f53",
+      "Source": "This plugin in ⟪AGC0⟫ may have looser code review. Review its contents before adding the bundle.",
+      "Translation": "⟪AGC0⟫ 中的这个插件可能经过较宽松的代码审查。请先查看其内容，再添加插件包。",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "625141e67bb4f11b55ceaf668bbbaa259c4ac3ff7fec0edb0b066bef2b31f2c0",
+      "Source": "These plugins in ⟪AGC0⟫ may have looser code review. Review their contents before adding the bundle.",
+      "Translation": "⟪AGC0⟫ 中的这些插件可能经过较宽松的代码审查。请先查看其内容，再添加插件包。",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "template"
+    },
+    {
+      "Key": "2c8ed4a954caf35b173186f92accaa45c92069b73cae046675b6c517e4d7f8a3",
+      "Source": "Bundles",
+      "Translation": "插件包",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "10100280676f0d54b3e78580f98a9f280f8b1bc09f920d22991a8212d8a4ab66",
+      "Source": "Curated sets of plugins for common workflows and roles.",
+      "Translation": "为常见工作流程和角色精选的插件集合。",
+      "Kind": "ui/p",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "b8195d881646117ddf2f60bfe8d670299c401942f0b7d6f21f4150ff879acf7d",
+      "Source": "Bundles",
+      "Translation": "插件包",
+      "Kind": "ui/h1",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "d779cbd5c938e9f79e828642a57170ee94fe96dfda4e28a480cc62eca01fff3e",
+      "Source": "No bundles available.",
+      "Translation": "没有可用的插件包。",
+      "Kind": "ui/div",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "a7f52d45f181515feefdbb4803f60cd25941346ff09e64730dae99f5bb66b98a",
+      "Source": "Loading bundles...",
+      "Translation": "正在加载插件包…",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "3401ff0acf1f1401908d88c83c326109d3c31b46e0da2b048807ca17276998f7",
+      "Source": "Bundles",
+      "Translation": "插件包",
+      "Kind": "ui/component",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "7e8ec630c6d63b254cf4be742b0b35c97863d305f9d8e5a1145ca0ee4f3575b3",
+      "Source": "Robot",
+      "Translation": "机器人",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c828d3e6904cf66992ff8e1cb19c574da9298974742591adf56962442d4b4cae",
+      "Source": "Tree",
+      "Translation": "树",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "231aa5ada6175004aa88ee9ffffa45571fba41f2cd2c3e1208502fde30997bf8",
+      "Source": "Hub",
+      "Translation": "中心节点",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "bf981fa77acdc915abbfacba41d2a9229a01587bedbbc51e28d88c7409cccd7b",
+      "Source": "Sliders",
+      "Translation": "滑杆",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "9b0c0771a2c3f9f41e20260bcb3fb10e8cc964e34106a9f288a71ca902cadfed",
+      "Source": "Terminal window",
+      "Translation": "终端窗口",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d87ca8510eb7407148ad521cc51662e0e43d7908eae5d41dd5e3ecf60e8fec4e",
+      "Source": "Command prompt",
+      "Translation": "命令提示符",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "65623e8bb8849521955f429bb4749c48f616aee78e55d6ccce1da2b9ed7d96aa",
+      "Source": "Code",
+      "Translation": "代码",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ca7bbdb2a7c123033293498104a402b41b372a1ace26e126a5c6976f9e57a30e",
+      "Source": "Sparkles",
+      "Translation": "闪光",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a98c2570b661d264f24780dcf19dea3aebd5f627e319a69e643003d41a537b6b",
+      "Source": "Wrench",
+      "Translation": "扳手",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "8e05e0a7e90866fe1db729e83c4401abd200e36129c79c18d62715f677e8cf42",
+      "Source": "Shield",
+      "Translation": "盾牌",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a485c0dcf1b9c8e56d7bd893b57e7a6fe644fb33cdef31d062344064f99bd744",
+      "Source": "Speedometer",
+      "Translation": "速度表",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "c9552284f2ef69c050c1f02506ce535a68dd3d06846c13a229bb316d17eba33f",
+      "Source": "Gauge",
+      "Translation": "仪表",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "ad8cee3906b7c314c6195ea4f0a9ae0b12967c9e4d91ef52fe26fb4278ea4a86",
+      "Source": "Eye",
+      "Translation": "眼睛",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "d8ef3fb654c1f1ea517c36bc1ddcf66d378667449afd6c89dad8b226f8596b61",
+      "Source": "Flask",
+      "Translation": "烧瓶",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "55f0b8e539996b7a3339258bdd09893bfae87beaa50836821de97b38e3265eb5",
+      "Source": "Radar",
+      "Translation": "雷达",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "6324bb7926e00f5fe04bcb7173e8abc9003a7074109f14de95a2884de1641dfe",
+      "Source": "Bot",
+      "Translation": "机器人头像",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "78bb0e60999bfedc89b0103c69550bbdefdb97be91eaff5833d01c5769586132",
+      "Source": "Toggle Virtual Machine",
+      "Translation": "切换虚拟机面板",
+      "Kind": "ui/component",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "70a2821651133dcaf7b49778a64232a28deb908e5d7892a7834e71f1871e9cec",
+      "Source": "Toggle Virtual Machine",
+      "Translation": "切换虚拟机面板",
+      "Kind": "ui/component",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "4291e1ddf7b626104f515d2798f2f4eab276e079e8e29c4f3d2691bc5d44bb8a",
+      "Source": "Side Question",
+      "Translation": "支线提问",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "cfca50452ee409541a95308b2ffe279a9825709840abc9d627e8b592b499a45f",
+      "Source": "Disable Text Selection",
+      "Translation": "禁用文本选择",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0cde4cfd36d49e103eab0ee2637496fe8b51d6cf2b49ec8734d1a998203457f5",
+      "Source": "Enable Text Selection",
+      "Translation": "启用文本选择",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "0e082344b8be5791cd45161e5df7942b8e7b2bab7043fa5be60d398238f12f70",
+      "Source": "Disable Text Selection",
+      "Translation": "禁用文本选择",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "426a7cb25e6f20791ce2d839d66fa084ca6d528919223d6f0bcb3ce7d9ffc0b7",
+      "Source": "Enable Text Selection",
+      "Translation": "启用文本选择",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "lookup"
+    },
+    {
+      "Key": "a39561101ce2010f5746b083b120ed577b01ba2cbad7cec8beaa565d30ef5d58",
+      "Source": "Draft",
+      "Translation": "草稿",
+      "Kind": "ui/github-pr-status",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "85e3e7fec996259a396592a028f48456e2f4609f61462b55433221941a3dfc26",
+      "Source": "Open",
+      "Translation": "开放",
+      "Kind": "ui/github-pr-status",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "45b31426ad8dbbe5dff0e926d4700059cac1fb30be2ad569e8f82d2ae80b7161",
+      "Source": "Merged",
+      "Translation": "已合并",
+      "Kind": "ui/github-pr-status",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "6e08c6ae8e4e0ad3fcc45f6a3c545461f2dafdb8a975d323366a9d417d692534",
+      "Source": "Closed",
+      "Translation": "已关闭",
+      "Kind": "ui/github-pr-status",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "3084a8fac24ccc0c97e52f4794da9c89f2d3104ede41bf595c8b079944cd3c61",
+      "Source": "Inspect live bindings or record custom key chords filtered to",
+      "Translation": "查看当前绑定或录制自定义组合键，筛选范围为以",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "b69a620a9fddf367577d8674d7f41bf488a8e4b4aa41f0860c81e84ce07d55cc",
+      "Source": "commands.",
+      "Translation": "开头的命令。",
+      "Kind": "ui/span",
+      "Role": "children",
+      "Shape": "string"
+    },
+    {
+      "Key": "7a9443e7d70360fbbc3ba6d61b5b64413eed97ff3bfb49c48b42c564e0883a90",
+      "Source": "Issue numbers",
+      "Translation": "Issue 编号",
+      "Kind": "ui/component",
+      "Role": "scopeAriaLabel",
+      "Shape": "string"
+    },
+    {
+      "Key": "857ddddfba6455adfc106d78bf4f5fb3b298a954b1ea84301b0f7e530725019e",
+      "Source": "Issue actions",
+      "Translation": "Issue 操作",
+      "Kind": "ui/component",
+      "Role": "actionsAriaLabel",
+      "Shape": "string"
+    },
+    {
+      "Key": "b24173d40d9f14570d709b7476c3c60f3d71ee13650c762d6b2beaa503cea6ee",
+      "Source": "Pull request numbers",
+      "Translation": "拉取请求编号",
+      "Kind": "ui/component",
+      "Role": "scopeAriaLabel",
+      "Shape": "string"
+    },
+    {
+      "Key": "d8d5c43c39cb4517f244ab4291f4cc01462c4fd394411682adec87d3c3f1e2fd",
+      "Source": "Pull request actions",
+      "Translation": "拉取请求操作",
+      "Kind": "ui/component",
+      "Role": "actionsAriaLabel",
+      "Shape": "string"
+    },
+    {
+      "Key": "713e6ce7c27d7b4ac51e1101be09dfebec131e559186af4f56751f8e160fa8a5",
+      "Source": "Branch names",
+      "Translation": "分支名称",
+      "Kind": "ui/component",
+      "Role": "scopeAriaLabel",
+      "Shape": "string"
+    },
+    {
+      "Key": "7414fc99b1813de0563470b2d4c74a8fe94f725437cb6595aec7c2dde3313bd7",
+      "Source": "Branch actions",
+      "Translation": "分支操作",
+      "Kind": "ui/component",
+      "Role": "actionsAriaLabel",
+      "Shape": "string"
+    },
+    {
+      "Key": "03722fb312f6d9a85c22bdf655e6033240910b4d368b497cdaa9aa35aa33d91d",
+      "Source": "Search in document...",
+      "Translation": "在文档中搜索…",
+      "Kind": "ui/pdf-search",
+      "Role": "placeholder",
+      "Shape": "string"
+    },
+    {
+      "Key": "940af7a967018226fe79932246e0fb81dd14c94385b32023a5f95b0ba2edf980",
+      "Source": "Disable Text Selection",
+      "Translation": "禁用文本选择",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "fe781971404df2d495bdd53548a4241819d16c87e7d62f37c5886646deee5a6a",
+      "Source": "Enable Text Selection",
+      "Translation": "启用文本选择",
+      "Kind": "ui/button",
+      "Role": "aria-label",
+      "Shape": "string"
+    },
+    {
+      "Key": "e6e8c2a05f4f0116631c4ef1d7e67ba55fb40935dd55ca93d81db7230bc8792c",
+      "Source": "Disable Text Selection",
+      "Translation": "禁用文本选择",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "14243e9d175e0c88252530198bbfdae3914915d6488007591f803857be3f3e77",
+      "Source": "Enable Text Selection",
+      "Translation": "启用文本选择",
+      "Kind": "ui/button",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "b15ca417b074743e75e67704ff0e5da99c0594a459de4321842d800464375d3c",
+      "Source": "Pull Requests",
+      "Translation": "拉取请求",
+      "Kind": "ui/github-pull-requests",
+      "Role": "label",
+      "Shape": "string"
+    },
+    {
+      "Key": "f2fa1adbcd2ecb748edc6cdf4aec3c9cd9799f5741e37784efd3202b338114fd",
+      "Source": "Pull Requests",
+      "Translation": "拉取请求",
+      "Kind": "ui/github-pull-requests",
+      "Role": "header",
+      "Shape": "string"
+    },
+    {
+      "Key": "a5f5eb6c5b0f8933275a7cd9cdb7749ea38b7707b7a437c6dc8de520c9092b8f",
+      "Source": "Connect GitHub",
+      "Translation": "连接 GitHub",
+      "Kind": "ui/github-pr-card",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "d53f9c063928c5836f7ab200215a9ecb00c03729610a9684d561c78374de6a15",
+      "Source": "Loading…",
+      "Translation": "正在加载…",
+      "Kind": "ui/github-pr-card",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "6f07a873355de817238eedd8b9a2782cfa95c5e43be2f5823e1adb3a969c7f09",
+      "Source": "PR details unavailable",
+      "Translation": "无法查看 PR 详情",
+      "Kind": "ui/github-pr-card",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "0318b284dd27a71e28226cb8d7fee6790ba1fa593ab95cef6b8c835d5209385a",
+      "Source": "(no title)",
+      "Translation": "（无标题）",
+      "Kind": "ui/github-pr-card",
+      "Role": "title",
+      "Shape": "string"
+    },
+    {
+      "Key": "e84d940cacef4307d6846155a5ba700d903aafd471b1cfdba618d16596e005a7",
+      "Source": "Saving setup routine",
+      "Translation": "正在保存环境设置脚本",
+      "Kind": "ui/setup-routine-status",
+      "Role": "prefix",
+      "Shape": "string"
+    },
+    {
+      "Key": "092e396d6aa7df4721d5142df2623880e73cf66bddaf7fd9c91e419b53d4357b",
+      "Source": "Canceled saving setup routine",
+      "Translation": "已取消保存环境设置脚本",
+      "Kind": "ui/setup-routine-status",
+      "Role": "prefix",
+      "Shape": "string"
+    },
+    {
+      "Key": "e6603ff924c090d6c93c9d241dc7e4ed42f5c267ec9692cc9a0dd720c51babdf",
+      "Source": "Saved setup routine",
+      "Translation": "已保存环境设置脚本",
+      "Kind": "ui/setup-routine-status",
+      "Role": "prefix",
+      "Shape": "string"
+    },
+    {
+      "Key": "592a2e5a059aa8572431cf669e17902d32b379badede82f26386a1e17a60d2e9",
+      "Source": "Deleting setup routine",
+      "Translation": "正在删除环境设置脚本",
+      "Kind": "ui/setup-routine-status",
+      "Role": "prefix",
+      "Shape": "string"
+    },
+    {
+      "Key": "b0e95d9bfc93eb93c18ca8b006dbeb44539416512771f78423f9e895ac8c19f6",
+      "Source": "Canceled deletion of setup routine",
+      "Translation": "已取消删除环境设置脚本",
+      "Kind": "ui/setup-routine-status",
+      "Role": "prefix",
+      "Shape": "string"
+    },
+    {
+      "Key": "7c221dd71fae665c7483ccb2de1c0aa7993313452afd7fbb67cb0f617abf3d69",
+      "Source": "Deleted setup routine",
+      "Translation": "已删除环境设置脚本",
+      "Kind": "ui/setup-routine-status",
+      "Role": "prefix",
+      "Shape": "string"
     }
   ],
   "RetainedSources": [

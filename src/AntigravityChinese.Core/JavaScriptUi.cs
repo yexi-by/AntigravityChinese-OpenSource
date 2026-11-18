@@ -15,7 +15,8 @@ public static partial class JavaScriptUi
         "checkboxLabel", "caption", "alt", "tooltip", "notificationTitle", "warningText", "aria-label",
         "buttonText", "submitText", "cancelText", "confirmText", "emptyMessage", "header", "primaryText",
         "secondaryText", "defaultMessage", "emptyText", "loadingText", "errorMessage", "text", "tooltipText",
-        "displayText", "subtitle", "subTitle", "primaryCtaText", "secondaryCtaText", "ariaLabel", "disabledWorktreeSubtitle"
+        "displayText", "subtitle", "subTitle", "primaryCtaText", "secondaryCtaText", "ariaLabel", "disabledWorktreeSubtitle",
+        "scopeAriaLabel", "actionsAriaLabel"
     };
     private static readonly JsonSerializerOptions Strings = new() { Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
     private static Node Parse(string code)
@@ -30,6 +31,8 @@ public static partial class JavaScriptUi
     { Identifier i => i.Name, StringLiteral s => s.Value, _ => "" };
     private static string PropertyName(AssignmentProperty p) => p.Computed ? "" : p.Key switch
     { Identifier i => i.Name, StringLiteral s => s.Value, _ => "" };
+    private static Node? PropertyValue(ObjectExpression obj, string name) =>
+        obj.Properties.OfType<ObjectProperty>().LastOrDefault(p => PropertyName(p) == name)?.Value;
     private static bool IsPluralSuffixChoice(Node? node) => node is ConditionalExpression cond &&
         (cond.Consequent is StringLiteral { Value: "s" } && cond.Alternate is StringLiteral { Value: "" } ||
          cond.Consequent is StringLiteral { Value: "" } && cond.Alternate is StringLiteral { Value: "s" });
@@ -1002,6 +1005,26 @@ public static partial class JavaScriptUi
         {
             activeFunction = function;
             if (IsProtected(node)) continue;
+            // PR 卡片优先显示 GitHub 返回的标题或错误，只有固定的本地占位文案参与翻译。
+            if (!desktop && node is ConditionalExpression
+                {
+                    Consequent: StringLiteral { Value: "Connect GitHub" },
+                    Alternate: LogicalExpression
+                    {
+                        Right: ConditionalExpression
+                        {
+                            Consequent: StringLiteral { Value: "Loading…" },
+                            Alternate: ConditionalExpression { Consequent: StringLiteral { Value: "PR details unavailable" } }
+                        }
+                    }
+                } pullRequestTitle)
+                Group(pullRequestTitle, "ui/github-pr-card", [(pullRequestTitle, "title")]);
+            if (!desktop && node is SwitchStatement editStatus &&
+                editStatus.Cases.Select(c => (c.Test as StringLiteral)?.Value).SequenceEqual(["command", "sed", "createFile", "deleteFile"]))
+                Group(editStatus, "ui/setup-routine-status", Walk(editStatus).Select(p => p.Node).OfType<StringLiteral>()
+                    .Where(s => s.Value is "Saving setup routine" or "Canceled saving setup routine" or "Saved setup routine" or
+                        "Deleting setup routine" or "Canceled deletion of setup routine" or "Deleted setup routine")
+                    .Select(s => ((Node)s, "prefix")));
             // 只处理 ContextScopeItem 的系统斜杠命令说明，不改模型指令或自定义技能正文。
             if (!desktop && node is NewExpression commandItem && commandItem.Arguments.Count >= 3 &&
                 commandItem.Arguments[0] is CallExpression scopeCall && scopeCall.Arguments.Count >= 2 &&
@@ -1077,6 +1100,33 @@ public static partial class JavaScriptUi
                     Group(configuration, command ? "ui/command" : setting ? "ui/setting" : navigation ? "ui/navigation" : sectionHeader ? "ui/section-header" : sidebarPaging ? "ui/sidebar-pagination" : "ui/menu",
                         properties.Where(p => TextProperties.Contains(PropertyName(p)) || PropertyName(p) is "sidebarLabel" or "searchPlaceholder" or "emptyMessageSingular" or "emptyMessagePlural")
                             .Select(p => ((Node)p.Value, PropertyName(p))));
+                if (keys.IsSupersetOf(["id", "sidebar", "overview", "HoverCard"]) &&
+                    PropertyValue(configuration, "id") is StringLiteral { Value: "github" } &&
+                    PropertyValue(configuration, "sidebar") is ObjectExpression sidebar &&
+                    PropertyValue(sidebar, "displayOption") is ObjectExpression option &&
+                    PropertyValue(option, "persistentKey") is StringLiteral { Value: "conversationDecorationPullRequests" } &&
+                    PropertyValue(option, "label") is StringLiteral sidebarLabel &&
+                    PropertyValue(configuration, "overview") is ObjectExpression overview &&
+                    PropertyValue(overview, "ownsUrl") is ArrowFunctionExpression &&
+                    PropertyValue(overview, "header") is StringLiteral overviewHeader)
+                    Group(configuration, "ui/github-pull-requests", [(sidebarLabel, "label"), (overviewHeader, "header")]);
+                if (keys.SetEquals(["draft", "open", "merged", "closed"]) &&
+                    PropertyValue(configuration, "draft") is StringLiteral { Value: "Draft" } &&
+                    PropertyValue(configuration, "open") is StringLiteral { Value: "Open" } &&
+                    PropertyValue(configuration, "merged") is StringLiteral { Value: "Merged" } &&
+                    PropertyValue(configuration, "closed") is StringLiteral { Value: "Closed" })
+                    Group(configuration, "ui/github-pr-status", properties.Select(p => ((Node)p.Value, "label")));
+                if (keys.IsSupersetOf(["focusInput", "zoomReset", "findInPane"]) &&
+                    PropertyValue(configuration, "findInPane") is ObjectExpression find &&
+                    PropertyValue(find, "accelerator") is StringLiteral { Value: "CmdOrCtrl+F" } &&
+                    PropertyValue(find, "label") is StringLiteral findLabel)
+                    Group(find, "ui/command", [(findLabel, "label")]);
+                if (keys.IsSupersetOf(["diagnostics", "localization", "behavior"]) &&
+                    PropertyValue(configuration, "behavior") is ObjectExpression behavior &&
+                    PropertyValue(behavior, "textLayerStrategy") is StringLiteral &&
+                    PropertyValue(configuration, "localization") is ObjectExpression localization &&
+                    PropertyValue(localization, "searchPlaceholder") is StringLiteral searchPlaceholder)
+                    Group(localization, "ui/pdf-search", [(searchPlaceholder, "placeholder")]);
                 if (setting && properties.FirstOrDefault(p => PropertyName(p) == "resolveOptionToString")?.Value is Node resolver && IsFunction(resolver))
                 {
                     activeFunction = resolver.Start;
@@ -1116,6 +1166,15 @@ public static partial class JavaScriptUi
             {
                 Expression callee = call.Callee;
                 if (callee is SequenceExpression sequence) callee = sequence.Expressions[^1];
+                if (!desktop && callee is Identifier { Name: "element" } element && Owner(function, element.Name) is null &&
+                    call.Arguments is [StringLiteral { Value: "button" }, ObjectExpression pdfButton, ..] &&
+                    PropertyValue(pdfButton, "aria-label") is ConditionalExpression
+                    {
+                        Consequent: StringLiteral { Value: "Disable Text Selection" },
+                        Alternate: StringLiteral { Value: "Enable Text Selection" }
+                    } selectionLabel &&
+                    PropertyValue(pdfButton, "title") is ConditionalExpression selectionTitle)
+                    Group(call, "ui/button", [(selectionLabel, "aria-label"), (selectionTitle, "title")]);
                 if (!desktop && callee is Identifier hId && Owner(function, hId.Name) is { } hScope &&
                     localRenderHelpers.TryGetValue((hScope, hId.Name), out var paramRoles))
                     Group(call, "ui/helper-call", paramRoles.OrderBy(kv => kv.Key)
@@ -1268,7 +1327,7 @@ public static partial class JavaScriptUi
         "subagent" or "subagents" or "more" or "more..." or "documentation" or "docs" or "panel" or
         "automation" or "automations" or "unknown" or "(none)" or "(skipped)" or "menu)" or "yet" or
         "item" or "items" or "call" or "calls" or "recording" or "recordings" or "task" or "tasks" or
-        "terminal" or "terminals" or "asks" or "rule" or "rules";
+        "terminal" or "terminals" or "asks" or "rule" or "rules" or "commands.";
 
     private static bool LooksLikeText(string text) => LooksLikeText(text, false);
 

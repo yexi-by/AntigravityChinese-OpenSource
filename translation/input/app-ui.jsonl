@@ -3727,3 +3727,95 @@
 {"id":"\u754C\u9762-03764","kind":"ui/menu","units":[{"id":"text-1","text":"Move to Group"}]}
 {"id":"\u754C\u9762-03765","kind":"ui/menu","units":[{"id":"text-1","text":"Fork"}]}
 {"id":"\u754C\u9762-03766","kind":"ui/menu","units":[{"id":"text-1","text":"Split"}]}
+{"id":"\u754C\u9762-03770","kind":"ui/display-local","units":[{"id":"text-1","text":"Subagent"}]}
+{"id":"\u754C\u9762-03771","kind":"ui/display-local","units":[{"id":"text-1","text":"Enter \u27EAAGC0\u27EB..."}]}
+{"id":"\u754C\u9762-03772","kind":"ui/div","units":[{"id":"text-1","text":"The remote workspace is not running"},{"id":"text-2","text":"The preview did not respond on port \u27EAAGC0\u27EB."},{"id":"text-3","text":"Nothing is running on port \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-03773","kind":"ui/div","units":[{"id":"text-1","text":"Loading preview\u2026"}]}
+{"id":"\u754C\u9762-03774","kind":"ui/setting","units":[{"id":"text-1","text":"Enable Browser Agent"},{"id":"text-2","text":"Let the agent open URLs, read web pages, and interact with browser content. This gives the agent access to important (and often critical) knowledge and methods of validation, but any browser integration does increase exposure to external malicious parties for security exploits."}]}
+{"id":"\u754C\u9762-03775","kind":"ui/component","units":[{"id":"text-1","text":"Browsing Data"},{"id":"text-2","text":"Clear history, cookies and site data from the built-in browser, or manage cookies for each site."}]}
+{"id":"\u754C\u9762-03776","kind":"ui/component","units":[{"id":"text-1","text":"Cookies by Site"}]}
+{"id":"\u754C\u9762-03777","kind":"ui/component","units":[{"id":"text-1","text":"Clear Browsing Data?"}]}
+{"id":"\u754C\u9762-03778","kind":"ui/p","units":[{"id":"text-1","text":"Choose what to clear from the built-in browser. It can\u0027t be undone."}]}
+{"id":"\u754C\u9762-03779","kind":"ui/span","units":[{"id":"text-1","text":"Browsing history"}]}
+{"id":"\u754C\u9762-03780","kind":"ui/span","units":[{"id":"text-1","text":"Visited URLs and autocomplete suggestions."}]}
+{"id":"\u754C\u9762-03781","kind":"ui/span","units":[{"id":"text-1","text":"Cookies and other site data"}]}
+{"id":"\u754C\u9762-03782","kind":"ui/span","units":[{"id":"text-1","text":"Cookies, site storage and cache. Signs you out of all sites in the built-in browser and reloads its open tabs."}]}
+{"id":"\u754C\u9762-03783","kind":"ui/p","units":[{"id":"text-1","text":"An agent is using the built-in browser. Clearing its data signs the agent out of sites and may interrupt its task."}]}
+{"id":"\u754C\u9762-03784","kind":"ui/p","units":[{"id":"text-1","text":"Couldn\u0027t clear browsing data. Try again."}]}
+{"id":"\u754C\u9762-03785","kind":"ui/div","units":[{"id":"text-1","text":"Loading cookies\u2026"}]}
+{"id":"\u754C\u9762-03786","kind":"ui/p","units":[{"id":"text-1","text":"Couldn\u0027t load cookies."}]}
+{"id":"\u754C\u9762-03787","kind":"ui/p","units":[{"id":"text-1","text":"No sites have cookies in the built-in browser."}]}
+{"id":"\u754C\u9762-03788","kind":"ui/p","units":[{"id":"text-1","text":"Couldn\u0027t delete cookies for "},{"id":"text-2","text":". Try again."}]}
+{"id":"\u754C\u9762-03789","kind":"ui/p","units":[{"id":"text-1","text":"No sites match \u201C"}]}
+{"id":"\u754C\u9762-03790","kind":"ui/ul","units":[{"id":"text-1","text":"Sites with cookies"}]}
+{"id":"\u754C\u9762-03791","kind":"ui/component","units":[{"id":"text-1","text":"Delete cookies for \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-03792","kind":"ui/p","units":[{"id":"text-1","text":"Cookies the built-in browser stores for each site. Deleting a site\u0027s cookies usually signs you out of it. Other site data (local storage, IndexedDB, cache) is cleared only by Browsing Data \u2192 Clear."}]}
+{"id":"\u754C\u9762-03793","kind":"ui/component","units":[{"id":"text-1","text":"Search sites..."},{"id":"text-2","text":"Search sites"}]}
+{"id":"\u754C\u9762-03794","kind":"ui/component","units":[{"id":"text-1","text":"Shortcuts"},{"id":"text-2","text":"Manage your keybinding scheme and customize shortcuts in VS Code."}]}
+{"id":"\u754C\u9762-03795","kind":"ui/component","units":[{"id":"text-1","text":"Keybinding Scheme"},{"id":"text-2","text":"Choose between non-colliding VS Code defaults or standalone Antigravity chords."}]}
+{"id":"\u754C\u9762-03796","kind":"ui/component","units":[{"id":"text-1","text":"Keybinding Scheme"}]}
+{"id":"\u754C\u9762-03797","kind":"ui/component","units":[{"id":"text-1","text":"VS Code Default"},{"id":"text-2","text":"Antigravity (AGY) Style"}]}
+{"id":"\u754C\u9762-03798","kind":"ui/span","units":[{"id":"text-1","text":"VS Code Default"},{"id":"text-2","text":"Antigravity (AGY) Style"}]}
+{"id":"\u754C\u9762-03799","kind":"ui/span","units":[{"id":"text-1","text":"Recommended"}]}
+{"id":"\u754C\u9762-03800","kind":"ui/span","units":[{"id":"text-1","text":"Honors standard VS Code shortcuts without collisions (e.g. \u2318L Focus Input, \u2318\u21E7L New Conversation, \u2318\u21E7A Picker, \u2318\u21E7, Settings)."},{"id":"text-2","text":"Honors standard VS Code shortcuts without collisions (e.g. Ctrl\u002BL Focus Input, Ctrl\u002BShift\u002BL New Conversation, Ctrl\u002BShift\u002BA Picker, Ctrl\u002BShift\u002B, Settings)."},{"id":"text-3","text":"Uses standalone Antigravity chords (e.g. \u2318I Focus Input, \u2318\u21E7O New Conversation, \u2318K Picker in chat, \u2318, Settings, \u2318[/] History). Replaces Go to Symbol (\u2318\u21E7O) and Trigger Suggest (\u2318I), and rebinds VS Code Settings to \u2318\u2325,."},{"id":"text-4","text":"Uses standalone Antigravity chords (e.g. Ctrl\u002BI Focus Input, Ctrl\u002BShift\u002BO New Conversation, Ctrl\u002BK Picker in chat, Ctrl\u002B, Settings, Ctrl\u002B[/] History). Replaces Go to Symbol (Ctrl\u002BShift\u002BO) and Trigger Suggest (Ctrl\u002BI), and rebinds VS Code Settings to Ctrl\u002BAlt\u002B,."}]}
+{"id":"\u754C\u9762-03801","kind":"ui/component","units":[{"id":"text-1","text":"Customize Shortcuts"},{"id":"text-2","text":"All active Antigravity shortcuts and user keybinding overrides are managed directly by VS Code."}]}
+{"id":"\u754C\u9762-03802","kind":"ui/span","units":[{"id":"text-1","text":"VS Code Keyboard Shortcuts"}]}
+{"id":"\u754C\u9762-03803","kind":"ui/span","units":[{"id":"text-1","text":"Inspect live bindings or record custom key chords filtered to"}]}
+{"id":"\u754C\u9762-03804","kind":"ui/span","units":[{"id":"text-1","text":"Open Keyboard Shortcuts"}]}
+{"id":"\u754C\u9762-03805","kind":"ui/component","units":[{"id":"text-1","text":"Shortcut \u27EAAGC0\u27EB for \u27EAAGC1\u27EB"},{"id":"text-2","text":"Managed by application menu"}]}
+{"id":"\u754C\u9762-03806","kind":"ui/component","units":[{"id":"text-1","text":"Add to Chat/Quote"},{"id":"text-2","text":"Conversation"},{"id":"text-3","text":"Layout Controls"},{"id":"text-4","text":"Navigation"},{"id":"text-5","text":"Open Conversation in New Tab"},{"id":"text-6","text":"Open File Search"},{"id":"text-7","text":"Pin / Unpin Conversation"},{"id":"text-8","text":"Terminal: Select All"}]}
+{"id":"\u754C\u9762-03807","kind":"ui/component","units":[{"id":"text-1","text":"Environment"},{"id":"text-2","text":"Terminal"}]}
+{"id":"\u754C\u9762-03808","kind":"ui/component","units":[{"id":"text-1","text":"Setup Script"},{"id":"text-2","text":"Command Setup Script"},{"id":"text-3","text":"A bash script run in your cloud environment after cloning repositories (or configure interactively in chat with /env-setup)."},{"id":"text-4","text":"A shell setup script run before every command the agent executes in this project. Overrides the global script."},{"id":"text-5","text":"example:\nnpm ci \u0026\u0026 npm run build"},{"id":"text-6","text":"example:\nsource ~/.jetski_shell_setup"}]}
+{"id":"\u754C\u9762-03809","kind":"ui/span","units":[{"id":"text-1","text":"SSH: \u27EAAGC0\u27EB"}]}
+{"id":"\u754C\u9762-03810","kind":"ui/span","units":[{"id":"text-1","text":"You\u0027re signing in on \u27EAAGC0\u27EB. Your sign-in stays on that machine."}]}
+{"id":"\u754C\u9762-03811","kind":"ui/span","units":[{"id":"text-1","text":"Always open"},{"id":"text-2","text":" links without asking"}]}
+{"id":"\u754C\u9762-03812","kind":"ui/button","units":[{"id":"text-1","text":"Open browser screenshot"}]}
+{"id":"\u754C\u9762-03813","kind":"ui/img","units":[{"id":"text-1","text":"Browser screenshot"}]}
+{"id":"\u754C\u9762-03814","kind":"ui/button","units":[{"id":"text-1","text":"Open in settings"}]}
+{"id":"\u754C\u9762-03815","kind":"ui/component","units":[{"id":"text-1","text":"Insert into main conversation"}]}
+{"id":"\u754C\u9762-03816","kind":"ui/component","units":[{"id":"text-1","text":"Unarchive the main conversation to insert"},{"id":"text-2","text":"Insert into main conversation"}]}
+{"id":"\u754C\u9762-03817","kind":"ui/div","units":[{"id":"text-1","text":"Access restricted"}]}
+{"id":"\u754C\u9762-03818","kind":"ui/component","units":[{"id":"text-1","text":"Checking access..."},{"id":"text-2","text":"Try again"}]}
+{"id":"\u754C\u9762-03819","kind":"ui/component","units":[{"id":"text-1","text":"Not started"},{"id":"text-2","text":"In progress"},{"id":"text-3","text":"Done"},{"id":"text-4","text":"Skipped"},{"id":"text-5","text":"Failed"}]}
+{"id":"\u754C\u9762-03820","kind":"ui/ol","units":[{"id":"text-1","text":"Plan, \u27EAAGC0\u27EB of \u27EAAGC1\u27EB steps done"}]}
+{"id":"\u754C\u9762-03821","kind":"ui/component","units":[{"id":"text-1","text":"Hide"},{"id":"text-2","text":"Show"},{"id":"text-3","text":"\u27EAAGC0\u27EB. \u27EAAGC1\u27EB plan"}]}
+{"id":"\u754C\u9762-03822","kind":"ui/fieldset","units":[{"id":"text-1","text":"Response actions"}]}
+{"id":"\u754C\u9762-03823","kind":"ui/component","units":[{"id":"text-1","text":"Review \u27EAAGC0\u27EB before installing"}]}
+{"id":"\u754C\u9762-03824","kind":"ui/component","units":[{"id":"text-1","text":"Prototype"},{"id":"text-2","text":"Experimental"},{"id":"text-3","text":"Third-party"}]}
+{"id":"\u754C\u9762-03825","kind":"ui/component","units":[{"id":"text-1","text":"Review contents"}]}
+{"id":"\u754C\u9762-03826","kind":"ui/component","units":[{"id":"text-1","text":"Add anyway"}]}
+{"id":"\u754C\u9762-03827","kind":"ui/component","units":[{"id":"text-1","text":"Local"}]}
+{"id":"\u754C\u9762-03828","kind":"ui/component","units":[{"id":"text-1","text":"New Worktree"}]}
+{"id":"\u754C\u9762-03829","kind":"ui/component","units":[{"id":"text-1","text":"Previous Worktrees"}]}
+{"id":"\u754C\u9762-03830","kind":"ui/span","units":[{"id":"text-1","text":"Previous Worktrees"}]}
+{"id":"\u754C\u9762-03831","kind":"ui/component","units":[{"id":"text-1","text":"Voice dictation unavailable"}]}
+{"id":"\u754C\u9762-03832","kind":"ui/span","units":[{"id":"text-1","text":"Retrying transcription (attempt \u27EAAGC0\u27EB)\u2026"},{"id":"text-2","text":"Transcribing audio\u2026"}]}
+{"id":"\u754C\u9762-03833","kind":"ui/component","units":[{"id":"text-1","text":"Stop transcription"}]}
+{"id":"\u754C\u9762-03834","kind":"ui/component","units":[{"id":"text-1","text":"No longer available"},{"id":"text-2","text":"Removed from the marketplace. Stays installed until you uninstall it."}]}
+{"id":"\u754C\u9762-03835","kind":"ui/component","units":[{"id":"text-1","text":"Installed separately"},{"id":"text-2","text":"Disabling or removing this bundle doesn\u0027t affect it."}]}
+{"id":"\u754C\u9762-03836","kind":"ui/component","units":[{"id":"text-1","text":"Enable"}]}
+{"id":"\u754C\u9762-03837","kind":"ui/component","units":[{"id":"text-1","text":"Add bundle \u27EAAGC0\u27EB"},{"id":"text-2","text":"Loading..."},{"id":"text-3","text":"Adding..."},{"id":"text-4","text":"Add bundle"}]}
+{"id":"\u754C\u9762-03838","kind":"ui/component","units":[{"id":"text-1","text":"Adding plugins from \u27EAAGC0\u27EB"},{"id":"text-2","text":"Add bundle \u27EAAGC0\u27EB"},{"id":"text-3","text":"Adding..."},{"id":"text-4","text":"Add bundle"}]}
+{"id":"\u754C\u9762-03839","kind":"ui/component","units":[{"id":"text-1","text":"Review bundle before adding"}]}
+{"id":"\u754C\u9762-03840","kind":"ui/div","units":[{"id":"text-1","text":"This plugin in \u27EAAGC0\u27EB may have looser code review. Review its contents before adding the bundle."},{"id":"text-2","text":"These plugins in \u27EAAGC0\u27EB may have looser code review. Review their contents before adding the bundle."}]}
+{"id":"\u754C\u9762-03841","kind":"ui/component","units":[{"id":"text-1","text":"Bundles"}]}
+{"id":"\u754C\u9762-03842","kind":"ui/p","units":[{"id":"text-1","text":"Curated sets of plugins for common workflows and roles."}]}
+{"id":"\u754C\u9762-03843","kind":"ui/h1","units":[{"id":"text-1","text":"Bundles"}]}
+{"id":"\u754C\u9762-03844","kind":"ui/div","units":[{"id":"text-1","text":"No bundles available."}]}
+{"id":"\u754C\u9762-03845","kind":"ui/span","units":[{"id":"text-1","text":"Loading bundles..."}]}
+{"id":"\u754C\u9762-03846","kind":"ui/component","units":[{"id":"text-1","text":"Bundles"}]}
+{"id":"\u754C\u9762-03847","kind":"ui/button","units":[{"id":"text-1","text":"Robot"},{"id":"text-2","text":"Tree"},{"id":"text-3","text":"Hub"},{"id":"text-4","text":"Sliders"},{"id":"text-5","text":"Terminal window"},{"id":"text-6","text":"Command prompt"},{"id":"text-7","text":"Code"},{"id":"text-8","text":"Sparkles"},{"id":"text-9","text":"Wrench"},{"id":"text-10","text":"Shield"},{"id":"text-11","text":"Speedometer"},{"id":"text-12","text":"Gauge"},{"id":"text-13","text":"Eye"},{"id":"text-14","text":"Flask"},{"id":"text-15","text":"Radar"},{"id":"text-16","text":"Bot"}]}
+{"id":"\u754C\u9762-03848","kind":"ui/component","units":[{"id":"text-1","text":"Toggle Virtual Machine"}]}
+{"id":"\u754C\u9762-03849","kind":"ui/component","units":[{"id":"text-1","text":"Toggle Virtual Machine"}]}
+{"id":"\u754C\u9762-03850","kind":"ui/span","units":[{"id":"text-1","text":"Side Question"}]}
+{"id":"\u754C\u9762-03851","kind":"ui/button","units":[{"id":"text-1","text":"Disable Text Selection"},{"id":"text-2","text":"Enable Text Selection"},{"id":"text-3","text":"Disable Text Selection"},{"id":"text-4","text":"Enable Text Selection"}]}
+{"id":"\u754C\u9762-03852","kind":"ui/github-pr-status","units":[{"id":"text-1","text":"Draft"},{"id":"text-2","text":"Open"},{"id":"text-3","text":"Merged"},{"id":"text-4","text":"Closed"}]}
+{"id":"\u754C\u9762-03853","kind":"ui/span","units":[{"id":"text-1","text":"Inspect live bindings or record custom key chords filtered to"},{"id":"text-2","text":"commands."}]}
+{"id":"\u754C\u9762-03854","kind":"ui/component","units":[{"id":"text-1","text":"Issue numbers"},{"id":"text-2","text":"Issue actions"}]}
+{"id":"\u754C\u9762-03855","kind":"ui/component","units":[{"id":"text-1","text":"Pull request numbers"},{"id":"text-2","text":"Pull request actions"}]}
+{"id":"\u754C\u9762-03856","kind":"ui/component","units":[{"id":"text-1","text":"Branch names"},{"id":"text-2","text":"Branch actions"}]}
+{"id":"\u754C\u9762-03857","kind":"ui/pdf-search","units":[{"id":"text-1","text":"Search in document..."}]}
+{"id":"\u754C\u9762-03858","kind":"ui/button","units":[{"id":"text-1","text":"Disable Text Selection"},{"id":"text-2","text":"Enable Text Selection"},{"id":"text-3","text":"Disable Text Selection"},{"id":"text-4","text":"Enable Text Selection"}]}
+{"id":"\u754C\u9762-03859","kind":"ui/github-pull-requests","units":[{"id":"text-1","text":"Pull Requests"},{"id":"text-2","text":"Pull Requests"}]}
+{"id":"\u754C\u9762-03860","kind":"ui/github-pr-card","units":[{"id":"text-1","text":"Connect GitHub"},{"id":"text-2","text":"Loading\u2026"},{"id":"text-3","text":"PR details unavailable"},{"id":"text-4","text":"(no title)"}]}
+{"id":"\u754C\u9762-03861","kind":"ui/setup-routine-status","units":[{"id":"text-1","text":"Saving setup routine"},{"id":"text-2","text":"Canceled saving setup routine"},{"id":"text-3","text":"Saved setup routine"},{"id":"text-4","text":"Deleting setup routine"},{"id":"text-5","text":"Canceled deletion of setup routine"},{"id":"text-6","text":"Deleted setup routine"}]}

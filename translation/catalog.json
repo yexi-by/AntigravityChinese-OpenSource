@@ -85616,6 +85616,1980 @@
           "Shape": "string"
         }
       ]
+    },
+    {
+      "Id": "界面-03767",
+      "Key": "87565598c4db98fceb83060fa48642f77896ab9f9aad806d28aad87d5b5bc3b2",
+      "Kind": "dialog",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "ca77d1a3bfd2b81d3b6e99d637d3410c8e108a6f781d3f04b46c1216b6ea871f",
+          "Source": "Choose another SSH config file",
+          "Role": "title",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "24b67ee6866e1e6312a25b992a525fb04c98b214bb6054f9b2dcfa4ee7b7459d",
+          "Source": "Choose Another File…",
+          "Role": "buttons",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "36f2c622ca452da9c057458db5c9345e54bad9168cc17b08a6286dd5982f57d6",
+          "Source": "Cancel",
+          "Role": "buttons",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03768",
+      "Key": "5dcbbb463d224abd3bca3564dfadaf2fe95d1b66845c26279c9659508ed35521",
+      "Kind": "dialog",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "561738c94f2387a7aac306bf131dbea9658e3835bec7e4aec67ab317f9391ba5",
+          "Source": "Could not restart the SSH server",
+          "Role": "title",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "214f9639f667db729a22b483662c870b1f7767390824d607f49d09e1c5d97cc9",
+          "Source": "⟪AGC0⟫ still runs Antigravity server ⟪AGC1⟫.",
+          "Role": "message",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03769",
+      "Key": "11e84778fe7d4c939ef8e00bf5143f3e4bdeee01435f5263a1c07fef004d61ee",
+      "Kind": "dialog",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "d195704b0047792baabadd0220714e2005048d55bb864093f6c3d2a3759377ae",
+          "Source": "SSH: ⟪AGC0⟫",
+          "Role": "title",
+          "Shape": "template"
+        },
+        {
+          "Id": "text-2",
+          "Key": "3c564a41ccddc4221ece51818d67f233d2b7458ae22bf64b8c0cadc5ca704c80",
+          "Source": "Yes",
+          "Role": "buttons",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "12e332268b13dd64b13829e57963bbdb7c64ccaa1f0cc3fe6e2ba201edb61594",
+          "Source": "No",
+          "Role": "buttons",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-4",
+          "Key": "8ec344bb6237adb8c207194e31b7e90d779932c19e1b1a4b7dd898ff0f4638ed",
+          "Source": "Cancel",
+          "Role": "buttons",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03770",
+      "Key": "a0f782a8027ef03cd08bc3b4312130eefb454d7e60158ace22a149f7703e6875",
+      "Kind": "ui/display-local",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "bda77771063f273b3cc8e038fe048f7428d52a66248cd45782144c4f20c019c5",
+          "Source": "Subagent",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03771",
+      "Key": "923043fea14380f1c81ebc68e0969fe4bc58bf8c490783fefbc024c236136410",
+      "Kind": "ui/display-local",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "2bacb9368dd3758bb6912a6a8210713b3794069dee9e363dd060e96df4b9acb3",
+          "Source": "Enter ⟪AGC0⟫...",
+          "Role": "children",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03772",
+      "Key": "98501c0eb6f973795e8c4878fdecebf864cce23cb7d8c780ed19bf9c2df89be6",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "a3296086d71459cb7900f184707dc0bd8595c36eff10c16715b945240b1ef177",
+          "Source": "The remote workspace is not running",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "a09eab9437bb8c0939d430dd7af80655f8540dc63f3a11ec59f96d44152a570a",
+          "Source": "The preview did not respond on port ⟪AGC0⟫.",
+          "Role": "children",
+          "Shape": "template"
+        },
+        {
+          "Id": "text-3",
+          "Key": "7f7483073ca4b50cf821a6f436f0b5faab12f0b8a062a99c87f985d4577d95ce",
+          "Source": "Nothing is running on port ⟪AGC0⟫",
+          "Role": "children",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03773",
+      "Key": "8f401fddf6765b514bc5325ca5cf5565bb410a24411b27fab3f2fcc3ca476088",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "b078ea6cf6c57568b06ba0ab6edb10884b7f97e8aa3c2e9d63a932e53b8af319",
+          "Source": "Loading preview…",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03774",
+      "Key": "2ca90e4bf3e49b83cda39ff9ecaac1446c743e52090b2b19f151d57e99b60a7d",
+      "Kind": "ui/setting",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "b28870325f4cd0a6137d2688b0c9f1143bccc63db551be785966e1753365ba93",
+          "Source": "Enable Browser Agent",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "64bc41baca8d879fe836596cb92499796d065032b83b6925c6152f7917a9f4f5",
+          "Source": "Let the agent open URLs, read web pages, and interact with browser content. This gives the agent access to important (and often critical) knowledge and methods of validation, but any browser integration does increase exposure to external malicious parties for security exploits.",
+          "Role": "description",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03775",
+      "Key": "a1780f7c9ceac5244f305bc339689d40e6fa3580fb4f368d19d5b823ca7a20e2",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "1ce0e5fd8597c701ee35d42a12cef4b7abcb116f92849f4140d72bce5bab96e2",
+          "Source": "Browsing Data",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "e8a0a3f25a9f15de753db7c9b5e646c3ce860d5dddc5b1f04db2d028d6e25a30",
+          "Source": "Clear history, cookies and site data from the built-in browser, or manage cookies for each site.",
+          "Role": "description",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03776",
+      "Key": "f8266ed7ede9d3a6ec6ea8a6317960657859917c6288520a45fb3350952b1342",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "b55e7ec7be3e91ae2348393334c60e09c7d56e1b4bb50ad1ce326c8f77342c5d",
+          "Source": "Cookies by Site",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03777",
+      "Key": "ea4fd20929c4d2cd7dd824827c9faf189f831a93795c90b983dbc92e5769cf50",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "30f1e6180352eeff6064371fc7def6a9f39757dd79b6891808d49a3f2c0d20dd",
+          "Source": "Clear Browsing Data?",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03778",
+      "Key": "4435361defb528bc29202fbfff120d42ddbf95f2c113099c5ef718a83dadda03",
+      "Kind": "ui/p",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "2f9587bfbe424c9dabc822d2ed5c81e42067e71aa19bbab487f21978ed542122",
+          "Source": "Choose what to clear from the built-in browser. It can't be undone.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03779",
+      "Key": "75fe0ebf88afc35647c7e2ee6888778bb5b9e3ad38af3546740ed820473554dc",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "f13877e1df74887ac65b2344e0b74586001fb6cd9131f12245f349c5e9ba165e",
+          "Source": "Browsing history",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03780",
+      "Key": "ced834f1fb0dbaf063c47eed27439685eeae600d36f0373b9da5bc693b342a14",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "60fe5c01c2deae992c1478d2c0fe5edddd05e2d74d7b150a7077056148d1efcf",
+          "Source": "Visited URLs and autocomplete suggestions.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03781",
+      "Key": "c3593581a7e801a03d83440e5164e0d299ec49cb1ee53533a27fa409016b0b06",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "ad8c8fd820860578bb9f45589a4f47324a773d18a26580551e25177de7b53eeb",
+          "Source": "Cookies and other site data",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03782",
+      "Key": "3b7b2718690195b090d124ccfe7fd65aada5f15bf85297ec35c3fd8fc639d9f5",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "133231d388cef50c4e7056421a04bb9586edb1286af57a01ce594b2ff4cadb07",
+          "Source": "Cookies, site storage and cache. Signs you out of all sites in the built-in browser and reloads its open tabs.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03783",
+      "Key": "22a06d8238ca73d772b94e39914d988ea04fc6cbf56ebbbdf4baa969749b6570",
+      "Kind": "ui/p",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "9886e96cba464835304fe1f5226905481fba4651a62e4d3b8872a83292f61a8f",
+          "Source": "An agent is using the built-in browser. Clearing its data signs the agent out of sites and may interrupt its task.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03784",
+      "Key": "229c5216fa0fc1af1b1f72c2bff5e7e80959fbf0d245280bfc6c5503f0dbe633",
+      "Kind": "ui/p",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4af6098ffc2d47be10657bde98061f8bcc825ea5827b976fffcadc6b5f9ff3cd",
+          "Source": "Couldn't clear browsing data. Try again.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03785",
+      "Key": "65b43f947ab595fd98a42bdbf77eadff111f8aa985a110d18dedd9f6c2f0838d",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "7f0df6609b7b53fd6ebde3c1363a487e1b12e693994225ce4381f122934a8015",
+          "Source": "Loading cookies…",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03786",
+      "Key": "5b7385cdb8f7dbfab4cda4a50db83e0b4ef9c709be725f6f31504bfc2b3f739b",
+      "Kind": "ui/p",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "7ff9e273f0bed554e8216a8cd316e9f1d9eb7192cb7bbf77bf2116aafc58025e",
+          "Source": "Couldn't load cookies.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03787",
+      "Key": "bc27f1bd160c51144b550847b3b2d3f1f1f1b0c21780d3270e3c4ad21b63e049",
+      "Kind": "ui/p",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4f8d67857e28e5bcd7133662ae82cdf4827f3e206510cd5717e0cc1204471cc6",
+          "Source": "No sites have cookies in the built-in browser.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03788",
+      "Key": "78412ef77e8c7a9edee08f0e08a304e06444b19e34522d3d1c224b121d0697a1",
+      "Kind": "ui/p",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "ce7fe9d16eb6189901f09227048b289a2acdd5f0c76c030b5b983068b4505556",
+          "Source": "Couldn't delete cookies for ",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "ae4523172abdba5c706f652b9c401ebad7cab5d8c4aa5474483ee4a7ee4e5b0c",
+          "Source": ". Try again.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03789",
+      "Key": "fe0347648a0f63ad96dc80a0f85cd1981adea99b85292387db74d16c1f51dd9d",
+      "Kind": "ui/p",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "ab4854f1fee67f2a4d44fd428ca58ba5b39e4cbca291506551876123993c1a52",
+          "Source": "No sites match “",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03790",
+      "Key": "f3b54999e44832f348d07ae6c0841ec2b09560a772c47ea73fa44d66bc094d0c",
+      "Kind": "ui/ul",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "3fc723f7499cdd444f388a36a6b0904535fbe51156d4631c55c68501b9e6a55a",
+          "Source": "Sites with cookies",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03791",
+      "Key": "2ef49c9e315d7e9aafa9ebe798d43db5b6dc5d37ade52e3483fce5081deefda1",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "d5670a7ce26cce7698443a88c284ca2a7fa5e474212d9f2460989b7df89b24f6",
+          "Source": "Delete cookies for ⟪AGC0⟫",
+          "Role": "aria-label",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03792",
+      "Key": "41ebe35ad6932ec5401b93a86dafdcb895e25220a00edfba84617062f7418b49",
+      "Kind": "ui/p",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "c22e9729d90df41b81439ebabdf258e431814db43d38e980486b2f4093248542",
+          "Source": "Cookies the built-in browser stores for each site. Deleting a site's cookies usually signs you out of it. Other site data (local storage, IndexedDB, cache) is cleared only by Browsing Data → Clear.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03793",
+      "Key": "391b3b67e5f7362b5713c90447323c1f6ff59a093c11a8b37b52f399cfa83cb9",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "e04f7cb8782d2394f48184068a7fa0dead865dbc195b8c9f29deccf15540940c",
+          "Source": "Search sites...",
+          "Role": "placeholder",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "5524f3672568612082f3eca8f109d303fbd92d809bdd007c71abd68a97c77360",
+          "Source": "Search sites",
+          "Role": "ariaLabel",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03794",
+      "Key": "2b67e06fd472e8d620f026a32b7f85d9f66c278e50b8cacac6fbd07d89611c0b",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "6e2ef041e0104150ab0b6bd25d86b409f785ef08e97efab0ea96234160e29604",
+          "Source": "Shortcuts",
+          "Role": "title",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "5652017395a2763c972261cf2c3ae3e2b2d51673595e8c099244873c56057893",
+          "Source": "Manage your keybinding scheme and customize shortcuts in VS Code.",
+          "Role": "description",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03795",
+      "Key": "ff42e81822cf60b35f1342957fe75b3f8f97b38fd1396f924bdc55e608f1a391",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4aba36d5e2cb892086023d57ffd8682ebd7bafab577fd7e435745fe5824aaea5",
+          "Source": "Keybinding Scheme",
+          "Role": "title",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "faf986d4374bd8de1c37fec0109fcea44971fb0f6b25d615e9f84997b0f0154f",
+          "Source": "Choose between non-colliding VS Code defaults or standalone Antigravity chords.",
+          "Role": "subtitle",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03796",
+      "Key": "2153f567d1d96eabe41612bf6af8c9b3bc321402373e2e01ae4e54c23d902d50",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "48f00ee4734e4719830ef55414cc1959148bf5757cf913306950a5e6ac710639",
+          "Source": "Keybinding Scheme",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03797",
+      "Key": "9fc8b9db1b3d1b86c752d3e9372a1bb754728e26b6f6dfa5ad40769f9ab061f1",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "5ca648d32116e4216ed1dbd8742084c77ce8af70569e6e9a59dd39193d7712a2",
+          "Source": "VS Code Default",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "b916f91c45ec68054c79254a202c74fef09e82b365e2a61a2beae05ba0fe0e97",
+          "Source": "Antigravity (AGY) Style",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03798",
+      "Key": "9c5d9c24a1739f1df5296182d59330ab8e4715df324d71145f057704a67bb4e1",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "06b08bab1741d3a52c7d997af47e773515497d20b53a387fbc4e6ccfab1958e7",
+          "Source": "VS Code Default",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "69e41474a415a9845567b7623bae610cf49e64fab15f9de8ed1154ddc13d2015",
+          "Source": "Antigravity (AGY) Style",
+          "Role": "children",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03799",
+      "Key": "cd4290212238e544db715e6b8eb137865f38f431318488ba11db249e156124e1",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "22c33c6fb8bafc1f9b90a693e168b1cc0f7af7909885ad8360de0b67956ef8cb",
+          "Source": "Recommended",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03800",
+      "Key": "e15c7c924b89e16ecda9b489d328f10f78495412e4b980638c5d15bdbde216df",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "c8350c8263ae3125400ee0d90523910b720753cff21da3b300ebb0e08646ab0d",
+          "Source": "Honors standard VS Code shortcuts without collisions (e.g. ⌘L Focus Input, ⌘⇧L New Conversation, ⌘⇧A Picker, ⌘⇧, Settings).",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "74cd616a3d6d6a2d0e5b327c6de52a2f6f85a3b78eb44a7c6757d5d92567d54c",
+          "Source": "Honors standard VS Code shortcuts without collisions (e.g. Ctrl+L Focus Input, Ctrl+Shift+L New Conversation, Ctrl+Shift+A Picker, Ctrl+Shift+, Settings).",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "f5d7186890bd432699bd122cb5b50be21886aef948da605999d37f07dc522f89",
+          "Source": "Uses standalone Antigravity chords (e.g. ⌘I Focus Input, ⌘⇧O New Conversation, ⌘K Picker in chat, ⌘, Settings, ⌘[/] History). Replaces Go to Symbol (⌘⇧O) and Trigger Suggest (⌘I), and rebinds VS Code Settings to ⌘⌥,.",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "eb8e7e3532f352f1dcc4064aa0605b58edf2fcb2f5779638eacd97e44fb7b653",
+          "Source": "Uses standalone Antigravity chords (e.g. Ctrl+I Focus Input, Ctrl+Shift+O New Conversation, Ctrl+K Picker in chat, Ctrl+, Settings, Ctrl+[/] History). Replaces Go to Symbol (Ctrl+Shift+O) and Trigger Suggest (Ctrl+I), and rebinds VS Code Settings to Ctrl+Alt+,.",
+          "Role": "children",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03801",
+      "Key": "1954e0f90e23a5e8361c2140262b99d52a1aa3fa927217e95d78461843a02f7d",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "da57221301066e31338d72c675c68fa7849904a2f9587191f33c2201145641dc",
+          "Source": "Customize Shortcuts",
+          "Role": "title",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "5b8ff3a4032c218754a543f1a39f3bba2a6893d9d323c295b4ec2f1d1d90b51a",
+          "Source": "All active Antigravity shortcuts and user keybinding overrides are managed directly by VS Code.",
+          "Role": "subtitle",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03802",
+      "Key": "eba07b2e99fed35f909d90fea1c726c04b3d308ad3186463e342e49b66d063e4",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "81c2d8f73c883911d721af3836706a570b58561676ff8cd488bf28e12a70dd89",
+          "Source": "VS Code Keyboard Shortcuts",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03803",
+      "Key": "f2d4bbc61ed9f82d7ec631444316bdc2509e3a540c06f5a599119861a3a87036",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "96fb1fc11e78729c0c4d2b91e1e49d46fd057fb3bf90eb6e833bc9bb0ac47b01",
+          "Source": "Inspect live bindings or record custom key chords filtered to",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03804",
+      "Key": "195692adeaed2125847c82dc5474a5cfb0288d09ec8b0a293dcfc3283082f076",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "eb3f686e625e4a14e8ccb13fff01251148d61ea455bae8d77ef284c59b9c2f50",
+          "Source": "Open Keyboard Shortcuts",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03805",
+      "Key": "716b275a2f4f95fb819bc8334bc8da5ad2d6977fe76902daadb753fad2572fa2",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "258aa4ac20beae547c9208f0658b24c25d29fca886f30a2f58929ea67711e985",
+          "Source": "Shortcut ⟪AGC0⟫ for ⟪AGC1⟫",
+          "Role": "ariaLabel",
+          "Shape": "template"
+        },
+        {
+          "Id": "text-2",
+          "Key": "aa73e46af293f05e9f1d85009cc6e03720c48f78c14306a6c1ab3ab36c3522c4",
+          "Source": "Managed by application menu",
+          "Role": "tooltip",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03806",
+      "Key": "7e67d93106022e0b5a9a42b674a1a25542bd3cfc5c840b7837a35e1f50bd1e33",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "e4d37c455f35a25c36b069b03467449c2efa9c9662cd354507ba02d54393d139",
+          "Source": "Add to Chat/Quote",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "22b88abc46937f0d5ee31e47d9cd67956f625c43b390438cac619f4de06a4824",
+          "Source": "Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "5f43b3d37b0ca4cb1266766a6bbfd5a398c5664d230aa08a3d008614aabf25b5",
+          "Source": "Layout Controls",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "6dc332da5d3f9d4ad65e572017d6e2536f491e65842f1f2aeffd3548c866be56",
+          "Source": "Navigation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "91715996b8ccdf7030d40ca235cc0a8b435f08141f71d6b97477f61a72690c17",
+          "Source": "Open Conversation in New Tab",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "a5ee8de22694b0b372c41f664737126a6e786b8cab648139186c2dae9bdeaddb",
+          "Source": "Open File Search",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "d1983c29decfc2be21af8847e75030e952ce51b925380707811c71ac4f5b17c3",
+          "Source": "Pin / Unpin Conversation",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "1849f4220a1ae014482d4950d5e6d68b60eb7ea154a8a924ec90e5bc9dc5a5d2",
+          "Source": "Terminal: Select All",
+          "Role": "shortcut-label",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03807",
+      "Key": "747dec4b9092937173656791c6ed7f4515e7b710c43f2b70da01b20452f4a509",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "c52d4514611eda2663a9912379a0b7e5a01410d0967dd2ac4f2bfd0c8d70a388",
+          "Source": "Environment",
+          "Role": "title",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "0a2e924dd6c2167aacbb1e6d5089eac66b0414ff289606d021875603a296837c",
+          "Source": "Terminal",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03808",
+      "Key": "3c8e3995e173ccb16aeec88d7f202395361795573d27d1bede947732aa596417",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4f1b730dd0d735c061269ba77ecf64345489d91d5533ccb03d8a94cd34b9bff8",
+          "Source": "Setup Script",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "a2f47f4fd96874ae45bf15f3050b4373fcf728fef1cd546277485cafde5c0a6d",
+          "Source": "Command Setup Script",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "3b3e5148fa60c0b7aa57eba41ed8f0ad3805c14fa0244f79d04747f3ed27064e",
+          "Source": "A bash script run in your cloud environment after cloning repositories (or configure interactively in chat with /env-setup).",
+          "Role": "description",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-4",
+          "Key": "2c8e5bbc5b2d1aef272b2854efb83340c1093fa7acbc3027b4c1f6aa27fd2988",
+          "Source": "A shell setup script run before every command the agent executes in this project. Overrides the global script.",
+          "Role": "description",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-5",
+          "Key": "1793b1a9f71cbd2a54d8a62c5bfbe7d1625f6aa74bedd9ef9057fd74e5bf376a",
+          "Source": "example:\nnpm ci && npm run build",
+          "Role": "placeholder",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-6",
+          "Key": "d6cb4abfad811b731ec2f9ad23aba427df4bfcc7dbdb9356ad05a857b34c0e8d",
+          "Source": "example:\nsource ~/.jetski_shell_setup",
+          "Role": "placeholder",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03809",
+      "Key": "b583f9908587f7292b24a860b49a3681897408bcc247438e89b8504262fa1f37",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "b0a526220e41fc02f29c0613519f767f09562045e5461ec1c9053835315141f6",
+          "Source": "SSH: ⟪AGC0⟫",
+          "Role": "children",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03810",
+      "Key": "c85da21caae05672a0c449ed2d3d7e0abe31ea81014715b34e2aaa467c0fc7fe",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4c0d773db393b03eb3f47ad9a5ddb45a7553721c3506b1477eeeb5ae38fb45e5",
+          "Source": "You're signing in on ⟪AGC0⟫. Your sign-in stays on that machine.",
+          "Role": "children",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03811",
+      "Key": "d58d4ae84c048ebddfcea9f55488a1d1fdf1e1a499c8097dba676da3f3dd1fec",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "3dcfc633b9345915a7233fca3d06205fea7f92d8606c7b92444ba1602beddd0d",
+          "Source": "Always open",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "25113685fb53be9428d689e24434969afe7a04d2f069c2a22bfc12acf1090e41",
+          "Source": " links without asking",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03812",
+      "Key": "e26d9d743c2219279abc7dea4d32447806ab212309a3da7f38c0e0318523a14c",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "61e46c0c2d82a4d8b491660589408f0243c149a8764181ad12fd2a8275057cb4",
+          "Source": "Open browser screenshot",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03813",
+      "Key": "4f79fa978f91b6f02378e27f3b0de7619a0abd6e7ff39d0cf723341b3846f5e8",
+      "Kind": "ui/img",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "a26e2662eafbe65a686a3b667897dc2bc65c5a5e09d6748590753142eaf00ae6",
+          "Source": "Browser screenshot",
+          "Role": "alt",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03814",
+      "Key": "f9b5c3abb0f6cbae67ecc86edf8034c3d5521c422f04fd4815da9d2c4fab814d",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "095274b92e6a0c9ec28e78dd14aed6fa7de1fd5f4ccb1277ebef8e8a82306f2f",
+          "Source": "Open in settings",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03815",
+      "Key": "e564742b2aa75af35257c0b3df8e5a0f9f9985ad1797beac67fa64b507a47e48",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "8c2e539c84a0c71d6b5a4ae0c2308f2b89c085e2807d48b9654255a76aa7f0b4",
+          "Source": "Insert into main conversation",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03816",
+      "Key": "d3e8a5060ba2dc3b412b9677ea49ec5dfbb631675c95165e042c18889ad13f0c",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "3ae422f04c91595d9074aab4d285b572f60fd7c771c6a1226e27bd04cf425843",
+          "Source": "Unarchive the main conversation to insert",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "16d9c52967e8d58f0073999a33974cfa02e0d357bdc202506325cd0e53c9300e",
+          "Source": "Insert into main conversation",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03817",
+      "Key": "8337bdfd940d06225f92eeb15ed7c04c9340ce7f4d0bdf74105de8f863b28490",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "cf1d9b0855832d08d322fdca9339ff6235615e8a2732196598ef404f76c2dd0a",
+          "Source": "Access restricted",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03818",
+      "Key": "2534a4b92a61c2d584fa625b7c37c8f28c5bb7355059192fd65242485b88a790",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "897945f628d0f4b897143c1c3d3106c75aa7f080573a120de03be81045bf3b14",
+          "Source": "Checking access...",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "e9b2dafafecb299f6604bba0403376ff141210d6071b03c48ec853d8a51fda64",
+          "Source": "Try again",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03819",
+      "Key": "5287a00c8e250ccc82ec88f4202c4f5e9b56d56f4ceded986bb2397475c158e7",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "2cb55911617ac997e529fabd69db603386a672698834ecf25c456f7db1b0b181",
+          "Source": "Not started",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "d078fb3ff3e74e63c80be8f467e1565850e4730b500452a14b296bebe98464cd",
+          "Source": "In progress",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "fbbffa843ce7ad5f7b9a8b4c10f1e71b18f309531b86677cc5a4e54fb497f9e6",
+          "Source": "Done",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "afd874fcc11701e17107ea8ea038b05f190015b855ae84274cc0f7639181f2c4",
+          "Source": "Skipped",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "dc85b71612e7e16d6b6d1154de7974d5f0e0d92bab2bc1d7ba98d948e7fe7e49",
+          "Source": "Failed",
+          "Role": "children",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03820",
+      "Key": "3dd6b8d9612eb9e73b1d6939e11ad1f791feaeb2c003f8b49a5ba6953540d5cb",
+      "Kind": "ui/ol",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "fcaae59c087611dcd51356abde067e22a885db5c3ca6ff8c73a7ffd7a3d72aa4",
+          "Source": "Plan, ⟪AGC0⟫ of ⟪AGC1⟫ steps done",
+          "Role": "aria-label",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03821",
+      "Key": "52d6dfd1f992b286c3122bbdd1abbc5bf60035c4d469d8a295118ca5a49d91c9",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "3cb8edca324f71888cc89a7825e8849898731188490ec6ebff73621a9e2d211e",
+          "Source": "Hide",
+          "Role": "aria-label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "349d10c3da0f5f5bc60bdc8bdc4c6da12da308553f21a37a30ece46d0e6abbfa",
+          "Source": "Show",
+          "Role": "aria-label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "5bb79dc00c3741227442dcc2760b90456e73db37763f1f43965063b5d1240773",
+          "Source": "⟪AGC0⟫. ⟪AGC1⟫ plan",
+          "Role": "aria-label",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03822",
+      "Key": "15ed60977ce99460486ce95f5afef458c3ccd541cf5a8d319e2ff4379d2703ae",
+      "Kind": "ui/fieldset",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "f41a43433295c5f772a23973439df852af2aa572a91ba304cea83b86bde4571e",
+          "Source": "Response actions",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03823",
+      "Key": "8952637af3818193fb2e1dc93f2cc26ec165bb522ced6d9032f1c95a5c1e48f9",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "91d4cb6a48cf5d4762b0155f4ec056b47fb084828c6e39d9b7bd8654e33b26d2",
+          "Source": "Review ⟪AGC0⟫ before installing",
+          "Role": "title",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03824",
+      "Key": "5c2057514fbd375a1fdfdc79e768918e1f2e7297a7f2dcefb2e7d7150dbcb995",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "0d3463d79b49a9c7e08a0ae02957bd31704cda2e556c8bd4615fdf17fb4ec224",
+          "Source": "Prototype",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "cc4466be248f566b4394d9a47b94d01a88dbd90117df7e51440b6fcb6786f37c",
+          "Source": "Experimental",
+          "Role": "children",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "9168e8bd762769a0e277ca4e8c3480295fc20e96360b3aed59dac2c5a70ee81d",
+          "Source": "Third-party",
+          "Role": "children",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03825",
+      "Key": "308d67d77d99fb5a1931524f543108d04e59a47f3a3f0d36bf78991d9fe57e34",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "393c94d51f1f52676557f7a554e9eb268be2c6eeaa7f795c4489058f1d786ac1",
+          "Source": "Review contents",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03826",
+      "Key": "4cbf68e97fa76e07d324d791898fa4dccee6ceb75439bd892ee2b8d73f4b9038",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "c7dd1345c708feb390d3f1254638e727a6d1b95892fb317dcdd1ba9efe798c25",
+          "Source": "Add anyway",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03827",
+      "Key": "d2ae288803b53b33413c35eafe1758ff42bf1ca2f72691a63e60d48c899d6ded",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "5545aabca840766a876842b347b6d48dd826cd766608b98b8fa2c3b413a27178",
+          "Source": "Local",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03828",
+      "Key": "46cdcfd56fd78d01b5717a004c6437d8b0ea914cc204ab8675f266f21e9e2c87",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "f27a82288d88d168eee3291f3a773a72c9b6dcbd4994a3264d690791e6123fd1",
+          "Source": "New Worktree",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03829",
+      "Key": "7435c9b012b83aa8f2b7db92ffcc406f0e0e20acef63c8ee783f73c8bd6d48ac",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "e61135f8456327a651128337daf7f4eb49d53be605aae2bc3409860f2f8a3b0e",
+          "Source": "Previous Worktrees",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03830",
+      "Key": "bae7def1df050c811f438851d47856499f77d7db58d455361f06d52e534c5b7f",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "1357c4a5fad7a2b35a82fe620e259488e8305df85a657ac06a239f5ba413ae96",
+          "Source": "Previous Worktrees",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03831",
+      "Key": "be0d758fa643772c673003e505584ccf472f9a100562fa0e2ff2c4f0b35acfd7",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "06e9befc071d8ca12a7dad042bd2b89f2314a142f5110229dcba973319b30dcb",
+          "Source": "Voice dictation unavailable",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03832",
+      "Key": "a54637034a788903f4192c8c497e3ad95ac56bc25ec48b00601362a88feb3d1d",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "5b211bf2cabb3924224a2a6122682661676d7be22a7197cbe9718e440bc92c7e",
+          "Source": "Retrying transcription (attempt ⟪AGC0⟫)…",
+          "Role": "children",
+          "Shape": "template"
+        },
+        {
+          "Id": "text-2",
+          "Key": "bd51b818cc49339cac7696df39afcf54d41b035fd3eaaf9bdc1a199a5fffbe66",
+          "Source": "Transcribing audio…",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03833",
+      "Key": "5572d9e98955c3a478baea34619c14d598465252462c9ca9f1cb261290b809c9",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "fd9334923c693b205c245252314e6f2b67bd29c49646670baa0cb1843e5c5259",
+          "Source": "Stop transcription",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03834",
+      "Key": "89dc28e558fb5425d447c71dd821c63b9cdc4e4fd814e2cad851fff80dd173bd",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "88a70d5007c6a65ebb714839e7830ba9141cbb2cd63cf3a37444f2ec884e74a0",
+          "Source": "No longer available",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "816d6e058d3e358bf028ca2f2245b62a7ca6067a10960448d8d15117b60cfd86",
+          "Source": "Removed from the marketplace. Stays installed until you uninstall it.",
+          "Role": "tooltip",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03835",
+      "Key": "9d54a9e072c024a10a474accd0bcce0e89077909f6a5d5665a0381c652c41c8b",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "e36e9d3dc204719274a9d9d8f2c5fe118f3287627e1c98c6a61f4d41ff298d5d",
+          "Source": "Installed separately",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "cd2124dede8ae17f900975ed95e36def5a0fcd25f1f3b66216c3a42cb07864fe",
+          "Source": "Disabling or removing this bundle doesn't affect it.",
+          "Role": "tooltip",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03836",
+      "Key": "a2e0c04bc933f6ccbb04c161ca6350fc38264c949b135e9d376ad62b71c7326f",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "e1988aa6d88c035e71f7e1dbcb3a3259386d6b0109c48c52243ca811a8b69007",
+          "Source": "Enable",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03837",
+      "Key": "7a1abdfb2f9e7781bad8868e98f970d60ccbeafe0f81ae608611e7448a1887a4",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "7f62f8d6fdc03618f8753d61532a9b10a795c3b947f5ad128647d14fec82bd36",
+          "Source": "Add bundle ⟪AGC0⟫",
+          "Role": "aria-label",
+          "Shape": "template"
+        },
+        {
+          "Id": "text-2",
+          "Key": "a4c59af4adebfa4e85447a3dccfd0bd901314be238068e8c413845eedaf79eee",
+          "Source": "Loading...",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "22d8269b0794394a4eb4e4f5b234bf5e6d2de6fa82e4be1feef7daebb3f7d47a",
+          "Source": "Adding...",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-4",
+          "Key": "7d9f0a89c6de41eb6a711f20b3307c8fc3f2a1be02de10143862db78e1d59b71",
+          "Source": "Add bundle",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03838",
+      "Key": "7223a27908b88e3a7ecb0839c6d5096c06577e25154bb2bb8af5110cc0c84d89",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "b7a68c2a5e4b95a1221328be8263f1a2f61502dc44bb880d51fd5f18564ccd40",
+          "Source": "Adding plugins from ⟪AGC0⟫",
+          "Role": "aria-label",
+          "Shape": "template"
+        },
+        {
+          "Id": "text-2",
+          "Key": "0e95e3af1b02806983916a0e7af6c3d8a7b139ae0efaae8e4d44d31021518851",
+          "Source": "Add bundle ⟪AGC0⟫",
+          "Role": "aria-label",
+          "Shape": "template"
+        },
+        {
+          "Id": "text-3",
+          "Key": "2ccedcd01c63c4f9d3d7eff12d716dfb4c67cdde1490ea228e446aab77ecceb8",
+          "Source": "Adding...",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-4",
+          "Key": "a8a8b21024589be681cf299704ad719ea05abf201bcc06f122e2cd225ff118fc",
+          "Source": "Add bundle",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03839",
+      "Key": "7e5c5657aa35f4036ae8b538663816c1bc519f4aa898677652212df355a89c15",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "f22c6f5a296ffa70b395b8654525e55acd3b23b18439df800d3789fc69691d20",
+          "Source": "Review bundle before adding",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03840",
+      "Key": "fdb2cb1a9cc70b1df84d8037d17cfb6862b52587e6e91309d3b9837911a3dc21",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "5c0419ba3b468c85e34832f1a3a8fed9cac8b32731377c4a112964ba77a42f53",
+          "Source": "This plugin in ⟪AGC0⟫ may have looser code review. Review its contents before adding the bundle.",
+          "Role": "children",
+          "Shape": "template"
+        },
+        {
+          "Id": "text-2",
+          "Key": "625141e67bb4f11b55ceaf668bbbaa259c4ac3ff7fec0edb0b066bef2b31f2c0",
+          "Source": "These plugins in ⟪AGC0⟫ may have looser code review. Review their contents before adding the bundle.",
+          "Role": "children",
+          "Shape": "template"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03841",
+      "Key": "fccc801094504a495bbd78b37e47adeb7a58d10d74f96113d5f373b172dec7f7",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "2c8ed4a954caf35b173186f92accaa45c92069b73cae046675b6c517e4d7f8a3",
+          "Source": "Bundles",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03842",
+      "Key": "c144cff72d14746d208a04a4704d07f6b67c6cb38f932c8687f856c251520456",
+      "Kind": "ui/p",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "10100280676f0d54b3e78580f98a9f280f8b1bc09f920d22991a8212d8a4ab66",
+          "Source": "Curated sets of plugins for common workflows and roles.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03843",
+      "Key": "f5d453fa0949b16ff756ce9cfaf80e5d10630a7ce8ba88388776a174219d5e69",
+      "Kind": "ui/h1",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "b8195d881646117ddf2f60bfe8d670299c401942f0b7d6f21f4150ff879acf7d",
+          "Source": "Bundles",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03844",
+      "Key": "1cbee55fdd1d6fdb93b2d8d3e5566ccfca95386a245a252d38f9be3ca1c1fef4",
+      "Kind": "ui/div",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "d779cbd5c938e9f79e828642a57170ee94fe96dfda4e28a480cc62eca01fff3e",
+          "Source": "No bundles available.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03845",
+      "Key": "d634cee960283ac007585d465d738c5faa1fca93369f71d35ed7fa771dcc005d",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "a7f52d45f181515feefdbb4803f60cd25941346ff09e64730dae99f5bb66b98a",
+          "Source": "Loading bundles...",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03846",
+      "Key": "c713222f70d6d463bed6ef9476c8b4212389783923e448025060c01eb2332017",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "3401ff0acf1f1401908d88c83c326109d3c31b46e0da2b048807ca17276998f7",
+          "Source": "Bundles",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03847",
+      "Key": "6d61614b2972a4968783d40c8d5e28dbea440233a73bdf0831553c5775facabf",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "7e8ec630c6d63b254cf4be742b0b35c97863d305f9d8e5a1145ca0ee4f3575b3",
+          "Source": "Robot",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "c828d3e6904cf66992ff8e1cb19c574da9298974742591adf56962442d4b4cae",
+          "Source": "Tree",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "231aa5ada6175004aa88ee9ffffa45571fba41f2cd2c3e1208502fde30997bf8",
+          "Source": "Hub",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "bf981fa77acdc915abbfacba41d2a9229a01587bedbbc51e28d88c7409cccd7b",
+          "Source": "Sliders",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-5",
+          "Key": "9b0c0771a2c3f9f41e20260bcb3fb10e8cc964e34106a9f288a71ca902cadfed",
+          "Source": "Terminal window",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-6",
+          "Key": "d87ca8510eb7407148ad521cc51662e0e43d7908eae5d41dd5e3ecf60e8fec4e",
+          "Source": "Command prompt",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-7",
+          "Key": "65623e8bb8849521955f429bb4749c48f616aee78e55d6ccce1da2b9ed7d96aa",
+          "Source": "Code",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-8",
+          "Key": "ca7bbdb2a7c123033293498104a402b41b372a1ace26e126a5c6976f9e57a30e",
+          "Source": "Sparkles",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-9",
+          "Key": "a98c2570b661d264f24780dcf19dea3aebd5f627e319a69e643003d41a537b6b",
+          "Source": "Wrench",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-10",
+          "Key": "8e05e0a7e90866fe1db729e83c4401abd200e36129c79c18d62715f677e8cf42",
+          "Source": "Shield",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-11",
+          "Key": "a485c0dcf1b9c8e56d7bd893b57e7a6fe644fb33cdef31d062344064f99bd744",
+          "Source": "Speedometer",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-12",
+          "Key": "c9552284f2ef69c050c1f02506ce535a68dd3d06846c13a229bb316d17eba33f",
+          "Source": "Gauge",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-13",
+          "Key": "ad8cee3906b7c314c6195ea4f0a9ae0b12967c9e4d91ef52fe26fb4278ea4a86",
+          "Source": "Eye",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-14",
+          "Key": "d8ef3fb654c1f1ea517c36bc1ddcf66d378667449afd6c89dad8b226f8596b61",
+          "Source": "Flask",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-15",
+          "Key": "55f0b8e539996b7a3339258bdd09893bfae87beaa50836821de97b38e3265eb5",
+          "Source": "Radar",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-16",
+          "Key": "6324bb7926e00f5fe04bcb7173e8abc9003a7074109f14de95a2884de1641dfe",
+          "Source": "Bot",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03848",
+      "Key": "6a34795c0a9ff6d8d26e42408374ea5f2387b0291ee55115125cceb468c33586",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "78bb0e60999bfedc89b0103c69550bbdefdb97be91eaff5833d01c5769586132",
+          "Source": "Toggle Virtual Machine",
+          "Role": "aria-label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03849",
+      "Key": "0a75008d14ca612a5112c1a4bfabaca2c74d810be15778ddee975a9390178976",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "70a2821651133dcaf7b49778a64232a28deb908e5d7892a7834e71f1871e9cec",
+          "Source": "Toggle Virtual Machine",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03850",
+      "Key": "d6e5930dfa9ea134fd6043057cb783c1655e932363fa072eff6c309b8820aae1",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "4291e1ddf7b626104f515d2798f2f4eab276e079e8e29c4f3d2691bc5d44bb8a",
+          "Source": "Side Question",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03851",
+      "Key": "6b9d7ee05fe03eec995d8d11eecbb7847780fe7218d5137adb21cb69e77a16c1",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "cfca50452ee409541a95308b2ffe279a9825709840abc9d627e8b592b499a45f",
+          "Source": "Disable Text Selection",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-2",
+          "Key": "0cde4cfd36d49e103eab0ee2637496fe8b51d6cf2b49ec8734d1a998203457f5",
+          "Source": "Enable Text Selection",
+          "Role": "aria-label",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-3",
+          "Key": "0e082344b8be5791cd45161e5df7942b8e7b2bab7043fa5be60d398238f12f70",
+          "Source": "Disable Text Selection",
+          "Role": "title",
+          "Shape": "lookup"
+        },
+        {
+          "Id": "text-4",
+          "Key": "426a7cb25e6f20791ce2d839d66fa084ca6d528919223d6f0bcb3ce7d9ffc0b7",
+          "Source": "Enable Text Selection",
+          "Role": "title",
+          "Shape": "lookup"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03852",
+      "Key": "6b8987a099008bc67818169a9b1ceba11c22e86aee7c552ee5830359418a0ff1",
+      "Kind": "ui/github-pr-status",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "a39561101ce2010f5746b083b120ed577b01ba2cbad7cec8beaa565d30ef5d58",
+          "Source": "Draft",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "85e3e7fec996259a396592a028f48456e2f4609f61462b55433221941a3dfc26",
+          "Source": "Open",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "45b31426ad8dbbe5dff0e926d4700059cac1fb30be2ad569e8f82d2ae80b7161",
+          "Source": "Merged",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-4",
+          "Key": "6e08c6ae8e4e0ad3fcc45f6a3c545461f2dafdb8a975d323366a9d417d692534",
+          "Source": "Closed",
+          "Role": "label",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03853",
+      "Key": "63c0e3d491c71f6b11ed715108fff8d2683331760c8f9bbad370ab6330768d53",
+      "Kind": "ui/span",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "3084a8fac24ccc0c97e52f4794da9c89f2d3104ede41bf595c8b079944cd3c61",
+          "Source": "Inspect live bindings or record custom key chords filtered to",
+          "Role": "children",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "b69a620a9fddf367577d8674d7f41bf488a8e4b4aa41f0860c81e84ce07d55cc",
+          "Source": "commands.",
+          "Role": "children",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03854",
+      "Key": "e3ff087969b578d4874e8521daa137418ab37b64f85e0dd0adeb3d1def3005b3",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "7a9443e7d70360fbbc3ba6d61b5b64413eed97ff3bfb49c48b42c564e0883a90",
+          "Source": "Issue numbers",
+          "Role": "scopeAriaLabel",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "857ddddfba6455adfc106d78bf4f5fb3b298a954b1ea84301b0f7e530725019e",
+          "Source": "Issue actions",
+          "Role": "actionsAriaLabel",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03855",
+      "Key": "37107d9d60d67f3b95cdb11ca8760fb6ef7083e48825a55885258b6cc6828cab",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "b24173d40d9f14570d709b7476c3c60f3d71ee13650c762d6b2beaa503cea6ee",
+          "Source": "Pull request numbers",
+          "Role": "scopeAriaLabel",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "d8d5c43c39cb4517f244ab4291f4cc01462c4fd394411682adec87d3c3f1e2fd",
+          "Source": "Pull request actions",
+          "Role": "actionsAriaLabel",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03856",
+      "Key": "6b857cd095f3b712a1779589afb5fcc184454809c611cbbe7511d4feb95bb21a",
+      "Kind": "ui/component",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "713e6ce7c27d7b4ac51e1101be09dfebec131e559186af4f56751f8e160fa8a5",
+          "Source": "Branch names",
+          "Role": "scopeAriaLabel",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "7414fc99b1813de0563470b2d4c74a8fe94f725437cb6595aec7c2dde3313bd7",
+          "Source": "Branch actions",
+          "Role": "actionsAriaLabel",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03857",
+      "Key": "9d89a20a359decd6ac4141eec49be80e7e5194d3f238546b59a6536b47110dc9",
+      "Kind": "ui/pdf-search",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "03722fb312f6d9a85c22bdf655e6033240910b4d368b497cdaa9aa35aa33d91d",
+          "Source": "Search in document...",
+          "Role": "placeholder",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03858",
+      "Key": "8de27687a3b0937d0660d71afa2889fbd475b53c7b3988b7af99dc73259f294e",
+      "Kind": "ui/button",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "940af7a967018226fe79932246e0fb81dd14c94385b32023a5f95b0ba2edf980",
+          "Source": "Disable Text Selection",
+          "Role": "aria-label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "fe781971404df2d495bdd53548a4241819d16c87e7d62f37c5886646deee5a6a",
+          "Source": "Enable Text Selection",
+          "Role": "aria-label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "e6e8c2a05f4f0116631c4ef1d7e67ba55fb40935dd55ca93d81db7230bc8792c",
+          "Source": "Disable Text Selection",
+          "Role": "title",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-4",
+          "Key": "14243e9d175e0c88252530198bbfdae3914915d6488007591f803857be3f3e77",
+          "Source": "Enable Text Selection",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03859",
+      "Key": "cff993b060932807e240e1d6afa04ebd421826512ebe96589dbb41d253b6c2a3",
+      "Kind": "ui/github-pull-requests",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "b15ca417b074743e75e67704ff0e5da99c0594a459de4321842d800464375d3c",
+          "Source": "Pull Requests",
+          "Role": "label",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "f2fa1adbcd2ecb748edc6cdf4aec3c9cd9799f5741e37784efd3202b338114fd",
+          "Source": "Pull Requests",
+          "Role": "header",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03860",
+      "Key": "70b13b85fa4d85e72f73d8bde0ba7d0c5d4ea7b3ad03ce841707240631806712",
+      "Kind": "ui/github-pr-card",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "a5f5eb6c5b0f8933275a7cd9cdb7749ea38b7707b7a437c6dc8de520c9092b8f",
+          "Source": "Connect GitHub",
+          "Role": "title",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "d53f9c063928c5836f7ab200215a9ecb00c03729610a9684d561c78374de6a15",
+          "Source": "Loading…",
+          "Role": "title",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "6f07a873355de817238eedd8b9a2782cfa95c5e43be2f5823e1adb3a969c7f09",
+          "Source": "PR details unavailable",
+          "Role": "title",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-4",
+          "Key": "0318b284dd27a71e28226cb8d7fee6790ba1fa593ab95cef6b8c835d5209385a",
+          "Source": "(no title)",
+          "Role": "title",
+          "Shape": "string"
+        }
+      ]
+    },
+    {
+      "Id": "界面-03861",
+      "Key": "08c2849d5f70b9967b812cc56a952b08c4b29b763204774fe2adc831b01a42b7",
+      "Kind": "ui/setup-routine-status",
+      "Units": [
+        {
+          "Id": "text-1",
+          "Key": "e84d940cacef4307d6846155a5ba700d903aafd471b1cfdba618d16596e005a7",
+          "Source": "Saving setup routine",
+          "Role": "prefix",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-2",
+          "Key": "092e396d6aa7df4721d5142df2623880e73cf66bddaf7fd9c91e419b53d4357b",
+          "Source": "Canceled saving setup routine",
+          "Role": "prefix",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-3",
+          "Key": "e6603ff924c090d6c93c9d241dc7e4ed42f5c267ec9692cc9a0dd720c51babdf",
+          "Source": "Saved setup routine",
+          "Role": "prefix",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-4",
+          "Key": "592a2e5a059aa8572431cf669e17902d32b379badede82f26386a1e17a60d2e9",
+          "Source": "Deleting setup routine",
+          "Role": "prefix",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-5",
+          "Key": "b0e95d9bfc93eb93c18ca8b006dbeb44539416512771f78423f9e895ac8c19f6",
+          "Source": "Canceled deletion of setup routine",
+          "Role": "prefix",
+          "Shape": "string"
+        },
+        {
+          "Id": "text-6",
+          "Key": "7c221dd71fae665c7483ccb2de1c0aa7993313452afd7fbb67cb0f617abf3d69",
+          "Source": "Deleted setup routine",
+          "Role": "prefix",
+          "Shape": "string"
+        }
+      ]
     }
   ]
 }

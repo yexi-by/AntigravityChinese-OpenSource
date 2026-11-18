@@ -17,6 +17,7 @@ var checks = new (string Name, Action Run)[]
     ("截图漏翻的侧栏、缓存文案、对比度和系统命令说明完整显示中文", CheckMissingUi),
     ("新版输入提示、侧栏分页和环境标签汉化，保留用户内容和内部身份", CheckUpdatedUi),
     ("快捷键命令和分类仅在显示处汉化，默认搜索提示不覆盖自定义内容", CheckShortcutDisplay),
+    ("2.33.0 的 PR 概览、查找命令和 PDF 文本选择可正确汉化", Check2330Display),
     ("新版命令描述、局部配额与复数后缀等 2.32.1 回归修复", Check2321Regressions),
     ("未知版本安装、重复汉化和恢复保持资源完整", CheckInstall),
     ("写入失败回滚，更新后拒绝旧备份覆盖", CheckRecovery),
@@ -42,6 +43,48 @@ static string Node(string code)
     process.StandardInput.Write(code); process.StandardInput.Close();
     var output = process.StandardOutput.ReadToEnd(); var error = process.StandardError.ReadToEnd(); process.WaitForExit();
     if (process.ExitCode != 0) throw new Exception(error); return output.Trim();
+}
+static void Check2330Display()
+{
+    const string code = """
+    globalThis.element=(tag,props)=>({tag,props});
+    const github={id:'github',sidebar:{displayOption:{label:'Pull Requests',persistentKey:'conversationDecorationPullRequests',defaultOn:false}},overview:{header:'Pull Requests',ownsUrl:url=>url.startsWith('https://github.com/')},HoverCard(){}};
+    const other={id:'other',sidebar:{displayOption:{label:'Pull Requests',persistentKey:'otherKey'}},overview:{header:'Pull Requests',ownsUrl:url=>false},HoverCard(){}};
+    const flags={draft:'Draft',open:'Open',merged:'Merged',closed:'Closed'};
+    const commands={focusInput:{label:'Focus Input'},zoomReset:{label:'Reset Zoom'},findInPane:{label:'Find in Pane',accelerator:'CmdOrCtrl+F'}};
+    function pullRequestTitle(status,needsConnection){return needsConnection?'Connect GitHub':status?.title||status?.unavailableMessage||(status===undefined?'Loading…':status===null?'PR details unavailable':'(no title)');}
+    function toggle(enabled){return element('button',{'aria-label':enabled?'Disable Text Selection':'Enable Text Selection',title:enabled?'Disable Text Selection':'Enable Text Selection',onClick:()=>enabled});}
+    function payload(element,enabled){return element('button',{'aria-label':enabled?'Disable Text Selection':'Enable Text Selection',title:enabled?'Disable Text Selection':'Enable Text Selection'});}
+    console.log(JSON.stringify({github,other,flags,commands,off:toggle(false),on:toggle(true),raw:payload(globalThis.element,false),closed:toggle(false).props.onClick(),owned:github.overview.ownsUrl('https://github.com/owner/repo/pull/1'),missing:pullRequestTitle(null,false),title:pullRequestTitle({title:'PR details unavailable'},false)}));
+    """;
+    var labels = new Dictionary<string, string>
+    {
+        ["Pull Requests"] = "拉取请求", ["Draft"] = "草稿", ["Open"] = "开放",
+        ["Merged"] = "已合并", ["Closed"] = "已关闭", ["Find in Pane"] = "在面板中查找",
+        ["Connect GitHub"] = "连接 GitHub", ["Loading…"] = "正在加载…",
+        ["PR details unavailable"] = "无法查看 PR 详情", ["(no title)"] = "（无标题）",
+        ["Disable Text Selection"] = "禁用文本选择", ["Enable Text Selection"] = "启用文本选择"
+    };
+    var texts = JavaScriptUi.Extract(code, "web/main.js").SelectMany(g => g.Texts).ToList();
+    var map = texts.DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => labels[t.Source]);
+    using var result = JsonDocument.Parse(Node(JavaScriptUi.Apply(code, texts, map)));
+    var value = result.RootElement;
+    var github = value.GetProperty("github"); var option = github.GetProperty("sidebar").GetProperty("displayOption");
+    Assert(option.GetProperty("label").GetString() == "拉取请求" &&
+        github.GetProperty("overview").GetProperty("header").GetString() == "拉取请求" &&
+        value.GetProperty("other").GetProperty("overview").GetProperty("header").GetString() == "Pull Requests" &&
+        option.GetProperty("persistentKey").GetString() == "conversationDecorationPullRequests" &&
+        value.GetProperty("owned").GetBoolean(), "PR 显示标签漏译，或改变了侧栏设置项与 URL 判断。");
+    Assert(value.GetProperty("missing").GetString() == "无法查看 PR 详情" &&
+        value.GetProperty("title").GetString() == "PR details unavailable", "PR 卡片的缺省标题漏译，或改动了实际标题。");
+    var find = value.GetProperty("commands").GetProperty("findInPane");
+    Assert(find.GetProperty("label").GetString() == "在面板中查找" &&
+        find.GetProperty("accelerator").GetString() == "CmdOrCtrl+F" &&
+        value.GetProperty("flags").GetProperty("merged").GetString() == "已合并", "查找快捷键或 PR 状态显示不正确。");
+    Assert(value.GetProperty("on").GetProperty("props").GetProperty("aria-label").GetString() == "禁用文本选择" &&
+        value.GetProperty("off").GetProperty("props").GetProperty("title").GetString() == "启用文本选择" &&
+        value.GetProperty("raw").GetProperty("props").GetProperty("title").GetString() == "Enable Text Selection" &&
+        !value.GetProperty("closed").GetBoolean(), "PDF 文本选择按钮的显示或操作行为不正确。");
 }
 static void CheckJavaScript()
 {

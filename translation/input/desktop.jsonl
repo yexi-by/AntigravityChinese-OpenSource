@@ -35,3 +35,6 @@
 {"id":"\u754C\u9762-03669","kind":"menu","units":[{"id":"text-1","text":"Downloading Update..."}]}
 {"id":"\u754C\u9762-03670","kind":"menu","units":[{"id":"text-1","text":"Restart to Update"}]}
 {"id":"\u754C\u9762-03671","kind":"menu","units":[{"id":"text-1","text":"Connection info\u2026"}]}
+{"id":"\u754C\u9762-03767","kind":"dialog","units":[{"id":"text-1","text":"Choose another SSH config file"},{"id":"text-2","text":"Choose Another File\u2026"},{"id":"text-3","text":"Cancel"}]}
+{"id":"\u754C\u9762-03768","kind":"dialog","units":[{"id":"text-1","text":"Could not restart the SSH server"},{"id":"text-2","text":"\u27EAAGC0\u27EB still runs Antigravity server \u27EAAGC1\u27EB."}]}
+{"id":"\u754C\u9762-03769","kind":"dialog","units":[{"id":"text-1","text":"SSH: \u27EAAGC0\u27EB"},{"id":"text-2","text":"Yes"},{"id":"text-3","text":"No"},{"id":"text-4","text":"Cancel"}]}
