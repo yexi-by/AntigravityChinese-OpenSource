@@ -14,6 +14,8 @@ internal static class ServiceDisplay
     public const string QuotaDescription = "service/quota-description";
     public const string PlanDescription = "service/plan-description";
     public const string CommandDescription = "service/command-description";
+    public const string InterfaceModeTitle = "service/interface-mode-title";
+    public const string InterfaceModeDescription = "service/interface-mode-description";
     private const string Name = @"[^\r\n]{1,160}";
     private const string Duration = @"[0-9]+ (?:days?|hours?|minutes?|seconds?)(?:,? (?:and )?[0-9]+ (?:days?|hours?|minutes?|seconds?)){0,3}";
     private const string CompactUnit = @"[0-9]+[smhd]";
@@ -56,9 +58,23 @@ internal static class ServiceDisplay
         ],
         [QuotaDetail] = CompactQuotaRules,
         [QuotaDescription] = [new("Models within this group: ⟪AGC0⟫", @"[^\r\n]{1,2048}"),
-            new("You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫.", Duration, DurationMode.LongWords), .. Units],
+            new("You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫.", Duration, DurationMode.LongWords),
+            new("You have used some of your 5-hour limit, it will fully refresh in ⟪AGC0⟫.", Duration, DurationMode.LongWords),
+            new("You have used some of your daily limit, it will fully refresh in ⟪AGC0⟫.", Duration, DurationMode.LongWords),
+            new("You have reached your 5-hour limit, it will fully refresh in ⟪AGC0⟫.", Duration, DurationMode.LongWords),
+            new("You have reached your weekly limit, it will fully refresh in ⟪AGC0⟫.", Duration, DurationMode.LongWords),
+            new("You have reached your daily limit, it will fully refresh in ⟪AGC0⟫.", Duration, DurationMode.LongWords), .. Units],
         [PlanDescription] = [new("You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits.", Name),
-            new("You can upgrade to a higher ⟪AGC0⟫ plan to receive the highest rate limits.", Name)],
+            new("You can upgrade to a higher ⟪AGC0⟫ plan to receive the highest rate limits.", Name),
+            new("You are subscribed to the best Google AI plan.")],
+        [InterfaceModeTitle] = [new("Knowledge Work"), new("Software Engineering"), new("Project 4K"), new("Default")],
+        [InterfaceModeDescription] =
+        [
+            new("Simplified interface for research, writing, and everyday tasks."),
+            new("Full interface for coding, developer tools, and managing agents."),
+            new("Project 4K interface without developer tooling."),
+            new("The full developer experience.")
+        ],
         [CommandDescription] = [.. new[] {
             "Run until the specified goal is completely finished.",
             "Compact the conversation now (summarize history to free up the context window).",

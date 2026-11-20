@@ -63,3 +63,33 @@ translation = '请求审核'
 [[term]]
 term = 'Require Review'
 translation = '需要审核'
+
+[[term]]
+term = 'AI Credits'
+translation = 'AI 积分'
+triggers = ['AI Credits', 'AI Credit', 'Credits', 'credits']
+
+[[term]]
+term = 'Bundle'
+translation = '插件包'
+triggers = ['Bundle', 'bundle', 'Bundles', 'bundles']
+
+[[term]]
+term = 'Prompt'
+translation = '提示词'
+triggers = ['Prompt', 'prompt', 'Prompts', 'prompts']
+
+[[term]]
+term = 'Sidebar'
+translation = '侧边栏'
+triggers = ['Sidebar', 'sidebar']
+
+[[term]]
+term = 'Side Panel'
+translation = '侧边面板'
+triggers = ['Side Panel', 'side panel']
+
+[[term]]
+term = 'Automation'
+translation = '自动化'
+triggers = ['Automation', 'automation', 'Automations', 'automations']

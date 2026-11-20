@@ -18,6 +18,7 @@ var checks = new (string Name, Action Run)[]
     ("新版输入提示、侧栏分页和环境标签汉化，保留用户内容和内部身份", CheckUpdatedUi),
     ("快捷键命令和分类仅在显示处汉化，默认搜索提示不覆盖自定义内容", CheckShortcutDisplay),
     ("2.33.0 的 PR 概览、查找命令和 PDF 文本选择可正确汉化", Check2330Display),
+    ("2.33.0 漏翻补齐与双重翻译冲突修复", Check2330CoverageAndFixes),
     ("新版命令描述、局部配额与复数后缀等 2.32.1 回归修复", Check2321Regressions),
     ("未知版本安装、重复汉化和恢复保持资源完整", CheckInstall),
     ("写入失败回滚，更新后拒绝旧备份覆盖", CheckRecovery),
@@ -85,6 +86,114 @@ static void Check2330Display()
         value.GetProperty("off").GetProperty("props").GetProperty("title").GetString() == "启用文本选择" &&
         value.GetProperty("raw").GetProperty("props").GetProperty("title").GetString() == "Enable Text Selection" &&
         !value.GetProperty("closed").GetBoolean(), "PDF 文本选择按钮的显示或操作行为不正确。");
+}
+static void Check2330CoverageAndFixes()
+{
+    const string code = """
+    const D={useMemo:f=>f(),createElement:(tag,props,...children)=>typeof tag==='function'?tag({...(props||{}),children}):({tag,props,children})};
+    const sections=new Map([['App',{sections:[{title:'General',settings:['keep']}]}]]);
+    function AppSection({screen:a,sectionTitle:b}){var c=sections.get(a);c=c?.sections.find(d=>d.title===b);return c?D.createElement('section',{title:c.title}):null;}
+    const Notify=({title:a='Notifications'})=>D.createElement('section',{title:a});
+    const Adv=({label:b='Advanced Settings'})=>D.createElement('span',null,b);
+    const OtherDefault=({title:a='Notifications'})=>a;
+    const OV={automation:{title:'Automations',sidebarLabel:'Automations',searchPlaceholder:'Search automations...',emptyMessageSingular:'automation',emptyMessagePlural:'automations'}};
+    function EmptyAuto(a){const t=OV[a];return D.createElement('p',null,'No ',t.emptyMessagePlural,' yet');}
+    const rj=Object.fromEntries(Object.entries({openConvoPicker:{label:'Open Conversation Picker'},submitPrompt:{label:'Submit Prompt (Alternate to Enter)'}}).map(([a,b])=>[a,{id:a,...b}]));
+    const nRb=[{commandId:'openConvoPicker',category:'navigation'},{commandId:'submitPrompt',category:'conversation',description:'Enter always submits. This adds a second shortcut.'}];
+    const oRb={navigation:'Navigation',conversation:'Conversation'};
+    function Shortcuts(){return nRb.map(item=>D.createElement('row',{commandId:item.commandId,label:rj[item.commandId].label,description:item.description,bindings:[],onSaveBinding:()=>{},onResetToDefault:()=>{}}));}
+    const O6=[{named:a=>`Welcome back, ${a}. Where should we pick up?`,unnamed:'Welcome back. Where should we pick up?'}];
+    function Kza(os){switch(os){case 'macos':return 'Reveal in Finder';default:return 'Show in File Explorer';}}
+    const RC={default:{label:'Default',description:'Ask.',prefValues:{}},auto:{label:'Auto',description:'Auto.',prefValues:{}}};
+    function Q7a(a){if(a.length!==0)return `${a.map(b=>RC[b].label).join(' and ')} ${a.length>1?'need':'needs'} the terminal sandbox, which isn't available on this host.`;}
+    function ISb(raw){var c=[{value:2,slug:'non-technical',label:raw.project4k.title,description:raw.project4k.description},{value:1,slug:'developer',label:raw.default.title,description:raw.default.description}];return c.map(p=>D.createElement('card',{'aria-label':p.label},D.createElement('span',null,p.label),D.createElement('div',null,p.description)));}
+    function Pz({variant:a='secondary',tooltip:d,children:k,'aria-label':l}){return{inner:D.createElement('span',null,k),aria:l,tip:d};}
+    const details=Pz({variant:'secondary',children:'Details'});
+    const tabs=[{id:'local',label:'This Computer'},{id:'cloud',label:'Remote'}];
+    const tabView=D.createElement('tabs',{tabs,selectedId:'local',onSelect:()=>{}});
+    const opts=[{value:'local',label:'This Computer'},{value:'remote',label:'Remote'}];
+    const optView=D.createElement('seg',{options:opts,value:'local',onValueChange:()=>{}});
+    const u=[];let B;(B=false?'x':'No conversations yet')&&u.push({type:'empty-placeholder',id:'e1',groupId:'g1',label:B,isIndented:false});
+    const menuCfg={copyLabel:'Copy Project Name',onCopyClick:()=>{},deleteLabel:'Delete Project',onDeleteClick:()=>{}};
+    const eyebrow=c=>D.createElement('span',{'data-testid':'featured-carousel-eyebrow'},c);
+    function Quota({label:l,remainingFraction:r,refreshText:h,disabled:d}){return D.createElement('div',{description:h},l);}
+    function Plan(s){return D.createElement('div',null,s.userTier.upgradeSubscriptionText);}
+    console.log(JSON.stringify({
+      appSec:AppSection({screen:'App',sectionTitle:'General'}).props.title,
+      sectionRaw:sections.get('App').sections[0].title,
+      notify:Notify({}).props.title,
+      notifyCustom:Notify({title:'Notifications'}).props.title,
+      adv:Adv({}).children[0],
+      otherDefault:OtherDefault({}),
+      emptyAuto:EmptyAuto('automation').children[0],
+      ovRawPlural:OV.automation.emptyMessagePlural,
+      shortcuts:Shortcuts().map(r=>({label:r.props.label,desc:r.props.description})),
+      rjRaw:rj.openConvoPicker.label,
+      greetingNamed:O6[0].named('yexi'),
+      greetingUnnamed:O6[0].unnamed,
+      fileMgr:Kza('windows'),
+      sandbox:Q7a(['default','auto']),
+      rcRaw:RC.default.label,
+      modes:ISb({project4k:{title:'Knowledge Work',description:'Simplified interface for research, writing, and everyday tasks.'},default:{title:'Software Engineering',description:'Full interface for coding, developer tools, and managing agents.'}}),
+      details:details.inner.children[0],
+      tabs:tabView.props.tabs.map(t=>t.label),
+      opts:optView.props.options.map(o=>o.label),
+      emptyRow:u[0].label,
+      menuCfg,
+      eyebrow:eyebrow('Featured').children[0],
+      eyebrowOther:eyebrow('Custom Shelf').children[0],
+      quota5h:Quota({label:'Five Hour Limit Remaining',remainingFraction:0.9,refreshText:'You have used some of your 5-hour limit, it will fully refresh in 3 hours, 43 minutes.',disabled:false}).props.description,
+      planUltra:Plan({userTier:{upgradeSubscriptionText:'You are subscribed to the best Google AI plan.'}}).children[0]
+    }));
+    """;
+    var dict = new Dictionary<string, string>
+    {
+        ["General"] = "常规", ["Notifications"] = "通知", ["Advanced Settings"] = "高级设置",
+        ["Automations"] = "自动化", ["Search automations..."] = "搜索自动化…", ["No automations yet"] = "暂无自动化",
+        ["Open Conversation Picker"] = "打开对话选择器", ["Submit Prompt (Alternate to Enter)"] = "提交提示词（Enter 备用键）",
+        ["Enter always submits. This adds a second shortcut."] = "按 Enter 始终会提交；此项用于添加第二组快捷键。",
+        ["Welcome back, ⟪AGC0⟫. Where should we pick up?"] = "欢迎回来，⟪AGC0⟫。接下来从哪里继续？",
+        ["Welcome back. Where should we pick up?"] = "欢迎回来。接下来从哪里继续？",
+        ["Reveal in Finder"] = "在访达中显示", ["Show in File Explorer"] = "在文件资源管理器中显示",
+        ["Default"] = "默认", ["Auto"] = "自动", [" and "] = "和",
+        ["⟪AGC0⟫ ⟪AGC1⟫ the terminal sandbox, which isn't available on this host."] = "⟪AGC0⟫⟪AGC1⟫模式需要终端沙盒，当前主机不支持。",
+        ["Knowledge Work"] = "知识工作", ["Simplified interface for research, writing, and everyday tasks."] = "精简界面，适合研究、写作与日常事务。",
+        ["Software Engineering"] = "软件工程", ["Full interface for coding, developer tools, and managing agents."] = "完整界面，适合编程、开发工具与智能体管理。",
+        ["Project 4K"] = "Project 4K", ["Project 4K interface without developer tooling."] = "不含开发工具的精简界面。",
+        ["The full developer experience."] = "完整开发体验。",
+        ["Details"] = "详情", ["This Computer"] = "此计算机", ["Remote"] = "远程",
+        ["No conversations yet"] = "暂无对话", ["Copy Project Name"] = "复制项目名称", ["Delete Project"] = "删除项目",
+        ["Featured"] = "精选",
+        ["Five Hour Limit Remaining"] = "5 小时剩余额度",
+        ["You have used some of your 5-hour limit, it will fully refresh in ⟪AGC0⟫."] = "5 小时额度已使用部分，将在 ⟪AGC0⟫后完全重置。",
+        ["You are subscribed to the best Google AI plan."] = "你已订阅最高级别的 Google AI 套餐。",
+        ["⟪AGC0⟫ hours"] = "⟪AGC0⟫ 小时", ["⟪AGC0⟫ minutes"] = "⟪AGC0⟫ 分钟"
+    };
+    var texts = JavaScriptUi.Extract(code, "web/main.js").SelectMany(g => g.Texts).ToList();
+    var map = texts.Where(t => dict.ContainsKey(t.Source)).DistinctBy(t => t.Key).ToDictionary(t => t.Key, t => dict[t.Source]);
+    using var doc = JsonDocument.Parse(Node(JavaScriptUi.Apply(code, texts, map)));
+    var v = doc.RootElement;
+    Assert(v.GetProperty("appSec").GetString() == "常规" && v.GetProperty("sectionRaw").GetString() == "General", "tNb 应用设置分组标题未汉化，或改动了原始配置。");
+    Assert(v.GetProperty("notify").GetString() == "通知" && v.GetProperty("notifyCustom").GetString() == "Notifications" &&
+        v.GetProperty("adv").GetString() == "高级设置" && v.GetProperty("otherDefault").GetString() == "Notifications", "组件解构默认属性未正确汉化，或误改自定义传参及非显示函数。");
+    Assert(v.GetProperty("emptyAuto").GetString() == "暂无自动化" && v.GetProperty("ovRawPlural").GetString() == "automations", "自动化空状态出现双重翻译冲突。");
+    Assert(v.GetProperty("shortcuts")[0].GetProperty("label").GetString() == "打开对话选择器" &&
+        v.GetProperty("shortcuts")[1].GetProperty("label").GetString() == "提交提示词（Enter 备用键）" &&
+        v.GetProperty("shortcuts")[1].GetProperty("desc").GetString() == "按 Enter 始终会提交；此项用于添加第二组快捷键。" &&
+        v.GetProperty("rjRaw").GetString() == "Open Conversation Picker", "Object.fromEntries 快捷键表或说明未汉化，或改动了原始表。");
+    Assert(v.GetProperty("greetingNamed").GetString() == "欢迎回来，yexi。接下来从哪里继续？" &&
+        v.GetProperty("greetingUnnamed").GetString() == "欢迎回来。接下来从哪里继续？", "首页欢迎语未汉化。");
+    Assert(v.GetProperty("fileMgr").GetString() == "在文件资源管理器中显示", "文件管理器标签未汉化。");
+    Assert(v.GetProperty("sandbox").GetString() == "默认和自动模式需要终端沙盒，当前主机不支持。" && v.GetProperty("rcRaw").GetString() == "Default", "终端沙盒提示未汉化或改动了权限预设源数据。");
+    Assert(v.GetProperty("modes")[0].GetProperty("children")[0].GetProperty("children")[0].GetString() == "知识工作" &&
+        v.GetProperty("modes")[1].GetProperty("children")[1].GetProperty("children")[0].GetString() == "完整界面，适合编程、开发工具与智能体管理。", "界面布局模式文案未汉化。");
+    Assert(v.GetProperty("details").GetString() == "详情" &&
+        v.GetProperty("tabs")[0].GetString() == "此计算机" && v.GetProperty("opts")[1].GetString() == "远程" &&
+        v.GetProperty("emptyRow").GetString() == "暂无对话" &&
+        v.GetProperty("menuCfg").GetProperty("copyLabel").GetString() == "复制项目名称" &&
+        v.GetProperty("eyebrow").GetString() == "精选" && v.GetProperty("eyebrowOther").GetString() == "Custom Shelf", "按钮/选项卡/侧栏空状态/项目菜单/精选眉标未正确汉化。");
+    Assert(v.GetProperty("quota5h").GetString() == "5 小时额度已使用部分，将在 3 小时 43 分钟后完全重置。" &&
+        v.GetProperty("planUltra").GetString() == "你已订阅最高级别的 Google AI 套餐。", "5 小时配额或 Ultra 套餐说明未汉化。");
 }
 static void CheckJavaScript()
 {
@@ -236,8 +345,14 @@ static void CheckServiceDisplay()
         ["Models within this group: ⟪AGC0⟫"] = "本组包含的模型：⟪AGC0⟫",
         ["Weekly Limit Remaining"] = "本周剩余额度", ["Five Hour Limit Remaining"] = "5 小时剩余额度", ["⟪AGC0⟫ Weekly Limit"] = "⟪AGC0⟫ 每周额度",
         ["You have used some of your weekly limit, it will fully refresh in ⟪AGC0⟫."] = "你已使用部分每周额度，将在 ⟪AGC0⟫后完全恢复。",
+        ["You have used some of your 5-hour limit, it will fully refresh in ⟪AGC0⟫."] = "5 小时额度已使用部分，将在 ⟪AGC0⟫后完全重置。",
+        ["You have used some of your daily limit, it will fully refresh in ⟪AGC0⟫."] = "每日额度已使用部分，将在 ⟪AGC0⟫后完全重置。",
+        ["You have reached your 5-hour limit, it will fully refresh in ⟪AGC0⟫."] = "5 小时额度已用尽，将在 ⟪AGC0⟫后完全重置。",
+        ["You have reached your weekly limit, it will fully refresh in ⟪AGC0⟫."] = "本周额度已用尽，将在 ⟪AGC0⟫后完全重置。",
+        ["You have reached your daily limit, it will fully refresh in ⟪AGC0⟫."] = "每日额度已用尽，将在 ⟪AGC0⟫后完全重置。",
         ["You can upgrade to a ⟪AGC0⟫ plan to receive higher rate limits."] = "升级至 ⟪AGC0⟫ 套餐可获得更高的使用额度。",
         ["You can upgrade to a higher ⟪AGC0⟫ plan to receive the highest rate limits."] = "升级至更高等级的 ⟪AGC0⟫ 套餐可获得最高的使用额度。",
+        ["You are subscribed to the best Google AI plan."] = "你已订阅最高级别的 Google AI 套餐。",
         ["⟪AGC0⟫ day"] = "⟪AGC0⟫ 天", ["⟪AGC0⟫ days"] = "⟪AGC0⟫ 天", ["⟪AGC0⟫ hour"] = "⟪AGC0⟫ 小时", ["⟪AGC0⟫ hours"] = "⟪AGC0⟫ 小时",
         ["⟪AGC0⟫ minute"] = "⟪AGC0⟫ 分钟", ["⟪AGC0⟫ minutes"] = "⟪AGC0⟫ 分钟", ["⟪AGC0⟫ second"] = "⟪AGC0⟫ 秒", ["⟪AGC0⟫ seconds"] = "⟪AGC0⟫ 秒"
     };

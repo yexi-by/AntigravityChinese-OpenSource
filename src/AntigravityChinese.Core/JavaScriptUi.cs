@@ -209,6 +209,7 @@ public static partial class JavaScriptUi
         var serviceParameters = new Dictionary<(int Function, string Name), string>();
         var serviceWritableParameters = new Dictionary<(int Function, string Name), string>();
         var quotaGroups = new HashSet<(int Function, string Name)>();
+        var interfaceModeItems = new HashSet<(int Function, string Name)>();
         foreach (var producer in nodes.Select(p => p.Node).Where(IsFunction))
         {
             var memberReads = Walk(producer).Select(p => p.Node).OfType<MemberExpression>().Where(m => !m.Computed).ToArray();
@@ -257,6 +258,10 @@ public static partial class JavaScriptUi
                     fixedBindings.Contains((groupOwner, group.Name)) && quotaGroups.Contains((groupOwner, group.Name)))
                     return member.Property is Identifier { Name: "displayName" } ? ServiceDisplay.QuotaGroup :
                         member.Property is Identifier { Name: "description" } ? ServiceDisplay.QuotaDescription : null;
+                if (member.Object is Identifier modeItem && Owner(function, modeItem.Name) is { } modeOwner &&
+                    fixedBindings.Contains((modeOwner, modeItem.Name)) && interfaceModeItems.Contains((modeOwner, modeItem.Name)))
+                    return member.Property is Identifier { Name: "label" } ? ServiceDisplay.InterfaceModeTitle :
+                        member.Property is Identifier { Name: "description" } ? ServiceDisplay.InterfaceModeDescription : null;
             }
             if (expression is not Identifier variable || Owner(function, variable.Name) is not { } owner || !visited.Add((owner, variable.Name))) return null;
             if (fixedBindings.Contains((owner, variable.Name)) && serviceParameters.TryGetValue((owner, variable.Name), out var role)) return role;
@@ -305,7 +310,7 @@ public static partial class JavaScriptUi
         }
 
         foreach (var (node, function) in nodes)
-            if (node is CallExpression { Callee: MemberExpression { Property: Identifier { Name: "map" }, Object: Expression collection } } call &&
+            if (node is CallExpression { Callee: MemberExpression { Property: Identifier { Name: "map" or "forEach" }, Object: Expression collection } } call &&
                 call.Arguments.Count > 0 && IsFunction(call.Arguments[0]) && Parameters(call.Arguments[0]).FirstOrDefault() is { } firstParam)
             {
                 var callback = call.Arguments[0];
@@ -332,6 +337,22 @@ public static partial class JavaScriptUi
                 }
             }
 
+        static bool IsInterfaceModeArray(Expression? expr) => expr is ArrayExpression arr &&
+            arr.Elements.OfType<ObjectExpression>().Any(o => PropertyValue(o, "slug") is StringLiteral { Value: "non-technical" }) &&
+            arr.Elements.OfType<ObjectExpression>().Any(o => PropertyValue(o, "slug") is StringLiteral { Value: "developer" });
+        foreach (var binding in callbacks)
+        {
+            var col = binding.Value.Collection;
+            var isMode = IsInterfaceModeArray(col);
+            if (!isMode && col is Identifier colId && Owner(binding.Value.Outer, colId.Name) is { } colScope)
+            {
+                if (declarations.TryGetValue((colScope, colId.Name), out var declCol) && IsInterfaceModeArray(declCol)) isMode = true;
+                else if (writes.TryGetValue((colScope, colId.Name), out var colWrites) &&
+                         colWrites.Any(w => w.Position < colId.Start && IsInterfaceModeArray(w.Value))) isMode = true;
+            }
+            if (isMode) interfaceModeItems.Add(binding.Key);
+        }
+
         var settingSectionRows = new HashSet<(int Function, string Name)>();
         foreach (var binding in callbacks)
         {
@@ -349,11 +370,25 @@ public static partial class JavaScriptUi
                 .ToDictionary(p => ((Identifier)p.Key).Name, p => ((Identifier)p.Value).Name);
             if (fields.ContainsKey("sectionTitle") && fields.TryGetValue("screen", out var screen) &&
                 Walk(producer).Select(p => p.Node).OfType<MemberExpression>().Any(m => !m.Computed && m.Property is Identifier { Name: "sections" }))
+            {
                 settingSectionRows.Add((producer.Start, screen));
+                static bool IsSectionsFind(Node? expr) => expr is not null &&
+                    Walk(expr).Select(p => p.Node).OfType<CallExpression>().Any(c =>
+                        c.Callee is MemberExpression { Computed: false, Property: Identifier { Name: "find" }, Object: MemberExpression { Computed: false, Property: Identifier { Name: "sections" } } });
+                foreach (var (stmtNode, stmtFn) in Walk(producer))
+                {
+                    if (stmtFn != producer.Start) continue;
+                    if (stmtNode is AssignmentExpression { Left: Identifier lhs, Right: var rhs } && IsSectionsFind(rhs))
+                        settingSectionRows.Add((producer.Start, lhs.Name));
+                    else if (stmtNode is VariableDeclarator { Id: Identifier declLhs, Init: { } declRhs } && IsSectionsFind(declRhs))
+                        settingSectionRows.Add((producer.Start, declLhs.Name));
+                }
+            }
         }
 
         var shortcutScopes = new HashSet<int>();
         var shortcutSources = new HashSet<string>(StringComparer.Ordinal);
+        var shortcutDescriptions = new HashSet<string>(StringComparer.Ordinal);
         var shortcutRoots = new HashSet<int>();
         foreach (var (node, function) in nodes)
             if (node is CallExpression call && call.Arguments.Count >= 2 && call.Arguments[1] is ObjectExpression props &&
@@ -363,6 +398,9 @@ public static partial class JavaScriptUi
                 while (parents.GetValueOrDefault(scope, -1) != -1) scope = parents[scope];
                 shortcutRoots.Add(scope);
             }
+        static bool IsShortcutTable(Expression expr) => expr is ObjectExpression or ArrayExpression ||
+            expr is CallExpression callExpr && Walk(callExpr).Select(p => p.Node).OfType<MemberExpression>()
+                .Any(m => !m.Computed && m.Object is Identifier { Name: "Object" } && m.Property is Identifier { Name: "fromEntries" });
         foreach (var root in shortcutRoots)
         {
             var body = Walk(nodes.First(p => p.Node.Start == root && IsFunction(p.Node)).Node).ToArray();
@@ -370,9 +408,12 @@ public static partial class JavaScriptUi
             foreach (var (node, function) in body)
             {
                 if (node is Identifier reference && Owner(function, reference.Name) is { } owner &&
-                    declarations.TryGetValue((owner, reference.Name), out var table) && table is ObjectExpression or ArrayExpression)
+                    declarations.TryGetValue((owner, reference.Name), out var table) && IsShortcutTable(table))
                     foreach (var property in Walk(table).Select(p => p.Node).OfType<ObjectProperty>())
+                    {
                         if (PropertyName(property) == "label" && property.Value is StringLiteral label) shortcutSources.Add(label.Value);
+                        else if (PropertyName(property) == "description" && property.Value is StringLiteral desc) shortcutDescriptions.Add(desc.Value);
+                    }
                 if (node is MemberExpression { Computed: true, Object: Identifier category } && Owner(function, category.Name) is { } categoryOwner &&
                     declarations.TryGetValue((categoryOwner, category.Name), out var categories) && categories is ObjectExpression names &&
                     names.Properties.All(p => p is ObjectProperty { Value: StringLiteral }))
@@ -388,6 +429,27 @@ public static partial class JavaScriptUi
                 foreach (var value in values) { var resolved = Expand(value, scopes.GetValueOrDefault(value, scope), new(visiting)); if (resolved is null) return null; result.AddRange(resolved); }
                 return result;
             }
+            List<Expression>? FlattenArray(ArrayExpression array, int scope)
+            {
+                var items = new List<Expression>();
+                foreach (var element in array.Elements)
+                {
+                    if (element is null) return null;
+                    if (element is SpreadElement spread)
+                    {
+                        var expanded = Expand(spread.Argument, scopes.GetValueOrDefault(spread.Argument, scope), new(visiting));
+                        if (expanded is null || expanded.Any(v => v is not ArrayExpression)) return null;
+                        foreach (var nested in expanded.Cast<ArrayExpression>())
+                        {
+                            var flat = FlattenArray(nested, scopes.GetValueOrDefault(nested, scope));
+                            if (flat is null) return null;
+                            items.AddRange(flat);
+                        }
+                    }
+                    else items.Add(element);
+                }
+                return items;
+            }
             switch (expression)
             {
                 case Identifier id:
@@ -395,8 +457,15 @@ public static partial class JavaScriptUi
                     if (callbacks.TryGetValue((owner.Value, id.Name), out var binding))
                     {
                         var collections = Expand(binding.Collection, binding.Outer, visiting);
-                        if (collections is null || collections.Any(v => v is not ArrayExpression || ((ArrayExpression)v).Elements.Any(e => e is null or SpreadElement))) return null;
-                        return Merge(collections.Cast<ArrayExpression>().SelectMany(a => a.Elements.OfType<Expression>()), binding.Outer);
+                        if (collections is null || collections.Any(v => v is not ArrayExpression)) return null;
+                        var flattened = new List<Expression>();
+                        foreach (var arr in collections.Cast<ArrayExpression>())
+                        {
+                            var items = FlattenArray(arr, binding.Outer);
+                            if (items is null) return null;
+                            flattened.AddRange(items);
+                        }
+                        return Merge(flattened, binding.Outer);
                     }
                     if (!fixedBindings.Contains((owner.Value, id.Name)))
                     {
@@ -445,7 +514,12 @@ public static partial class JavaScriptUi
                     var selected = new List<Expression>();
                     foreach (var value in objects)
                     {
-                        if (value is ArrayExpression array && member.Computed && !array.Elements.Any(e => e is null or SpreadElement)) selected.AddRange(array.Elements.OfType<Expression>());
+                        if (value is ArrayExpression array && member.Computed)
+                        {
+                            var items = FlattenArray(array, scopes.GetValueOrDefault(array, function));
+                            if (items is null) return null;
+                            selected.AddRange(items);
+                        }
                         else if (value is ObjectExpression obj)
                         {
                             if (obj.Properties.Any(p => p is not ObjectProperty property || property.Computed)) return null;
@@ -630,11 +704,35 @@ public static partial class JavaScriptUi
                 case ArrayExpression array: foreach (var value in array.Elements) if (value is not null) MarkDisplayReads(value, destination, role, roleMap); break;
             }
         }
-        foreach (var call in nodes.Select(p => p.Node).OfType<CallExpression>().Where(c => !IsProtected(c)))
+        foreach (var (node, fn) in nodes)
         {
+            if (node is not CallExpression call || IsProtected(call)) continue;
             var callee = call.Callee is SequenceExpression sequence ? sequence.Expressions[^1] : call.Callee;
             if (callee is MemberExpression { Property: Identifier { Name: "createElement" or "jsx" or "jsxs" or "jsxDEV" } method } && call.Arguments.Count >= 2)
                 foreach (var (value, valRole) in DisplayValues(call, method.Name)) MarkDisplayReads(value, displayReads, valRole, displayReadRoles);
+            else if (!desktop && callee is Identifier { Name: "element" } elementId && Owner(fn, elementId.Name) is null &&
+                call.Arguments.Count >= 2 && call.Arguments[0] is StringLiteral { Value: "button" or "div" or "span" or "p" or "label" or "input" or "h1" or "h2" or "h3" })
+                foreach (var (value, valRole) in DisplayValues(call, "createElement")) MarkDisplayReads(value, displayReads, valRole, displayReadRoles);
+        }
+
+        // 识别接收按钮属性对象并返回 { inner: createElement(...) } 的按钮样式辅助函数（如 Pz）。
+        var buttonPropsHelpers = new HashSet<(int Function, string Name)>();
+        foreach (var (fnKey, fnNode) in namedFunctions)
+        {
+            if (desktop || !fixedBindings.Contains(fnKey)) continue;
+            var fnParams = Parameters(fnNode).ToArray();
+            if (fnParams.Length != 1 || fnParams[0] is not ObjectPattern objPat) continue;
+            var paramMap = objPat.Properties.OfType<AssignmentProperty>()
+                .Where(p => !p.Computed && PropertyName(p) is { Length: > 0 })
+                .Select(p => (Key: PropertyName(p), Local: p.Value switch { Identifier id => id, AssignmentPattern { Left: Identifier id } => id, _ => null }))
+                .Where(p => p.Local is not null)
+                .ToDictionary(p => p.Key, p => p.Local!);
+            if (!paramMap.TryGetValue("children", out var childrenLocal) || !paramMap.ContainsKey("tooltip") || !paramMap.ContainsKey("aria-label")) continue;
+            var returnsInner = FunctionResults(fnNode).Any(r => r is ObjectExpression obj &&
+                obj.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "inner"));
+            var usesChildrenInDisplay = Walk(fnNode).Any(p => p.Node is Identifier id && id.Name == childrenLocal.Name &&
+                id.Start != childrenLocal.Start && Owner(p.Function, id.Name) == fnNode.Start && displayReads.Contains(id.Start));
+            if (returnsInner && usesChildrenInDisplay) buttonPropsHelpers.Add(fnKey);
         }
 
         // 收集 useMemo 解构返回值与局部显示渲染辅助函数，一并在统一扫描中收集其全部引用位置。
@@ -817,6 +915,13 @@ public static partial class JavaScriptUi
                         if (lookupSeen.Add((node.Start, source))) texts.Add(new("", "", file, node.Start, node.End, source, "lookup", "shortcut-label", []));
                     return;
                 }
+                if (shortcutScopes.Contains(activeFunction) && role == "description" && shortcutDescriptions.Count > 0 &&
+                    node is MemberExpression { Computed: false, Property: Identifier { Name: "description" } })
+                {
+                    foreach (var source in shortcutDescriptions.Order(StringComparer.Ordinal))
+                        if (lookupSeen.Add((node.Start, source))) texts.Add(new("", "", file, node.Start, node.End, source, "lookup", "shortcut-description", []));
+                    return;
+                }
                 if (node is MemberExpression { Computed: false, Object: Identifier section, Property: Identifier { Name: "title" } } &&
                     Owner(activeFunction, section.Name) is { } sectionScope && settingSectionRows.Contains((sectionScope, section.Name)))
                 {
@@ -897,9 +1002,10 @@ public static partial class JavaScriptUi
                                     (x.Value == a && y.Value == b || x.Value == b && y.Value == a);
                                 var plural = expression is ConditionalExpression pluralChoice &&
                                     (IsChoicePair(pluralChoice, "s", "") && template.Quasis[i].Value.Cooked is { Length: > 0 } prefix && char.IsAsciiLetter(prefix[^1]) ||
-                                     IsChoicePair(pluralChoice, "was", "were"));
+                                     IsChoicePair(pluralChoice, "was", "were") ||
+                                     IsChoicePair(pluralChoice, "need", "needs"));
                                 slots.Add(new(expression.Start, expression.End, plural));
-                                Value(expression, role);
+                                if (!plural) Value(expression, role);
                             }
                         }
                         Add(template, text.ToString(), "template", role, slots); break;
@@ -910,6 +1016,19 @@ public static partial class JavaScriptUi
                     case BinaryExpression { Operator: Operator.Addition } binary:
                         // 只改拼接中的固定文字，保留 + 运算、分组和原来的隐式类型转换。
                         Value(binary.Left, role); Value(binary.Right, role); break;
+                    case CallExpression joinCall when kind == "ui/sandbox-hint" &&
+                        joinCall.Callee is MemberExpression { Computed: false, Property: Identifier { Name: "join" }, Object: CallExpression mapCall } &&
+                        joinCall.Arguments is [StringLiteral joinSep] &&
+                        mapCall.Callee is MemberExpression { Computed: false, Property: Identifier { Name: "map" } } &&
+                        mapCall.Arguments.Count >= 1 && IsFunction(mapCall.Arguments[0]):
+                    {
+                        Add(joinSep, joinSep.Value, "string", "separator", allowConnector: true);
+                        var previous = activeFunction;
+                        activeFunction = mapCall.Arguments[0].Start;
+                        foreach (var result in FunctionResults(mapCall.Arguments[0])) Value(result, "option-label");
+                        activeFunction = previous;
+                        break;
+                    }
                     case ArrayExpression array:
                         ProcessSequence(array.Elements, role, !desktop && role == "children" && array.Elements.Count >= 3);
                         break;
@@ -1089,17 +1208,117 @@ public static partial class JavaScriptUi
                 var navigation = keys.IsSupersetOf(["sidebarLabel", "searchPlaceholder"]);
                 var sectionHeader = keys.IsSupersetOf(["title", "headerActions"]);
                 var sidebarPaging = keys.IsSupersetOf(["type", "id", "groupId", "label", "isIndented"]) &&
-                    properties.Any(p => PropertyName(p) == "type" && p.Value is StringLiteral { Value: "show-more" });
+                    properties.Any(p => PropertyName(p) == "type" && p.Value is StringLiteral { Value: "show-more" or "empty-placeholder" });
+                var sidebarSection = keys.IsSupersetOf(["type", "id", "title", "isCollapsible", "collapseId"]) &&
+                    properties.Any(p => PropertyName(p) == "type" && p.Value is StringLiteral { Value: "section-header" });
                 var submenu = keys.IsSupersetOf(["id", "type", "label", "items"]) &&
                     properties.Any(p => PropertyName(p) == "type" && p.Value is StringLiteral { Value: "submenu" });
                 if (submenu)
                     Group(configuration, "ui/menu", [(properties.First(p => PropertyName(p) == "label").Value, "label")]);
-                var isMenuConfig = keys.Contains("label") && properties.Any(p => PropertyName(p) is "onClick" or "onSelect" &&
-                    p.Value is ArrowFunctionExpression or FunctionExpression or Identifier or MemberExpression or ChainExpression);
-                if (command || setting || navigation || isMenuConfig || sectionHeader || sidebarPaging)
-                    Group(configuration, command ? "ui/command" : setting ? "ui/setting" : navigation ? "ui/navigation" : sectionHeader ? "ui/section-header" : sidebarPaging ? "ui/sidebar-pagination" : "ui/menu",
-                        properties.Where(p => TextProperties.Contains(PropertyName(p)) || PropertyName(p) is "sidebarLabel" or "searchPlaceholder" or "emptyMessageSingular" or "emptyMessagePlural")
+                var menuLabelHeader = keys.IsSupersetOf(["id", "type", "label"]) &&
+                    properties.Any(p => PropertyName(p) == "type" && p.Value is StringLiteral { Value: "label" });
+                if (menuLabelHeader)
+                    Group(configuration, "ui/menu", [(properties.First(p => PropertyName(p) == "label").Value, "label")]);
+                var isMenuConfig = keys.Contains("label") && properties.Any(p =>
+                    PropertyName(p) is "onClick" or "onSelect" &&
+                        p.Value is ArrowFunctionExpression or FunctionExpression or Identifier or MemberExpression or ChainExpression ||
+                    PropertyName(p) == "click" &&
+                        (p.Value is ArrowFunctionExpression or FunctionExpression ||
+                         p.Value is Identifier or MemberExpression or ChainExpression && (keys.Contains("id") || keys.Contains("enabled") || keys.Contains("testId"))));
+                var isToolbarButton = !isMenuConfig && keys.Contains("tooltip") && (keys.Contains("iconName") || keys.Contains("icon")) &&
+                    properties.Any(p => PropertyName(p) == "onClick" &&
+                        p.Value is ArrowFunctionExpression or FunctionExpression or Identifier or MemberExpression or ChainExpression);
+                var isCommandPaletteItem = keys.IsSupersetOf(["id", "label", "icon", "prefix", "onSelect"]) &&
+                    PropertyValue(configuration, "prefix") is StringLiteral { Value: "Command:" };
+                if (isCommandPaletteItem)
+                {
+                    var items = new List<UiText>();
+                    var prefixNode = PropertyValue(configuration, "prefix")!;
+                    if (seen.Add(prefixNode.Start))
+                        items.Add(new("", "", file, prefixNode.Start, prefixNode.End, "Command:", "string", "prefix", []));
+                    if (shortcutSources.Count > 0 && PropertyValue(configuration, "label") is Expression cmdLabel)
+                    {
+                        foreach (var src in shortcutSources.Append("Open Project Picker").Distinct(StringComparer.Ordinal).Order(StringComparer.Ordinal))
+                            if (lookupSeen.Add((cmdLabel.Start, src)))
+                                items.Add(new("", "", file, cmdLabel.Start, cmdLabel.End, src, "lookup", "shortcut-label", []));
+                    }
+                    FinishGroup("ui/command-palette", items);
+                }
+                else if (command || setting || navigation || isMenuConfig || isToolbarButton || sectionHeader || sidebarPaging || sidebarSection)
+                    Group(configuration, command ? "ui/command" : setting ? "ui/setting" : navigation ? "ui/navigation" :
+                            sectionHeader || sidebarSection ? "ui/section-header" : sidebarPaging ? "ui/sidebar-pagination" : "ui/menu",
+                        properties.Where(p => TextProperties.Contains(PropertyName(p)) || PropertyName(p) is "sidebarLabel" or "searchPlaceholder")
                             .Select(p => ((Node)p.Value, PropertyName(p))));
+                if (properties.Any(p => PropertyName(p) is "onCopyClick" or "onSettingsClick" or "onDeleteClick" or "onRenameClick" or "onArchiveClick" or "onRevealClick" or "onMoveUpClick" or "onMoveDownClick" or "onCiderClick"))
+                    Group(configuration, "ui/menu", properties
+                        .Where(p => PropertyName(p) is "copyLabel" or "revealLabel" or "settingsLabel" or "ciderLabel" or "renameLabel" or "moveUpLabel" or "moveDownLabel" or "archiveLabel" or "deleteLabel")
+                        .Select(p => ((Node)p.Value, "label")));
+                if (keys.SetEquals(["noMatches", "noArchived", "noConversations"]))
+                    Group(configuration, "ui/sidebar-empty", properties.Select(p => ((Node)p.Value, PropertyName(p))));
+                if (keys.SetEquals(["pin", "unpin", "archive", "restore", "mark-as-unread", "move", "set-permissions"]) &&
+                    properties.All(p => p.Value is StringLiteral))
+                {
+                    var verbTexts = new List<UiText>();
+                    foreach (var p in properties)
+                        if (p.Value is StringLiteral lit && seen.Add(lit.Start))
+                            verbTexts.Add(new("", "", file, lit.Start, lit.End, lit.Value, "string", "action-verb", []));
+                    FinishGroup("ui/toast-action", verbTexts);
+                }
+                if (keys.IsSupersetOf(["id", "label", "items", "icon"]) &&
+                    PropertyValue(configuration, "id") is StringLiteral groupIdLit &&
+                    (groupIdLit.Value.StartsWith("location-", StringComparison.Ordinal) || groupIdLit.Value.StartsWith("status-", StringComparison.Ordinal)))
+                    Group(configuration, "ui/sidebar-group", [(PropertyValue(configuration, "label")!, "label")]);
+                if (keys.SetEquals(["id", "label"]) &&
+                    PropertyValue(configuration, "id") is StringLiteral { Value: "status-blocked" or "status-in-progress" or "status-idle" })
+                    Group(configuration, "ui/sidebar-group", [(PropertyValue(configuration, "label")!, "label")]);
+                if (keys.IsSupersetOf(["id", "icon", "title", "message"]))
+                {
+                    var cardValues = new List<(Node, string)> { (PropertyValue(configuration, "title")!, "title"), (PropertyValue(configuration, "message")!, "message") };
+                    if (PropertyValue(configuration, "primaryAction") is ObjectExpression primaryObj &&
+                        !primaryObj.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) is "onClick" or "onSelect") &&
+                        PropertyValue(primaryObj, "label") is { } primaryLabel)
+                        cardValues.Add((primaryLabel, "label"));
+                    if (PropertyValue(configuration, "secondaryAction") is ObjectExpression secondaryObj &&
+                        !secondaryObj.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) is "onClick" or "onSelect") &&
+                        PropertyValue(secondaryObj, "label") is { } secondaryLabel)
+                        cardValues.Add((secondaryLabel, "label"));
+                    Group(configuration, "ui/error-card", cardValues);
+                }
+                if (keys.IsSupersetOf(["tag", "title"]) && PropertyValue(configuration, "tag") is StringLiteral or TemplateLiteral)
+                {
+                    var toastValues = new List<(Node, string)>();
+                    foreach (var p in properties)
+                        if (PropertyName(p) is "title" or "message" or "plainTextFallback") toastValues.Add((p.Value, PropertyName(p)));
+                    if (PropertyValue(configuration, "primaryAction") is ObjectExpression toastAction &&
+                        !toastAction.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) is "onClick" or "onSelect") &&
+                        PropertyValue(toastAction, "label") is { } toastActionLabel)
+                        toastValues.Add((toastActionLabel, "label"));
+                    Group(configuration, "ui/toast", toastValues);
+                }
+                if (keys.IsSupersetOf(["key", "label", "tooltip", "run"]))
+                    Group(configuration, "ui/vcs-action", properties
+                        .Where(p => PropertyName(p) is "label" or "tooltip").Select(p => ((Node)p.Value, PropertyName(p))));
+                if (keys.IsSupersetOf(["id", "label", "subtitle", "groups"]))
+                    Group(configuration, "ui/diff-mode", properties
+                        .Where(p => PropertyName(p) is "label" or "subtitle").Select(p => ((Node)p.Value, PropertyName(p))));
+                if (keys.IsSupersetOf(["key", "title", "diffInfoMap"]))
+                    Group(configuration, "ui/diff-group", [(PropertyValue(configuration, "title")!, "title")]);
+                if (keys.SetEquals(["code", "title"]) &&
+                    PropertyValue(configuration, "code") is StringLiteral { Value: "A" or "U" or "D" or "M" or "R" or "C" } ||
+                    keys.SetEquals(["char", "title", "colorClass"]))
+                    Group(configuration, "ui/vcs-status", [(PropertyValue(configuration, "title")!, "title")]);
+                if (keys.SetEquals(["title", "items"]) &&
+                    PropertyValue(configuration, "title") is StringLiteral { Value: "Commands" or "Recent Files" } paletteTitle)
+                    Group(configuration, "ui/command-palette", [(paletteTitle, "title")]);
+                if (keys.IsSupersetOf(["id", "barrier", "items"]) &&
+                    PropertyValue(configuration, "barrier") is ObjectExpression barrierObj &&
+                    PropertyValue(barrierObj, "type") is StringLiteral { Value: "label" } &&
+                    PropertyValue(barrierObj, "label") is StringLiteral barrierLabel)
+                    Group(barrierObj, "ui/command-palette", [(barrierLabel, "label")]);
+                if (keys.IsSupersetOf(["$typeName", "name", "description", "path"]) &&
+                    PropertyValue(configuration, "name") is StringLiteral { Value: "btw" } &&
+                    PropertyValue(configuration, "description") is StringLiteral btwDesc)
+                    Group(configuration, "ui/system-command", [(btwDesc, "description")]);
                 if (keys.IsSupersetOf(["id", "sidebar", "overview", "HoverCard"]) &&
                     PropertyValue(configuration, "id") is StringLiteral { Value: "github" } &&
                     PropertyValue(configuration, "sidebar") is ObjectExpression sidebar &&
@@ -1146,6 +1365,40 @@ public static partial class JavaScriptUi
                     }
                 }
             }
+            if (!desktop && node is LogicalExpression { Operator: Operator.LogicalAnd, Left: AssignmentExpression { Operator: Operator.Assignment, Left: Identifier emptyLhs, Right: Expression emptyRhs }, Right: CallExpression emptyPush } &&
+                emptyPush.Arguments.OfType<ObjectExpression>().Any(obj =>
+                    PropertyValue(obj, "type") is StringLiteral { Value: "empty-placeholder" } &&
+                    PropertyValue(obj, "label") is Identifier labelId && labelId.Name == emptyLhs.Name))
+                Group(emptyRhs, "ui/sidebar-pagination", [(emptyRhs, "label")]);
+            if (!desktop && node is ArrayExpression greetingArr && greetingArr.Elements.Count >= 1 &&
+                greetingArr.Elements.All(e => e is ObjectExpression obj &&
+                    obj.Properties.OfType<ObjectProperty>().Select(PropertyName).ToHashSet(StringComparer.Ordinal).SetEquals(["named", "unnamed"]) &&
+                    PropertyValue(obj, "named") is ArrowFunctionExpression { Params.Count: 1, Body: TemplateLiteral } &&
+                    PropertyValue(obj, "unnamed") is StringLiteral))
+                foreach (var item in greetingArr.Elements.OfType<ObjectExpression>())
+                    Group(item, "ui/greeting", [(((ArrowFunctionExpression)PropertyValue(item, "named")!).Body, "named"), (PropertyValue(item, "unnamed")!, "unnamed")]);
+            if (!desktop && node is TemplateLiteral sandboxTpl && sandboxTpl.Expressions.Count == 2 &&
+                sandboxTpl.Quasis[0].Value.Cooked == "" && sandboxTpl.Quasis[1].Value.Cooked == " " &&
+                sandboxTpl.Quasis[2].Value.Cooked == " the terminal sandbox, which isn't available on this host." &&
+                sandboxTpl.Expressions[1] is ConditionalExpression { Consequent: StringLiteral { Value: "need" }, Alternate: StringLiteral { Value: "needs" } })
+                Group(sandboxTpl, "ui/sandbox-hint", [(sandboxTpl, "description")]);
+            if (!desktop && node is MethodDefinition { Key: Identifier { Name: "getRenderInfo" }, Value: FunctionExpression renderFn })
+                foreach (var returned in FunctionResults(renderFn).OfType<ObjectExpression>())
+                {
+                    var infoValues = new List<(Node, string)>();
+                    if (PropertyValue(returned, "label") is StringLiteral infoLabel) infoValues.Add((infoLabel, "label"));
+                    if (PropertyValue(returned, "description") is ObjectExpression descObj && PropertyValue(descObj, "text") is StringLiteral descText)
+                        infoValues.Add((descText, "description"));
+                    if (infoValues.Count > 0) Group(returned, "ui/mention", infoValues);
+                }
+            if (!desktop && IsFunction(node))
+            {
+                var fileManagerReturns = FunctionResults(node).ToArray();
+                if (fileManagerReturns.Length >= 2 && fileManagerReturns.All(r => r is StringLiteral) &&
+                    fileManagerReturns.OfType<StringLiteral>().Any(s => s.Value == "Reveal in Finder") &&
+                    fileManagerReturns.OfType<StringLiteral>().Any(s => s.Value == "Show in File Explorer"))
+                    Group(node, "ui/file-manager-label", fileManagerReturns.Select(r => ((Node)r, "label")));
+            }
             if (!desktop && IsFunction(node) && Parameters(node).OfType<ObjectPattern>().Any(pattern =>
                 {
                     var keys = pattern.Properties.OfType<AssignmentProperty>().Select(p => p.Key).OfType<Identifier>().Select(p => p.Name).ToHashSet();
@@ -1154,27 +1407,52 @@ public static partial class JavaScriptUi
                 foreach (var returned in Walk(node).Where(p => p.Function == node.Start).Select(p => p.Node).OfType<ReturnStatement>().Where(r => r.Argument is not null))
                     Group(returned, "ui/input-placeholder", [(returned.Argument!, "placeholder")]);
             if (!desktop && IsFunction(node))
+            {
+                var nonReadStarts = new HashSet<int>();
+                foreach (var (childNode, _) in Walk(node))
+                {
+                    if (childNode is MemberExpression { Computed: false, Property: Identifier mp }) nonReadStarts.Add(mp.Start);
+                    else if (childNode is ObjectProperty { Computed: false, Key: Identifier ok } && ok.Start != childNode.End) nonReadStarts.Add(ok.Start);
+                    else if (childNode is AssignmentProperty { Computed: false, Key: Identifier ak } && ak.Start != ((AssignmentProperty)childNode).Value.Start) nonReadStarts.Add(ak.Start);
+                }
                 foreach (var parameter in Parameters(node).OfType<ObjectPattern>())
                 foreach (var property in parameter.Properties.OfType<AssignmentProperty>())
-                    if (property.Key is Identifier { Name: "placeholder" } &&
-                        property.Value is AssignmentPattern { Left: Identifier local, Right: StringLiteral fallback } &&
-                        Walk(node).Where(p => p.Function == node.Start).Select(p => p.Node).OfType<CallExpression>().Any(call =>
-                            call.Arguments.Count >= 2 && call.Arguments[0] is StringLiteral { Value: "input" } && call.Arguments[1] is ObjectExpression input &&
-                            input.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "placeholder" && p.Value is Identifier value && value.Name == local.Name)))
-                        Group(fallback, "ui/input-placeholder", [(fallback, "placeholder")]);
+                {
+                    var propKey = PropertyName(property);
+                    if (!TextProperties.Contains(propKey) ||
+                        property.Value is not AssignmentPattern { Left: Identifier local, Right: StringLiteral fallback } ||
+                        !LooksLikeText(fallback.Value) || !fixedBindings.Contains((node.Start, local.Name))) continue;
+                    var reads = Walk(node)
+                        .Where(p => p.Node is Identifier id && id.Name == local.Name && id.Start != local.Start &&
+                            !nonReadStarts.Contains(id.Start) && Owner(p.Function, id.Name) == node.Start)
+                        .Select(p => p.Node.Start).ToArray();
+                    if (reads.Length > 0 && reads.All(displayReads.Contains))
+                        Group(fallback, propKey == "placeholder" ? "ui/input-placeholder" : "ui/default-prop", [(fallback, propKey)]);
+                }
+            }
             if (node is CallExpression call)
             {
                 Expression callee = call.Callee;
                 if (callee is SequenceExpression sequence) callee = sequence.Expressions[^1];
+                if (!desktop && callee is MemberExpression { Computed: false, Property: Identifier { Name: "reportFinished" or "reportError" } } &&
+                    call.Arguments.Count >= 1 && call.Arguments[0] is ObjectExpression reportObj)
+                    Group(reportObj, "ui/vcs-report", reportObj.Properties.OfType<ObjectProperty>()
+                        .Where(p => PropertyName(p) is "title" or "message").Select(p => ((Node)p.Value, PropertyName(p))));
                 if (!desktop && callee is Identifier { Name: "element" } element && Owner(function, element.Name) is null &&
-                    call.Arguments is [StringLiteral { Value: "button" }, ObjectExpression pdfButton, ..] &&
-                    PropertyValue(pdfButton, "aria-label") is ConditionalExpression
-                    {
-                        Consequent: StringLiteral { Value: "Disable Text Selection" },
-                        Alternate: StringLiteral { Value: "Enable Text Selection" }
-                    } selectionLabel &&
-                    PropertyValue(pdfButton, "title") is ConditionalExpression selectionTitle)
-                    Group(call, "ui/button", [(selectionLabel, "aria-label"), (selectionTitle, "title")]);
+                    call.Arguments.Count >= 2 && call.Arguments[0] is StringLiteral elTag)
+                {
+                    if (elTag.Value == "textarea" && call.Arguments[1] is ObjectExpression taProps)
+                        Group(call, "ui/textarea", taProps.Properties.OfType<ObjectProperty>()
+                            .Where(p => PropertyName(p) is "placeholder" or "aria-label").Select(p => ((Node)p.Value, PropertyName(p))));
+                    else if (elTag.Value is "button" or "div" or "span" or "p" or "label" or "input" or "h1" or "h2" or "h3")
+                        Group(call, "ui/" + elTag.Value, DisplayValues(call, "createElement"));
+                }
+                if (!desktop && callee is Identifier bpId && Owner(function, bpId.Name) is { } bpScope &&
+                    buttonPropsHelpers.Contains((bpScope, bpId.Name)) &&
+                    call.Arguments.Count >= 1 && call.Arguments[0] is ObjectExpression bpProps)
+                    Group(call, "ui/button", bpProps.Properties.OfType<ObjectProperty>()
+                        .Where(p => TextProperties.Contains(PropertyName(p)) || PropertyName(p) == "children")
+                        .Select(p => ((Node)p.Value, PropertyName(p))));
                 if (!desktop && callee is Identifier hId && Owner(function, hId.Name) is { } hScope &&
                     localRenderHelpers.TryGetValue((hScope, hId.Name), out var paramRoles))
                     Group(call, "ui/helper-call", paramRoles.OrderBy(kv => kv.Key)
@@ -1185,6 +1463,34 @@ public static partial class JavaScriptUi
                 {
                     var values = DisplayValues(call, renderMethod.Name);
                     var tag = call.Arguments[0] is StringLiteral name ? name.Value : "component";
+                    if (!desktop && call.Arguments[1] is ObjectExpression compProps)
+                    {
+                        var compKeys = compProps.Properties.OfType<ObjectProperty>().Select(PropertyName).ToHashSet(StringComparer.Ordinal);
+                        if (compKeys.IsSupersetOf(["tabs", "selectedId", "onSelect"]) && PropertyValue(compProps, "tabs") is Expression tabsExpr)
+                        {
+                            var expandedTabs = Expand(tabsExpr, function, []);
+                            if (expandedTabs is not null)
+                                foreach (var arr in expandedTabs.OfType<ArrayExpression>())
+                                    foreach (var tabObj in arr.Elements.OfType<ObjectExpression>())
+                                        if (PropertyValue(tabObj, "label") is { } tabLabel)
+                                            Group(tabObj, "ui/tab", [(tabLabel, "label")]);
+                        }
+                        if (compKeys.IsSupersetOf(["options", "onValueChange"]) &&
+                            !compKeys.Contains("displayResolver") && !compKeys.Contains("resolveOptionToLabel") && !compKeys.Contains("resolveOptionToString") &&
+                            PropertyValue(compProps, "options") is Expression optsExpr)
+                        {
+                            var expandedOpts = Expand(optsExpr, function, []);
+                            if (expandedOpts is not null)
+                                foreach (var arr in expandedOpts.OfType<ArrayExpression>())
+                                    foreach (var optObj in arr.Elements.OfType<ObjectExpression>())
+                                        if (PropertyValue(optObj, "value") is not null && PropertyValue(optObj, "label") is { } optLabel)
+                                            Group(optObj, "ui/tab", [(optLabel, "label")]);
+                        }
+                        if (tag == "span" && PropertyValue(compProps, "data-testid") is StringLiteral { Value: "featured-carousel-eyebrow" } &&
+                            renderMethod.Name == "createElement" && call.Arguments.Count == 3 && call.Arguments[2] is Identifier eyebrowId &&
+                            lookupSeen.Add((eyebrowId.Start, "Featured")))
+                            FinishGroup("ui/span", [new("", "", file, eyebrowId.Start, eyebrowId.End, "Featured", "lookup", "children", [])]);
+                    }
                     if (tag is not ("style" or "script" or "code" or "pre" or "kbd" or "textarea") &&
                         (tag != "option" || call.Arguments[1] is ObjectExpression option && option.Properties.OfType<ObjectProperty>().Any(p => PropertyName(p) == "value")))
                     {
@@ -1299,6 +1605,12 @@ public static partial class JavaScriptUi
             {
                 var key = PropertyName(property);
                 if (key == "text" && props.Properties.OfType<ObjectProperty>().Any(other => PropertyName(other) == "label")) continue;
+                if (key == "inputBoxProps" && property.Value is ObjectExpression inputBox)
+                {
+                    foreach (var ibProp in inputBox.Properties.OfType<ObjectProperty>())
+                        if (PropertyName(ibProp) is "placeholder" or "buttonText") values.Add((ibProp.Value, PropertyName(ibProp)));
+                    continue;
+                }
                 if (TextProperties.Contains(key) || key == "children" || isPortalTooltip && key == "content") values.Add((property.Value, key));
             }
         }
@@ -1429,7 +1741,7 @@ public static partial class JavaScriptUi
                 var expression = text.Slots[int.Parse(slot.Groups[1].Value, System.Globalization.CultureInfo.InvariantCulture)];
                 var value = Range(expression.Start, expression.End);
                 // 英文名词的单复数词尾不进入中文；仍求值一次，保留条件及其副作用。
-                if (expression.IsPluralSuffix) value = $"((suffix)=>suffix==='s'||suffix==='was'||suffix==='were'?'':suffix)({value})";
+                if (expression.IsPluralSuffix) value = $"((suffix)=>suffix==='s'||suffix==='was'||suffix==='were'||suffix==='need'||suffix==='needs'?'':suffix)({value})";
                 output.Append("${").Append(value).Append('}');
                 position = slot.Index + slot.Length;
             }
